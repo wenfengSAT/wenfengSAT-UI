@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>btable</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" href="css/btable.css" />
+</head>
+
+<body style=" background-color: gainsboro;">
+
+    <div style="margin:0px; background-color: white;">
+        <blockquote class="layui-elem-quote">
+            <button type="button" class="layui-btn layui-btn-small" id="getAll">获取选择的数据</button>
+        </blockquote>
+        <div id="content" style="width: 100%;height: 533px;"></div>
+    </div>
+
+    <script type="text/javascript" src="plugins/layui/layui.js"></script>
+    <script>
+        layui.config({
+            base: 'js/'
+        }).use(['btable'], function () {
+            var btable = layui.btable(),
+                $ = layui.jquery;
+
+            btable.set({
+                elem: '#content',
+                url: 'datas/btable_data.json',
+                pageSize: 3,
+                columns: [{
+                    fieldName: '昵称',
+                    field: 'name'
+                }, {
+                    fieldName: '加入时间',
+                    field: 'createtime'
+                }, {
+                    fieldName: '签名',
+                    field: 'sign'
+                }],
+                even: true,
+                //skin: 'row',
+                checkbox: true,
+                paged: true,
+                singleSelect: false
+            });
+            btable.render();
+
+            $('#getAll').on('click', function () {
+
+                //btable.getSelected(function(obj){
+                //	console.log(obj.elem);
+                //	layer.msg(obj.id);
+                //});
+                //获取选择的数据
+                btable.getSelections(function (obj) {
+                    console.log(obj.elem);
+                    console.log(obj.ids);
+                    console.log(obj.count);
+                    layer.msg(obj.ids.join(','))
+                });
+
+            });
+
+            $(window).on('resize', function (e) {
+                var $that = $(this);
+                $('#content').height($that.height() - 92);
+            }).resize();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+//对话框样式
+.tips-icon {
+  display: inline-block;
+  position: relative;
+  .dialog-warp {
+    position: absolute;
+    font-size: 12px;
+    line-height: 1.5;
+    display: none;
+    .dialog-box {
+      display: inline-block;
+      position: relative;
+      padding: 3%;
+      background: #FAFAFA;
+      border: 1px solid #C9C9C9;
+      border-radius: 8px;
+      z-index: 999;
+    }
+  }
+  //右边提示
+  .dialog-warp.right {
+    width: 182px;
+    top: 50%;
+    left: 100%;
+    margin-left: 10px;
+    .dialog-box:before,
+    .dialog-box:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+    }
+    .dialog-box:before {
+      left: -10px;
+      @include triangle(left,10px,#ccc);
+    }
+    .dialog-box:after {
+      left: -8px;
+      @include triangle(left,10px,#fff);
+    }
+  }
+  //顶部提示
+  .dialog-warp.top {
+    width: 180px;
+    left: 50%;
+    bottom: 25px;
+    margin-left: -90px;
+    .dialog-box:before,
+    .dialog-box:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      margin-left: -10px;
+    }
+    .dialog-box:before {
+      bottom: -10px;
+      @include triangle(bottom,10px,#ccc);
+    }
+    .dialog-box:after {
+      bottom: -8px;
+      @include triangle(bottom,10px,#fff);
+    }
+  }
+}
+//进度条的样式
+//<div class="progress-circle-bg" data-bfb="10" data-width="10" data-fontsize="28">
+//  <div class="progress-circle-txt"><span><em class="progress-circle-val">0</em>%</span><br>进度</div>
+//</div>
+.progress-circle-bg {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .progress-circle-txt {
+    display: inline-block;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

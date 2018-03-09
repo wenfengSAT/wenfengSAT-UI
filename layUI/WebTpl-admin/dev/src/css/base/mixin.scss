@@ -1,0 +1,163 @@
+// 链接动画
+@mixin link($time:0.25s) {
+  -webkit-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+// 文字描边
+@mixin stroke($s1:1px, $s2:1px, $color:#fff) {
+  text-shadow: $s1 $s1 $s2 $color, -$s1 $s1 $s2 $color, $s1 (-$s1) $s2 $color, -$s1 (-$s1) $s2 $color;
+}
+// 旋转
+@mixin rotate($deg:360) {
+  -webkit-transform: rotate($deg+deg);
+  transform: rotate($deg+deg);
+}
+// 旋转放大
+@mixin rotateScale($deg:360, $s1:1.2) {
+  -webkit-transform: rotate($deg+deg) scale($s1);
+  transform: rotate($deg+deg) scale($s1);
+}
+// 移动动画
+@mixin move($s1:0, $s2:0) {
+  -webkit-transform: translate($s1,$s2);
+  transform: translate($s1,$s2);
+}
+// 禁止选中
+@mixin disabled {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+// 一行文字标题超出显示省略号
+@mixin oneline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+// 一行文字垂直居中,并隐藏溢出
+@mixin hlh($s1) {
+  height: $s1;
+  line-height: $s1;
+  overflow: hidden;
+}
+//阴影
+@mixin boxshadow($s1, $s2, $s3, $s4, $rgb1, $rgb2, $rgb3, $rgbo) {
+  box-shadow: $s1 $s2 $s3 $s4 rgba($rgb1, $rgb2, $rgb3, $rgbo);
+  -webkit-box-shadow: $s1 $s2 $s3 $s4 rgba($rgb1, $rgb2, $rgb3, $rgbo);
+  -moz-box-shadow: $s1 $s2 $s3 $s4 rgba($rgb1, $rgb2, $rgb3, $rgbo);
+}
+//triangle
+//triangle1是双倍宽
+@mixin triangle1($direction, $size, $borderColor) {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  border-width: $size;
+  @if $direction == top {
+    border-color: transparent transparent $borderColor transparent;
+    border-style: dashed dashed solid dashed;
+  }
+  @else if $direction ==right {
+    border-color: transparent transparent transparent $borderColor;
+    border-style: dashed dashed dashed solid;
+  }
+  @else if $direction==left {
+    border-color: transparent $borderColor transparent transparent;
+    border-style: dashed solid dashed dashed;
+  }
+  @else if $direction ==bottom {
+    border-color: $borderColor transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+  }
+}
+// triangle正常宽
+@mixin triangle($direction, $size, $borderColor ) {
+  content: "";
+  height: 0;
+  width: 0;
+  @if $direction == top {
+    border-bottom: $size solid $borderColor;
+    border-left: $size dashed transparent;
+    border-right: $size dashed transparent;
+  }
+  @else if $direction == right {
+    border-left: $size solid $borderColor;
+    border-top: $size dashed transparent;
+    border-bottom: $size dashed transparent;
+  }
+  @else if $direction == bottom {
+    border-top: $size solid $borderColor;
+    border-left: $size dashed transparent;
+    border-right: $size dashed transparent;
+  }
+  @else if $direction == left {
+    border-right: $size solid $borderColor;
+    border-top: $size dashed transparent;
+    border-bottom: $size dashed transparent;
+  }
+}
+//是否支持某个浏览器的前缀，如果你不想支持，可以设置为false
+//----------------------------
+$prefix-for-webkit: true !default; //-webkit-
+$prefix-for-mozilla: true !default; //-moz-
+$prefix-for-microsoft: true !default; //-ms-
+$prefix-for-opera: true !default; //-o-
+$prefix-for-spec: true !default; // 标准版
+// prefixer
+//----------------------------
+@mixin prefixer ($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == webkit and $prefix-for-webkit == true {
+      -webkit-#{$property}: $value;
+    }
+    @else if $prefix == moz and $prefix-for-mozilla == true {
+      -moz-#{$property}: $value;
+    }
+    @else if $prefix == ms and $prefix-for-microsoft == true {
+      -ms-#{$property}: $value;
+    }
+    @else if $prefix == o and $prefix-for-opera == true {
+      -o-#{$property}: $value;
+    }
+    @else if $prefix == spec and $prefix-for-spec == true {
+      #{$property}: $value;
+    }
+    @else {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+//阴影 webkit和标准
+@mixin box-shadow($shadow...) {
+  @include prefixer(box-shadow, $shadow, webkit spec);
+}
+//webkit moz 和标准
+@mixin box-sizing($type:border-box) {
+  // border-box | padding-box | content-box
+  @include prefixer(box-sizing, $type, webkit moz spec);
+}
+//webkit moz o 和标准
+@mixin transform($property...) {
+  //调用  @include transform(scale(2));
+  @include prefixer(transform, $property, webkit moz o ms spec);
+}
+//border  边框
+@mixin border($px, $way, $color, $directions) {
+  @if $directions == all {
+    border: $px $way $color;
+  }
+  @else {
+    @each $direction in $directions {
+      border-#{$direction}: $px $way $color;
+    }
+  }
+  @include box-sizing;
+}
+//opacity 透明度
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter:alpha(opacity=$opacity);
+}
