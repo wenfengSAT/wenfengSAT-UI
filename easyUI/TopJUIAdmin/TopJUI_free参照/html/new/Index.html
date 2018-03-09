@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion Actions - jQuery EasyUI Demo</title>
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+    <link href="../../content/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff;
+            color: #222;
+            font-size: 9pt;
+            font-family: 'Microsoft YaHei';
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top_div {
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            border-bottom: 1px solid #eaeaea;
+            background: #f8f8f8;
+        }
+
+        #loginbody {
+            background: #fff;
+            border: 1px solid #e7e7e7;
+            border-top: 3px solid #69bc49;
+            border-image: none;
+            width: 305px;
+            height: 300px;
+            text-align: center;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            margin-top: 100px;
+        }
+
+        #LoginTopLine {
+            font-size: 30px;
+            color: #ff6600;
+            line-height: 60px;
+        }
+
+        #LoginBotoomLine, #LoginTopLine {
+            width: 100%;
+            font-weight: 700;
+        }
+
+        #LoginBotoomLine {
+            font-size: 18px;
+            line-height: 60px;
+        }
+
+        .ipt {
+            padding: 10px;
+            padding-left: 30px;
+            width: 200px;
+            border: 1px solid #d3d3d3;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+
+            .ipt:focus {
+                outline: 0;
+                border-color: #66afe9;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+            }
+
+        .u_logo {
+            top: 27px;
+        }
+
+        .p_logo, .u_logo {
+            left: 43px;
+            position: absolute;
+        }
+
+        .p_logo {
+            top: 9pt;
+        }
+
+        .s_logo {
+            position: absolute;
+            top: 9pt;
+            left: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #local {
+            float: right;
+            margin-right: 33px;
+            height: 23px;
+            line-height: 23px;
+        }
+
+        .field-validation-error {
+            color: red;
+        }
+
+        .fa {
+            font-size: 14px;
+        }
+    </style>
+
+    <meta name="GENERATOR" content="MSHTML 11.00.9600.17496">
+</head>
+<body>
+    <div class="top_div">
+        <table cellspacing="0">
+            <tr>
+                <td style="width:150px;"></td>
+                <td style="width:84px;">
+                    <div style="width:63px; overflow:hidden;"><img src="../../content/Images/status.gif" /></div>
+ 
+                </td>
+                <td><div id="LoginTopLine">Ymnets-Admin</div></td>
+                <td style="width:20px;"><div style="width:10px;border-right:1px solid #ccc;">&nbsp;</div></td>
+                <td><div id="LoginBotoomLine">EasyUI 1.5.1-Themes</div></td>
+            </tr>
+        </table>
+    </div>
+    <table style="width:100%;min-height:600px">
+        <tr>
+            <td>&nbsp;</td>
+            <td style="width:726px;">
+                <br /><br />
+                <div style="background:url('../../content/Images/bg.png') no-repeat;width:796px;height:600px;">&nbsp;</div>
+            </td>
+            <td style="width:500px;">
+                <div id="loginbody">
+                    <p style="padding: 20px 0px 0px 40px; position: relative; text-align:left;font-weight:bold">
+                        <span style="font-size:20px;">登录</span><select id="local">
+                            <option value="zh-CN">中国</option>
+                            <option value="en-US">English</option>
+                        </select>
+                    </p>
+                    <p style="padding:15px 0px 20px; position: relative;">
+                        <span class="u_logo fa fa-user"></span>
+                        <input id="UserName" name="UserName" class="ipt" type="text" placeholder="请输入用户名" value="">
+                    </p>
+                    <p style="position: relative;">
+                        <span class="p_logo fa fa-key"></span>
+                        <input class="ipt" id="Password" type="Password" placeholder="请输入密码" value="">
+                    </p>
+                    <p style="position: relative;">
+                        <span class="p_logo"></span>
+
+                    </p><p style="position: relative; text-align:left; margin-left:32px; margin-top:20px;">
+                        <span class="s_logo fa fa-unlock-alt"></span>
+                        <input class="ipt " style="width: 50px" type="text" name="ValidateCode" id="ValidateCode" />
+                            <img id="codeImg" alt="刷新验证码！" style="margin-bottom: -12px; cursor: pointer;" src="../../content/Images/verify_code.jpg"/>
+                    </p>
+                    <div style="height: 63px; line-height:63px; margin-top: 20px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
+                        <p style="margin: 0px 35px 20px 45px;">
+                            <span id="mes" class="field-validation-error">
+                            </span>
+                            <span id="Loading" style="display: none" class='panel-loading'><font color='#000'>加载中...</font></span>
+                            <span style="float: right;">
+
+                                <a id="LoginSys"  style="background: #ff6600; padding: 7px 15px; font-size:13px; border-radius: 4px; border: 1px solid #ff6600; border-image: none; color: rgb(255, 255, 255); font-weight: bold;"
+                                   href="Layout.html">登&nbsp;录</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+<div style="background: #f8f8f8; height: 40px; width: 100%; text-align: center; line-height: 40px; border-top: 1px #e7e7e7 solid; bottom: 0; position: absolute">
+    Copyright ©2017-2080 Powered By Ymnets后台管理系统 未经允许不得转载或销售
+</div>
+

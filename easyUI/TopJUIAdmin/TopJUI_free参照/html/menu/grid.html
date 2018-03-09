@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- TopJUI框架样式 -->
+    <link type="text/css" href="../../topjui/css/topjui.core.min.css" rel="stylesheet">
+    <link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+    <!-- FontAwesome字体图标 -->
+    <link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- layui框架样式 -->
+    <link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+    <!-- jQuery相关引用 -->
+    <script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+    <!-- TopJUI框架配置 -->
+    <script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+    <!-- TopJUI框架核心-->
+    <script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+    <!-- TopJUI中文支持 -->
+    <script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+    <!-- layui框架js -->
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div data-toggle="topjui-layout" style="width: 100%;height: 100%">
+    <div data-options="region:'west',title:'第一步：请选择航空代理',split:true" style="width:50%;background:#eee;">
+        <table class="airplaneDataTable"></table>
+    </div>
+    <div data-options="region:'center',title:'第二步：请选择网络代理',split:true" style="width:50%;background:#eee;">
+        <table class="netCompanyDataTable"></table>
+    </div>
+    <div data-options="region:'south',split:true" style="height:160px;">
+        <input type="hidden" id="transportId" name="transportId" value="${id}">
+        <input type="hidden" id="flightId" name="flightId" value="${transportFlight.id}">
+        <input type="hidden" id="level2ProxyId" name="level2ProxyId" value="${carrierLevel2Proxy.id}">
+        <table class="editTable" border="0" style="margin-left: 2px;text-align: left!important;" cellpadding="15px">
+            <tr>
+                <td class="label1">航班号</td>
+                <td>
+                    <input type="text" name="flightNo" data-toggle="topjui-textbox"
+                           data-options="validType:'length[0,50]'" value="">
+                </td>
+                <td class="label1">起飞时间</td>
+                <td>
+                    <input name="takeOffTime"
+                           data-toggle="topjui-datetimebox"
+                           data-options="width:160,showSeconds:false" value="">
+                </td>
+                <td class="label1">到达时间</td>
+                <td>
+                    <input name="arriveTime"
+                           data-toggle="topjui-datetimebox"
+                           data-options="width:160,showSeconds:false" value="">
+                </td>
+                <td colspan="2">
+                    <div data-toggle="topjui-checkbox">
+                        &nbsp;&nbsp;&nbsp;<input type="checkbox" name="tz" label="通知网络代理">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="divider">
+        </div>
+        <dl style="padding: 0px">
+            <dt id="carrierFlightId">
+                <span style='font-weight:bold;font-size:18px'>【航空代理】：</span><span
+                    style='font-size:18px'>上海希望航空运输有限公司</span>
+            </dt>
+            <dt id="carrierLevel2ProxyId">
+                <span style='font-weight:bold;font-size:18px '>【网络代理】：</span><span
+                    style='font-size:18px'>云南网络代理公司</span>
+            </dt>
+        </dl>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var grid = {
+            type: 'datagrid',
+            id: 'airplaneDataTable'
+        };
+
+        var grid1 = {
+            type: 'datagrid',
+            id: 'netCompanyDataTable'
+        };
+
+        var _ctx = '${pageContext.request.contextPath}';
+
+        $("." + grid.id).iDatagrid({
+            rownumbers: false,
+            remoteFilter: true,
+            url: '/json/datagrid/hkdl.json',
+            onClickRow: function (index, row) {
+                selectFlight(row);
+            },
+            columns: [[
+                {field: 'id', title: '', hidden: true},
+                {field: 'name', title: '公司名称', sortable: false, width: 100},
+                {field: 'leader', title: '负责人', sortable: false, width: 100},
+                {field: 'leaderPhone', title: '负责人电话', sortable: false, width: 100},
+                {field: 'address', title: '地址', sortable: false, width: 100, hidden: true},
+                {field: 'remark', title: '备注', sortable: false, width: 100},
+            ]],
+            filter: [
+                {
+                    field: 'status',
+                    type: 'label'
+                }
+            ]
+        });
+
+        $("." + grid1.id).iDatagrid({
+            rownumbers: false,
+            remoteFilter: true,
+            url: '/json/datagrid/wldl.json',
+            onClickRow: function (index, row) {
+                selectLevel2Proxy(row);
+            },
+            columns: [[
+                {field: 'id', title: '', hidden: true},
+                {field: 'name', title: '公司名称', sortable: false, width: 100},
+                {field: 'leader', title: '负责人', sortable: false, width: 100},
+                {field: 'leaderPhone', title: '负责人电话', sortable: false, width: 100},
+                {field: 'address', title: '地址', sortable: false, width: 100, hidden: true},
+                {field: 'remark', title: '备注', sortable: false, width: 100},
+            ]],
+            filter: [
+                {
+                    field: 'status',
+                    type: 'label'
+                }
+            ]
+        });
+    });
+
+    // 选择航空代理
+    function selectFlight(row) {
+        $("#carrierFlightId").html("");
+        $("#flightId").val("");
+
+        $("#carrierFlightId").html("<span style='font-weight:bold;font-size:18px'>【航空代理】：</span><span style='font-size:18px'>" + row.name + " " + row.leader + " " + row.leaderPhone + " " + row.address + " " + row.remark + "</span>");
+        $("#flightId").val(row.id);
+    }
+    // 选择二级网络代理
+    function selectLevel2Proxy(row) {
+        $("#carrierLevel2ProxyId").html("");
+        $("#level2ProxyId").val("");
+
+        $("#carrierLevel2ProxyId").html("<span style='font-weight:bold;font-size:18px '>【网络代理】：</span><span style='font-size:18px'>" + row.name + " " + row.leader + " " + row.leaderPhone + " " + row.address + " " + row.remark + "</span>");
+        $("#level2ProxyId").val(row.id);
+    }
+</script>
+</body>
+</html>

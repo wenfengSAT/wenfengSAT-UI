@@ -1,0 +1,189 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ymnets-Admin</title>
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="../../topjui/js/jquery.min.js"></script>
+    <script src="../../topjui/js/topjui.base.min.js"></script>
+    <link href="../../topjui/themes/default/topjui.base.css" rel="stylesheet" />
+    <link href="../../topjui/themes/default/topjui.greenlight.css" rel="stylesheet" />
+    <link href="../../topjui/themes/default/base/site.css" rel="stylesheet" />
+    <link href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../../topjui/content/js/home.js"></script>
+    <script src="../../topjui/content/js/common.js"></script>
+</head>
+<body data-toggle="topjui-layout" id="easyLayout">
+
+    <div id="modalwindow" class="easyui-window" data-options="closed:true,minimizable:false,shadow:false,collapsible:true">
+    </div>
+
+    <div id="north" data-options="region:'north',border:false,split:false" style="height: 50px; padding:0;margin:0">
+        <table class="banner" style="border-spacing:0px;">
+            <tr>
+                <td class="webname">
+                    <span class="fa fa-yelp" style="font-size:26px; padding-right:8px;"></span>Ymnets-Admin
+                </td>
+                <td>
+                    <table id="topmenucontent" cellpadding="0" cellspacing="0"><td id="201605312304598866131890ede44b6" class="topmenu selected"><a onclick="loadAccordionMenu('201605312304598866131890ede44b6')" title="通过顶部菜单" class="l-btn-text bannerMenu" href="#"><lable class="fa  fa-hand-pointer-o"></lable><br><span style="white-space:nowrap;">通过顶部菜单</span></a></td><td id="20161124112512659817453d009fb84" class="topmenu"><a onclick="loadAccordionMenu('20161124112512659817453d009fb84')" title="调用方法" class="l-btn-text bannerMenu" href="#"><lable class="fa fa-puzzle-piece"></lable><br><span style="white-space:nowrap;">调用方法</span></a></td><td id="201407241558264790957ebaf9fec63" class="topmenu"><a onclick="loadAccordionMenu('201407241558264790957ebaf9fec63')" title="loadAccordionMenu" class="l-btn-text bannerMenu" href="#"><lable class="fa fa-sort-amount-asc"></lable><br><span style="white-space:nowrap;">loadAccordionMenu</span></a></td><td id="2016112411022140581745f0f582911" class="topmenu"><a onclick="loadAccordionMenu('2016112411022140581745f0f582911')" title="异步加载" class="l-btn-text bannerMenu" href="#"><lable class="fa  fa-weixin"></lable><br><span style="white-space:nowrap;">异步加载</span></a></td><td id="SystemManage" class="topmenu"><a onclick="loadAccordionMenu('SystemManage')" title="左边手风琴" class="l-btn-text bannerMenu" href="#"><lable class="fa fa-gears"></lable><br><span style="white-space:nowrap;">左边手风琴</span></a></td><td id="20161124111315488817464f920b54f" class="topmenu"><a onclick="loadAccordionMenu('20161124111315488817464f920b54f')" title="菜单" class="l-btn-text bannerMenu" href="#"><lable class="fa  fa-shield"></lable><br><span style="white-space:nowrap;">菜单</span></a></td><td id="201611241112087878174673e7fccb2" class="topmenu"><a onclick="loadAccordionMenu('201611241112087878174673e7fccb2')" title="OK！" class="l-btn-text bannerMenu" href="#"><lable class="fa  fa-bug"></lable><br><span style="white-space:nowrap;">或树形菜单</span></a></td></table>
+                </td>
+                <td>&nbsp;</td>
+                <td style="width: 40px;">
+                   
+                    <a id="WebIM" title="内部聊天" class="l-btn-text fa fa-commenting  fa-lg bannerbtn" href="#">
+                        <span id="mesCount" class="label-mes label-success">11</span>
+                    </a>
+                 
+                 
+                </td>
+
+                <td style="width: 40px;">
+                    <a title="等待开放..." class="l-btn-text fa fa-envelope-o  fa-lg bannerbtn" href="#"> </a>
+                </td>
+                <td style="width: 40px;">
+                    <a title="等待开放..." class="l-btn-text fa fa-bell-o  fa-lg bannerbtn" href="#"> </a>
+                </td>
+                <td style="width: 80px;">
+                    <a title="切换主题" id="SetThemes" class="l-btn-text fa fa-cogs fa-lg bannerbtn" href="#"> </a>
+                </td>
+                <td style="width:180px; overflow:hidden; ">
+                    <a id="showUserInfo" style="display:inline-block;" class="fa bannerbtn" href="javascript:void()">
+                        <img src="../../topjui/content/Images/photo.jpg" class="user-image" alt="User Image">
+                        <span class="user-name">Ymnets</span>
+                    </a>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+  
+    <div id="west" data-options="region:'west',split:true,title:'MAIN NAVIGATION',collapsible:false" style="width: 220px; height: 100%;  overflow: auto; border-bottom:0px;">
+
+        <div id="RightAccordion" class="easyui-accordion"  data-options="fit:true,border:false">
+            <div class="easyui-accordion" style="width:500px;height:300px;">
+                <div title="TreeMenu" data-options="iconCls:'fa fa-search'" style="padding:10px;">
+                    <ul class="easyui-tree">
+                        <li>
+                            <span>Foods</span>
+                            <ul>
+                                <li>
+                                    <span>Fruits</span>
+                                    <ul>
+                                        <li><a style="color:#000" href="javascript:addTab('apple','Datagrid.html','fa fa-plus')">apple</a></li>
+                                        <li><a style="color:#000" href="javascript:addTab('orange','Datagrid.html','fa fa-plus')">orange</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Vegetables</span>
+                                    <ul>
+                                        <li><a style="color:#000" href="javascript:addTab('tomato','Datagrid.html','fa fa-plus')">tomato</a></li>
+                                        <li><a style="color:#000" href="javascript:addTab('carrot','Datagrid.html','fa fa-plus')">carrot</a></li>
+                                        <li><a style="color:#000" href="javascript:addTab('cabbage','Datagrid.html','fa fa-plus')">cabbage</a></li>
+                                        <li><a style="color:#000" href="javascript:addTab('potato','Datagrid.html','fa fa-plus')">potato</a></li>
+                                        <li><a style="color:#000" href="javascript:addTab('lettuce','Datagrid.html','fa fa-plus')">lettuce</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div title="About" data-options="iconCls:'fa fa-arrow-right'" style="overflow:auto;padding:10px;">
+                    <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+                    <p>Accordion is a part of easyui framework for jQuery. It lets you define your accordion component on web page more easily.</p>
+                </div>
+                <div title="Help" data-options="iconCls:'fa fa-question-circle'" style="padding:10px;">
+                    <p>The accordion allows you to provide multiple panels and display one or more at a time. Each panel has built-in support for expanding and collapsing. Clicking on a panel header to expand or collapse that panel body. The panel content can be loaded via ajax by specifying a 'href' property. Users can define a panel to be selected. If it is not specified, then the first panel is taken by default.</p>
+                </div>
+               
+            </div>
+        </div>
+        <div id="RightTree" class="easyui-tree"></div>
+
+    </div>
+   
+    <div id="center" data-options="region:'center',border:false">
+        <div id="mainTab" class="easyui-tabs" data-options="fit:true">
+            <div title="我的桌面" data-options="closable:true,iconCls:'fa fa-tachometer'">
+                <iframe scrolling="auto" frameborder="0" src="Desktop.html" style="width: 100%; height: 100%;"></iframe>
+            </div>
+            <div title="表格样例" data-options="closable:true,iconCls:'fa fa-table'">
+                <iframe scrolling="auto" frameborder="0" src="DataGrid.html" style="width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="tab_menu" class="easyui-menu" style="width: 150px;">
+        <div id="tab_menu-tabrefresh" data-options="iconCls:'icon-reload'">
+            刷新
+        </div>
+        <div id="tab_menu-openFrame">
+            在新的窗体打开
+        </div>
+        <div id="tab_menu-tabcloseall">
+            关闭所有
+        </div>
+        <div id="tab_menu-tabcloseother">
+            关闭其他标签页
+        </div>
+        <div class="menu-sep">
+        </div>
+        <div id="tab_menu-tabcloseright">
+            关闭右边
+        </div>
+        <div id="tab_menu-tabcloseleft">
+            关闭左边
+        </div>
+        <div id="tab_menu-tabclose" data-options="iconCls:'fa fa-trash'">
+            关闭
+        </div>
+        <div id="menu" class="easyui-menu" style="width: 150px;">
+        </div>
+    </div>
+
+    <div id="ModalStyle" class="easyui-dialog" style="width:600px;height:340px" data-options="iconCls:'fa fa-save',modal:true,closed:true">
+        <table style="width:100%; padding:20px; line-height:30px;text-align:center;">
+            <tr>
+                <td><img src="../../topjui/content/images/skin/skin-coolblack.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="coolblack" checked="checked" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-red.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="red" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-green.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="green" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-purple.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="purple" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-blue.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="blue" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-yellow.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="yellow" /></td>
+            </tr>
+            <tr>
+                <td><img src="../../topjui/content/images/skin/skin-coolblacklight.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="coolblacklight" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-redlight.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="redlight" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-greenlight.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="greenlight" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-purplelight.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="purplelight" /></td>
+                <td> <img src="../../topjui/content/images/skin/skin-bluelight.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="bluelight" /></td>
+                <td><img src="../../topjui/content/images/skin/skin-yellowlight.png" style="width:60px;height:30px;" /><br /><input type="radio" name="themes" value="yellowlight" /></td>
+            </tr>
+        </table>
+        <table style="width: 100%; padding: 20px; line-height: 30px; text-align: center;">
+            <tr>
+                <td>
+                    <input type="radio" name="menustyle" value="accordion" checked="checked" />手风琴
+                <td>
+                    <input type="radio" name="menustyle" value="tree" />树形
+                </td>
+                <td>
+                    <input type="checkbox" checked="checked" name="topmenu" value="topmenu" />开启顶部菜单
+                </td>
+            </tr>
+        </table>
+        <div class="endbtndiv">
+            <a id="btnSave" href="javascript:SetThemes()" class="easyui-linkbutton btns">保存</a>
+            <a id="btnReturn" href="javascript:$('#ModalStyle').dialog('close')" class="easyui-linkbutton btnc">取消</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

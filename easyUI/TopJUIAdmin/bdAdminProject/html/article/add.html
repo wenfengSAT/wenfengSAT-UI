@@ -1,0 +1,52 @@
+<input type="hidden" id="uuid" name="uuid" >
+<table class="editTable">
+    <tr>
+        <td class="label">标题</td>
+        <td colspan="3"><input type="text" name="title" data-toggle="topjui-textbox" data-required="true" data-width="700" ></td>
+    </tr>
+    <tr>
+        <td class="label">所属栏目</td>
+        <td><input type="text" id="cid" name="cid"
+                   data-toggle="topjui-combotree"
+                   data-options="width:278,
+				   panelHeight:250,
+				   expandAll:false,
+                   url:'/system/channel/getChannelsById?id=1',
+                   expandUrl:'/system/channel/getChannelsByPid?pid={id}',
+                   getFatherIdsUrl:'/system/channel/getFatherIds?id={id}'">
+        </td>
+        <td class="label">发布状态</td>
+        <td><input type="text" name="status"
+                   data-toggle="topjui-combobox"
+                   data-options="valueField:'code',
+				   width:278,
+                   url:'/system/codeItem/getListByCodeSetIdAndLevelId?codeSetId=ACE&levelId=1'">
+        </td>
+    </tr>
+    <tr>
+        <td class="label">关键词</td>
+        <td><input type="text" name="keywords" data-toggle="topjui-textbox" data-width="278" ></td>
+        <td class="label">头条推荐</td>
+        <td><input type="text" name="recommend"
+                   data-toggle="topjui-combobox"
+                   data-options="valueField:'code',
+				   width:278,
+                   url:'/system/codeItem/getListByCodeSetIdAndLevelId?codeSetId=ACA&levelId=4'"></td>
+    </tr>
+    <tr>
+        <td class="label">文章描述</td>
+        <td colspan="3"><input type="text" name="description" data-toggle="topjui-textarea" data-options="required:true,width:700" ></td>
+    </tr>
+    <tr>
+        <td class="label">封面缩略图</td>
+        <td colspan="3">
+            <input type="text" name="thumbnail" data-toggle="topjui-upload-ue"  data-options="id:'thumbnailAddEditor',width:700">
+        </td>
+    </tr>
+    <tr>
+        <td class="label">文章内容</td>
+        <td colspan="3">
+            <textarea name="content" style="height:300px;" data-toggle="topjui-ueditor" data-options="id:'contentAddEditor'"></textarea>
+        </td>
+    </tr>
+</table>

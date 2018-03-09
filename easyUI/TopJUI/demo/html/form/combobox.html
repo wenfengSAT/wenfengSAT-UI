@@ -1,0 +1,48 @@
+<table class="editTable">
+    <tr>
+        <td colspan="4">
+            <div class="divider">
+                <span>调用本地数据</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">性别</td>
+        <td>
+            <input type="text" name="sex"
+                   data-toggle="topjui-combobox"
+                   data-options="data:[{id:1,text:'男'},{id:2,text:'女'}]">
+        </td>
+        <td class="label">学历（必填）</td>
+        <td>
+            <input type="text" name="degree"
+                   data-toggle="topjui-combobox"
+                   data-options="required:true,
+                   data:[{id:1,text:'大专'},{id:2,text:'本科'},{id:3,text:'研究生'},{id:4,text:'博士生'}]">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <div class="divider">
+                <span>调用远程数据</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">籍贯</td>
+        <td>
+            <input type="text" name="nativePlace"
+                   data-toggle="topjui-combobox"
+                   data-options="panelHeight:250,
+                   url:contextPath + '/json/combobox/nativePlace.json'">
+        </td>
+        <td class="label">民族（必填）</td>
+        <td>
+            <input type="text" name="nation"
+                   data-toggle="topjui-combobox"
+                   data-options="required:true,
+                   panelHeight:250,
+                   url:contextPath + '/json/combobox/nation.json'">
+        </td>
+    </tr>
+</table>

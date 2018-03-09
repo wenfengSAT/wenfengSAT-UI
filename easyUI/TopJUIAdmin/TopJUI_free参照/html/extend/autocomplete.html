@@ -1,0 +1,77 @@
+<table class="editTable">
+    <tr>
+        <td colspan="4">
+            <div class="divider">
+                <span>使用标签实现</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">责任人</td>
+        <td colspan="3">
+            <input type="text" name="charger"
+                   data-toggle="topjui-autocomplete"
+                   data-options="required:true,
+                   url:remoteHost+'/system/user/getListByKeywords?q={userName}',
+                   textField:'userName',
+                   valueField:'userNameId',
+                   prompt:'请输入字母i进行测试',
+                   formatter:userFormatter,
+                   param:'userNameId:userNameId,userName:userName'">
+        </td>
+    </tr>
+    <tr>
+        <td class="label">员工号</td>
+        <td>
+            <input type="text" name="userNameId" data-toggle="topjui-textbox" data-options="readonly:true">
+        </td>
+        <td class="label">姓名</td>
+        <td>
+            <input type="text" name="userName" data-toggle="topjui-textbox" data-options="readonly:true">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <div class="divider">
+                <span>使用Javascript实现</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">责任人</td>
+        <td colspan="3">
+            <input type="text" id="charger2" name="charger2">
+        </td>
+    </tr>
+    <tr>
+        <td class="label">员工号</td>
+        <td>
+            <input type="text" name="userNameId2" data-toggle="topjui-textbox" data-options="readonly:true">
+        </td>
+        <td class="label">姓名</td>
+        <td>
+            <input type="text" name="userName2" data-toggle="topjui-textbox" data-options="readonly:true">
+        </td>
+    </tr>
+</table>
+
+<script>
+    $(function () {
+        $('#charger2').iAutocomplete({
+            required: true,
+            url: remoteHost+'/system/user/getListByKeywords?q={userName}',
+            textField: 'userName',
+            valueField: 'userNameId',
+            prompt:'请输入字母i进行测试',
+            formatter: userFormatter,
+            param: 'userNameId2:userNameId,userName2:userName'
+        });
+    });
+
+    function userFormatter(row) {
+        var s = '<i class="fa fa-user"></i><span style="font-weight:bold">' + row.userName + '</span><br/>';
+        // +'<span style="color:#888">帐号：' + row.userNameId + '</span><br/>'
+        // +'<span style="color:#888">机构：' + row.orgName + '</span>';
+        return s;
+    }
+</script>

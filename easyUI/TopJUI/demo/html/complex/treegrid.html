@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- TopJUI框架样式 -->
+    <link type="text/css" href="../../topjui/css/topjui.core.min.css" rel="stylesheet">
+    <link type="text/css" href="../../topjui/themes/default/topjui.red.css" rel="stylesheet" id="dynamicTheme"/>
+    <!-- FontAwesome字体图标 -->
+    <link type="text/css" href="../../topjui/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- jQuery相关引用 -->
+    <script type="text/javascript" src="../../topjui/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../topjui/plugins/jquery/jquery.cookie.js"></script>
+    <!-- TopJUI框架配置 -->
+    <script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+    <!-- TopJUI框架核心-->
+    <script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+    <!-- TopJUI中文支持 -->
+    <script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+</head>
+
+<body>
+<table data-toggle="topjui-treegrid"
+       data-options="id:'menuTreegrid',
+        idField:'id',
+        treeField:'text',
+        url:'../../json/menu/menu_1.json',
+        expandUrl:'../../json/menu/menu_{id}.json',
+        fitColumns:true">
+    <thead>
+    <tr>
+        <th data-options="field:'uuid',title:'UUID',checkbox:true"></th>
+        <th data-options="field:'text',title:'名称',width:100"></th>
+        <th data-options="field:'resourceType',title:'资源类别',formatter: function(value,row,index){
+                    if (value == 'menu'){
+                        return '菜单';
+                    } else if (value == 'window'){
+                        return '窗体';
+                    } else if (value == 'button'){
+                        return '按钮';
+                    } else if (value == 'url'){
+                        return '链接';
+                    } else {
+                        return value;
+                    }
+			    }"></th>
+        <th data-options="field:'url',title:'资源地址或标识'"></th>
+        <th data-options="field:'codeSetId',title:'体系代码',width:100"></th>
+        <th data-options="field:'id',title:'编号',width:100"></th>
+        <th data-options="field:'pid',title:'父级编号',width:100"></th>
+    </tr>
+    </thead>
+</table>
+</body>
+</html>

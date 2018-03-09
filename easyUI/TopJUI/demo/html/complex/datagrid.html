@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- TopJUI框架样式 -->
+    <link type="text/css" href="../../topjui/css/topjui.core.min.css" rel="stylesheet">
+    <link type="text/css" href="../../topjui/themes/default/topjui.red.css" rel="stylesheet" id="dynamicTheme"/>
+    <!-- FontAwesome字体图标 -->
+    <link type="text/css" href="../../topjui/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- jQuery相关引用 -->
+    <script type="text/javascript" src="../../topjui/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../topjui/plugins/jquery/jquery.cookie.js"></script>
+    <!-- TopJUI框架配置 -->
+    <script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+    <!-- TopJUI框架核心-->
+    <script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+    <!-- TopJUI中文支持 -->
+    <script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+</head>
+
+<body>
+<table data-toggle="topjui-datagrid"
+       data-options="id:'productDg',
+       url:'../../json/product/list.json',
+       filter: [{
+            field: 'name',
+            type: 'textbox',
+            op: ['contains', 'equal', 'notequal', 'less', 'greater']
+       },{
+            field: 'code',
+            type: 'combobox',
+            options: {
+                valueField: 'label',
+                textField: 'value',
+                data: [{
+                    label: '2103',
+                    value: '2103'
+                }, {
+                    label: '5103',
+                    value: '5103'
+                }, {
+                    label: '1204',
+                    value: '1204'
+                }]
+            },
+            op: ['contains', 'equal', 'notequal', 'less', 'greater']
+       },{
+            field: 'spec',
+            type: 'combobox',
+            options: {
+                valueField: 'label',
+                textField: 'value',
+                multiple: true,
+                data: [{
+                    label: 'KC-W200SW',
+                    value: 'KC-W200SW'
+                }, {
+                    label: '白色LR-1688BY-2',
+                    value: '白色LR-1688BY-2'
+                }, {
+                    label: '银灰色BCD-339WBA 339',
+                    value: '银灰色BCD-339WBA 339'
+                }]
+            },
+            op: ['contains', 'equal', 'notequal', 'less', 'greater']
+       }]">
+    <thead>
+    <tr>
+        <th data-options="field:'uuid',title:'UUID',checkbox:true"></th>
+        <th data-options="field:'name',title:'商品名称',sortable:true"></th>
+        <th data-options="field:'code',title:'商品编号',sortable:true"></th>
+        <th data-options="field:'spec',title:'规格型号',sortable:true"></th>
+        <th data-options="field:'sale_price',title:'销售单价',sortable:true"></th>
+    </tr>
+    </thead>
+</table>
+
+<!-- 表格工具栏开始 -->
+<div id="productDg-toolbar"
+     data-options="grid:{
+           type:'datagrid',
+           id:'productDg'
+       }" style="display:none">
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'openDialog',
+       dialog:{
+           id:'userAddDialog',
+           height:350,
+           href:contextPath + '/html/complex/add.html',
+           buttonsGroup:[
+               {text:'保存',url:contextPath + '/json/response/success.json',iconCls:'fa fa-plus',handler:'ajaxForm'}
+           ]
+       }">新增</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'openDialog',
+       iconCls:'fa fa-pencil',
+       dialog:{
+           id:'articleEditDialog',
+           height:350,
+           href:contextPath + '/html/complex/edit.html?uuid={uuid}',
+           url:contextPath + '/json/product/detail.json?uuid={uuid}',
+           buttonsGroup:[
+               {text:'更新',url:contextPath + '/json/response/success.json',iconCls:'fa fa-save',handler:'ajaxForm'}
+           ]
+       }">编辑</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'doAjax',
+       iconCls:'fa fa-trash',
+       url:contextPath + '/json/response/success.json',
+       grid: {uncheckedMsg:'请先勾选要删除的数据',param:'uuid:uuid,code:code'}">删除</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'filter'">过滤</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'search'">查询</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'export',
+       url:contextPath + '/json/response/export.html'">导出</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'openTab',
+       tab:{
+           title:'这是新的Tab窗口',
+           href:contextPath + '/html/menu/openTab_index.html'
+       }">打开Tab窗口</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'openWindow',
+       href:'http://www.topjui.com?uuid={uuid}'">打开新窗口</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'request',
+       url:contextPath + '/json/response/success.json'">执行普通请求</a>
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="menu:'#exportSubMenu',
+       hasDownArrow:true,
+       iconCls:'fa fa-list'">更多</a>
+    <div id="exportSubMenu" style="width:150px;">
+        <div data-toggle="topjui-menubutton"
+             data-options="clickEvent:'request',
+             url:contextPath + '/json/response/success.json?uuid={uuid}',
+             grid:{
+                 type:'datagrid',
+                 id:'productDg'
+             }">导出 PDF 报表
+        </div>
+        <div data-toggle="topjui-menubutton"
+             data-options="clickEvent:'export',
+             url: contextPath + '/json/response/export.html',
+             grid:{
+                 type:'datagrid',
+                 id:'productDg'
+             }">导出EXCEL列表
+        </div>
+        <div data-toggle="topjui-menubutton"
+             data-options="clickEvent:'request',
+             url:contextPath + '/json/response/success.json?uuid={uuid}',
+             grid:{
+                 type:'datagrid',
+                 id:'productDg'
+             }">导出EXCEL报表
+        </div>
+        <div data-toggle="topjui-menubutton"
+             data-options="clickEvent:'request',
+             url:contextPath + '/json/response/success.json?uuid={uuid}',
+             grid:{
+                 type:'datagrid',
+                 id:'productDg'
+             }">导出WORD报表
+        </div>
+    </div>
+</div>
+<!-- 表格工具栏结束 -->
+</body>
+</html>

@@ -1,0 +1,71 @@
+<table class="editTable">
+    <tr>
+        <td colspan="4">
+            <div class="divider">
+                <span>基础树形下拉框</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">所属机构</td>
+        <td colspan="3">
+            <input type="hidden" name="orgName">
+            <input type="text" name="orgId"
+                   data-toggle="topjui-combotree"
+                   data-options="required:true,
+                   prompt:'必填',
+                   width:450,
+                   url:'/system/organization/getListByCodeSetIdAndLevelId?codeSetId=A&levelId=1',
+                   expandUrl:'/system/organization/getListByPid?pid={id}',
+                   getFatherIdsUrl:'/system/organization/getFatherIds?id={id}',
+                   params:'orgName:text'">
+        </td>
+    </tr>
+    <tr>
+        <td class="label">用户组</td>
+        <td colspan="3">
+            <input type="text" name="userGroup"
+                   data-toggle="topjui-combotree"
+                   data-options="required:true,
+                   prompt:'必填',
+                   multiple:true,
+				   url:'/system/authGroup/getListByPid?pid=1',
+				   expandUrl:'/system/authGroup/getListByPid?pid={id}',
+				   expandAll:true,
+				   width:450">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <div class="divider">
+                <span>有查找带回功能的树形下拉框</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">所属区域</td>
+        <td colspan="3">
+            <input type="text" name="zone"
+                   data-toggle="topjui-combotree"
+                   data-options="required:true,
+                   prompt:'必填',
+				   width:450,
+                   codeSetId:'AGA',levelId:'3',panelHeight:'250',
+				   expandUrl:'/system/codeItem/getListByPid?pid={id}',
+                   getFatherIdsUrl:'/system/codeItem/getFatherIds?id={id}',
+                   backfill:{url:'/system/user/getZoneFillbackData?id={id}'}">
+        </td>
+    </tr>
+    <tr>
+        <td class="label">国家</td>
+        <td><input type="text" name="country" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+        <td class="label">省份</td>
+        <td><input type="text" name="province" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+    </tr>
+    <tr>
+        <td class="label">城市</td>
+        <td><input type="text" name="city" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+        <td class="label">区县</td>
+        <td><input type="text" name="district" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+    </tr>
+</table>

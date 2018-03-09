@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- TopJUI框架样式 -->
+    <link type="text/css" href="../../topjui/css/topjui.core.min.css" rel="stylesheet">
+    <link type="text/css" href="../../topjui/themes/default/topjui.blue.css" rel="stylesheet" id="dynamicTheme"/>
+    <!-- FontAwesome字体图标 -->
+    <link type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- layui框架样式 -->
+    <link type="text/css" href="../../static/plugins/layui/css/layui.css" rel="stylesheet"/>
+    <!-- jQuery相关引用 -->
+    <script type="text/javascript" src="../../static/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/plugins/jquery/jquery.cookie.js"></script>
+    <!-- TopJUI框架配置 -->
+    <script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+    <!-- TopJUI框架核心-->
+    <script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+    <!-- TopJUI中文支持 -->
+    <script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+    <!-- layui框架js -->
+    <script src="../../static/plugins/layui/layui.js" charset="utf-8"></script>
+</head>
+
+<body>
+<form data-toggle="topjui-form">
+    <table class="editTable">
+        <tr>
+            <td colspan="4">
+                <div class="divider">
+                    <span>基础树形下拉框</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">所属机构</td>
+            <td colspan="3">
+                <input type="hidden" name="orgName">
+                <input type="text" name="orgId"
+                       data-toggle="topjui-combotree"
+                       data-options="required:true,
+                       prompt:'必填',
+                       width:450,
+                       textField:'leader',
+                       url:remoteHost+'/system/organization/getListByCodeSetIdAndLevelId?codeSetId=A&levelId=1',
+                       expandUrl:remoteHost+'/system/organization/getListByPid?pid={id}',
+                       getFatherIdsUrl:remoteHost+'/system/organization/getFatherIds?id={id}',
+                       param:'orgName:text'">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="divider">
+                    <span>查找带回（带回其它数据）</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">地址</td>
+            <td colspan="3">
+                <input type="text" name="zone"
+                       data-toggle="topjui-combotree"
+                       data-options="required:true,
+                       prompt:'必填',
+                       width:450,
+                       panelHeight:'250',
+                       url:remoteHost+'/system/codeItem/getListByCodeSetIdAndLevelId?codeSetId=AGA&levelId=3',
+                       expandUrl:remoteHost+'/system/codeItem/getListByPid?pid={id}',
+                       getFatherIdsUrl:remoteHost+'/system/codeItem/getFatherIds?id={id}',
+                       backfill:{url:remoteHost+'/system/user/getZoneFillbackData?id={id}'}">
+            </td>
+        </tr>
+        <tr>
+            <td class="label">国家</td>
+            <td><input type="text" name="country" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+            <td class="label">省份</td>
+            <td><input type="text" name="province" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+        </tr>
+        <tr>
+            <td class="label">城市</td>
+            <td><input type="text" name="city" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+            <td class="label">区县</td>
+            <td><input type="text" name="district" data-toggle="topjui-textbox" data-options="readonly:true"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

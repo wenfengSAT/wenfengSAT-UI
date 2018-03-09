@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic DataGrid - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="../../topjui/themes/default/topjui.base.css">
+
+    <link rel="stylesheet" type="text/css" href="../../topjui/themes/default/base/site.css">
+    <script type="text/javascript" src="../../topjui/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../topjui/js/topjui.base.min.js"></script>
+    <script src="../../topjui/content/js/jquery.easyui.plus.js"></script>
+    <link href="../../static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="padding:4px 5px 0px 5px;">
+        <div class="mvctool">
+            <input id="txtQuery" type="text" class="searchText">
+            <a id="btnQuery" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text fa fa-search" style="font-size:14px"></span><span style="font-size:12px">查询</span></span></a><div class="datagrid-btn-separator"></div>
+            <a id="btnCreate" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text fa fa-plus" style="font-size:14px"></span><span style="font-size:12px">创建</span></span></a><div class="datagrid-btn-separator"></div>
+            <a id="btnEdit" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text fa fa-pencil" style="font-size:14px"></span><span style="font-size:12px">修改</span></span></a><div class="datagrid-btn-separator"></div>
+            <a id="btnDetails" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text fa fa-list" style="font-size:14px"></span><span style="font-size:12px">详细</span></span></a><div class="datagrid-btn-separator"></div>
+            <a id="btnDelete" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text fa fa-trash" style="font-size:14px"></span><span style="font-size:12px">删除</span></span></a><div class="datagrid-btn-separator"></div>
+        </div>
+
+        <table id="List" style="height:auto;border:1px solid #ccc;">
+            <thead>
+                <tr>
+                    <th data-options="field:'itemid',width: 50">Item ID</th>
+                    <th data-options="field:'productid',width: 50">Product</th>
+                    <th data-options="field:'listprice',align:'right',width: 50">List Price</th>
+                    <th data-options="field:'attr1',width: 50">Attribute</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EST11Green1-1</td>
+                    <td>FI-SW-01</td>
+                    <td>36.50</td>
+                    <td>Large</td>
+                </tr>
+                <tr>
+                    <td>EST-11Green13</td>
+                    <td>RP-LI-02</td>
+                    <td>35.50</td>
+                    <td>Green Adult</td>
+                </tr>
+                <tr>
+                    <td>EST22-Green13</td>
+                    <td>RP-LI-02</td>
+                    <td>35.50</td>
+                    <td>Green Adult</td>
+                </tr>
+                <tr>
+                    <td>EST-13</td>
+                    <td>RP-LI-02</td>
+                    <td>35.50</td>
+                    <td>Green Adult</td>
+                </tr>
+                <tr>
+                    <td>EST-13</td>
+                    <td>RP-LIGreenGreen-02</td>
+                    <td>35.50</td>
+                    <td>Green Adult SSS</td>
+                </tr>
+                <tr>
+                    <td>EST-13</td>
+                    <td>RP-LI-02</td>
+                    <td>35.50</td>
+                    <td>Green Adult</td>
+                </tr>
+                <tr>
+                    <td>EST-10</td>
+                    <td>K9-DL-01</td>
+                    <td>18.50</td>
+                    <td>Spotted Adult Female</td>
+                </tr>
+                <tr>
+                    <td>EST-11</td>
+                    <td>RP-SN-01</td>
+                    <td>28.50</td>
+                    <td>Venomless</td>
+                </tr>
+                <tr>
+                    <td>EST-13</td>
+                    <td>RP-LI-02</td>
+                    <td>35.50</td>
+                    <td>Green Adult</td>
+                </tr>
+                <tr>
+                    <td>EST-12</td>
+                    <td>RP-SN-01</td>
+                    <td>26.50</td>
+                    <td>Rattleless</td>
+                </tr>
+                <tr>
+                    <td>EST-13</td>
+                    <td>RP-LI-02</td>
+                    <td>35.50</td>
+                    <td>Green Adult</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#List').datagrid({
+                width: SetGridWidthSub(10),
+                height: SetGridHeightSub(45),
+                fitColumns: true,
+                pageSize: 10,
+                pageList: [10, 20, 30, 40, 50],
+                pagination: true,
+                striped: true, //奇偶行是否区分
+                singleSelect: true//单选模式
+            });
+        $(window).resize(function () {
+            $('#List').datagrid('resize', {
+
+            }).datagrid('resize', {
+                width:  SetGridWidthSub(10),
+                height: SetGridHeightSub(45)
+            });
+        });
+
+    });
+    </script>
+
+</body>
+</html>

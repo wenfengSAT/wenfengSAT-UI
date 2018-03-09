@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- TopJUI框架样式 -->
+    <link type="text/css" href="../../topjui/css/topjui.core.min.css" rel="stylesheet">
+    <link type="text/css" href="../../topjui/themes/default/topjui.red.css" rel="stylesheet" id="dynamicTheme"/>
+    <!-- FontAwesome字体图标 -->
+    <link type="text/css" href="../../topjui/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- jQuery相关引用 -->
+    <script type="text/javascript" src="../../topjui/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../topjui/plugins/jquery/jquery.cookie.js"></script>
+    <!-- TopJUI框架配置 -->
+    <script type="text/javascript" src="../../static/public/js/topjui.config.js"></script>
+    <!-- TopJUI框架核心-->
+    <script type="text/javascript" src="../../topjui/js/topjui.core.min.js"></script>
+    <!-- TopJUI中文支持 -->
+    <script type="text/javascript" src="../../topjui/js/locale/topjui.lang.zh_CN.js"></script>
+</head>
+
+<body>
+
+<!-- layout布局 开始 -->
+<div class="easyui-layout" data-options="fit:true">
+
+    <div data-options="region:'center',iconCls:'icon-reload',title:'',fit:false,split:true,border:false,bodyCls:'border_left_right'">
+        <!-- datagrid表格 -->
+        <table data-toggle="topjui-datagrid"
+               data-options="id:'productDg',
+               url:'../../json/product/list.json'">
+            <thead>
+            <tr>
+                <th data-options="field:'id',title:'ID',checkbox:true"></th>
+                <th data-options="field:'name',title:'商品名称'"></th>
+                <th data-options="field:'code',title:'商品编号'"></th>
+                <th data-options="field:'spec',title:'规格型号'"></th>
+                <th data-options="field:'danwei',title:'规格型号'"></th>
+                <th data-options="field:'sale_price',title:'销售单价'"></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div data-options="region:'east',iconCls:'icon-chart_pie',title:'',split:true,border:false,width:'40%',bodyCls:'border_left'">
+        <div data-toggle="topjui-tabs" data-options="id:'eastTabs',fit:true,border:false,
+				 tabs:[
+				 	{type:'panel',id:'detail1Panel'},
+				 	{type:'panel',id:'detail2Panel'}
+				 ]">
+            <div title="开发文档" data-options="id:'detail1Panel',iconCls:'icon-table',
+            dynamicHref:'/system/article/detail?uuid={uuid}',
+            parentGrid:{
+                type:'datagrid',
+                id:'articleDg',
+                params:'uuid'
+            }"></div>
+            <div title="注意事项" data-options="id:'detail2Panel',iconCls:'icon-table',
+            dynamicHref:'/system/article/print?uuid={uuid}',
+            parentGrid:{
+                type:'datagrid',
+                id:'articleDg',
+                params:'uuid'
+            }"></div>
+        </div>
+    </div>
+
+</div>
+<!-- layout布局 结束 -->
+
+<!-- 表格工具栏开始 -->
+<div id="productDg-toolbar"
+     data-options="grid:{
+           type:'datagrid',
+           id:'productDg'
+       }" style="display:none">
+    <a href="javascript:void(0)"
+       data-toggle="topjui-menubutton"
+       data-options="clickEvent:'openDialog',
+       dialog:{
+           id:'userAddDialog',
+           href:contextPath + '/html/form/combotree.html',
+           height:450,
+           buttonsGroup:[
+               {text:'保存',url:contextPath + '/json/response/success.json',iconCls:'fa fa-plus',handler:'ajaxForm'}
+           ]
+       }">树形下拉演示</a>
+</div>
+
+</body>
+</html>
