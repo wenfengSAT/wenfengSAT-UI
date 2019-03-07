@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Color Admin | Form WYSIWYG</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="description">
+	<meta content="" name="author">
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="assets/css/css.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui-1.10.4/jquery-ui.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/plugins/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link href="assets/css/style-responsive.css" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<link href="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet">
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+	<style>.cke{visibility:hidden;}</style>
+
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+		<!-- begin #header -->
+		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+			<!-- begin container-fluid -->
+			<div class="container-fluid">
+				<!-- begin mobile sidebar expand / collapse button -->
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> Color Admin</a>
+					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- end mobile sidebar expand / collapse button -->
+				
+				<!-- begin header navigation right -->
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<form class="navbar-form full-width">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Enter keyword" />
+								<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+							<i class="fa fa-bell-o"></i>
+							<span class="label">5</span>
+						</a>
+						<ul class="dropdown-menu media-list pull-right animated fadeInDown">
+                            <li class="dropdown-header">Notifications (5)</li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left media-object bg-red"><i class="fa fa-bug"></i></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading">Server Error Reports</h6>
+                                        <div class="text-muted">3 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left"><img src="assets/img/user-1.jpg" class="media-object" alt="" /></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading">John Smith</h6>
+                                        <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                                        <div class="text-muted">25 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left"><img src="assets/img/user-2.jpg" class="media-object" alt="" /></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading">Olivia</h6>
+                                        <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                                        <div class="text-muted">35 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left media-object bg-green"><i class="fa fa-plus"></i></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"> New User Registered</h6>
+                                        <div class="text-muted">1 hour ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left media-object bg-blue"><i class="fa fa-envelope"></i></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"> New Email From John</h6>
+                                        <div class="text-muted">2 hour ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-footer text-center">
+                                <a href="javascript:;">View more</a>
+                            </li>
+						</ul>
+					</li>
+					<li class="dropdown navbar-user">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="assets/img/user-11.jpg" alt="" /> 
+							<span class="hidden-xs">Adam Schwartz</span> <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu animated fadeInLeft">
+							<li class="arrow"></li>
+							<li><a href="javascript:;">Edit Profile</a></li>
+							<li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
+							<li><a href="javascript:;">Calendar</a></li>
+							<li><a href="javascript:;">Setting</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:;">Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- end header navigation right -->
+			</div>
+			<!-- end container-fluid -->
+		</div>
+		<!-- end #header -->
+		
+		<!-- begin #sidebar -->
+		<div id="sidebar" class="sidebar">
+			<!-- begin sidebar scrollbar -->
+			<div data-scrollbar="true" data-height="100%">
+				<!-- begin sidebar user -->
+				<ul class="nav">
+					<li class="nav-profile">
+						<div class="image">
+							<a href="javascript:;"><img src="assets/img/user-11.jpg" alt="" /></a>
+						</div>
+						<div class="info">
+							Sean Ngu
+							<small>Front end developer</small>
+						</div>
+					</li>
+				</ul>
+				<!-- end sidebar user -->
+				<!-- begin sidebar nav -->
+				<ul class="nav">
+					<li class="nav-header">Navigation</li>
+					<li>
+						<a href="index.html"><i class="fa fa-laptop"></i> <span>Dashboard</span></a>
+					</li>
+					<li>
+						<a href="inbox.html">
+							<span class="badge pull-right">10</span>
+							<i class="fa fa-inbox"></i> <span>Inbox</span>
+						</a>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-suitcase"></i> 
+						    <b class="caret pull-right"></b>
+						    <span>UI Elements</span> 
+						</a>
+						<ul class="sub-menu">
+							<li><a href="ui_general.html">General</a></li>
+							<li><a href="ui_typography.html">Typography</a></li>
+							<li><a href="ui_tabs_accordions.html">Tabs & Accordions</a></li>
+							<li><a href="ui_modal_notification.html">Modal & Notification</a></li>
+							<li><a href="ui_widget_boxes.html">Widget Boxes</a></li>
+							<li><a href="ui_media_object.html">Media Object</a></li>
+							<li><a href="ui_buttons.html">Buttons</a></li>
+							<li><a href="ui_icons.html">Icons</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-file-o"></i> 
+						    <b class="caret pull-right"></b>
+						    <span>Form Stuff</span> 
+						</a>
+						<ul class="sub-menu">
+							<li><a href="form_elements.html">Form Elements</a></li>
+							<li><a href="form_plugins.html">Form Plugins</a></li>
+							<li><a href="form_validation.html">Form Validation</a></li>
+							<li><a href="form_wizards.html">Wizards</a></li>
+							<li><a href="form_wysiwyg.html">WYSIWYG</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <b class="caret pull-right"></b>
+						    <i class="fa fa-th"></i> 
+						    <span>Tables</span> 
+						</a>
+						<ul class="sub-menu">
+							<li><a href="table_basic.html">Basic Tables</a></li>
+							<li><a href="table_manage.html">Managed Tables</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+					    <a href="javascript:;">
+					        <i class="fa fa-envelope"></i>
+						    <b class="caret pull-right"></b>
+					        <span>
+					            Email Template 
+					            <span class="label label-success m-l-5">NEW</span>
+					        </span>
+					    </a>
+						<ul class="sub-menu">
+							<li><a href="email_system.html">System Template <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+							<li><a href="email_newsletter.html">Newsletter Template <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+						</ul>
+					</li>
+					<li><a href="charts.html"><i class="fa fa-signal"></i> <span>Charts</span></a></li>
+					<li><a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
+					<li class="has-sub">
+					    <a href="javascript:;">
+					        <i class="fa fa-map-marker"></i>
+					        <b class="caret pull-right"></b>
+					        <span>Map</span>
+					    </a>
+						<ul class="sub-menu">
+							<li><a href="map_vector.html">Vector Map</a></li>
+							<li><a href="map_google.html">Google Map</a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="gallery.html"><i class="fa fa-camera"></i> <span>Gallery</span></a></li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-cogs"></i>
+						    <b class="caret pull-right"></b>
+						    <span>Page Options</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="page_blank.html">Blank Page</a></li>
+							<li><a href="page_with_footer.html">Page with Footer</a></li>
+							<li><a href="page_without_sidebar.html">Page without Sidebar</a></li>
+							<li><a href="page_with_right_sidebar.html">Page with Right Sidebar</a></li>
+							<li><a href="page_with_minified_sidebar.html">Page with Minified Sidebar</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-gift"></i>
+						    <b class="caret pull-right"></b>
+						    <span>
+						        Extra
+						        <span class="label label-success m-l-5">NEW</span>
+						    </span>
+						</a>
+						<ul class="sub-menu">
+						    <li><a href="extra_timeline.html">Timeline <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+						    <li><a href="extra_coming_soon.html">Coming Soon Page <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+							<li><a href="extra_search_results.html">Search Results</a></li>
+							<li><a href="extra_invoice.html">Invoice</a></li>
+							<li><a href="extra_404_error.html">404 Error Page</a></li>
+							<li><a href="extra_login.html">Login</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-align-left"></i> 
+						    <b class="caret pull-right"></b>
+						    <span>Menu Level</span>
+						</a>
+						<ul class="sub-menu">
+							<li class="has-sub">
+								<a href="javascript:;">
+						            <b class="caret pull-right"></b>
+						            Menu 1.1
+						        </a>
+								<ul class="sub-menu">
+									<li class="has-sub">
+										<a href="javascript:;">
+										    <b class="caret pull-right"></b>
+										    Menu 2.1
+										</a>
+										<ul class="sub-menu">
+											<li><a href="javascript:;">Menu 3.1</a></li>
+											<li><a href="javascript:;">Menu 3.2</a></li>
+										</ul>
+									</li>
+									<li><a href="javascript:;">Menu 2.2</a></li>
+									<li><a href="javascript:;">Menu 2.3</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:;">Menu 1.2</a></li>
+							<li><a href="javascript:;">Menu 1.3</a></li>
+						</ul>
+					</li>
+			        <!-- begin sidebar minify button -->
+					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+			        <!-- end sidebar minify button -->
+				</ul>
+				<!-- end sidebar nav -->
+			</div>
+			<!-- end sidebar scrollbar -->
+		</div>
+		<!-- end #sidebar -->
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="javascript:;">Home</a></li>
+				<li><a href="javascript:;">Form Stuff</a></li>
+				<li class="active">Form WYSIWYG</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Form WYSIWYG <small>header small text goes here...</small></h1>
+			<!-- end page-header -->
+			
+			<!-- begin row -->
+			<div class="row">
+                <!-- begin col-12 -->
+			    <div class="col-md-12 ui-sortable">
+			        <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">CKEditor</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal" action="/" name="wysihtml5" method="POST">
+								<textarea class="ckeditor" id="editor1" name="editor1" rows="20">&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href="http://ckeditor.com/"&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;</textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end col-12 -->
+            </div>
+            <!-- end row -->
+			<!-- begin row -->
+			<div class="row">
+                <!-- begin col-12 -->
+                <div class="col-md-12 ui-sortable">
+			        <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">WYSIHTML5</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form action="/" name="wysihtml5" method="POST">
+								<ul style="" class="wysihtml5-toolbar"><li class="dropdown"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-font"></i>&nbsp;<span class="current-font">Normal text</span>&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a unselectable="on" href="javascript:;" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="div" tabindex="-1">Normal text</a></li><li><a unselectable="on" href="javascript:;" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1" tabindex="-1">Heading 1</a></li><li><a unselectable="on" href="javascript:;" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2" tabindex="-1">Heading 2</a></li><li><a unselectable="on" href="javascript:;" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3" tabindex="-1">Heading 3</a></li></ul></li><li><div class="btn-group"><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="bold" title="CTRL+B" tabindex="-1">Bold</a><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="italic" title="CTRL+I" tabindex="-1">Italic</a><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="underline" title="CTRL+U" tabindex="-1">Underline</a></div></li><li><div class="btn-group"><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="insertUnorderedList" title="Unordered list" tabindex="-1"><i class="fa fa-list"></i></a><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="insertOrderedList" title="Ordered list" tabindex="-1"><i class="fa fa-th-list"></i></a><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="Outdent" title="Outdent" tabindex="-1"><i class="fa fa-indent"></i></a><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="Indent" title="Indent" tabindex="-1"><i class="fa fa-outdent"></i></a></div></li><li><div class="bootstrap-wysihtml5-insert-link-modal modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><a class="close" data-dismiss="modal">?</a><h3 class="modal-title">Insert link</h3></div><div class="modal-body"><input value="http://" class="bootstrap-wysihtml5-insert-link-url input-xlarge"></div><div class="modal-footer"><a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a><a href="#" class="btn btn-primary" data-dismiss="modal">Insert link</a></div></div></div></div><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="createLink" title="Insert link" tabindex="-1"><i class="fa fa-share"></i></a></li><li><div class="bootstrap-wysihtml5-insert-image-modal modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><a class="close" data-dismiss="modal">?</a><h3 class="modal-title">Insert image</h3></div><div class="modal-body"><input value="http://" class="bootstrap-wysihtml5-insert-image-url input-xlarge"></div><div class="modal-footer"><a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a><a href="#" class="btn btn-primary" data-dismiss="modal">Insert image</a></div></div></div></div><a unselectable="on" href="javascript:;" class="btn btn-default" data-wysihtml5-command="insertImage" title="Insert image" tabindex="-1"><i class="fa fa-picture-o"></i></a></li></ul><textarea placeholder="Enter text ..." style="display: none;" class="textarea form-control" id="wysihtml5" rows="12"></textarea><input value="1" name="_wysihtml5_mode" type="hidden"><iframe style="display: block; background-color: rgb(255, 255, 255); border-collapse: separate; border-color: rgb(226, 231, 235); border-style: solid; border-width: 1px; clear: none; float: none; margin: 0px; outline: 0px none rgb(0, 0, 0); outline-offset: 0px; padding: 6px 12px; position: static; top: auto; left: auto; right: auto; bottom: auto; z-index: auto; vertical-align: text-bottom; text-align: start; box-sizing: border-box; box-shadow: none; border-radius: 3px; width: 1153px; height: 219.8px;" marginheight="0" marginwidth="0" allowtransparency="true" security="restricted" class="wysihtml5-sandbox" frameborder="0" height="0" width="0"></iframe>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end col-6 -->
+            </div>
+            <!-- end row -->
+		</div>
+		<!-- end #content -->
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/jquery-1.7.2/jquery-1.7.2.js"></script>
+	<script src="assets/plugins/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
+	<script src="assets/plugins/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/crossbrowserjs/respond.min.js"></script>
+		<script src="assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="assets/plugins/ckeditor/ckeditor.js"></script>
+    <script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
+    <script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+    <script src="assets/js/form-wysiwyg.js"></script>
+ 	<script src="assets/js/apps.js"></script>
+	<script type="text/javascript" src="assets/plugins/ckeditor/config.js?t=D26D"></script>
+    <link rel="stylesheet" type="text/css" href="assets/plugins/ckeditor/skins/moono/editor_gecko.css?t=D26D">
+    <script type="text/javascript" src="assets/plugins/ckeditor/styles.js?t=D26D"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<script>
+		$(document).ready(function() {
+			App.init();
+			FormWysihtml5.init();
+		});
+	</script>
+
+
+<div id="cke_61" dir="ltr" class="cke cke_reset_all cke_1 cke_panel cke_panel cke_combopanel cke_ltr" style="z-index: 10001; position: absolute; top: 228px; left: 633px; opacity: 1; display: none;" role="application" lang="zh-cn"><iframe title="ʽ" role="listbox" aria-label="ʽ" id="cke_61_frame" class="cke_panel_frame" src="javascript:void(document.open(),document.close())" frameborder="0">"&gt;</iframe></div></body></html>

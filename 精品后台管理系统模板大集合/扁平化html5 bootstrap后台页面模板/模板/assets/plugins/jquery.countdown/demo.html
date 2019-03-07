@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Countdown Demo</title>
+		<style>
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="jquery.countdown.js"></script>
+		<script>
+			$(function() {
+				$('.J_countdown1').countdown();
+				$('.J_countdown2').countdown({
+					tmpl : '<span>%{d}</span>天<span>%{h}</span>小时<span>%{m}</span>分<span>%{s}</span>秒'
+				});
+				$('.J_countdown3').countdown({
+					tmpl : '<span>%{d}</span>天, <span>%{h}</span>小时, <span>%{m}</span>分, <span>%{s}</span>秒'
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="J_countdown1" data-diff="10"></div>
+		<div class="J_countdown1" data-diff="70"></div>
+		<div class="J_countdown1" data-diff="3610"></div>
+		<div class="J_countdown1" data-diff="86410"></div>
+		<div class="J_countdown2" data-diff="21234567890"></div>
+		<div class="J_countdown3" data-diff="21234567890"></div>
+	</body>
+</html>

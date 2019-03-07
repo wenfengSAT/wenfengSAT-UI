@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Color Admin | Form Plugins</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="description">
+	<meta content="" name="author">
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="assets/plugins/jquery-ui-1.10.4/jquery-ui.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/plugins/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link href="assets/css/style-responsive.css" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<link href="assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
+	<link href="assets/plugins/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="assets/plugins/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet">
+	<link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet">
+	<link href="assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet">
+	<link href="assets/plugins/password-indicator/css/password-indicator.css" rel="stylesheet">
+	<link href="assets/plugins/bootstrap-combobox/css/bootstrap-combobox.css" rel="stylesheet">
+	<link href="assets//plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet">
+	<link href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet">
+	<link href="assets/plugins/jquery-tagit/css/jquery-tagit.css" rel="stylesheet">
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+</head>
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+		<!-- begin #header -->
+		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+			<!-- begin container-fluid -->
+			<div class="container-fluid">
+				<!-- begin mobile sidebar expand / collapse button -->
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> Color Admin</a>
+					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- end mobile sidebar expand / collapse button -->
+				
+				<!-- begin header navigation right -->
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<form class="navbar-form full-width">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Enter keyword" />
+								<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+							<i class="fa fa-bell-o"></i>
+							<span class="label">5</span>
+						</a>
+						<ul class="dropdown-menu media-list pull-right animated fadeInDown">
+                            <li class="dropdown-header">Notifications (5)</li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left media-object bg-red"><i class="fa fa-bug"></i></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading">Server Error Reports</h6>
+                                        <div class="text-muted">3 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left"><img src="assets/img/user-1.jpg" class="media-object" alt="" /></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading">John Smith</h6>
+                                        <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                                        <div class="text-muted">25 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left"><img src="assets/img/user-2.jpg" class="media-object" alt="" /></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading">Olivia</h6>
+                                        <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                                        <div class="text-muted">35 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left media-object bg-green"><i class="fa fa-plus"></i></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"> New User Registered</h6>
+                                        <div class="text-muted">1 hour ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="javascript:;">
+                                    <div class="pull-left media-object bg-blue"><i class="fa fa-envelope"></i></div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"> New Email From John</h6>
+                                        <div class="text-muted">2 hour ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-footer text-center">
+                                <a href="javascript:;">View more</a>
+                            </li>
+						</ul>
+					</li>
+					<li class="dropdown navbar-user">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="assets/img/user-11.jpg" alt="" /> 
+							<span class="hidden-xs">Adam Schwartz</span> <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu animated fadeInLeft">
+							<li class="arrow"></li>
+							<li><a href="javascript:;">Edit Profile</a></li>
+							<li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
+							<li><a href="javascript:;">Calendar</a></li>
+							<li><a href="javascript:;">Setting</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:;">Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- end header navigation right -->
+			</div>
+			<!-- end container-fluid -->
+		</div>
+		<!-- end #header -->
+		
+		<!-- begin #sidebar -->
+		<div id="sidebar" class="sidebar">
+			<!-- begin sidebar scrollbar -->
+			<div data-scrollbar="true" data-height="100%">
+				<!-- begin sidebar user -->
+				<ul class="nav">
+					<li class="nav-profile">
+						<div class="image">
+							<a href="javascript:;"><img src="assets/img/user-11.jpg" alt="" /></a>
+						</div>
+						<div class="info">
+							Sean Ngu
+							<small>Front end developer</small>
+						</div>
+					</li>
+				</ul>
+				<!-- end sidebar user -->
+				<!-- begin sidebar nav -->
+				<ul class="nav">
+					<li class="nav-header">Navigation</li>
+					<li>
+						<a href="index.html"><i class="fa fa-laptop"></i> <span>Dashboard</span></a>
+					</li>
+					<li>
+						<a href="inbox.html">
+							<span class="badge pull-right">10</span>
+							<i class="fa fa-inbox"></i> <span>Inbox</span>
+						</a>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-suitcase"></i> 
+						    <b class="caret pull-right"></b>
+						    <span>UI Elements</span> 
+						</a>
+						<ul class="sub-menu">
+							<li><a href="ui_general.html">General</a></li>
+							<li><a href="ui_typography.html">Typography</a></li>
+							<li><a href="ui_tabs_accordions.html">Tabs & Accordions</a></li>
+							<li><a href="ui_modal_notification.html">Modal & Notification</a></li>
+							<li><a href="ui_widget_boxes.html">Widget Boxes</a></li>
+							<li><a href="ui_media_object.html">Media Object</a></li>
+							<li><a href="ui_buttons.html">Buttons</a></li>
+							<li><a href="ui_icons.html">Icons</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-file-o"></i> 
+						    <b class="caret pull-right"></b>
+						    <span>Form Stuff</span> 
+						</a>
+						<ul class="sub-menu">
+							<li><a href="form_elements.html">Form Elements</a></li>
+							<li><a href="form_plugins.html">Form Plugins</a></li>
+							<li><a href="form_validation.html">Form Validation</a></li>
+							<li><a href="form_wizards.html">Wizards</a></li>
+							<li><a href="form_wysiwyg.html">WYSIWYG</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <b class="caret pull-right"></b>
+						    <i class="fa fa-th"></i> 
+						    <span>Tables</span> 
+						</a>
+						<ul class="sub-menu">
+							<li><a href="table_basic.html">Basic Tables</a></li>
+							<li><a href="table_manage.html">Managed Tables</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+					    <a href="javascript:;">
+					        <i class="fa fa-envelope"></i>
+						    <b class="caret pull-right"></b>
+					        <span>
+					            Email Template 
+					            <span class="label label-success m-l-5">NEW</span>
+					        </span>
+					    </a>
+						<ul class="sub-menu">
+							<li><a href="email_system.html">System Template <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+							<li><a href="email_newsletter.html">Newsletter Template <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+						</ul>
+					</li>
+					<li><a href="charts.html"><i class="fa fa-signal"></i> <span>Charts</span></a></li>
+					<li><a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
+					<li class="has-sub">
+					    <a href="javascript:;">
+					        <i class="fa fa-map-marker"></i>
+					        <b class="caret pull-right"></b>
+					        <span>Map</span>
+					    </a>
+						<ul class="sub-menu">
+							<li><a href="map_vector.html">Vector Map</a></li>
+							<li><a href="map_google.html">Google Map</a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="gallery.html"><i class="fa fa-camera"></i> <span>Gallery</span></a></li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-cogs"></i>
+						    <b class="caret pull-right"></b>
+						    <span>Page Options</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="page_blank.html">Blank Page</a></li>
+							<li><a href="page_with_footer.html">Page with Footer</a></li>
+							<li><a href="page_without_sidebar.html">Page without Sidebar</a></li>
+							<li><a href="page_with_right_sidebar.html">Page with Right Sidebar</a></li>
+							<li><a href="page_with_minified_sidebar.html">Page with Minified Sidebar</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-gift"></i>
+						    <b class="caret pull-right"></b>
+						    <span>
+						        Extra
+						        <span class="label label-success m-l-5">NEW</span>
+						    </span>
+						</a>
+						<ul class="sub-menu">
+						    <li><a href="extra_timeline.html">Timeline <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+						    <li><a href="extra_coming_soon.html">Coming Soon Page <i class="fa fa-paper-plane text-success m-l-5"></i></a></li>
+							<li><a href="extra_search_results.html">Search Results</a></li>
+							<li><a href="extra_invoice.html">Invoice</a></li>
+							<li><a href="extra_404_error.html">404 Error Page</a></li>
+							<li><a href="extra_login.html">Login</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+						    <i class="fa fa-align-left"></i> 
+						    <b class="caret pull-right"></b>
+						    <span>Menu Level</span>
+						</a>
+						<ul class="sub-menu">
+							<li class="has-sub">
+								<a href="javascript:;">
+						            <b class="caret pull-right"></b>
+						            Menu 1.1
+						        </a>
+								<ul class="sub-menu">
+									<li class="has-sub">
+										<a href="javascript:;">
+										    <b class="caret pull-right"></b>
+										    Menu 2.1
+										</a>
+										<ul class="sub-menu">
+											<li><a href="javascript:;">Menu 3.1</a></li>
+											<li><a href="javascript:;">Menu 3.2</a></li>
+										</ul>
+									</li>
+									<li><a href="javascript:;">Menu 2.2</a></li>
+									<li><a href="javascript:;">Menu 2.3</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:;">Menu 1.2</a></li>
+							<li><a href="javascript:;">Menu 1.3</a></li>
+						</ul>
+					</li>
+			        <!-- begin sidebar minify button -->
+					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+			        <!-- end sidebar minify button -->
+				</ul>
+				<!-- end sidebar nav -->
+			</div>
+			<!-- end sidebar scrollbar -->
+		</div>
+		<!-- end #sidebar -->
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="javascript:;">Home</a></li>
+				<li><a href="javascript:;">Form Stuff</a></li>
+				<li class="active">Form Plugins</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Form Plugins <small>header small text goes here...</small></h1>
+			<!-- end page-header -->
+			
+			<!-- begin row -->
+			<div class="row">
+                <!-- begin col-6 -->
+			    <div class="col-md-6 ui-sortable">
+			        <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Datepicker</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Default Datepicker</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <input class="form-control" id="datepicker-default" placeholder="Select Date" value="04/1/2014" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Inline Datepicker</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <div id="datepicker-inline"><div></div><div class="datepicker datepicker-inline"><div style="display: block;" class="datepicker-days"><table class=" table-condensed"><thead><tr><th style="visibility: visible;" class="prev">?</th><th colspan="5" class="datepicker-switch">August 2014</th><th style="visibility: visible;" class="next">?</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td><td class="day">1</td><td class="day">2</td></tr><tr><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td><td class="day today">8</td><td class="day">9</td></tr><tr><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td><td class="day">15</td><td class="day">16</td></tr><tr><td class="day">17</td><td class="day">18</td><td class="day">19</td><td class="day">20</td><td class="day">21</td><td class="day">22</td><td class="day">23</td></tr><tr><td class="day">24</td><td class="day">25</td><td class="day">26</td><td class="day">27</td><td class="day">28</td><td class="day">29</td><td class="day">30</td></tr><tr><td class="day">31</td><td class="day new">1</td><td class="day new">2</td><td class="day new">3</td><td class="day new">4</td><td class="day new">5</td><td class="day new">6</td></tr></tbody><tfoot><tr><th style="display: none;" colspan="7" class="today">Today</th></tr><tr><th style="display: none;" colspan="7" class="clear">Clear</th></tr></tfoot></table></div><div style="display: none;" class="datepicker-months"><table class="table-condensed"><thead><tr><th style="visibility: visible;" class="prev">?</th><th colspan="5" class="datepicker-switch">2014</th><th style="visibility: visible;" class="next">?</th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody><tfoot><tr><th style="display: none;" colspan="7" class="today">Today</th></tr><tr><th style="display: none;" colspan="7" class="clear">Clear</th></tr></tfoot></table></div><div style="display: none;" class="datepicker-years"><table class="table-condensed"><thead><tr><th style="visibility: visible;" class="prev">?</th><th colspan="5" class="datepicker-switch">2010-2019</th><th style="visibility: visible;" class="next">?</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year new">2020</span></td></tr></tbody><tfoot><tr><th style="display: none;" colspan="7" class="today">Today</th></tr><tr><th style="display: none;" colspan="7" class="clear">Clear</th></tr></tfoot></table></div></div></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Auto Close Datepicker</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <input class="form-control" id="datepicker-autoClose" placeholder="Auto Close Datepicker" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Disabled Past Date</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <div class="input-group date" id="datepicker-disabled-past" data-date-format="dd-mm-yyyy" data-date-start-date="Date.default">
+                                            <input class="form-control" placeholder="Select Date" type="text">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Range Datepicker</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <div class="input-group input-daterange">
+                                            <input class="form-control" name="start" placeholder="Date Start" type="text">
+                                            <span class="input-group-addon">to</span>
+                                            <input class="form-control" name="end" placeholder="Date End" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">jQuery Autocomplete</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Autocomplete</label>
+									<div class="col-md-8 ui-sortable">
+										<span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" name="" id="jquery-autocomplete" class="form-control ui-autocomplete-input" placeholder="Try typing 'a' or 'b'." type="text">
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Bootstrap Combobox</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Bootstrap Combobox</label>
+									<div class="col-md-8 ui-sortable">
+                                        <div class="combobox-container"><input value="" name="" type="hidden"><input class="combobox" placeholder="Select Location" autocomplete="off" type="text"><span class="add-on btn dropdown-toggle" data-dropdown="dropdown"><span class="caret"></span><span class="combobox-clear"><i class="icon-remove"></i></span></span></div><select style="display: none;" class="combobox">
+                                            <option selected="selected" value="">Select Location</option>
+                                            <option value="PA">Pennsylvania</option>
+                                            <option value="CT">Connecticut</option>
+                                            <option value="NY">New York</option>
+                                            <option value="MD">Maryland</option>
+                                            <option value="VA">Virginia</option>
+                                        </select>
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Select with Search</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Default</label>
+									<div class="col-md-8 ui-sortable">
+									    <p>Convert this</p>
+									    <select class="form-control">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select>
+                                        <p></p>
+                                        <p>Become this</p>
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Theme White</label>
+									<div class="col-md-8 ui-sortable">
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-white" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Theme Inverse</label>
+									<div class="col-md-8 ui-sortable">
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-inverse">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-inverse" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Theme Primary</label>
+									<div class="col-md-8 ui-sortable">
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-primary">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-primary" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Theme Info</label>
+									<div class="col-md-8 ui-sortable">
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-info">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-info" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Theme Success</label>
+									<div class="col-md-8 ui-sortable">
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-success">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-success" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Theme Warning</label>
+									<div class="col-md-8 ui-sortable">
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-warning">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-warning" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Theme Danger</label>
+									<div class="col-md-8 ui-sortable">
+									    <select style="display: none;" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-danger">
+                                            <option value="" selected="selected">Select a Country</option>
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                        </select><div class="btn-group bootstrap-select form-control"><button title="Select a Country" type="button" class="btn dropdown-toggle selectpicker btn-danger" data-toggle="dropdown"><span class="filter-option pull-left">Select a Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><div class="bootstrap-select-searchbox"><input class="input-block-level form-control" type="text"></div><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" rel="0"><a tabindex="0" class="" style=""><span class="text">Select a Country</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="0" class="" style=""><span class="text">Afghanistan</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="0" class="" style=""><span class="text">Albania</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="0" class="" style=""><span class="text">Algeria</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="4"><a tabindex="0" class="" style=""><span class="text">American Samoa</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="5"><a tabindex="0" class="" style=""><span class="text">Andorra</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="6"><a tabindex="0" class="" style=""><span class="text">Angola</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="7"><a tabindex="0" class="" style=""><span class="text">Anguilla</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="8"><a tabindex="0" class="" style=""><span class="text">Antarctica</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li><li rel="9"><a tabindex="0" class="" style=""><span class="text">Antigua and Barbuda</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul></div></div>
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Password Indicator</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Password</label>
+									<div class="col-md-8 ui-sortable">
+										<input name="password" id="password-indicator-default" class="form-control m-b-5" type="password"><a href="#">Generate Password</a>
+										<div id="passwordStrengthDiv" class="is0 m-t-5"></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Visible Password</label>
+									<div class="col-md-8 ui-sortable">
+										<input name="password-visible" id="password-indicator-visible" class="form-control m-b-5" type="text"><a href="#">Generate Password</a>
+										<div id="passwordStrengthDiv2" class="is0 m-t-5"></div>
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end col-6 -->
+                <!-- begin col-6 -->
+                <div class="col-md-6 ui-sortable">
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Colopicker &amp; Timepicker</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Default Color Picker</label>
+									<div class="col-md-8 ui-sortable">
+										<input data-colorpicker-guid="1" value="#3498db" class="form-control" id="colorpicker" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Prepend Color Picker</label>
+									<div class="col-md-8 ui-sortable">
+										<div data-colorpicker-guid="2" class="input-group colorpicker-component ui-sortable" data-color="rgb(0, 0, 0)" data-color-format="rgb" id="colorpicker-prepend">
+											<input value="rgb(0, 0, 0)" readonly="readonly" class="form-control" type="text">
+											<span class="input-group-addon"><i style="background-color: rgb(0, 0, 0);"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">RGBA Color format</label>
+									<div class="col-md-8 ui-sortable">
+										<input data-colorpicker-guid="3" class="form-control" value="rgb(155,89,182,0.8)" id="colorpicker-rgba" data-color-format="rgba" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Default timepicker</label>
+									<div class="col-md-8 ui-sortable">
+										<div class="input-group bootstrap-timepicker"><div class="bootstrap-timepicker-widget dropdown-menu"><table><tbody><tr><td><a href="#" data-action="incrementHour"><i class="fa fa-chevron-up"></i></a></td><td class="separator">&nbsp;</td><td><a href="#" data-action="incrementMinute"><i class="fa fa-chevron-up"></i></a></td><td class="separator">&nbsp;</td><td class="meridian-column"><a href="#" data-action="toggleMeridian"><i class="fa fa-chevron-up"></i></a></td></tr><tr><td><input value="02" name="hour" class="bootstrap-timepicker-hour form-control" maxlength="2" type="text"></td> <td class="separator">:</td><td><input value="15" name="minute" class="bootstrap-timepicker-minute form-control" maxlength="2" type="text"></td> <td class="separator">&nbsp;</td><td><input value="PM" name="meridian" class="bootstrap-timepicker-meridian form-control" maxlength="2" type="text"></td></tr><tr><td><a href="#" data-action="decrementHour"><i class="fa fa-chevron-down"></i></a></td><td class="separator"></td><td><a href="#" data-action="decrementMinute"><i class="fa fa-chevron-down"></i></a></td><td class="separator">&nbsp;</td><td><a href="#" data-action="toggleMeridian"><i class="fa fa-chevron-down"></i></a></td></tr></tbody></table></div>
+											<input value="02:15 PM" id="timepicker" class="form-control" type="text">
+											<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+										</div>
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Ion Range Slider</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Default</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <span class="irs irs-with-grid" id="irs-1"><span class="irs"><span class="irs-line"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span style="display: none;" class="irs-min">$0</span><span style="display: none;" class="irs-max">$5000+</span><span style="left: 0px; display: block;" class="irs-from">$0</span><span style="left: 306px; display: block;" class="irs-to">$5000+</span><span style="left: 137px; display: none;" class="irs-single">$0  $5000+</span><span style="left: 0px; width: 347px;" class="irs-diapason"></span><span style="left: 0px;" class="irs-slider from last"></span><span style="left: 347px;" class="irs-slider to"></span></span><span class="irs-grid"><span class="irs-grid-pol small" style="left: 0px;"></span><span class="irs-grid-pol small" style="left: 17px;"></span><span class="irs-grid-pol small" style="left: 34px;"></span><span class="irs-grid-pol small" style="left: 52px;"></span><span class="irs-grid-pol small" style="left: 69px;"></span><span class="irs-grid-pol small" style="left: 86px;"></span><span class="irs-grid-pol small" style="left: 104px;"></span><span class="irs-grid-pol small" style="left: 121px;"></span><span class="irs-grid-pol small" style="left: 138px;"></span><span class="irs-grid-pol small" style="left: 156px;"></span><span class="irs-grid-pol small" style="left: 173px;"></span><span class="irs-grid-pol small" style="left: 190px;"></span><span class="irs-grid-pol small" style="left: 208px;"></span><span class="irs-grid-pol small" style="left: 225px;"></span><span class="irs-grid-pol small" style="left: 242px;"></span><span class="irs-grid-pol small" style="left: 260px;"></span><span class="irs-grid-pol small" style="left: 277px;"></span><span class="irs-grid-pol small" style="left: 294px;"></span><span class="irs-grid-pol small" style="left: 312px;"></span><span class="irs-grid-pol small" style="left: 329px;"></span><span class="irs-grid-pol small" style="left: 346px;"></span><span class="irs-grid-pol" style="left: 0px;"></span><span class="irs-grid-text" style="left: 0px; text-align: left;">0</span><span class="irs-grid-pol" style="left: 86px;"></span><span class="irs-grid-text" style="left: 36px;">1250</span><span class="irs-grid-pol" style="left: 173px;"></span><span class="irs-grid-text" style="left: 123px;">2500</span><span class="irs-grid-pol" style="left: 260px;"></span><span class="irs-grid-text" style="left: 210px;">3750</span><span class="irs-grid-pol" style="left: 346px;"></span><span class="irs-grid-text" style="left: 246px; text-align: right;">5000</span></span></span><input style="display: none;" id="default_rangeSlider" name="default_rangeSlider" value="0;5000" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Custom Range</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <span class="irs irs-with-grid" id="irs-2"><span class="irs"><span class="irs-line"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span style="display: block;" class="irs-min">1 000 </span><span style="display: none;" class="irs-max">100 000 </span><span style="left: 78px; display: block;" class="irs-from">30 000 </span><span style="left: 288px; display: block;" class="irs-to">90 000 </span><span style="left: 155.5px; display: none;" class="irs-single">30 000  90 000 </span><span style="left: 101.646px; width: 210.303px;" class="irs-diapason"></span><span style="left: 102px;" class="irs-slider from"></span><span style="left: 312px;" class="irs-slider to"></span></span><span class="irs-grid"><span class="irs-grid-pol small" style="left: 0px;"></span><span class="irs-grid-pol small" style="left: 17px;"></span><span class="irs-grid-pol small" style="left: 34px;"></span><span class="irs-grid-pol small" style="left: 52px;"></span><span class="irs-grid-pol small" style="left: 69px;"></span><span class="irs-grid-pol small" style="left: 86px;"></span><span class="irs-grid-pol small" style="left: 104px;"></span><span class="irs-grid-pol small" style="left: 121px;"></span><span class="irs-grid-pol small" style="left: 138px;"></span><span class="irs-grid-pol small" style="left: 156px;"></span><span class="irs-grid-pol small" style="left: 173px;"></span><span class="irs-grid-pol small" style="left: 190px;"></span><span class="irs-grid-pol small" style="left: 208px;"></span><span class="irs-grid-pol small" style="left: 225px;"></span><span class="irs-grid-pol small" style="left: 242px;"></span><span class="irs-grid-pol small" style="left: 260px;"></span><span class="irs-grid-pol small" style="left: 277px;"></span><span class="irs-grid-pol small" style="left: 294px;"></span><span class="irs-grid-pol small" style="left: 312px;"></span><span class="irs-grid-pol small" style="left: 329px;"></span><span class="irs-grid-pol small" style="left: 346px;"></span><span class="irs-grid-pol" style="left: 0px;"></span><span class="irs-grid-text" style="left: 0px; text-align: left;">1 000</span><span class="irs-grid-pol" style="left: 86px;"></span><span class="irs-grid-text" style="left: 36px;">26 000</span><span class="irs-grid-pol" style="left: 173px;"></span><span class="irs-grid-text" style="left: 123px;">50 500</span><span class="irs-grid-pol" style="left: 260px;"></span><span class="irs-grid-text" style="left: 210px;">75 500</span><span class="irs-grid-pol" style="left: 346px;"></span><span class="irs-grid-text" style="left: 246px; text-align: right;">100 000</span></span></span><input style="display: none;" id="customRange_rangeSlider" name="default_rangeSlider" value="30000;90000" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label ui-sortable">Custom Values</label>
+                                    <div class="col-md-8 ui-sortable">
+                                        <span class="irs irs-with-grid" id="irs-3"><span class="irs"><span class="irs-line"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span style="display: none;" class="irs-min">January</span><span style="display: block;" class="irs-max">December</span><span style="display: none;" class="irs-from">0</span><span style="display: none;" class="irs-to">0</span><span style="left: 0px;" class="irs-single">January</span><span style="left: 0px;" class="irs-slider single"></span></span><span class="irs-grid"><span class="irs-grid-pol small" style="left: 0px;"></span><span class="irs-grid-pol small" style="left: 17px;"></span><span class="irs-grid-pol small" style="left: 34px;"></span><span class="irs-grid-pol small" style="left: 52px;"></span><span class="irs-grid-pol small" style="left: 69px;"></span><span class="irs-grid-pol small" style="left: 86px;"></span><span class="irs-grid-pol small" style="left: 104px;"></span><span class="irs-grid-pol small" style="left: 121px;"></span><span class="irs-grid-pol small" style="left: 138px;"></span><span class="irs-grid-pol small" style="left: 156px;"></span><span class="irs-grid-pol small" style="left: 173px;"></span><span class="irs-grid-pol small" style="left: 190px;"></span><span class="irs-grid-pol small" style="left: 208px;"></span><span class="irs-grid-pol small" style="left: 225px;"></span><span class="irs-grid-pol small" style="left: 242px;"></span><span class="irs-grid-pol small" style="left: 260px;"></span><span class="irs-grid-pol small" style="left: 277px;"></span><span class="irs-grid-pol small" style="left: 294px;"></span><span class="irs-grid-pol small" style="left: 312px;"></span><span class="irs-grid-pol small" style="left: 329px;"></span><span class="irs-grid-pol small" style="left: 346px;"></span><span class="irs-grid-pol" style="left: 0px;"></span><span class="irs-grid-text" style="left: 0px; text-align: left;"></span><span class="irs-grid-pol" style="left: 86px;"></span><span class="irs-grid-text" style="left: 36px;"></span><span class="irs-grid-pol" style="left: 173px;"></span><span class="irs-grid-text" style="left: 123px;"></span><span class="irs-grid-pol" style="left: 260px;"></span><span class="irs-grid-text" style="left: 210px;"></span><span class="irs-grid-pol" style="left: 346px;"></span><span class="irs-grid-text" style="left: 246px; text-align: right;"></span></span></span><input style="display: none;" id="customValue_rangeSlider" name="default_rangeSlider" value="0" type="text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Masked Input</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Date</label>
+									<div class="col-md-8 ui-sortable">
+										<input class="form-control" id="masked-input-date" placeholder="dd/mm/yyyy" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Phone</label>
+									<div class="col-md-8 ui-sortable">
+										<input class="form-control" id="masked-input-phone" placeholder="(999) 999-9999" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Tax ID</label>
+									<div class="col-md-8 ui-sortable">
+										<input class="form-control" id="masked-input-tid" placeholder="99-9999999" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Product Key</label>
+									<div class="col-md-8 ui-sortable">
+										<input class="form-control" id="masked-input-pkey" placeholder="a*-999-a999" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">SSN</label>
+									<div class="col-md-8 ui-sortable">
+										<input class="form-control" id="masked-input-ssn" placeholder="999/99/9999" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">SSN</label>
+									<div class="col-md-8 ui-sortable">
+										<input class="form-control" id="masked-input-pno" placeholder="AAA-9999-A" type="text">
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                    <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">jQuery Tag It</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered">
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Default Tags Input with Autocomplete</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul class="tagit ui-widget ui-widget-content ui-corner-all" id="jquery-tagIt-default">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									    <p>Try to enter "c++, java, php" </p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Inverse Theme</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul id="jquery-tagIt-inverse" class="inverse tagit ui-widget ui-widget-content ui-corner-all">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">White Theme</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul id="jquery-tagIt-white" class="white tagit ui-widget ui-widget-content ui-corner-all">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Primary Theme</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul id="jquery-tagIt-primary" class="primary tagit ui-widget ui-widget-content ui-corner-all">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Info Theme</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul id="jquery-tagIt-info" class="info tagit ui-widget ui-widget-content ui-corner-all">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Success Theme</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul id="jquery-tagIt-success" class="success tagit ui-widget ui-widget-content ui-corner-all">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Warning Theme</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul id="jquery-tagIt-warning" class="warning tagit ui-widget ui-widget-content ui-corner-all">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4 ui-sortable">Danger Theme</label>
+									<div class="col-md-8 ui-sortable">
+                                        <ul id="jquery-tagIt-danger" class="danger tagit ui-widget ui-widget-content ui-corner-all">
+                                            
+                                            
+                                        <li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag1</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag1" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable"><span class="tagit-label">Tag2</span><a class="tagit-close"><span class="text-icon"></span><span class="ui-icon ui-icon-close"></span></a><input value="Tag2" name="tags" class="tagit-hidden-field" type="hidden"></li><li class="tagit-new"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" class="ui-widget-content ui-autocomplete-input" type="text"></li></ul>
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end col-6 -->
+            </div>
+            <!-- end row -->
+		</div>
+		<!-- end #content -->
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	 <script src="assets/plugins/jquery-1.7.2/jquery-1.7.2.js"></script>
+	  <script src="assets/plugins/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
+	 <script src="assets/plugins/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+	 <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	 <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+     <script src="assets/plugins/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+     <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+     <script src="assets/plugins/masked-input/masked-input.js"></script>
+     <script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+     <script src="assets/plugins/password-indicator/js/password-indicator.js"></script>
+     <script src="assets/plugins/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+     <script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script>
+     <script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+     <script src="assets/plugins/jquery-tagit/js/tag-it.min.js"></script>
+     <script src="assets/js/form-plugins.js"></script>
+	 <script src="assets/js/dashboard.js"></script>
+	 <script src="assets/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+  	<script src="assets/js/apps.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/crossbrowserjs/respond.min.js"></script>
+		<script src="assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	 
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<script>
+		$(document).ready(function() {
+			App.init();
+			FormPlugins.init();
+		});
+	</script>
+
+<div data-colorpicker-guid="1" class="colorpicker dropdown-menu"><div style="background-color: rgb(0, 153, 255);" class="colorpicker-saturation"><i style="left: 76.2557px; top: 14.1176px;"><b></b></i></div><div class="colorpicker-hue"><i style="top: 43.3134px;"></i></div><div class="colorpicker-alpha"><i style="top: 0px;"></i></div><div class="colorpicker-color"><div style="background-color: rgb(52, 152, 219);"></div></div></div><div data-colorpicker-guid="2" class="colorpicker dropdown-menu"><div style="background-color: rgb(255, 0, 0);" class="colorpicker-saturation"><i style="left: 0px; top: 100px;"><b></b></i></div><div class="colorpicker-hue"><i style="top: 0px;"></i></div><div class="colorpicker-alpha"><i style="top: 0px;"></i></div><div style="display: none;" class="colorpicker-color"><div></div></div></div><div data-colorpicker-guid="3" class="colorpicker dropdown-menu alpha"><div style="background-color: rgb(181, 0, 255);" class="colorpicker-saturation"><i style="left: 51.0989px; top: 28.6275px;"><b></b></i></div><div class="colorpicker-hue"><i style="top: 21.5054px;"></i></div><div style="background-color: rgb(155, 89, 182);" class="colorpicker-alpha"><i style="top: 20px;"></i></div><div class="colorpicker-color"><div style="background-color: rgba(155, 89, 182, 0.8);"></div></div></div><ul style="display: none;" tabindex="0" id="ui-id-1" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all"></ul><ul class="typeahead typeahead-long dropdown-menu"></ul><ul style="display: none;" tabindex="0" id="ui-id-2" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul><ul style="display: none;" tabindex="0" id="ui-id-3" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul><ul style="display: none;" tabindex="0" id="ui-id-4" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul><ul style="display: none;" tabindex="0" id="ui-id-5" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul><ul style="display: none;" tabindex="0" id="ui-id-6" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul><ul style="display: none;" tabindex="0" id="ui-id-7" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul><ul style="display: none;" tabindex="0" id="ui-id-8" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul><ul style="display: none;" tabindex="0" id="ui-id-9" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all tagit-autocomplete"></ul></body></html>
