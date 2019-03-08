@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登录页面</title>
+<link rel="stylesheet" type="text/css" href="vince/rain/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="vince/rain/css/default.css">
+<link rel="stylesheet" type="text/css" href="vince/css/vince.css">
+<style media="screen">
+   body {
+		overflow: hidden;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script src="vince/rain/js/rainyday.min.js"></script>
+<script>
+	function run() {
+		var image = document.getElementById('background');
+		image.onload = function() {
+			var engine = new RainyDay({
+				image: this
+			});
+			engine.rain([ [1, 2, 8000] ]);
+			engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+		};
+		image.crossOrigin = 'anonymous';
+		image.src = "vince/rain/css/1.jpg";
+
+	}
+</script>
+
+
+</head>
+<body onLoad="run();">
+
+<div class="login">
+<div class="loginform">
+	<form action="#">
+		<div class="login_user">
+			<input type="text" value="yonghu">
+		</div>
+		<div class="login_pass">
+			<input type="password">
+		</div>
+		<div class="login_botton">
+			<input type="submit" value="登录">
+		</div>
+	</form>
+</div>	
+
+</div>
+
+<img id="background" alt="background" src="vince/rain/css/1.jpg" />
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="vince/js/demo.js"></script>
+<script>
+pingHeight=document.documentElement.clientHeight;
+pingWidth=document.documentElement.clientWidth;
+$("body").css({"height":pingHeight})
+</script>
+</body>
+</html>
