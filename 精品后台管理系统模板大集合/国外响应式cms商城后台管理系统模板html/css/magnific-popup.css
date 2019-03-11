@@ -1,0 +1,388 @@
+
+/******/
+
+.nivo-lightbox-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99998;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.nivo-lightbox-overlay.nivo-lightbox-open { 
+	visibility: visible;
+	opacity: 1;
+}
+.nivo-lightbox-wrap  {
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	left: 10%;
+	right: 10%;
+}
+.nivo-lightbox-content {
+	width: 100%;
+	height: 100%;
+}
+.nivo-lightbox-title-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99999;
+	text-align: center;
+}
+.nivo-lightbox-nav { display: none; }
+.nivo-lightbox-prev {
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+.nivo-lightbox-next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+.nivo-lightbox-close {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+}
+
+.nivo-lightbox-image { text-align: center; }
+.nivo-lightbox-image img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+}
+.nivo-lightbox-content iframe {
+	width: 100%;
+	height: 100%;
+}
+.nivo-lightbox-ajax { 
+	max-height: 100%;
+	overflow: auto; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* https://bugzilla.mozilla.org/show_bug.cgi?id=308801 */
+}
+.nivo-lightbox-error {
+	display: table;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-shadow: 0 1px 1px #000;
+}
+.nivo-lightbox-error p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Effects 
+ **********************************************/
+.nivo-lightbox-effect-fade,
+.nivo-lightbox-effect-fadeScale,
+.nivo-lightbox-effect-slideLeft,
+.nivo-lightbox-effect-slideRight,
+.nivo-lightbox-effect-slideUp,
+.nivo-lightbox-effect-slideDown,
+.nivo-lightbox-effect-fall {
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	    -ms-transition: all 0.2s ease-in-out;
+	     -o-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out;
+}
+
+/* fadeScale */
+.nivo-lightbox-effect-fadeScale .nivo-lightbox-wrap {
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	-webkit-transform: scale(0.7);
+	   -moz-transform: scale(0.7);
+	    -ms-transform: scale(0.7);
+	        transform: scale(0.7);
+}
+.nivo-lightbox-effect-fadeScale.nivo-lightbox-open .nivo-lightbox-wrap {
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+}
+
+/* slideLeft / slideRight / slideUp / slideDown */
+.nivo-lightbox-effect-slideLeft .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideRight .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideUp .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideDown .nivo-lightbox-wrap {
+	-webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	   -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	    -ms-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	     -o-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	        transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+.nivo-lightbox-effect-slideLeft .nivo-lightbox-wrap {
+	-webkit-transform: translateX(-10%);
+	   -moz-transform: translateX(-10%);
+	    -ms-transform: translateX(-10%);
+	        transform: translateX(-10%);
+}
+.nivo-lightbox-effect-slideRight .nivo-lightbox-wrap {
+	-webkit-transform: translateX(10%);
+	   -moz-transform: translateX(10%);
+	    -ms-transform: translateX(10%);
+	        transform: translateX(10%);
+}
+.nivo-lightbox-effect-slideLeft.nivo-lightbox-open .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideRight.nivo-lightbox-open .nivo-lightbox-wrap {
+	-webkit-transform: translateX(0);
+	   -moz-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	        transform: translateX(0);
+}
+.nivo-lightbox-effect-slideDown .nivo-lightbox-wrap {
+	-webkit-transform: translateY(-10%);
+	   -moz-transform: translateY(-10%);
+	    -ms-transform: translateY(-10%);
+	        transform: translateY(-10%);
+}
+.nivo-lightbox-effect-slideUp .nivo-lightbox-wrap {
+	-webkit-transform: translateY(10%);
+	   -moz-transform: translateY(10%);
+	    -ms-transform: translateY(10%);
+	        transform: translateY(10%);
+}
+.nivo-lightbox-effect-slideUp.nivo-lightbox-open .nivo-lightbox-wrap,
+.nivo-lightbox-effect-slideDown.nivo-lightbox-open .nivo-lightbox-wrap {
+	-webkit-transform: translateY(0);
+	   -moz-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
+}
+
+/* fall */
+.nivo-lightbox-body-effect-fall .nivo-lightbox-effect-fall {
+	-webkit-perspective: 1000px;
+	   -moz-perspective: 1000px;
+	        perspective: 1000px;
+}
+.nivo-lightbox-effect-fall .nivo-lightbox-wrap {
+	-webkit-transition: all 0.3s ease-out;
+	   -moz-transition: all 0.3s ease-out;
+	    -ms-transition: all 0.3s ease-out;
+	     -o-transition: all 0.3s ease-out;
+	        transition: all 0.3s ease-out;
+	-webkit-transform: translateZ(300px);
+	   -moz-transform: translateZ(300px);
+	    -ms-transform: translateZ(300px);
+	        transform: translateZ(300px);
+}
+.nivo-lightbox-effect-fall.nivo-lightbox-open .nivo-lightbox-wrap {
+	-webkit-transform: translateZ(0);
+	   -moz-transform: translateZ(0);
+	    -ms-transform: translateZ(0);
+	        transform: translateZ(0);
+}
+/*
+ * Nivo Lightbox Default Theme v1.0
+ * http://dev7studios.com/nivo-lightbox
+ *
+ * Copyright 2013, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+.nivo-lightbox-theme-default.nivo-lightbox-overlay { 
+	background: #666;
+	background:rgba(0, 0, 0, 0.83); 
+}
+.nivo-lightbox-theme-default .nivo-lightbox-content.nivo-lightbox-loading { background: url(loading.gif) no-repeat 50% 50%; }
+
+.nivo-lightbox-theme-default .nivo-lightbox-nav {
+	top: 10%;
+	width: 8%;
+	height: 80%;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.nivo-lightbox-theme-default .nivo-lightbox-nav:hover { 
+	opacity: 1; 
+}
+.nivo-lightbox-theme-default .nivo-lightbox-prev { 
+	background-image: url(../images/prev.png); 
+}
+.nivo-lightbox-theme-default .nivo-lightbox-next { 
+	background-image: url(../images/next.png); 
+}
+
+.nivo-lightbox-theme-default .nivo-lightbox-close {
+	display: block;
+	background: url(../images/close.png) no-repeat 0px -1px;
+	width: 16px;
+	height: 16px;
+	text-indent: -9999px;
+	padding: 5px;
+}
+.nivo-lightbox-theme-default .nivo-lightbox-close:hover { opacity: 1; }
+
+.nivo-lightbox-theme-default .nivo-lightbox-title-wrap { bottom: -7%; }
+.nivo-lightbox-theme-default .nivo-lightbox-title {
+	font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	background: #000;
+	color: #fff;
+	padding: 7px 15px;
+	border-radius: 30px;
+}
+
+.nivo-lightbox-theme-default .nivo-lightbox-image img {
+	background: #fff;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	border: 10px solid rgba(51, 122, 183, 0.8);    
+}
+.nivo-lightbox-theme-default .nivo-lightbox-ajax,
+.nivo-lightbox-theme-default .nivo-lightbox-inline {
+	background: #fff;
+	padding: 40px;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	   -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	        box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+}
+@media (-webkit-min-device-pixel-ratio: 1.3),
+       (-o-min-device-pixel-ratio: 2.6/2),
+       (min--moz-device-pixel-ratio: 1.3),
+       (min-device-pixel-ratio: 1.3),
+       (min-resolution: 1.3dppx) {
+
+	.nivo-lightbox-theme-default .nivo-lightbox-content.nivo-lightbox-loading { 
+		background-image: url(loading@2x.gif); 
+		background-size: 32px 32px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-prev { 
+		background-image: url(prev@2x.png); 
+		background-size: 48px 48px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-next { 
+		background-image: url(next@2x.png); 
+		background-size: 48px 48px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-close { 
+		background-image: url(close@2x.png); 
+		background-size: 16px 16px;
+	}
+	
+}
+@media screen and (max-width: 320px) 
+{
+	.nivo-lightbox-image img {
+	max-width: 90%;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-image img {
+	border: 10px solid #FFF;
+	border-radius: 15px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-next {
+	background-position: 84% 50%;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-prev {
+	background-position: 17% 50%;
+	}
+}
+
+/*******end-porfolio_pop_up*********/
+@media screen and (max-width: 1366px)
+{
+	.contact-member {
+	padding: 11px 10px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-nav {
+	top: 6%;
+	}
+}
+@media screen and (max-width: 1024px)
+{
+	#small-dialog1 {
+	max-width: 80%;
+	}
+	#small-dialog2 {
+	max-width: 80%;
+	}
+}
+/*******end-porfolio_pop_up*********/
+@media screen and (max-width: 768px)
+{
+	.sticky-col {
+	position: relative;
+	width: 100%;
+	z-index: 10;	
+	}
+	.p-left-col {
+	float: none;
+	width: 100%;
+	text-align: center;
+	margin: 0px;
+	}
+	.p-right-col {
+	float: none;
+	width: 100%;
+	position: relative;
+	}
+	.left-col {
+	float: none;
+	width: 100%;
+	margin-right: 0px;
+	text-align: center;
+	}
+	.right-col {
+	float: none;
+	width: 100%;
+	margin-left: 0px;
+	margin-top: 1em;
+	}
+}
+@media screen and (max-width: 320px)
+{
+	.pop_up {
+	padding: 0em;
+	}
+	.left-col .social-link li {
+	list-style: none;
+	float: left;
+	margin: 3px;
+	}
+	.member-intro h2 {
+	font-size: 14px;
+	}
+	.left-col .social-link li:nth-child(4),.left-col .social-link li:nth-child(5),
+	.left-col .social-link li:nth-child(6),.left-col .social-link li:nth-child(7),
+	.left-col .social-link li:nth-child(8) {
+	display: none;
+	}
+	.p-inline-content {
+	padding: 10px;
+	}
+	.p-left-col ul li {
+	list-style: none;
+	margin: 0 0 20px;
+	}
+	.p-right-col > div > ul > li:nth-child(4),.p-right-col > div > ul > li:nth-child(5) {
+	display: none;
+	}
+}
