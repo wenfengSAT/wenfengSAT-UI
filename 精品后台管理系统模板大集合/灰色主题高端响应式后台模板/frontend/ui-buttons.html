@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<title>Avalon Frontend</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    	<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-touch-fullscreen" content="yes">
+    	<meta name="description" content="Avalon Frontend Theme">
+    	<meta name="author" content="The Red Team">
+
+		<link href="../../../../../../../fonts.googleapis.com/css-family=Source+Sans+Pro-300,400,400italic,700.css" tppabs="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,700" rel='stylesheet' type='text/css'>
+
+        <link href="assets/fonts/font-awesome/css/font-awesome.min.css" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/fonts/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/styles.css" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/css/styles.css" type="text/css" rel="stylesheet">
+
+		<!-- <link href="assets/assets/plugins/smartmenus/css/sm-core-css.css" type="text/css" rel="stylesheet"> -->
+        <link href="assets/plugins/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.css" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.css" type="text/css" rel="stylesheet">
+        <link href="assets/plugins/codeprettifier/prettify.css" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/codeprettifier/prettify.css" type="text/css" rel="stylesheet">
+        
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries. Placeholdr.js enables the placeholder attribute -->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="../../../../../../../html5shim.googlecode.com/svn/trunk/html5.js" tppabs="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script type="text/javascript" src="../../../../../../../cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js" tppabs="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+			<script type="text/javascript" src="assets/plugins/charts-flot/excanvas.min.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/charts-flot/excanvas.min.js"></script>
+		<![endif]-->
+    <!-- The following CSS are included as plugins and can be removed if unused-->
+    
+
+    </head>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../../../../www.google-analytics.com/analytics.js'/*tpa=http://www.google-analytics.com/analytics.js*/,'ga');
+
+  ga('create', 'UA-44426473-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    <body>
+        <div id="wrapper">
+        	<div id="topnav" class="navbar navbar-static-top navbar-inverse" role="banner">
+
+	<div class="container">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target=".navbar-collapse-topnav">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="fa fa-bars"></i>
+			</button>
+		</div>
+
+        <div class="navbar-collapse collapse navbar-collapse-topnav navbar-left">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+				</li>
+				<li>
+					<a href="../index.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/index.html" target="_blank">Admin</a>
+				</li>
+				<li>	
+					<a href="../landing/index.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/landing/index.html" target="_blank">Landing Page</a>
+				</li>
+			</ul>
+		</div>
+
+		<ul class="nav navbar-nav toolbar pull-right">
+			<li class="dropdown toolbar-icon-bg">
+				<a href="#" class="dropdown-toggle tooltips" data-toggle="dropdown"><span class="icon-bg"><i class="fa fa-fw fa-search"></i></span></a>
+				
+				<div class="dropdown-menu arrow search dropdown-menu-form">
+					<div class="dd-header">
+						<span>Search</span>
+						<span><a href="#">Advanced search</a></span>
+					</div>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="">
+						
+						<span class="input-group-btn">
+							<a class="btn btn-primary" href="#">Search</a>
+						</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+
+</div>
+            <header id="headernav" class="navbar-default">
+	<div class="container">
+		<div class="row">
+
+				<!-- Static navbar -->
+				<div role="navigation"> <!-- class="navbar navbar-default"  -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-header">
+							<span class="sr-only">Toggle navigation</span>
+							<i class="fa fa-bars"></i>
+						</button>
+						<a class="navbar-brand" href="index.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/index.html">Avalon</a>
+					</div>
+					<nav class="navbar-collapse navbar-collapse-header collapse">
+						<!-- Right nav -->
+						<div class="navbar-right yamm">
+							<ul class="nav navbar-nav smart-menu dd-menu">
+								<li><a href="index.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/index.html">Home<span class="subline">Welcome Home</span></a></li>
+								<li class="dropdown yamm-fw hidden-sm">
+									<a href="javascript:;">
+										Mega Menu 
+										<span class="caret"></span>
+										<span class="subline">Categories</span>
+									</a>
+									<ul class="dropdown-menu mega-menu">
+										<li class="container">
+											<div class="row">
+												<div class="col-sm-2 yamm-col">
+													<h5 class="category">Entertainment</h5>
+													<ul class="list-unstyled">
+														<li><a href="#">Arts</a></li>
+														<li><a href="#">Books</a></li>
+														<li><a href="#">Games</a></li>
+														<li><a href="#">Movies</a></li>
+														<li><a href="#">Music</a></li>
+														<li><a href="#">Theater</a></li>
+														<li><a href="#">TV</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-2 yamm-col">
+													<h5 class="category">Fashion</h5>
+													<ul class="list-unstyled">
+														<li><a href="#">News &amp; Trends</a></li>
+														<li><a href="#">Beauty</a></li>
+														<li><a href="#">Shows</a></li>
+														<li><a href="#">Street Style</a></li>
+														<li><a href="#">Celebrity Style</a></li>
+														<li><a href="#">Designers</a></li>
+														<li><a href="#">Models</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-2 yamm-col">
+													<h5 class="category">Travel</h5>
+													<ul class="list-unstyled">
+														<li><a href="#">Airline</a></li>
+														<li><a href="#">Lodging</a></li>
+														<li><a href="#">Rail</a></li>
+														<li><a href="#">Car Rental</a></li>
+														<li><a href="#">Cruises</a></li>
+														<li><a href="#">Luggage Accessories</a></li>
+														<li><a href="#">Maps</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-2 yamm-col">
+													<h5 class="category">Electronics</h5>
+													<ul class="list-unstyled">
+														<li><a href="#">Computers</a></li>
+														<li><a href="#">Tablets</a></li>
+														<li><a href="#">Notebooks</a></li>
+														<li><a href="#">Cell Phones</a></li>
+														<li><a href="#">Cameras</a></li>
+														<li><a href="#">Audio &amp; Video</a></li>
+														<li><a href="#">Accessories</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-4 yamm-col">
+												
+													<div class="carousel carousel-text slide carousel-default mt10 mb20" id="c-slide">
+														<ol class="carousel-indicators">
+															<li data-target="#c-slide" data-slide-to="0" class="active"></li>
+															<li data-target="#c-slide" data-slide-to="1" class=""></li>
+															<li data-target="#c-slide" data-slide-to="2" class=""></li>
+														</ol>
+														<div class="carousel-inner" style="height: 144px;">
+															<div class="item active">
+																<img src="assets/demo/stockphoto/music_11_carousel.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/music_11_carousel.jpg" alt="" class="img-responsive" />
+															</div>
+															<div class="item">
+																<img src="assets/demo/stockphoto/communication_12_carousel.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/communication_12_carousel.jpg" alt="" class="img-responsive" />
+															</div>
+															<div class="item">
+																<img src="assets/demo/stockphoto/music_10_carousel.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/music_10_carousel.jpg" alt="" class="img-responsive" />
+															</div>
+														</div>
+													</div>
+													
+													<h6 class="category">Inventore</h6>
+													<p class="small">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+												</div>
+											</div>						                    
+						                 </li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:;">
+										Features 
+										<span class="caret"></span>
+										<span class="subline">Theme Options</span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="ui-typography.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typography.html">Base UI <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="ui-typography.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typography.html">Typography</a></li>
+												<li><a href="ui-buttons.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-buttons.html">Buttons</a></li>
+												<li><a href="ui-tables.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-tables.html">Tables</a></li>
+												<li><a href="ui-forms.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-forms.html">Forms</a></li>
+												<li><a href="ui-boxes.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-boxes.html">Boxes</a></li>
+												<li><a href="ui-panels.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-panels.html">Panels</a></li>
+												<li><a href="ui-icons.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-icons.html">Font Icons</a></li>
+											</ul>
+										</li>
+										<li><a href="layout-grids.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/layout-grids.html">Grid Scaffolding</a></li>
+										<li><a href="ui-modals.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-modals.html">BS Components <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="ui-modals.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-modals.html">Modal Box</a></li>
+												<li><a href="ui-progress.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-progress.html">Progress Bars</a></li>
+												<li><a href="ui-paginations.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-paginations.html">Pagers &amp; Paginations</a></li>
+												<li><a href="ui-breadcrumbs.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-breadcrumbs.html">Breadcrumbs</a></li>
+												<li><a href="ui-labelsbadges.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-labelsbadges.html">Labels &amp; Badges</a></li>
+												<li><a href="ui-alerts.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-alerts.html">Alerts &amp; Notifactions</a></li>
+												<li><a href="ui-tabs.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-tabs.html">Tabs &amp; Accordions</a></li>
+												<li><a href="ui-carousel.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-carousel.html">Carousel</a></li>
+												<li><a href="ui-wells.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-wells.html">Wells</a></li>
+											</ul>
+										</li>
+										<li><a href="ui-tiles.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-tiles.html">Custom Components <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="ui-tiles.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-tiles.html">Tiles</a></li>
+												<li><a href="custom-skylo.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-skylo.html">Skylo</a></li>
+												<li><a href="custom-bootbox.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-bootbox.html">Bootbox</a></li>
+												<li><a href="custom-datepaginator.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-datepaginator.html">Date Paginator</a></li>
+												<li><a href="custom-pines.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-pines.html">Pines Notification</a></li>
+												<li><a href="custom-notific8.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-notific8.html">Notific8 Notification</a></li>
+												<li><a href="custom-pulsate.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-pulsate.html">Pulsate</a></li>
+												<li><a href="custom-knob.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-knob.html">Knob</a></li>
+												<li><a href="custom-jqueryui.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-jqueryui.html">jQueryUI Widgets</a></li>
+												<li><a href="custom-ionrange.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-ionrange.html">Ion Rabge Slider</a></li>
+												<li><a href="custom-tour.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-tour.html">Tour</a></li>
+												<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-nestable.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-nestable.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-nestable.html">Nestbale</a></li>
+												<li><a href="custom-jstree.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-jstree.html">Tree View</a></li>
+												<li><a href="custom-weather.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-weather.html">Weather</a></li>
+											</ul>
+										</li>
+										<li><a href="form-components.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-components.html">Advanced Forms <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="form-components.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-components.html">Form Components</a></li>
+												<li><a href="form-pickers.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-pickers.html">Pickers</a></li>
+												<li><a href="form-wizard.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-wizard.html">Form Wizard</a></li>
+												<li><a href="form-validation.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-validation.html">Form Validation</a></li>
+												<li><a href="form-masks.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-masks.html">Form Masks</a></li>
+												<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-fileupload  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-fileupload'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-fileupload">Multi File Uploader</a></li>
+												<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/from-dropzone.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/from-dropzone.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/from-dropzone.html">Dropzone Uploader</a></li>
+												<li><a href="form-ckeditor.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-ckeditor.html">CKEditor</a></li>
+												<li><a href="form-summernote.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-summernote.html">Summernote</a></li>
+												<li><a href="form-markdown.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-markdown.html">Markdown Editor</a></li>
+												<li><a href="form-xeditable.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-xeditable.html">Inline Editor</a></li>
+												<li><a href="form-imagecrop.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-imagecrop.html">Image Cropping</a></li>
+											</ul>
+										</li>
+										<li><a href="tables-responsive.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-responsive.html">Advanced Tables <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="tables-responsive.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-responsive.html">Responsive Tables</a></li>
+												<li><a href="tables-editable.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-editable.html">Editable Tables</a></li>
+												<li><a href="tables-data.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-data.html">Data Tables</a></li>
+												<li><a href="tables-advanceddatatable.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-advanceddatatable.html">Advanced Data Tables</a></li>
+												<li><a href="tables-fixedheader.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-fixedheader.html">Fixed Header</a></li>
+											</ul>
+										</li>
+										<li><a href="ui-advancedpanels.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-advancedpanels.html">Advanced Panels</a></li>
+										<li>
+											<a href="charts-flot.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-flot.html">Analytics <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="charts-flot.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-flot.html">Flot</a></li>
+												<li><a href="charts-sparklines.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-sparklines.html">Sparklines</a></li>
+												<li><a href="charts-morris.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-morris.html">Morris.js</a></li>
+												<li><a href="charts-chart.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-chart.html">Chart.js</a></li>
+												<li><a href="charts-easypiechart.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-easypiechart.html">Easy Pie Chart</a></li>
+											</ul>
+										</li>
+										<li><a href="maps-google.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/maps-google.html">Maps <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="maps-google.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/maps-google.html">Google Maps</a></li>
+												<li><a href="maps-vector.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/maps-vector.html">Vector Maps</a></li>
+												<li><a href="maps-mapael.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/maps-mapael.html">Mapael</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Unlimited Level Menu <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="javascript:;">Menu Item 1</a></li>
+												<li>
+													<a href="javascript:;">Menu Item 2 <span class="caret"></span></a>
+													<ul class="dropdown-menu">
+														<li><a href="javascript:;">Menu Item 2.1</a></li>
+														<li>
+															<a href="javascript:;">Menu Item 2.2 <span class="caret"></span></a>
+															<ul class="dropdown-menu">
+																<li><a href="javascript:;">Menu Item 2.2.1</a></li>
+																<li>
+																	<a href="javascript:;">Menu Item 2.2.2 <span class="caret"></span></a>
+																	<ul class="dropdown-menu">
+																		<li><a href="javascript:;">And deeper yet!</a></li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:;">
+										Pages
+										<span class="caret"></span>
+										<span class="subline">Random Pages</span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="pages-pricingtable.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/pages-pricingtable.html">Pricing Table</a></li>
+										<li><a href="pages-faq.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/pages-faq.html">FAQ</a></li>
+										<li><a href="pages-search.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/pages-search.html">Search Results</a></li>
+										<!-- <li><a href="#">Clients</a></li>
+										<li><a href="#">Careers</a></li>
+										<li><a href="pages-aboutus.html">About Us</a></li> -->
+										<li><a href="pages-contactus.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/pages-contactus.html">Contact Us</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:;">
+										Blog
+										<span class="caret"></span>
+										<span class="subline">Recent Stories</span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="blog-page.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/blog-page.html">Blog Page</a></li>
+										<li><a href="blog-post.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/blog-post.html">Blog Post</a></li>
+										<li><a href="blog-columns.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/blog-columns.html">Blog Columns</a></li>
+										<li><a href="blog-portfolio.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/blog-portfolio.html">Portfolio</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="pages-aboutus.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/pages-aboutus.html">
+										About Us
+										<span class="subline">Company</span>
+									</a>
+									<!-- <ul class="dropdown-menu">
+										<li><a href="portfolio-blocks.html">Portfolio Blocks</a></li>
+										<li><a href="portfolio-item1.html">Portfolio Item Option 1</a></li>
+										<li><a href="portfolio-item2.html">Portfolio Item Option 2</a></li>
+									</ul> -->
+								</li>
+								
+							</ul>
+						</div>
+					</nav><!--/.nav-collapse -->
+				</div>
+
+			</div>
+		</div>
+
+</header>
+            
+            <!-- Content block, child page inject content -->
+            <div id="frontend-features" class="page-content">
+                <div class="page-heading">
+                    <div class="container clearfix">
+                        <h1 class="pull-left">Buttons</h1>
+
+                        <ol class="breadcrumb pull-right">
+                            
+<li><a href="index.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/index.html">Home</a></li>
+<li><a href="#">UI Elements</a></li>
+<li class="active"><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-buttons  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-buttons'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-buttons">Buttons</a></li>
+
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="sidebar mb40">
+	<nav role="navigation" class="widget-body">
+		<ul class="acc-menu">
+			<li><a href="layout-grids.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/layout-grids.html"><i class="fa fa-columns"></i><span>Grid Scaffolding</span></a></li>
+			
+			<li><a href="javascript:;"><i class="fa fa-flask"></i><span>Base UI</span></a>
+				<ul class="acc-menu">
+					<li><a href="ui-typography.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typography.html">Typography</a></li>
+					<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typo-headings.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typo-headings.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typo-headings.html">Headlines</a></li>
+					<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typo-dividers.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typo-dividers.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-typo-dividers.html">Dividers</a></li>
+					<li><a href="ui-buttons.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-buttons.html">Buttons</a></li>
+					<li><a href="ui-tables.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-tables.html">Tables</a></li>
+					<li><a href="ui-forms.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-forms.html">Forms</a></li>
+					<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-images.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-images.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-images.html">Images</a></li>
+					<li><a href="ui-panels.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-panels.html">Panels</a></li>
+					<li><a href="ui-icons.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-icons.html">Font Icons</a></li>
+					<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-helpers.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-helpers.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-helpers.html">Helpers</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;"><i class="fa fa-cogs"></i><span>BS Components</span><span class="label label-primary">BS</span></a>
+	            <ul class="acc-menu">
+	                <li><a href="ui-modals.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-modals.html">Modal Box</a></li>
+	                <li><a href="ui-progress.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-progress.html">Progress Bars</a></li>
+					<li><a href="ui-paginations.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-paginations.html">Pagers &amp; Paginations</a></li>
+					<li><a href="ui-breadcrumbs.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-breadcrumbs.html">Breadcrumbs</a></li>
+					<li><a href="ui-labelsbadges.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-labelsbadges.html">Labels &amp; Badges</a></li>
+	                <li><a href="ui-alerts.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-alerts.html">Alerts &amp; Notificiations</a></li>
+	                <li><a href="ui-tabs.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-tabs.html">Tabs &amp; Accordions</a></li>
+<!-- 	                <li><a href="ui-navbars.html">Navbars</a></li> -->
+	                <li><a href="ui-carousel.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-carousel.html">Carousel</a></li>
+	                <li><a href="ui-wells.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-wells.html">Wells</a></li>
+	            </ul>
+	        </li>
+	        <li><a href="javascript:;"><i class="fa fa-random"></i><span>Custom Components</span></a>
+	        	<ul class="acc-menu">
+	        		<li><a href="ui-tiles.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-tiles.html">Tiles</a></li>
+	        		<li><a href="custom-skylo.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-skylo.html">Page Progress Bar</a></li>
+	        		<li><a href="custom-bootbox.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-bootbox.html">Bootbox</a></li>
+	        		<li><a href="custom-datepaginator.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-datepaginator.html">Date Paginator</a></li>
+	        		<li><a href="custom-pines.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-pines.html">Pines Notification</a></li>
+	        		<li><a href="custom-notific8.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-notific8.html">Notific8 Notification</a></li>
+	        		<li><a href="custom-pulsate.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-pulsate.html">Pulsating Elements</a></li>
+					<li><a href="custom-knob.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-knob.html">jQuery Knob</a></li>
+					<li><a href="custom-jqueryui.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-jqueryui.html">jQueryUI Widgets</a></li>
+					<li><a href="custom-ionrange.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-ionrange.html">Ion Range Slider</a></li>
+					<li><a href="custom-tour.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-tour.html">Tour</a></li>
+					<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-nestable.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-nestable.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-nestable.html">Nestable Lists</a></li>
+					<li><a href="custom-jstree.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-jstree.html">Tree View</a></li>
+					<li><a href="custom-weather.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/custom-weather.html">Weather</a></li>
+	        	</ul>
+	        </li>
+			<li><a href="javascript:;"><i class="fa fa-pencil"></i><span>Advanced Forms</span></a>
+				<ul class="acc-menu">
+					<li><a href="form-components.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-components.html">Form Components</a></li>
+					<li><a href="form-pickers.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-pickers.html">Pickers</a></li>
+					<li><a href="form-wizard.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-wizard.html">Form Wizard</a></li>
+					<li><a href="form-validation.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-validation.html">Form Validation</a></li>
+					<li><a href="form-masks.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-masks.html">Form Masks</a></li>
+					<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-fileupload.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-fileupload.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-fileupload.html">Multi File Uploader</a></li>
+					<li><a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-dropzone.html  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-dropzone.html'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-dropzone.html">Dropzone Uploader</a></li>
+					<li><a href="form-ckeditor.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-ckeditor.html">CKEditor</a></li>
+					<li><a href="form-summernote.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-summernote.html">Summernote</a></li>
+					<li><a href="form-markdown.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-markdown.html">Markdown Editor</a></li>
+					<li><a href="form-xeditable.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-xeditable.html">Inline Editor</a></li>
+					<li><a href="form-imagecrop.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/form-imagecrop.html">Image Cropping</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;"><i class="fa fa-table"></i><span>Advanced Tables</span></a>
+				<ul class="acc-menu">
+					<li><a href="tables-responsive.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-responsive.html">Responsive Tables</a></li>
+					<li><a href="tables-editable.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-editable.html">Editable Tables</a></li>
+					<li><a href="tables-data.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-data.html">Data Tables</a></li>
+					<li><a href="tables-advanceddatatable.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-advanceddatatable.html">Advanced Data Tables</a></li>
+					<li><a href="tables-fixedheader.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/tables-fixedheader.html">Fixed Header Tables</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;"><i class="fa fa-bar-chart-o"></i><span>Analytics</span></a>
+				<ul class="acc-menu">
+					<li><a href="charts-flot.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-flot.html">Flot</a></li>
+					<li><a href="charts-sparklines.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-sparklines.html">Sparklines</a></li>
+					<li><a href="charts-morris.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-morris.html">Morris.js</a></li>
+					<li><a href="charts-chart.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-chart.html">Chart.js</a></li>
+					<li><a href="charts-easypiechart.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/charts-easypiechart.html">Easy Pie Chart</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;"><i class="fa fa-map-marker"></i><span>Maps</span></a>
+				<ul class="acc-menu">
+					<li><a href="maps-google.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/maps-google.html">Google Maps</a></li>
+					<li><a href="maps-vector.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/maps-vector.html">Vector Maps</a></li>
+					<li><a href="maps-mapael.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/maps-mapael.html">Mapael</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;"><i class="fa fa-sitemap"></i><span>Multiple Level Menu</span><span class="badge badge-dark">99</span></a>
+				<ul class="acc-menu">
+					<li><a href="javascript:;">Menu Item 1</a></li>
+					<li><a href="javascript:;">Menu Item 2</a>
+						<ul class="acc-menu">
+							<li><a href="javascript:;">Menu Item 2.1</a></li>
+							<li><a href="javascript:;">Menu Item 2.2</a>
+								<ul class="acc-menu">
+									<li><a href="javascript:;">Menu Item 2.2.1</a></li>
+									<li><a href="javascript:;">Menu Item 2.2.2</a>
+										<ul class="acc-menu">
+											<li><a href="javascript:;">And deeper yet!</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="disabled-link"><a href="index.html" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/index.html">Disabled Menu Item</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+                        </div>
+                        <div class="col-md-9">
+                            
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading">
+                <h2>Default Button Variants</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt0">Default Buttons</h3>
+                        <p>Basic buttons come in 7 different colors <code>.btn .btn-default</code></p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default">Default</a></li>
+                            <li><a href="#" class="btn btn-primary">Primary</a></li>
+                            <li><a href="#" class="btn btn-success">Success</a></li>
+                            <li><a href="#" class="btn btn-info">Info</a></li>
+                            <li><a href="#" class="btn btn-warning">Warning</a></li>
+                            <li><a href="#" class="btn btn-danger">Danger</a></li>
+                            <li><a href="#" class="btn btn-inverse">Inverse</a></li>
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default"><i class="fa fa-cog"></i></a></li>
+                            <li><a href="#" class="btn btn-primary"><i class="fa fa-cloud"></i></a></li>
+                            <li><a href="#" class="btn btn-success"><i class="fa fa-check"></i></a></li>
+                            <li><a href="#" class="btn btn-info"><i class="fa fa-info-circle"></i></a></li>
+                            <li><a href="#" class="btn btn-warning"><i class="fa fa-warning"></i></a></li>
+                            <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                            <li><a href="#" class="btn btn-inverse"><i class="fa fa-wrench"></i></a></li>
+                        </ul>
+                        
+                        <p>Basic buttons in disabled states <code>.btn .disabled</code></p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn disabled btn-default">Default</a></li>
+                            <li><a href="#" class="btn disabled btn-primary">Primary</a></li>
+                            <li><a href="#" class="btn disabled btn-success">Success</a></li>
+                            <li><a href="#" class="btn disabled btn-info">Info</a></li>
+                            <li><a href="#" class="btn disabled btn-warning">Warning</a></li>
+                            <li><a href="#" class="btn disabled btn-danger">Danger</a></li>
+                            <li><a href="#" class="btn disabled btn-inverse">Inverse</a></li>
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn disabled btn-default"><i class="fa fa-cog"></i></a></li>                             
+                            <li><a href="#" class="btn disabled btn-primary"><i class="fa fa-cloud"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-success"><i class="fa fa-check"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-info"><i class="fa fa-info-circle"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-warning"><i class="fa fa-warning"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-danger"><i class="fa fa-times"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-inverse"><i class="fa fa-wrench"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt0">Alternate Buttons</h3>
+                        <p>Alternate buttons come in 7 different colors as well <code>.btn .btn-default-alt</code></p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default-alt">Default</a></li>
+                            <li><a href="#" class="btn btn-primary-alt">Primary</a></li>
+                            <li><a href="#" class="btn btn-success-alt">Success</a></li>
+                            <li><a href="#" class="btn btn-info-alt">Info</a></li>
+                            <li><a href="#" class="btn btn-warning-alt">Warning</a></li>
+                            <li><a href="#" class="btn btn-danger-alt">Danger</a></li>
+                            <li><a href="#" class="btn btn-inverse-alt">Inverse</a></li>
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default-alt"><i class="fa fa-cog"></i></a></li>                                
+                            <li><a href="#" class="btn btn-primary-alt"><i class="fa fa-cloud"></i></a></li>
+                            <li><a href="#" class="btn btn-success-alt"><i class="fa fa-check"></i></a></li>
+                            <li><a href="#" class="btn btn-info-alt"><i class="fa fa-info-circle"></i></a></li>
+                            <li><a href="#" class="btn btn-warning-alt"><i class="fa fa-warning"></i></a></li>
+                            <li><a href="#" class="btn btn-danger-alt"><i class="fa fa-times"></i></a></li>
+                            <li><a href="#" class="btn btn-inverse-alt"><i class="fa fa-wrench"></i></a></li>
+                        </ul>
+                        
+                        <p>Alternate buttons in disabled states <code>.btn .disabled</code></p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn disabled btn-default-alt">Default</a></li>
+                            <li><a href="#" class="btn disabled btn-primary-alt">Primary</a></li>
+                            <li><a href="#" class="btn disabled btn-success-alt">Success</a></li>
+                            <li><a href="#" class="btn disabled btn-info-alt">Info</a></li>
+                            <li><a href="#" class="btn disabled btn-warning-alt">Warning</a></li>
+                            <li><a href="#" class="btn disabled btn-danger-alt">Danger</a></li>
+                            <li><a href="#" class="btn disabled btn-inverse-alt">Inverse</a></li>
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn disabled btn-default-alt"><i class="fa fa-cog"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-primary-alt"><i class="fa fa-cloud"></i></a></li> 
+                            <li><a href="#" class="btn disabled btn-success-alt"><i class="fa fa-check"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-info-alt"><i class="fa fa-info-circle"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-warning-alt"><i class="fa fa-warning"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-danger-alt"><i class="fa fa-times"></i></a></li>
+                            <li><a href="#" class="btn disabled btn-inverse-alt"><i class="fa fa-wrench"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading">
+                <h2>Button Sizes</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt0">Default Sizes</h3>
+                        <p>Default buttons come in 4 sizes <code>.btn .btn-lg .btn-sm .btn-xs</code></p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default btn-lg">Large Button</a></li>
+                            <li><a href="#" class="btn btn-inverse">Normal Button</a></li>
+                            <li><a href="#" class="btn btn-midnightblue btn-sm">Small Button</a></li>
+                            <li><a href="#" class="btn btn-default btn-xs">Extra Small</a></li>
+                        </ul>
+                        
+                        <p>Different sizes with icon only buttons</p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-cog fa-spin"></i></a></li>
+                            <li><a href="#" class="btn btn-inverse"><i class="fa fa-wrench"></i></a></li>
+                            <li><a href="#" class="btn btn-midnightblue btn-sm"><i class="fa fa-cloud"></i></a></li>
+                            <li><a href="#" class="btn btn-default btn-xs"><i class="fa fa-times"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt0">Default Alternate Sizes</h3>
+                        <p>Default alternate buttons come in 4 sizes too</p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default-alt btn-lg">Large Button</a></li>
+                            <li><a href="#" class="btn btn-inverse-alt">Normal Button</a></li>
+                            <li><a href="#" class="btn btn-midnightblue-alt btn-sm">Small Button</a></li>
+                            <li><a href="#" class="btn btn-info-alt btn-xs">Extra Small</a></li>
+                        </ul>
+                        
+                        <p>Different sizes with icon only buttons</p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-default-alt btn-lg"><i class="fa fa-cog fa-spin"></i></a></li>
+                            <li><a href="#" class="btn btn-inverse-alt"><i class="fa fa-wrench"></i></a></li>
+                            <li><a href="#" class="btn btn-midnightblue-alt btn-sm"><i class="fa fa-cloud"></i></a></li>
+                            <li><a href="#" class="btn btn-info-alt btn-xs"><i class="fa fa-times"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading">
+                <h2>Button Blocks</h2>
+            </div>
+            <div class="panel-body">
+                <h3 class="mt0">Default Blocks</h3>
+                <p>Block level buttons in default and alternate styles with different sizes <code>.btn-block</code></p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <p>
+                            <a href="#" class="btn btn-default btn-lg btn-block">Large Block</a>
+                            <a href="#" class="btn btn-primary btn-block">Normal Block</a>
+                            <a href="#" class="btn btn-info btn-sm btn-block">Small Block</a>
+                            <a href="#" class="btn btn-success btn-xs btn-block">Extra Small Block</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>
+                            <a href="#" class="btn btn-inverse btn-lg btn-block"><i class="fa fa-pencil"></i></a>
+                            <a href="#" class="btn btn-warning btn-block"><i class="fa fa-wrench"></i></a>
+                            <a href="#" class="btn btn-orange btn-sm btn-block"><i class="fa fa-cloud"></i></a>
+                            <a href="#" class="btn btn-default btn-xs btn-block"><i class="fa fa-cog"></i></a>
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>
+                            <a href="#" class="btn btn-default-alt btn-lg btn-block">Large Block</a>
+                            <a href="#" class="btn btn-primary-alt btn-block">Normal Block</a>
+                            <a href="#" class="btn btn-info-alt btn-sm btn-block">Small Block</a>
+                            <a href="#" class="btn btn-success-alt btn-xs btn-block">Extra Small Block</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>
+                            <a href="#" class="btn btn-inverse-alt btn-lg btn-block"><i class="fa fa-pencil"></i></a>
+                            <a href="#" class="btn btn-warning-alt btn-block"><i class="fa fa-wrench"></i></a>
+                            <a href="#" class="btn btn-orange-alt btn-sm btn-block"><i class="fa fa-cloud"></i></a>
+                            <a href="#" class="btn btn-danger-alt btn-xs btn-block"><i class="fa fa-cog"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading">
+                <h2>Button Dropdowns</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt0">Default Dropdowns</h3>
+                        <p>Dropdowns default in different colors with <code>.btn .dropdown-toggle</code></p>
+                        <ul class="demo-btns">
+                            <li>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        Dropdown <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-midnightblue dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-cog"></i> <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-inverse">Dropdown</a>
+                                    <a href="#" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-primary"><i class="fa fa-cog"></i></a>
+                                    <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>Dropups default in different colors with <code>.dropup</code></p>
+                        <ul class="demo-btns">
+                            <li>
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        Dropdown <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-midnightblue dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-cog"></i> <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group dropup">
+                                    <a href="#" class="btn btn-inverse">Dropdown</a>
+                                    <a href="#" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group dropup">
+                                    <a href="#" class="btn btn-primary"><i class="fa fa-cog"></i></a>
+                                    <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt0">Alternate Dropdowns</h3>
+                        <p>Alternate dropdowns in different colors with <code>.btn .dropdown-toggle</code></p>
+                        <ul class="demo-btns">
+                            <li>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default-alt dropdown-toggle" data-toggle="dropdown">
+                                        Dropdown <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-midnightblue-alt dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-cog"></i> <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-inverse-alt">Dropdown</a>
+                                    <a href="#" class="btn btn-inverse-alt dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-primary-alt"><i class="fa fa-cog"></i></a>
+                                    <a href="#" class="btn btn-primary-alt dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>Alternate dropups in different colors with  <code>.dropup</code></p>
+                        <ul class="demo-btns">
+                            <li>
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-default-alt dropdown-toggle" data-toggle="dropdown">
+                                        Dropdown <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-midnightblue-alt dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-cog"></i> <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group dropup">
+                                    <a href="#" class="btn btn-inverse-alt">Dropdown</a>
+                                    <a href="#" class="btn btn-inverse-alt dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="btn-group dropup">
+                                    <a href="#" class="btn btn-primary-alt"><i class="fa fa-cog"></i></a>
+                                    <a href="#" class="btn btn-primary-alt dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Block Level Dropdowns</h3>
+                <p>Example block level default and alternate style dropdowns and dropups with <code>.btn-block .dropup</code></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="btn-group btn-block">
+                            <button type="button" class="btn btn-block btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i> Settings <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu col-xs-12" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group btn-block dropup">
+                            <button type="button" class="btn btn-block btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i> Settings <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu col-xs-12" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="btn-group btn-block">
+                            <button type="button" class="btn btn-block btn-default-alt dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i> Settings <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu col-xs-12" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group btn-block dropup">
+                            <button type="button" class="btn btn-block btn-primary-alt dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i> Settings <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu col-xs-12" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading">
+                <h2>Button Groups</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt0">Grouped Buttons</h3>
+                        <p>Grouped buttons variations in default style with <code>.btn-group</code></p>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-default">Left</button>
+                            <button type="button" class="btn btn-default">Middle</button>
+                            <button type="button" class="btn btn-default">Right</button>
+                        </div>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-success">Success</button>
+                            <button type="button" class="btn btn-inverse">Inverse</button>
+                            <button type="button" class="btn btn-midnightblue">Midnight</button>
+                        </div>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-default"><i class="fa fa-align-left"></i></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-align-center"></i></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-align-right"></i></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-align-justify"></i></button>
+                        </div>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-info"><i class="fa fa-check"></i></button>
+                            <button type="button" class="btn btn-warning"><i class="fa fa-cloud"></i></button>
+                            <button type="button" class="btn btn-orange"><i class="fa fa-bars"></i></button>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-cog"></i></button>
+                        </div>
+                        <h3>Toolbar</h3>
+                        <p>Default toolbar buttons with <code>.btn-toolbar</code></p>
+                        <div class="btn-toolbar mb10">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">1</button>
+                                <button type="button" class="btn btn-default">2</button>
+                                <button type="button" class="btn btn-default">3</button>
+                                <button type="button" class="btn btn-default">4</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">5</button>
+                                <button type="button" class="btn btn-default">6</button>
+                                <button type="button" class="btn btn-default">7</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">8</button>
+                            </div>
+                        </div>
+                        <div class="btn-toolbar mb10">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">1</button>
+                                <button type="button" class="btn btn-primary">2</button>
+                                <button type="button" class="btn btn-info">3</button>
+                                <button type="button" class="btn btn-success">4</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning">5</button>
+                                <button type="button" class="btn btn-orange">6</button>
+                                <button type="button" class="btn btn-danger">7</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-midnightblue">8</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt0">Alternate Grouped Buttons</h3>
+                        <p>Grouped buttons variations in alternate style with <code>.btn-group</code></p>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-default-alt">Left</button>
+                            <button type="button" class="btn btn-default-alt">Middle</button>
+                            <button type="button" class="btn btn-default-alt">Right</button>
+                        </div>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-success-alt">Success</button>
+                            <button type="button" class="btn btn-inverse-alt">Inverse</button>
+                            <button type="button" class="btn btn-midnightblue-alt">Midnight</button>
+                        </div>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-default-alt"><i class="fa fa-align-left"></i></button>
+                            <button type="button" class="btn btn-default-alt"><i class="fa fa-align-center"></i></button>
+                            <button type="button" class="btn btn-default-alt"><i class="fa fa-align-right"></i></button>
+                            <button type="button" class="btn btn-default-alt"><i class="fa fa-align-justify"></i></button>
+                        </div>
+                        <div class="btn-group mb10">
+                            <button type="button" class="btn btn-info-alt"><i class="fa fa-check"></i></button>
+                            <button type="button" class="btn btn-warning-alt"><i class="fa fa-cloud"></i></button>
+                            <button type="button" class="btn btn-orange-alt"><i class="fa fa-bars"></i></button>
+                            <button type="button" class="btn btn-danger-alt"><i class="fa fa-cog"></i></button>
+                        </div>
+                        <h3>Alternate Toolbar</h3>
+                        <p>Alternate toolbar buttons with <code>.btn-toolbar</code></p>
+                        <div class="btn-toolbar mb10">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default-alt">1</button>
+                                <button type="button" class="btn btn-default-alt">2</button>
+                                <button type="button" class="btn btn-default-alt">3</button>
+                                <button type="button" class="btn btn-default-alt">4</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default-alt">5</button>
+                                <button type="button" class="btn btn-default-alt">6</button>
+                                <button type="button" class="btn btn-default-alt">7</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default-alt">8</button>
+                            </div>
+                        </div>
+                        <div class="btn-toolbar mb10">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default-alt">1</button>
+                                <button type="button" class="btn btn-primary-alt">2</button>
+                                <button type="button" class="btn btn-info-alt">3</button>
+                                <button type="button" class="btn btn-success-alt">4</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning-alt">5</button>
+                                <button type="button" class="btn btn-danger-alt">6</button>
+                                <button type="button" class="btn btn-inverse-alt">7</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-midnightblue-alt">8</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Vertical Button Groups</h3>
+                <p>Vertically grouped buttons in default and alternate styles and color variations using the class <code>.btn-group-vertical</code></p>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="btn-group-vertical mb10">
+                            <button type="button" class="btn btn-default">Top</button>
+                            <button type="button" class="btn btn-default">Middle</button>
+                            <button type="button" class="btn btn-default">Bottom</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="btn-group-vertical mb10">
+                            <a class="btn btn-default" href="#"><i class="fa fa-align-left"></i></a>
+                            <a class="btn btn-default" href="#"><i class="fa fa-align-center"></i></a>
+                            <a class="btn btn-default" href="#"><i class="fa fa-align-right"></i></a>
+                            <a class="btn btn-default" href="#"><i class="fa fa-align-justify"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="btn-group-vertical mb10">
+                            <a class="btn btn-success" href="#"><i class="fa fa-check"></i></a>
+                            <a class="btn btn-primary" href="#"><i class="fa fa-cloud"></i></a>
+                            <a class="btn btn-inverse" href="#"><i class="fa fa-cog"></i></a>
+                            <a class="btn btn-midnightblue" href="#"><i class="fa fa-bars"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="btn-group-vertical mb10">
+                            <button type="button" class="btn btn-default-alt">Top</button>
+                            <button type="button" class="btn btn-default-alt">Middle</button>
+                            <button type="button" class="btn btn-default-alt">Bottom</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="btn-group-vertical mb10">
+                            <a class="btn btn-default-alt" href="#"><i class="fa fa-align-left"></i></a>
+                            <a class="btn btn-default-alt" href="#"><i class="fa fa-align-center"></i></a>
+                            <a class="btn btn-default-alt" href="#"><i class="fa fa-align-right"></i></a>
+                            <a class="btn btn-default-alt" href="#"><i class="fa fa-align-justify"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="btn-group-vertical mb10">
+                            <a class="btn btn-success-alt" href="#"><i class="fa fa-check"></i></a>
+                            <a class="btn btn-primary-alt" href="#"><i class="fa fa-cloud"></i></a>
+                            <a class="btn btn-inverse-alt" href="#"><i class="fa fa-cog"></i></a>
+                            <a class="btn btn-midnightblue-alt" href="#"><i class="fa fa-bars"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading">
+                <h2>Label Buttons</h2>
+            </div>
+            <div class="panel-body">           
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt0">Label Buttons</h3>
+                        <p>Adding a <code>.btn-label</code> class to the button will increase focus on the attached icon</p>            
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-lg btn-inverse btn-label" href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a class="btn btn-lg btn-inverse btn-label" href="#"><i class="fa fa-download"></i> Download</a></li>
+                            
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-success btn-label" href="#"><i class="fa fa-check"></i> Checked</a></li>
+                            <li><a class="btn btn-success btn-label" href="#"><i class="fa fa-clock-o"></i> Activity</a></li>
+                            <li><a class="btn btn-success btn-label" href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+                            
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-sm btn-warning btn-label" href="#"><i class="fa fa-bookmark"></i> Bookmark</a></li>
+                            <li><a class="btn btn-sm btn-warning btn-label" href="#"><i class="fa fa-cloud"></i> Cloud</a></li>
+                            <li><a class="btn btn-sm btn-warning btn-label" href="#"><i class="fa fa-flag"></i> Flag</a></li>
+                            
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-xs btn-danger btn-label" href="#"><i class="fa fa-times"></i> Cancel</a></li>
+                            <li><a class="btn btn-xs btn-danger btn-label" href="#"><i class="fa fa-minus-circle"></i> Delete</a></li>
+                            <li><a class="btn btn-xs btn-danger btn-label" href="#"><i class="fa fa-trash-o"></i> Remove</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt0">Alternate Label Buttons</h3>
+                        <p>Adding a <code>.btn-label</code> class to the button will increase focus on the attached icon</p>   
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-lg btn-primary-alt btn-label" href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a class="btn btn-lg btn-primary-alt btn-label" href="#"><i class="fa fa-download"></i> Download</a></li>
+                            
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-success-alt btn-label" href="#"><i class="fa fa-check"></i> Checked</a></li>
+                            <li><a class="btn btn-success-alt btn-label" href="#"><i class="fa fa-clock-o"></i> Activity</a></li>
+                            <li><a class="btn btn-success-alt btn-label" href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+                            
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-sm btn-warning-alt btn-label" href="#"><i class="fa fa-bookmark"></i> Bookmark</a></li>
+                            <li><a class="btn btn-sm btn-warning-alt btn-label" href="#"><i class="fa fa-cloud"></i> Cloud</a></li>
+                            <li><a class="btn btn-sm btn-warning-alt btn-label" href="#"><i class="fa fa-flag"></i> Flag</a></li>
+                            
+                        </ul>
+                        <ul class="demo-btns">
+                            <li><a class="btn btn-xs btn-danger-alt btn-label" href="#"><i class="fa fa-times"></i> Cancel</a></li>
+                            <li><a class="btn btn-xs btn-danger-alt btn-label" href="#"><i class="fa fa-minus-circle"></i> Delete</a></li>
+                            <li><a class="btn btn-xs btn-danger-alt btn-label" href="#"><i class="fa fa-trash-o"></i> Remove</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading">
+                <h2>Button States</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt0">Loading State</h3>
+                        <p>Button loading state default style <code>.loading-example-btn</code></p>
+                        <ul class="demo-btns">
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-default">Loading state</button></li>
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-success">Loading state</button></li>
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-warning">Loading state</button></li>
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-danger">Loading state</button></li>
+                        </ul>
+                        <h3>Single Toggle</h3>
+                        <p>Button single toggle state default style</p>
+                        <ul class="demo-btns">
+                            <li><button type="button" class="btn btn-primary" data-toggle="button">Single toggle</button></li>
+                            <li><button type="button" class="btn btn-success" data-toggle="button">Single toggle</button></li>
+                            <li><button type="button" class="btn btn-warning" data-toggle="button">Single toggle</button></li>
+                            <li><button type="button" class="btn btn-danger" data-toggle="button">Single toggle</button></li>
+                        </ul>
+                        <h3>Checkbox</h3>
+                        <p>Button checkbox state default style</p>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox"> Option 1
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox"> Option 2
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox"> Option 3
+                            </label>
+                        </div>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="checkbox"><i class="fa fa-apple"></i>
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox"><i class="fa fa-android"></i>
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="checkbox"><i class="fa fa-windows"></i>
+                            </label>
+                        </div>
+
+                        <h3>Radio</h3>
+                        <p>Button radio state default style</p>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-midnightblue">
+                                <input type="radio" name="options" id="option1"> Option 1
+                            </label>
+                            <label class="btn btn-midnightblue">
+                                <input type="radio" name="options" id="option2"> Option 2
+                            </label>
+                            <label class="btn btn-midnightblue">
+                                <input type="radio" name="options" id="option3"> Option 3
+                            </label>
+                        </div>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-midnightblue">
+                                <input type="radio" name="options" id="option1"><i class="fa fa-beer"></i>
+                            </label>
+                            <label class="btn btn-midnightblue">
+                                <input type="radio" name="options" id="option2"><i class="fa fa-glass"></i>
+                            </label>
+                            <label class="btn btn-midnightblue">
+                                <input type="radio" name="options" id="option3"><i class="fa fa-coffee"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt0"> Alternate Loading State</h3>
+                        <p>Button loading state default style <code>.loading-example-btn</code></p>
+                        <ul class="demo-btns">
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-default-alt">Loading state</button></li>
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-success-alt">Loading state</button></li>
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-warning-alt">Loading state</button></li>
+                            <li><button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-danger-alt">Loading state</button></li>
+                        </ul>
+                        <h3>Alternate Single Toggle</h3>
+                        <p>Button single toggle state default style</p>
+                        <ul class="demo-btns">
+                            <li><button type="button" class="btn btn-primary-alt" data-toggle="button">Single toggle</button></li>
+                            <li><button type="button" class="btn btn-success-alt" data-toggle="button">Single toggle</button></li>
+                            <li><button type="button" class="btn btn-warning-alt" data-toggle="button">Single toggle</button></li>
+                            <li><button type="button" class="btn btn-danger-alt" data-toggle="button">Single toggle</button></li>
+                        </ul>
+                        <h3>Alternate Checkbox</h3>
+                        <p>Button checkbox state default style</p>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-primary-alt">
+                                <input type="checkbox"> Option 1
+                            </label>
+                            <label class="btn btn-primary-alt">
+                                <input type="checkbox"> Option 2
+                            </label>
+                            <label class="btn btn-primary-alt">
+                                <input type="checkbox"> Option 3
+                            </label>
+                        </div>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-primary-alt">
+                                <input type="checkbox"><i class="fa fa-apple"></i>
+                            </label>
+                            <label class="btn btn-primary-alt">
+                                <input type="checkbox"><i class="fa fa-android"></i>
+                            </label>
+                            <label class="btn btn-primary-alt">
+                                <input type="checkbox"><i class="fa fa-windows"></i>
+                            </label>
+                        </div>
+
+                        <h3>Alternate Radio</h3>
+                        <p>Button radio state default style</p>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-midnightblue-alt">
+                                <input type="radio" name="options" id="option1"> Option 1
+                            </label>
+                            <label class="btn btn-midnightblue-alt">
+                                <input type="radio" name="options" id="option2"> Option 2
+                            </label>
+                            <label class="btn btn-midnightblue-alt">
+                                <input type="radio" name="options" id="option3"> Option 3
+                            </label>
+                        </div>
+                        <div class="btn-group mb10" data-toggle="buttons">
+                            <label class="btn btn-midnightblue-alt">
+                                <input type="radio" name="options" id="option1"><i class="fa fa-beer"></i>
+                            </label>
+                            <label class="btn btn-midnightblue-alt">
+                                <input type="radio" name="options" id="option2"><i class="fa fa-glass"></i>
+                            </label>
+                            <label class="btn btn-midnightblue-alt">
+                                <input type="radio" name="options" id="option3"><i class="fa fa-coffee"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel-front panel-default">
+            <div class="panel-heading"><h2>Social Icons</h2></div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Included Social Icons with <a href="javascript:if(confirm('http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-icons  \n\n¸ÃÎÄ¼þÎ´±» Teleport Pro ÏÂÔØ£¬ÒòÎª ·þÎñÆ÷±¨¸æ - ÎÞ·¨ÕÒµ½¸ÃÎÄ¼þ¡£  \n\nÄãÏëÒª´Ó·þÎñÆ÷´ò¿ªËüÂð?'))window.location='http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-icons'" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/ui-icons">Font Awesome</a> can get relevant background colors with <code>.btn-social</code> class</p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-github"><i class="fa fa-github"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-behance"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-flickr"><i class="fa fa-flickr"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-jsfiddle"><i class="fa fa-jsfiddle"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-reddit"><i class="fa fa-reddit"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-youtube"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-foursquare"><i class="fa fa-foursquare"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-google"><i class="fa fa-google"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-apple"><i class="fa fa-apple"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-soundcloud"><i class="fa fa-soundcloud"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-steam"><i class="fa fa-steam"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-spotify"><i class="fa fa-spotify"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-wordpress"><i class="fa fa-wordpress"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-skype"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-android"><i class="fa fa-android"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-digg"><i class="fa fa-digg"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-googleplus"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-windows"><i class="fa fa-windows"></i></a></li>
+                        </ul>
+
+                        <p>Alternate styles</p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-social btn-facebook-alt"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-twitter-alt"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-github-alt"><i class="fa fa-github"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-behance-alt"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-flickr-alt"><i class="fa fa-flickr"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-jsfiddle-alt"><i class="fa fa-jsfiddle"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-reddit-alt"><i class="fa fa-reddit"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-youtube-alt"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-foursquare-alt"><i class="fa fa-foursquare"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-google-alt"><i class="fa fa-google"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-apple-alt"><i class="fa fa-apple"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-soundcloud-alt"><i class="fa fa-soundcloud"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-steam-alt"><i class="fa fa-steam"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-spotify-alt"><i class="fa fa-spotify"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-wordpress-alt"><i class="fa fa-wordpress"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-skype-alt"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-android-alt"><i class="fa fa-android"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-digg-alt"><i class="fa fa-digg"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-linkedin-alt"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-googleplus-alt"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-instagram-alt"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" class="btn btn-social btn-windows-alt"><i class="fa fa-windows"></i></a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6">
+                        <p>Or use them in conjecture with label buttons <code>.btn-label.btn-social</code></p>
+                        <ul class="demo-btns">
+                            <li><a href="#" class="btn btn-label btn-social btn-facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-github"><i class="fa fa-github"></i>Github</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-behance"><i class="fa fa-behance"></i>Behance</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-flickr"><i class="fa fa-flickr"></i>Flickr</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-jsfiddle"><i class="fa fa-jsfiddle"></i>jsFiddle</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-reddit"><i class="fa fa-reddit"></i>Reddit</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-youtube"><i class="fa fa-youtube"></i>YouTube</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-foursquare"><i class="fa fa-foursquare"></i>Foursquare</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-google"><i class="fa fa-google"></i>Google</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-apple"><i class="fa fa-apple"></i>Apple</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-soundcloud"><i class="fa fa-soundcloud"></i>Soundcloud</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-steam"><i class="fa fa-steam"></i>Steam</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-spotify"><i class="fa fa-spotify"></i>Spotify</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-wordpress"><i class="fa fa-wordpress"></i>Wordpress</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-skype"><i class="fa fa-skype"></i>Skype</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-android"><i class="fa fa-android"></i>Android</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-digg"><i class="fa fa-digg"></i>Digg</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-linkedin"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-googleplus"><i class="fa fa-google-plus"></i>Google Plus+</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-instagram"><i class="fa fa-instagram"></i>Instagram</a></li>
+                            <li><a href="#" class="btn btn-label btn-social btn-windows"><i class="fa fa-windows"></i>Windows</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-inverse">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 mb40">
+				<h3 class="col-title">About</h3>
+				<p class="mb40">Nunc in risus faucibus, cursus quam sit amet, interdum lacus. Morbi lacus risus, suscipit at scelerisque quis, feugiat id nunc. Nullam aliquam mi purus, ut luctus justo malesua.</p>
+				<h3 class="col-title">Follow Us</h3>
+				<ul class="social-networks">
+	                <li><a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></a></li>
+	                <li><a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i></a></li>
+	                <li><a href="#" class="btn btn-social btn-flickr"><i class="fa fa-flickr"></i></a></li>
+	                <li><a href="#" class="btn btn-social btn-youtube"><i class="fa fa-youtube"></i></a></li>
+	                <li><a href="#" class="btn btn-social btn-skype"><i class="fa fa-skype"></i></a></li>
+	                <li><a href="#" class="btn btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a></li>
+	            </ul>
+			</div>
+			<div class="col-sm-3 mb40">
+				<h3 class="col-title">Recent Posts</h3>
+				<ul class="recent-posts">
+					<li>
+						<a href="#">Eos ut quas erant evertitur sea soluta</a>
+						<span class="author">by <a href="#">Carmelo Mutchler</a> on Sep 20, 2014</span>
+					</li>
+					<li>
+						<a href="#">Falli sensibus laboramus te</a>
+						<span class="author">by <a href="#">Dorsey Topham</a> on Sep 15, 2014</span>
+					</li>
+					<li>
+						<a href="#">Alia liber libris eu eos sint nonumy ex eos</a>
+						<span class="author">by <a href="#">Noma Alban</a> on Sep 12, 2014</span>
+					</li>
+					<li>
+						<a href="#">Vim ea odio meliore denique ne</a>
+						<span class="author">by <a href="#">Buffy Ruckman</a> on Sep 08, 2014</span>
+					</li>
+					<li>
+						<a href="#">Mea tota tamquam equidem</a>
+						<span class="author">by <a href="#">Stanford Macdowell</a> on Aug 30, 2014</span>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-3 mb40">
+				<h3 class="col-title">Contact Us</h3>
+				<ul class="contact-info mb40">
+					<li>
+						<i class="fa fa-home"></i>
+						795 Folsom Ave, Suite 600
+						<br>
+						San Francisco, CA 94107
+					</li>
+					<li>
+						<i class="fa fa-phone"></i>
+						(123) 456-7890
+					</li>
+					<li>
+						<i class="fa fa-envelope-o"></i>
+						<a href="#">info@website.com</a>
+					</li>
+				</ul>
+				<h3 class="col-title">Subscribe</h3>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Your email">
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="button"><i class="fa fa-arrow-right"></i></button>
+					</span>
+				</div>
+			</div>
+			<div class="col-sm-3 mb40">
+				<h3 class="col-title">Photo Stream</h3>
+				<div class="row photo-stream">
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/portfolio_05.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/portfolio_05.jpg" alt="" class="img-responsive" /></a>
+					</div>
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/communication_04.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/communication_04.jpg" alt="" class="img-responsive" /></a>
+					</div>
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/communication_05.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/communication_05.jpg" alt="" class="img-responsive" /></a>
+					</div>
+				</div>
+				<div class="row photo-stream">
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/music_04.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/music_04.jpg" alt="" class="img-responsive" /></a>
+					</div>
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/music_05.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/music_05.jpg" alt="" class="img-responsive" /></a>
+					</div>
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/music_06.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/music_06.jpg" alt="" class="img-responsive" /></a>
+					</div>
+				</div>
+				<div class="row photo-stream">
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/portfolio_03.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/portfolio_03.jpg" alt="" class="img-responsive" /></a>
+					</div>
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/portfolio_04.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/portfolio_04.jpg" alt="" class="img-responsive" /></a>
+					</div>
+					<div class="col-xs-4 photo-thumb">
+						<a href="#"><img src="assets/demo/stockphoto/portfolio_06.jpg" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/stockphoto/portfolio_06.jpg" alt="" class="img-responsive" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row footer-bottom">
+			<hr>
+			<div class="col-xs-6 mb20">
+				<p>Avalon Â© 2014.</p>
+			</div>
+			<div class="col-xs-6 mb20">
+				<ul class="links">
+	                <li><a href="#">Terms</a></li>
+	                <li><a href="#">About</a></li>
+	                <li><a href="#">Careers</a></li>
+	                <li><a href="#">Help</a></li>
+	            </ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+        <!-- Script block allowing child pages to inject their own scripts -->
+        <!-- Switcher -->
+    <div class="demo-options">
+        <div class="demo-options-icon"><i class="fa fa-spin fa-fw fa-smile-o"></i></div>
+        <div class="demo-heading">Demo Settings</div>
+
+        <div class="demo-body">
+            <div class="option-title">Header Colors</div>
+            <ul id="demo-header-color" class="demo-color-list">
+                <li><span class="demo-white"></span></li>
+                <li><span class="demo-black"></span></li>
+                <li><span class="demo-midnightblue"></span></li>
+                <li><span class="demo-primary"></span></li>
+                <li><span class="demo-info"></span></li>
+                <li><span class="demo-alizarin"></span></li>
+                <li><span class="demo-grape"></span></li>
+                <li><span class="demo-violet"></span></li>                
+                <li><span class="demo-indigo"></span></li>  
+            </ul>
+        </div>
+
+        <div class="demo-body">
+            <div class="option-title">Navigation Colors</div>
+            <ul id="demo-headernav-color" class="demo-color-list">
+                <li><span class="demo-white"></span></li>
+                <li><span class="demo-black"></span></li>
+                <li><span class="demo-midnightblue"></span></li>
+                <li><span class="demo-primary"></span></li>
+                <li><span class="demo-info"></span></li>
+                <li><span class="demo-alizarin"></span></li>
+                <li><span class="demo-grape"></span></li>
+                <li><span class="demo-violet"></span></li>                
+                <li><span class="demo-indigo"></span></li>  
+            </ul>
+        </div>
+
+        <div class="demo-body">
+            <div class="option-title">Footer Colors</div>
+            <ul id="demo-footer-color" class="demo-color-list">
+                <li><span class="demo-white"></span></li>
+                <li><span class="demo-black"></span></li>
+                <li><span class="demo-midnightblue"></span></li>
+                <li><span class="demo-primary"></span></li>
+                <li><span class="demo-info"></span></li>
+                <li><span class="demo-alizarin"></span></li>
+                <li><span class="demo-grape"></span></li>
+                <li><span class="demo-violet"></span></li>                
+                <li><span class="demo-indigo"></span></li>  
+            </ul>
+        </div>
+
+    </div>
+<!-- /Switcher -->
+
+<!-- Load site level scripts -->
+
+<script src="assets/js/jquery-1.10.2.min.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
+<script src="assets/js/bootstrap.min.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/js/bootstrap.min.js"></script> 								<!-- Load Bootstrap -->
+
+<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script> 	<!-- Slimscroll for custom scrolls -->
+<script src="assets/plugins/sparklines/jquery.sparklines.min.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/sparklines/jquery.sparklines.min.js"></script>  		<!-- Sparkline -->
+
+<script src="assets/plugins/smartmenus/jquery.smartmenus.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/smartmenus/jquery.smartmenus.js"></script> 			<!-- Smartmenus -->
+<script src="assets/plugins/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js"></script>
+
+<script src="assets/demo/demo.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/demo.js"></script> 
+<script src="assets/js/application.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/js/application.js"></script> 
+
+<!-- End loading site level scripts -->
+
+<script src="assets/plugins/codeprettifier/prettify.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/codeprettifier/prettify.js"></script> 				<!-- Code Prettifier  -->
+<script src="assets/plugins/bootstrap-switch/bootstrap-switch.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/bootstrap-switch/bootstrap-switch.js"></script> 		<!-- Swith/Toggle Button -->
+<script src="assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js"></script>  <!-- Bootstrap Tabdrop -->
+
+<script src="assets/demo/demo-switcher.js" tppabs="http://view.jqueryfuns.com/Ô¤ÀÀ-/2014/10/26/9a9679b261545fa3875f5155e9c4ca03/frontend/assets/demo/demo-switcher.js"></script> 								<!-- Color Switcher for Demo -->
+        
+<script>
+  $('.loading-example-btn').click(function () {
+    var btn = $(this)
+    btn.button('loading')
+    setTimeout(function () {
+      btn.button('reset')
+    },3000 )
+    
+  });
+</script>
+
+    </body>
+</html>

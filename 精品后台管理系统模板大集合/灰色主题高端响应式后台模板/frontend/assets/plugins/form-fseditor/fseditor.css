@@ -1,0 +1,77 @@
+.fs-editor-wrapper {
+  position: relative;
+}
+/*.fs-editor-wrapper .fs-editor {
+  min-height: 100px;
+}*/
+.fs-editor-wrapper .fs-editor.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  z-index: 102;
+}
+.fs-editor-wrapper .fs-editor.expanded.transition-fade {
+  opacity: 0;
+}
+.fs-editor-wrapper .fs-editor .fs-editable {
+  display: block;
+  height: 100%;
+  padding: 10px;
+  overflow: auto;
+  background-color: #fcfcfc;
+  border: 1px #e3e3e3 solid;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.01);
+  -moz-transition: border-color .1s linear;
+  -webkit-transition: border-color .1s linear;
+  transition: border-color .1s linear;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.fs-editor-wrapper .fs-editor .fs-editable:focus {
+  outline: 0;
+  background-color: #fff;
+  border: 1px #3498db solid;
+  box-shadow: 0 0px 1px 0px #e1f0fa;
+}
+.fs-editor-wrapper .fs-editor .fs-editable.placeholder {
+  color: #999;
+  font-style: italic;
+  font-weight: 100;
+}
+.fs-editor-wrapper .fs-editor .fs-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 12px;
+  height: 14px;
+  /*background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA4LzE2LzEzspl6ugAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAB7SURBVDiN7ZOxCsAgDESvxXyhi5P/Fif/0i6NGJH2KIUufVOUJB45s6lqw0DOGQylFHfeqSqCYEGMESJCF6aUAAC1Vt9IRPolixtDG1DVxjLnhtVL8yAvlZy8Nuy/0T1L19g1cY3Mavupd9bPWL5T9ERJV2SBrcfn238A3whjoYEPESwAAAAASUVORK5CYII=');*/
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  
+  cursor: pointer;
+  z-index: 103;
+}
+
+.fs-icon {color: #ccc;}
+.fs-icon:hover {color: #999; text-decoration: none;}
+.fs-icon:before {content: "\f0b2";}
+
+.fs-editor-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 101;
+  opacity: 0;
+}
