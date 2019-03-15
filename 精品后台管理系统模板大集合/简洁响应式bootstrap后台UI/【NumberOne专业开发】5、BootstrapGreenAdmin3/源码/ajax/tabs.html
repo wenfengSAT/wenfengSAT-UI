@@ -1,0 +1,34 @@
+﻿<ul class="nav nav-tabs nav-justified">
+    <li class="active"><a data-toggle="tab" href="#tab1"><strong>Home</strong></a></li>
+    <li class=""><a data-toggle="tab" href="#tab2"><strong>About</strong></a></li>
+    <li class=""><a data-toggle="tab" href="#tab3"><strong>Services</strong></a></li>
+    <li class=""><a data-toggle="tab" href="#tab4"><strong>Contact</strong></a></li>
+</ul>
+<div class="tab-content">
+    <div id="tab1" class="tab-pane active">
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="text-primary">Lorem Ipsum Sit</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
+            </div>
+            <div class="col-sm-6">
+                <h4 class="text-primary">Enim Ad Minim</h4>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="tab2" class="tab-pane">
+        <h4 class="text-primary">Duis aute irure dolor in reprehenderit in voluptate velit</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>     
+    </div>
+    
+    <div id="tab3" class="tab-pane">
+        Tab 3 content    
+    </div>
+    
+    <div id="tab4" class="tab-pane">
+        Tab 4 content    
+    </div>
+          
+</div>
