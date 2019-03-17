@@ -1,0 +1,59 @@
+<form class="form-inline definewidth m20" action="{:U('Sculpture/index')}" method="get">
+    {:UH()}
+    角色名称：
+    <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="<?php echo $rolename;?>">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增角色</button>
+</form>
+<table class="table table-bordered table-hover definewidth m10" >
+    <thead>
+    <tr>
+        <th>角色id</th>
+        <th>角色名称</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+	 <empty name="list">
+        <tr><td colspan="10">无数据</td></tr>
+    </empty>
+    <volist name="list" id="role">
+        <tr>
+            <td>{$role.id}</td>
+            <td>{$role.title}</td>
+            <td>{$role.status}</td>
+            <td>
+                  <a href="{:U('Role/edit/', array('id'=>$role['id']))}">编辑</a>
+                  <a href="javascript:void(0)" onclick="del('{$role.id}')">删除</a>
+            </td>
+        </tr>
+    </volist>
+</table>
+<script>
+    $(function () {
+        
+		$('#addnew').click(function(){
+
+				window.location.href="{:U('Role/add')}";
+		 });
+
+
+    });
+
+	function del(id)
+	{
+		
+		
+		if(confirm("确定要删除吗？"))
+		{
+		
+			var url = "{:U('Role/del',array('id'=>'"+id+"'),'')}";
+			
+			window.location.href=url;		
+		
+		}
+	
+	
+	
+	
+	}
+</script>

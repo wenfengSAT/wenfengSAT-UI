@@ -1,0 +1,48 @@
+<form class="form-inline definewidth m20" action="{:U('Sculpture/index')}" method="get">
+    {:UH()}
+    节点标题：
+    <input type="text" name="node_title" id="node_title" class="abc input-default" placeholder="" value="<?php echo $node_title;?>">&nbsp;&nbsp; 
+    节点名称：<input type="text" name="node_name" id="node_name" class="input-default" placeholder="" value="<?php echo $node_name;?>">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增节点</button>
+</form>
+
+<table class="table table-bordered table-hover definewidth m10" >
+    <thead>
+    <tr>
+        <th>节点标题</th>
+        <th>节点名称</th>
+        <th>状态</th>
+        <th>管理操作</th>
+    </tr>
+    </thead>
+	 <empty name="list">
+        <tr><td colspan="10">无数据</td></tr>
+    </empty>
+    <volist name="list" id="module">
+        <tr>
+            <td colspan="4">{$key}</td>
+        </tr>
+        <volist name="module" id="node">
+            <tr>
+                <td>{$node.title}</td>
+                <td>{$node.name}</td>
+                <td>{$node.status}</td>
+                <td><a href="{:U('Node/edit/', array('id'=>$node['id']))}">编辑</a></td>
+            </tr>
+        </volist>
+    </volist>
+</table>
+<script>
+    $(function () {
+        
+
+		$('#addnew').click(function(){
+
+				window.location.href="{:U('Node/add')}";
+		 });
+
+
+    });
+
+	
+</script>

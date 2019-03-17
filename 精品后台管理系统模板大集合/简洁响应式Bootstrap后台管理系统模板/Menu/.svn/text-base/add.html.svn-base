@@ -1,0 +1,53 @@
+<form action="{:U('Menu/add')}" method="post" class="definewidth m20">
+<table class="table table-bordered table-hover definewidth m10">
+    <tr>
+        <td width="10%" class="tableleft">上级</td>
+        <td>
+            <select name="parentid">
+            {$parent_select}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">名称</td>
+        <td><input type="text" name="name"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Group</td>
+        <td><input type="text" name="group"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Model</td>
+        <td><input type="text" name="module"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Action</td>
+        <td><input type="text" name="action"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">备注</td>
+        <td><input type="text" name="remark"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">状态</td>
+        <td>
+            <input type="radio" name="status" value="0" checked/> 启用
+            <input type="radio" name="status" value="1"/> 禁用
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft"></td>
+        <td>
+            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+        </td>
+    </tr>
+</table>
+</form>
+<script>
+    $(function () {       
+		$('#backid').click(function(){
+				window.location.href="{:U('Menu/index')}";
+		 });
+
+    });
+</script>

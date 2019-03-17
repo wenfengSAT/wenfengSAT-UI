@@ -1,0 +1,38 @@
+<form action="{:U('Role/add')}" method="post" class="definewidth m20">
+    <table class="table table-bordered table-hover definewidth m10">
+        <tr>
+            <td width="10%" class="tableleft">角色名称</td>
+            <td><input type="text" name="title"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">状态</td>
+            <td>
+                <input type="radio" name="status" value="1" checked/> 启用  <input type="radio" name="status" value="0"/> 禁用
+            </td>
+        </tr>
+        <tr>
+            <td class="tableleft">权限</td>
+            <td>
+                {$node_checbox}
+            </td>
+        </tr>
+        <tr>
+            <td class="tableleft"></td>
+            <td>
+                <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script>
+    $(function () {
+        $(':checkbox[name="group[]"]').click(function () {
+            $(':checkbox', $(this).closest('li')).prop('checked', this.checked);
+        });
+
+		$('#backid').click(function(){
+				window.location.href="{:U('Role/index')}";
+		 });
+    });
+</script>
