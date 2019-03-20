@@ -1,0 +1,242 @@
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   </head>
+   <body>
+      <table class="table table-hover">
+         <thead>
+            <tr>
+               <th colspan="4">
+                  <input type="checkbox">
+                     <a class="btn btn-light-grey" href="#"><i class="fa fa-refresh fa-lg"></i></a>
+					 <div class="btn-group">
+						 <button class="btn btn-light-grey dropdown-toggle" data-toggle="dropdown"> More
+							<i class="fa fa-caret-down"></i>
+						 </button>
+						 <ul class="dropdown-menu context" role="menu">
+							<li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+							<li><a href="#"><i class="fa fa-ban"></i> Report Spam</a></li>
+							<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+						 </ul>
+					 </div>
+               </th>
+               <th colspan="3">
+					<div class="btn-group pull-right">
+						 <button class="btn btn-light-grey dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-cog fa-lg"></i> <i class="fa fa-caret-down"></i>
+						 </button>
+						 <ul class="dropdown-menu context" role="menu">
+							<li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
+							<li><a href="#"><i class="fa fa-desktop"></i> Configure Inbox</a></li>
+							<li><a href="#"><i class="fa fa-exclamation"></i> Help</a></li>
+						 </ul>
+					 </div>
+			   </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="new">
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail  width-10"></td>
+               <td class="viewEmail  hidden-xs">Fametaxi Inc.</td>
+               <td class="viewEmail "><span class="label label-success">New</span> Design document approved</td>
+               <td class="viewEmail  text-right">08:20 PM</td>
+            </tr>
+            <tr class="new">
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail  width-10"></td>
+               <td class="viewEmail hidden-xs">Steve Jobs</td>
+               <td class="viewEmail"><span class="label label-success">New</span> Please buy our new iPhone</td>
+               <td class="viewEmail text-right">Oct 18</td>
+            </tr>
+            <tr class="new">
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-paperclip"></i></td>
+               <td class="viewEmail hidden-xs">VMWare Billdesk</td>
+               <td class="viewEmail">Billing information for the month of August</td>
+               <td class="viewEmail text-right">Oct 03</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-camera"></i></td>
+               <td class="viewEmail hidden-xs">Facebook</td>
+               <td class="viewEmail">John Doe, Liz have upcoming birthdays</td>              
+               <td class="viewEmail text-right">Sep 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+               <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">LinkedIn</td>
+               <td class="viewEmail"><span class="label label-danger">Respond</span> Consetetur sadipscing elitry</td>
+               <td class="viewEmail text-right">Sep 15</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-paperclip"></i></td>
+               <td class="viewEmail hidden-xs">Jane Doe</td>
+               <td class="viewEmail">Dolor sit amet, consectetuer adipiscing</td>               
+               <td class="viewEmail text-right">Aug 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">John Doe</td>
+               <td class="viewEmail"><span class="label label-warning">Read Later</span> Consetetur sadipscing elitry</td>               
+               <td class="viewEmail text-right">Aug 15</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">LinkedIn</td>
+               <td class="viewEmail viewEmail">Sed diam nonumy eirmod tempor invidu</td>
+               <td class="viewEmail text-right">Aug 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">Jane Doe</td>
+               <td class="viewEmail viewEmail">Consetetur sadipscing elitry</td>
+               <td class="viewEmail text-right">July 15</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">Facebook</td>
+               <td class="viewEmail viewEmail"><span class="label label-warning">Read Later</span> Sed diam nonumy eirmod tempor invidu</td>
+               <td class="viewEmail text-right">July 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-camera"></i></td>
+               <td class="viewEmail hidden-xs">John Doe</td>
+               <td class="viewEmail">Consetetur sadipscing elitry</td>               
+               <td class="viewEmail text-right">June 15</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-paperclip"></i></td>
+               <td class="hidden-xs">LinkedIn</td>
+               <td class="viewEmail">Sed diam nonumy eirmod tempor invidu</td>
+               <td class="viewEmail text-right">June 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-paperclip"></i></td>
+               <td class="viewEmail hidden-xs">Twitter</td>
+               <td class="viewEmail">Consetetur sadipscing elitry</td>
+               <td class="viewEmail text-right">April 15</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="hidden-xs">Facebook</td>
+               <td class="viewEmail viewEmail"><span class="label label-info">To Do</span> Sed diam nonumy eirmod tempor invidu</td>               
+               <td class="viewEmail text-right">April 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">Max Doe</td>
+               <td class="viewEmail"><span class="label label-info">To Do</span> Consetetur sadipscing elitry</td>
+               <td class="viewEmail text-right">April 15</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">Dribbble</td>
+               <td class="viewEmail">Sed diam nonumy eirmod tempor invidu</td>
+               <td class="viewEmail text-right">April 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-paperclip"></i></td>
+               <td class="viewEmail hidden-xs">Barack Obama</td>
+               <td class="viewEmail">Consetetur sadipscing elitry</td>               
+               <td class="viewEmail text-right">March 15</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star starred"></i></td>
+			   <td class="viewEmail width-10"><i class="fa fa-paperclip"></i></td>
+               <td class="viewEmail hidden-xs">Facebook</td>
+               <td class="viewEmail viewEmail"><span class="label label-info">To Do</span> Sed diam nonumy eirmod tempor invidu</td>
+               <td class="viewEmail text-right">March 14</td>
+            </tr>
+            <tr>
+               <td class="width-10">
+                  <input  type="checkbox">
+               </td>
+               <td class="width-10"><i class="fa fa-star"></i></td>
+			   <td class="viewEmail width-10"></td>
+               <td class="viewEmail hidden-xs">John Doe</td>
+               <td class="viewEmail">Consetetur sadipscing elitry</td>              
+               <td class="viewEmail text-right">March 15</td>
+            </tr>
+         </tbody>
+		 <thead>
+            <tr>
+               <th colspan="4">
+               </th>
+               <th class="emailPager" colspan="3">
+                  <span class="emailPagerCount">1-30 of 1343</span>
+                  <a class="btn btn-sm btn-light-grey"><i class="fa fa-angle-left"></i></a>
+                  <a class="btn btn-sm btn-light-grey"><i class="fa fa-angle-right"></i></a>
+               </th>
+            </tr>
+         </thead>
+      </table>
+   </body>
+</html>

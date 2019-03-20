@@ -1,0 +1,121 @@
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   </head>
+   <body>
+	  <div class="row">
+		  <div class="col-md-12 toolbar">
+				<span class="btn-group">
+				  <button class="btn btn-light-grey replyBtn">
+					<i class="fa fa-reply"></i>
+				  </button>
+				  <button class="btn btn-light-grey dropdown-toggle" data-toggle="dropdown">
+				  <i class="fa fa-angle-down"></i>
+				  </button>
+				  <ul class="dropdown-menu context pull-right text-left">
+					 <li><a href="#"><i class="fa fa-reply reply-btn"></i> Reply All</a></li>
+					 <li><a href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
+					 <li><a href="#"><i class="fa fa-print"></i> Print</a></li>
+					 <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+					 <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+					 <li></li>
+				  </ul>
+				</span>
+				<span class="btn-group">
+					<button class="btn btn-light-grey">
+						<i class="fa fa-cloud-download"></i>
+					</button>
+					<button class="btn btn-light-grey">
+						<i class="fa fa-share"></i>
+					</button>
+					<button class="btn btn-light-grey">
+						<i class="fa fa-trash-o"></i>
+					</button>
+				</span>
+		  </div>
+	  </div>
+	  <div class="divide-20"></div>
+      <div class="emailTitle emailViewHeader">
+         <h1>Design document approved <span class="label label-success">New</span>&nbsp;<span class="label label-default">Inbox</span></h1> 
+      </div>
+	  <hr>
+      <div class="emailViewContent">
+         <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="col-sm-1 control-label">From:</label>
+				<label class="col-sm-11 control-label">Fametaxi Design Lab <a href="mailto:noreply@fametaxi.com">&lt;noreply@fametaxi.com&gt;</a></label>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-1 control-label">To:</label>
+				<label class="col-sm-11 control-label">Me <a href="mailto:johndoe@gmail.com">&lt;johndoe@gmail.com&gt;</a></label>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-1 control-label">Date:</label>
+				<label class="col-sm-11 control-label">Wed, Nov 20, 2013 at 1:21 AM</label>
+			</div>
+		 </form>
+      </div>
+	  <hr>
+      <div class="emailView">
+         <p>Dear Ms. McDonald,</p>
+		 <p>I am writing to follow up on our discussion last Wednesday. As you requested, I filed a work order with the facilities department regarding the damage to the ascending escalator you reported.</p>
+		<p>An examination of the escalator found that there was a shoelace caught in the gears. Said shoelace has since been removed, and the escalator was tested extensively to ensure this would not happen again. I am pleased to report that the tests were passed with flying colors, and the escalator has been reopened.</p>
+		<p>Thank you for bringing this issue to our attention. Please continue to inform us should you have any other problems in our facilities.</p>
+		<p>Sincerely,<br>
+		Marilyn Novak<br>
+		Property Manager<br>
+		Novak Skyscraper Construction</p>
+      </div>
+      <hr>
+      <div class="emailAttached">
+         <div class="margin-bottom-15">
+            <span class="font-600">3 attachments —</span> 
+            <a href="#">Download all attachments</a>   
+         </div>
+		 <div class="row">
+			<div class="col-md-4">
+				<div class="margin-bottom-25">
+					<img src="img/inbox/1.jpg">
+					<div>
+					   <strong>lighthouse.jpg</strong>
+					   <span>373K</span>
+					   <div class="btn-group">
+						   <a href="#" class="btn btn-light-grey btn-xs">View</a>
+						   <a href="#" class="btn btn-light-grey btn-xs">Share</a>
+						   <a href="#" class="btn btn-light-grey btn-xs">Download</a>
+					   </div>
+					</div>
+				 </div>
+			</div>
+			<div class="col-md-4">
+				<div class="margin-bottom-25">
+					<img src="img/inbox/2.jpg">
+					<div>
+					   <strong>bokeh-bg.jpg</strong>
+					   <span>124K</span>
+					   <div class="btn-group">
+						   <a href="#" class="btn btn-light-grey btn-xs">View</a>
+						   <a href="#" class="btn btn-light-grey btn-xs">Share</a>
+						   <a href="#" class="btn btn-light-grey btn-xs">Download</a>
+					   </div>
+					</div>
+				 </div>
+			</div>
+			<div class="col-md-4">
+				<div class="margin-bottom-25">
+					<img src="img/inbox/3.jpg">
+					<div>
+					   <strong>sunshine.jpg</strong>
+					   <span>222K</span>
+					   <div class="btn-group">
+						   <a href="#" class="btn btn-light-grey btn-xs">View</a>
+						   <a href="#" class="btn btn-light-grey btn-xs">Share</a>
+						   <a href="#" class="btn btn-light-grey btn-xs">Download</a>
+					   </div>
+					</div>
+				 </div>
+			</div>
+		 </div>
+      </div>
+   </body>
+</html>
