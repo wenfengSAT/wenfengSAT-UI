@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>metro风格响应式后台管理系统</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="Mosaddek" name="author"/>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+    <link href="assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet"/>
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/style-responsive.css" rel="stylesheet"/>
+    <link href="css/style-default.css" rel="stylesheet" id="style_color"/>
+    <link href="assets/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet"/>
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+<!-- BEGIN HEADER -->
+<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+    <!-- BEGIN TOP NAVIGATION BAR -->
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <!--BEGIN SIDEBAR TOGGLE-->
+            <div class="sidebar-toggle-box hidden-phone">
+                <div class="icon-reorder tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <!--END SIDEBAR TOGGLE-->
+            <!-- BEGIN LOGO -->
+            <a class="brand" href="index.html">
+                <img src="img/logo.png" alt="Metro Lab"/>
+            </a>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse"
+               data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="arrow"></span>
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <div id="top_menu" class="nav notify-row">
+                <!-- BEGIN NOTIFICATION -->
+                <ul class="nav top-menu">
+                    <!-- BEGIN SETTINGS -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-tasks"></i>
+                            <span class="badge badge-important">6</span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks-bar">
+                            <li>
+                                <p>你有6条任务</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div class="desc">控制台</div>
+                                        <div class="percent">44%</div>
+                                    </div>
+                                    <div class="progress progress-striped active no-margin-bot">
+                                        <div class="bar" style="width: 44%;"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div class="desc">数据库更新</div>
+                                        <div class="percent">65%</div>
+                                    </div>
+                                    <div class="progress progress-striped progress-success active no-margin-bot">
+                                        <div class="bar" style="width: 65%;"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div class="desc">手机开发进度</div>
+                                        <div class="percent">87%</div>
+                                    </div>
+                                    <div class="progress progress-striped progress-info active no-margin-bot">
+                                        <div class="bar" style="width: 87%;"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div class="desc">手机App进度</div>
+                                        <div class="percent">33%</div>
+                                    </div>
+                                    <div class="progress progress-striped progress-warning active no-margin-bot">
+                                        <div class="bar" style="width: 33%;"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div class="desc">控制台</div>
+                                        <div class="percent">90%</div>
+                                    </div>
+                                    <div class="progress progress-striped progress-danger active no-margin-bot">
+                                        <div class="bar" style="width: 90%;"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">查看所有任务</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END SETTINGS -->
+                    <!-- BEGIN INBOX DROPDOWN -->
+                    <li class="dropdown" id="header_inbox_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-envelope-alt"></i>
+                            <span class="badge badge-important">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <li>
+                                <p>你有5条消息</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="photo"><img src="./img/avatar-mini.png" alt="avatar"/></span>
+									<span class="subject">
+									<span class="from">Jonathan Smith</span>
+									<span class="time">Just now</span>
+									</span>
+									<span class="message">
+									    Hello, 这是个消息列子.
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="photo"><img src="./img/avatar-mini.png" alt="avatar"/></span>
+									<span class="subject">
+									<span class="from">Jhon Doe</span>
+									<span class="time">10 mins</span>
+									</span>
+									<span class="message">
+									 Hi, 最近咋样?
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="photo"><img src="./img/avatar-mini.png" alt="avatar"/></span>
+									<span class="subject">
+									<span class="from">Jason Stathum</span>
+									<span class="time">3 hrs</span>
+									</span>
+									<span class="message">
+									    This is awesome dashboard.
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="photo"><img src="./img/avatar-mini.png" alt="avatar"/></span>
+									<span class="subject">
+									<span class="from">Jondi Rose</span>
+									<span class="time">Just now</span>
+									</span>
+									<span class="message">
+									    Hello, this is metrolab
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END INBOX DROPDOWN -->
+                    <!-- BEGIN NOTIFICATION DROPDOWN -->
+                    <li class="dropdown" id="header_notification_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                            <i class="icon-bell-alt"></i>
+                            <span class="badge badge-warning" id="ajaxtest">8</span>
+                        </a>
+                        <ul class="dropdown-menu extended notification">
+                            <li>
+                                <p>你有7条提示信息</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-important"><i class="icon-bolt"></i></span>
+                                    Server #3 overloaded.
+                                    <span class="small italic">34 mins</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-warning"><i class="icon-bell"></i></span>
+                                    Server #10 not respoding.
+                                    <span class="small italic">1 Hours</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-important"><i class="icon-bolt"></i></span>
+                                    Database overloaded 24%.
+                                    <span class="small italic">4 hrs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-success"><i class="icon-plus"></i></span>
+                                    New user registered.
+                                    <span class="small italic">Just now</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-info"><i class="icon-bullhorn"></i></span>
+                                    Application error.
+                                    <span class="small italic">10 mins</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">See all notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END NOTIFICATION DROPDOWN -->
+
+                </ul>
+            </div>
+            <!-- END  NOTIFICATION -->
+            <div class="top-nav ">
+                <ul class="nav pull-right top-menu">
+                    <!-- BEGIN SUPPORT -->
+                    <li class="dropdown mtop5">
+
+                        <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#"
+                           data-original-title="Chat">
+                            <i class="icon-comments-alt"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown mtop5">
+                        <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#"
+                           data-original-title="Help">
+                            <i class="icon-headphones"></i>
+                        </a>
+                    </li>
+                    <!-- END SUPPORT -->
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="img/avatar1_small.jpg" alt="">
+                            <span class="username">Jhon Doe</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li><a href="#"><i class="icon-user"></i>我的资料</a></li>
+                            <li><a href="#"><i class="icon-cog"></i>我的设置</a></li>
+                            <li><a href="login.html"><i class="icon-key"></i>退出</a></li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+        </div>
+    </div>
+    <!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+<!-- BEGIN CONTAINER -->
+<div id="container" class="row-fluid">
+    <!-- BEGIN SIDEBAR -->
+    <div class="sidebar-scroll">
+        <div id="sidebar" class="nav-collapse collapse">
+
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+            <div class="navbar-inverse">
+                <form class="navbar-search visible-phone">
+                    <input type="text" class="search-query" placeholder="Search"/>
+                </form>
+            </div>
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+            <!-- BEGIN SIDEBAR MENU -->
+            <ul class="sidebar-menu">
+                <li class="sub-menu">
+                    <a class="" href="index.html" onclick="$('.nav-collapse').collapse('hide')" target="MainIframe">
+                        <i class="icon-dashboard"></i>
+                        <span>控制台</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-book"></i>
+                        <span>UI 组件</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="general.html" target="MainIframe">通用</a></li>
+                        <li><a class="" href="button.html" target="MainIframe">按钮</a></li>
+                        <li><a class="" href="slider.html" target="MainIframe">滑动</a></li>
+                        <li><a class="" href="metro_view.html" target="MainIframe">Metro风格</a></li>
+                        <li><a class="" href="tabs_accordion.html" target="MainIframe">Tab选项卡 & 手风琴</a></li>
+                        <li><a class="" href="typography.html" target="MainIframe">文字排版</a></li>
+                        <li><a class="" href="tree_view.html" target="MainIframe">树菜单</a></li>
+                        <li><a class="" href="nestable.html" target="MainIframe">嵌套列表</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-cogs"></i>
+                        <span>插件</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="calendar.html" target="MainIframe">日历</a></li>
+                        <li><a class="" href="grids.html" target="MainIframe">网格</a></li>
+                        <li><a class="" href="chartjs.html" target="MainIframe">图表统计</a></li>
+                        <li><a class="" href="flot_chart.html" target="MainIframe">Flot图表</a></li>
+                        <li><a class="" href="gallery.html" target="MainIframe">相册</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-tasks"></i>
+                        <span>表单</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="form_layout.html" target="MainIframe">表单布局</a></li>
+                        <li><a class="" href="form_component.html" target="MainIframe">表单组件</a></li>
+                        <li><a class="" href="form_wizard.html" target="MainIframe">表单提示</a></li>
+                        <li><a class="" href="form_validation.html" target="MainIframe">表单验证</a></li>
+                        <li><a class="" href="dropzone.html" target="MainIframe">文件上传</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-th"></i>
+                        <span>数据表格</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="basic_table.html" onclick="$('.nav-collapse').collapse('hide')"
+                               target="MainIframe">简单表格</a></li>
+                        <li><a class="" href="DynamicTable.html" target="MainIframe">动态表格</a></li>
+                        <li><a class="" href="SysMenu.html" target="MainIframe">可编辑表格</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-fire"></i>
+                        <span>Icon图标</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="font_awesome.html" target="MainIframe">FontAwesome图标</a></li>
+                        <li><a class="" href="glyphicons.html" target="MainIframe">Glyphicons图标</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="" href="javascript:;">
+                        <i class="icon-trophy"></i>
+                        <span>代码片段</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="general_portlet.html" class="" target="MainIframe">通用片段</a></li>
+                        <li><a href="draggable_portlet.html" class="" target="MainIframe">可拖拽片段</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="" href="javascript:;">
+                        <i class="icon-map-marker"></i>
+                        <span>地图</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="vector_map.html" class="" target="MainIframe">Vector地图</a></li>
+                        <li><a href="google_map.html" class="" target="MainIframe">Google地图</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-file-alt"></i>
+                        <span>基本页面</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="blank.html" target="MainIframe">空白页面</a></li>
+                        <li><a class="" href="blog.html" target="MainIframe">博客</a></li>
+                        <li><a class="" href="timeline.html" target="MainIframe">时间轴</a></li>
+                        <li><a class="" href="profile.html" target="MainIframe">个人资料</a></li>
+                        <li><a class="" href="about_us.html" target="MainIframe">关于我们</a></li>
+                        <li><a class="" href="contact_us.html" target="MainIframe">联系我们</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-glass"></i>
+                        <span>其他</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="#" target="MainIframe">锁屏</a></li>
+                        <li><a class="" href="#" target="MainIframe">购物单</a></li>
+                        <li><a class="" href="#" target="MainIframe">价目单</a></li>
+                        <li><a class="" href="#" target="MainIframe">搜索展示</a></li>
+                        <li><a class="" href="#" target="MainIframe">帮助页面</a></li>
+                        <li><a class="" href="Error404.html">404错误页面</a></li>
+                        <li><a class="" href="#" target="MainIframe">500错误页面</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="" href="Index.html">
+                        <i class="icon-user"></i>
+                        <span>登录页面</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- END SIDEBAR MENU -->
+        </div>
+    </div>
+    <!-- END SIDEBAR -->
+
+    <!-- BEGIN PAGE -->
+    <!--<div id="main-content">
+        &lt;!&ndash; BEGIN PAGE CONTAINER&ndash;&gt;
+        <div class="container-fluid">
+            &lt;!&ndash; BEGIN PAGE HEADER&ndash;&gt;
+            <div class="row-fluid">
+                <div class="span12">
+                    &lt;!&ndash; BEGIN THEME CUSTOMIZER&ndash;&gt;
+                    <div id="theme-change" class="hidden-phone">
+                        <i class="icon-cogs"></i>
+                        <span class="settings">
+                            <span class="text">主题颜色:</span>
+                            <span class="colors">
+                                <span class="color-default" data-style="default"></span>
+                                <span class="color-green" data-style="green"></span>
+                                <span class="color-gray" data-style="gray"></span>
+                                <span class="color-purple" data-style="purple"></span>
+                                <span class="color-red" data-style="red"></span>
+                            </span>
+                        </span>
+                    </div>
+                    &lt;!&ndash; END THEME CUSTOMIZER&ndash;&gt;
+                    &lt;!&ndash; BEGIN PAGE TITLE & BREADCRUMB&ndash;&gt;
+                    <h3 class="page-title">
+                        控制台
+                    </h3>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">首页</a>
+                            <span class="divider">/</span>
+                        </li>
+                        <li class="active">
+                            控制台
+                        </li>
+                        <li class="pull-right search-wrap">
+                            <form action="search_result.html" class="hidden-phone">
+                                <div class="input-append search-input-area">
+                                    <input class="" id="appendedInputButton" type="text">
+                                    <button class="btn" type="button"><i class="icon-search"></i></button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                    &lt;!&ndash; END PAGE TITLE & BREADCRUMB&ndash;&gt;
+                </div>
+            </div>
+            &lt;!&ndash; END PAGE HEADER&ndash;&gt;
+            &lt;!&ndash; BEGIN PAGE CONTENT&ndash;&gt;
+            <div class="row-fluid">
+                &lt;!&ndash;BEGIN METRO STATES&ndash;&gt;
+                <div class="metro-nav">
+                    <div class="metro-nav-block nav-block-orange">
+                        <a data-original-title="" href="#">
+                            <i class="icon-user"></i>
+
+                            <div class="info">321</div>
+                            <div class="status">新增用户</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-olive">
+                        <a data-original-title="" href="#">
+                            <i class="icon-tags"></i>
+
+                            <div class="info">+970</div>
+                            <div class="status">销售数据</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-yellow">
+                        <a data-original-title="" href="#">
+                            <i class="icon-comments-alt"></i>
+
+                            <div class="info">49</div>
+                            <div class="status">用户评论</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-green double">
+                        <a data-original-title="" href="#">
+                            <i class="icon-eye-open"></i>
+
+                            <div class="info">+897</div>
+                            <div class="status">UV</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-red">
+                        <a data-original-title="" href="#">
+                            <i class="icon-bar-chart"></i>
+
+                            <div class="info">+288</div>
+                            <div class="status">更新</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="metro-nav">
+                    <div class="metro-nav-block nav-light-purple">
+                        <a data-original-title="" href="#">
+                            <i class="icon-shopping-cart"></i>
+
+                            <div class="info">29</div>
+                            <div class="status">新增订单</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-light-blue double">
+                        <a data-original-title="" href="#">
+                            <i class="icon-tasks"></i>
+
+                            <div class="info">$37624</div>
+                            <div class="status">库存信息</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-light-green">
+                        <a data-original-title="" href="#">
+                            <i class="icon-envelope"></i>
+
+                            <div class="info">123</div>
+                            <div class="status">消息</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-light-brown">
+                        <a data-original-title="" href="#">
+                            <i class="icon-remove-sign"></i>
+
+                            <div class="info">34</div>
+                            <div class="status">取消订单</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-grey ">
+                        <a data-original-title="" href="#">
+                            <i class="icon-external-link"></i>
+
+                            <div class="info">$53412</div>
+                            <div class="status">总利润</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="space10"></div>
+                &lt;!&ndash;END METRO STATES&ndash;&gt;
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    &lt;!&ndash; BEGIN CHART PORTLET&ndash;&gt;
+                    <div class="widget ">
+                        <div class="widget-title">
+                            <h4><i class="icon-reorder"></i> 饼状图</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                        </div>
+                        <div class="widget-body">
+                            <div class="text-center">
+                                <canvas id="doughnut" height="300" width="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; END CHART PORTLET&ndash;&gt;
+                </div>
+                <div class="span6">
+                    &lt;!&ndash; BEGIN CHART PORTLET&ndash;&gt;
+                    <div class="widget green">
+                        <div class="widget-title">
+                            <h4><i class="icon-reorder"> </i> 曲线图</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                        </div>
+                        <div class="widget-body">
+                            <div class="text-center">
+                                <canvas id="line" height="300" width="450"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; END CHART PORTLET&ndash;&gt;
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span7">
+                    &lt;!&ndash;BEGIN GENERAL STATISTICS&ndash;&gt;
+                    <div class="widget orange">
+                        <div class="widget-title">
+                            <h4><i class="icon-tasks"></i> 通用统计 </h4>
+                         <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                            <a href="javascript:;" class="icon-remove"></a>
+                         </span>
+
+                            <div class="update-btn">
+                                <a href="javascript:;" class="btn update-easy-pie-chart"><i class="icon-repeat"></i>
+                                    Update</a>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="text-center">
+                                <div class="easy-pie-chart">
+                                    <div class="percentage success" data-percent="55"><span>55</span>%</div>
+                                    <div class="title">New visits</div>
+                                </div>
+                                <div class="easy-pie-chart">
+                                    <div class="percentage" data-percent="46"><span>46</span>%</div>
+                                    <div class="title">Bounce rate</div>
+                                </div>
+                                <div class="easy-pie-chart">
+                                    <div class="percentage" data-percent="92"><span>92</span>%</div>
+                                    <div class="title">Server load</div>
+                                </div>
+                                <div class="easy-pie-chart">
+                                    <div class="percentage" data-percent="84"><span>752</span>MB</div>
+                                    <div class="title">Used RAM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash;END GENERAL STATISTICS&ndash;&gt;
+                </div>
+                <div class="span5">
+                    &lt;!&ndash;BEGIN GENERAL STATISTICS&ndash;&gt;
+                    <div class="widget purple">
+                        <div class="widget-title">
+                            <h4><i class="icon-tasks"></i> 统计数据 </h4>
+                         <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                            <a href="javascript:;" class="icon-remove"></a>
+                         </span>
+                        </div>
+                        <div class="widget-body">
+                            <div class="row-fluid">
+                                <div class="text-center">
+                                    <div class="sparkline">
+                                        <div id="metro-sparkline-type1"></div>
+                                        <div class="sparkline-tittle">Server Load</div>
+                                    </div>
+                                    <div class="sparkline">
+                                        <div id="metro-sparkline-type2"></div>
+                                        <div class="sparkline-tittle">Network Load</div>
+                                    </div>
+                                    <div class="sparkline">
+                                        <div id="metro-sparkline-type3"></div>
+                                        <div class="sparkline-tittle">Visit Load</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash;END GENERAL STATISTICS&ndash;&gt;
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    &lt;!&ndash; BEGIN NOTIFICATIONS PORTLET&ndash;&gt;
+                    <div class="widget blue">
+                        <div class="widget-title">
+                            <h4><i class="icon-bell"></i> 提示信息 </h4>
+                           <span class="tools">
+                               <a href="javascript:;" class="icon-chevron-down"></a>
+                               <a href="javascript:;" class="icon-remove"></a>
+                           </span>
+                        </div>
+                        <div class="widget-body">
+                            <ul class="item-list scroller padding" style="overflow: hidden; width: auto; height: 320px;"
+                                data-always-visible="1">
+                                <li>
+                                    <span class="label label-success"><i class="icon-bell"></i></span>
+                                    <span>New user registered.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">Just now</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-success"><i class="icon-bell"></i></span>
+                                    <span>New order received.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">15 mins ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-warning"><i class="icon-bullhorn"></i></span>
+                                    <span>Alerting a user account balance.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">3 hours ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-important"><i class=" icon-bug"></i></span>
+                                    <span>Alerting administrators staff.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">9 mins ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-important"><i class=" icon-bug"></i></span>
+                                    <span>Messages are not sent to users.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">10 hours ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-warning"><i class="icon-bullhorn"></i></span>
+                                    <span>Web server #12 failed to relosd.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">3 mins ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-success"><i class="icon-bell"></i></span>
+                                    <span>New order received.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">40 mins ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-warning"><i class="icon-bullhorn"></i></span>
+                                    <span>Alerting a user account balance.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">1 hours ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-important"><i class=" icon-bug"></i></span>
+                                    <span>Alerting administrators staff.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">1 mins ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-important"><i class=" icon-bug"></i></span>
+                                    <span>Messages are not sent to users.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">11 hours ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-warning"><i class="icon-bullhorn"></i></span>
+                                    <span>Web server #12 failed to relosd.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">1 day ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-success"><i class="icon-bell"></i></span>
+                                    <span>New order received.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">10 mins ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-warning"><i class="icon-bullhorn"></i></span>
+                                    <span>Alerting a user account balance.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">3 hours ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-important"><i class=" icon-bug"></i></span>
+                                    <span>Alerting administrators support staff.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">6 hours ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-important"><i class=" icon-bug"></i></span>
+                                    <span>Messages are not sent to users.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">3 days ago</span>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="label label-warning"><i class="icon-bullhorn"></i></span>
+                                    <span>Web server #12 failed to relosd.</span>
+
+                                    <div class="pull-right">
+                                        <span class="small italic ">1 day ago</span>
+
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="space10"></div>
+                            <a href="#" class="pull-right">View all notifications</a>
+
+                            <div class="clearfix no-top-space no-bottom-space"></div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; END NOTIFICATIONS PORTLET&ndash;&gt;
+                </div>
+                <div class="span6">
+                    &lt;!&ndash; BEGIN CHAT PORTLET&ndash;&gt;
+                    <div class="widget red">
+                        <div class="widget-title">
+                            <h4><i class="icon-comments-alt"></i>聊天</h4>
+									<span class="tools">
+									<a href="javascript:;" class="icon-chevron-down"></a>
+									<a href="javascript:;" class="icon-remove"></a>
+									</span>
+                        </div>
+                        <div class="widget-body">
+                            <div class="timeline-messages">
+                                &lt;!&ndash; Comment &ndash;&gt;
+                                <div class="msg-time-chat">
+                                    <a class="message-img" href="#"><img alt="" src="img/avatar1.jpg"
+                                                                         class="avatar"></a>
+
+                                    <div class="message-body msg-in">
+                                        <span class="arrow"></span>
+
+                                        <div class="text">
+                                            <p class="attribution"><a href="#">Jhon Doe</a> at 1:55pm, 13th April 2013
+                                            </p>
+
+                                            <p>Hello, How are you brother?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                &lt;!&ndash; /comment &ndash;&gt;
+
+                                &lt;!&ndash; Comment &ndash;&gt;
+                                <div class="msg-time-chat">
+                                    <a class="message-img" href="#"><img alt="" src="img/avatar2.jpg"
+                                                                         class="avatar"></a>
+
+                                    <div class="message-body msg-out">
+                                        <span class="arrow"></span>
+
+                                        <div class="text">
+                                            <p class="attribution"><a href="#">Jonathan Smith</a> at 2:01pm, 13th April
+                                                2013</p>
+
+                                            <p>I'm Fine, Thank you. What about you? How is going on?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                &lt;!&ndash; /comment &ndash;&gt;
+
+                                &lt;!&ndash; Comment &ndash;&gt;
+                                <div class="msg-time-chat">
+                                    <a class="message-img" href="#"><img alt="" src="img/avatar1.jpg"
+                                                                         class="avatar"></a>
+
+                                    <div class="message-body msg-in">
+                                        <span class="arrow"></span>
+
+                                        <div class="text">
+                                            <p class="attribution"><a href="#">Jhon Doe</a> at 2:03pm, 13th April 2013
+                                            </p>
+
+                                            <p>Yeah I'm fine too. Everything is going fine here.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                &lt;!&ndash; /comment &ndash;&gt;
+
+                                &lt;!&ndash; Comment &ndash;&gt;
+                                <div class="msg-time-chat">
+                                    <a class="message-img" href="#"><img alt="" src="img/avatar2.jpg"
+                                                                         class="avatar"></a>
+
+                                    <div class="message-body msg-out">
+                                        <span class="arrow"></span>
+
+                                        <div class="text">
+                                            <p class="attribution"><a href="#">Jonathan Smith</a> at 2:05pm, 13th April
+                                                2013</p>
+
+                                            <p>well good to know that. anyway how much time you need to done your
+                                                task?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                &lt;!&ndash; /comment &ndash;&gt;
+                            </div>
+                            <div class="chat-form">
+                                <div class="input-cont">
+                                    <input type="text" placeholder="Type a message here..."/>
+                                </div>
+                                <div class="btn-cont">
+                                    <a href="javascript:;" class="btn btn-primary">Send</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; END CHAT PORTLET&ndash;&gt;
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span7 responsive" data-tablet="span7 fix-margin" data-desktop="span7">
+                    &lt;!&ndash; BEGIN CALENDAR PORTLET&ndash;&gt;
+                    <div class="widget yellow">
+                        <div class="widget-title">
+                            <h4><i class="icon-calendar"></i> 日历</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                        </div>
+                        <div class="widget-body">
+                            <div id="calendar" class="has-toolbar"></div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; END CALENDAR PORTLET&ndash;&gt;
+                </div>
+                <div class="span5">
+                    &lt;!&ndash; BEGIN PROGRESS PORTLET&ndash;&gt;
+                    <div class="widget purple">
+                        <div class="widget-title">
+                            <h4><i class="icon-tasks"></i> 任务进度 </h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                        </div>
+                        <div class="widget-body">
+                            <ul class="unstyled">
+                                <li>
+                                    <span class="btn btn-inverse"> <i class="icon-refresh"></i></span> Update Jquery
+                                    <strong class="label"> 48%</strong>
+
+                                    <div class="space10"></div>
+                                    <div class="progress">
+                                        <div style="width: 48%;" class="bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="btn btn-inverse"> <i class="icon-check"></i></span> Update font awesome
+                                    <strong class="label label-success"> 85%</strong>
+
+                                    <div class="space10"></div>
+                                    <div class="progress progress-success">
+                                        <div style="width: 85%;" class="bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="btn btn-inverse"> <i class="icon-fire"></i></span> Update CSS3 <strong
+                                        class="label label-important"> 65%</strong>
+
+                                    <div class="space10"></div>
+                                    <div class="progress progress-danger">
+                                        <div style="width: 65%;" class="bar"></div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    &lt;!&ndash; END PROGRESS PORTLET&ndash;&gt;
+                    &lt;!&ndash; BEGIN ALERTS PORTLET&ndash;&gt;
+                    <div class="widget orange">
+                        <div class="widget-title">
+                            <h4><i class="icon-bell-alt"></i> 警告提示</h4>
+                            <span class="tools">
+                            <a class="icon-chevron-down" href="javascript:;"></a>
+                            <a class="icon-remove" href="javascript:;"></a>
+                            </span>
+                        </div>
+                        <div class="widget-body">
+                            <div class="alert">
+                                <button data-dismiss="alert" class="close">×</button>
+                                <strong>Warning!</strong> Best check yo self, you're not looking too good.
+                            </div>
+                            <div class="alert alert-success">
+                                <button data-dismiss="alert" class="close">×</button>
+                                <strong>Success!</strong> You successfully read this important message.
+                            </div>
+                            <div class="alert alert-info">
+                                <button data-dismiss="alert" class="close">×</button>
+                                <strong>Info!</strong> Heads up! This alert needs your attention.
+                            </div>
+                            <div class="alert alert-error">
+                                <button data-dismiss="alert" class="close">×</button>
+                                <strong>Error!</strong> Change a few things. Please submit again.
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; END ALERTS PORTLET&ndash;&gt;
+                </div>
+            </div>
+
+            &lt;!&ndash; END PAGE CONTENT&ndash;&gt;
+        </div>
+        &lt;!&ndash; END PAGE CONTAINER&ndash;&gt;
+    </div>-->
+
+    <div id="main-content" style="height:672px;">
+        <!-- BEGIN THEME CUSTOMIZER-->
+        <div id="theme-change" class="hidden-phone">
+            <i class="icon-cogs"></i>
+                        <span class="settings">
+                            <span class="text">主题颜色:</span>
+                            <span class="colors">
+                                <span class="color-default" data-style="default"></span>
+                                <span class="color-green" data-style="green"></span>
+                                <span class="color-gray" data-style="gray"></span>
+                                <span class="color-purple" data-style="purple"></span>
+                                <span class="color-red" data-style="red"></span>
+                            </span>
+                        </span>
+        </div>
+        <!-- END THEME CUSTOMIZER-->
+        <iframe src="#" id="MainIframe" name="MainIframe" style="height: 100%;width: 100%" frameborder="0">
+        </iframe>
+    </div>
+    <!-- END PAGE -->
+</div>
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+<div id="footer">
+    2013 &copy; MetroAdmin.
+</div>
+<!-- END FOOTER -->
+
+<!-- BEGIN JAVASCRIPTS -->
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/jquery-slimscroll/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    //测试页面无刷新
+    $(function () {
+        var date = new Date();
+        $("#ajaxtest").html(date.getSeconds());
+        var winheight = $(window).height();
+        $("#main-content").height(winheight - 100);
+    });
+    $(window).resize(function () {
+        var winheight = $(window).height();
+        $("#main-content").height(winheight - 100);
+    });
+
+    $(function () {
+        $("#sidebar .sub-menu .sub a ").click(function (e) {
+            var hturl = e.target || e.srcElement, href;
+            var ht = hturl.toString();
+            var str = ht.substring(ht.length - 1, ht.length);
+            if(str=="#")
+            {
+                (this).setAttribute("target","");
+                (this).setAttribute("href","Error404.html");
+            }
+        });
+    })
+</script>
+<!-- ie8 fixes -->
+<!--[if lt IE 9]>
+<script src="js/excanvas.js"></script>
+<script src="js/respond.js"></script>
+<![endif]-->
+
+<script src="js/jquery.sparkline.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+
+
+<!--common script for all pages-->
+<script src="js/common-scripts.js"></script>
+
+<!--script for this page only-->
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
+
