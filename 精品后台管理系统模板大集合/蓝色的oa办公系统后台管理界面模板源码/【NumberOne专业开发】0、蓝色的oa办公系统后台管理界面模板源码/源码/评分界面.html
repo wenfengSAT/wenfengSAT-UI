@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/ace.min.css" />
+  <link rel="stylesheet" href="css/style.css"/>
+<title>用户评分</title>
+</head>
+<!--[if !IE]> -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <![endif]-->
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script src="js/jquery.raty.js" type="text/javascript"></script>
+<body>
+<div class="page-content"> 
+<ul class="score_style">  
+<li class="clearfix scores">
+	<p style="font-size:20px" class="lf">油品：</p>
+	<div id="star1" class="lf"></div>
+	<div id="result1" class="lf Rating"></div>
+</li>
+<li class="score_prompt">你对加油后油的质量的评价，这对日后选择供应商很重要。</li>
+<li class="clearfix scores">
+	<p style="font-size:20px" class="lf">服务：</p>
+	<div id="star2" class="lf"></div>
+	<div id="result2" class="lf Rating"></div>
+
+</li>
+<li class="score_prompt">你对在加油过程中对供应商的服务评价，这对日后选择供应商很重要</li>
+<li class="clearfix scores">
+	<p style="font-size:20px" class="lf">其他：</p>
+	<div id="star3" class="lf"></div>
+	<div id="result3" class="lf Rating"></div>
+   
+</li>
+<li class="score_prompt">你还对在加油过程中的其他服务评价，这对日后选择供应商很重要</li>
+</ul>
+<div class="center"><button type="button" class="btn btn-primary">确认评价</button></div>
+<script type="text/javascript">
+rat('star1','result1',1);
+rat('star2','result2',1);
+rat('star3','result3',1);
+function rat(star,result,m){
+
+	star= '#' + star;
+	result= '#' + result;
+	$(result).show();//显示评分
+
+	$(star).raty({
+		hints: ['1','2', '3', '4', '5',],
+		path: "images",
+		starOff: 'star-off-big.png',
+		starOn: 'star-on-big.png',
+		size: 24,
+		start: 40,
+		showHalf: true,
+		target: result,
+		targetKeep : true,//targetKeep 属性设置为true，用户的选择值才会被保持在目标DIV中，否则只是鼠标悬停时有值，而鼠标离开后这个值就会消失
+		click: function (score, evt) {
+			//第一种方式：直接取值
+			alert('你的评分是'+score*m+'分');
+		}
+	});
+
+	/*第二种方式可以设置一个隐蔽的HTML元素来保存用户的选择值，然后可以在脚本里面通过jQuery选中这个元素来处理该值。 弹出结果
+	var text = $(result).text();
+	$('img').click(function () {
+		if ($(result).text() != text) {
+			alert('你的评分是'+$(result).text()/m+'分');
+			alert(result);
+			return;
+		}
+	});*/
+}
+</script>
+</div>
+</body>
+</html>
