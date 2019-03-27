@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>查询管理</title>
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript1.2" src="../../../js/stm31.js"></script>
+<script type="text/javascript" language="JavaScript1.2" src="../../../js/hide.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<script language="javascript">
+function toHandle(id,pid,treeid,name){
+    list.location="/org/orgQuery.do?act=q3&queryDept="+id ;
+}
+
+function ctrlbar(){
+    if(showTree.style.display==""){
+        showTree.style.display="none";
+		menuSwitch.src="../../../images/gray_2_03.gif";//隐藏时图片
+    }else{
+        showTree.style.display="";
+		menuSwitch.src="../../../images/gray_03.gif";//打开时图片
+    }
+}
+</script>
+<script type="text/javascript">
+with(window) onload = onresize = function()
+{
+var mainHeight = document.body.offsetHeight-25;
+document.getElementById("tree").style.height=""+ mainHeight +"px";
+document.getElementById("rs").style.height=""+ mainHeight +"px";
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td height="25" align="center" valign="bottom" class="td06"><table width="98%" border="0" cellspacing="3" cellpadding="0">
+          <tr>
+            <td width="15"><img src="../../../images/index_32.gif" width="9" height="9"></td>
+            <td valign="bottom" class="title">查询管理</td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="220" valign="top" id="showTree"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><iframe id="tree" name="tree" frameborder="0" framespacing="0" scrolling="auto" width="100%" src="tree.htm"></iframe></td>
+          </tr>
+      </table></td>
+      <td width="10" class="td06"><table width="10" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="../../../images/gray_03.gif" width="10" height="53" id="menuSwitch" onClick="ctrlbar();" style="cursor: hand"></td>
+          </tr>
+          <tr>
+            <td height="25">&nbsp;</td>
+          </tr>
+      </table></td>
+      <td valign="top"><table width="100%" border=0 cellpadding="0" cellspacing="0">
+          <tr>
+            <td><iframe id="rs" name="rs" frameborder="0" framespacing="0" scrolling="yes" width="100%"></iframe></td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+</center>
+</body>
+</html>

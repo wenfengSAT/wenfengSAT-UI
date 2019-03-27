@@ -1,0 +1,239 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>出国人员基本信息录入</title>
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+	function selectbaseinfo(s){
+		window.showModalDialog("selectperson.html","location:no;status:no");
+		textName.value="刘岳";
+		document.all.dwsf.options[7].selected=true;
+        document.all.dnsf.options[1].selected=true;
+		document.all.sex.options[1].selected=true;
+		document.all.edulevel.options[5].selected=true;
+		idNumber.value="370212195511151534";
+		birthyear.value="1955年11月"
+		document.all.polface.options[1].selected=true;
+		document.all.position.options[3].selected=true;
+		time0.value="2004-10-8";
+		time1.value="1998-12-12";
+		time2.value="1978-1-1";
+		time3.value="1975-2-1";
+		language.value="英语";
+		formercompany.value="干部司综合处";
+
+	}
+	function selectembassy(s){
+		window.showModalDialog("selectembassy.html","location:no;status:no");
+		embassyName.value="驻美国使馆";
+		infomation.value="办理手续需要注意...";
+	}
+	function cal(){
+		salary.value="十级三档";
+	}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center>
+  <table width="100%"  border="0" cellpadding="0" cellspacing="0" background="../../../images/main_20.gif">
+    <tr>
+      <td width="180" valign="bottom" class="title">　出国人员基本信息录入</td>
+      <td width="20"><img src="../../../images/main_18.gif" width="4" height="25"></td>
+      <td valign="bottom">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="3" bgcolor="#319BE7"><img src="../../../images/spacer.gif" width="1" height="1"></td>
+      <td background="../../../images/main_29.gif"><img src="../../../images/spacer.gif" width="1" height="1"></td>
+      <td background="../../../images/main_29.gif"><img src="../../../images/spacer.gif" width="1" height="1"></td>
+    </tr>
+  </table>
+  <br>
+  <table width="98%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td height="1" class="td01"><img src="/images/spacer.gif" width="1" height="1"></td>
+    </tr>
+  </table>
+  <table width="98%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td width="90" height="0" align="right" class="td02">姓名</td>
+    <td class="td03"><input name="textfield" type="text" class="input" id="textName">
+        <input name="Button" type="button" class="buttonface" onClick="javascript:selectbaseinfo(this);" value="..">
+    </td>
+    <td width="90" align="right" class="td02">馆别</td>
+    <td class="td03"><input name="textfield" type="text" id="embassyName" class="input">
+      <input name="Button" type="button" class="buttonface" onClick="javascript:selectembassy(this);" value="..">
+    </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">对外身份</td>
+    <td class="td03">
+	<select name="dwsf" id="dwsf">
+     <option selected>--请选择--</option>
+     <option>大使</option>
+     <option>代表</option>
+     <option>主任</option>
+     <option>总领事</option>
+     <option>公使</option>
+     <option>参赞</option>
+     <option>一秘</option>
+     <option>二秘</option>
+     <option>三秘</option>
+     <option>随员</option>
+    </select>
+	</td>
+    <td align="right" class="td02">对内身份</td>
+    <td class="td03">
+		<select name="dnsf" id="dnsf">
+     <option selected>--请选择--</option>
+     <option>大使</option>
+     <option>代表</option>
+     <option>主任</option>
+     <option>总领事</option>
+     <option>公使</option>
+     <option>参赞</option>
+     <option>一秘</option>
+     <option>二秘</option>
+     <option>三秘</option>
+     <option>随员</option>
+    </select>
+	</td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">是否国际代表</td>
+    <td class="td03"><input name="radiobutton1" type="radio" value="radiobutton" checked>
+      否
+      <input name="radiobutton1" type="radio" value="radiobutton">是</td>
+    <td align="right" class="td02">是否临时代办</td>
+    <td class="td03">      <input name="radiobutton2" type="radio" value="radiobutton" checked>
+      否
+        <input name="radiobutton2" type="radio" value="radiobutton">
+  是</td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">轮换对象</td>
+    <td class="td03"><input name="textfield" type="text" class="input" ></td>
+    <td align="right" class="td02">报到时间</td>
+    <td class="td03"><input name="time0" type="text" id="time0" class="input"></td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">工资级别档次</td>
+    <td class="td03"><input name="salary" type="text" id="salary" class="input">
+    <input name="Button" type="button" class="buttonface" onClick="javaacript:cal();" value="计算"></td>
+    <td align="right" class="td02">性别</td>
+    <td class="td03">
+	<select name="sex" id="sex">
+	<option>请选择</option>
+      <option>男</option>
+      <option>女</option>
+     </select>      </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">身份证号</td>
+    <td class="td03"><input name="textfield" type="text" id="idNumber" class="input">
+    </td>
+    <td align="right" class="td02">出生年月</td>
+    <td class="td03"><input name="textfield" type="text" id="birthyear" class="input">
+    </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">政治面貌</td>
+    <td class="td03">
+	<select name="polface" id="polface">
+	<option>请选择</option>
+<option>党员</option>
+<option>群众</option>
+<option>团员</option>
+      </select>
+</td>
+    <td align="right" class="td02">学历</td>
+    <td class="td03">
+	<select name="edulevel" id="edulevel">
+	<option>请选择</option>
+<option>博士</option>
+<option>硕士</option>
+<option>双学士</option>
+<option>研究生</option>
+<option>本科</option>
+<option>大专</option>
+<option>中专</option>
+<option>高中</option>
+<option>初中</option>
+<option>小学</option>
+<option>文盲</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">职别</td>
+    <td class="td03">
+      <select name="position" id="position">
+        <option>请选择</option>
+        <option>正部级</option>
+        <option>副部级</option>
+        <option>正司级</option>
+		<option>副司级</option>
+		<option>正处级</option>
+		<option>副处级</option>
+		<option>主任科员</option>
+		<option>副主任科员</option>
+		<option>科员</option>
+      </select>
+    </td>
+    <td align="right" class="td02">任职时间</td>
+    <td class="td03"><input name="time1" type="text" id="time1" class="input">
+    </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">参加工作时间</td>
+    <td class="td03"><input name="time2" type="text" id="time2" class="input">
+    </td>
+    <td align="right" class="td02">入党时间</td>
+    <td class="td03"><input name="time3" type="text" id="time3" class="input">
+    </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">懂何外语</td>
+    <td class="td03"><input name="language" type="text" id="language" class="input"></td>
+    <td align="right" class="td02">入团时间</td>
+    <td class="td03"><input name="time7" type="text" id="time7" class="input"></td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">配偶补贴</td>
+    <td class="td03"><input name="pobt" type="text" id="pobt" class="input">
+※ </td>
+    <td align="right" class="td02">原单位</td>
+    <td class="td03"><input name="formercompany" type="text" id="formercompany" class="input">
+    </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">离境时间</td>
+    <td class="td03"><input name="time4" type="text" id="time4" class="input">
+      ※</td>
+    <td align="right" class="td02">&nbsp;</td>
+    <td class="td03">&nbsp;      </td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">馆别手续信息</td>
+    <td colspan="3" class="td03"><input name="infomation" type="text" class="input" id="infomation" value="" size="60"></td>
+  </tr>
+  <tr>
+    <td align="right" class="td02">备注<br>
+    </td>
+    <td colspan="3" class="td03"><textarea name="textarea" cols="80" rows="4"></textarea></td>
+    </tr>
+</table>
+  <table width="98%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td height="1" class="td01"><img src="/images/spacer.gif" width="1" height="1"></td>
+    </tr>
+  </table>
+  <table width="98%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td height="30" align="center" valign="bottom"><input name="Button" type="button" class="buttonface" value=" 保存 ">
+        <input name="Button" type="button" class="buttonface" onClick="javascript:self.close();opener.location.href='todonew.html'" value=" 返回 "></td>
+    </tr>
+  </table>
+</center>
+</body>
+</html>

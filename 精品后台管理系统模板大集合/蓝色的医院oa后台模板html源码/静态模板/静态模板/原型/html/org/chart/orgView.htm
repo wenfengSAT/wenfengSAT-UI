@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>外交部干部司综合业务系统</title>
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../../js/check.js"></script>
+<script language="javascript" src="../../../js/checkAll.js"></script>
+<script language="javascript" src="../../../js/clientSideApp.js"></script>
+<script language="javascript">
+//CSApp =window.dialogArguments.CSApp;
+CSApp =opener.CSApp;
+</script>
+
+<script language="javascript">
+//CSApp=parent.bottom.CSApp;
+function seldept(){
+        fPopUpSelDlg(DeptPostDetailForm.upperoid,DeptPostDetailForm.upperpid,DeptPostDetailForm.uppername,DeptPostDetailForm.oid.value);
+}
+function checkSubmit(form){
+       /* if (form.act.value=="new"||form.act.value=="create"){
+                form.act.value="create";
+        }else {
+                form.act.value ="change";
+        }
+        if(checkman(form))
+        {
+           forsubmit(form);
+        }
+        return false;*/
+		window.location="deptPostEdit.htm";
+}
+function view(form)
+{
+  form.act.value = "view";
+  form.submit();
+}
+function checkman(form)
+{
+     if(form.prop.code == "02")
+     {
+         if(form.num.value != "1")
+         {
+           alert("管理岗位只能设置一人");
+           return false;
+         }
+     }
+         return true;
+}
+function forback(form){
+        form.action = "deptPostList.htm";
+        form.submit();
+        return true;
+}
+</script>
+<SCRIPT language=javascript src="../../../js/clientSideApp.js"></SCRIPT>
+<script language="javascript" src="../../../js/check.js"></script>
+<script language="javascript" src="../../../js/checkAll.js"></script>
+<SCRIPT language=javascript src="../../../js/rili2.js"></SCRIPT>
+<SCRIPT language=javascript src="../../../js/popup.js"></SCRIPT>
+<SCRIPT language=javascript src="../../../js/expand.js"></SCRIPT>
+</head>
+<body>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td height="25" align="center" valign="bottom" class="td06"><table width="98%" border="0" cellspacing="3" cellpadding="0">
+          <tr>
+            <td width="15"><img src="../../../images/index_32.gif" width="9" height="9"></td>
+            <td valign="bottom" class="title">管理信息部&nbsp;&nbsp;&nbsp;人员信息</td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+  <br>
+<form name="DeptPostDetailForm" method="post" action="/deptPostEdit.do">
+<input type="hidden" name="act" value="new">
+<input type="hidden" name="oid" value="100">
+<input type="hidden" name="pid" value="36">
+<input type="hidden" name="upperoid" value="">
+<input type="hidden" name="upperpid" value="">
+<div align="center">
+    <table width=95% border="0" align="center" cellpadding=2 cellspacing=2>
+      <tr>
+
+      <td><span id=os01 style="display:inline" ><img src="../../../images/folderopenb.gif" width="11" height="11" align="absmiddle"></span><span id=cs01 style="display:none"><img src="../../../images/foldercloseb.gif" width="11" height="11" align="absmiddle"></span>
+      <a href="javascript:mutifolder(s01)">岗位1</a></td>
+      </tr>
+    </table>
+    <span id=s01 style="display:inline" >
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table01">
+    <tr>
+      <td class="td_top">姓名</td>
+      <td class="td_top">性别</td>
+      <td class="td_top">职务</td>
+      <td class="td_top">职级</td>
+      <td class="td_top">外交职衔</td>
+      </tr>
+    <tr>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      </tr>
+</table>
+    </span>
+    <br>
+    <table width=95% border="0" align="center" cellpadding=2 cellspacing=2>
+      <tr>
+
+      <td><span id=os02 style="display:none" ><img src="../../../images/folderopenb.gif" width="11" height="11" align="absmiddle"></span><a href="javascript:mutifolder(s02)" class="title"><span id=cs02 style="display:inline"><img src="../../../images/foldercloseb.gif" width="11" height="11" border="0" align="absmiddle"></span></a>
+      <a href="javascript:mutifolder(s02)">岗位2</a></td>
+      </tr>
+    </table>
+   <span id=s02 style="display:none" >
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table01">
+    <tr>
+      <td class="td_top">姓名</td>
+      <td class="td_top">性别</td>
+      <td class="td_top">职务</td>
+      <td class="td_top">职级</td>
+      <td class="td_top">外交职衔</td>
+      </tr>
+    <tr>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      </tr>
+</table>
+    </span>
+    <br>
+    <table width=95% border="0" align="center" cellpadding=2 cellspacing=2>
+      <tr>
+
+      <td><span id=os03 style="display:none" ><img src="../../../images/folderopenb.gif" width="11" height="11" align="absmiddle"></span><a href="javascript:mutifolder(s03)" class="title"><span id=cs03 style="display:inline"><img src="../../../images/foldercloseb.gif" width="11" height="11" border="0" align="absmiddle"></span></a>
+      <a href="javascript:mutifolder(s03)">岗位3</a></td>
+      </tr>
+    </table>
+ <span id=s03 style="display:none" >
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table01">
+    <tr>
+      <td class="td_top">姓名</td>
+      <td class="td_top">性别</td>
+      <td class="td_top">职务</td>
+      <td class="td_top">职级</td>
+      <td class="td_top">外交职衔</td>
+      </tr>
+    <tr>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      </tr>
+</table></span>
+    <br>
+    <table width=95% border="0" align="center" cellpadding=2 cellspacing=2>
+      <tr>
+
+      <td><span id=os04 style="display:none" ><img src="../../../images/folderopenb.gif" width="11" height="11" align="absmiddle"></span><a href="javascript:mutifolder(s04)" class="title"><span id=cs04 style="display:inline"><img src="../../../images/foldercloseb.gif" width="11" height="11" border="0" align="absmiddle"></span></a>
+      <a href="javascript:mutifolder(s04)">岗位4</a></td>
+      </tr>
+    </table>
+   <span id=s04 style="display:none" >
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table01">
+    <tr>
+      <td class="td_top">姓名</td>
+      <td class="td_top">性别</td>
+      <td class="td_top">职务</td>
+      <td class="td_top">职级</td>
+      <td class="td_top">外交职衔</td>
+      </tr>
+    <tr>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      </tr>
+</table></span>
+
+    <br>
+    <table width=95% border="0" align="center" cellpadding=2 cellspacing=2>
+      <tr>
+
+      <td><span id=os05 style="display:none" ><img src="../../../images/folderopenb.gif" width="11" height="11" align="absmiddle"></span><a href="javascript:mutifolder(s05)" class="title"><span id=cs05 style="display:inline"><img src="../../../images/foldercloseb.gif" width="11" height="11" border="0" align="absmiddle"></span></a>
+      <a href="javascript:mutifolder(s05)">岗位5</a></td>
+      </tr>
+    </table>
+        <span id=s05 style="display:none" >
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table01">
+    <tr>
+      <td class="td_top">姓名</td>
+      <td class="td_top">性别</td>
+      <td class="td_top">职务</td>
+      <td class="td_top">职级</td>
+      <td class="td_top">外交职衔</td>
+      </tr>
+    <tr>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      <td class="td07">&nbsp;</td>
+      </tr>
+</table>
+  </span>
+</div>
+</form>
+  <br>
+<div id="codelist" style="position:absolute; height:200; border-width:1; border-style:'solid';
+        background-color:'white'; display:'none'; overflow:'scroll'; z-index:100;">
+</div>
+<script language="javascript">
+interpret(document.forms(0));
+</script>
+</body>
+</html>

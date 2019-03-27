@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>代码管理</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<script src="/js/orgTree.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var dest=window.dialogArguments;
+	function getNode(id,name){
+		window.returnValue=id+","+name;
+		window.close();
+	}
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000"  >
+<table border=0 width="100%" align="left">
+  <tr>
+    <td class="dtree" nowrap>
+<script type="text/javascript">
+try{
+    d = new dTree('d');
+    d.config.inOrder = true;
+    codeapp = dest[1];
+    var code = codeapp.get(dest[0].dict_num);
+    var keys = code.keys();
+    var loc=-1;
+    var layer=1;
+    for(i=0;i<keys.length;i++){
+       var node=code.get(keys[i]);
+       if(node.name==dest[0].value||node.id==dest.code){
+          loc=node.id;
+       }
+       var url = "getNode('"+node.id+"','"+node.name+"')";
+	   if(node.pid!=-1){
+			d.add(node.id,node.pid,node.name,url);
+	   }else{
+	        layer=node.layer;
+			d.add(node.id,node.pid,node.name);
+	   }
+    }
+    //如果代码集只能选择到叶子
+
+    if(dest[0].layer!=null&&dest[0].layer!=""){
+        layer=dest[0].layer;
+    }
+    if(layer==0){
+		for(i=0;i<keys.length;i++){
+			var node=code.get(keys[i]);
+			if(node.pid!=-1){
+				d.setUrl(node.pid,'');
+			}
+		}
+	}
+
+	d.closeAll();
+	document.write(d);
+	if(loc!=-1){
+		d.openTo(loc,true);
+	}
+}catch(e){
+}
+</script>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

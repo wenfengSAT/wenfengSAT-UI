@@ -1,0 +1,94 @@
+ 
+
+
+
+
+
+
+
+<html>
+<head>
+<title>&#20013;&#22269;&#31038;&#31185;&#38498;&#30005;&#23376;&#25152;&#21153;&#31995;&#32479;</title>
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" >
+CSApp = parent.CSApp;
+</script>
+<script language="javascript" src="../../../js/check.js"></script>
+<script language="javascript" src="../../../js/checkAll.js"></script>
+<script language="javascript" src="../../../js/clientSideApp.js"></script>
+<script language="javascript" >
+CSApp = parent.parent.parent.CSApp;
+function forsave(form){
+	if(form.act.value=='1'){
+		form.act.value='3';
+	}else if(form.act.value=='2'||form.act.value=='6'){
+        if(form.fk.value!=''){
+		    form.act.value ='4';
+        }else{
+            form.act.value ='3';
+        }
+	}
+	if(forsubmit(form)){
+        form.save.disabled=true;
+    }
+	return true;
+}
+function forBack(form){
+    parent.location="/org/orgQuery.do?act=q3&queryDept=1000";
+}
+</script>
+</head>
+<body>
+
+<form name="activeForm"  method="post" action="/org/orgDetail.do">
+<br>
+<table width=95% align=center border=0 cellpadding=0 cellspacing=0>
+<tr nowrap>
+<td  class=td_form01 >编制总数</td>
+<td  class=td_form02>
+<input name="B006001" type="text" class="input"   id="B006001" next="B006002" alt="编制总数|1|i|||" formula=''  value="" onFocus="{obtainFocus(this),this.select()}" onKeyPress="gotoNextInput(this)" onBlur="matchInput(this)" size="20" > <font color=red></font>
+</td>
+<td  class=td_form01 >外籍人数</td>
+<td  class=td_form02>
+<input name="B006002" type="text" class="input"   id="B006002" next="B006003" alt="领导职数|1|i|||" formula=''  value="" onFocus="{obtainFocus(this),this.select()}" onKeyPress="gotoNextInput(this)" onBlur="matchInput(this)" size="20" > <font color=red></font>
+</td>
+</tr>
+<tr>
+<td  class=td_form01 >实有人数</td>
+<td  class=td_form02>
+<input name="B006003" type="text" class="input"  readonly  id="B006003" next="B006004" alt="实有人数|1|i|||" formula=''  value="0" onFocus="{obtainFocus(this),this.select()}" onKeyPress="gotoNextInput(this)" onBlur="matchInput(this)" size="20" > <font color=red>系统计算</font>
+</td>
+<td  class=td_form01 >超编人数</td>
+<td  class=td_form02>
+<input name="B006004" type="text" class="input"  readonly  id="B006004" next="B006005" alt="超编人数|1|i|||" formula=''  value="1" onFocus="{obtainFocus(this),this.select()}" onKeyPress="gotoNextInput(this)" onBlur="matchInput(this)" size="20" > <font color=red>系统计算</font>
+</td>
+</tr>
+<tr nowrap>
+<td  class=td_form01 >缺编人数</td>
+<td  class=td_form02>
+<input name="B006003" type="text" class="input"  readonly  id="B006003" next="B006004" alt="实有人数|1|i|||" formula=''  value="0" onFocus="{obtainFocus(this),this.select()}" onKeyPress="gotoNextInput(this)" onBlur="matchInput(this)" size="20" > <font color=red>系统计算</font>
+</td>
+<td  class=td_form01 >上派人数</td>
+<td  class=td_form02>
+<input name="B006004" type="text" class="input"  readonly  id="B006004" next="B006005" alt="超编人数|1|i|||" formula=''  value="2" onFocus="{obtainFocus(this),this.select()}" onKeyPress="gotoNextInput(this)" onBlur="matchInput(this)" size="20" >
+</td>
+</tr>
+<tr nowrap>
+<input  id="ORGUID"  next="" name="ORGUID" type="hidden" class="input" value='1001'></table>
+<br>
+<table width=100% border=0 align=center cellpadding=0 cellspacing=0 whdth='100%'>
+<tr>
+<td align="center">
+<input name=save  type=button class=buttonface onClick="window.close()" value= '  保存  '></td>
+</tr>
+</table>
+<input type=hidden name=act value='2'>
+<input type=hidden name=fk value='1001'>
+<input type=hidden name=setId value='B006'>
+<input type=hidden name=pk value='1001'>
+
+</form>
+<p><br>
+　</p>
+</body>
+</html>

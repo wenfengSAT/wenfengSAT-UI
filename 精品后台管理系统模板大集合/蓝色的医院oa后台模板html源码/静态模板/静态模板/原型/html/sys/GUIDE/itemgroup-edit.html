@@ -1,0 +1,92 @@
+
+  
+
+
+
+
+
+<html>
+<head>
+<title>外交部干部司综合业务系统</title>
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" >
+<script language="javascript" src="../../../js/check.js"></script>
+<script language="javascript" src="../../../js/checkAll.js"></script>
+<script language="javascript" src="../../../js/clientSideApp.js"></script>
+<script language="javascript">
+function forEdit(form){
+    form1.rsType(0).disabled=false;
+    form1.rsType(1).disabled=false;
+    form1.setType.disabled=false;
+	form.act.value=4;
+    if(form.setId.value==null||form.setId.value==""){
+        form.act.value="3";
+    }
+  	forsubmit(form);
+    form.edit.disabled=true;
+	return true;
+}
+function forBack(form){
+    form.action="javascript:history.back()";
+    form.submit();
+    return true;
+}
+ </script>
+</head>
+<body   leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+ <br>
+  <input type="hidden" name="act" >
+   <input type="hidden" name="setId" value="B002">
+   <input type="hidden" name="setProperty" value="1">
+   <input type="hidden" name="setPk" value="ORGUID">
+   <input type="hidden" name="setFk" value="ORGUID">
+   <input type="hidden" name="setOrder" value="">
+<form name="infoSetForm" method="post" action="/sys/infoSetEdit.do">
+  <table width="95%" align="center" border="0"  cellpadding="0" cellspacing="0">
+    <tr>
+     <td width="90"  class="td_form01">指标集名称</td>
+     <td  class="td_form02"><input type="text" name="setName" size="40" value="基本信息子集" id="10" next="15" onKeyPress="gotoNextInput(this)" onFocus="{obtainFocus(this),this.select()}" class="input" alt="指标集名称|0|s|50"></td>
+     <td width="90"  class="td_form01">描述</td>
+     <td  class="td_form02"><input type="text" name="setDesc" size="40" value="" id="15" next="20" onKeyPress="gotoNextInput(this)" onFocus="{obtainFocus(this),this.select()}" class="input" alt="描述|1|s|500"></td>
+	</tr>
+    <tr>
+     <td width="90"  class="td_form01">指标集类型</td>
+	 <td  class="td_form02">
+    <select name="setType" class="input"><option value="A">人员类</option>
+    <option value="B" selected="selected">机构类</option>
+    <option value="C">出回国类</option></select></td>
+	 <td width="90"  class="td_form01">记录类型</td>
+     <td  class="td_form02">
+        <input type="radio" name="rsType" value="2"> 多记录　
+        <input type="radio" name="rsType" value="1" checked="checked"> 单记录
+     </td>　
+	</tr>
+	<tr>
+	  <td width="90"  class="td_form01">启用/禁用</td>
+      <td  class="td_form02">
+       <input type="radio" name="setStatus" value="1" checked="checked"> 启用　
+       <input type="radio" name="setStatus" value="0"> 禁用</td>
+       <td width="90" class="td_form01">显示顺序</td>
+       <td class="td_form02"><input type="text" name="setSequence" value="1" id="20" next="25" onKeyPress="gotoNextInput(this)" onFocus="{obtainFocus(this),this.select()}" class="input" alt="显示顺序|0|i|3|1|999"></td>
+	</tr>
+    <tr>
+	  <td height="30" colspan=4 align=center>&nbsp;</td>
+	</tr>
+  </table>
+  <br>
+  <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center"><input name="edit" type="button" class="buttonface" value="  保存  " id="25" onClick="forEdit(document.forms(0))">
+        <input name="exit" type="button" class="buttonface" value="  返回  " onClick="javascript:history.back()"></td>
+    </tr>
+  </table>
+</form>
+<script language=javascript>
+var form1 = document.forms(0);
+if(form1.setId.value!=null&&form1.setId.value!=""){
+    form1.rsType(0).disabled=true;
+    form1.rsType(1).disabled=true;
+    form1.setType.disabled=true;
+}
+</script>
+</body>
+</html>

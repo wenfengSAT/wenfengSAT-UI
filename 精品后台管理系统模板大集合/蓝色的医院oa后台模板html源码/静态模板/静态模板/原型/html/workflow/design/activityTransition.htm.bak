@@ -1,0 +1,122 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>定义下级活动</title>
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript1.2" src="../../../js/stm31.js"></script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center>
+   <table width="100%"  border="0" cellpadding="0" cellspacing="0" background="../../../images/main_20.gif">
+     <tr>
+       <td width="150" valign="bottom" class="title">　定义下级活动</td>
+       <td width="20"><img src="../../../images/main_18.gif" width="4" height="25"></td>
+       <td valign="bottom">&nbsp;</td>
+     </tr>
+     <tr>
+       <td height="3" bgcolor="#319BE7"><img src="../../../images/spacer.gif" width="1" height="1"></td>
+       <td background="../../../images/main_29.gif"><img src="../../../images/spacer.gif" width="1" height="1"></td>
+       <td background="../../../images/main_29.gif"><img src="../../../images/spacer.gif" width="1" height="1"></td>
+     </tr>
+   </table>
+   <br>
+   <table width="95%" border="0" cellpadding="0" cellspacing="3">
+     <tr>
+       <td width="150">流程编号：AT0001</td>
+       <td class="F02">流程名称：录入出国人员基本信息</td>
+       <td class="F02"><div align="right">
+           <input name="Button" type="button" class="buttonface" onClick="javascript:location.href='activityList.htm';" value=" 返回 ">
+       </div></td>
+     </tr>
+   </table>
+   <table width="95%" border="0" cellpadding="0" cellspacing="0" class="table02">
+     <tr align="center">
+       <td class="td"><a href="activityDataRight.htm">数据访问权限设定</a></td>
+       <td class="td"><a href="activityAttachmentRight.htm">附件访问权限设定</a></td>
+       <td class="td"><a href="activityUser.htm">活动参与着设定</a></td>
+       <td class="td"><a href="activityTransition.htm">活动流转设定</a></td>
+       <td class="td"><a href="activityInvoking.htm">功能调用设定</a></td>
+     </tr>
+  </table>
+   <form>
+     <table width="95%"  border="0" cellpadding="0" cellspacing="3">
+       <tr>
+         <td class="F02">上级活动</td>
+       </tr>
+     </table>
+     <table width="95%" border="0" cellpadding="0" cellspacing="0" class="table01">
+       <tr>
+         <td align="center" class="td_top">序号</td>
+         <td class="td_top">上级活动编号</td>
+         <td class="td_top">名称</td>
+         <td class="td_top">流转条件</td>
+         <td class="td_top">聚合值</td>
+       </tr>
+       <tr>
+         <td align="center" class="td_middle">1</td>
+         <td class="td_middle">AT0002</td>
+         <td class="td_middle">录入出国人员基本信息</td>
+         <td class="td_middle">&nbsp;</td>
+         <td class="td_middle">1</td>
+       </tr>
+       <tr>
+         <td align="center" class="td_middle">2</td>
+         <td class="td_middle">AT0003</td>
+         <td class="td_middle">确认对方国同意</td>
+         <td class="td_middle">DF0001.equals(&quot;大使&quot;)</td>
+         <td class="td_middle">2</td>
+       </tr>
+     </table>
+          <table width="95%" border="0" cellpadding="0" cellspacing="0" class="table02">
+       <tr>
+         <td align="right" class="td_page"><input name="Submit" type="submit" class="buttonface" value=" 保存 ">
+             <input name="textfield" type="text" class="input">
+         </td>
+       </tr>
+     </table>
+   </form>
+   <table width="95%" border="0" cellpadding="0" cellspacing="3">
+     <tr>
+       <td>当前活动：出国人员报到　活动编号：AT0001</td>
+     </tr>
+  </table>
+      <table width="95%"  border="0" cellpadding="0" cellspacing="3">
+     <tr>
+       <td class="F02">下级活动</td>
+     </tr>
+  </table>
+   <table width="95%" border="0" cellpadding="0" cellspacing="0" class="table01">
+     <tr>
+       <td align="center" class="td_top"><input type="checkbox" name="checkbox" value="checkbox"></td>
+       <td align="center" class="td_top">序号</td>
+       <td class="td_top">下级活动编号</td>
+       <td class="td_top">名称</td>
+       <td class="td_top">流转条件</td>
+     </tr>
+     <tr>
+       <td align="center" class="td_middle"><input type="checkbox" name="checkbox" value="checkbox"></td>
+       <td align="center" class="td_middle">1</td>
+       <td class="td_middle">AT0002</td>
+       <td class="td_middle"><a href="activityTransitionEdit.htm">办理签证</a></td>
+       <td class="td_middle">DF0002.equals(&quot;需要办理签证&quot;);</td>
+     </tr>
+     <tr>
+       <td align="center" class="td_middle"><input type="checkbox" name="checkbox" value="checkbox"></td>
+       <td align="center" class="td_middle">2</td>
+       <td class="td_middle">AT0003</td>
+       <td class="td_middle"><a href="activityTransitionEdit.htm">行政司判断退房情况</a></td>
+       <td class="td_middle">DF0005.equals(&quot;部内干部&quot;);</td>
+     </tr>
+  </table>
+   <table width="95%" border="0" cellpadding="0" cellspacing="0" class="table02">
+     <tr>
+       <td align="center" class="td_page"><input name="Submit" type="submit" class="buttonface" onClick="javascript:location.href='activityTransitionEdit.htm';" value="增加活动">
+           <input name="Submit" type="submit" class="buttonface" value="删除活动">
+       </td>
+     </tr>
+  </table>
+   <br>
+</center>
+</body>
+</html>

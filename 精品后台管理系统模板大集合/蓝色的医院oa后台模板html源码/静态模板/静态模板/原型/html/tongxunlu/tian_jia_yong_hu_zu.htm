@@ -1,0 +1,162 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>社科院电子所务 ::::::::::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<link rel="stylesheet" href="style.css">
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+ <script language="JavaScript">
+ <!--
+	function resizeWindow( nWidth, nHeight ){
+		var iLeft = (screen.availWidth-nWidth)/2;
+		var iTop  = (screen.availHeight-nHeight)/2;
+		
+		this.resizeTo( nWidth, nHeight );
+		this.moveTo( iLeft, iTop );
+	}
+
+	function JustifyNull1(field)
+	{
+		var Ret = true
+		var str = "" + field.value
+		if(str.length)
+		{ 
+			for(var i=0;i<str.length;i++)
+				if(str.charAt(i)!=" ")		break
+			if(i>=str.length)	field.value = ""
+		}
+
+		if (field.value.length==0)	Ret = false
+		return (Ret)
+	 }// 判断输入字段是否为空
+
+function  compareLength( field,minLength,maxLength,msg ) {
+	var totallength=0;
+      
+	for (var i=0;i<field.value.length;i++)
+	{
+		var str = field.value;
+		var intCode=str.charCodeAt(i);
+              
+		if (intCode>=0&&intCode<=128) {
+			totallength=totallength+1;	//非中文单个字符长度加 1
+		}
+		else {
+			totallength=totallength+2;	//中文字符长度则加 2
+		}
+	} //end for
+    
+	if ( totallength<minLength||totallength>maxLength )  
+	{
+		alert( msg );
+		field.focus();
+		return false;
+	}
+	return true;
+} //英文字符和中文字符长度的比较
+
+	function CheckValue()
+	{
+		var ret=true;
+		if ( !JustifyNull1(frmAddrGrp.GroupName) )
+		{
+			alert("用户组名称不能为空！");
+			frmAddrGrp.GroupName.focus();
+			ret=false; 
+		}
+		else if ( !compareLength( frmAddrGrp.GroupName,1,20,"用户组名称长度超过限度！" ) ) {
+			ret=false;
+		}
+		
+		else if ( !compareLength( frmAddrGrp.GroupDesc,0,200,"简要描述长度超过限度！" ) ) {
+			ret=false;
+		}
+		
+		return ret;
+	}
+	function  ClearMess()
+	{
+		frmAddrGrp.GroupName.value="";
+		frmAddrGrp.GroupDesc.value="";
+		frmAddrGrp.GroupName.focus();
+	}
+ -->
+ </script>
+</head>
+
+<body topmargin="0" leftmargin="0">
+<div align="center">
+  <center>
+  <form name="frmAddrGrp" method="post" action="dowith_group_succ.jsp?ifEdit=0" onsubmit="return CheckValue();">
+  <table border="0" width="300" cellspacing="0" cellpadding="0" height="57" bgcolor="#E7E7F7">
+	
+    <tr>
+      <td width="6" background="../../images/littletop-back.gif" height="8" valign="top" align="left"><img border="0" src="../../images/OWtop-addressleft.gif" width="19" height="31"></td>
+      <td width="271" background="../../images/OWtop-addressback.gif" height="8" valign="middle" align="left"><img border="0" src="../../images/icon-add.gif" align="absmiddle" width="14" height="14"> 
+        添加用户组
+	  </td>
+      <td width="6" background="../../images/littletop-back.gif" height="8" valign="top" align="left"><img border="0" src="../../images/OWtop-addressright.gif" width="20" height="31"></td>
+    </tr>
+    <tr>
+      <td width="6" background="../../images/OWleft-address.gif" height="29">　</td>
+      <td width="271" height="29" valign="middle" align="center">
+          <table border="0" width="100%" cellpadding="2">
+            <tr>
+              <td width="29%" valign="top" align="left">名 称：</td>
+              <td width="71%">
+				<input type="text" name="GroupName" size="25"><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<font color=red > * </font> （最多20个字符）
+			  </td>
+            </tr>
+			
+            <tr>
+              <td width="29%" valign="top" align="left">简要描述：</td>
+              <td width="71%"><textarea rows="4" name="GroupDesc" cols="23"></textarea><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;（最多200个字符）
+			  </td>
+            </tr>
+			<tr>
+              <td width="29%" valign="top" align="left">&nbsp;</td>
+              <td width="71%">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="29%"></td>
+              <td width="71%">
+				<input type="image"  src="../../images/button-add.gif" width="50" height="20" alt="确定增加">&nbsp;       
+                <img border="0" src="../../images/button-reset1.gif" width="50" height="20"   alt="重新填写" onMouseOver="this.style.cursor='hand'" onclick="ClearMess()">&nbsp;       
+                <img border="0" src="../../images/button-cancle.gif" width="50" height="20"   alt="取消操作" onMouseOver="this.style.cursor='hand'" onclick="javascript:window.close()">
+			  </td>
+            </tr>
+          </table>
+      </td>
+      <td width="6" background="../../images/OWright-address.gif" height="29">　</td>
+    </tr>
+    <tr>
+      <td width="6" background="../../images/littlebottom-back.gif" height="20" valign="top" align="left"><img border="0" src="../../images/OWbottom-addressleft.gif" width="19" height="33"></td>
+      <td width="271" background="../../images/OWbottom-addressback.gif" height="20" valign="top" align="left">　</td>
+      <td width="6" background="../../images/littlebottom-back.gif" height="20" valign="top" align="left"><img border="0" src="../../images/OWbottom-addressright.gif" width="20" height="33"></td>
+    </tr>
+	
+  </table>
+  </form>
+  </center>
+</div>
+</body>
+</html>
