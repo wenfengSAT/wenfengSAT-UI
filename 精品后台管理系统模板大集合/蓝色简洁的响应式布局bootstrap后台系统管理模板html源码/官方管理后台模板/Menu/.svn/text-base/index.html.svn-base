@@ -1,0 +1,50 @@
+<form class="form-inline definewidth m20" action="{:U('Menu/index')}" method="get">
+    {:UH()}
+    菜单名称：
+    <input type="text" name="menuname" id="menuname"class="abc input-default" placeholder="" value="<?php echo $menuname;?>">&nbsp;&nbsp; 
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增菜单</button>
+</form>
+<table class="table table-bordered table-hover definewidth m10">
+    <thead>
+    <tr>
+        <th>菜单标题</th>
+        <th>GROUP</th>
+        <th>MODEL</th>
+        <th>ACTION</th>
+        <th>状态</th>
+        <th>管理操作</th>
+    </tr>
+    </thead>
+	 <empty name="list">
+        <tr><td colspan="10">无数据</td></tr>
+    </empty>
+    <volist name="list" id="group">
+        <tr>
+            <td colspan="5">{$group.name}</td>
+            <td><a href="{:U('Menu/edit/', array('id'=>$group['id']))}">编辑</a></td>
+        </tr>
+        <volist name="group.child" id="menu">
+            <tr>
+                <td>{$menu.name}</td>
+                <td>{$menu.group}</td>
+                <td>{$menu.module}</td>
+                <td>{$menu.action}</td>
+                <td>{$menu.status}</td>
+                <td><a href="{:U('Menu/edit/', array('id'=>$menu['id']))}">编辑</a></td>
+            </tr>
+        </volist>
+    </volist>
+</table>
+<script>
+    $(function () {
+        
+
+		$('#addnew').click(function(){
+
+				window.location.href="{:U('Menu/add')}";
+		 });
+
+
+    });
+	
+</script>
