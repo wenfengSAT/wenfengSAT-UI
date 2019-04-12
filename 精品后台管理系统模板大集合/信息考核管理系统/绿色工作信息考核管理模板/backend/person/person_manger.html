@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>人员管理</title> 
+<link href="../../css/base.css" rel="stylesheet">
+<link href="../../css/backend/person_manger.css" rel="stylesheet">
+<link href="../../js/lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <div id="inner-hd">
+            <div class="crumbs">
+				<i class="crumbs-arrow"></i>
+				<a href="javascript:;" class="crumbs-label">人员管理</a>
+			</div>
+        </div>
+
+        <div id="inner-bd">
+        	<div class="tab-wraper">
+        		<ul class="tab">
+		           	<li class="current"><a href="person_manger.html">机构人员信息管理</a></li>
+		           	<li><a href="query.html">人员账号查询</a></li>
+		           	<li><a href="noaccount.html">未设置账号人员</a></li>
+		           	<li><a href="sort.html">单位人员拍序</a></li>
+		           	<li><a href="auth.html">人员权限设置</a></li>
+	            </ul>
+        	</div>
+            
+
+
+            <div class="kv-group-outer">
+		        <div class="kv-group clearfix">
+			        <div class="kv-item-wrap" style="max-width: 900px;">
+			        	<div class="kv-item kv-col-1">
+			                <div class="item-lt">部门内设机构：</div>
+			                <div class="item-rt">
+			                    <select>
+			                        <option>不限</option>
+			                    </select>
+			                </div>
+			            </div>
+			            <div class="kv-item kv-col-2">
+			                <div class="item-lt">岗位：</div>
+			                <div class="item-rt">
+			                    <select>
+			                        <option>不限</option>
+			                    </select>
+			                </div>
+			            </div>
+			            <div class="kv-item kv-col-3">
+			                <div class="item-lt">职级：</div>
+			                <div class="item-rt">
+			                   <select>
+			                        <option>不限</option>
+			                    </select>
+			                </div>
+			            </div>
+			            <div class="kv-item">
+			                <div class="item-lt">性别：</div>
+			                <div class="item-rt">
+			                   <select>
+			                        <option>不限</option>
+			                        <option>女</option>
+			                        <option>男</option>
+			                    </select>
+			                </div>
+			            </div>
+
+			            <div class="kv-item kv-col-1">
+			                <div class="item-lt">人员名称：</div>
+			                <div class="item-rt">
+			                   <input type="text" placeholder="填写人员名称" >
+			                </div>
+			            </div>
+
+			            <div class="kv-item kv-col-2">
+			                <div class="item-lt">职务：</div>
+			                <div class="item-rt">
+			                    <input type="text" placeholder="职务" >
+			                </div>
+			            </div>
+			            <div class="kv-item kv-col-3">
+			                <div class="item-lt">登录账号：</div>
+			                <div class="item-rt">
+			                    <input type="text" placeholder="职务" >
+			                </div>
+			            </div>
+			            <div class="kv-item kv-col-1">
+			                <div class="item-lt">权限：</div>
+			                <div class="item-rt">
+			                    <label><input type="checkbox">单位领导</label>
+			                    <label><input type="checkbox">单位领导</label>
+			                    <label><input type="checkbox">单位领导</label>
+			                    <label><input type="checkbox">单位领导</label>
+			                </div>
+			            </div>
+			        </div>
+
+		        </div>
+		    </div>
+
+            <div class="button-group">
+		        <div class="button current add">
+		            <i class="iconfont">&#xe620;</i>
+		            <span class="button-label">新增</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe621;</i>
+		            <span class="button-label">修改</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe613;</i>
+		            <span class="button-label">密码重置</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe609;</i>
+		            <span class="button-label">删除</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe617;</i>
+		            <span class="button-label">上移</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe629;</i>
+		            <span class="button-label">下移</span>
+		        </div>
+		    </div>
+			
+			<table class="kv-table">
+				<tbody>
+					<tr>
+						<td class="kv-label" style="width:230px;">
+							<div id="ztree1" class="ztree"></div>
+						</td>
+						<td class="kv-content" valign="top" style="padding: 10px;width:auto;">
+							
+							<table class="grid">
+								<thead>
+									<tr>
+										<th class="grid-checkbox"><input type="checkbox"></th>
+										<th>序号</th>
+										<th>部门内设机构</th>
+										<th>姓名</th>
+										<th>登录名</th>
+										<th>姓别</th>
+										<th>职务</th>
+										<th>岗位</th>
+										<th>职级</th>
+										<th>权限</th>
+									</tr>
+								</thead>
+								
+								<tbody>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>办公室</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+										<td>女</td>
+										<td>科长</td>
+										<td>未指定</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>2</td>
+										<td>组织部</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+										<td>女</td>
+										<td>科长</td>
+										<td>未指定</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>办公室</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+										<td>女</td>
+										<td>科长</td>
+										<td>未指定</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>2</td>
+										<td>组织部</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+										<td>女</td>
+										<td>科长</td>
+										<td>未指定</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>2</td>
+										<td>组织部</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+										<td>女</td>
+										<td>科长</td>
+										<td>未指定</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+			
+        </div>
+
+        <div id="inner-ft">
+            
+        </div>
+    </div>
+
+	<script type="text/template" id="addTpl">
+		<div class="add-manage">
+			<table class="kv-table">
+				<tbody>
+					<tr>
+						<td class="kv-label">
+							姓名：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<input type="text">
+						</td>
+						<td class="kv-label">
+							姓别：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<select>
+								<option>男</option>
+								<option>女</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="kv-label">
+							职务：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<input type="text">
+						</td>
+						<td class="kv-label">
+							人员类型：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<select>
+								<option>被考核者</option>
+								<option>考核者</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="kv-label">
+							部门内设机构：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<select>
+								<option>南京远程学习中心</option>
+							</select>
+						</td>
+						<td class="kv-label">
+							排序：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td class="kv-label">
+							登录账号：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<input type="text">
+						</td>
+						<td class="kv-label">
+							密码：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<input type="password">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="kv-label">
+							权限：
+						</td>
+						<td colspan="3" class="kv-content" style="padding: 10px;">
+							 <label><input type="checkbox">单位领导</label>
+		                    <label><input type="checkbox">单位领导</label>
+		                    <label><input type="checkbox">单位领导</label>
+		                    <label><input type="checkbox">单位领导</label>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		
+	</script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/global.js"></script>
+	<script type="text/javascript" src="../../js/jquery.select.js"></script>
+	<script type="text/javascript" src="../../js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../../js/lib/layer/layer.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/lib/ztree/jquery.ztree.all.min.js"></script>
+
+	<script type="text/javascript">
+
+		$('select').select();
+
+
+    $('body').on('click', '.add', function(){
+    	layer.open({
+    		title: '添加人员',
+    		area:['760px','440px'],
+    		content: $('#addTpl').html(),
+    		btn:['保存', '取消']
+    	});
+    	$('select').select();
+    })
+
+    var setting = {
+		check: {
+			enable: false
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		}
+	};
+
+    var zNodes =[
+			{ id:1, pId:0, name:"随意勾选 1", open:true},
+			{ id:11, pId:1, name:"随意勾选 1-1", open:true},
+			{ id:111, pId:11, name:"随意勾选 1-1-1"},
+			{ id:112, pId:11, name:"随意勾选 1-1-2"},
+			{ id:12, pId:1, name:"随意勾选 1-2", open:true},
+			{ id:121, pId:12, name:"随意勾选 1-2-1"},
+			{ id:122, pId:12, name:"随意勾选 1-2-2"},
+			{ id:2, pId:0, name:"随意勾选 2", checked:true, open:true},
+			{ id:21, pId:2, name:"随意勾选 2-1"},
+			{ id:22, pId:2, name:"随意勾选 2-2", open:true},
+			{ id:221, pId:22, name:"随意勾选 2-2-1", checked:true},
+			{ id:222, pId:22, name:"随意勾选 2-2-2"},
+			{ id:23, pId:2, name:"随意勾选 2-3"}
+		];
+
+		$.fn.zTree.init($("#ztree1"), setting, zNodes);
+	</script>
+    
+</body> 
+</html>

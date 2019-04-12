@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>工作计划</title> 
+<link href="css/base.css" rel="stylesheet">
+<link href="css/pages/work_plan.css" rel="stylesheet">
+</head> 
+<body>
+	<div class="crumbs">
+        <i class="crumbs-arrow"></i>
+        <a href="javascript:;" class="crumbs-label">职位职责</a>
+    </div>
+    <div class="button-group">
+        <div class="button current">
+            <i class="iconfont">&#xe620;</i>
+            <span class="button-label">添加</span>
+        </div>
+        <div class="button">
+            <i class="iconfont">&#xe621;</i>
+            <span class="button-label">编辑</span>
+        </div>
+        <div class="button">
+            <i class="iconfont">&#xe609;</i>
+            <span class="button-label">删除</span>
+        </div>
+    </div>
+    <div class="table-zone">
+        <div class="grid"></div>
+    </div>
+    <div class="pagination-zone">
+        <div class="pagination"></div>
+    </div>
+</body> 
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/jquery.select.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<script type="text/javascript" src="js/jquery.grid.js"></script>
+</html>
+<script type="text/javascript">
+var head = [{
+                label: '编号',
+                width: 137,
+                name: 'id'  
+            },{
+                label:'标题',
+                minWidth: 400,
+                name:'name' 
+            },{
+                label:'用户',
+                width:150,   
+                name:'user' 
+            },{
+                label: '邮箱',
+                width: 178,
+                name:'email' 
+            },{
+                label: '备注',
+                width: 191   
+            }];
+            
+    var tbody = [
+                    ["20160227","公务员2015年度个人年终考核工作总结","uimaker","uimaker@uimaker.com",""], 
+                    ["20160226","2016南京自治区区公务员考试行测选择天策教育","uimaker","uimaker@qq.com","备注"],
+                    ["20160227","公务员2015年度个人年终考核工作总结","uimaker","uimaker@uimaker.com",""], 
+                    ["20160226","2016南京自治区区公务员考试行测选择天策教育","uimaker","uimaker@qq.com","备注"],
+                     ["20160227","公务员2015年度个人年终考核工作总结","uimaker","uimaker@uimaker.com",""], 
+                    ["20160226","2016南京自治区区公务员考试行测选择天策教育","uimaker","uimaker@qq.com","备注"],
+                     ["20160227","公务员2015年度个人年终考核工作总结","uimaker","uimaker@uimaker.com",""], 
+                    ["20160226","2016南京自治区区公务员考试行测选择天策教育","uimaker","uimaker@qq.com","备注"],
+                     ["20160227","公务员2015年度个人年终考核工作总结","uimaker","uimaker@uimaker.com",""], 
+                    ["20160226","2016南京自治区区公务员考试行测选择天策教育","uimaker","uimaker@qq.com","备注"],
+                     ["20160227","公务员2015年度个人年终考核工作总结","uimaker","uimaker@uimaker.com",""], 
+                    ["20160226","2016南京自治区区公务员考试行测选择天策教育","uimaker","uimaker@qq.com","备注"],];
+    $('.grid').Grid({
+        thead: head,
+        tbody: tbody,
+        height:"auto"
+        
+    });
+    
+    
+    $('.pagination').pagination(100,{
+        callback: function(page){
+           
+        },
+        display_msg: false
+    });
+</script>

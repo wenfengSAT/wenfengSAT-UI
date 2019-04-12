@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>工作总结查询</title> 
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/pages/statistics_query/work_summary.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <div id="inner-hd">
+            <div class="crumbs">
+				<i class="crumbs-arrow"></i>
+				<a href="javascript:;" class="crumbs-label">工作总结查询</a>
+			</div>
+        </div>
+
+        <div id="inner-bd">
+          <div class="tab-wraper">
+            <ul class="tab">
+              <li name="season-summary"><a href="javascript:;">季度工作总结查询</a></li>
+              <li name="year-summary" class="current"><a href="javascript:;">年度总结查询</a></li>
+           </ul>
+          </div>
+          <div class="season-summary">
+              <div class="kv-group-outer">
+                  <div class="kv-group clearfix">
+                      <div class="kv-item">
+                          <div class="item-lt">年份：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>2015</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="kv-item">
+                          <div class="item-lt">周期：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>第一季度</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="kv-item">
+                          <div class="item-lt">部门内设机构：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>办公室</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="kv-item">
+                          <div class="item-lt">姓名：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>uimaker</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <table class="kv-table">
+                <tbody>
+                  <tr>
+                    <td class="kv-label" style="width:167px;">总结：</td>
+                    <td class="kv-content" style="width:auto;">办领导班子对除办领导班子成员以外的所有人员进行民主测评；除办领导班子成员以外所有人员互相测评</td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="kv-label" style="width:167px;">考勤情况：</td>
+                    <td class="kv-content" style="width:auto;">
+                      <div class="work-time">
+                        <span>出勤(天)：0</span>
+                        <span>请假(天)：0</span>
+                        <span>公休(天)：0</span>
+                      </div>
+                      <div class="work-time">
+                        <span>缺勤(天)：0</span>
+                        <span>迟到(天)：0</span>
+                        <span>早退(天)：0</span>
+                      </div>
+                    </td>
+                  </tr> 
+                  <tr>
+                    <td class="kv-label" style="width:167px;">附件：</td>
+                    <td class="kv-content" style="width:auto;">
+                      <div class="button current">
+                          <span class="button-label">打开附件</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="kv-label" style="width:167px;">工作总结评述：</td>
+                    <td class="kv-content" style="width:auto;"></td>
+                  </tr>
+                </tbody> 
+             </table>
+          </div><!--season-summary-->
+          <div class="year-summary">
+              <div class="kv-group-outer">
+                  <div class="kv-group clearfix">
+                      <div class="kv-item">
+                          <div class="item-lt">年份：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>2015</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="kv-item">
+                          <div class="item-lt">部门内设机构：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>办公室</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="table-zone">
+                  <table>
+                    <thead>
+                      <tr>
+                        <td class="number">序号</td>
+                        <td class="name">姓名</td>
+                        <td class="detail">总结内容</td>
+                        <td class="file">文件名</td>
+                        <td class="comment">工作总结评述</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>谭小琳</td>
+                        <td>2015年区考第二批职位6月11日开始报名 共招录851人</td>
+                        <td>年度总结.doc</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>谭小琳</td>
+                        <td>2015年区考第二批职位6月11日开始报名 共招录851人</td>
+                        <td>年度总结.doc</td>
+                        <td></td>
+                      </tr>
+                    </tbody> 
+                 </table>
+              </div>
+          </div>
+        </div>
+
+        
+
+        <div id="inner-ft">
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/global.js"></script>
+    <script type="text/javascript" src="../js/core.js"></script>
+    <script type="text/javascript" src="../js/jquery.select.js"></script>
+    <script type="text/javascript" src="../js/jquery.grid.js"></script>
+    <script type="text/javascript">
+    $(".tab > li").click(function(){
+        $(".tab > li").removeClass("current");
+        $(this).addClass("current");
+        $(".season-summary,.year-summary").hide();
+        $("." + $(".tab >li.current").attr("name")).show();
+        $(".grid").Grid("resize");
+    });
+    $('select').select();
+    </script>
+</body> 
+</html>

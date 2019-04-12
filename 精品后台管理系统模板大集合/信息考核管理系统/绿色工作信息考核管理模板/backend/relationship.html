@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>人员关系设置</title> 
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/backend/person_relationship.css" rel="stylesheet">
+<link href="../js/lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <div id="inner-hd">
+            <div class="crumbs">
+				<i class="crumbs-arrow"></i>
+				<a href="javascript:;" class="crumbs-label">人员关系设置</a>
+			</div>
+        </div>
+
+        <div id="inner-bd">
+        	
+            <div class="kv-group-outer">
+		        <div class="kv-group clearfix">
+		            <div class="kv-item kv-col-1">
+		                <div class="item-lt">数据导入：</div>
+		                <div class="item-rt">
+		                    <a href="javascript:;" class="a-upload">
+								<input type="file" name="" id="">选择文件
+							</a>
+							<span class="text-tip">未选择任何文件</span>
+							<div class="button current">
+								<span class="button-label">导入全部</span>
+							</div>
+							
+							<div class="tip-area">
+								<a href="javascript:;">人员关系设置表导入模板下载</a>
+							</div>
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+
+            <div class="button-group">
+		        <div class="button current">
+		            <i class="iconfont">&#xe602;</i>
+		            <span class="button-label">初始化关系</span>
+		        </div>
+				<div class="tips">
+					<span class="impInfo">初始化关系按钮将帮您：</span>
+					<span>按已经设置的人员权限及分管领导分管的部门关系，自动设置如下关系：1、部门内设机构领导考核部门内设机构科员；2、分管领导考核分管部门的领导。</span>
+				</div>
+		        <div class="kv-group reationship clearfix">
+		            <div class="kv-item kv-col-1">
+		                <div class="item-lt">关系类型：</div>
+		                <div class="item-rt">
+		                    <select>
+		                    	<option>分管部门关系</option>
+		                    </select>
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+			
+			<table class="kv-table">
+				<tbody>
+					<tr>
+						<td class="kv-label">
+							请选择：分管领导
+						</td>
+						<td class="kv-content">
+							请选择：部门
+						</td>
+						<td class="kv-content">
+							操作
+						</td>
+						<td class="kv-content">
+							已选定
+						</td>
+					</tr>
+
+					<tr>
+						<td class="kv-content">
+							<div id="ztree1" class="ztree"></div>
+						</td>
+						<td class="kv-content">
+							<div id="ztree2" class="ztree"></div>
+						</td>
+						<td class="kv-content">
+							<div class="button-wrap">
+								<div class="button current">
+									<i class="iconfont">&#xe61e;</i>
+									<span class="button-label">选择</span>
+								</div>
+							</div>
+							
+							<div class="button-wrap">
+								<div class="button imp">
+									<i class="iconfont">&#xe61f;</i>
+									<span class="button-label">移去</span>
+								</div>
+							</div>
+
+							<div class="button-wrap">
+								<div class="button imp">
+									<i class="iconfont">&#xe603;</i>
+									<span class="button-label">重选</span>
+								</div>
+							</div>
+						</td>
+						<td class="kv-content">
+							<div id="ztree3" class="ztree"></div>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+			
+        </div>
+
+        <div id="inner-ft">
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/global.js"></script>
+	<script type="text/javascript" src="../js/jquery.select.js"></script>
+	<script type="text/javascript" src="../js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../js/lib/layer/layer.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/lib/ztree/jquery.ztree.all.min.js"></script>
+
+	<script type="text/javascript">
+
+		$('select').select();
+
+		var setting = {
+			check: {
+				enable: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"随意勾选 1", open:true},
+			{ id:11, pId:1, name:"随意勾选 1-1", open:true},
+			{ id:111, pId:11, name:"随意勾选 1-1-1"},
+			{ id:112, pId:11, name:"随意勾选 1-1-2"},
+			{ id:12, pId:1, name:"随意勾选 1-2", open:true},
+			{ id:121, pId:12, name:"随意勾选 1-2-1"},
+			{ id:122, pId:12, name:"随意勾选 1-2-2"},
+			{ id:2, pId:0, name:"随意勾选 2", checked:true, open:true},
+			{ id:21, pId:2, name:"随意勾选 2-1"},
+			{ id:22, pId:2, name:"随意勾选 2-2", open:true},
+			{ id:221, pId:22, name:"随意勾选 2-2-1", checked:true},
+			{ id:222, pId:22, name:"随意勾选 2-2-2"},
+			{ id:23, pId:2, name:"随意勾选 2-3"}
+		];
+
+		$.fn.zTree.init($("#ztree1"), setting, zNodes);
+		setting.check = {
+			enable: true
+		}
+		$.fn.zTree.init($("#ztree2"), setting, zNodes);
+		$.fn.zTree.init($("#ztree3"), setting, zNodes);
+
+
+	</script>
+    
+</body> 
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>机构管理</title> 
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/backend/organ_manger.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <div id="inner-hd">
+            <div class="crumbs">
+				<i class="crumbs-arrow"></i>
+				<a href="javascript:;" class="crumbs-label">机构管理</a>
+			</div>
+        </div>
+
+        <div id="inner-bd">
+        	
+            <div class="kv-group-outer">
+		        <div class="kv-group clearfix">
+		            <div class="kv-item kv-col-1">
+		                <div class="item-lt">数据导入：</div>
+		                <div class="item-rt">
+		                    <a href="javascript:;" class="a-upload">
+								<input type="file" name="" id="">选择文件
+							</a>
+							<span class="text-tip">未选择任何文件</span>
+							<div class="button current">
+								<span class="button-label">导入全部</span>
+							</div>
+							
+							<div class="tip-area">
+								<a href="javascript:;">内设机构人员信息关系年底关系模板下载</a>
+							</div>
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+
+            <div class="button-group">
+		        <div class="button current add">
+		            <i class="iconfont">&#xe620;</i>
+		            <span class="button-label">新增</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe621;</i>
+		            <span class="button-label">修改</span>
+		        </div>
+		        <div class="button disable">
+		            <i class="iconfont">&#xe623;</i>
+		            <span class="button-label">新增子单位</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe609;</i>
+		            <span class="button-label">删除</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe617;</i>
+		            <span class="button-label">上移</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe629;</i>
+		            <span class="button-label">下移</span>
+		        </div>
+				<div class="button sort">
+		            <i class="iconfont">&#xe61a;</i>
+		            <span class="button-label">内设机构排序</span>
+		        </div>
+		    </div>
+			
+			<table class="kv-table">
+				<tbody>
+					<tr>
+						<td class="kv-label">
+							这里放树
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							
+							<table class="grid">
+								<thead>
+									<tr>
+										<th class="grid-checkbox"><input type="checkbox"></th>
+										<th>序号</th>
+										<th>部门内设机构</th>
+									</tr>
+								</thead>
+								
+								<tbody>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>办公室</td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>2</td>
+										<td>组织部</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+			
+        </div>
+
+        <div id="inner-ft">
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/global.js"></script>
+	<script type="text/javascript" src="../js/jquery.select.js"></script>
+	<script type="text/javascript" src="../js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../js/lib/layer/layer.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<script type="text/javascript">
+
+		$('select').select();
+
+     $('body').on('click', '.sort', function(){
+    	layer.open({
+    		title: '内设机构排序',
+    		area:["828px","470px"],
+		    content: '<div class="table-zone">'+
+             '<table>' +
+                '<thead>' +
+                  '<tr>' +
+                    '<td class="number">序号</td>' +
+                    '<td class="dept">部门内设机构</td>' +
+                    '<td class="sort">部门排序</td>' +
+                  '</tr>' +
+                '</thead>' +
+                '<tbody>' +
+                  '<tr>' +
+                    '<td>1</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                  '<tr>' +
+                    '<td>1</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                  '<tr>' +
+                    '<td>3</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                   '<tr>' +
+                    '<td>4</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                   '<tr>' +
+                    '<td>5</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                   '<tr>' +
+                    '<td>6</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                   '<tr>' +
+                    '<td>7</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                   '<tr>' +
+                    '<td>8</td>' +
+                    '<td>办公室</td>' +
+                    '<td><input type="text"></td>' +
+                  '</tr>' +
+                '</tbody>' +
+             '</table>' +
+            '</div>'
+    	});
+    });
+	
+
+	$('body').on('click', '.add', function(){
+		    	layer.open({
+		    		title: '操作区',
+		    		area:["800px","310px"],
+		    		content: '<table class="kv-table">' +
+								'<tbody>' +
+									'<tr>' +
+										'<td class="kv-label" style="width:167px;">' +
+											'单位内设机构名称：'+
+										'</td>' +
+										'<td class="kv-content" style="padding: 10px; width:auto;">' +
+											'<input type="text">'+
+										'</td>'+
+									'</tr>'+
+									'<tr>'+
+										'<td class="kv-label" style="width:167px;">'+
+											'部门所属：'+
+										'</td>'+
+										'<td class="kv-content" style="padding: 10px;width:auto;">'+
+										   '<select><option>南京远程学习中心5</option></select>'+
+					                       '<input type="text">'+
+					                       '<div class="button current">'+
+											   '<span class="button-label">选择</span>'+
+										   '</div>'+
+										'</td>'+
+									'</tr>'+
+									'<tr>'+
+										'<td class="kv-label" style="width:167px;">'+
+											'部门内部排序：'+
+										'</td>'+
+										'<td class="kv-content" style="padding: 10px;width:auto;">'+
+											'<input type="text">'+
+										'</td>'+
+									'</tr>'+
+								'</tbody>'+
+							'</table>',
+		    		btn: ['添加', '关闭'],
+		    		success:function(){
+		    			$('select').select();
+		    		}
+		    	});
+	    });
+	</script>
+    
+</body> 
+</html>

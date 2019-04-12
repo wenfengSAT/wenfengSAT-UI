@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>加扣分理由管理</title> 
+<link href="../../css/base.css" rel="stylesheet">
+<link href="../../css/backend/score_manage/manage.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <div id="inner-hd">
+            <div class="crumbs">
+				<i class="crumbs-arrow"></i>
+				<a href="javascript:;" class="crumbs-label">加扣分理由管理</a>
+			</div>
+        </div>
+
+        <div id="inner-bd">
+        	
+
+            <div class="kv-group-outer">
+		        <div class="kv-group clearfix">
+		            <div class="kv-item">
+		                <div class="item-lt">加扣分类型：</div>
+		                <div class="item-rt">
+		                    <select>
+		                        <option>全部</option>
+		                    </select>
+		                    <select>
+		                        <option>南京远程学习中心</option>
+		                    </select>
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+
+            <div class="button-group">
+		        <div class="button current add">
+		            <i class="iconfont">&#xe620;</i>
+		            <span class="button-label">添加</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe621;</i>
+		            <span class="button-label">修改</span>
+		        </div>
+		        <div class="button">
+		            <i class="iconfont">&#xe609;</i>
+		            <span class="button-label">删除</span>
+		        </div>
+		    </div>
+			
+			<table class="grid">
+				<colgroup>
+					<col width="50"></col>
+					<col width="70"></col>
+					<col width="140"></col>
+					<col width="*"></col>
+					<col width="120"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th class="grid-checkbox"><input type="checkbox"></th>
+						<th class="num">序号</th>
+						<th>加扣分类型</th>
+						<th>加扣分描述</th>
+						<th>加扣分分值</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td class="grid-checkbox"><input type="checkbox"></td>
+						<td class="num">1</td>
+						<td>日常加扣分</td>
+						<td></td>
+						<td>1.00</td>
+					</tr>
+					<tr>
+						<td class="grid-checkbox"><input type="checkbox"></td>
+						<td class="num">2</td>
+						<td>年底加扣分</td>
+						<td></td>
+						<td>2.00</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+        </div>
+
+        <div id="inner-ft">
+            
+        </div>
+    </div>
+	
+	<script type="text/template" id="addTpl">
+		<div class="add-manage">
+			<table class="kv-table">
+				<tbody>
+					<tr>
+						<td class="kv-label">
+							加扣分类型名称：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<select>
+								<option>日常加扣分</option>
+								<option>年底加扣分</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="kv-label">
+							加扣分描述：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<textarea  placeholder="描述"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class="kv-label">
+							加扣分分值：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td class="kv-label">
+							单位名称：
+						</td>
+						<td class="kv-content" style="padding: 10px;">
+							<select>
+								<option>南京远程学习中心</option>
+								<option>xxxxxx</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		
+	</script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+
+	<script type="text/javascript" src="../../js/common.js"></script>
+
+	<script type="text/javascript">
+
+
+
+    $('body').on('click', '.add', function(){
+    	layer.open({
+    		title: '添加文章',
+    		area:['750px','440px'],
+    		content: $('#addTpl').html(),
+    		btn:['保存', '保存并发布']
+    	});
+
+    })
+	</script>
+    
+</body> 
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>工作纪实查询</title> 
+<link href="../js/lib/datepicker/css/bootstrap.css" rel="stylesheet">   
+<link href="../js/lib/datepicker/css/bootstrap-datepicker.css" rel="stylesheet">   
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/pages/statistics_query/work_situation_query.css" rel="stylesheet">
+</head> 
+<body>
+	<div class="crumbs">
+        <i class="crumbs-arrow"></i>
+        <a href="javascript:;" class="crumbs-label">工作纪实查询</a>
+    </div>
+    <div id="inner-bd">
+        <div class="kv-group-outer">
+            <div class="kv-group clearfix">
+                <div class="kv-item">
+                    <div class="item-lt">部门：</div>
+                    <div class="item-rt">
+                        <select>
+                            <option>办公室</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="kv-item">
+                    <div class="item-lt">姓名：</div>
+                    <div class="item-rt">
+                        <select>
+                            <option>uimaker</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="kv-item">
+                    <div class="item-lt">开始日期：</div>
+                    <div class="item-rt">
+                       <div class="date">
+                            <input type="text" id="start">
+                            <i class="iconfont">&#xe784;</i>
+                       </div>
+                    </div>
+                </div>
+                <div class="kv-item">
+                    <div class="item-lt">结束日期：</div>
+                    <div class="item-rt">
+                       <div class="date">
+                            <input type="text" id="end">
+                            <i class="iconfont">&#xe784;</i>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-group">
+        <div class="button current">
+            <i class="iconfont">&#xe625;</i>
+            <span class="button-label">查询</span>
+        </div>
+    </div>
+    <div class="table-zone">
+         <table class="no-data">
+            <thead>
+              <td style="width:110px;">姓名</td>
+              <td style="width:100px;">年度</td>
+              <td style="width:160px;">日期</td>
+              <td style="width:auto;">工作纪实</td>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4">没有数据</td>
+              </tr>
+            </tbody> 
+         </table>
+    </div>
+</body> 
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/global.js"></script>
+<script type="text/javascript" src="../js/jquery.select.js"></script>
+<script type="text/javascript" src="../js/core.js"></script>
+<script type="text/javascript" src="../js/lib/datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../js/lib/datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+
+
+</html>
+<script type="text/javascript">
+
+    $('select').select();
+    $("#start").datepicker({
+        "language":"zh-CN",
+        "format": 'yyyy-mm-dd'
+    }).on('changeDate', function(ev){
+       $('#end').datepicker('setStartDate', ev.date);
+    });
+    $("#end").datepicker({
+        "language":"zh-CN",
+        "format": 'yyyy-mm-dd'
+    }).on('changeDate', function(ev){
+       $('#start').datepicker('setEndDate', ev.date);
+    });
+    $(".date .iconfont").click(function(){
+        $(this).prev().trigger("focus");
+    });
+</script>

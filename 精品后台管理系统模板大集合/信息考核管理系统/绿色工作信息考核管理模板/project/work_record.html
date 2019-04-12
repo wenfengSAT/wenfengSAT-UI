@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>工作纪实</title> 
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/project/work_record.css" rel="stylesheet">
+<link href="../js/lib/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <div id="inner-hd">
+            <div class="crumbs">
+				<i class="crumbs-arrow"></i>
+				<a href="javascript:;" class="crumbs-label">工作纪实</a>
+			</div>
+        </div>
+
+        <div id="inner-bd">
+            <div class="year">
+                <div class="kv-group-outer">
+                  <div class="kv-group clearfix">
+                      <div class="kv-item">
+                          <div class="item-lt">年份：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>2015</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="kv-item">
+                          <div class="item-lt">月份：</div>
+                          <div class="item-rt">
+                              <select>
+                                  <option>3</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="button-group">
+                <div class="button current">
+                  <i class="iconfont">&#xe76a;</i>
+                  <span class="button-label">保存</span>
+                </div>
+                <div class="button">
+                  <i class="iconfont">&#xe62e;</i>
+                  <span class="button-label">提交</span>
+                </div>
+                <div class="button">
+                  <i class="iconfont">&#xe600;</i>
+                  <span class="button-label">导出</span>
+                </div>
+              </div>
+              <table class="kv-table">
+                <tbody>
+                  <tr>
+                    <td class="kv-label" style="width:167px;">纪实内容：</td>
+                    <td class="kv-content hasEdit" style="width:auto;">
+                       <div id="editor-year" class="editor"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="kv-label" style="width:167px;">附件：</td>
+                    <td class="kv-content" style="width:auto;">
+                        <a href="javascript:;" class="a-upload">
+                          <input type="file" name="" id="">选择文件
+                        </a>
+                        <span class="text-tip">未选择任何文件</span>
+                        <div class="button current">
+                          <span class="button-label">上传附件</span>
+                        </div>
+                        <div class="button">
+                          <span class="button-label">删除附件</span>
+                        </div>
+                        <div class="button">
+                          <span class="button-label">打开附件</span>
+                        </div>
+                    </td>
+                  </tr>
+                </tbody> 
+             </table>
+            </div>
+        </div>
+
+        <div id="inner-ft">
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/global.js"></script>
+    <script type="text/javascript" src="../js/core.js"></script>
+    <script type="text/javascript" src="../js/jquery.select.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/lib/umeditor/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/lib/umeditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="../js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript">
+    var umMonth = UM.getEditor('editor-year');
+    $('select').select();
+    </script>
+</body> 
+</html>

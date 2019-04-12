@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>人员管理</title> 
+<link href="../../css/base.css" rel="stylesheet">
+<link href="../../css/backend/person_manger.css" rel="stylesheet">
+<link href="../../js/lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <div id="inner-hd">
+            <div class="crumbs">
+				<i class="crumbs-arrow"></i>
+				<a href="javascript:;" class="crumbs-label">人员管理</a>
+			</div>
+        </div>
+
+        <div id="inner-bd">
+        	<div class="tab-wraper">
+        		<ul class="tab">
+		           	<li><a href="person_manger.html">机构人员信息管理</a></li>
+		           	<li class="current"><a href="javascript:;">人员账号查询</a></li>
+		           	<li><a href="noaccount.html">未设置账号人员</a></li>
+		           	<li><a href="sort.html">单位人员拍序</a></li>
+		           	<li><a href="auth.html">人员权限设置</a></li>
+	            </ul>
+        	</div>
+            
+
+            <div class="button-group">
+		        <div class="button current">
+		            <i class="iconfont">&#xe626;</i>
+		            <span class="button-label">清空</span>
+		        </div>
+
+		        <div class="kv-group clearfix" style="float: right;">
+		            <div class="kv-item">
+		                <div class="item-lt">部门：</div>
+		                <div class="item-rt">
+		                    南京远程学习中心5
+		                </div>
+		            </div>
+		            <div class="kv-item">
+		                <div class="item-lt">部门内设机构：</div>
+		                <div class="item-rt">
+		                    组织部
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+			
+			<table class="kv-table">
+				<tbody>
+					<tr>
+						<td class="kv-label" style="width:230px;">
+							<div id="ztree1" class="ztree"></div>
+						</td>
+						<td class="kv-content" valign="top" style="padding: 10px;width:auto;">
+							
+							<table class="grid">
+								<thead>
+									<tr>
+										<th class="grid-checkbox"><input type="checkbox"></th>
+										<th>序号</th>
+										<th>姓名</th>
+										<th>登录名</th>
+									</tr>
+								</thead>
+								
+								<tbody>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+									</tr>
+									<tr>
+										<td class="grid-checkbox"><input type="checkbox"></td>
+										<td>1</td>
+										<td>uimaker</td>
+										<td>uimaker</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+			
+        </div>
+
+        <div id="inner-ft">
+            
+        </div>
+    </div>
+
+	
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/global.js"></script>
+	<script type="text/javascript" src="../../js/jquery.select.js"></script>
+	<script type="text/javascript" src="../../js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../../js/lib/layer/layer.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/lib/ztree/jquery.ztree.all.min.js"></script>
+
+	<script type="text/javascript">
+
+		$('select').select();
+
+
+
+    var setting = {
+		check: {
+			enable: true
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		}
+	};
+
+    var zNodes =[
+			{ id:1, pId:0, name:"随意勾选 1", open:true},
+			{ id:11, pId:1, name:"随意勾选 1-1", open:true},
+			{ id:111, pId:11, name:"随意勾选 1-1-1"},
+			{ id:112, pId:11, name:"随意勾选 1-1-2"},
+			{ id:12, pId:1, name:"随意勾选 1-2", open:true},
+			{ id:121, pId:12, name:"随意勾选 1-2-1"},
+			{ id:122, pId:12, name:"随意勾选 1-2-2"},
+			{ id:2, pId:0, name:"随意勾选 2", checked:true, open:true},
+			{ id:21, pId:2, name:"随意勾选 2-1"},
+			{ id:22, pId:2, name:"随意勾选 2-2", open:true},
+			{ id:221, pId:22, name:"随意勾选 2-2-1", checked:true},
+			{ id:222, pId:22, name:"随意勾选 2-2-2"},
+			{ id:23, pId:2, name:"随意勾选 2-3"}
+		];
+
+		$.fn.zTree.init($("#ztree1"), setting, zNodes);
+	</script>
+    
+</body> 
+</html>
