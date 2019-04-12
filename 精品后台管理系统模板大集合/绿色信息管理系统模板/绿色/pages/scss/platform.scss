@@ -1,0 +1,488 @@
+
+html{
+	height: 100%;
+	background: #1da02b;
+	min-width: 1200px;
+	overflow: hidden;
+}
+
+
+#pf-hd{
+	height: 70px;
+	position: relative;
+	z-index: 2;
+	background-color: #1da02b;
+	background: image-url('main/xg_left.png') left center no-repeat, image-url('main/xg_right.png') right center no-repeat,image-url('main/top_bottombg.png') left bottom repeat-x;
+	.pf-logo{
+		float: left;
+		padding: 0 15px;
+		height: 100%;
+		width: 230px;
+		border-right: 1px solid #198b25;
+		line-height: 70px;
+		
+		img{
+			vertical-align: middle;
+			margin-left: -10px;
+		}
+		.system-name{
+			display:none;
+			float: left;
+			line-height: 70px;
+			font-size: 26px;
+			color: #fff;
+			text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+		}
+	}
+
+	.pf-nav{
+		float: left;
+		
+		
+		.pf-nav-item{
+			float: left;
+			height: 70px;
+			color: #fff;
+			padding: 0 15px;
+			border-right: 1px solid #198b25;
+			
+
+			a{
+				display: block;
+				color: #fff;
+				text-decoration: none;
+			}
+	
+			.iconfont{
+				display: block;
+				margin-top: 12px;
+				font-size: 26px;
+				height: 30px;
+				text-align: center;
+			}
+
+			&.current{
+				a{
+					color: #fff;
+
+				}
+				background: image-url('main/navbg.png');
+			}
+			/*.home-icon{
+				background: sprite($main_icon, ico01);
+			}
+			.project-icon{
+				background: sprite($main_icon, ico02);
+			}
+			.static-icon{
+				background: sprite($main_icon, ico03);
+			}
+			.manger-icon{
+				background: sprite($main_icon, ico04);
+			}
+
+			&.current{
+				background: image-url('main/navbg.png');
+			}*/
+		}
+
+
+	}
+
+	.pf-nav-wrap{
+		position: relative;
+		float: left;
+
+		.pf-nav-ww{
+			float: left;
+			height: 70px;
+			width: 625px;
+			overflow: hidden;
+		}
+	}
+
+
+	.pf-nav-prev,.pf-nav-next{
+		position: absolute;
+		right: -32px;
+		top:10px;
+		width: 26px;
+		height: 23px;
+		border-radius: 3px 3px 0 0;
+		background: #188323;
+		color: #fff;
+		text-decoration: none;
+		text-align: center;
+		line-height: 23px;
+
+		&:hover{
+			background:#fff;
+			color: #1da02b;
+		}
+
+		&.disabled{
+			color: #cccccc;
+			background: #fff;
+			cursor: default;
+		}
+	}
+
+	.pf-nav-next{
+		top: 36px;
+		border-radius: 0 0 3px 3px;
+	}
+
+
+	.pf-user{
+		position: relative;
+		float: right;
+		margin-right: 20px;
+		padding: 0 10px;
+		height: 70px;
+		line-height: 70px;
+		cursor: pointer;
+		.pf-user-photo{
+			float: left;
+			margin:12px 10px 0 0;
+			width: 48px;
+			height: 48px;
+			/*background: sprite($main_icon, userbg);
+*/
+			img{
+				margin: 4px;
+			}
+		}
+
+		.pf-user-name{
+			float: left;
+			max-width: 150px;
+			color: #fff;
+			font-size: 14px;
+			margin-right: 5px;
+		}
+
+		.xiala{
+			color: #fff;
+			position: relative;
+			top:-2px;
+		}
+
+		.pf-user-panel{
+			display: none;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 70px;
+			background: #fff;
+			z-index: 111;
+			border: 1px solid #e1e1e1;
+			box-shadow: 1px 1px 2px #ddd;
+
+			li{
+				height: 30px;
+				line-height: 30px;
+				font-size: 13px;
+				padding: 0 15px;
+				a{
+					color: #000;
+					text-decoration: none;
+				}
+
+				.iconfont{
+					margin-right: 10px;
+					color: #000;
+				}
+
+				&:hover{
+					background: #f1f1f1;
+					.iconfont{
+						color: #1da02b;
+					}
+				}
+			}
+		}
+
+		&:hover{
+			background: image-url('main/top_userbg.png');
+			.pf-user-panel{
+				display: block;
+			}
+		}
+
+
+	}
+}
+
+#pf-bd{
+	position: absolute;
+    top: 70px;
+    bottom: 31px;
+    left: 0;
+    right: 0;
+	padding: 0 0 0 220px;
+	z-index: 1;
+	transition: all 0.3s ease;
+	&.toggle{
+		padding-left: 0;
+		#pf-sider{
+			margin-left: -440px;
+			.pf-model-name{
+				.toggle-icon{
+					position: fixed;
+					top: 84px;
+					left: 0;
+					z-index: 10;
+					background-position: -22px 0;
+				}
+			}
+		}
+	}
+	#pf-sider{
+		float: left;
+		height: 100%;
+		margin-left: -220px;
+		width: 220px;
+		background:#fff;
+		overflow-y: auto;
+		overflow-x:hidden; 
+		z-index: 1;
+		transition: all 0.3s ease;
+		.pf-model-name{
+			position: relative;
+			padding:0 20px;
+			height: 49px;
+			line-height: 49px;
+			color: #2d4112;
+			background: #e3e3e3;
+			border-bottom: 1px solid #bdbdbd;
+			font-size: 16px;
+			.iconfont{
+				font-size: 20px;
+			}
+			
+			.pf-sider-icon{
+				float: left;
+				margin: 10px 15px 0 0;
+				width: 20px;
+				height: 20px;
+				font-size: 20px;
+				/*background: sprite($main_icon, left_jt);*/
+			}
+			.toggle-icon{
+				position: absolute;
+				right: 0;
+				top: 14px;
+				width: 19px;
+				height: 22px;
+				background: url(../images/main/sider-toggle.png) no-repeat;
+				background-position: 0 0;
+				cursor: pointer;
+			}
+		}
+			
+		
+
+		.sider-nav{
+			&>li{
+				border-bottom:1px solid #dbdbdb; 
+				background: #fff;
+				a{
+					display: block;
+					padding: 0 15px;
+					height: 100%;
+					height: 50px;
+					line-height: 50px;
+					color: #000;
+					font-size: 14px;
+					text-decoration: none;
+				}
+
+				
+
+				.sider-nav-title{
+					float: left;
+					width: 112px;
+				    white-space: nowrap;
+				    text-overflow: ellipsis;
+				    overflow: hidden;
+				    font-size: 14px;
+				}
+
+				.iconfont{
+					float: right;
+					font-size: 12px;
+					color: #acacab;
+				}
+
+				.sider-nav-icon{
+					float: left;
+					margin:0 10px 0 0;
+					color: #1da02b;
+					font-size: 20px;
+				}
+
+				&.current{
+					
+					border-bottom:none; 
+					/*height: 39px;*/
+
+					background: #1da02b;
+					&>a{
+						border-left: 3px solid #ffa405;
+						padding-left:12px; 
+						color: #fff;
+					}
+
+					.iconfont{
+						color: #fff;
+					}
+
+					.sider-nav-icon{
+						color: #fff;
+					}
+				}
+
+				.sider-nav-s{
+					display: none;
+					padding: 10px 0;
+					background: #f1f1f1;
+					color: #000;
+					font-size: 12px;
+					border-bottom: 1px solid #dbdbdb;
+
+					li{
+						&.active {
+							background: #fff;
+							
+							a{
+								color: #1da02b;
+								font-weight: bold;
+							}
+						}
+					}
+
+					a{
+						height: 31px;
+						line-height: 31px;
+						color: #000;
+						font-size: 12px;
+						padding-left: 40px;
+						background: image-url('main/left_list.png') no-repeat 30px center;
+					}
+				}
+
+				&.current{
+					.sider-nav-s{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	#pf-page{
+		float: left;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 0;
+		.easyui-tabs1{
+			min-width: 980px !important;
+			height: 100% !important;
+			.tabs-header{
+				border-top: none;
+			}
+			.tabs li{
+				border-top: 1px solid #bfbfbf;
+				-moz-border-radius: 2px 2px 0 0;
+			    -webkit-border-radius: 2px 2px 0 0;
+			    border-radius: 2px 2px 0;
+
+			    a.tabs-close{
+			    	background: image-url('main/tabs_close_pf.png')
+			    }
+
+			    &:hover{
+			    	a.tabs-close{
+				    	background: image-url('main/tabs_close_hover.png')
+				    }
+			    }
+			}
+
+			.tabs{
+				padding-left: 24px !important;
+
+				li.tabs-selected{
+					border-top: 3px solid #1da02b;
+				}
+			}
+
+			.tabs-panels{
+				border-bottom: none !important;
+			}
+
+			.tabs li a.tabs-inner{
+				
+				background: #dbdbdb;
+				color: #000;
+				border-bottom: 1px solid #bfbfbf;
+				height: 42px !important;
+				line-height: 42px !important;
+			}
+
+			.tabs li:hover a.tabs-inner,.tabs li.tabs-selected a.tabs-inner{
+				background: #fff;
+			}
+
+			.tabs-scroller-left,.tabs-scroller-right{
+				height: 49px;
+			}
+			.tabs-scroller-right{
+				border-right: none;
+			}
+			.tabs-scroller-left{
+				border-left: none;
+			}
+		}
+
+		.panel-body{
+			overflow: hidden;
+		}
+	}
+
+
+}
+#pf-ft{
+		position: absolute;
+		width: 100%;
+		height: 27px;
+		line-height: 27px;
+		bottom: 3px;
+		background: #f1f1f1;
+		border-top: 1px solid #cacaca;
+
+		.system-name,.copyright-name{
+			float: left;
+			margin-left: 8px;
+			font-size: 12px;
+			color: #8b8b8b;
+
+			.iconfont{
+				color: #1da02b;
+				margin-right: 8px;
+			}
+		}
+
+		.copyright-name{
+			float: right;
+			.iconfont{
+				font-size: 12px;
+			}
+		}
+}
+
+
+.menu .menu-active{
+	background: #1da02b;
+	color: #fff;
+}
