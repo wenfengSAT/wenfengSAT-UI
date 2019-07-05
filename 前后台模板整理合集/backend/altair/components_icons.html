@@ -1,0 +1,1079 @@
+<!doctype html>
+<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Remove Tap Highlight on Windows Phone IE -->
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+
+    <title>Altair Admin v2.2.0</title>
+
+
+    <!-- uikit -->
+    <link rel="stylesheet" href="bower_components/uikit/css/uikit.almost-flat.min.css" media="all">
+
+    <!-- flag icons -->
+    <link rel="stylesheet" href="assets/icons/flags/flags.min.css" media="all">
+
+    <!-- altair admin -->
+    <link rel="stylesheet" href="assets/css/main.min.css" media="all">
+
+    <!-- matchMedia polyfill for testing media queries in JS -->
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.js"></script>
+        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.addListener.js"></script>
+    <![endif]-->
+
+</head>
+<body class=" sidebar_main_open sidebar_main_swipe">
+    <!-- main header -->
+    <header id="header_main">
+        <div class="header_main_content">
+            <nav class="uk-navbar">
+                                
+                <!-- main sidebar switch -->
+                <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
+                    <span class="sSwitchIcon"></span>
+                </a>
+                
+                <!-- secondary sidebar switch -->
+                <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                    <span class="sSwitchIcon"></span>
+                </a>
+                
+                    <div id="menu_top_dropdown" class="uk-float-left uk-hidden-small">
+                        <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
+                            <a href="#" class="top_menu_toggle"><i class="material-icons md-24">&#xE8F0;</i></a>
+                            <div class="uk-dropdown uk-dropdown-width-3">
+                                <div class="uk-grid uk-dropdown-grid" data-uk-grid-margin>
+                                    <div class="uk-width-2-3">
+                                        <div class="uk-grid uk-grid-width-medium-1-3 uk-margin-top uk-margin-bottom uk-text-center" data-uk-grid-margin>
+                                            <a href="page_mailbox.html">
+                                                <i class="material-icons md-36">&#xE158;</i>
+                                                <span class="uk-text-muted uk-display-block">Mailbox</span>
+                                            </a>
+                                            <a href="page_invoices.html">
+                                                <i class="material-icons md-36">&#xE53E;</i>
+                                                <span class="uk-text-muted uk-display-block">Invoices</span>
+                                            </a>
+                                            <a href="page_chat.html">
+                                                <i class="material-icons md-36 md-color-red-600">&#xE0B9;</i>
+                                                <span class="uk-text-muted uk-display-block">Chat</span>
+                                            </a>
+                                            <a href="page_scrum_board.html">
+                                                <i class="material-icons md-36">&#xE85C;</i>
+                                                <span class="uk-text-muted uk-display-block">Scrum Board</span>
+                                            </a>
+                                            <a href="page_snippets.html">
+                                                <i class="material-icons md-36">&#xE86F;</i>
+                                                <span class="uk-text-muted uk-display-block">Snippets</span>
+                                            </a>
+                                            <a href="page_user_profile.html">
+                                                <i class="material-icons md-36">&#xE87C;</i>
+                                                <span class="uk-text-muted uk-display-block">User profile</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-3">
+                                        <ul class="uk-nav uk-nav-dropdown uk-panel">
+                                            <li class="uk-nav-header">Components</li>
+                                            <li><a href="components_accordion.html">Accordions</a></li>
+                                            <li><a href="components_buttons.html">Buttons</a></li>
+                                            <li><a href="components_notifications.html">Notifications</a></li>
+                                            <li><a href="components_sortable.html">Sortable</a></li>
+                                            <li><a href="components_tabs.html">Tabs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav user_actions">
+                        <li><a href="#" id="full_screen_toggle" class="user_action_icon uk-visible-large"><i class="material-icons md-24 md-light">&#xE5D0;</i></a></li>
+                        <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
+                        <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+                            <a href="#" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE7F4;</i><span class="uk-badge">16</span></a>
+                            <div class="uk-dropdown uk-dropdown-xlarge">
+                                <div class="md-card-content">
+                                    <ul class="uk-tab uk-tab-grid" data-uk-tab="{connect:'#header_alerts',animation:'slide-horizontal'}">
+                                        <li class="uk-width-1-2 uk-active"><a href="#" class="js-uk-prevent uk-text-small">Messages (12)</a></li>
+                                        <li class="uk-width-1-2"><a href="#" class="js-uk-prevent uk-text-small">Alerts (4)</a></li>
+                                    </ul>
+                                    <ul id="header_alerts" class="uk-switcher uk-margin">
+                                        <li>
+                                            <ul class="md-list md-list-addon">
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <span class="md-user-letters md-bg-cyan">dk</span>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading"><a href="pages_mailbox.html">Aspernatur consequatur recusandae.</a></span>
+                                                        <span class="uk-text-small uk-text-muted">Numquam delectus consequatur sit numquam labore.</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_07_tn.png" alt=""/>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading"><a href="pages_mailbox.html">Ad necessitatibus.</a></span>
+                                                        <span class="uk-text-small uk-text-muted">Assumenda consequuntur dolor nisi odit qui unde at repudiandae id maxime.</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <span class="md-user-letters md-bg-light-green">kc</span>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading"><a href="pages_mailbox.html">Sed neque quos.</a></span>
+                                                        <span class="uk-text-small uk-text-muted">Deleniti consequatur facilis sequi autem perspiciatis velit ducimus.</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_02_tn.png" alt=""/>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading"><a href="pages_mailbox.html">Corporis culpa.</a></span>
+                                                        <span class="uk-text-small uk-text-muted">Deserunt quam assumenda est impedit repudiandae illum suscipit nemo eos sit.</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_09_tn.png" alt=""/>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading"><a href="pages_mailbox.html">At et id.</a></span>
+                                                        <span class="uk-text-small uk-text-muted">Iste nulla quo accusamus in aut fugiat nihil incidunt.</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="uk-text-center uk-margin-top uk-margin-small-bottom">
+                                                <a href="page_mailbox.html" class="md-btn md-btn-flat md-btn-flat-primary js-uk-prevent">Show All</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <ul class="md-list md-list-addon">
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon material-icons uk-text-warning">&#xE8B2;</i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">Repellat neque iure.</span>
+                                                        <span class="uk-text-small uk-text-muted uk-text-truncate">Perferendis quo est deleniti nobis quis eveniet corrupti.</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon material-icons uk-text-success">&#xE88F;</i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">Reiciendis sed.</span>
+                                                        <span class="uk-text-small uk-text-muted uk-text-truncate">Consequatur sapiente id ab autem voluptatum provident deserunt.</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon material-icons uk-text-danger">&#xE001;</i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">Quas omnis quos.</span>
+                                                        <span class="uk-text-small uk-text-muted uk-text-truncate">Quia fuga accusantium tempore quo.</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon material-icons uk-text-primary">&#xE8FD;</i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">In dicta.</span>
+                                                        <span class="uk-text-small uk-text-muted uk-text-truncate">Accusamus non corrupti nam.</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+                            <a href="#" class="user_action_image"><img class="md-user-image" src="assets/img/avatars/avatar_11_tn.png" alt=""/></a>
+                            <div class="uk-dropdown uk-dropdown-small">
+                                <ul class="uk-nav js-uk-prevent">
+                                    <li><a href="page_user_profile.html">My profile</a></li>
+                                    <li><a href="page_settings.html">Settings</a></li>
+                                    <li><a href="login.html">Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="header_main_search_form">
+            <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+            <form class="uk-form">
+                <input type="text" class="header_main_search_input" />
+                <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+            </form>
+        </div>
+    </header><!-- main header end -->
+    <!-- main sidebar -->
+    <aside id="sidebar_main">
+        
+        <div class="sidebar_main_header">
+            <div class="sidebar_logo">
+                <a href="index.html" class="sSidebar_hide"><img src="assets/img/logo_main.png" alt="" height="15" width="71"/></a>
+                <a href="index.html" class="sSidebar_show"><img src="assets/img/logo_main_small.png" alt="" height="32" width="32"/></a>
+            </div>
+            <div class="sidebar_actions">
+                <select id="lang_switcher" name="lang_switcher">
+                    <option value="gb" selected>English</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="menu_section">
+            <ul>
+                <li title="Dashboard">
+                    <a href="index.html">
+                        <span class="menu_icon"><i class="material-icons">&#xE871;</i></span>
+                        <span class="menu_title">Dashboard</span>
+                    </a>
+                </li>
+                <li title="Mailbox">
+                    <a href="page_mailbox.html">
+                        <span class="menu_icon"><i class="material-icons">&#xE158;</i></span>
+                        <span class="menu_title">Mailbox</span>
+                    </a>
+                </li>
+                <li title="Invoices">
+                    <a href="page_invoices.html">
+                        <span class="menu_icon"><i class="material-icons">&#xE53E;</i></span>
+                        <span class="menu_title">Invoices</span>
+                    </a>
+                </li>
+                <li  title="Chat">
+                    <a href="page_chat.html">
+                        <span class="menu_icon"><i class="material-icons">&#xE0B9;</i></span>
+                        <span class="menu_title">Chat</span>
+                    </a>
+                </li>
+                <li title="Scrum Board">
+                    <a href="page_scrum_board.html">
+                        <span class="menu_icon"><i class="material-icons">&#xE85C;</i></span>
+                        <span class="menu_title">Scrum Board</span>
+                    </a>
+                </li>
+                <li title="Snippets">
+                    <a href="page_snippets.html">
+                        <span class="menu_icon"><i class="material-icons">&#xE86F;</i></span>
+                        <span class="menu_title">Snippets</span>
+                    </a>
+                </li>
+                <li title="User Profile">
+                    <a href="page_user_profile.html">
+                        <span class="menu_icon"><i class="material-icons">&#xE87C;</i></span>
+                        <span class="menu_title">User Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu_icon"><i class="material-icons">&#xE8D2;</i></span>
+                        <span class="menu_title">Forms</span>
+                    </a>
+                    <ul>
+                        <li><a href="forms_regular.html">Regular Elements</a></li>
+                        <li><a href="forms_advanced.html">Advanced Elements</a></li>
+                        <li><a href="forms_file_upload.html">File Upload</a></li>
+                        <li><a href="forms_validation.html">Validation</a></li>
+                        <li><a href="forms_wizard.html">Wizard</a></li>
+                        <li class="menu_subtitle">WYSIWYG Editors</li>
+                        <li><a href="forms_wysiwyg_ckeditor.html">CKeditor</a></li>
+                        <li><a href="forms_wysiwyg_tinymce.html">TinyMCE</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu_icon"><i class="material-icons">&#xE8F1;</i></span>
+                        <span class="menu_title">Layout</span>
+                    </a>
+                    <ul>
+                        <li><a href="layout_top_menu.html">Top Menu</a></li>
+                        <li><a href="layout_header_full.html">Full Header</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                        <span class="menu_title">Kendo UI Widgets</span>
+                    </a>
+                    <ul>
+                        <li><a href="kendoui_autocomplete.html">Autocomplete</a></li>
+                        <li><a href="kendoui_calendar.html">Calendar</a></li>
+                        <li><a href="kendoui_colorpicker.html">ColorPicker</a></li>
+                        <li><a href="kendoui_combobox.html">ComboBox</a></li>
+                        <li><a href="kendoui_datepicker.html">DatePicker</a></li>
+                        <li><a href="kendoui_datetimepicker.html">DateTimePicker</a></li>
+                        <li><a href="kendoui_dropdown_list.html">DropDownList</a></li>
+                        <li><a href="kendoui_masked_input.html">Masked Input</a></li>
+                        <li><a href="kendoui_menu.html">Menu</a></li>
+                        <li><a href="kendoui_multiselect.html">MultiSelect</a></li>
+                        <li><a href="kendoui_numeric_textbox.html">Numeric TextBox</a></li>
+                        <li><a href="kendoui_panelbar.html">PanelBar</a></li>
+                        <li><a href="kendoui_timepicker.html">TimePicker</a></li>
+                        <li><a href="kendoui_toolbar.html">Toolbar</a></li>
+                        <li><a href="kendoui_window.html">Window</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu_icon"><i class="material-icons">&#xE87B;</i></span>
+                        <span class="menu_title">Components</span>
+                    </a>
+                    <ul>
+                        <li><a href="components_accordion.html">Accordions</a></li>
+                        <li><a href="components_buttons.html">Buttons</a></li>
+                        <li><a href="components_fab.html">Buttons: FAB</a></li>
+                        <li><a href="components_cards.html">Cards</a></li>
+                        <li><a href="components_colors.html">Colors</a></li>
+                        <li><a href="components_common.html">Common</a></li>
+                        <li><a href="components_dropdowns.html">Dropdowns</a></li>
+                        <li><a href="components_dynamic_grid.html">Dynamic Grid</a></li>
+                        <li><a href="components_grid.html">Grid</a></li>
+                        <li class="act_item"><a href="components_icons.html">Icons</a></li>
+                        <li><a href="components_modal.html">Lightbox/Modal</a></li>
+                        <li><a href="components_lists.html">Lists</a></li>
+                        <li><a href="components_nestable.html">Nestable</a></li>
+                        <li><a href="components_notifications.html">Notifications</a></li>
+                        <li><a href="components_panels.html">Panels</a></li>
+                        <li><a href="components_preloaders.html">Preloaders</a></li>
+                        <li><a href="components_sortable.html">Sortable</a></li>
+                        <li><a href="components_tables.html">Tables</a></li>
+                        <li><a href="components_tables_examples.html">Tables Examples</a></li>
+                        <li><a href="components_tabs.html">Tabs</a></li>
+                        <li><a href="components_tooltips.html">Tooltips</a></li>
+                        <li><a href="components_typography.html">Typography</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#">
+                        <span class="menu_icon"><i class="material-icons">&#xE8CB;</i></span>
+                        <span class="menu_title">E-commerce</span>
+                    </a>
+                    <ul>
+                        <li><a href="ecommerce_product_details.html">Product Details</a></li>
+                        <li><a href="ecommerce_product_edit.html">Product Edit</a></li>
+                        <li><a href="ecommerce_products_grid.html">Products Grid</a></li>
+                        <li><a href="ecommerce_products_list.html">Products List</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#">
+                        <span class="menu_icon"><i class="material-icons">&#xE8C0;</i></span>
+                        <span class="menu_title">Plugins</span>
+                    </a>
+                    <ul>
+                        <li><a href="plugins_calendar.html">Calendar</a></li>
+                        <li><a href="plugins_charts.html">Charts</a></li>
+                        <li><a href="plugins_code_editor.html">Code Editor</a></li>
+                        <li><a href="plugins_crud_table.html">CRUD Table</a></li>
+                        <li><a href="plugins_datatables.html">Datatables</a></li>
+                        <li><a href="plugins_diff.html">Diff View</a></li>
+                        <li><a href="plugins_gantt_chart.html">Gantt Chart</a></li>
+                        <li><a href="plugins_google_maps.html">Google Maps</a></li>
+                        <li><a href="plugins_tablesorter.html">Tablesorter</a></li>
+                        <li><a href="plugins_vector_maps.html">Vector Maps</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#">
+                        <span class="menu_icon"><i class="material-icons">&#xE24D;</i></span>
+                        <span class="menu_title">Pages</span>
+                    </a>
+                    <ul>
+                        <li><a href="page_blank.html">Blank</a></li>
+                        <li><a href="page_contact_list.html">Contact List</a></li>
+                        <li><a href="page_gallery.html">Gallery</a></li>
+                        <li><a href="page_help.html">Help/Faq</a></li>
+                        <li><a href="login.html">Login Page</a></li>
+                        <li><a href="page_notes.html">Notes</a></li>
+                        <li><a href="page_pricing_tables.html">Pricing Tables</a></li>
+                        <li><a href="page_settings.html">Settings</a></li>
+                        <li><a href="page_todo.html">Todo</a></li>
+                        <li><a href="page_user_edit.html">User edit</a></li>
+                        <li class="menu_subtitle">Issue Tracker</li>
+                        <li><a href="page_issues_list.html">List View</a></li>
+                        <li><a href="page_issue_details.html">Issue Details</a></li>
+
+                        <li class="menu_subtitle">Blog</li>
+                        <li><a href="page_blog_list.html">Blog List</a></li>
+                        <li><a href="page_blog_article.html">Blog Article</a></li>
+                        <li class="menu_subtitle">Errors</li>
+                        <li><a href="error_404.html">Error 404</a></li>
+                        <li><a href="error_500.html">Error 500</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside><!-- main sidebar end -->
+
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-1-1">
+                            <div class="uk-margin-bottom">
+                            <h3 class="heading_a">Material icons</h3>
+                                <blockquote>
+                                    <p>
+                                        Material design system icons are simple, modern, friendly, and sometimes quirky.
+                                        Each
+                                        icon is created using our design guidelines to depict in simple and minimal forms
+                                        the
+                                        universal concepts used commonly throughout a UI. Ensuring readability and clarity
+                                        at
+                                        both large and small sizes, these icons have been optimized for beautiful display on
+                                        all
+                                        common platforms and display resolutions.
+                                    </p>
+                                </blockquote>
+                                See the full set of material design icons at the <a href="https://www.google.com/design/icons/">material icons library</a>.
+                            </div>
+                            <p class="uk-text-large">Example:</p>
+                            <div class="uk-grid" data-uk-grid-margin>
+                                <div class="uk-width-large-1-3">
+                                    <i class="material-icons md-48">&#xE88A;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;!-- For modern browsers. --&gt;
+&lt;i class=&quot;material-icons&quot;&gt;home&lt;/i&gt;
+&lt;!-- For IE9 or below. --&gt;
+&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE88A;&lt;/i&gt;</code></pre>
+                                </div>
+                                <div class="uk-width-large-1-3">
+                                    <i class="material-icons md-48">&#xE32A;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;!-- For modern browsers. --&gt;
+&lt;i class=&quot;material-icons&quot;&gt;security&lt;/i&gt;
+&lt;!-- For IE9 or below. --&gt;
+&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE32A;&lt;/i&gt;</code></pre>
+                                </div>
+                                <div class="uk-width-large-1-3">
+                                    <i class="material-icons md-48">&#xE0B9;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;!-- For modern browsers. --&gt;
+&lt;i class=&quot;material-icons&quot;&gt;comment&lt;/i&gt;
+&lt;!-- For IE9 or below. --&gt;
+&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE0B9;&lt;/i&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="uk-grid" data-uk-grid-margin>
+                                <div class="uk-width-large-1-2">
+                                    <p class="uk-text-large">Sizes:</p>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="material-icons">&#xE554;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons&quot;&gt;&amp;#xE554;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="material-icons md-24">&#xE554;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons md-24&quot;&gt;&amp;#xE554;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="material-icons md-36">&#xE554;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons md-36&quot;&gt;&amp;#xE554;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <i class="material-icons md-48">&#xE554;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons md-48&quot;&gt;&amp;#xE554;&lt;/i&gt;</code></pre>
+                                </div>
+                                <div class="uk-width-large-1-2">
+                                    <p class="uk-text-large">Colors:</p>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="material-icons md-36 uk-text-primary">&#xE156;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons md-36 uk-text-primary&quot;&gt;&amp;#xE156;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="material-icons md-36 uk-text-success">&#xE156;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons md-36 uk-text-success&quot;&gt;&amp;#xE156;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="material-icons md-36 uk-text-danger">&#xE156;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons md-36 uk-text-danger&quot;&gt;&amp;#xE156;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="material-icons md-36 uk-text-warning">&#xE156;</i>
+<pre class="line-numbers"><code class="language-markup">
+&lt;i class=&quot;material-icons md-36 uk-text-warning&quot;&gt;&amp;#xE156;&lt;/i&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-1-1">
+                            <div class="uk-margin-bottom">
+                                <h3 class="heading_a">UIKit Icons (Font Awesome)</h3>
+                                <blockquote>
+                                    <p>
+                                        This component is using the fantastic <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a> icon font, a project by Dave Gandy. Altogether Font Awesome provides more than 300 symbols and glyphs for web-related actions. Icon fonts are great, because they enable you to easily change color, size and more via CSS. They are scalable vector graphics, which means that they look great on high-resolution displays.
+                                    </p>
+                                </blockquote>
+                                See the full set of <a href="http://getuikit.com/docs/icon.html#icon-mapping"> uikit icons</a>
+                            </div>
+
+                            <p class="uk-text-large">Example:</p>
+                            <div class="uk-grid uk-margin-bottom" data-uk-grid-margin>
+                                <div class="uk-width-large-1-3">
+                                    <i class="uk-icon-bar-chart-o uk-icon-medium"></i>
+<pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-bar-chart-o uk-icon-medium&quot;&gt;&lt;/i&gt;</code></pre>
+                                </div>
+                                <div class="uk-width-large-1-3">
+                                    <i class="uk-icon-cutlery uk-icon-medium"></i>
+                                    <pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-cutlery uk-icon-medium&quot;&gt;&lt;/i&gt;</code></pre>
+                                </div>
+                                <div class="uk-width-large-1-3">
+                                    <i class="uk-icon-sliders uk-icon-medium"></i>
+                                    <pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-sliders uk-icon-medium&quot;&gt;&lt;/i&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="uk-grid uk-margin-medium-bottom" data-uk-grid-margin>
+
+                                <div class="uk-width-large-1-2">
+                                    <p class="uk-text-large">Sizes:</p>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="uk-icon-file-picture-o"></i>
+                                        <pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-file-picture-o&quot;&gt;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="uk-icon-file-picture-o uk-icon-small"></i>
+<pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-file-picture-o uk-icon-small&quot;&gt;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="uk-icon-file-picture-o uk-icon-medium"></i>
+<pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-file-picture-o uk-icon-medium&quot;&gt;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="uk-icon-file-picture-o uk-icon-large"></i>
+<pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-file-picture-o uk-icon-large&quot;&gt;&lt;/i&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="uk-width-large-1-2">
+                                    <p class="uk-text-large">Spin modifier:</p>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="uk-icon-spinner uk-icon-medium uk-icon-spin"></i>
+<pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-spinner uk-icon-medium uk-icon-spin&quot;&gt;&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="uk-margin-medium-bottom">
+                                        <i class="uk-icon-refresh uk-icon-medium uk-icon-spin"></i>
+<pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;uk-icon-refresh uk-icon-medium uk-icon-spin&quot;&gt;&lt;/i&gt;</code></pre>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <h3 class="heading_a uk-margin-bottom">
+                        Flag Icons
+                    </h3>
+                    <ul class="inline-list uk-margin-bottom">
+                        <li><span class="flag-AD" title=".flag-AD"></span></li>
+                        <li><span class="flag-AE" title=".flag-AE"></span></li>
+                        <li><span class="flag-AF" title=".flag-AF"></span></li>
+                        <li><span class="flag-AG" title=".flag-AG"></span></li>
+                        <li><span class="flag-AI" title=".flag-AI"></span></li>
+                        <li><span class="flag-AL" title=".flag-AL"></span></li>
+                        <li><span class="flag-AM" title=".flag-AM"></span></li>
+                        <li><span class="flag-AN" title=".flag-AN"></span></li>
+                        <li><span class="flag-AO" title=".flag-AO"></span></li>
+                        <li><span class="flag-AQ" title=".flag-AQ"></span></li>
+                        <li><span class="flag-AR" title=".flag-AR"></span></li>
+                        <li><span class="flag-AS" title=".flag-AS"></span></li>
+                        <li><span class="flag-AT" title=".flag-AT"></span></li>
+                        <li><span class="flag-AU" title=".flag-AU"></span></li>
+                        <li><span class="flag-AW" title=".flag-AW"></span></li>
+                        <li><span class="flag-AX" title=".flag-AX"></span></li>
+                        <li><span class="flag-AZ" title=".flag-AZ"></span></li>
+                        <li><span class="flag-BA" title=".flag-BA"></span></li>
+                        <li><span class="flag-BB" title=".flag-BB"></span></li>
+                        <li><span class="flag-BD" title=".flag-BD"></span></li>
+                        <li><span class="flag-BE" title=".flag-BE"></span></li>
+                        <li><span class="flag-BF" title=".flag-BF"></span></li>
+                        <li><span class="flag-BG" title=".flag-BG"></span></li>
+                        <li><span class="flag-BH" title=".flag-BH"></span></li>
+                        <li><span class="flag-BI" title=".flag-BI"></span></li>
+                        <li><span class="flag-BJ" title=".flag-BJ"></span></li>
+                        <li><span class="flag-BL" title=".flag-BL"></span></li>
+                        <li><span class="flag-BM" title=".flag-BM"></span></li>
+                        <li><span class="flag-BN" title=".flag-BN"></span></li>
+                        <li><span class="flag-BO" title=".flag-BO"></span></li>
+                        <li><span class="flag-BR" title=".flag-BR"></span></li>
+                        <li><span class="flag-BS" title=".flag-BS"></span></li>
+                        <li><span class="flag-BT" title=".flag-BT"></span></li>
+                        <li><span class="flag-BW" title=".flag-BW"></span></li>
+                        <li><span class="flag-BY" title=".flag-BY"></span></li>
+                        <li><span class="flag-BZ" title=".flag-BZ"></span></li>
+                        <li><span class="flag-CA" title=".flag-CA"></span></li>
+                        <li><span class="flag-CC" title=".flag-CC"></span></li>
+                        <li><span class="flag-CD" title=".flag-CD"></span></li>
+                        <li><span class="flag-CF" title=".flag-CF"></span></li>
+                        <li><span class="flag-CG" title=".flag-CG"></span></li>
+                        <li><span class="flag-CH" title=".flag-CH"></span></li>
+                        <li><span class="flag-CI" title=".flag-CI"></span></li>
+                        <li><span class="flag-CK" title=".flag-CK"></span></li>
+                        <li><span class="flag-CL" title=".flag-CL"></span></li>
+                        <li><span class="flag-CM" title=".flag-CM"></span></li>
+                        <li><span class="flag-CN" title=".flag-CN"></span></li>
+                        <li><span class="flag-CO" title=".flag-CO"></span></li>
+                        <li><span class="flag-CR" title=".flag-CR"></span></li>
+                        <li><span class="flag-CU" title=".flag-CU"></span></li>
+                        <li><span class="flag-CV" title=".flag-CV"></span></li>
+                        <li><span class="flag-CW" title=".flag-CW"></span></li>
+                        <li><span class="flag-CX" title=".flag-CX"></span></li>
+                        <li><span class="flag-CY" title=".flag-CY"></span></li>
+                        <li><span class="flag-CZ" title=".flag-CZ"></span></li>
+                        <li><span class="flag-DE" title=".flag-DE"></span></li>
+                        <li><span class="flag-DJ" title=".flag-DJ"></span></li>
+                        <li><span class="flag-DK" title=".flag-DK"></span></li>
+                        <li><span class="flag-DM" title=".flag-DM"></span></li>
+                        <li><span class="flag-DO" title=".flag-DO"></span></li>
+                        <li><span class="flag-DZ" title=".flag-DZ"></span></li>
+                        <li><span class="flag-EC" title=".flag-EC"></span></li>
+                        <li><span class="flag-EE" title=".flag-EE"></span></li>
+                        <li><span class="flag-EG" title=".flag-EG"></span></li>
+                        <li><span class="flag-EH" title=".flag-EH"></span></li>
+                        <li><span class="flag-ER" title=".flag-ER"></span></li>
+                        <li><span class="flag-ES" title=".flag-ES"></span></li>
+                        <li><span class="flag-ET" title=".flag-ET"></span></li>
+                        <li><span class="flag-EU" title=".flag-EU"></span></li>
+                        <li><span class="flag-FI" title=".flag-FI"></span></li>
+                        <li><span class="flag-FJ" title=".flag-FJ"></span></li>
+                        <li><span class="flag-FK" title=".flag-FK"></span></li>
+                        <li><span class="flag-FM" title=".flag-FM"></span></li>
+                        <li><span class="flag-FO" title=".flag-FO"></span></li>
+                        <li><span class="flag-FR" title=".flag-FR"></span></li>
+                        <li><span class="flag-GA" title=".flag-GA"></span></li>
+                        <li><span class="flag-GB" title=".flag-GB"></span></li>
+                        <li><span class="flag-GD" title=".flag-GD"></span></li>
+                        <li><span class="flag-GE" title=".flag-GE"></span></li>
+                        <li><span class="flag-GG" title=".flag-GG"></span></li>
+                        <li><span class="flag-GH" title=".flag-GH"></span></li>
+                        <li><span class="flag-GI" title=".flag-GI"></span></li>
+                        <li><span class="flag-GL" title=".flag-GL"></span></li>
+                        <li><span class="flag-GM" title=".flag-GM"></span></li>
+                        <li><span class="flag-GN" title=".flag-GN"></span></li>
+                        <li><span class="flag-GQ" title=".flag-GQ"></span></li>
+                        <li><span class="flag-GR" title=".flag-GR"></span></li>
+                        <li><span class="flag-GS" title=".flag-GS"></span></li>
+                        <li><span class="flag-GT" title=".flag-GT"></span></li>
+                        <li><span class="flag-GU" title=".flag-GU"></span></li>
+                        <li><span class="flag-GW" title=".flag-GW"></span></li>
+                        <li><span class="flag-GY" title=".flag-GY"></span></li>
+                        <li><span class="flag-HK" title=".flag-HK"></span></li>
+                        <li><span class="flag-HN" title=".flag-HN"></span></li>
+                        <li><span class="flag-HR" title=".flag-HR"></span></li>
+                        <li><span class="flag-HT" title=".flag-HT"></span></li>
+                        <li><span class="flag-HU" title=".flag-HU"></span></li>
+                        <li><span class="flag-IC" title=".flag-IC"></span></li>
+                        <li><span class="flag-ID" title=".flag-ID"></span></li>
+                        <li><span class="flag-IE" title=".flag-IE"></span></li>
+                        <li><span class="flag-IL" title=".flag-IL"></span></li>
+                        <li><span class="flag-IM" title=".flag-IM"></span></li>
+                        <li><span class="flag-IN" title=".flag-IN"></span></li>
+                        <li><span class="flag-IQ" title=".flag-IQ"></span></li>
+                        <li><span class="flag-IR" title=".flag-IR"></span></li>
+                        <li><span class="flag-IS" title=".flag-IS"></span></li>
+                        <li><span class="flag-IT" title=".flag-IT"></span></li>
+                        <li><span class="flag-JE" title=".flag-JE"></span></li>
+                        <li><span class="flag-JM" title=".flag-JM"></span></li>
+                        <li><span class="flag-JO" title=".flag-JO"></span></li>
+                        <li><span class="flag-JP" title=".flag-JP"></span></li>
+                        <li><span class="flag-KE" title=".flag-KE"></span></li>
+                        <li><span class="flag-KG" title=".flag-KG"></span></li>
+                        <li><span class="flag-KH" title=".flag-KH"></span></li>
+                        <li><span class="flag-KI" title=".flag-KI"></span></li>
+                        <li><span class="flag-KM" title=".flag-KM"></span></li>
+                        <li><span class="flag-KN" title=".flag-KN"></span></li>
+                        <li><span class="flag-KP" title=".flag-KP"></span></li>
+                        <li><span class="flag-KR" title=".flag-KR"></span></li>
+                        <li><span class="flag-KW" title=".flag-KW"></span></li>
+                        <li><span class="flag-KY" title=".flag-KY"></span></li>
+                        <li><span class="flag-KZ" title=".flag-KZ"></span></li>
+                        <li><span class="flag-LA" title=".flag-LA"></span></li>
+                        <li><span class="flag-LB" title=".flag-LB"></span></li>
+                        <li><span class="flag-LC" title=".flag-LC"></span></li>
+                        <li><span class="flag-LI" title=".flag-LI"></span></li>
+                        <li><span class="flag-LK" title=".flag-LK"></span></li>
+                        <li><span class="flag-LR" title=".flag-LR"></span></li>
+                        <li><span class="flag-LS" title=".flag-LS"></span></li>
+                        <li><span class="flag-LT" title=".flag-LT"></span></li>
+                        <li><span class="flag-LU" title=".flag-LU"></span></li>
+                        <li><span class="flag-LV" title=".flag-LV"></span></li>
+                        <li><span class="flag-LY" title=".flag-LY"></span></li>
+                        <li><span class="flag-MA" title=".flag-MA"></span></li>
+                        <li><span class="flag-MC" title=".flag-MC"></span></li>
+                        <li><span class="flag-MD" title=".flag-MD"></span></li>
+                        <li><span class="flag-ME" title=".flag-ME"></span></li>
+                        <li><span class="flag-MF" title=".flag-MF"></span></li>
+                        <li><span class="flag-MG" title=".flag-MG"></span></li>
+                        <li><span class="flag-MH" title=".flag-MH"></span></li>
+                        <li><span class="flag-MK" title=".flag-MK"></span></li>
+                        <li><span class="flag-ML" title=".flag-ML"></span></li>
+                        <li><span class="flag-MM" title=".flag-MM"></span></li>
+                        <li><span class="flag-MN" title=".flag-MN"></span></li>
+                        <li><span class="flag-MO" title=".flag-MO"></span></li>
+                        <li><span class="flag-MP" title=".flag-MP"></span></li>
+                        <li><span class="flag-MQ" title=".flag-MQ"></span></li>
+                        <li><span class="flag-MR" title=".flag-MR"></span></li>
+                        <li><span class="flag-MS" title=".flag-MS"></span></li>
+                        <li><span class="flag-MT" title=".flag-MT"></span></li>
+                        <li><span class="flag-MU" title=".flag-MU"></span></li>
+                        <li><span class="flag-MV" title=".flag-MV"></span></li>
+                        <li><span class="flag-MW" title=".flag-MW"></span></li>
+                        <li><span class="flag-MX" title=".flag-MX"></span></li>
+                        <li><span class="flag-MY" title=".flag-MY"></span></li>
+                        <li><span class="flag-MZ" title=".flag-MZ"></span></li>
+                        <li><span class="flag-NA" title=".flag-NA"></span></li>
+                        <li><span class="flag-NC" title=".flag-NC"></span></li>
+                        <li><span class="flag-NE" title=".flag-NE"></span></li>
+                        <li><span class="flag-NF" title=".flag-NF"></span></li>
+                        <li><span class="flag-NG" title=".flag-NG"></span></li>
+                        <li><span class="flag-NI" title=".flag-NI"></span></li>
+                        <li><span class="flag-NL" title=".flag-NL"></span></li>
+                        <li><span class="flag-NO" title=".flag-NO"></span></li>
+                        <li><span class="flag-NP" title=".flag-NP"></span></li>
+                        <li><span class="flag-NR" title=".flag-NR"></span></li>
+                        <li><span class="flag-NU" title=".flag-NU"></span></li>
+                        <li><span class="flag-NZ" title=".flag-NZ"></span></li>
+                        <li><span class="flag-OM" title=".flag-OM"></span></li>
+                        <li><span class="flag-PA" title=".flag-PA"></span></li>
+                        <li><span class="flag-PE" title=".flag-PE"></span></li>
+                        <li><span class="flag-PF" title=".flag-PF"></span></li>
+                        <li><span class="flag-PG" title=".flag-PG"></span></li>
+                        <li><span class="flag-PH" title=".flag-PH"></span></li>
+                        <li><span class="flag-PK" title=".flag-PK"></span></li>
+                        <li><span class="flag-PL" title=".flag-PL"></span></li>
+                        <li><span class="flag-PN" title=".flag-PN"></span></li>
+                        <li><span class="flag-PR" title=".flag-PR"></span></li>
+                        <li><span class="flag-PS" title=".flag-PS"></span></li>
+                        <li><span class="flag-PT" title=".flag-PT"></span></li>
+                        <li><span class="flag-PW" title=".flag-PW"></span></li>
+                        <li><span class="flag-PY" title=".flag-PY"></span></li>
+                        <li><span class="flag-QA" title=".flag-QA"></span></li>
+                        <li><span class="flag-RO" title=".flag-RO"></span></li>
+                        <li><span class="flag-RS" title=".flag-RS"></span></li>
+                        <li><span class="flag-RU" title=".flag-RU"></span></li>
+                        <li><span class="flag-RW" title=".flag-RW"></span></li>
+                        <li><span class="flag-SA" title=".flag-SA"></span></li>
+                        <li><span class="flag-SB" title=".flag-SB"></span></li>
+                        <li><span class="flag-SC" title=".flag-SC"></span></li>
+                        <li><span class="flag-SD" title=".flag-SD"></span></li>
+                        <li><span class="flag-SE" title=".flag-SE"></span></li>
+                        <li><span class="flag-SG" title=".flag-SG"></span></li>
+                        <li><span class="flag-SH" title=".flag-SH"></span></li>
+                        <li><span class="flag-SI" title=".flag-SI"></span></li>
+                        <li><span class="flag-SK" title=".flag-SK"></span></li>
+                        <li><span class="flag-SL" title=".flag-SL"></span></li>
+                        <li><span class="flag-SM" title=".flag-SM"></span></li>
+                        <li><span class="flag-SN" title=".flag-SN"></span></li>
+                        <li><span class="flag-SO" title=".flag-SO"></span></li>
+                        <li><span class="flag-SR" title=".flag-SR"></span></li>
+                        <li><span class="flag-SS" title=".flag-SS"></span></li>
+                        <li><span class="flag-ST" title=".flag-ST"></span></li>
+                        <li><span class="flag-SV" title=".flag-SV"></span></li>
+                        <li><span class="flag-SY" title=".flag-SY"></span></li>
+                        <li><span class="flag-SZ" title=".flag-SZ"></span></li>
+                        <li><span class="flag-TC" title=".flag-TC"></span></li>
+                        <li><span class="flag-TD" title=".flag-TD"></span></li>
+                        <li><span class="flag-TF" title=".flag-TF"></span></li>
+                        <li><span class="flag-TG" title=".flag-TG"></span></li>
+                        <li><span class="flag-TH" title=".flag-TH"></span></li>
+                        <li><span class="flag-TJ" title=".flag-TJ"></span></li>
+                        <li><span class="flag-TK" title=".flag-TK"></span></li>
+                        <li><span class="flag-TL" title=".flag-TL"></span></li>
+                        <li><span class="flag-TM" title=".flag-TM"></span></li>
+                        <li><span class="flag-TN" title=".flag-TN"></span></li>
+                        <li><span class="flag-TO" title=".flag-TO"></span></li>
+                        <li><span class="flag-TR" title=".flag-TR"></span></li>
+                        <li><span class="flag-TT" title=".flag-TT"></span></li>
+                        <li><span class="flag-TV" title=".flag-TV"></span></li>
+                        <li><span class="flag-TW" title=".flag-TW"></span></li>
+                        <li><span class="flag-TZ" title=".flag-TZ"></span></li>
+                        <li><span class="flag-UA" title=".flag-UA"></span></li>
+                        <li><span class="flag-UG" title=".flag-UG"></span></li>
+                        <li><span class="flag-US" title=".flag-US"></span></li>
+                        <li><span class="flag-UY" title=".flag-UY"></span></li>
+                        <li><span class="flag-UZ" title=".flag-UZ"></span></li>
+                        <li><span class="flag-VA" title=".flag-VA"></span></li>
+                        <li><span class="flag-VC" title=".flag-VC"></span></li>
+                        <li><span class="flag-VE" title=".flag-VE"></span></li>
+                        <li><span class="flag-VG" title=".flag-VG"></span></li>
+                        <li><span class="flag-VI" title=".flag-VI"></span></li>
+                        <li><span class="flag-VN" title=".flag-VN"></span></li>
+                        <li><span class="flag-VU" title=".flag-VU"></span></li>
+                        <li><span class="flag-WF" title=".flag-WF"></span></li>
+                        <li><span class="flag-WS" title=".flag-WS"></span></li>
+                        <li><span class="flag-YE" title=".flag-YE"></span></li>
+                        <li><span class="flag-YT" title=".flag-YT"></span></li>
+                        <li><span class="flag-ZA" title=".flag-ZA"></span></li>
+                        <li><span class="flag-ZM" title=".flag-ZM"></span></li>
+                        <li><span class="flag-ZW" title=".flag-ZW"></span></li>
+                        <li><span class="flag-_abkhazia" title=".flag-_abkhazia"></span></li>
+                        <li><span class="flag-_basque-country" title=".flag-_basque-country"></span></li>
+                        <li><span class="flag-_british-antarctic-territory" title=".flag-_british-antarctic-territory"></span></li>
+                        <li><span class="flag-_commonwealth" title=".flag-_commonwealth"></span></li>
+                        <li><span class="flag-_england" title=".flag-_england"></span></li>
+                        <li><span class="flag-_gosquared" title=".flag-_gosquared"></span></li>
+                        <li><span class="flag-_kosovo" title=".flag-_kosovo"></span></li>
+                        <li><span class="flag-_mars" title=".flag-_mars"></span></li>
+                        <li><span class="flag-_nagorno-karabakh" title=".flag-_nagorno-karabakh"></span></li>
+                        <li><span class="flag-_nato" title=".flag-_nato"></span></li>
+                        <li><span class="flag-_northern-cyprus" title=".flag-_northern-cyprus"></span></li>
+                        <li><span class="flag-_olympics" title=".flag-_olympics"></span></li>
+                        <li><span class="flag-_red-cross" title=".flag-_red-cross"></span></li>
+                        <li><span class="flag-_scotland" title=".flag-_scotland"></span></li>
+                        <li><span class="flag-_somaliland" title=".flag-_somaliland"></span></li>
+                        <li><span class="flag-_south-ossetia" title=".flag-_south-ossetia"></span></li>
+                        <li><span class="flag-_united-nations" title=".flag-_united-nations"></span></li>
+                        <li><span class="flag-_unknown" title=".flag-_unknown"></span></li>
+                        <li><span class="flag-_wales" title=".flag-_wales"></span></li>
+                    </ul>
+<pre class="line-numbers"><code class="language-markup">&lt;i class=&quot;flag-[country code eg. GB, US]&quot;&gt;&lt;/i&gt;</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- google web fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: [
+                    'Source+Code+Pro:400,700:latin',
+                    'Roboto:400,300,500,700,400italic:latin'
+                ]
+            }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+
+    <!-- common functions -->
+    <script src="assets/js/common.min.js"></script>
+    <!-- uikit functions -->
+    <script src="assets/js/uikit_custom.min.js"></script>
+    <!-- altair common functions/helpers -->
+    <script src="assets/js/altair_admin_common.min.js"></script>
+
+
+    <script>
+        $(function() {
+            // enable hires images
+            altair_helpers.retina_images();
+            // fastClick (touch devices)
+            if(Modernizr.touch) {
+                FastClick.attach(document.body);
+            }
+        });
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-65191727-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <div id="style_switcher">
+        <div id="style_switcher_toggle"><i class="material-icons">&#xE8B8;</i></div>
+        <div class="uk-margin-medium-bottom">
+            <h4 class="heading_c uk-margin-bottom">Colors</h4>
+            <ul class="switcher_app_themes" id="theme_switcher">
+                <li class="app_style_default active_theme" data-app-theme="">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+                <li class="switcher_theme_a" data-app-theme="app_theme_a">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+                <li class="switcher_theme_b" data-app-theme="app_theme_b">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+                <li class="switcher_theme_c" data-app-theme="app_theme_c">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+                <li class="switcher_theme_d" data-app-theme="app_theme_d">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+                <li class="switcher_theme_e" data-app-theme="app_theme_e">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+                <li class="switcher_theme_f" data-app-theme="app_theme_f">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+                <li class="switcher_theme_g" data-app-theme="app_theme_g">
+                    <span class="app_color_main"></span>
+                    <span class="app_color_accent"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-visible-large uk-margin-medium-bottom">
+            <h4 class="heading_c">Sidebar</h4>
+            <p>
+                <input type="checkbox" name="style_sidebar_mini" id="style_sidebar_mini" data-md-icheck />
+                <label for="style_sidebar_mini" class="inline-label">Mini Sidebar</label>
+            </p>
+        </div>
+        <div class="uk-visible-large">
+            <h4 class="heading_c">Layout</h4>
+            <p>
+                <input type="checkbox" name="style_layout_boxed" id="style_layout_boxed" data-md-icheck />
+                <label for="style_layout_boxed" class="inline-label">Boxed layout</label>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            var $switcher = $('#style_switcher'),
+                $switcher_toggle = $('#style_switcher_toggle'),
+                $theme_switcher = $('#theme_switcher'),
+                $mini_sidebar_toggle = $('#style_sidebar_mini'),
+                $boxed_layout_toggle = $('#style_layout_boxed'),
+                $body = $('body');
+
+
+            $switcher_toggle.click(function(e) {
+                e.preventDefault();
+                $switcher.toggleClass('switcher_active');
+            });
+
+            $theme_switcher.children('li').click(function(e) {
+                e.preventDefault();
+                var $this = $(this),
+                    this_theme = $this.attr('data-app-theme');
+
+                $theme_switcher.children('li').removeClass('active_theme');
+                $(this).addClass('active_theme');
+                $body
+                    .removeClass('app_theme_a app_theme_b app_theme_c app_theme_d app_theme_e app_theme_f app_theme_g')
+                    .addClass(this_theme);
+
+                if(this_theme == '') {
+                    localStorage.removeItem('altair_theme');
+                } else {
+                    localStorage.setItem("altair_theme", this_theme);
+                }
+
+            });
+
+            // hide style switcher
+            $document.on('click keyup', function(e) {
+                if( $switcher.hasClass('switcher_active') ) {
+                    if (
+                        ( !$(e.target).closest($switcher).length )
+                        || ( e.keyCode == 27 )
+                    ) {
+                        $switcher.removeClass('switcher_active');
+                    }
+                }
+            });
+
+            // get theme from local storage
+            if(localStorage.getItem("altair_theme") !== null) {
+                $theme_switcher.children('li[data-app-theme='+localStorage.getItem("altair_theme")+']').click();
+            }
+
+
+        // toggle mini sidebar
+
+            // change input's state to checked if mini sidebar is active
+            if((localStorage.getItem("altair_sidebar_mini") !== null && localStorage.getItem("altair_sidebar_mini") == '1') || $body.hasClass('sidebar_mini')) {
+                $mini_sidebar_toggle.iCheck('check');
+            }
+
+            $mini_sidebar_toggle
+                .on('ifChecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.setItem("altair_sidebar_mini", '1');
+                    location.reload(true);
+                })
+                .on('ifUnchecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.removeItem('altair_sidebar_mini');
+                    location.reload(true);
+                });
+
+
+        // toggle boxed layout
+
+            // change input's state to checked if mini sidebar is active
+            if((localStorage.getItem("altair_layout") !== null && localStorage.getItem("altair_layout") == 'boxed') || $body.hasClass('boxed_layout')) {
+                $boxed_layout_toggle.iCheck('check');
+                $body.addClass('boxed_layout');
+                $(window).resize();
+            }
+
+            // toggle mini sidebar
+            $boxed_layout_toggle
+                .on('ifChecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.setItem("altair_layout", 'boxed');
+                    location.reload(true);
+                })
+                .on('ifUnchecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.removeItem('altair_layout');
+                    location.reload(true);
+                });
+
+
+        });
+    </script>
+</body>
+</html>

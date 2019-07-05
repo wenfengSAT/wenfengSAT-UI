@@ -1,0 +1,1 @@
+$(function(){altair_scrum_board.draggable_tasks()}),altair_scrum_board={draggable_tasks:function(){for(var a=dragula([$("#scrum_column_todo")[0],$("#scrum_column_inAnalysis")[0],$("#scrum_column_inProgress")[0],$("#scrum_column_done")[0]]),r=a.containers,s=r.length,l=0;s>l;l++)$(r[l]).addClass("dragula dragula-vertical")}};

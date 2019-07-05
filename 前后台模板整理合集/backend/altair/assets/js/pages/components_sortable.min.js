@@ -1,0 +1,1 @@
+$(function(){altair_sortable.dragula_sortable()}),altair_sortable={dragula_sortable:function(){for(var a=dragula([document.getElementById("dragula_sortable")]),r=a.containers,t=r.length,l=0;t>l;l++)$(r[l]).addClass("dragula");a.on("drop",function(){UIkit.$html.trigger("changed.uk.dom"),$window.resize()})}};
