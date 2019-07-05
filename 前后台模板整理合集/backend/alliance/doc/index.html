@@ -1,0 +1,1089 @@
+<!DOCTYPE html> 
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	
+	<title>Alliance - Theme Documentation</title>
+	
+	<meta name="description" content="Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to e-mail via our user page contact form here. Thank you!">
+	<meta name="author" content="ThemeREX">
+	<meta name="copyright" content="ThemeREX">
+	<meta name="date" content="2013-09-30T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="css/style.css" media="all" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css' />
+	
+	<script src="js/jquery.1.6.4.js"></script>
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+<div class="tail-right"></div>
+	<header id="header">
+		<div class="wrapper">
+			<div class="doc-title"><span>Documentation</span> for Alliance - A Responsive Bootstrap 3 Admin Dashboard Template by <a href="http://themeforest.net/user/themerex/portfolio" target="_blank" title="Our portfolio">ThemeREX</a>.</div>
+			<a href="http://alliance_html.themerex.net" class="demo-link" target="_blank">View Demo</a>
+		</div>
+	</header>
+	<div id="main-wrapper">
+		
+		
+		<div id="main" class="clearfix">
+			<aside id="sidebar" class="sidebar">
+				<div id="logo"><span style="color: #00D7E3;">Alliance</span></div>
+				<ul id="doc-nav">
+				</ul>
+			</aside>
+			
+			
+			
+			<div id="content">
+					
+			
+<section id="general">
+  
+    <h3>General Information</h3>
+
+    <p>Thank you for purchasing our theme! We are happy that you are one of our customers and we do our best to provide high quality themes and appropriate technical support assistance.</p>
+<p><strong>Alliance - Responsive Bootstrap 3 Admin Dashboard Template </strong> by ThemeREX is a powerful platform for your project web app built using Bootstrap 3 with LESS. It offers ready designs, multiple pages, management tools, forms, widgets, layout templates, color schemes, user interfaces, graphs, extended search forms, etc. with working animation effects.</p>
+   
+   <h5>Technical Support</h5>
+    <p>Before you get started, we highly encourage you to get
+        familiar with this documentation file. Spending half an hour reading the manual may save lots of
+        your time and help you to avoid questions with obvious answers. If you have any questions that are beyond the scope of this help file, please feel free to post
+        them on our support forum at <a href="http://themerex.ticksy.com/" target="_blank">http://themerex.ticksy.com</a>.
+    </p>
+
+    <p>
+        <p>
+        <small class="error">
+            <span>Please Note!</span>
+        </small><br>To get tech support, you will need your purchase code. To get the code, please go to your ThemeForest download page and click on theme download link.
+        Here you should stick with the last option and download text file containing your license details and purchase code proving your order.<br>
+        <p>Our support covers assistance for basic theme features and any issues you may encounter when using the theme.
+        Unfortunately, we cannot provide support for customization or 3rd party applications. If you need help
+        with the customization of your theme, you should enlist the help of a developer.
+    </p>
+</section>
+
+<section id="getting_started">
+      <h3>Getting started</h3>
+	  
+	 <h5>File structure</h5>
+	 <p>As soon as you extract the downloaded archive, you will see the following folders:</p>
+	 <ul>
+						<li><strong>Assets/ </strong>: contains core source files of the admin theme.
+							<ul>
+								<li><strong>admin/</strong>: includes custom <i>forms</i> plugin, its css, js and less files.</li>
+								<li><strong>fonts/</strong> : contains the copies of the fonts used in the theme. All of the stylesheets in this folder have been combined and placed into  theme css file. These stylesheets have been
+placed here for reference only.</li>
+<ul>
+								<li>
+ Font Awesome library</li>
+<li> Glyphicons Halflings library</li>
+<li> Icomoon</li>
+<li> Iconsweets</li>
+<li> Octicons</li>
+<li> Open Sans</li>
+<li> Stateface</li>
+<li> Themerex</li>
+<li> Zocial</li>
+</ul>
+								<li><strong>img/ </strong>: the images used throughout the theme. Images from subfolder <i>plugins/</i> should not be removed.</li>
+								<li><strong>js/</strong>: the theme  javascript files.</li>
+								<li><strong>skin/</strong>: contains Less files.</li>
+								<li><strong>templates/</strong>: includes <i>email</i> templates and their source files.</li>
+							</ul>
+						</li>
+						<li><strong>doc/ </strong>: This folder contain the documentation of the theme.</li>
+						<li><strong>HTML files</strong> of the theme. Their structure and functionality will be described in the next sections.
+					</ul>
+	
+	</section>
+<section id="layout_templates">
+      <h3>Layout templates</h3>
+	  This section covers basic layout components: markup, classes and tags used in the theme for main skin elements.
+	  <section id="sidebars">
+	  <h4>Sidebars</h4>
+	  <p>With the help of additional classes, you set the positioning and state (expanded/minified) of sidebars.</p>
+	  <ol>
+	  <li><strong>Left static </strong>/sidebar-left-static.html/ 
+	  <p>Left static sidebar is created adding: </p>
+	 <textarea><aside id="sidebar_left" class="">..</aside></textarea>
+<p> In order to have it expanded (default state) <i>.sb-l-o</i> class is added to the body tag:	 </li>
+ <textarea><body class="sb-l-o"> </textarea>
+	  <li><strong>Left fixed </strong>/sidebar-left-fixed.html/ </li>
+	  <p>In case you need a fixed positioning for the sidebar, class <strong>.affix</strong> is added:</p>
+	   <textarea><aside id="sidebar_left" class="affix">..</aside> </textarea>
+	  <p>With fixed sidebar, you will see a scrollbar if the list of content is longer than the screen height:</p>
+	 <p><img width="250" src="images/fixed_sidebar.png"></p>
+	  <li><strong>Left minified</strong> /sidebar-left-minified.html/ : this state of left sidebar is created with <i>.sb-l-m</i> class added to the body tag. The submenu items are seen on hover.<br></li>
+	   <textarea><body class="sb-l-m"> </textarea>
+	  <p><img width="250" src="images/minified_sidebar.png"></p>
+	  <p>In order to have the sidebar hidden by default, use <i>.sb-l-c</i> added to the body tag.</p>
+<textarea><body class="sb-l-c"></textarea>	 <p> The menu is expanded clicking icon <img width="50" src="images/icon.png">.</p>
+	  <li><strong>Right fixed</strong>/sidebar-right-fixed.html/ </li>
+	 <p>In case you need a fixed positioning for the right sidebar, <strong>class="affix"</strong> is added:</p>
+	   <textarea><aside id="sidebar_right" class="affix">..</aside> </textarea>
+	  <p>You will see the sidebar even when scrolling the page, its position is fixed on the page:
+	 <p><img width="850" src="images/right_fixed.png"></p>
+	  <li><strong>Right static</strong> /sidebar-right-menu.html/</li>
+	  <p>Right static sidebar is created adding </p>
+	  <textarea><aside id="sidebar_right" class="">..</aside> </textarea> </li>
+	   </section>
+	   <section id="navigation">
+	   <h4>Navigation</h4>
+	   <p>Navigation bar is created using <i>.navbar </i> class. It can be 
+	   <ul>
+	   <li><strong>Static</strong> /navigation-static.html/  - not seen when scrolling the page:</p>
+	   <textarea><header class="navbar">..</header></textarea></li>
+	  <li><strong>Fixed</strong> /navigation-fixed.html/  - its position is fixed at the top when scrolling. </p>
+	    <textarea><header class="navbar navbar-fixed-top">..</header></textarea>
+		<p>The example you can see below:</p>
+		<img width="850" src="images/navigation-fixed.png"></li>
+	   </section>  
+	  <section id="topbar">
+	   <h4>Topbar</h4>
+	   <ol>
+	   <li>
+	   	   <p><strong>Default</strong> top navigation bar /top-panel.html/ includes the following elements with working jQuery:
+	   <ul>
+	   <li> Dropdown menu</li>
+	   <p><img width="850" src="images/dropdown.png"></p>
+	    <li>Search field which requires additional scripts if you want to have it working.</li>
+		<li>Icon to expand additional dropmenu panel:</li>
+		<p><img width="850" src="images/dropmenu.png"></p>
+		<li>Icon to expand the panel with last activities/messages/notifications:</li>
+		<p><img width="350" src="images/last_activities.png"></p>
+		<li>Icon to expand a scrollable activity reports panel:</li>
+	<p><img width="350" src="images/activity_reports.png"></p>
+	<li>Language selector</li>
+	<li>User login panel</li>
+	<p><img width="350" src="images/user_panel.png"></p>
+	</ul>
+	</li>
+	<li><p><strong>With menu</strong> /top-panel-menu.html/: this top navigation bar includes left and right menu bars, in addition:</p>
+	<textarea><div class="topbar-left"></textarea>
+	<textarea><div class="topbar-right"></textarea>
+	<p><img width="850" src="images/with_menu.png"></p></li>
+	</section>  
+	<section id="content_body">
+	   <h4>Content Body</h4>
+	   <ul>
+	   <li> Blank /content-blank.html/: the title goes under the header when scrolling. <strong>.blank-page</strong> is added to the body tag.</li>
+	   <textarea><body class="blank-page"> ..</body></textarea>
+	   <p><img width="850" src="images/blank_content.png"></p></li>
+	   <li> Fixed /content-fixed.html/: the content tray is scrolled on the page, while the header and left sidebar stay fixed.</li>
+	    <p><img width="850" src="images/fixed_content.png"></p></li>
+	   <li> Hero Content /content-hero.html/: page heading has a another style. Its content is wrapped in <strong>.page-heading</strong>.</li>
+	   <p><img width="850" src="images/hero-content.png"></p></li>
+	   </ul>
+	</section>
+	<section id="content_trays">
+	   <h4>Content Trays</h4>
+	   <p>Using <strong>.tray</strong>, several content blocks of different positioning and state can be created on the page:
+	   <p><img width="850" src="images/trays.png"></p>
+	    <ul>
+	   <li> <strong>Left Static </strong>/tray-left.html/</li>
+	   	   <textarea><aside class="tray tray-left">.....</aside></textarea>
+	   <li><strong> Left Fixed</strong> /tray-left-fixed.html/: In order to have the tray fixed on the page, when the page is scrolled, you should wrap its content in <strong>.scroller-bar</strong>:</li>
+	   <textarea><aside class="tray tray-left">
+	   <div class="scroller-bar">...</div>
+	   </aside>
+	   </textarea>
+	    <li> <strong>Right Static </strong>/tray-right.html/</li>
+		 <li> <strong>Right Fixed </strong>/tray-right-fixed.html/</li>
+		  <li> <strong>Left and Right Static </strong>/tray-both.html/: In this case three trays are added to the page: left, center, and right.</li>
+		   <li> <strong>Left and Right Fixed </strong>/tray-both-fixed.html/.
+		   This page layout is created using the above-mentioned classes, in addition .scroller-bar is added to fixed trays.</li>
+		    
+	     </ul>
+	   
+	   
+	   </section>
+	   <section id="boxed_frontpage">
+	   <h4>Boxed Frontpage</h4>
+	   <ul>
+	   <li> <strong>Default </strong> /boxed-default.html/: the layout with boxed body style, the background color is seen on its both sides. It is set using <strong>.boxed-layout</strong> added to the body tag:</li>
+	   <textarea><body class = "boxed layout"> ...</body></textarea>
+	   <p><img width="850" src="images/boxed_frontpage.png"></p>
+	   <li> <strong>Optional Navigation </strong> /horizontal-navigation-boxed.html/: this layout template has top horizontal navigation created with <strong>.sb-top</strong> added to the body tag:</li>
+	   <textarea><body class="boxed-layout sb-top">..</body></textarea>
+	   <p><img width="850" src="images/horizontal-menu.png"></p>
+	   </section>
+	   <section id="horizontal_navigation">
+	   <h4>Horizontal Navigation</h4>
+	   <p>As mentioned above, .sb-top added to body tag creates horizontal navigation bar. Depending on the class you utilize, you can have it <strong>Medium</strong> (default state, does not require additional markup), <strong>Small</strong> (.sb-top-sm) and <strong>Large </strong>(.sb-top-lg).</p>
+	  <p><img width="750" src="images/large-horizontal.png"> <textarea><body class="sb-top sb-top-lg">...</body></textarea></p></li>
+	  <p><img width="750" src="images/medium-horizontal.png"></p><textarea><body class="sb-top">...</body></textarea></li>
+	  <p><img width="750" src="images/small-horizontal.png"></p><textarea><body class="sb-top sb-top-sm">...</body></textarea></li>
+	
+		</section>   
+	</section>
+	<section id="management_tools">
+      <h3>Management tools</h3>
+	  The theme includes multiple tools which can be used for your project web app allowing you to change a panel title, position, view, etc. You can edit, sort, filter, remove panels - and all these changes are saved via local storage after refreshing. 
+	  <section id="panels">
+	   <h4>Panels</h4>
+	   <p>Please check management-tools-panels.html file to see the examples of panel types. By default, <strong>.panel</strong> is used to create different types of content blocks with border and padding for user interface:</p>
+	   <textarea>
+<div class="panel">
+<div class="panel-body">Content here</div>
+</div>
+</textarea>
+	   <ul>
+	   <li> <strong>Editable title </strong>: this kind of panel has edit/save options allowing the user to edit the title and save it.</li> 
+	   <p><img width="850" src="images/editable-title.png"></p>
+	   <li> <strong>Scrollable panel </strong>: the panel with a scrollbar of fixed height.</li>
+<p><img width="850" src="images/scrollable-panel.png"></p>	   
+	   <li> <strong>Fullscreen panel </strong>:the user can expand the panel to the fullscreen mode. </li>
+	   <p><img width="850" src="images/fullscreen-panel.png"></p>
+	   <li> <strong>Minimizable panel </strong> can be minimixed and opened again using panel controls. </li>
+	   <p><img width="850" src="images/minimizable-panel.png"></p>
+	   <li> <strong>Filter panel </strong> creates the block of elements tha can be filtered.</li>
+	   <p><img width="850" src="images/filter-panel.png"></p>
+	   <li> <strong>Options panel </strong>: has a set of all controls mentioned in previous panel types: delete option (with popup message "Are you sure?"), edit, save, and fullscreen buttons.</li>
+	   <p><img width="850" src="images/options-panel.png"></p>
+	   <li> <strong>Removable panel </strong>: the panel which can be removed from the website.</li>
+	   <p><img width="850" src="images/removable-panel.png"></p>
+	   <li> <strong>Sortable panels </strong>: you can drag the panel to the needed position. </li>
+	   <p><img width="350" src="images/sortable-panel.png"></p>
+	   </ul>
+	   
+	   
+	   </section>
+	   <section id="modals">
+	   <h4>Modals</h4>
+	   <p> Each modal is wrapped in <strong>.holder-style</strong>. When the modal is selected, it automatically becomes <strong>.holder-active</strong>.</p>
+	  <p>There are different Modal Content Types included in the theme. Icons from FontAwesome library are added with <strong>.fa</strong>:</p>
+	  <p><img width="850" src="images/modal_content_types.png"></p>
+	  <ul>
+	   <li><strong>Image</strong>: .fa-picture-o</li>
+	   <textarea><a class="holder-style holder-active"><span class="fa fa-picture-o"></span><br> Image</a></textarea>
+	   <li><strong>Text</strong>: .fa-align-justify</li>
+	   <li><strong>Form</strong>: .fa-list-alt</li>
+	   <li><strong>Panel</strong>: .fa-calendar-o</li>
+	   </ul>
+			   
+	   
+	   <p>The page also illustrates what animation effects can be added to any element, it is achieved adding <strong>"data-effect"</strong> attribute to each button tag, for example:</p>
+	   <textarea><button class="" data-effect="mfp-flipInY">..</button></textarea>
+	   <p>The name of class name for each animation effect can be found in management-tools-panels.html file.</p>
+	   </section>
+	   <section id="dock">
+	   <h4>Dock</h4>
+	   <p>Management-tools-dock.html file shows that any type of content/media can be sent to AdminDock. Each item is wrapped in <strong>.holder-style</strong> and has a link to <strong>"dock-content"</strong> id:</p>
+	   <textarea><a class="holder-style" href="#dock-image"></a></textarea>
+	   <p><img width="850" src="images/tool-dock.png"></p>
+	   <p>Dock-content HTML looks like this:</p>
+	   <textarea><div id="dock-content">
+	   <div id="dock-image">
+	   <div class="dock-item" data-title="Title_here">Content here </div>
+	   </div>
+	   </div>
+								  </textarea>
+	   
+	   </section>
+	   </section>
+	  	   <section id="forms">
+	   <h3>Forms</h3>
+	   <p>The theme allows you to create catchy forms very quickly using various classes and attributes depending on the look and functionality you need.</p>
+	   <section id="inputs">
+	   <h4>Inputs</h4>
+	   <p>Forms allow you to gather the needed information about website visitors. These are basic rules you should follow to create a user form:
+	   <ul>
+	   <li><strong>Text input</strong> is wrapped in label with utility class .field. Text-based input fields includes support for all HTML5 types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", and "color".</li> 
+	   <textarea><label class="field">
+                            <input type="text" name="from" id="from" class="gui-input" placeholder="Input">
+                          </label></textarea>
+						  <li><strong>Disabled input field</strong>: you can add attribute <strong>"disabled"</strong> to have inactive fields and the corresponding style:</li>
+<textarea><label class="field">
+                            <input type="text" name="from" id="from" class="gui-input" placeholder="Disabled"
+                                   disabled>
+                          </label></textarea>	
+<p><img width="650" src="images/input.png"></p>
+<li>Use Bootstrap predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <strong>.form-horizontal</strong> to the form. Doing so changes .form-groups to behave as grid rows, so no need for .row.</li>
+<li><strong>Fields with icons </strong>are created using <strong>.prepend-icon</strong> for left icon alignment and <strong>.append-icon</strong> - for right icon alignment:</li>
+<p><img width="450" src="images/input-icon.png"></p>
+<textarea><label class="field prepend-icon">
+                            <input type="text" name="firstname" id="firstname" class="gui-input"
+                                   placeholder="Input icon left">
+                            <label for="firstname" class="field-icon">
+                              <i class="fa fa-user"></i>
+                            </label>
+                          </label></textarea>	
+					  
+	<li> <strong>Select menus </strong>are created using <strong>select</strong>, each item is wrapped in <strong>option</strong>, .arrow class allows to add the arrow to expand options :</li>
+<p><img width="450" src="images/input-select.png"></p>
+	<textarea><label class="field select">
+                            <select id="country" name="country">
+                              <option value="">Select with single arrow</option>
+                              <option value="AL">Option #1</option>
+                              <option value="DZ">Option #2</option>
+                            </select>
+                            <i class="arrow"></i>
+                          </label></textarea>	
+						   </section>
+						  <section id="tooltips">
+	   <h4>Input tooltips</h4>
+	   <p>In order to add some explanation tips on what information should be entered in the field, input tooltips are used.</p>
+	   <p><img width="450" src="images/tooltip.png"></p>
+	   <p>They are added as additional <strong>.tooltip</strong> inside the label:</p>
+						  <textarea><label class="field prepend-icon">
+                            <input type="text" name="tooltip4" id="tooltip4" class="gui-input" placeholder="Top Left">
+                            <b class="tooltip tip-left-top"><em> I am a top left aligned tooltip! Pretty useful
+                              huh.</em></b>
+                            <label for="tooltip4" class="field-icon">
+                              <i class="fa fa-sign-out"></i>
+                            </label>
+                          </label></textarea>
+						  <p>The positioning of the tooltip box is set using a utility class added to .tooltip: <strong>.tip-left-top/.tip-left/.tip-right/.tip-right-top/.tip-right-bottom/.tip-left-bottom </strong>.
+	   
+	   
+	   </section>
+	   <section id="validation">
+	   <h4>Validation states</h4>
+	   	<p><img width="650" src="images/validation.png"></p>   
+	   <p>There are validation styles for such basic states as error, warning, and success on form controls. To use, add .has-warning, .has-error, or .has-success to the parent element. In addition, you can have .has-primary, .has-info, .has-system, .has-alert states styled correspondinly. Any .control-label, .form-control, and .help-block within that element will receive the validation styles.</p>
+	    </section>
+	   <section id="input_addons">
+	   <h4>Input Addons</h4>
+	   <p>There are many other additional classes which allow you to style your input and submit fields:</p>
+	   <ul>
+	   <li>In order to have a field with a button, wrap your "label" inside <strong>.smart-widget</strong>. The positioning of the button is set with the left of .sm-right/.sm-right:
+	   <p><img width="350" src="images/smart-widget.png"></p>
+	   <textarea>
+	   <div class="smart-widget sm-right smr-80">
+                            <label class="field prepend-icon">
+                              <input type="text" name="sub2" id="sub2" class="gui-input"
+                                     placeholder="Padding right 80">
+                              <label for="s" class="field-icon">
+                                <i class="fa fa-search"></i>
+                              </label>
+                            </label>
+                            <button type="submit" class="button">Search</button>
+                          </div></textarea>
+						  <li>The button width is specified using utility classes like .smr-80/.smr-50/.smr-120/.smr-140/.smr-160 (for right button alignemnt) and  .smr-80/.smr-50/.smr-120/.smr-140/.smr-160 (for left button alignment).</li>
+						  </ul>
+	    <p><img width="750" src="images/input_addons.png"></p>
+	   
+	    </section>
+		
+		<section id="file_uploaders">
+	   <h4>File uploaders</h4>
+	   <p>Feel free to add file uploaders with ready JQuiery and using the following markup:</p>
+	   <li>.prepend-icon</strong> for left icon alignment and <strong>.append-icon</strong> - for right icon alignment;</li>
+	   <li>.prepend-button</strong> for left button alignment and <strong>.append-icon</strong> - for right button alignment;</li>
+	   
+	   <p>
+	    <p><img width="750" src="images/uploaders.png"></p>
+		<textarea><label class="field prepend-icon append-button file">
+                            <span class="button">Choose File</span>
+                            <input type="file" class="gui-file" name="file1" id="file1"
+                                   onChange="document.getElementById('uploader1').value = this.value;">
+                            <input type="text" class="gui-input" id="uploader1" placeholder="Please Select A File">
+                            <label class="field-icon">
+                              <i class="fa fa-cloud-upload"></i>
+                            </label>
+                          </label></textarea>
+		
+	  </section>
+	  
+	  <section id="radios">
+	   <h4>Radios and Checkboxes</h4>
+	   <p><img width="350" src="images/radio.png"></p>
+	   <p>Each checkbox/radio is added using the following HTML, you should only change input type to "radio" to have it in radio style:</p>
+	  <textarea><label class="option block">
+                              <input type="checkbox" name="checked" value="checked" checked>
+                              <span class="checkbox"></span>Check</label>
+                            <label class="option block">
+                              <input type="checkbox" name="disabled" value="disabled" disabled>
+                              <span class="checkbox"></span>Disabled</label>
+                            <label class="option block">
+                              <input type="checkbox" name="inputname" value="CH">
+                              <span class="checkbox"></span>Empty</label></textarea>
+							  <p>Attributes "checked" and "disabled" are used to have selected or disabled checkbox by default.</p>
+	   </section>
+	  <section id="switches">
+	   <h4>Toggle Switches</h4>
+	  <p>Toggles use almost the same markup as checkboxes, just specify lable class as "switch block". The switch has a rectangular shape by default, if you add utility class <strong>.switch-round</strong>, it will be rounded:</p>
+<p><img width="250" src="images/switches.png"></p>	 
+	 <textarea>	  
+	  <label class="switch block">
+                          <input type="checkbox" name="s1" id="t4" value="admin" checked>
+                          <label for="t4" data-on="YES" data-off="NO"></label>
+                          <span>Switch #1</span>
+                        </label></textarea>
+	  </section>
+	  
+	  <section id="reviews">
+	   <h4>Reviews and Rating widget</h4>
+	   
+	   <p><img width="250" src="images/reviews.png"></p>	
+	   <p>HTML for Rating block:</p>
+	   <textarea><span class="rating block">
+                          <span class="lbl-text">Design</span>
+                          <input class="rating-input" id="r5" type="radio" name="design" checked>
+                          <label class="rating-star" for="r5">
+                            <i class="fa fa-star"></i>
+                          </label>
+                          <input class="rating-input" id="r4" type="radio" name="design">
+                          <label class="rating-star" for="r4">
+                            <i class="fa fa-star"></i>
+                          </label>
+                          <input class="rating-input" id="r3" type="radio" name="design">
+                          <label class="rating-star" for="r3">
+                            <i class="fa fa-star"></i>
+                          </label>
+                          <input class="rating-input" id="r2" type="radio" name="design">
+                          <label class="rating-star" for="r2">
+                            <i class="fa fa-star"></i>
+                          </label>
+                          <input class="rating-input" id="r1" type="radio" name="design">
+                          <label class="rating-star" for="r1">
+                            <i class="fa fa-star"></i>
+                          </label>
+                        </span></textarea>
+	   
+	   </section>
+	    <section id="user_forms">
+	   <h4>User forms</h4>
+	   <p>The theme utilizes multiple 3rd party plugins for user forms. Here is the list of some of them:</p>
+	   <ol>
+	   <li><strong>CKEditor</strong>: documentation is at <a href="http://docs.cksource.com/" target="_blank">http://docs.cksource.com/</a></li>
+	   <p><img width="850" src="images/ckeditor.png"></p>
+	   <li><strong>Markdown editor</strong>. Please follow this link to check the plugin documentation <a href="http://markitup.jaysalvat.com/documentation/" target="_blank">http://markitup.jaysalvat.com/documentation/</a>.</li>
+	     <p><img width="850" src="images/markdown.png"></p>
+		 <li><strong>Summernote editor</strong> documentation is at <a href="http://summernote.org/jsduck/" target="_blank">http://summernote.org/jsduck/</a></li>
+	     <p><img width="850" src="images/summernote.png"></p>
+		 <li><strong>XEditable editing</strong>. Please follow this link to check plugin documentation: <a href="http://vitalets.github.io/x-editable/docs.html" target="_blank">http://vitalets.github.io/x-editable/docs.html</a>.</li>
+	     <p><img width="850" src="images/xeditable.png"></p>
+	   
+	   </section>
+	   <section id="admin_forms">
+	   <h4>Admin forms</h4>
+	   <p>Feel free to use pre-designed admin forms for sales statistics:</p>
+	   <ul>
+	   <li>Add new product</li>
+	   <p><img width="850" src="images/new_product.png"></p>
+	   <li>Filter products</li>
+	   <p><img width="350" src="images/filter_product.png"></p>
+	   <li>Orders</li>
+	   <p><img width="850" src="images/orders.png"></p>
+	   <li>Users</li>
+	   <p><img width="850" src="images/users.png"></p>
+	   <li>Settings</li>
+	   <p><img width="850" src="images/settings.png"></p>
+	   </ul>
+	   </section>
+	   </section>
+	  
+	  <section id="widgets">
+	   <h3>Widgets</h3>
+	   <section id="scrollers">
+	   <h4>Scrollers and Tiles</h4>
+	   <h5>Scrollers</h5>
+	   <p>In order to use a scroller in the block, <strong>.panel-scroller</strong> is added to panel body.</p>
+	   <textarea><div class="panel-body panel-scroller "> ..</div></textarea>
+	   <p>Additional markup is added to specify the height and style of the scrollbar:</p>
+	   <ol>
+	   <p><i><strong>Color and style options:</strong></i></p>
+	   <li>.scroller-primary:  blue scroller handle.</li>
+	   <p><img width="250" src="images/scroller-primary.png"></p>
+	   <li>.scroller-success:  green scroller handle.</li>
+	   <li>.scroller-info:  scroller handle of #4fd8b0 color.</li>
+	   	   <li>.scroller-warning:  scroller handle of #ff7022 color (orange). </li>
+		   <li>.scroller-thick:  to make the handle thick (thin is a default state). </li>
+		  <p> On the example below thick scroller handle of orange color is displayed:</p>
+		   <p><img width="250" src="images/scroller-thick.png"></p>
+		   
+	   <p><i><strong>Height Options: </strong></i></p>
+	   <li>.scroller-xs   height: 125px;</li>
+  
+<li>.scroller-sm   height: 200px;</li>
+  
+<li>.scroller-md   height: 300px;</li>
+  
+<li>.scroller-lg 
+  height: 400px;</li>
+  <p><img width="850" src="images/scroller-height.png"></p>
+  <h5>Tiles</h5>
+  <p>Tiles are added to the panel using <strong>.panel-tile</strong> added to the .panel.
+  The HTMl for the following tiles can be found on widgets-scrollers-tiles.html page:
+  <p><img width="850" src="images/tiles.png"></p>
+  <p>Each panel contains .panel-body and, if there is a need, <strong>.panel-footer</strong>:</p>
+  <textarea><div class="panel panel-tile">
+  <div class="panel-body"> .. </div>
+  <div class="panel-footer"> ..</div>
+  </div></textarea>
+  
+ 
+	   
+	   </section>
+	   <section id="widget_panels">
+	   <h4>Panels</h4>
+	   There are different types of widget panels included. They are illustrated in widgets-panels.html file:
+	   <ol>
+	   <li><strong>Calendar widget</strong>: just add #calendar-widget to the panel body:</li>
+	   <textarea> <div class="panel-body">
+	   <div id="calendar-widget"></div>
+	   </div></textarea>
+	   <p><img width="400" src="images/calendar-widget.png"></p>
+	   <p>Fullcalendar plugin is used to create the widget. To get more information on the plugin, please check the following link: <a href ="http://fullcalendar.io/docs/" target="_blank">http://fullcalendar.io/docs/</a>.
+	   <li><strong>Chat widget</strong>:</li>
+	   <p>Each user avatar and message is wrapped in <strong>.media</strong>, the image is in .media-left, the message - in .media-body.
+	    <p><img width="400" src="images/chat-widget.png"></p>
+		<p>All the content of the widget is entered directly to widgets-panels.html file.
+	   <li><strong>Quick post widget</strong>:</li>
+	    <p><img width="400" src="images/quick-post.png"></p>
+		<p>Class <strong>"summernote-quick"</strong> creates editor block in the panel body:</p>
+		<textarea><div class="panel-body"> 
+		<div class="summernote-quick">Compose your message here...</div> 
+		</div></textarea>
+		<p>Summernote plugin is applied here, for more details please check its documentation file at <a href ="http://summernote.org/jsduck/" target="_blank">http://summernote.org/jsduck/</a>
+	   <li><strong>Quick draft widget</strong>:</li>
+	   <p>Class <strong>"admin-form"</strong> allows you to add the admin form easily.</p>
+	   	    <p><img width="400" src="images/quick-draft.png"></p>
+	   <li><strong>Task list widget</strong>:</li>
+	   <p><strong>.task-list</strong> is added to ul tag, list items are created with <strong>.task-item </strong> added to li tag.</p>
+	   <p><a href="https://jqueryui.com/sortable/"  target="_blank">JQuery Sortable</a> is applied for the widget.
+	    <p><img width="400" src="images/task-list.png"></p>
+	   <li><strong>Timeline widget</strong>:</li>
+	   <p>All the content of the widget is added/edited in HTML file.</p>
+	    <p><img width="400" src="images/timeline-widget.png"></p>
+		<textarea> <div class="panel-body">
+		<ol class="timeline-list"> 
+		<li class="timeline-item">  .. </li>
+		</ol></textarea>
+	   <li><strong>Newsletter widget</strong></li>
+	    <p><img width="400" src="images/newsletter-widget.png"></p>
+		Here is the HTML for the form:
+		<textarea><div class="input-group">
+		<input type="text" class="form-control" placeholder="Enter your message here...">
+		<span class="input-group-btn">
+		<button class="btn btn-default btn-primary" type="button">Sign Up!</button>
+		</span>
+		</div></textarea>
+		<li><strong>Tag cloud widget</strong>: provides a ready design for tag clouds. The widget HTML can be found in widgets-panels.html file.</li>
+	    <p><img width="400" src="images/tag-cloud.png"></p>
+	   <li><strong>Tag group widget</strong>: The widget HTML can be found in widgets-panels.html file.</li>
+	    <p><img width="400" src="images/tag-group.png"></p>
+		<li><strong>User group widget</strong>:The widget HTML can be found in widgets-panels.html file.</li>
+	    <p><img width="700" src="images/user-group-widget.png"></p>
+		</ol>
+	   </section>
+	   <section id="widget_tools">
+	   <h4>Tools</h4>
+	   <p>The page illustrates graphs and charts that can be built using the theme. <strong>3rd party</strong> plugins are used here. The content is loaded both from html and js files.</p>
+	   <ol>
+	   <li><strong>Traffic sources</strong>: Highcharts - High Line 3.</li>
+	   
+	   <p><img width="350" src="images/high_chart.png"></p>
+	   <p>The content of the High chart is located in assets/js/demo/charts/highcharts.js file. For more details, please check plugin documentation at <a href="http://api.highcharts.com/highcharts">http://api.highcharts.com/highcharts</a>.
+	   <li><strong>Traffic sources (column)</strong>: the graphs are added using <strong>progress bars</strong>.</li>
+	   <p><img width="350" src="images/progress-bar-widget.png"></p>
+	   <li><strong>Server stats</strong>: Charts - C3 Charts: Guage Chart.</li>
+	   <p><img width="350" src="images/gauge.png"></p>
+	   <p>The content of the Guage Chart is located in assets/js/demo/charts/d3.js file. Th plugin documentation can be found at <a href="http://c3js.org/reference.html" target="_blank">http://c3js.org/reference.html</a>.
+	   <li><strong>Visitor geography</strong>: JVectorMap Plugin - Widget VectorMap.</li>
+	   <p><img width="350" src="images/jvector.png"></p>
+	   <p>For more details please check plugin documentation at <a href="http://jvectormap.com/documentation/  target="_blank"">http://jvectormap.com/documentation/</a>.
+	   <li><strong>Visitor graph widget</strong>: Charts - C3 Charts: Area Chart.</li>
+	      <p><img width="350" src="images/area-chart.png"></p>
+	   <p>The content of the Area Chart is located in assets/js/demo/charts/d3.js file. Th plugin documentation can be found at <a href="http://c3js.org/reference.html" target="_blank">http://c3js.org/reference.html</a>.
+	   <li><strong>Visitors by country</strong>: Highcharts - End high columns (high bars).</li>
+	   <p><img width="350" src="images/high_bars.png"></p>
+	   <p>The content of the chart is located in assets/js/demo/charts/highcharts.js file. For more details, please check plugin documentation at <a href="http://api.highcharts.com/highcharts" target="_blank">http://api.highcharts.com/highcharts</a>.
+	   <li><strong>Traffic sources (circular)</strong>: Highcharts - Circle Graph.</li>
+	   <p><img width="350" src="images/circle-graph.png"></p>
+	   <p>The graph content is in assets/js/demo/charts/highcharts.js file. For more details, please check plugin documentation at <a href="http://api.highcharts.com/highcharts" target="_blank">http://api.highcharts.com/highcharts</a>.
+	   <li><strong>Ticket reply time</strong>: Highcharts - Column Chart3.</li>
+	   <p><img width="350" src="images/column-chart.png"></p>
+	   <p>The content of the High chart  is located in assets/js/demo/charts/highcharts.js file. For more details, please check plugin documentation at <a href="http://api.highcharts.com/highcharts" target="_blank">http://api.highcharts.com/highcharts</a>.
+	   <li><strong>Server status</strong>: the graphs are added using <strong>progress bars</strong>.</li>
+	   <p><img width="350" src="images/progress-bar-widget2.png"></p>
+	   <li><strong>Poll</strong>: Charts - C3 Charts: Donut Chart.</li>
+	      <p><img width="350" src="images/donut-chart.png"></p>
+	   <p>The content of the Donut Chart is located in assets/js/demo/charts/d3.js file. Th plugin documentation can be found at <a href="http://c3js.org/reference.html" target="_blank">http://c3js.org/reference.html</a>.
+	 	   </ol>
+		   <p>
+	   
+	     </section>
+	   </section>
+	   <section id="email_layouts">
+	   <h3>Email layouts</h3>
+	  <p> The theme offers several catchy layouts for your emails messages.</p>
+	  <p><img width="700" src="images/email-template.png"></p>
+	   <ol>
+	   <li><strong>Welcome template</strong></li>
+	   <li><strong>Upsell template</strong></li>
+	   <li><strong>Ping template</strong></li>
+	   <li><strong>Invoice template</strong></li>
+	   <li><strong>Shipped template</strong></li>
+	   <li><strong>Invite template</strong></li>
+	   <li><strong>Progress template</strong></li>
+	   <li><strong>Survey template</strong></li>
+	   <li><strong>We miss you template</strong></li>
+	  <p> The HTML files for each template are located in assets/templates/email folder.</p>
+	   </section>
+	   <section id="user_interface">
+					<h3>User interface</h3>
+					<p>This section discloses the information on how to easily choose the design for such elements as alerts, buttons, icons, page layout (grid), text, progress bars, panels, etc.
+	   <section id="alerts">
+					<h4>Alerts</h4>
+					<p>Any text can be wrapped in <strong>.alert</strong> - it will create a default grey alert. In order to change its style, you should use additional contextual classes.</p>
+					<p>On the images below you can see what classes are used to choose the design for your alert messages.</p>
+					<i><strong>Alert Sizes</strong></i>
+					<p>
+					<ul>
+					<li>.alert-micro</li>
+					<li>.alert-small</li>
+					</ul>
+					<p><img width="400" src="images/alerts.png"></p>
+					<i><strong>Alert Color Variations</strong></i>
+					<p>
+					<ul>
+					<li>.alert-primary</li>
+					<li>.alert-success</li>
+					<li>.alert-info</li>
+					<li>.alert-warning</li>
+					<li>.alert-danger</li>
+					<li>.alert-alert</li>
+					<li>.alert-system</li>
+					<li>.alert-dark</li>
+					<li>.alert-default</li>
+					<li>.pastel / .dark /.light - these utility classes are used to create the shade of the alerts contextual color.</li>
+					</ul>
+					<p><img width="900" src="images/alert-colors.png"></p>
+					<p>On the image below the whole block with h3, text and button is wrapped in .alert:</p>
+					<p><img width="400" src="images/alert_block.png"></p>
+					<textarea><div class="alert alert-primary alert-dismissable mb30 alert-block">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <h3 class="mt5 text-white">Multiline Alert</h3>
+
+  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. </p>
+  <br>
+
+  <p>
+    <a class="btn btn-primary" href="#">More</a>
+  </p>
+</div></textarea>
+					 </section>
+					 <section id="buttons">
+					<h4>Buttons</h4>
+					<p>You can use button classes on  <strong>a, button, input</strong> elements. We recommend using <strong>button</strong> for navigation and to ensure matching cross-browser rendering.</p>
+					<p><strong>.btn-block</strong> is added as the utility class to span the full width of a parent.</p>
+					<i><strong>Button Color Variations</strong></i>
+					<p>
+					<ul>
+					<li>.btn-default</li>
+					<li>.btn-primary</li>
+					<li>.btn-success</li>
+					<li>.btn-info</li>
+					<li>.btn-warning</li>
+					<li>.btn-danger</li>
+					<li>.btn-alert</li>
+					<li>.btn-system</li>
+					<li>.btn-dark</li>
+					<li>.btn-default</li>
+					<li>.btn-gradient</li>: is used to have gradient color of the alert.
+					<li>.dark /.light - these utility classes are used to create the shade of the button contextual color.</li>
+					</ul>
+					<p><img width="900" src="images/button-colors.png"></p>
+					<i><strong>Button States</strong></i>
+					<p>
+					<ul>
+					<li><strong>Disabled:</strong> is created adding ".disabled" to button class.</li>
+					<textarea><button type="button" class="btn disabled btn-default btn-block">Disabled</button></textarea>
+					<li><strong>Hover:</strong> .btn-hover</li>
+					<textarea><button type="button" class="btn btn-hover btn-dark btn-block">Hover</button></textarea>
+					<li><strong>Active:</strong> .active</li>
+					<textarea><button type="button" class="btn active btn-dark btn-block">Active</button></textarea>
+					</ul>
+					<p><img width="900" src="images/button-states.png"></p>
+					<i><strong>Button Sizes</strong></i>
+					<p>
+					<ul>
+					<li>.btn-xs</li>
+					<li>.btn-sm</li>
+					<li>.btn-lg</li>
+					</ul>
+					<p><img width="900" src="images/button-sizes.png"></p>
+					<i><strong>Button Options</strong></i>
+					<p>
+					<ul>
+					<li>.btn-rounded: applied to have rounded button shape.</li>
+					<textarea><button type="button" class="btn btn-rounded btn-default btn-block">Default</button></textarea>
+					<li>.btn-gradient: used to create a gradient color of the button.</li>
+					<textarea><button type="button" class="btn btn-default btn-gradient dark btn-block">Default</button></textarea>
+					<li>.btn-bordered: adds bottom border to the button.</li>
+					<textarea><button type="button" class="btn btn-bordered btn-default btn-block">Default</button></textarea>
+					</ul>
+					<p><img width="900" src="images/button-options.png"></p>
+					<i><strong>Loading Buttons</strong></i>
+					<p>
+					<p>In order to have loading buttons, utility class <strong>.ladda-button</strong>  is added. The direction of loading is specified with the help of attribute "data-style":</p>
+					<ul>
+					<li>.expand-up</li>
+					<li>.expand-down</li>
+					<li>.expand-right</li>
+					<li>.expand-left</li>
+					<li>.contract: loading circle</li>
+					<li>.zoom-in : loading with animation "zoom-in"</li>
+					<li>.zoom-out : loading with animation "zoom-out"</li>
+					</ul>
+					<p>Here is the example HTML for loading button:</p>
+					<textarea><button type="button" class="btn ladda-button btn-default" data-style="expand-up">
+                                  <span class="ladda-label">Load Up</span>
+                              </button></textarea>
+							  <p>In order to see these buttons in action, please check user-interface-buttons.html file and locate the following block:</p>
+					<p><img width="900" src="images/loading-buttons.png"></p>
+					<i><strong>Button Groups</strong></i>
+					<p>
+					<p>Several buttons can be wrapped in <strong>.btn-group</strong>. Please check the HTML for button group below:
+					</p>
+					<textarea><div class="btn-group">
+                                  <button type="button" class="btn btn-default">
+                                      <i class="fa fa-home"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-default dark">
+                                      <i class="fa fa-coffee"></i>
+                                  </button>
+                              </div></textarea>
+					<p><img width="900" src="images/icon-buttons.png"></p>
+					<i><strong>Button Dropdowns</strong></i>
+					<p>
+					<p>Dropdown buttons are created using utility class<strong> .dropdown-toggle</strong> with additional attribute <strong>data-toggle="dropdown"</strong>. Please check the HTML for dopdown menu button:
+					</p>
+					<textarea><div class="btn-group">
+    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+        Success
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li>
+            <a href="#">Action</a>
+        </li>
+        <li>
+            <a href="#">One more action</a>
+        </li>
+        <li>
+            <a href="#">More actions if needed</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#">Separated action</a>
+        </li>
+    </ul>
+	<p>As you can see, with the help of .caret the style of button arrow is created, .divider is used for dividing line in the dropdown.</p>
+</div></textarea>
+					<p><img width="600" src="images/dropdown-button.png"></p>
+					
+					
+					
+										 </section>
+					 <section id="typography">
+					<h4>Typography</h4>
+					<p>This section covers basic markup used to create styled text.</p>
+					<i><strong>Text color</strong></i>
+					<p>
+					<p>The image below illustrates what contextual classes are used to have colored text:</p>
+					<p><img width="600" src="images/text-color.png"></p>
+					<p>Example HTML:</p>
+					<textarea><p class="text-muted mn"> Mirum est notare quam littera gothica.</p></textarea>
+					<i><strong>Headings</strong></i>
+					<p>
+					<p>The usual <strong>h1, h2, h3, h4, h5, h6</strong> are used for headings:</p>
+					<p><img width="400" src="images/heading.png"></p>
+					<i><strong>Dropcaps</strong></i>
+					<p>
+					<p>In order to add styles capital letters, use <strong>.dropcap</strong>. The font-color is applied with .dropcap-default/.dropcap-alert/ .dropcap-info etc.</p>
+					<p>Class "dropcap-fill" is used to have colored background for capitals. Please check the HTML for filled dropcaps:</p>
+					<textarea><p class="dropcap dropcap-primary dropcap-fill">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat.</p></textarea>
+					<p><img width="400" src="images/dropcaps.png"></p>
+					<i><strong>Text Quotes</strong></i>
+					<p>
+					<p>Quotations are wrapped in <strong>blockquote</strong>, they are grey by default. In order to change color, utility class is added:</p>
+					<textarea><blockquote class="blockquote-primary">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <small>John Doe</small>
+</blockquote></textarea>
+<p><img width="500" src="images/quotes.png"></p>
+<p>You can also alter the position of the border line and its width using the following classes:</p>
+<ul>
+					<li>.blockquote-thin: to have thin border;</li>
+					<li>.blockquote-rounded: to have rounded border;</li>
+					<li>.blockquote-reverse: the quote is right aligned;</li>
+					</ul>
+					<textarea><blockquote class="blockquote-reverse blockquote-rounded">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <small>John Doe</small>
+</blockquote></textarea>
+<p><img width="500" src="images/quotes_options.png"></p>
+
+<i><strong>Badges</strong></i>
+<p>
+<p>Badges are added using <strong>.label</strong>. Utility classes as .label-primary specify the background color, .label-rounded - rounded shape for the label:</p>
+<textarea><span class="label label-rounded label-primary">...</span></textarea>
+<p><img width="500" src="images/labels.png"></p>
+<ul>
+					
+					
+					
+					
+					 </section>
+					 <section id="ui_panels">
+					<h4>Panels</h4>
+					<p><strong>.panel</strong> applies some basic border and padding to contain the content. Basic panel with heading and content has the following structure:</p>
+					<textarea><div class="panel">
+  <div class="panel-heading">
+    <span class="panel-title">Panel title</span>
+  </div>
+  <div class="panel-body">
+    Panel content
+  </div>
+  <div class="panel-footer">Panel footer</div>
+</div></textarea>
+					
+					<i><strong>Color and Style</strong></i>
+					<p>
+					<ul>
+					<li><strong>Color variations</strong> are added using .panel-primary/ .panel-info/ .panel-alert, etc.:</li>
+					<p><img width="850" src="images/panel-color.png"></p>
+					<textarea><div class="panel panel-primary"></div></textarea>
+					<li><strong>Border</strong> is applied with <strong>.panel-border</strong>, additional utility class  .top/.bottom/.left/.right to set border position:</li>
+					<p><img width="750" src="images/panel-border.png"></p>
+					<textarea> <div class="panel panel-alert panel-border top"></div></textarea>
+					<li><strong>Background color</strong> is added to the panel body using <strong>.fill</strong></i>:
+					<p>
+					<p><img width="750" src="images/panel-fill.png"></p>
+					<textarea><div class="panel panel-alert"><div class="panel-body fill"></div></div></textarea>
+					 </section>
+					 <section id="bars">
+					<h4>Progress bars</h4>
+					<p>
+        <small class="error">
+            <span>Please Note!</span>
+        </small><br>
+		Progress bars use CSS3 transitions and animations which are not supported in Internet Explorer 9 and below or older versions of Firefox. Opera 12 does not support animations.</p>
+		<p>HTML for basic progress bar:</p>
+		<textarea><div class="progress progress-bar-xxs">
+                                                  <div class="progress-bar progress-bar-primary" role="progressbar"
+                                                       aria-valuenow="60"
+                                                       aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                      <span class="sr-only">60%</span>
+                                                  </div>
+                                              </div></textarea>
+											  <i><strong>Color variations</strong></i>
+											  <p>
+											   <p>As you can see, the bar size is set using <strong>.progress-bar-xxs/.progress-bar-xs/.progress-bar-sm/.progress-bar-lg/.progress-bar-xl/</strong>:</p>
+					 <p><img width="750" src="images/bar-size.png"></p>
+					 <i><strong>Other options</strong></i>
+											  <p>
+											  <ul>
+											  <li><strong>Striped bar</strong> is created using .progress-bar-striped added to .progress-bar.</li> 
+					                           <li><strong>Animated bar</strong>In order to animate the stripes right to leftAdd, add <strong>.active</strong> to .progress-bar-striped. It is not available in IE9 and below.</li>
+											  <li><strong>Multiple bars</strong> can be added to one .progress:</li>
+					<textarea> <div class="progress">
+                                                  <div class="progress-bar progress-bar-primary progress-bar-striped"
+                                                       style="width: 27%">
+                                                      <span class="sr-only">35% Complete (success)</span>
+                                                  </div>
+                                                  <div class="progress-bar progress-bar-success progress-bar-striped"
+                                                       style="width: 27%">
+                                                      <span class="sr-only">20% Complete (warning)</span>
+                                                  </div>
+                                                  <div class="progress-bar progress-bar-info progress-bar-striped"
+                                                       style="width: 27%">
+                                                      <span class="sr-only">10% Complete (danger)</span>
+                                                  </div>
+                                              </div></textarea>
+											  <p><img width="750" src="images/bar-options.png"></p>
+					 </section>
+					 <section id="tabs">
+					<h4>Tabs</h4>
+					<p>Tabs are created like <strong>li</strong> items wrapped in .nav. Each tab has an anchor link to the tab content id. Like in the following example:
+					<textarea> <ul class="nav nav-pills pull-right">
+                                      <li class="active">
+                                          <a href="#tab17_1" data-toggle="tab">Tab One</a>
+                                      </li>
+                                      <li>
+                                          <a href="#tab17_2" data-toggle="tab">Tab Two</a>
+                                      </li>
+                                      <li>
+                                          <a href="#tab17_3" data-toggle="tab">Tab Three</a>
+                                      </li>
+                                  </ul></textarea>
+								  <p><strong>.pull-right/.pull-left</strong> are used for tab alignment.</p>
+								   <p><img width="450" src="images/tabs.png"></p>
+								   <i><strong>Navigation tabs</strong></i>
+											  <p>
+											  <p>You can have dropdown menu and icons in the navigation tabs:</p>
+											  
+								  <p><img width="450" src="images/navigation_tab.png"></p>
+								  <textarea><li class="dropdown">
+                                      <a class="dropdown-toggle" href="#" role="menu" data-toggle="dropdown"> Dropdown
+                                          <i
+                                                  class="fa fa-caret-down pl5"></i>
+                                      </a>
+                                      <ul class="dropdown-menu">
+                                          <li>
+                                              <a href="#tab5_3" tabindex="-1" data-toggle="tab">Tab Three</a>
+                                          </li>
+                                          <li>
+                                              <a href="#tab5_4" tabindex="-1" data-toggle="tab">Tab Four</a>
+                                          </li>
+                                      </ul>
+                                  </li></textarea>
+								  <p>Vertical tabs on the right or on the left are created using <strong>.tabs-right and .tabs-left</strong> added to <strong>ul</strong>:</p>
+								  <p><img width="450" src="images/vertical_tabs.png"></p>
+								  <textarea><ul class="nav tabs-left"></ul></textarea>
+					 </section>
+					 <section id="icons">
+					<h4>Icons</h4>
+					<p> Page user-interface-icons.html contains the list of icons used in the theme.</p>
+					 </section>
+					 <section id="grid">
+					<h4>Grid</h4>
+					<p> Bootstrap includes responsive grid system, which scales up to 12 columns. Grid system allows you to create a nice page layout using a series of rows and columns. Page user-interface-grid.html illustrates how to create columns and what class names are used for them:</p>
+					 <p><img width="950" src="images/grid.png"></p>
+					 <ul>
+					 <li>Rows should be placed inside a <strong>.container (fixed-width) or .container-fluid (full-width)</strong> for proper alignment and padding.</li>
+<li>Use rows to create horizontal groups of columns.</li>
+<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+<li>Predefined grid classes like .row and .col-xs-4 are available for quickly making grid layouts. </li>
+<li>Columns create gutters (gaps between column content) via padding. </li>
+<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three .col-xs-4.</li>
+<li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
+<li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any .col-md-* class to an element will not only affect its styling on medium devices but also on large devices if a .col-lg-* class is not present.</li>
+					 </section>
+					 <section id="loader">
+					<h4>Page progress loader</h4>
+					<p>Page user-interface-progress-loader.html shows what page loaders can be applied in the theme.</p>
+					 </section>
+					
+
+
+	   </section>
+	   <section id="plugins">
+					<h3>Plugins</h3>
+					<p>There are 3rd party plugins used in the theme. Their source files are located in assets/js/plugins folder.</p>
+					<section id="maps">
+					<h3>Maps</h3>
+					<p>This section covers map plugins included in the theme:</p>
+					<h4>GMaps</h4>
+					<p><strong>Gmap plugin </strong>documentation can be found at the following link:<a href="http://hpneo.github.io/gmaps/documentation.html" target="_blank"> http://hpneo.github.io/gmaps/documentation.html</a></p>
+					<p>Maps-basic.html file shows the types of maps that can be created using this plugin. Assets/js/pages/basic-maps.js file contains jQuiery:</p>
+					<ol>
+					<li>Standard Map</li>
+					<p><img width="550" src="images/standard_map.png"></p>
+					<li>Panorama Map</li>
+					<p><img width="550" src="images/panorama.png"></p>
+					<li>Map with clickable locations</li>
+					<li>Map with search</li>
+					<li>Map with inner pagination</li>
+					<p><img width="550" src="images/pagination_map.png"></p>
+					<li>Map with list filter</li>
+					<p><img width="550" src="images/filter_map.png"></p>
+					<li>Full map</li>
+					<p><img width="850" src="images/full_map.png"></p>
+					</ol>
+							
+					
+					 <h4>Vector Maps</h4>
+					<p><strong>JVectorMap Plugin</strong> is used in the theme to create vector maps.</p>
+					<p><img width="850" src="images/vector_map.png"></p>
+					<p>Plugin js file is located in assets/js/plugins/gvectormap/jquery.jvectormap.min. For more details, please check plugin documentation at <a href="http://jvectormap.com/documentation/" target="_blank"> http://jvectormap.com/documentation/</a>.</p>
+					
+					 </section>
+					 <section id="charts">
+					<h3>Charts</h3>
+					<ul>
+					<li><strong>Highcharts plugin</strong>. Charts-highcharts.html file illustrates what chart types can be created using the plugin. For more details, please check plugin documentation at <a href="http://api.highcharts.com/highcharts" target="_blank">http://api.highcharts.com/highcharts</a>.</li>
+					 <p><img width="850" src="images/charts.png"></p>
+
+					 <li><strong>C3-D3 Charts</strong>. The plugin documentation can be found at <a href="http://c3js.org/reference.html" target="_blank">http://c3js.org/reference.html</a>.</li>
+					 <p><img width="850" src="images/d3_charts.png"></p>
+					 <li><strong>Flot</strong>. In order to get plugin documentation, please follow the link <a href="https://github.com/flot/flot/blob/master/API.md" target="_blank">https://github.com/flot/flot/blob/master/API.md</a></li> 
+					  <p><img width="850" src="images/flot.png"></p>
+					 </section>
+					 <section id="tables">
+					<h3>Tables</h3>
+					<ul>
+					<li><strong>Basic tables</strong> are created in the theme using <strong>.table</strong>. Additional utility classes can be found in tables-basic.html file:</p>
+					<p><img width="850" src="images/basic_table.png"></p>
+					<li><strong>DataTables plugin</strong> documentation: <a href="http://datatables.net/reference/index." target="_blank">http://datatables.net/reference/index</a>.</li>
+					<p><img width="850" src="images/datatable.png"></p>
+					<li><strong>Sortable tables</strong> are created with <strong>class="table footable"</strong>:</li>
+					<p><img width="850" src="images/sortable.png"></p>
+					<p>Table filter is added using attribute <strong>data-filter="#fooFilter"</strong>:</p>
+					<p><img width="850" src="images/filter.png"></p>
+					<p>Pagination is applied with the help of attribute <strong>data-page-navigation=".pagination"</strong>.
+					<p><img width="850" src="images/pagination.png"></p>
+					<li><strong>Pricing tables</strong>: each table column is wrapped in .pricing-plan:</li>
+					<p><img width="850" src="images/pricing.png"></p>
+					 </section>
+					 </section>
+										
+					 <section id="pages">
+					<h3>Pages</h3>
+					<p>Here is the list of available pre-designed pages included in the theme:</p>
+					<ul>
+					<li> Account confirmation page: utility-confirmation.html </li>
+					<li> Login page: utility-login.html </li>
+					<li> Registration page: login-register.html </li>
+					<li> Password reset page: utility-forgot-password.html </li>
+					<li> Coming Soon page: utility-coming-soon.html </li>
+					<li> 404 Error page: utility-404-error.html </li>
+					<li> Search results page: basic-search-results.html </li>
+					<li> User profile page: basic-profile.html </li>
+					<li> Timeline page: basic-timeline.html</li>
+					<li>  Faq page: basic-faq-page.html</li>
+						<li> Calendar page: basic-calendar.html </li>
+							<li> Messages page: basic-messages.html </li>
+								<li>  Gallery page: basic-gallery.html</li>
+									<li> Invoice: basic-invoice.html </li>
+									</ul>
+					
+					 </section>
+				<section id="sources">
+					<h3>Sources and Credits</h3>
+					<p>This section discloses the sources of various files used within the theme and describes their function. Use this section to gain an understanding on how the theme functions behind the scenes, if considering any type of modification.</p>
+					<ul>
+						<li>Fonts:
+							<ul>
+								<li>"Lato", "Open Sans".</li>
+								<li>Fontello (non standard, icons set).</li>
+								
+							</ul>
+						</li>
+						<li>3rd party plugins. The list is available in assets/js/plugins folder.</li>
+					</ul>
+					<p>All non-standard fonts are from Google Web Fonts and Fontello icons set.</p>
+					<p>We have used pictures from: <br>
+					http://www.bigstockphoto.com/</p>
+					<p>All images are copyrighted to their respective owners and not available for download with this theme.</p>
+				</section>
+
+
+
+				<section>
+					Once again, thank you so much for purchasing this theme. We will be glad to help you, if you have any questions about this theme. We'll do our best to assist. If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form from our Profile Page on ThemeForest. Thank you so much!
+				</section>
+				
+
+				<h4 style="margin-left:50px">ThemeREX</h4>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
