@@ -1,0 +1,5 @@
+/*
+ *  Document   : appSocial.js
+ *  Author     : pixelcave
+ */
+var AppSocial=function(){return{init:function(){var a=$(".chatui-talk"),t=$(".chatui-form"),i=$("#chat-message"),n="";t.find("form").submit(function(t){n=i.val(),n&&(a.find("ul").append('<li class="chatui-talk-msg chatui-talk-msg-right animation-expandUp"><img src="img/placeholders/avatars/avatar9.jpg" alt="Avatar" class="img-circle chatui-talk-msg-avatar">'+$("<div />").text(n).html()+"</li>"),a.animate({scrollTop:a[0].scrollHeight},200),i.val("")),t.preventDefault()}),$(".chatui-action-open").on("click",function(){$(this).parents(".chatui").removeClass("chatui-window-close"),a.animate({scrollTop:a[0].scrollHeight},0),i.focus()}),$(".chatui-action-close").on("click",function(){$(this).parents(".chatui").addClass("chatui-window-close")}),new GMaps({div:"#gmap-checkin",lat:59.32,lng:17.97,zoom:15,scrollwheel:!1}).addMarkers([{lat:59.32,lng:17.97,title:"Cafe-Bar",animation:google.maps.Animation.DROP,infoWindow:{content:"<strong>Cafe-Bar</strong>"}}])}}}();
