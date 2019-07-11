@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />    
+        <!--[if gt IE 8]>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+        <![endif]-->                
+        <title>Aries - Metro Style Admin Panel</title>
+        <link rel="icon" type="image/ico" href="favicon.ico"/>
+
+        <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
+        <!--[if lte IE 7]>
+            <link href="css/ie.css" rel="stylesheet" type="text/css" />
+            <script type='text/javascript' src='js/plugins/other/lte-ie7.js'></script>
+        <![endif]-->    
+        <script type='text/javascript' src='js/plugins/jquery/jquery-1.10.2.min.js'></script>
+        <script type='text/javascript' src='js/plugins/jquery/jquery-ui-1.10.3.custom.min.js'></script>
+        <script type='text/javascript' src='js/plugins/jquery/jquery-migrate-1.2.1.min.js'></script>
+        <script type='text/javascript' src='js/plugins/jquery/globalize.js'></script>
+        <script type='text/javascript' src='js/plugins/other/excanvas.js'></script>
+
+        <script type='text/javascript' src='js/plugins/other/jquery.mousewheel.min.js'></script>
+
+        <script type='text/javascript' src='js/plugins/bootstrap/bootstrap.min.js'></script>
+
+        <script type='text/javascript' src='js/plugins/cookies/jquery.cookies.2.2.0.min.js'></script>    
+
+        <script type='text/javascript' src='js/plugins/jflot/jquery.flot.js'></script>    
+        <script type='text/javascript' src='js/plugins/jflot/jquery.flot.stack.js'></script>    
+        <script type='text/javascript' src='js/plugins/jflot/jquery.flot.pie.js'></script>
+        <script type='text/javascript' src='js/plugins/jflot/jquery.flot.resize.js'></script>
+
+        <script type='text/javascript' src='js/plugins/epiechart/jquery.easy-pie-chart.js'></script>    
+        <script type='text/javascript' src='js/plugins/sparklines/jquery.sparkline.min.js'></script>        
+
+        <script type='text/javascript' src='js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'></script>
+
+        <script type='text/javascript' src="js/plugins/uniform/jquery.uniform.min.js"></script>
+
+        <script type='text/javascript' src="js/plugins/fullcalendar/fullcalendar.min.js"></script>
+
+        <script type='text/javascript' src='js/plugins/shbrush/XRegExp.js'></script>
+        <script type='text/javascript' src='js/plugins/shbrush/shCore.js'></script>
+        <script type='text/javascript' src='js/plugins/shbrush/shBrushXml.js'></script>
+        <script type='text/javascript' src='js/plugins/shbrush/shBrushJScript.js'></script>
+        <script type='text/javascript' src='js/plugins/shbrush/shBrushCss.js'></script>    
+
+        <script type='text/javascript' src='js/plugins.js'></script>
+        <script type='text/javascript' src='js/charts.js'></script>
+
+        <script type='text/javascript' src='js/actions.js'></script>
+    </head>
+    <body>    
+        <div id="loader"><img src="img/loader.gif"/></div>
+        <div class="wrapper">
+
+            <div class="sidebar">
+
+                <div class="top">
+                    <a href="index.html" class="logo"></a>
+                    <div class="search">
+                        <div class="input-group">
+                            <span class="input-group-addon orange"><span class="glyphicon glyphicon-search"></span></span>
+                            <input type="text" class="form-control" placeholder="search..."/>                                                      
+                        </div>            
+                    </div>
+                </div>
+                <div class="nContainer">
+                    <ul class="navigation">         
+                        <li class="active"><a href="index.html" class="blblue">Dashboard</a></li>
+                        <li>
+                            <a href="index.html#" class="blyellow">UI Elements</a>
+                            <div class="open"></div>
+                            <ul>
+                                <li><a href="ui.html">UI Elements</a></li>
+                                <li><a href="widgets.html">Widgets</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="icons.html">Icons</a></li>
+                                <li><a href="grid_sys.html">Grid System</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="index.html#" class="blgreen">Forms Stuff</a>
+                            <div class="open"></div>
+                            <ul>
+                                <li><a href="forms.html">Form Elements</a></li>
+                                <li><a href="validation.html">Validation</a></li>
+                                <li><a href="grid.html">Grid</a></li>
+                                <li><a href="editor.html">Editors</a></li>  
+                                <li><a href="wizard.html">Wizard</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="statistic.html" class="blred">Statistic</a></li>                
+                        <li>
+                            <a href="index.html#" class="bldblue">Tables</a>
+                            <div class="open"></div>
+                            <ul>
+                                <li><a href="tables.html">Simple</a></li>
+                                <li><a href="tables_dynamic.html">Dynamic</a></li>                    
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="index.html#" class="blpurple">Samples</a>
+                            <div class="open"></div>
+                            <ul>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="invoice.html">Invoice</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li><a href="pricing.html">Pricing Table</a></li>
+                                <li><a href="timeline.html">Timeline</a></li>
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>                    
+                        </li>
+                        <li>
+                            <a href="index.html#" class="blorange">Other</a>
+                            <div class="open"></div>
+                            <ul>
+                                <li><a href="files.html">File handling</a></li>
+                                <li><a href="images.html">Images</a></li>
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="404.html">Error 404</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="close">
+                        <span class="ico-remove"></span>
+                    </a>
+                </div>
+                <div class="widget">
+                    <div class="datepicker"></div>
+                </div>
+
+            </div>
+
+            <div class="body">
+
+                <ul class="navigation">
+                    <li>
+                        <a href="index.html" class="button">
+                            <div class="icon">
+                                <span class="ico-monitor"></span>
+                            </div>                    
+                            <div class="name">Dashboard</div>
+                        </a>                
+                    </li>
+                    <li>
+                        <a href="index.html#" class="button yellow">
+                            <div class="arrow"></div>
+                            <div class="icon">
+                                <span class="ico-cog-2"></span>
+                            </div>                    
+                            <div class="name">UI Elements</div>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="ui.html">UI Elements</a></li>
+                            <li><a href="widgets.html">Widgets</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="grid_sys.html">Grid System</a></li>
+                        </ul>
+                    </li>                
+                    <li>
+                        <a href="index.html#" class="button green">
+                            <div class="arrow"></div>
+                            <div class="icon">
+                                <span class="ico-pen-2"></span>
+                            </div>                    
+                            <div class="name">Forms Stuff</div>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="forms.html">Elements</a></li>
+                            <li><a href="validation.html">Validation</a></li>
+                            <li><a href="grid.html">Grid</a></li>
+                            <li><a href="editor.html">Editors</a></li>
+                            <li><a href="wizard.html">Wizard</a></li>
+                        </ul>
+                    </li>                        
+                    <li>
+                        <a href="statistic.html" class="button red">
+                            <div class="icon">
+                                <span class="ico-chart-4"></span>
+                            </div>                    
+                            <div class="name">Statistic</div>
+                        </a>                
+                    </li>                
+                    <li>
+                        <a href="index.html#" class="button dblue">
+                            <div class="arrow"></div>
+                            <div class="icon">
+                                <span class="ico-layout-7"></span>
+                            </div>                    
+                            <div class="name">Tables</div>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="tables.html">Simple</a></li>
+                            <li><a href="tables_dynamic.html">Dynamic</a></li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <a href="index.html#" class="button purple">
+                            <div class="arrow"></div>
+                            <div class="icon">
+                                <span class="ico-box"></span>
+                            </div>                    
+                            <div class="name">Samples</div>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="invoice.html">Invoice</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li><a href="pricing.html">Pricing Table</a></li>
+                            <li><a href="timeline.html">Timeline</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="index.html#" class="button orange">
+                            <div class="arrow"></div>
+                            <div class="icon">
+                                <span class="ico-cloud"></span>
+                            </div>                    
+                            <div class="name">Other</div>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="files.html">File handling</a></li>
+                            <li><a href="images.html">Images</a></li>
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="404.html">Error 404</a></li>
+                        </ul>
+                    </li>                
+                    <li>
+                        <div class="user">
+                            <img src="img/examples/users/dmitry_m.jpg" align="left"/>
+                            <a href="index.html#" class="name">
+                                <span>Dmitry Ivaniuk</span>
+                                <span class="sm">Administrator</span>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <div class="sbutton green navButton">
+                                <a href="index.html#"><span class="ico-align-justify"></span></a>
+                            </div>
+                            <div class="sbutton blue">
+                                <a href="index.html#"><span class="ico-cogs"></span></a>
+                                <div class="popup">
+                                    <div class="arrow"></div>
+                                    <div class="row">
+                                        <div class="row-form">
+                                            <div class="col-md-12"><strong>SETTINGS</strong></div>
+                                        </div>                                    
+                                        <div class="row-form">
+                                            <div class="col-md-4">Navigation:</div>
+                                            <div class="col-md-8">
+                                                <label><input type="radio" class="cNav" name="cNavButton" value="default"/> Default</label>
+                                                <label><input type="radio" class="cNav" name="cNavButton" value="bordered"/> Bordered</label>
+                                            </div>
+                                        </div>
+                                        <div class="row-form">
+                                            <div class="col-md-4">Nav color:</div>
+                                            <div class="col-md-8">
+                                                <div class="cNavC">
+                                                    <span class="color_1" name="cNavButColor"></span>
+                                                    <span class="color_2" name="cNavButColor"></span>
+                                                    <span class="color_3" name="cNavButColor"></span>
+                                                    <span class="color_4" name="cNavButColor"></span>
+                                                    <span class="color_5" name="cNavButColor"></span>
+                                                    <span class="color_6" name="cNavButColor"></span>
+                                                    <span class="color_7" name="cNavButColor"></span>
+                                                    <span class="color_8" name="cNavButColor"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-form">
+                                            <div class="col-md-4">Top navigation:</div>
+                                            <div class="col-md-8">
+                                                <label><input type="radio" class="cTopNavH" name="cTopNavHide" value="show"/> Show</label>
+                                                <label><input type="radio" class="cTopNavH" name="cTopNavHide" value="hide"/> Hide</label>
+                                            </div>
+                                        </div> 
+                                        <div class="row-form">
+                                            <div class="col-md-4">Content:</div>
+                                            <div class="col-md-8">
+                                                <label><input type="radio" class="cCont" name="cContent" value=""/> Responsive</label>
+                                                <label><input type="radio" class="cCont" name="cContent" value="fixed"/> Fixed</label>
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </li>                
+                </ul>
+
+
+                <div class="container">
+
+                    <div class="page-header">
+                        <div class="wrap-title">
+                            <div class="icon">
+                                <span class="ico-arrow-right"></span>
+                            </div>
+                            <h1>Dashboard <small>METRO STYLE ADMIN PANEL</small></h1>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="active">Home</li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-7">
+
+                            <div class="block">
+                                <div class="head">
+                                    <div class="icon"><span class="ico-chart-4"></span></div>
+                                    <h2>Visitor Statistics</h2>
+                                    <ul class="buttons">
+                                        <li><a href="index.html#" class="ublock"><div class="icon"><span class="ico-undo"></span></div></a></li>
+                                        <li><a href="index.html#" class="cblock"><div class="icon"><span class="ico-sort"></span></div></a></li>
+                                    </ul>
+                                </div>
+                                <div class="data">
+                                    <div id="main_chart" style="height: 300px;"></div>                                
+                                </div>       
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stat">
+                                            <span class="cdblue">2,350</span> PAGE<br/> VIEWS
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="stat">
+                                            <span class="cblue">1,120</span> UNIQUE<br/> PAGE VIEWS
+                                        </div>                                                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="stat">
+                                            <span class="corange">720</span> SALES<br/> PER PERIOD
+                                        </div>                                                
+                                    </div>               
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <div class="data-fluid">
+                                    <div id="main_calendar"></div>
+                                </div>                            
+                            </div>                        
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <div class="block">
+                                <div class="head">
+                                    <div class="icon"><span class="ico-tag"></span></div>
+                                    <h2>Tickets</h2>
+                                    <ul class="buttons">             
+                                        <li><a href="index.html#" onClick="source('tickets');
+                                                return false;"><div class="icon"><span class="ico-info"></span></div></a></li>
+                                        <li><a href="index.html#" class="ublock"><div class="icon"><span class="ico-undo"></span></div></a></li>
+                                        <li><a href="index.html#" class="cblock"><div class="icon"><span class="ico-sort"></span></div></a></li>
+                                    </ul>                                
+                                </div>
+                                <div class="data-fluid">
+                                    <table width="100%" class="table tickets">
+                                        <tr>
+                                            <td width="55" class="bl_blue"><span class="label label-info">new</span></td>
+                                            <td width="50">#AA-325 <span class="mark">23/02/2013</span></td>
+                                            <td><a href="index.html#" class="cblue">Buy on themeforest this great template...</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td class="bl_blue"><span class="label label-info">new</span></td>
+                                            <td>#AA-216 <span class="mark">22/02/2013</span></td>
+                                            <td><a href="index.html#" class="cblue">Go to shop and buy beer!</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>                
+                                        <tr>
+                                            <td class="bl_green"><span class="label label-success">done</span></td>
+                                            <td>#AC-857 <span class="mark">21/02/2013</span></td>
+                                            <td><a href="index.html#" class="cgreen">Buy on themeforest this great template...</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td class="bl_red"><span class="label label-important">removed</span></td>
+                                            <td>#VB-57 <span class="mark">20/02/2013</span></td>
+                                            <td><a href="index.html#" class="cred">Buy something for my dog...</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>   
+                                        <tr>
+                                            <td class="bl_red"><span class="label label-important">removed</span></td>
+                                            <td>#VB-44 <span class="mark">20/02/2013</span></td>
+                                            <td><a href="index.html#" class="cred">Buy something for my dog...</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td class="bl_green"><span class="label label-success">done</span></td>
+                                            <td>#AA-216 <span class="mark">22/02/2013</span></td>
+                                            <td><a href="index.html#" class="cgreen">Go to shop and buy beer!</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>                
+                                        <tr>
+                                            <td class="bl_red"><span class="label label-important">removed</span></td>
+                                            <td>#VB-31 <span class="mark">21/02/2013</span></td>
+                                            <td><a href="index.html#" class="cred">Buy on themeforest this great template...</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>
+                                        <tr>
+                                            <td class="bl_green"><span class="label label-success">done</span></td>
+                                            <td>#VB-57 <span class="mark">20/02/2013</span></td>
+                                            <td><a href="index.html#" class="cgreen">Buy something for my dog...</a> <span class="mark">Added by Dmitry Ivaniuk</span></td>                                        
+                                        </tr>                                      
+                                    </table>
+                                </div>                                   
+                            </div>                        
+
+                            <div class="widgets">
+
+                                <a href="index.html#" class="swidget blue">
+                                    <div class="icon">
+                                        <span class="ico-box"></span>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="text">Products</div>
+                                    </div>                                
+                                </a>
+
+                                <a href="index.html#" class="swidget green">
+                                    <div class="epc mini">
+                                        <span class="epcm-green" data-percent="81">81%</span>
+                                    </div>                                
+                                    <div class="bottom">
+                                        <div class="text">Statistic</div>                                    
+                                    </div>                                
+                                </a>                                                      
+
+                                <a href="index.html#" class="swidget orange">
+                                    <div class="icon">
+                                        <span class="ico-info"></span>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="text">Info</div>
+                                        <div class="value">2,312</div>
+                                    </div>                                
+                                </a>                            
+
+                            </div>                        
+
+                            <div class="block">
+                                <div class="head dblue">                                
+                                    <h2>Messages</h2>
+                                    <ul class="buttons">             
+                                        <li><a href="index.html#" onClick="source('messages');
+                                                return false;"><div class="icon"><span class="ico-info"></span></div></a></li>
+                                        <li><a href="index.html#" class="ublock"><div class="icon"><span class="ico-undo"></span></div></a></li>
+                                        <li><a href="index.html#" class="cblock"><div class="icon"><span class="ico-sort"></span></div></a></li>
+                                    </ul>                                
+                                </div>
+                                <div class="data dark npr npb">                                
+                                    <div class="messages scroll" style="height: 200px;">
+                                        <div class="item blue">
+                                            <div class="arrow"></div>
+                                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut diam quis dolor mollis tristique. Suspendisse vestibulum convallis felis vitae facilisis. Praesent eu nisi vestibulum erat.</div>
+                                            <div class="date">09.02., 21:04</div>
+                                        </div>
+                                        <div class="item dblue out">
+                                            <div class="arrow"></div>
+                                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut diam quis dolor mollis tristique. Suspendisse vestibulum convallis felis vitae facilisis. Praesent eu nisi vestibulum erat.</div>
+                                            <div class="date">09.02., 21:02</div>
+                                        </div>                                    
+                                        <div class="item blue">
+                                            <div class="arrow"></div>
+                                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut diam quis dolor mollis tristique. Suspendisse vestibulum convallis felis vitae facilisis. Praesent eu nisi vestibulum erat.</div>
+                                            <div class="date">09.02., 20:55</div>
+                                        </div>
+                                        <div class="item dblue out">
+                                            <div class="arrow"></div>
+                                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut diam quis dolor mollis tristique. Suspendisse vestibulum convallis felis vitae facilisis. Praesent eu nisi vestibulum erat.</div>
+                                            <div class="date">09.02., 21:02</div>
+                                        </div>
+                                        <div class="item blue">
+                                            <div class="arrow"></div>
+                                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut diam quis dolor mollis tristique. Suspendisse vestibulum convallis felis vitae facilisis. Praesent eu nisi vestibulum erat.</div>
+                                            <div class="date">09.02., 20:55</div>
+                                        </div>
+                                    </div>                                
+                                </div>    
+                                <div class="toolbar dark">
+                                    <div class="input-group">
+                                        <span class="input-group-addon dblue"><span class="glyphicon glyphicon-envelope"></span></span>
+                                        <input class="form-control" type="text"/>
+                                        <div class="input-group-btn">
+                                            <button class="btn dblue" type="button">Send  <span class="icon-arrow-next icon-white"></span></button>
+                                        </div>
+                                    </div>                                 
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="block">
+                                <div class="head blue">
+                                    <div class="icon"><i class="ico-layout-9"></i></div>
+                                    <h2>Default table sorting</h2>
+                                    <ul class="buttons">
+                                        <li><a href="index.html#" onClick="source('table_sort');
+                                                return false;"><div class="icon"><span class="ico-info"></span></div></a></li>
+                                    </ul>
+                                </div>
+                                <div class="data-fluid">
+                                    <table class="table" cellpadding="0" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th width="20"><input type="checkbox" class="checkall"/></th>
+                                                <th width="20%">Name</th>
+                                                <th>Product</th>
+                                                <th width="20%">Status</th>
+                                                <th width="20%">Date</th>
+                                                <th width="100" class="TAC">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox" name="order[]" value="528"/></td>
+                                                <td><a href="index.html#">Dmitry Ivaniuk</a></td>
+                                                <td>Product #212</td>
+                                                <td><span class="label label-important">New</span></td>
+                                                <td>24/11/2012</td>
+                                                <td>
+                                                    <a href="index.html#" class="button green">
+                                                        <div class="icon"><span class="ico-pencil"></span></div>
+                                                    </a>
+                                                    <a href="index.html#" class="button red">
+                                                        <div class="icon"><span class="ico-remove"></span></div>
+                                                    </a>                                              
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="order[]" value="527"/></td>
+                                                <td><a href="index.html#">John Doe</a></td>
+                                                <td>Product #132</td>
+                                                <td><span class="label label-important">New</span></td>
+                                                <td>24/11/2012</td>
+                                                <td>
+                                                    <a href="index.html#" class="button green">
+                                                        <div class="icon"><span class="ico-pencil"></span></div>
+                                                    </a>
+                                                    <a href="index.html#" class="button red">
+                                                        <div class="icon"><span class="ico-remove"></span></div>
+                                                    </a>                                              
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="order[]" value="526"/></td>
+                                                <td><a href="index.html#">Alex Fruz</a></td>
+                                                <td>Product #53</td>
+                                                <td><span class="label label-important">New</span></td>
+                                                <td>23/11/2012</td>
+                                                <td>
+                                                    <a href="index.html#" class="button green">
+                                                        <div class="icon"><span class="ico-pencil"></span></div>
+                                                    </a>
+                                                    <a href="index.html#" class="button red">
+                                                        <div class="icon"><span class="ico-remove"></span></div>
+                                                    </a>                                              
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="order[]" value="525"/></td>
+                                                <td><a href="index.html#">Olga Yukhimchuk</a></td>
+                                                <td>Product #874</td>
+                                                <td><span class="label label-info">Pending</span></td>
+                                                <td>23/11/2012</td>
+                                                <td>
+                                                    <a href="index.html#" class="button green">
+                                                        <div class="icon"><span class="ico-pencil"></span></div>
+                                                    </a>
+                                                    <a href="index.html#" class="button red">
+                                                        <div class="icon"><span class="ico-remove"></span></div>
+                                                    </a>                                              
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="order[]" value="524"/></td>
+                                                <td><a href="index.html#">Angelina Rose</a></td>
+                                                <td>Product #533</td>
+                                                <td><span class="label label-info">Pending</span></td>
+                                                <td>23/11/2012</td>
+                                                <td>
+                                                    <a href="index.html#" class="button green">
+                                                        <div class="icon"><span class="ico-pencil"></span></div>
+                                                    </a>
+                                                    <a href="index.html#" class="button red">
+                                                        <div class="icon"><span class="ico-remove"></span></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>  
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="dialog" id="source" style="display: none;" title="Source"></div>
+
+        <div id="fcAddEvent" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="fcAddEventLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="fcAddEventLabel">Add new event</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-3">Title:</div>
+                    <div class="col-md-9"><input class="form-control" type="text" id="fcAddEventTitle"/></div>
+                </div>
+            </div>
+            <div class="modal-footer">            
+                <button class="btn btn-primary" id="fcAddEventButton">Add</button>            
+            </div>
+        </div>    
+
+    </body>
+</html>
