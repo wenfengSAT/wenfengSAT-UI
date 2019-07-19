@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <title>Be Pro - Bootstrap Admin Template</title>    
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+        <script type="text/javascript" src="js/plugins/less/less.min.js"></script>
+                
+        <!--[if lt IE 10]><link rel="stylesheet" type="text/css" href="css/ie.css"/><![endif]-->
+        
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/jquery-validation/jquery.validate.min.js"></script>
+        
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/demo.js"></script>
+        <script type="text/javascript" src="js/actions.js"></script>        
+        
+    </head>
+    <body>
+        
+        <div class="page-container">
+            
+            <div class="page-content page-content-default">
+            
+                <div class="block-login">
+                    <div class="block-login-logo">
+                        <a class="logo">Be Pro</a>
+                    </div>
+                    <div class="block-login-content">
+                        <h1>Sign up</h1>
+                        <form id="signupForm" method="post" action="index.html">
+                            
+                        <div class="form-group">                        
+                            <label>Login:</label>
+                            <input type="text" name="login" class="form-control" placeholder="Your login" value=""/>
+                        </div>
+                        <div class="form-group">                        
+                            <label>Password:</label>
+                            <input type="password" name="password" class="form-control" placeholder="Your password" id="password" value=""/>
+                        </div>
+                        <div class="form-group">                        
+                            <label>Re-password:</label>
+                            <input type="password" name="re-password" class="form-control" placeholder="Repeat password" value=""/>
+                        </div>
+                        <div class="sp"></div>
+                        <div class="form-group">                        
+                            <label>Name:</label>
+                            <input type="email" name="name" class="form-control" placeholder="Your name" value=""/>
+                        </div>
+                        <div class="form-group">                        
+                            <label>E-mail:</label>
+                            <input type="email" name="email" class="form-control" placeholder="Your e-mail" value=""/>
+                        </div>
+                        
+                        <div class="pull-left">
+                            <div class="form-group">                                 
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="keep"/> Send notifications and updates?</label>
+                                </div>
+                            </div>
+                        </div>                                                            
+
+                        <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+                        
+                        </form>
+                        <p class="tac">Or use</p>
+
+                        <div class="pull-left" style="width: 45%;">
+                            <button class="btn btn-block btn-primary btn-facebook"><i class="fa fa-facebook pull-left"></i> Facebook</button>
+                        </div>
+                        <div class="pull-right" style="width: 45%;">
+                            <button class="btn btn-block btn-info btn-tweeter"><i class="fa fa-twitter pull-left"></i> Twitter</button>
+                        </div>
+
+                        <div class="sp"></div>
+                        <div class="pull-left">
+                            © All Rights Reserved Be Pro 2014
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+        $("#signupForm").validate({
+		rules: {
+			login: {
+				required: true,
+				minlength: 2
+			},
+			password: {
+				required: true,
+				minlength: 5
+			},
+			're-password': {
+				required: true,
+				minlength: 5,
+				equalTo: "#password"
+			},
+			email: {
+				required: true,
+				email: true
+			},
+                        name: "required"			
+		}
+	});            
+        </script>
+        
+    </body>
+</html>
