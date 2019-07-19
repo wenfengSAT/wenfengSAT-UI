@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+
+<!-- Styles -->
+<link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.css" type="text/css" /><!-- Font Awesome -->
+<link rel="stylesheet" href="css/patternLock.css" type="text/css" /><!-- Pattern Lock -->	
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" /><!-- Bootstrap -->
+<link rel="stylesheet" href="css/style.css" type="text/css" /><!-- Style -->
+<link rel="stylesheet" href="css/responsive.css" type="text/css" /><!-- Responsive -->	
+
+</head>
+<body style="background-image:url('images/resource/pattern-bg.jpg');">
+	
+<div class="pattern-lock-sec">
+	<div class="container">
+		<div class="pattern-logo">
+			<a href="#" title=""><img src="images/logo1.png" alt="" /></a>
+		</div>
+		<div class="patter-container">
+			<span>Draw Your Pattern</span>
+			<div id="patternCaptchaHolder">
+				<div id="patternUI"></div>
+				<div id="patternCaptcha"></div>
+				<div id="actionButton">
+					<input type="button" value="Refresh" id="refreshCaptcha" />
+					<input type="button" value="Submit" id="submitCaptcha" />
+				</div>
+			</div>
+		</div>
+		<div class="show-pattern-modal">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Show Pattern</button>
+
+			<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+			  <div class="modal-dialog modal-sm">
+				<div class="modal-content">
+				  <img src="images/resource/pattern.jpg" alt="" />
+				</div>
+			  </div>
+			</div>
+		</div><!-- Show Pattern Modal -->
+	</div>
+	<div class="clock">
+		<div id="Date"></div>
+
+		<ul>
+			<li id="hours"> </li>
+			<li class="point">:</li>
+			<li id="min"> </li>
+			<li class="point">:</li>
+			<li id="sec"> </li>
+		</ul>
+
+	</div>	
+	
+</div>
+	
+<!-- Script -->
+<script type="text/javascript" src="js/modernizr.js"></script><!-- Modernizer -->
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script><!-- Jquery -->
+<script type="text/javascript"  src="js/patternLock.js"></script><!-- On Screen -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var lock = new PatternLock('#patternCaptchaHolder', {
+			patternVisible:true, //option
+		});
+		lock.checkForPattern('12589',function(){
+			window.location.href = "dashboard.html";
+		},function(){
+			alert("Pattern is not correct. Please click on Show Pattern button to view the pattern then draw to login");
+		});    
+	});
+	
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+// Create two variable with the names of the months and days in an array
+var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+// Create a newDate() object
+var newDate = new Date();
+// Extract the current date from Date object
+newDate.setDate(newDate.getDate());
+// Output the day, date, month and year    
+$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+setInterval( function() {
+	// Create a newDate() object and extract the seconds of the current time on the visitor's
+	var seconds = new Date().getSeconds();
+	// Add a leading zero to seconds value
+	$("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+	},1000);
+	
+setInterval( function() {
+	// Create a newDate() object and extract the minutes of the current time on the visitor's
+	var minutes = new Date().getMinutes();
+	// Add a leading zero to the minutes value
+	$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+    },1000);
+	
+setInterval( function() {
+	// Create a newDate() object and extract the hours of the current time on the visitor's
+	var hours = new Date().getHours();
+	// Add a leading zero to the hours value
+	$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+    }, 1000);
+	
+}); 
+</script>
+</body>
+</html>
