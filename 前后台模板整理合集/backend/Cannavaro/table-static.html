@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--   <meta content="IE=edge" http-equiv="X-UA-Compatible"> -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="ico/favicon.ico" rel="shortcut icon">
+
+    <title>Cannavaro Web Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap theme -->
+    <!--  <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dripicon.css">
+    <link rel="stylesheet" href="css/typicons.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="js/tip/tooltipster.css">
+    <link rel="stylesheet" type="text/css" href="js/vegas/jquery.vegas.css" />
+
+    <link href="js/stackable/stacktable.css" rel="stylesheet" />
+    <link href="js/stackable/responsive-table.css" rel="stylesheet" />
+    <!-- pace loader -->
+    <script src="js/pace/pace.js"></script>
+    <link href="js/pace/themes/orange/pace-theme-flash.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body role="document">
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- TOPNAV -->
+
+    <div class="row">
+        <div class="col-lg-3">
+            <ul class="nav navbar-nav navbar-left list-unstyled list-inline text-amber date-list">
+                <li><i class="fontello-th text-amber"></i>
+                </li>
+                <li id="Date"></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left list-unstyled list-inline text-amber date-list">
+                <li><i class="fontello-stopwatch text-amber"></i>
+                </li>
+                <li id="hours"></li>
+                <li class="point">:</li>
+                <li id="min"></li>
+                <li class="point">:</li>
+                <li id="sec"></li>
+            </ul>
+
+
+        </div>
+        <div class="col-lg-6">
+            <div style="margin-bottom:0;" class="alert text-white ">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <span class="entypo-info-circled"></span>
+                <strong>Wellcome back!</strong>&nbsp;&nbsp;Dave, your last loggin was 1 day ago. Have a nice day
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a data-toggle="dropdown" class="dropdown-toggle text-white" href="#">
+                        <img alt="" class="admin-pic img-circle" src="http://api.randomuser.me/portraits/thumb/men/23.jpg">Hi, Dave Mattew <b class="caret"></b>
+                    </a>
+                    <ul style="margin:25px 15px 0 0;" role="menu" class="dropdown-setting dropdown-menu bg-amber">
+                        <li>
+                            <a href="#">
+                                <span class="entypo-user"></span>&nbsp;&nbsp;My Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="entypo-vcard"></span>&nbsp;&nbsp;Account Setting</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="entypo-lifebuoy"></span>&nbsp;&nbsp;Help</a>
+                        </li>
+
+                        <li>
+                            <a href="http://themeforest.net/item/apricot-navigation-admin-dashboard-template/7664475?WT.ac=category_item&amp;WT.z_author=themesmile">
+                                <span class="entypo-basket"></span>&nbsp;&nbsp; Purchase</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a data-toggle="dropdown" class="dropdown-toggle text-white" href="#">
+                        <i class="icon-gear"></i>&nbsp;Setting <b class="caret"></b>
+                    </a>
+                    <ul style="margin:25px 15px 0 0;" role="menu" class="theme-bg dropdown-setting dropdown-menu bg-amber">
+
+                        <li>
+                            <div id="button-bg"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg2"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg3"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg4"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg5"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg6"></div>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+    <!-- END OF TOPNAV -->
+    <!-- Comtainer -->
+    <div class="container-fluid paper-wrap bevel tlbr">
+        <div id="paper-top">
+            <div class="row">
+                <div class="col-sm-3 no-pad">
+
+                    <a class="navbar-brand logo-text" href="#">Cannavaro</a>
+
+                    <ul class="list-unstyled list-inline noft-btn">
+                        <li data-toggle="tooltip" data-placement="bottom" title="Profile"><i class=" icon-user"></i>
+                        </li>
+
+                        <li data-toggle="tooltip" data-placement="bottom" title="Log Out"> <a href="login.html" class="text-white"><i class="icon-upload"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 no-pad">
+                    <ul style="margin-top:8px;" class="nav navbar-nav navbar-left list-unstyled list-inline text-gray date-list news-list">
+                        <!-- <li><i class="fontello-doc-text text-gray"></i>
+                        </li> -->
+                        <li>
+                            <ul class="list-unstyled top-newsticker text-gray news-list">
+                                <li><i class="fontello-cloud-flash-inv text-gray"></i>&nbsp;&nbsp;
+                                    <strong>Yogyakarta,</strong>Achmad Dhani Partly Cloudy Feels Like &nbsp;<b>22 °C</b>
+                                </li>
+                                <li><i class="fontello-cloud-sun-inv text-gray"></i>&nbsp;&nbsp;
+                                    <strong>Bandung,</strong>Jln Sudirman, Sunny Feels Like &nbsp;<b>31 °C</b>
+                                </li>
+                                <li><i class="fontello-rain-inv text-gray"></i>&nbsp;&nbsp;
+                                    <strong>Jakarta,</strong>Tomang, Rain Like &nbsp;<b>19 °C</b>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+                <div class="col-sm-3 no-pad">
+                    <!-- menu right -->
+                    <div class="navbar-right">
+                        <ul class="nav navbar-nav margin-left">
+                            <!-- Messages: style can be found in dropdown.less-->
+                            <li class="dropdown messages-menu">
+                                <div class="drop-btn dropdown-toggle bg-white" data-toggle="dropdown">
+                                    <i class="fa  fa-envelope text-navy"></i>
+                                    <span class="label label-success label-drop">4</span>
+                                </div>
+                                <ul class="dropdown-menu drop-msg ">
+                                    <li class="header bg-green">
+                                        You have 4 messages</li>
+
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu bg-white">
+                                            <li>
+                                                <!-- start message -->
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/men/37.jpg" class="img-circle" alt="User Image" />
+                                                    </div>
+                                                    <h4>
+                                                        Developer
+                                                        <!-- <small><i class="fa fa-clock-o"></i> 5 mins</small> -->
+                                                    </h4>
+                                                    <p>Bug fixed level 90%</p>
+                                                </a>
+                                            </li>
+                                            <!-- end message -->
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/women/36.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        Aplication Support
+
+                                                    </h4>
+                                                    <p>There is some bug in your last submit</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/men/35.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        Lead Developers
+
+                                                    </h4>
+                                                    <p>Please check again your submit</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/women/34.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        Web Designer
+
+                                                    </h4>
+                                                    <p>Art has done</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/men/33.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        General Manager
+
+                                                    </h4>
+                                                    <p>Employed newslatter</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="footer-green">
+                                        <!--    <div class="btn btn-xs bg-opacity-white-btn  fontello-arrows-cw"></div>
+                                        <div class="btn btn-xs bg-opacity-white-btn fontello-trash"></div>
+                                        <div class="btn btn-xs bg-opacity-white-btn fontello-eye-outline"></div> -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Notifications: style can be found in dropdown.less -->
+                            <li class="dropdown notifications-menu">
+                                <div class="drop-btn dropdown-toggle bg-white" data-toggle="dropdown">
+                                    <i class="fa  fa-exclamation-triangle text-navy"></i>
+                                    <span class="label bg-aqua label-drop">7</span>
+                                </div>
+                                <ul class="dropdown-menu drop-noft">
+
+                                    <li class="header bg-aqua">
+                                        You have 10 notifications</li>
+
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu bg-white">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-user"></i> New developer registered
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-cloud"></i> 2 item commit
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-download"></i> 3 members joined
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-tag"></i> 22 sales made
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-document"></i> New task from manager
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="footer-blue">
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Tasks: style can be found in dropdown.less -->
+                            <li class="dropdown tasks-menu">
+                                <div class="drop-btn bg-white dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-briefcase text-navy"></i>
+                                    <span class="label bg-red label-drop">9</span>
+                                </div>
+                                <ul class="dropdown-menu drop-task">
+
+                                    <li class="header bg-red">
+                                        <span></span>You have 9 tasks</li>
+
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu bg-white">
+                                            <li>
+                                                <!-- Task item -->
+                                                <div class="task-list-item">
+                                                    <h2>Wed, 25 Mar 2014
+                                                        <span>9:32
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Finished task Testing.</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+                                            </li>
+                                            <!-- end task item -->
+                                            <li>
+                                                <!-- Task item -->
+
+                                                <div class="task-list-item">
+                                                    <h2>Thu, 23 Mar 2014
+                                                        <span>7:54
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Creat the documentation</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+
+                                            </li>
+                                            <!-- end task item -->
+                                            <li>
+                                                <!-- Task item -->
+                                                <div class="task-list-item">
+                                                    <h2>Wed, 21 Mar 2014
+                                                        <span>12:43
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Repository you file now!</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+                                            </li>
+                                            <!-- end task item -->
+                                            <li>
+                                                <!-- Task item -->
+                                                <div class="task-list-item">
+                                                    <h2>Fri, 20 Mar 2014
+                                                        <span>8:00
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Fill the job description</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+                                            </li>
+                                            <!-- end task item -->
+                                        </ul>
+                                    </li>
+
+                                    <li class="footer-red">
+
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of menu right -->
+            </div>
+        </div>
+
+        <!-- SIDE MENU -->
+        <div class="wrap-sidebar-content">
+            <div id="skin-select">
+                <a id="toggle">
+                    <span class="fa icon-menu"></span>
+                </a>
+
+                <div class="skin-part">
+                    <div id="tree-wrap">
+                        <div class="side-bar">
+                            <ul id="menu-showhide" class="topnav">
+                                <li class="devider-title">
+                                    <h3>
+                                        <span>Desain Kit Menu</span>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="index.html" title="Dashboard">
+                                        <i class="fontello-desktop-1"></i>
+                                        <span>Dashboard</span>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Mail">
+                                        <i class=" fontello-mail-1"></i>
+                                        <span>mail</span>
+
+                                    </a>
+                                    <ul>
+                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="mail.html" title="Index">Inbox</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="compose.html" title="Compose">Compose</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="UI">
+                                        <i class="fontello-note"></i>
+                                        <span>UI</span>
+                                    </a>
+                                    <ul>
+                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="element.html" title="Element">Element</a>
+                                        </li>
+                                        <li><a href="button.html" title="Button">
+                                            Button
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html" title="Tab & Accordion">Wizard</a>
+                                        </li>
+                                        <li>
+                                            <a href="calendar.html" title="Calender">Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a href="tree.html" title="Tree View">Tree View</a>
+                                        </li>
+                                        <li>
+                                            <a href="grids.html" title="Grids">Grids</a>
+                                        </li>
+                                        <li>
+                                            <a href="chart.html" title="Chart">Chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="typhography.html" title="Typhoghrapy">
+                                                
+                                                Typhoghrapy
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Layout">
+                                        <i class=" fontello-pencil-1"></i>
+                                        <span>Layout&nbsp;
+                                            <small class="side-menu-noft bg-aqua">new</small>
+                                        </span>
+
+                                    </a>
+                                    <ul>
+                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="nopadding.html" title="Index">full width</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="minimize.html" title="Compose">minimize</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="rightmenu.html" title="Compose">Right Side bar</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="topmenu.html" title="Compose">Top menu</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Bg">
+                                        <i class="fontello-photo"></i>
+                                        <span>Background&nbsp;
+                                            <small class="side-menu-noft bg-aqua">new</small>
+                                        </span>
+
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="imagebg.html" title="Image">Image </a>
+                                        </li>
+                                        <li>
+                                            <a href="videobg.html" title="Video">Video </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="devider-horizontal"></li>
+                                <li class="devider-title">
+                                    <h3>
+                                        <span>Component</span>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Form">
+                                        <i class="fontello-doc-1"></i>
+                                        <span>Form</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="form-element.html" title="Form Elements">Form Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="andvance-form.html" title="Andvance Form">Andvance Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="text-editor.html" title="Text Editor">Text Editor</a>
+                                        </li>
+                                        <li>
+                                            <a href="file-upload.html" title="File Upload">File Upload</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Tables">
+                                        <i class="fontello-calendar-1"></i>
+                                        <span>Tables</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="table-static.html" title="Table Static">Table Static</a>
+                                        </li>
+                                        <li>
+                                            <a href="table-dynamic.html" title="Table Dynamic">Table Dynamic</a>
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="icon.html" title="Icons">
+                                        <i class="fontello-food"></i>
+                                        <span>Icons</span>
+                                        <div class="noft-blue bg-green" style="display: inline-block; float: none;">New</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="map.html" title="Map">
+                                        <i class="fontello-location-1"></i>
+                                        <span>Map</span>
+
+                                    </a>
+                                </li>
+                                <li class="devider-horizontal"></li>
+                                <li class="devider-title">
+                                    <h3>
+                                        <span>Special Page</span>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Extra">
+                                        <i class="fontello-beaker"></i>
+                                        <span>Extra</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="invoice.html" title="Invoice">Invoice</a>
+                                        </li>
+                                        <li>
+                                            <a href="pricing_table.html" title="Pricing Table">Pricing Table</a>
+                                        </li>
+                                        <li>
+                                            <a href="time-line.html" title="Time Line">Time Line</a>
+                                        </li>
+                                        <li>
+                                            <a href="404.html" title="404 Error Page">404 Error Page</a>
+                                        </li>
+                                        <li>
+                                            <a href="500.html" title="500 Error Page">500 Error Page</a>
+                                        </li>
+                                        <li>
+                                            <a href="lock-screen.html" title="Lock Screen">Lock Screen</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a class="tooltip-tip " href="login.html" title="login">
+                                        <i class=" fontello-lock-1"></i>
+                                        <span>Login</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="side-dash">
+                                <h3>
+                                    <span>Task Progress</span>
+                                </h3>
+                                <ul class="side-dashh-list">
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3 class="fontello-leaf">
+                                                Tidy up your files
+                                                <small class="pull-right">35%</small>
+                                            </h3>
+                                            <div class="progress xs bg-opacity-one height-tiny">
+                                                <div class="progress-bar bg-blue " style="width: 35%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">35% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3 class="fontello-box">
+                                                Check server status
+                                                <small class="pull-right">40%</small>
+                                            </h3>
+                                            <div class="progress xs bg-opacity-one height-tiny">
+                                                <div class="progress-bar bg-aqua" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3 class="fontello-headphones">
+                                                Support costumer
+                                                <small class="pull-right">60%</small>
+                                            </h3>
+                                            <div class="progress xs bg-opacity-one height-tiny">
+                                                <div class="progress-bar bg-red-orange" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h3>
+                                    <span>Reply</span>
+                                </h3>
+                                <div id="doughnutChart" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/skin-select -->
+            <!-- END OF SIDE MENU -->
+
+            <!-- Breadcrumb -->
+            <div class="sub-board">
+                <span class="header-icon"><i class="fontello-home"></i>
+                </span>
+                <ol class="breadcrumb newcrumb ng-scope">
+                    <li>
+                        <a href="#">
+                            <span>
+                            </span>Table</a>
+                    </li>
+                    <li><a href="#">Table Static</a>
+                    </li>
+                </ol>
+                <div class="dark" style="visibility: visible;">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control search rounded id_search" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End of Breadcrumb -->
+
+
+
+
+
+
+            <!-- CONTENT -->
+            <div class="wrap-fluid" id="paper-bg">
+
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i> 
+                                    <span>Responsive Stackable</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="responsive-example-table" class="table large-only">
+                                    <tbody>
+                                        <tr class="text-right">
+                                            <th style="width=30%;">Stuff</th>
+                                            <th style="width=12%;">Rate</th>
+                                            <th style="width=12%;">Amount</th>
+                                            <th style="width=12%;">Points</th>
+                                            <th style="width=12%;">Number</th>
+                                            <th style="width=18%;">Type</th>
+                                            <th style="width=12%;">Name</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Something</td>
+                                            <td>3.375%</td>
+                                            <td>$123.12</td>
+                                            <td>1.125</td>
+                                            <td>4,000</td>
+                                            <td>Potato</td>
+                                            <td>Paul</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Something Else</td>
+                                            <td>2.750%</td>
+                                            <td>$345.23</td>
+                                            <td>5</td>
+                                            <td>180</td>
+                                            <td>Spaceship</td>
+                                            <td>Skippy</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="7" class="sub">Subgroup Header</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Another Thing</td>
+                                            <td>3.375%</td>
+                                            <td>$563.12</td>
+                                            <td>222</td>
+                                            <td>60</td>
+                                            <td>Gym Shoe</td>
+                                            <td>George</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thing w/Less Stuff</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Harmonica</td>
+                                            <td>Helga</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Last Thing</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>4</td>
+                                            <td>Meaning of Life</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i> 
+                                    <span>Flip Scroll</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <section id="flip-scroll">
+
+                                    <table class="table table-bordered table-striped cf">
+                                        <thead class="cf">
+                                            <tr>
+                                                <th>Code</th>
+                                                <th>Company</th>
+                                                <th class="numeric">Price</th>
+                                                <th class="numeric">Change</th>
+                                                <th class="numeric">Change %</th>
+                                                <th class="numeric">Open</th>
+                                                <th class="numeric">High</th>
+                                                <th class="numeric">Low</th>
+                                                <th class="numeric">Volume</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>AAC</td>
+                                                <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+                                                <td class="numeric">$1.38</td>
+                                                <td class="numeric">-0.01</td>
+                                                <td class="numeric">-0.36%</td>
+                                                <td class="numeric">$1.39</td>
+                                                <td class="numeric">$1.39</td>
+                                                <td class="numeric">$1.38</td>
+                                                <td class="numeric">9,395</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AAD</td>
+                                                <td>ARDENT LEISURE GROUP</td>
+                                                <td class="numeric">$1.15</td>
+                                                <td class="numeric">+0.02</td>
+                                                <td class="numeric">1.32%</td>
+                                                <td class="numeric">$1.14</td>
+                                                <td class="numeric">$1.15</td>
+                                                <td class="numeric">$1.13</td>
+                                                <td class="numeric">56,431</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AAX</td>
+                                                <td>AUSENCO LIMITED</td>
+                                                <td class="numeric">$4.00</td>
+                                                <td class="numeric">-0.04</td>
+                                                <td class="numeric">-0.99%</td>
+                                                <td class="numeric">$4.01</td>
+                                                <td class="numeric">$4.05</td>
+                                                <td class="numeric">$4.00</td>
+                                                <td class="numeric">90,641</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ABC</td>
+                                                <td>ADELAIDE BRIGHTON LIMITED</td>
+                                                <td class="numeric">$3.00</td>
+                                                <td class="numeric">+0.06</td>
+                                                <td class="numeric">2.04%</td>
+                                                <td class="numeric">$2.98</td>
+                                                <td class="numeric">$3.00</td>
+                                                <td class="numeric">$2.96</td>
+                                                <td class="numeric">862,518</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ABP</td>
+                                                <td>ABACUS PROPERTY GROUP</td>
+                                                <td class="numeric">$1.91</td>
+                                                <td class="numeric">0.00</td>
+                                                <td class="numeric">0.00%</td>
+                                                <td class="numeric">$1.92</td>
+                                                <td class="numeric">$1.93</td>
+                                                <td class="numeric">$1.90</td>
+                                                <td class="numeric">595,701</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ABY</td>
+                                                <td>ADITYA BIRLA MINERALS LIMITED</td>
+                                                <td class="numeric">$0.77</td>
+                                                <td class="numeric">+0.02</td>
+                                                <td class="numeric">2.00%</td>
+                                                <td class="numeric">$0.76</td>
+                                                <td class="numeric">$0.77</td>
+                                                <td class="numeric">$0.76</td>
+                                                <td class="numeric">54,567</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ACR</td>
+                                                <td>ACRUX LIMITED</td>
+                                                <td class="numeric">$3.71</td>
+                                                <td class="numeric">+0.01</td>
+                                                <td class="numeric">0.14%</td>
+                                                <td class="numeric">$3.70</td>
+                                                <td class="numeric">$3.72</td>
+                                                <td class="numeric">$3.68</td>
+                                                <td class="numeric">191,373</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ADU</td>
+                                                <td>ADAMUS RESOURCES LIMITED</td>
+                                                <td class="numeric">$0.72</td>
+                                                <td class="numeric">0.00</td>
+                                                <td class="numeric">0.00%</td>
+                                                <td class="numeric">$0.73</td>
+                                                <td class="numeric">$0.74</td>
+                                                <td class="numeric">$0.72</td>
+                                                <td class="numeric">8,602,291</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AGG</td>
+                                                <td>ANGLOGOLD ASHANTI LIMITED</td>
+                                                <td class="numeric">$7.81</td>
+                                                <td class="numeric">-0.22</td>
+                                                <td class="numeric">-2.74%</td>
+                                                <td class="numeric">$7.82</td>
+                                                <td class="numeric">$7.82</td>
+                                                <td class="numeric">$7.81</td>
+                                                <td class="numeric">148</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AGK</td>
+                                                <td>AGL ENERGY LIMITED</td>
+                                                <td class="numeric">$13.82</td>
+                                                <td class="numeric">+0.02</td>
+                                                <td class="numeric">0.14%</td>
+                                                <td class="numeric">$13.83</td>
+                                                <td class="numeric">$13.83</td>
+                                                <td class="numeric">$13.67</td>
+                                                <td class="numeric">846,403</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AGO</td>
+                                                <td>ATLAS IRON LIMITED</td>
+                                                <td class="numeric">$3.17</td>
+                                                <td class="numeric">-0.02</td>
+                                                <td class="numeric">-0.47%</td>
+                                                <td class="numeric">$3.11</td>
+                                                <td class="numeric">$3.22</td>
+                                                <td class="numeric">$3.10</td>
+                                                <td class="numeric">5,416,303</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i> 
+                                    <span>Responsive Hover Table</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="box-body table-responsive no-padding">
+                                    <table class="table table-hover">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>User</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Reason</th>
+                                        </tr>
+                                        <tr>
+                                            <td>183</td>
+                                            <td>John Doe</td>
+                                            <td>11-7-2014</td>
+                                            <td>
+                                                <span class="label label-success">Approved</span>
+                                            </td>
+                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>219</td>
+                                            <td>Jane Doe</td>
+                                            <td>11-7-2014</td>
+                                            <td>
+                                                <span class="label label-warning">Pending</span>
+                                            </td>
+                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>657</td>
+                                            <td>Bob Doe</td>
+                                            <td>11-7-2014</td>
+                                            <td>
+                                                <span class="label label-primary">Approved</span>
+                                            </td>
+                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>175</td>
+                                            <td>Mike Doe</td>
+                                            <td>11-7-2014</td>
+                                            <td>
+                                                <span class="label label-danger">Denied</span>
+                                            </td>
+                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- #/paper bg -->
+        </div>
+        <!-- ./wrap-sidebar-content -->
+
+        <!-- / END OF CONTENT -->
+
+
+
+
+
+
+
+
+        <!-- FOOTER -->
+        <div id="footer">
+            <div class="devider-footer-left"></div>
+            <div class="time">
+                <p id="spanDate"></p>
+                <p id="clock"></p>
+            </div>
+            <div class="copyright">Copyright &copy; 2014 <a href="http://ndesaintheme.com/">Themesmile</a> Made with <i class="fontello-heart-filled text-red"></i>
+            </div>
+            <div class="devider-footer"></div>
+            <ul>
+                <li><i class="fa fa-facebook-square"></i>
+                </li>
+                <li><i class="fa fa-twitter-square"></i>
+                </li>
+                <li><i class="fa fa-instagram"></i>
+                </li>
+            </ul>
+        </div>
+        <!-- / FOOTER -->
+    </div>
+    <!-- Container -->
+
+
+
+
+    <!-- 
+    ================================================== -->
+    <!-- Main jQuery Plugins -->
+    <script type='text/javascript' src="js/jquery.js"></script>
+
+    <script type='text/javascript' src='js/bootstrap.js'></script>
+    <script type='text/javascript' src='js/date.js'></script>
+    <script type='text/javascript' src='js/slimscroll/jquery.slimscroll.js'></script>
+    <script type='text/javascript' src='js/jquery.nicescroll.min.js'></script>
+    <script type='text/javascript' src='js/sliding-menu.js'></script>
+    <script type='text/javascript' src='js/scriptbreaker-multiple-accordion-1.js'></script>
+    <script type='text/javascript' src='js/tip/jquery.tooltipster.min.js'></script>
+    <script type='text/javascript' src="js/donut-chart/jquery.drawDoughnutChart.js"></script>
+    <script type='text/javascript' src="js/tab/jquery.newsTicker.js"></script>
+    <script type='text/javascript' src="js/tab/app.ticker.js"></script>
+    <script type='text/javascript' src='js/app.js'></script>
+
+    <script type='text/javascript' src='js/vegas/jquery.vegas.js'></script>
+    <script type='text/javascript' src='js/image-background.js'></script>
+    <script type="text/javascript" src="js/jquery.tabSlideOut.v1.3.js"></script>
+    <script type="text/javascript" src="js/bg-changer.js"></script>
+    <!-- /MAIN EFFECT -->
+    <script type="text/javascript" src="js/stackable/stacktable.js"></script>
+
+
+    <script>
+    $(document).on('click', '#run', function(e) {
+        e.preventDefault();
+        $('#simple-example-table').stacktable({
+            hideOriginal: true
+        });
+        $(this).replaceWith('<span>ran</span>');
+    });
+    $('#responsive-example-table').stacktable({
+        myClass: 'stacktable small-only'
+    });
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

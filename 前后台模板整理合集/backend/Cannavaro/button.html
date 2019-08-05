@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--   <meta content="IE=edge" http-equiv="X-UA-Compatible"> -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="ico/favicon.ico" rel="shortcut icon">
+
+    <title>Cannavaro Web Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap theme -->
+    <!--  <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dripicon.css">
+    <link rel="stylesheet" href="css/typicons.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="js/tip/tooltipster.css">
+    <link rel="stylesheet" type="text/css" href="js/vegas/jquery.vegas.css" />
+    <link rel="stylesheet" href="js/button/ladda/ladda.min.css">
+    <link rel="stylesheet" href="js/button/hover.css">
+    <style type="text/css">
+    .button-demo,
+    .progress-demo {
+        display: inline-block;
+        margin-right: 3px;
+        margin-bottom: 20px;
+    }
+    </style>
+
+    <!-- pace loader -->
+    <script src="js/pace/pace.js"></script>
+    <link href="js/pace/themes/orange/pace-theme-flash.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body role="document">
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- TOPNAV -->
+
+    <div class="row">
+        <div class="col-lg-3">
+            <ul class="nav navbar-nav navbar-left list-unstyled list-inline text-amber date-list">
+                <li><i class="fontello-th text-amber"></i>
+                </li>
+                <li id="Date"></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left list-unstyled list-inline text-amber date-list">
+                <li><i class="fontello-stopwatch text-amber"></i>
+                </li>
+                <li id="hours"></li>
+                <li class="point">:</li>
+                <li id="min"></li>
+                <li class="point">:</li>
+                <li id="sec"></li>
+            </ul>
+
+
+        </div>
+        <div class="col-lg-6">
+            <div style="margin-bottom:0;" class="alert text-white ">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <span class="entypo-info-circled"></span>
+                <strong>Wellcome back!</strong>&nbsp;&nbsp;Dave, your last loggin was 1 day ago. Have a nice day
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a data-toggle="dropdown" class="dropdown-toggle text-white" href="#">
+                        <img alt="" class="admin-pic img-circle" src="http://api.randomuser.me/portraits/thumb/men/23.jpg">Hi, Dave Mattew <b class="caret"></b>
+                    </a>
+                    <ul style="margin:25px 15px 0 0;" role="menu" class="dropdown-setting dropdown-menu bg-amber">
+                        <li>
+                            <a href="#">
+                                <span class="entypo-user"></span>&nbsp;&nbsp;My Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="entypo-vcard"></span>&nbsp;&nbsp;Account Setting</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="entypo-lifebuoy"></span>&nbsp;&nbsp;Help</a>
+                        </li>
+
+                        <li>
+                            <a href="http://themeforest.net/item/apricot-navigation-admin-dashboard-template/7664475?WT.ac=category_item&amp;WT.z_author=themesmile">
+                                <span class="entypo-basket"></span>&nbsp;&nbsp; Purchase</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a data-toggle="dropdown" class="dropdown-toggle text-white" href="#">
+                        <i class="icon-gear"></i>&nbsp;Setting <b class="caret"></b>
+                    </a>
+                    <ul style="margin:25px 15px 0 0;" role="menu" class="theme-bg dropdown-setting dropdown-menu bg-amber">
+
+                        <li>
+                            <div id="button-bg"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg2"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg3"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg4"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg5"></div>
+                        </li>
+                        <li>
+                            <div id="button-bg6"></div>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+    <!-- END OF TOPNAV -->
+    <!-- Comtainer -->
+    <div class="container-fluid paper-wrap bevel tlbr">
+        <div id="paper-top">
+            <div class="row">
+                <div class="col-sm-3 no-pad">
+
+                    <a class="navbar-brand logo-text" href="#">Cannavaro</a>
+
+                    <ul class="list-unstyled list-inline noft-btn">
+                        <li data-toggle="tooltip" data-placement="bottom" title="Profile"><i class=" icon-user"></i>
+                        </li>
+
+                        <li data-toggle="tooltip" data-placement="bottom" title="Log Out"> <a href="login.html" class="text-white"><i class="icon-upload"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 no-pad">
+                    <ul style="margin-top:8px;" class="nav navbar-nav navbar-left list-unstyled list-inline text-gray date-list news-list">
+                        <!-- <li><i class="fontello-doc-text text-gray"></i>
+                        </li> -->
+                        <li>
+                            <ul class="list-unstyled top-newsticker text-gray news-list">
+                                <li><i class="fontello-cloud-flash-inv text-gray"></i>&nbsp;&nbsp;
+                                    <strong>Yogyakarta,</strong>Achmad Dhani Partly Cloudy Feels Like &nbsp;<b>22 °C</b>
+                                </li>
+                                <li><i class="fontello-cloud-sun-inv text-gray"></i>&nbsp;&nbsp;
+                                    <strong>Bandung,</strong>Jln Sudirman, Sunny Feels Like &nbsp;<b>31 °C</b>
+                                </li>
+                                <li><i class="fontello-rain-inv text-gray"></i>&nbsp;&nbsp;
+                                    <strong>Jakarta,</strong>Tomang, Rain Like &nbsp;<b>19 °C</b>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+                <div class="col-sm-3 no-pad">
+                    <!-- menu right -->
+                    <div class="navbar-right">
+                        <ul class="nav navbar-nav margin-left">
+                            <!-- Messages: style can be found in dropdown.less-->
+                            <li class="dropdown messages-menu">
+                                <div class="drop-btn dropdown-toggle bg-white" data-toggle="dropdown">
+                                    <i class="fa  fa-envelope text-navy"></i>
+                                    <span class="label label-success label-drop">4</span>
+                                </div>
+                                <ul class="dropdown-menu drop-msg ">
+                                    <li class="header bg-green">
+                                        You have 4 messages</li>
+
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu bg-white">
+                                            <li>
+                                                <!-- start message -->
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/men/37.jpg" class="img-circle" alt="User Image" />
+                                                    </div>
+                                                    <h4>
+                                                        Developer
+                                                        <!-- <small><i class="fa fa-clock-o"></i> 5 mins</small> -->
+                                                    </h4>
+                                                    <p>Bug fixed level 90%</p>
+                                                </a>
+                                            </li>
+                                            <!-- end message -->
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/women/36.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        Aplication Support
+
+                                                    </h4>
+                                                    <p>There is some bug in your last submit</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/men/35.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        Lead Developers
+
+                                                    </h4>
+                                                    <p>Please check again your submit</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/women/34.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        Web Designer
+
+                                                    </h4>
+                                                    <p>Art has done</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="http://api.randomuser.me/portraits/thumb/men/33.jpg" class="img-circle" alt="user image" />
+                                                    </div>
+                                                    <h4>
+                                                        General Manager
+
+                                                    </h4>
+                                                    <p>Employed newslatter</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="footer-green">
+                                        <!--    <div class="btn btn-xs bg-opacity-white-btn  fontello-arrows-cw"></div>
+                                        <div class="btn btn-xs bg-opacity-white-btn fontello-trash"></div>
+                                        <div class="btn btn-xs bg-opacity-white-btn fontello-eye-outline"></div> -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Notifications: style can be found in dropdown.less -->
+                            <li class="dropdown notifications-menu">
+                                <div class="drop-btn dropdown-toggle bg-white" data-toggle="dropdown">
+                                    <i class="fa  fa-exclamation-triangle text-navy"></i>
+                                    <span class="label bg-aqua label-drop">7</span>
+                                </div>
+                                <ul class="dropdown-menu drop-noft">
+
+                                    <li class="header bg-aqua">
+                                        You have 10 notifications</li>
+
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu bg-white">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-user"></i> New developer registered
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-cloud"></i> 2 item commit
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-download"></i> 3 members joined
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-tag"></i> 22 sales made
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa icon-document"></i> New task from manager
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="footer-blue">
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Tasks: style can be found in dropdown.less -->
+                            <li class="dropdown tasks-menu">
+                                <div class="drop-btn bg-white dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-briefcase text-navy"></i>
+                                    <span class="label bg-red label-drop">9</span>
+                                </div>
+                                <ul class="dropdown-menu drop-task">
+
+                                    <li class="header bg-red">
+                                        <span></span>You have 9 tasks</li>
+
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu bg-white">
+                                            <li>
+                                                <!-- Task item -->
+                                                <div class="task-list-item">
+                                                    <h2>Wed, 25 Mar 2014
+                                                        <span>9:32
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Finished task Testing.</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+                                            </li>
+                                            <!-- end task item -->
+                                            <li>
+                                                <!-- Task item -->
+
+                                                <div class="task-list-item">
+                                                    <h2>Thu, 23 Mar 2014
+                                                        <span>7:54
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Creat the documentation</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+
+                                            </li>
+                                            <!-- end task item -->
+                                            <li>
+                                                <!-- Task item -->
+                                                <div class="task-list-item">
+                                                    <h2>Wed, 21 Mar 2014
+                                                        <span>12:43
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Repository you file now!</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+                                            </li>
+                                            <!-- end task item -->
+                                            <li>
+                                                <!-- Task item -->
+                                                <div class="task-list-item">
+                                                    <h2>Fri, 20 Mar 2014
+                                                        <span>8:00
+                                                            <small>PM</small>
+                                                        </span>
+                                                    </h2>
+                                                    <h1>Fill the job description</h1>
+                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
+                                                </div>
+                                            </li>
+                                            <!-- end task item -->
+                                        </ul>
+                                    </li>
+
+                                    <li class="footer-red">
+
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of menu right -->
+            </div>
+        </div>
+
+        <!-- SIDE MENU -->
+        <div class="wrap-sidebar-content">
+            <div id="skin-select">
+                <a id="toggle">
+                    <span class="fa icon-menu"></span>
+                </a>
+
+                <div class="skin-part">
+                    <div id="tree-wrap">
+                        <div class="side-bar">
+                            <ul id="menu-showhide" class="topnav">
+                                <li class="devider-title">
+                                    <h3>
+                                        <span>Desain Kit Menu</span>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="index.html" title="Dashboard">
+                                        <i class="fontello-desktop-1"></i>
+                                        <span>Dashboard</span>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Mail">
+                                        <i class=" fontello-mail-1"></i>
+                                        <span>mail</span>
+
+                                    </a>
+                                    <ul>
+                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="mail.html" title="Index">Inbox</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="compose.html" title="Compose">Compose</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="UI">
+                                        <i class="fontello-note"></i>
+                                        <span>UI</span>
+                                    </a>
+                                    <ul>
+                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="element.html" title="Element">Element</a>
+                                        </li>
+                                        <li><a href="button.html" title="Button">
+                                            Button
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html" title="Tab & Accordion">Wizard</a>
+                                        </li>
+                                        <li>
+                                            <a href="calendar.html" title="Calender">Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a href="tree.html" title="Tree View">Tree View</a>
+                                        </li>
+                                        <li>
+                                            <a href="grids.html" title="Grids">Grids</a>
+                                        </li>
+                                        <li>
+                                            <a href="chart.html" title="Chart">Chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="typhography.html" title="Typhoghrapy">
+                                                
+                                                Typhoghrapy
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Layout">
+                                        <i class=" fontello-pencil-1"></i>
+                                        <span>Layout&nbsp;
+                                            <small class="side-menu-noft bg-aqua">new</small>
+                                        </span>
+
+                                    </a>
+                                    <ul>
+                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="nopadding.html" title="Index">full width</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="minimize.html" title="Compose">minimize</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="rightmenu.html" title="Compose">Right Side bar</a>
+                                        </li>
+                                        <li>
+                                            <!-- class="active" -->
+                                            <a href="topmenu.html" title="Compose">Top menu</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Bg">
+                                        <i class="fontello-photo"></i>
+                                        <span>Background&nbsp;
+                                            <small class="side-menu-noft bg-aqua">new</small>
+                                        </span>
+
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="imagebg.html" title="Image">Image </a>
+                                        </li>
+                                        <li>
+                                            <a href="videobg.html" title="Video">Video </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="devider-horizontal"></li>
+                                <li class="devider-title">
+                                    <h3>
+                                        <span>Component</span>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Form">
+                                        <i class="fontello-doc-1"></i>
+                                        <span>Form</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="form-element.html" title="Form Elements">Form Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="andvance-form.html" title="Andvance Form">Andvance Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="text-editor.html" title="Text Editor">Text Editor</a>
+                                        </li>
+                                        <li>
+                                            <a href="file-upload.html" title="File Upload">File Upload</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Tables">
+                                        <i class="fontello-calendar-1"></i>
+                                        <span>Tables</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="table-static.html" title="Table Static">Table Static</a>
+                                        </li>
+                                        <li>
+                                            <a href="table-dynamic.html" title="Table Dynamic">Table Dynamic</a>
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="icon.html" title="Icons">
+                                        <i class="fontello-food"></i>
+                                        <span>Icons</span>
+                                        <div class="noft-blue bg-green" style="display: inline-block; float: none;">New</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="map.html" title="Map">
+                                        <i class="fontello-location-1"></i>
+                                        <span>Map</span>
+
+                                    </a>
+                                </li>
+                                <li class="devider-horizontal"></li>
+                                <li class="devider-title">
+                                    <h3>
+                                        <span>Special Page</span>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip" href="#" title="Extra">
+                                        <i class="fontello-beaker"></i>
+                                        <span>Extra</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="invoice.html" title="Invoice">Invoice</a>
+                                        </li>
+                                        <li>
+                                            <a href="pricing_table.html" title="Pricing Table">Pricing Table</a>
+                                        </li>
+                                        <li>
+                                            <a href="time-line.html" title="Time Line">Time Line</a>
+                                        </li>
+                                        <li>
+                                            <a href="404.html" title="404 Error Page">404 Error Page</a>
+                                        </li>
+                                        <li>
+                                            <a href="500.html" title="500 Error Page">500 Error Page</a>
+                                        </li>
+                                        <li>
+                                            <a href="lock-screen.html" title="Lock Screen">Lock Screen</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a class="tooltip-tip " href="login.html" title="login">
+                                        <i class=" fontello-lock-1"></i>
+                                        <span>Login</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="side-dash">
+                                <h3>
+                                    <span>Task Progress</span>
+                                </h3>
+                                <ul class="side-dashh-list">
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3 class="fontello-leaf">
+                                                Tidy up your files
+                                                <small class="pull-right">35%</small>
+                                            </h3>
+                                            <div class="progress xs bg-opacity-one height-tiny">
+                                                <div class="progress-bar bg-blue " style="width: 35%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">35% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3 class="fontello-box">
+                                                Check server status
+                                                <small class="pull-right">40%</small>
+                                            </h3>
+                                            <div class="progress xs bg-opacity-one height-tiny">
+                                                <div class="progress-bar bg-aqua" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3 class="fontello-headphones">
+                                                Support costumer
+                                                <small class="pull-right">60%</small>
+                                            </h3>
+                                            <div class="progress xs bg-opacity-one height-tiny">
+                                                <div class="progress-bar bg-red-orange" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h3>
+                                    <span>Reply</span>
+                                </h3>
+                                <div id="doughnutChart" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/skin-select -->
+            <!-- END OF SIDE MENU -->
+
+            <!-- Breadcrumb -->
+            <div class="sub-board">
+                <span class="header-icon"><i class="fontello-home"></i>
+                </span>
+                <ol class="breadcrumb newcrumb ng-scope">
+                    <li>
+                        <a href="#">
+                            <span>
+                            </span>UI</a>
+                    </li>
+                    <li><a href="#">Button</a>
+                    </li>
+                </ol>
+                <div class="dark" style="visibility: visible;">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control search rounded id_search" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End of Breadcrumb -->
+
+
+
+
+
+
+            <!-- CONTENT -->
+            <div class="wrap-fluid" id="paper-bg">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i>
+                                    <span>Application Buttons</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <a class="btn btn-app">
+                                    <i class="fa fontello-pencil"></i> Edit
+                                </a>
+                                <a class="btn btn-app">
+                                    <i class="fa fontello-camera-outline"></i> Take
+                                </a>
+                                <a class="btn btn-app">
+                                    <i class="fa fontello-bookmark"></i> Bookmark
+                                </a>
+                                <a class="btn btn-app">
+                                    <i class="fa fontello-download-outline"></i> Download
+                                </a>
+                                <a class="btn btn-app">
+                                    <i class="fa fontello-location-outline"></i> Location
+                                </a>
+                                <a class="btn btn-app">
+                                    <span class="badge bg-red">3</span>
+                                    <i class="fa fontello-bell"></i> Notifications
+                                </a>
+                                <a class="btn btn-app">
+                                    <span class="badge bg-green">300</span>
+                                    <i class="fa  fontello-basket"></i> Purchase
+                                </a>
+                                <a class="btn btn-app">
+                                    <span class="badge bg-purple">435</span>
+                                    <i class="fa fontello-users-outline"></i> Users
+                                </a>
+                                <a class="btn btn-app">
+                                    <span class="badge bg-teal">67</span>
+                                    <i class="fa fontello-inbox"></i> Inbox
+                                </a>
+                                <a class="btn btn-app">
+                                    <span class="badge bg-aqua">12</span>
+                                    <i class="fa fontello-thumbs-up-1"></i> Likes
+                                </a>
+                                <a class="btn btn-app">
+                                    <span class="badge bg-red">531</span>
+                                    <i class="fa fontello-facebook-circled"></i> Facebook
+                                </a>
+
+
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i> 
+                                    <span>Hover.css</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <h2 class="box-title">2D Transforms</h2>
+
+                                <a href="#" class="button grow">Grow</a>
+                                <a href="#" class="button shrink">Shrink</a>
+                                <a href="#" class="button pulse">Pulse</a>
+                                <a href="#" class="button pulse-grow">Pulse Grow</a>
+                                <a href="#" class="button pulse-shrink">Pulse Shrink</a>
+                                <a href="#" class="button push">Push</a>
+                                <a href="#" class="button pop">Pop</a>
+                                <a href="#" class="button rotate">Rotate</a>
+                                <a href="#" class="button grow-rotate">Grow Rotate</a>
+                                <a href="#" class="button float">Float</a>
+                                <a href="#" class="button sink">Sink</a>
+                                <a href="#" class="button hover">Hover</a>
+                                <a href="#" class="button hang">Hang</a>
+                                <a href="#" class="button skew">Skew</a>
+                                <a href="#" class="button skew-forward">Skew Forward</a>
+                                <a href="#" class="button skew-backward">Skew Backward</a>
+                                <a href="#" class="button wobble-horizontal">Wobble Horizontal</a>
+                                <a href="#" class="button wobble-vertical">Wobble Vertical</a>
+                                <a href="#" class="button wobble-to-bottom-right">Wobble To Bottom Right</a>
+                                <a href="#" class="button wobble-to-top-right">Wobble To Top Right</a>
+                                <a href="#" class="button wobble-top">Wobble Top</a>
+                                <a href="#" class="button wobble-bottom">Wobble Bottom</a>
+                                <a href="#" class="button wobble-skew">Wobble Skew</a>
+                                <a href="#" class="button buzz">Buzz</a>
+                                <a href="#" class="button buzz-out">Buzz Out</a>
+
+                                <h2 class="box-title">Curls</h2>
+
+                                <a href="#" class="button curl-top-left">Curl Top Left</a>
+                                <a href="#" class="button curl-top-right">Curl Top Right</a>
+                                <a href="#" class="button curl-bottom-right">Curl Bottom Right</a>
+                                <a href="#" class="button curl-bottom-left">Curl Bottom Left</a>
+
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i>
+                                    <span>Progress Button Examples</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <button class="btn btn-default  button test" data-opacity="0.9">Example</button>
+                                <button class="btn btn-default  button test" data-color="#0DB8DF" data-opacity="0.5">A Button</button>
+                                <button class="btn btn-default  button test disable" data-color="#ff0011" data-opacity="0.5">Disables on Click</button>
+                                <button class="btn btn-default  button test">YABTT</button>
+                                <button class="btn btn-default  button test disable" data-opacity="0.91" data-color="#222222">Great for use as an uploader button so take up less space.</button>
+
+                                <p style="margin:15px 0">bonus! works on any element too.</p>
+                                <div style=" display: block;                
+                height: 5px;
+                background-color: #efefef;
+                margin-bottom: 20px;
+                border-radius: 2px;" id="standard" data-opacity="0.8"></div>
+                                <button class="btn btn-default button other">Div Bar</button>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i>
+                                    <span>Progress Button (Lada)</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <p>A UI concept which merges loading indicators into the action that invoked them. Primarily intended for use with forms where it gives users immediate feedback upon submit rather than leaving them wondering while the browser does its thing. For a real-world example</p>
+
+
+                                <div class="button-demo">
+                                    <button class="ladda-button" data-size="xs" data-color="green" data-style="expand-left">Expand Left</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="green" data-style="expand-right">Expand Right</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="green" data-style="expand-up">Expand Up</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="green" data-style="expand-down">Expand Down</button>
+                                </div>
+
+                                <br>
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="red" data-style="contract">Contract</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="red" data-style="contract-overlay" style="z-index: 10;">Contract Overlay</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="red" data-style="zoom-in">Zoom In</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="red" data-style="zoom-out">Zoom Out</button>
+                                </div>
+
+                                <br>
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="blue" data-style="slide-left">Slide Left</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="blue" data-style="slide-right">Slide Right</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="blue" data-style="slide-up">Slide Up</button>
+                                </div>
+
+                                <div class="button-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="blue" data-style="slide-down">Slide Down</button>
+                                </div>
+
+                                <br>
+
+                                <div class="progress-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="purple" data-style="expand-right">Expand Right</button>
+                                </div>
+
+                                <div class="progress-demo">
+
+                                    <button class="ladda-button" data-size="xs" data-color="purple" data-style="contract">Contract</button>
+                                </div>
+
+                                <br>
+
+                                <div class="progress-demo">
+
+                                    <button class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs">Extra Small</button>
+                                </div>
+
+                                <div class="progress-demo">
+
+                                    <button class="ladda-button" data-color="mint" data-style="expand-right" data-size="s">Small</button>
+                                </div>
+
+                                <div class="progress-demo">
+
+                                    <button class="ladda-button" data-color="mint" data-style="expand-right" data-size="l">Large</button>
+                                </div>
+
+                                <div class="progress-demo">
+
+                                    <button class="ladda-button" data-color="mint" data-style="expand-right" data-size="xl">Extra Large</button>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+
+                                    <span class="box-btn" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </span>
+                                    <span class="box-btn" data-widget="remove"><i class="fa fa-times"></i>
+                                    </span>
+                                </div>
+                                <h3 class="box-title"><i class="fontello-doc"></i>
+                                    <span>Bootsrap Button</span>
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <!-- Standard button -->
+                                <p>Default</p>
+                                <button type="button" class="btn btn-default">Default</button>
+
+                                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                                <button type="button" class="btn btn-primary">Primary</button>
+
+                                <!-- Indicates a successful or positive action -->
+                                <button type="button" class="btn btn-success">Success</button>
+
+                                <!-- Contextual button for informational alert messages -->
+                                <button type="button" class="btn btn-info">Info</button>
+
+                                <!-- Indicates caution should be taken with this action -->
+                                <button type="button" class="btn btn-warning">Warning</button>
+
+                                <!-- Indicates a dangerous or potentially negative action -->
+                                <button type="button" class="btn btn-danger">Danger</button>
+
+                                <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+                                <button type="button" class="btn btn-link">Link</button>
+                                <br>
+
+                                <p style="margin:20px 0 10px">Single button dropdowns</p>
+
+                                <div class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">Default
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /btn-group -->
+                                <div class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">Primary
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /btn-group -->
+                                <div class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-success dropdown-toggle" type="button">Success
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /btn-group -->
+                                <div class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-info dropdown-toggle" type="button">Info
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /btn-group -->
+                                <div class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-warning dropdown-toggle" type="button">Warning
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /btn-group -->
+                                <div class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-danger dropdown-toggle" type="button">Danger
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /btn-group -->
+
+                                <p style="margin:20px 0 10px">Button with icon</p>
+
+                                <button type="button" class="btn btn-default">
+                                    <span class="entypo-pencil"></span>&nbsp;&nbsp;Edit</button>
+
+                                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                                <button type="button" class="btn btn-primary">
+                                    <span class="entypo-plus-squared"></span>&nbsp;&nbsp;Add</button>
+
+                                <!-- Indicates a successful or positive action -->
+                                <button type="button" class="btn btn-success">
+                                    <span class="entypo-upload"></span>&nbsp;&nbsp;Upload</button>
+
+                                <!-- Contextual button for informational alert messages -->
+                                <button type="button" class="btn btn-info">
+                                    <span class="entypo-trash"></span>&nbsp;&nbsp;Delete</button>
+
+                                <!-- Indicates caution should be taken with this action -->
+                                <button type="button" class="btn btn-warning">
+                                    <span class="entypo-print"></span>&nbsp;&nbsp;Print</button>
+
+                                <!-- Indicates a dangerous or potentially negative action -->
+                                <button type="button" class="btn btn-danger">
+                                    <span class="entypo-cancel-squared"></span>&nbsp;&nbsp;Cancel</button>
+
+                                <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+                                <button type="button" class="btn btn-link">
+                                    <span class="entypo-import"></span>&nbsp;&nbsp;Import</button>
+
+                                <br>
+                                <p style="margin:20px 0 10px">Button groups</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-warning">Left</button>
+                                    <button type="button" class="btn btn-danger">Middle</button>
+                                    <button type="button" class="btn btn-info">Right</button>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- #/paper bg -->
+        </div>
+        <!-- ./wrap-sidebar-content -->
+
+        <!-- / END OF CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer">
+            <div class="devider-footer-left"></div>
+            <div class="time">
+                <p id="spanDate"></p>
+                <p id="clock"></p>
+            </div>
+            <div class="copyright">Copyright &copy; 2014 <a href="http://ndesaintheme.com/">Themesmile</a> Made with <i class="fontello-heart-filled text-red"></i>
+            </div>
+            <div class="devider-footer"></div>
+            <ul>
+                <li><i class="fa fa-facebook-square"></i>
+                </li>
+                <li><i class="fa fa-twitter-square"></i>
+                </li>
+                <li><i class="fa fa-instagram"></i>
+                </li>
+            </ul>
+        </div>
+        <!-- / FOOTER -->
+    </div>
+    <!-- Container -->
+
+
+
+
+
+    <!-- 
+    ================================================== -->
+    <!-- Main jQuery Plugins -->
+    <script type='text/javascript' src="js/jquery.js"></script>
+
+    <script type='text/javascript' src='js/bootstrap.js'></script>
+    <script type='text/javascript' src='js/date.js'></script>
+    <script type='text/javascript' src='js/slimscroll/jquery.slimscroll.js'></script>
+    <script type='text/javascript' src='js/jquery.nicescroll.min.js'></script>
+    <script type='text/javascript' src='js/sliding-menu.js'></script>
+    <script type='text/javascript' src='js/scriptbreaker-multiple-accordion-1.js'></script>
+    <script type='text/javascript' src='js/tip/jquery.tooltipster.min.js'></script>
+    <script type='text/javascript' src="js/donut-chart/jquery.drawDoughnutChart.js"></script>
+    <script type='text/javascript' src="js/tab/jquery.newsTicker.js"></script>
+    <script type='text/javascript' src="js/tab/app.ticker.js"></script>
+    <script type='text/javascript' src='js/app.js'></script>
+
+     <script type='text/javascript' src='js/vegas/jquery.vegas.js'></script>
+    <script type='text/javascript' src='js/image-background.js'></script>
+    <script type="text/javascript" src="js/jquery.tabSlideOut.v1.3.js"></script>
+    <script type="text/javascript" src="js/bg-changer.js"></script>
+
+
+    <script type='text/javascript' src="js/button/ladda/spin.min.js"></script>
+    <script type='text/javascript' src="js/button/ladda/ladda.min.js"></script>
+    <script type='text/javascript' src='js/button/progressbutton.jquery.js'></script>
+
+    <script>
+    jQuery(document).ready(function($) {
+        var interval;
+        var bar = jQuery('.main').progressbutton();
+        jQuery('#reset').click(function() {
+            clearInterval(interval);
+            if (bar) {
+                bar.progressbutton('reset');
+            }
+        });
+        jQuery('.color').click(function() {
+            //clearInterval(interval);
+            var clicked = jQuery(this);
+            bar.progressbutton({
+                color: clicked.data('color')
+            });
+        });
+        jQuery('.opacity').click(function() {
+            //clearInterval(interval);
+            var clicked = jQuery(this);
+            bar.progressbutton({
+                opacity: clicked.data('opacity')
+            });
+        });
+
+        jQuery('.test').click(function() {
+            var itm = jQuery(this);
+            if (itm.hasClass('disable')) {
+                itm.attr('disabled', 'disabled');
+            }
+            var bar = itm.progressbutton({
+                percent: -1
+            });
+            var clock = 0;
+
+            var interval = setInterval(function() {
+                bar.progressbutton({
+                    percent: clock
+                });
+                clock = clock + 0.5;
+                if (clock > 100) {
+                    itm.removeAttr('disabled');
+                    clearInterval(interval);
+                    bar.progressbutton('reset');
+                }
+            }, 30);
+        });
+        jQuery('.action').click(function() {
+            clearInterval(interval);
+            var clicked = jQuery(this);
+            bar.progressbutton({
+                percent: clicked.data('percent')
+            });
+        });
+        jQuery('.other').click(function() {
+            var itm = jQuery('#standard');
+            var bar = itm.progressbutton({
+                percent: -1
+            });
+            var clock = 0;
+
+            var interval = setInterval(function() {
+                bar.progressbutton({
+                    percent: clock
+                });
+                clock = clock + 0.5;
+                if (clock > 100) {
+                    clearInterval(interval);
+                    bar.progressbutton('reset');
+                }
+            }, 30);
+        });
+
+
+    });
+    //Lada Button
+    (function($) {
+        "use strict";
+        // Bind normal buttons
+        Ladda.bind('.button-demo button', {
+            timeout: 2000
+        });
+
+        // Bind progress buttons and simulate loading progress
+        Ladda.bind('.progress-demo button', {
+            callback: function(instance) {
+                var progress = 0;
+                var interval = setInterval(function() {
+                    progress = Math.min(progress + Math.random() * 0.1, 1);
+                    instance.setProgress(progress);
+
+                    if (progress === 1) {
+                        instance.stop();
+                        clearInterval(interval);
+                    }
+                }, 200);
+            }
+        });
+
+        // You can control loading explicitly using the JavaScript API
+        // as outlined below:
+
+        // var l = Ladda.create( document.querySelector( 'button' ) );
+        // l.start();
+        // l.stop();
+        // l.toggle();
+        // l.isLoading();
+        // l.setProgress( 0-1 );
+    })(jQuery);
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
