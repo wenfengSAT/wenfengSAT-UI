@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detail Admin - DataTables</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/compiled/layout.css" />
+        <link rel="stylesheet" type="text/css" href="css/compiled/elements.css" />
+    <link rel="stylesheet" type="text/css" href="css/compiled/icons.css" />
+
+    <!-- libraries -->
+    <link href="css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="css/lib/jquery.dataTables.css" type="text/css" rel="stylesheet" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/compiled/datatables.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs">
+                <input class="search" type="text" />
+            </li>
+            <li class="notification-dropdown hidden-xs hidden-sm">
+                <a href="#" class="trigger">
+                    <i class="icon-warning-sign"></i>
+                    <span class="count">8</span>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
+                        <div class="notifications">
+                            <h3>You have 6 new notifications</h3>
+                            <a href="#" class="item">
+                                <i class="icon-signin"></i> New user registration
+                                <span class="time"><i class="icon-time"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-signin"></i> New user registration
+                                <span class="time"><i class="icon-time"></i> 18 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-envelope-alt"></i> New message from Alejandra
+                                <span class="time"><i class="icon-time"></i> 28 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-signin"></i> New user registration
+                                <span class="time"><i class="icon-time"></i> 49 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-download-alt"></i> New order placed
+                                <span class="time"><i class="icon-time"></i> 1 day.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="notification-dropdown hidden-xs hidden-sm">
+                <a href="#" class="trigger">
+                    <i class="icon-envelope"></i>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
+                        <div class="messages">
+                            <a href="#" class="item">
+                                <img src="img/contact-img.png" class="display" alt="user" />
+                                <div class="name">Alejandra Galván</div>
+                                <div class="msg">
+                                    There are many variations of available, but the majority have suffered alterations.
+                                </div>
+                                <span class="time"><i class="icon-time"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="img/contact-img2.png" class="display" alt="user" />
+                                <div class="name">Alejandra Galván</div>
+                                <div class="msg">
+                                    There are many variations of available, have suffered alterations.
+                                </div>
+                                <span class="time"><i class="icon-time"></i> 26 min.</span>
+                            </a>
+                            <a href="#" class="item last">
+                                <img src="img/contact-img.png" class="display" alt="user" />
+                                <div class="name">Alejandra Galván</div>
+                                <div class="msg">
+                                    There are many variations of available, but the majority have suffered alterations.
+                                </div>
+                                <span class="time"><i class="icon-time"></i> 48 min.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
+                    Your account
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="personal-info.html">Personal info</a></li>
+                    <li><a href="#">Account settings</a></li>
+                    <li><a href="#">Billing</a></li>
+                    <li><a href="#">Export your data</a></li>
+                    <li><a href="#">Send feedback</a></li>
+                </ul>
+            </li>
+            <li class="settings hidden-xs hidden-sm">
+                <a href="personal-info.html" role="button">
+                    <i class="icon-cog"></i>
+                </a>
+            </li>
+            <li class="settings hidden-xs hidden-sm">
+                <a href="signin.html" role="button">
+                    <i class="icon-share-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li>                
+                <a href="index.html">
+                    <i class="icon-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>            
+            <li>
+                <a href="chart-showcase.html">
+                    <i class="icon-signal"></i>
+                    <span>Charts</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-group"></i>
+                    <span>Users</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="user-list.html">User list</a></li>
+                    <li><a href="new-user.html">New user form</a></li>
+                    <li><a href="user-profile.html">User profile</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-edit"></i>
+                    <span>Forms</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="form-showcase.html">Form showcase</a></li>
+                    <li><a href="form-wizard.html">Form wizard</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="gallery.html">
+                    <i class="icon-picture"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="calendar.html">
+                    <i class="icon-calendar-empty"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li class="active">
+                <a class="dropdown-toggle" href="tables.html">
+                    <div class="pointer">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <i class="icon-th-large"></i>
+                    <span>Tables</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="active submenu">
+                    <li><a href="tables.html">Custom tables</a></li>
+                    <li><a href="datatables.html" class="active">DataTables</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-toggle ui-elements" href="#">
+                    <i class="icon-code-fork"></i>
+                    <span>UI Elements</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="ui-elements.html">UI Elements</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="personal-info.html">
+                    <i class="icon-cog"></i>
+                    <span>My Info</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-share-alt"></i>
+                    <span>Extras</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="code-editor.html">Code editor</a></li>
+                    <li><a href="grids.html">Grids</a></li>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+        
+        <!-- settings changer -->
+        <div class="skins-nav">
+            <a href="#" class="skin first_nav selected">
+                <span class="icon"></span><span class="text">Default</span>
+            </a>
+            <a href="#" class="skin second_nav" data-file="css/compiled/skins/dark.css">
+                <span class="icon"></span><span class="text">Dark skin</span>
+            </a>
+        </div>
+        
+        <div id="pad-wrapper" class="datatables-page">
+            
+            <div class="row">
+                <div class="col-md-12">
+
+                    <table id="example">
+                        <thead>
+                            <tr>
+                                <th tabindex="0" rowspan="1" colspan="1">Rendering engine
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">Browser
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">Platform(s)
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">Engine version
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">CSS grade
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tfoot>
+                            <tr>
+                                <th rowspan="1" colspan="1">Rendering engine</th>
+                                <th rowspan="1" colspan="1">Browser</th>
+                                <th rowspan="1" colspan="1">Platform(s)</th>
+                                <th rowspan="1" colspan="1">Engine version</th>
+                                <th rowspan="1" colspan="1">CSS grade</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>Trident</td>
+                                <td>Internet
+                                     Explorer 4.0</td>
+                                <td>Win 95+</td>
+                                <td class="center"> 4</td>
+                                <td class="center">X</td>
+                            </tr>
+                            <tr>
+                                <td>Trident</td>
+                                <td>Internet
+                                     Explorer 5.0</td>
+                                <td>Win 95+</td>
+                                <td class="center">5</td>
+                                <td class="center">C</td>
+                            </tr>
+                            <tr>
+                                <td>Trident</td>
+                                <td>Internet
+                                     Explorer 5.5</td>
+                                <td>Win 95+</td>
+                                <td class="center">5.5</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Trident</td>
+                                <td>Internet
+                                     Explorer 6</td>
+                                <td>Win 98+</td>
+                                <td class="center">6</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Trident</td>
+                                <td>Internet Explorer 7</td>
+                                <td>Win XP SP2+</td>
+                                <td class="center">7</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Trident</td>
+                                <td>AOL browser (AOL desktop)</td>
+                                <td>Win XP</td>
+                                <td class="center">6</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Firefox 1.0</td>
+                                <td>Win 98+ / OSX.2+</td>
+                                <td class="center">1.7</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Firefox 1.5</td>
+                                <td>Win 98+ / OSX.2+</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Firefox 2.0</td>
+                                <td>Win 98+ / OSX.2+</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Firefox 3.0</td>
+                                <td>Win 2k+ / OSX.3+</td>
+                                <td class="center">1.9</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Camino 1.0</td>
+                                <td>OSX.2+</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Camino 1.5</td>
+                                <td>OSX.3+</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Netscape 7.2</td>
+                                <td>Win 95+ / Mac OS 8.6-9.2</td>
+                                <td class="center">1.7</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Netscape Browser 8</td>
+                                <td>Win 98SE+</td>
+                                <td class="center">1.7</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Netscape Navigator 9</td>
+                                <td>Win 98+ / OSX.2+</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.0</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">1</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.1</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">1.1</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.2</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">1.2</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.3</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">1.3</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.4</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">1.4</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.5</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">1.5</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.6</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">1.6</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.7</td>
+                                <td>Win 98+ / OSX.1+</td>
+                                <td class="center">1.7</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Mozilla 1.8</td>
+                                <td>Win 98+ / OSX.1+</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Seamonkey 1.1</td>
+                                <td>Win 98+ / OSX.2+</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Gecko</td>
+                                <td>Epiphany 2.20</td>
+                                <td>Gnome</td>
+                                <td class="center">1.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Webkit</td>
+                                <td>Safari 1.2</td>
+                                <td>OSX.3</td>
+                                <td class="center">125.5</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Webkit</td>
+                                <td>Safari 1.3</td>
+                                <td>OSX.3</td>
+                                <td class="center">312.8</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Webkit</td>
+                                <td>Safari 2.0</td>
+                                <td>OSX.4+</td>
+                                <td class="center">419.3</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Webkit</td>
+                                <td>Safari 3.0</td>
+                                <td>OSX.4+</td>
+                                <td class="center">522.1</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Webkit</td>
+                                <td>OmniWeb 5.5</td>
+                                <td>OSX.4+</td>
+                                <td class="center">420</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Webkit</td>
+                                <td>iPod Touch / iPhone</td>
+                                <td>iPod</td>
+                                <td class="center">420.1</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Webkit</td>
+                                <td>S60</td>
+                                <td>S60</td>
+                                <td class="center">413</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera 7.0</td>
+                                <td>Win 95+ / OSX.1+</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera 7.5</td>
+                                <td>Win 95+ / OSX.2+</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera 8.0</td>
+                                <td>Win 95+ / OSX.2+</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera 8.5</td>
+                                <td>Win 95+ / OSX.2+</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera 9.0</td>
+                                <td>Win 95+ / OSX.3+</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera 9.2</td>
+                                <td>Win 88+ / OSX.3+</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera 9.5</td>
+                                <td>Win 88+ / OSX.3+</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Opera for Wii</td>
+                                <td>Wii</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Nokia N800</td>
+                                <td>N800</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Presto</td>
+                                <td>Nintendo DS browser</td>
+                                <td>Nintendo DS</td>
+                                <td class="center">8.5</td>
+                                <td class="center">C/A<sup>1</sup></td>
+                            </tr>
+                            <tr>
+                                <td>KHTML</td>
+                                <td>Konqureror 3.1</td>
+                                <td>KDE 3.1</td>
+                                <td class="center">3.1</td>
+                                <td class="center">C</td>
+                            </tr>
+                            <tr>
+                                <td>KHTML</td>
+                                <td>Konqureror 3.3</td>
+                                <td>KDE 3.3</td>
+                                <td class="center">3.3</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>KHTML</td>
+                                <td>Konqureror 3.5</td>
+                                <td>KDE 3.5</td>
+                                <td class="center">3.5</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Tasman</td>
+                                <td>Internet Explorer 4.5</td>
+                                <td>Mac OS 8-9</td>
+                                <td class="center">-</td>
+                                <td class="center">X</td>
+                            </tr>
+                            <tr>
+                                <td>Tasman</td>
+                                <td>Internet Explorer 5.1</td>
+                                <td>Mac OS 7.6-9</td>
+                                <td class="center">1</td>
+                                <td class="center">C</td>
+                            </tr>
+                            <tr>
+                                <td>Tasman</td>
+                                <td>Internet Explorer 5.2</td>
+                                <td>Mac OS 8-X</td>
+                                <td class="center">1</td>
+                                <td class="center">C</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>NetFront 3.1</td>
+                                <td>Embedded devices</td>
+                                <td class="center">-</td>
+                                <td class="center">C</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>NetFront 3.4</td>
+                                <td>Embedded devices</td>
+                                <td class="center">-</td>
+                                <td class="center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>Dillo 0.8</td>
+                                <td>Embedded devices</td>
+                                <td class="center">-</td>
+                                <td class="center">X</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>Links</td>
+                                <td>Text only</td>
+                                <td class="center">-</td>
+                                <td class="center">X</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>Lynx</td>
+                                <td>Text only</td>
+                                <td class="center">-</td>
+                                <td class="center">X</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>IE Mobile</td>
+                                <td>Windows Mobile 6</td>
+                                <td class="center">-</td>
+                                <td class="center">C</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>PSP browser</td>
+                                <td>PSP</td>
+                                <td class="center">-</td>
+                                <td class="center">C</td>
+                            </tr>
+                            <tr>
+                                <td>Other browsers</td>
+                                <td>All others</td>
+                                <td>-</td>
+                                <td class="center">-</td>
+                                <td class="center">U</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end main container -->
+
+	<!-- scripts -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/theme.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').dataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+    </script>
+</body>
+</html>

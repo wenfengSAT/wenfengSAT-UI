@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detail Admin - UI Elements</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- libraries -->
+    <link href="css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/compiled/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/compiled/elements.css" />
+    <link rel="stylesheet" type="text/css" href="css/compiled/icons.css" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/compiled/ui-elements.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs hidden-sm">
+                <input class="search" type="text" />
+            </li>
+            <li class="notification-dropdown hidden-xs hidden-sm">
+                <a href="#" class="trigger">
+                    <i class="icon-warning-sign"></i>
+                    <span class="count">8</span>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
+                        <div class="notifications">
+                            <h3>You have 6 new notifications</h3>
+                            <a href="#" class="item">
+                                <i class="icon-signin"></i> New user registration
+                                <span class="time"><i class="icon-time"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-signin"></i> New user registration
+                                <span class="time"><i class="icon-time"></i> 18 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-envelope-alt"></i> New message from Alejandra
+                                <span class="time"><i class="icon-time"></i> 28 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-signin"></i> New user registration
+                                <span class="time"><i class="icon-time"></i> 49 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="icon-download-alt"></i> New order placed
+                                <span class="time"><i class="icon-time"></i> 1 day.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="notification-dropdown hidden-xs hidden-sm">
+                <a href="#" class="trigger">
+                    <i class="icon-envelope"></i>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
+                        <div class="messages">
+                            <a href="#" class="item">
+                                <img src="img/contact-img.png" class="display" alt="user" />
+                                <div class="name">Alejandra Galván</div>
+                                <div class="msg">
+                                    There are many variations of available, but the majority have suffered alterations.
+                                </div>
+                                <span class="time"><i class="icon-time"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="img/contact-img2.png" class="display" alt="user" />
+                                <div class="name">Alejandra Galván</div>
+                                <div class="msg">
+                                    There are many variations of available, have suffered alterations.
+                                </div>
+                                <span class="time"><i class="icon-time"></i> 26 min.</span>
+                            </a>
+                            <a href="#" class="item last">
+                                <img src="img/contact-img.png" class="display" alt="user" />
+                                <div class="name">Alejandra Galván</div>
+                                <div class="msg">
+                                    There are many variations of available, but the majority have suffered alterations.
+                                </div>
+                                <span class="time"><i class="icon-time"></i> 48 min.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
+                    Your account
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="personal-info.html">Personal info</a></li>
+                    <li><a href="#">Account settings</a></li>
+                    <li><a href="#">Billing</a></li>
+                    <li><a href="#">Export your data</a></li>
+                    <li><a href="#">Send feedback</a></li>
+                </ul>
+            </li>
+            <li class="settings hidden-xs hidden-sm">
+                <a href="personal-info.html" role="button">
+                    <i class="icon-cog"></i>
+                </a>
+            </li>
+            <li class="settings hidden-xs hidden-sm">
+                <a href="signin.html" role="button">
+                    <i class="icon-share-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li>                
+                <a href="index.html">
+                    <i class="icon-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>            
+            <li>
+                <a href="chart-showcase.html">                    
+                    <i class="icon-signal"></i>
+                    <span>Charts</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-group"></i>
+                    <span>Users</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="user-list.html">User list</a></li>
+                    <li><a href="new-user.html">New user form</a></li>
+                    <li><a href="user-profile.html">User profile</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-edit"></i>
+                    <span>Forms</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="form-showcase.html">Form showcase</a></li>
+                    <li><a href="form-wizard.html">Form wizard</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="gallery.html">                    
+                    <i class="icon-picture"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="calendar.html">                    
+                    <i class="icon-calendar-empty"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="tables.html">
+                    <i class="icon-th-large"></i>
+                    <span>Tables</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="tables.html">Custom tables</a></li>
+                    <li><a href="datatables.html">DataTables</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a class="dropdown-toggle ui-elements" href="#">
+                    <i class="icon-code-fork"></i>
+                    <span>UI Elements</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="active submenu">
+                    <li><a href="ui-elements.html" class="active">UI Elements</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="personal-info.html">
+                    <i class="icon-cog"></i>
+                    <span>My Info</span>
+                </a>
+            </li>
+            <li>                
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-share-alt"></i>
+                    <span>Extras</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="code-editor.html">Code editor</a></li>
+                    <li><a href="grids.html">Grids</a></li>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+        
+        <!-- settings changer -->
+        <div class="skins-nav">
+            <a href="#" class="skin first_nav selected">
+                <span class="icon"></span><span class="text">Default</span>
+            </a>
+            <a href="#" class="skin second_nav" data-file="css/compiled/skins/dark.css">
+                <span class="icon"></span><span class="text">Dark skin</span>
+            </a>
+        </div>
+
+        <div id="pad-wrapper">
+            <div class="row section btns">
+                <!-- flat buttons -->
+                <!-- these styles are located in css/elements.css -->
+                <!-- they also include .small and .large classes to change their size -->
+                <h4 class="title">Flat Buttons</h4>
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <td><code>.btn-flat.inverse</code></td>
+                            <td><a class="btn-flat inverse">INVERSE BUTTON</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-flat.white</code></td>
+                            <td><a class="btn-flat white">WHITE BUTTON</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-flat.gray</code></td>
+                            <td><a class="btn-flat gray">GRAY BUTTON</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-flat.default</code></td>
+                            <td><a class="btn-flat">DEFAULT BUTTON</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-flat.primary</code></td>
+                            <td><a class="btn-flat primary">PRIMARY BUTTON</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-flat.success</code></td>
+                            <td><a class="btn-flat success">SUCCESS BUTTON</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-flat.info</code></td>
+                            <td><a class="btn-flat info">INFO BUTTON</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-flat.danger</code></td>
+                            <td><a class="btn-flat danger">DANGER BUTTON</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- end flat buttons -->
+
+                <!-- controls showcase -->
+                <div class="col-md-5">
+                    <div class="row ctrls">
+                        <div class="btn-group large">
+                            <button class="glow left"><i class="icon-link"></i></button>
+                            <button class="glow middle"><i class="icon-random"></i></button>
+                            <button class="glow middle"><i class="icon-fullscreen"></i></button>
+                            <button class="glow right"><i class="icon-zoom-out"></i></button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="glow left active">LEFT</button>
+                            <button class="glow right">RIGHT</button>
+                        </div>
+                        <div class="btn-group large audio">
+                            <button class="glow left"><i class="icon-play"></i></button>
+                            <button class="glow middle"><i class="icon-pause"></i></button>
+                            <button class="glow right"><i class="icon-stop"></i></button>
+                        </div>
+                    </div>
+                    <div class="row ctrls">
+                        <div class="btn-flat icon"><i class="icon-github"></i> Fork me on github</div>
+                        <div class="btn-glow"><i class="icon-wrench"></i> Icon button</div>                            
+                        <div class="btn-group">
+                            <button class="btn glow">Drop down</button>
+                            <button class="btn glow dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Option one</a></li>
+                                <li><a href="#">Option two</a></li>
+                                <li><a href="#">Option three</a></li>
+                                <li><a href="#">Option four</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row ctrls">
+                        <ul class="pagination pull-left">
+                            <li><a href="#">&#8249;</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">&#8250;</a></li>
+                        </ul>
+
+                        <ul class="pagination inverse pull-left">
+                            <li><a href="#">&#8249;</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">&#8250;</a></li>
+                        </ul>
+                    </div>
+                    <div class="row ctrls">
+                        <input class="search" type="text" placeholder="Search input.." />
+                        <div class="btn-group settings">
+                            <button class="btn glow"><i class="icon-download-alt"></i></button>
+                            <button class="btn glow dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Option one</a></li>
+                                <li><a href="#">Option two</a></li>
+                                <li><a href="#">Option three</a></li>
+                                <li><a href="#">Option four</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row ctrls">
+                        <h4>Switch buttons</h4>
+                        <div class="slider-frame">
+                            <span data-on-text="ON" data-off-text="OFF" class="slider-button">OFF</span>
+                        </div>
+                        <div class="slider-frame primary">
+                            <span data-on-text="ON" data-off-text="OFF" class="slider-button">OFF</span>
+                        </div>
+                        <div class="slider-frame info">
+                            <span data-on-text="ON" data-off-text="OFF" class="slider-button">OFF</span>
+                        </div>
+                    </div>                        
+                </div>
+                <!-- end controls showcase -->
+            </div>
+            <div class="row section btns">
+                <!-- glow buttons -->
+                <!-- these styles are located in css/elements.css -->
+                <!-- they also include .small and .large classes to change their size -->
+                <div class="col-md-6">
+                    <h4 class="title">Glow buttons</h4>
+                    <table>
+                        <tr>
+                            <td><code>.btn-glow</code></td>
+                            <td><a class="btn-glow">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-glow.inverse</code></td>
+                            <td><a class="btn-glow inverse">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-glow.primary</code></td>
+                            <td><a class="btn-glow primary">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-glow.success</code></td>
+                            <td><a class="btn-glow success">Sign up now</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- end glow buttons -->
+
+                <!-- sliders -->
+                <div class="col-md-5">
+                    <h4 class="title">Sliders</h4>
+                    <div class="sliders">
+                        <div class="slider slider-sample1 vertical-handler"></div>
+                        <div class="slider slider-sample2"></div>
+                        <div class="slider slider-sample3"></div>
+                        <div class="slider success slider-sample2"></div>
+                        <div class="slider success slider-sample3"></div>
+                        <div class="slider info slider-sample2"></div>
+                        <div class="slider info slider-sample3"></div>
+                    </div>                        
+                </div>
+                <!-- end sliders -->
+            </div>
+
+            <div class="row section btns">
+                <div class="col-md-6">
+                    <h4 class="title">Bootstrap 3 buttons</h4>
+                    <table>
+                        <tr>
+                            <td><code>.btn.btn-default</code></td>
+                            <td><a class="btn btn-default">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn.btn-primary</code></td>
+                            <td><a class="btn btn-primary">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>btn.btn-success</code></td>
+                            <td><a class="btn btn-success">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>btn.btn-warning</code></td>
+                            <td><a class="btn btn-warning">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>btn.btn-info</code></td>
+                            <td><a class="btn btn-info">Sign up now</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>btn.btn-danger</code></td>
+                            <td><a class="btn btn-danger">Sign up now</a></td>
+                        </tr>                        
+                    </table>
+                </div>
+                <div class="col-md-5">
+                    <h4 class="title">Bootstrap 3 elements</h4>
+                    <div class="row ctrls">
+                        <div class="dropdown">
+                          <!-- Link or button to toggle dropdown -->
+                          <ul class="dropdown-menu" role="menu">
+                            <li role="presentation" class="dropdown-header">Dropdown header</li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                          </ul>
+                        </div>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default">1</button>
+                          <button type="button" class="btn btn-default">2</button>
+                          <button type="button" class="btn btn-default">3</button>
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                              Dropdown
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Dropdown link</a></li>
+                              <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row ctrls">
+                        <ul class="nav nav-tabs">
+                          <li class="active"><a href="#home">Home</a></li>
+                          <li><a href="#profile">Profile</a></li>
+                          <li><a href="#messages">Messages</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="home">Home tab!</div>
+                            <div class="tab-pane" id="profile">Profile tab!</div>
+                            <div class="tab-pane" id="messages">Messages tab!</div>
+                        </div>
+                    </div>
+                    <div class="row ctrls">
+                        <!-- Split button -->
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-success">Action</button>
+                          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                          </ul>
+                        </div>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Action</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                          </ul>
+                        </div>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-primary">Action</button>
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                          </ul>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="separator"></div>
+            <!-- custom dialogs -->
+            <div class="row section dialogs">
+                <div class="col-md-4">
+                    <h4>Datepicker inline</h4>
+                    <div class="pop-dialog">
+                        <div class="pointer">
+                            <div class="arrow"></div>
+                            <div class="arrow_border"></div>
+                        </div>
+                        <div class="body">
+                            <div id="inline-datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Menu</h4>
+                    <div class="pop-dialog">
+                        <div class="pointer">
+                            <div class="arrow"></div>
+                            <div class="arrow_border"></div>
+                        </div>
+                        <div class="body">
+                            <div class="menu">
+                                <a href="#" class="item">Profile</a>
+                                <a href="#" class="item">My tasks</a>
+                                <a href="#" class="item">Deals</a>
+                                <a href="#" class="item">Terms of service</a>
+                                <a href="#" class="item">Privacy policy</a>
+                                <div class="footer">
+                                    <a href="#" class="logout">Log out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Settings window</h4>
+                    <div class="pop-dialog full">
+                        <div class="pointer">
+                            <div class="arrow"></div>
+                            <div class="arrow_border"></div>
+                        </div>
+                        <div class="body">                        
+                            <div class="settings">
+                                <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
+                                <div class="items">
+                                    <div class="item">
+                                        <i class="icon-reorder"></i>
+                                        List item
+                                        <input type="checkbox" class="check" />
+                                    </div>
+                                    <div class="item">
+                                        <i class="icon-reorder"></i>
+                                        List item
+                                        <input type="checkbox" checked="checked" class="check" />
+                                    </div>
+                                    <div class="item">
+                                        <i class="icon-reorder"></i>
+                                        List item
+                                        <input type="checkbox" checked="checked" class="check" />
+                                    </div>
+                                    <div class="item">
+                                        <i class="icon-reorder"></i>
+                                        List item
+                                        <input type="checkbox" class="check" />
+                                    </div>
+                                    <div class="item">
+                                        <i class="icon-reorder"></i>
+                                        List item
+                                        <input type="checkbox" checked="checked" class="check" />
+                                    </div>
+                                    <div class="item">
+                                        <i class="icon-reorder"></i>
+                                        List item
+                                        <input type="checkbox" class="check" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end custom dialogs -->
+
+            <div class="separator"></div>
+            <div class="section">
+                <!-- alerts -->
+                <h4 class="title">Alerts</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="alert alert-info">
+                            <i class="icon-exclamation-sign"></i>
+                            Do you want to get these resources for as little as $0.70 each?
+                        </div>
+                        <div class="alert alert-success">
+                            <i class="icon-ok-sign"></i> Your order has been placed.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="alert alert-warning">
+                            <i class="icon-warning-sign"></i>
+                            Password strength is low.
+                        </div>
+                        <div class="alert alert-danger">
+                            <i class="icon-remove-sign"></i>
+                            Unexpected error. Please try again later.
+                        </div>
+                    </div>
+                </div>
+                <!-- end alerts -->
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+
+	<!-- scripts -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="js/bootstrap.datepicker.js"></script>
+
+    <!-- call all plugins -->
+    <script src="js/theme.js"></script>
+
+    <!-- initialize this page scripts -->
+    <script type="text/javascript">
+        $(function () {
+
+            // Inline datepicker
+            $("#inline-datepicker").datepicker();
+
+
+            // jQuery UI Sliders
+            $(".slider-sample1").slider({
+                value: 100,
+                min: 1,
+                max: 500
+            });
+            $(".slider-sample2").slider({
+                range: "min",
+                value: 130,
+                min: 1,
+                max: 500
+            });
+            $(".slider-sample3").slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [ 40, 170 ],
+            });
+
+
+
+            // Switch slide buttons
+            $('.slider-button').click(function() {
+                if ($(this).hasClass("on")) {
+                    $(this).removeClass('on').html($(this).data("off-text"));   
+                } else {
+                    $(this).addClass('on').html($(this).data("on-text"));
+                }
+            });
+
+            $('.nav-tabs a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            })
+
+        });
+    </script>
+</body>
+</html>
