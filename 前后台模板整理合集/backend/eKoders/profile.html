@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>User Profile - eKoders Responsive Admin Theme</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+	
+	<!-- PAGE LEVEL PLUGINS STYLES -->
+	<link rel="stylesheet" href="assets/css/plugins/jqueryui/jquery-ui.custom.min.css" />
+	<link href="assets/css/plugins/select2/select2.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/plugins/bootstrap-wysihtml/bootstrap-wysihtml5.css">
+	<link rel="stylesheet" href="assets/css/plugins/bootstrap-editable/bootstrap-editable.css">
+	<!-- REQUIRE FOR SPEECH COMMANDS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins/gritter/jquery.gritter.css" />
+
+    <!-- Tc core CSS -->
+	<link id="qstyle" rel="stylesheet" href="assets/css/themes/style.css">
+	
+	
+    <!-- Add custom CSS here -->
+
+	<!-- End custom CSS here -->
+	
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+	
+  </head>
+
+  <body>
+	<div id="wrapper">
+		<div id="main-container">		
+			<!-- BEGIN TOP NAVIGATION -->
+				<nav class="navbar-top" role="navigation">
+					<!-- BEGIN BRAND HEADING -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".top-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+						<div class="navbar-brand">
+							<a href="index.html">
+								<img src="assets/images/logo.png" alt="logo" class="img-responsive">
+							</a>
+						</div>
+					</div>
+					<!-- END BRAND HEADING -->
+					<div class="nav-top">
+						<!-- BEGIN RIGHT SIDE DROPDOWN BUTTONS -->
+							<ul class="nav navbar-right">
+								<li class="dropdown">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+										<i class="fa fa-bars"></i>
+									</button>
+								</li>
+								<li class="dropdown">
+									<a href="profile.html#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="fa fa-envelope"></i> <span class="badge up badge-primary">2</span></a>
+											<ul class="dropdown-menu dropdown-scroll dropdown-messages">
+												<li class="dropdown-header">
+													<i class="fa fa-envelope"></i> 2 New Messages
+												</li>
+												<li id="messageScroll">
+													<ul class="list-unstyled">
+														<li>
+															<a href="profile.html#">
+																<div class="row">
+																	<div class="col-xs-2">
+																		<img class="img-circle" src="assets/images/user-profile-1.jpg" alt="">
+																	</div>
+																	<div class="col-xs-10">
+																		<p>
+																			<strong>John Smith</strong>: Hi again! I wanted to let you know that the order...
+																		</p>
+																		<p class="small">
+																			<i class="fa fa-clock-o"></i> 5 minutes ago
+																		</p>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="profile.html#">
+																<div class="row">
+																	<div class="col-xs-2">
+																		<img class="img-circle" src="assets/images/user-profile-2.jpg" alt="">
+																	</div>
+																	<div class="col-xs-10">
+																		<p>
+																			<strong>Roddy Austin</strong>: Thanks for the info, if you need anything...
+																		</p>
+																		<p class="small">
+																			<i class="fa fa-clock-o"></i> 3:39 PM
+																		</p>
+																	</div>
+																</div>
+															</a>
+														</li>
+													</ul>
+												</li>
+												<li class="dropdown-footer">
+													<a href="profile.html#">
+														Read All Messages
+													</a>
+												</li>
+											</ul>
+								</li>
+								<li class="dropdown">
+									<a href="profile.html#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="fa fa-bell"></i> <span class="badge up badge-success">3</span>
+									</a>
+										<ul class="dropdown-menu dropdown-scroll dropdown-alerts">
+											<li class="dropdown-header">
+												<i class="fa fa-bell"></i> 3 New Alerts
+											</li>
+											<li id="alertScroll">
+												<ul class="list-unstyled">
+													<li>
+														<a href="profile.html#">
+															<div class="alert-icon bg-info pull-left">
+																<i class="fa fa-download"></i>
+															</div>
+																Downloads <span class="badge badge-info pull-right">16</span>
+														</a>
+													</li>
+													<li>
+														<a href="profile.html#">
+															<div class="alert-icon bg-success pull-left">
+																<i class="fa fa-cloud-upload"></i>
+															</div>
+																Server #8 Rebooted <span class="small pull-right"><strong><em>12 hours ago</em></strong></span>
+														</a>
+													</li>
+													<li>
+														<a href="profile.html#">
+															<div class="alert-icon bg-danger pull-left">
+																<i class="fa fa-bolt"></i>
+															</div>
+																Server #8 Crashed <span class="small pull-right"><strong><em>12 hours ago</em></strong></span>
+														</a>
+													</li>
+												</ul>
+											</li>
+											<li class="dropdown-footer">
+												<a href="profile.html#">
+													View All Alerts
+												</a>
+											</li>
+										</ul>
+								</li>
+								<li class="dropdown">
+									<a href="profile.html#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="fa fa-tasks"></i> <span class="badge up badge-info">7</span>
+									</a>
+										<ul class="dropdown-menu dropdown-scroll dropdown-tasks">
+											<li class="dropdown-header">
+												<i class="fa fa-tasks"></i> 10 Pending Tasks
+											</li>
+											<li id="taskScroll">
+												<ul class="list-unstyled">
+													<li>
+														<a href="profile.html#">
+															<p>
+																Purchase Order #439 <span class="pull-right"><strong>52%</strong></span>
+															</p>
+															<div class="progress progress-striped">
+																	<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" style="width: 52%;"></div>
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="profile.html#">
+															<p>
+																March Content Update <span class="pull-right"><strong>14%</strong></span>
+															</p>
+															<div class="progress">
+																<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100" style="width: 14%;"></div>
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="profile.html#">
+															<p>
+																Client #42 Data Scrubbing <span class="pull-right"><strong>68%</strong></span>
+															</p>
+															<div class="progress progress-striped">
+																<div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="profile.html#">
+															<p>
+																PHP Upgrade Server #6 <span class="pull-right"><strong>85%</strong></span>
+															</p>
+															<div class="progress">
+																<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="profile.html#">
+															<p>
+																Malware Scan <span class="pull-right"><strong>66%</strong></span>
+															</p>
+															<div class="progress progress-striped active">
+																<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;"></div>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</li>
+											<li class="dropdown-footer">
+												<a href="profile.html#">
+													View All Tasks
+												</a>
+											</li>
+										</ul>
+								</li>
+								<!--Speech Icon-->
+								<li class="dropdown">
+									<a href="profile.html#" class="speech-button">
+										<i class="fa fa-microphone"></i>
+									</a>
+								</li>
+								<!--Speech Icon-->
+								<li class="dropdown user-box">
+									<a href="profile.html#" class="dropdown-toggle" data-toggle="dropdown">
+										<img class="img-circle" src="assets/images/user.jpg" alt=""> <span class="user-info">John Smith</span> <b class="caret"></b>
+									</a>
+										<ul class="dropdown-menu dropdown-user">
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-user"></i> My Profile
+												</a>
+											</li>
+											<li>
+												<a href="profile.html#">
+													<i class="fa fa-envelope"></i> My Messages
+												</a>
+											</li>
+											<li>
+												<a href="profile.html#">
+													<i class="fa fa-tasks"></i> My Tasks
+												</a>
+											</li>
+											<li>
+												<a href="profile.html#">
+													<i class="fa fa-gear"></i> Settings
+												</a>
+											</li>											
+											<li>
+												<a href="login.html">
+													<i class="fa fa-power-off"></i> Logout
+												</a>
+											</li>
+										</ul>
+								</li>
+								<!--Search Box-->
+								<li class="dropdown nav-search-icon">
+									<a href="profile.html#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-search"></span>
+									</a>
+									<ul class="dropdown-menu dropdown-search">
+										<li>
+											<div class="search-box">
+												<form class="" role="search">
+													<input type="text" class="form-control" placeholder="Search" />
+												</form>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!--Search Box-->
+							</ul>
+						<!-- END RIGHT SIDE DROPDOWN BUTTONS -->							
+						<!-- BEGIN TOP MENU -->
+							<div class="collapse navbar-collapse top-collapse">
+								<!-- .nav -->
+								<ul class="nav navbar-left navbar-nav">
+									<li><a href="index.html">Dashboard</a></li>
+									<li class="dropdown">
+										<a href="profile.html#" class="dropdown-toggle" data-toggle="dropdown">
+											Components <b class="caret"></b>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="elements-ui.html">Elements</a></li>
+											<li><a href="button-ui.html">Buttons & Icons</a></li>
+											<li><a href="portlet.html">Portlet</a></li>
+											<li><a href="jquery-ui.html">jQuery UI</a></li>
+										</ul>
+									</li>
+									<li><a href="front/index.html">FrontEnd <span class="badge badge-primary">New</span></a></li>
+								</ul><!-- /.nav -->
+							</div>
+						<!-- END TOP MENU -->
+					</div><!-- /.nav-top -->
+				</nav><!-- /.navbar-top -->
+				<!-- END TOP NAVIGATION -->
+
+				
+				<!-- BEGIN SIDE NAVIGATION -->				
+				<nav class="navbar-side" role="navigation">
+					<div class="navbar-collapse sidebar-collapse collapse">
+
+						<!-- BEGIN SHORTCUT BUTTONS -->
+						<div class="media">							
+							<ul class="sidebar-shortcuts">
+								<li><a class="btn"><i class="fa fa-user icon-only"></i></a></li>
+								<li><a class="btn"><i class="fa fa-envelope icon-only"></i></a></li>
+								<li><a class="btn"><i class="fa fa-th icon-only"></i></a></li>
+								<li><a class="btn"><i class="fa fa-gear icon-only"></i></a></li>
+							</ul>	
+						</div>
+						<!-- END SHORTCUT BUTTONS -->	
+							
+						<!-- BEGIN FIND MENU ITEM INPUT -->
+						<div class="media-search">	
+							<input type="text" class="input-menu" id="input-items" placeholder="Find...">
+						</div>						
+						<!-- END FIND MENU ITEM INPUT -->
+						
+						<ul id="side" class="nav navbar-nav side-nav">
+							<!-- BEGIN SIDE NAV MENU -->							
+							<!-- Navigation category -->
+							<li>
+								<h4>Navigation</h4> 								
+							</li>
+							<!-- END Navigation category -->
+							
+							<li>
+								<a href="index.html">
+									<i class="fa fa-dashboard"></i> Dashboard
+								</a>
+							</li>
+							<!-- BEGIN COMPONENTS DROPDOWN -->
+							<li class="panel">
+								<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#components">
+									<i class="fa fa-cogs"></i> Components <span class="fa arrow"></span>
+								</a>
+									<ul class="collapse nav" id="components">
+										<li>
+											<a href="portlet.html">
+												<i class="fa fa-angle-double-right"></i> Portlets
+											</a>
+										</li>
+										<li>
+											<a href="elements-ui.html">
+												<i class="fa fa-angle-double-right"></i> Elements <span class="label label-sm label-primary">New</span>
+											</a>
+										</li>
+										<li>
+											<a href="tabs_accordions-ui.html">
+												<i class="fa fa-angle-double-right"></i> Tabs & Accordions
+											</a>
+										</li>
+										<li>
+											<a href="button-ui.html">
+												<i class="fa fa-angle-double-right"></i> Buttons & Icons
+											</a>
+										</li>
+										<li>
+											<a href="jquery-ui.html">
+												<i class="fa fa-angle-double-right"></i> JQuery UI
+											</a>
+										</li>
+										<li>
+											<a href="nestable-list.html">
+												<i class="fa fa-angle-double-right"></i> Nestable Lists
+											</a>
+										</li>
+										<li>
+											<a href="calendar.html">
+												<i class="fa fa-angle-double-right"></i> Calendar
+											</a>
+										</li>
+										<!-- BEGIN THREE LEVEL MENU -->
+										<li>
+											<a href="javascript:;" class="accordion-toggle" data-toggle="collapse"  data-target="#sub-menu">
+												<i class="fa fa-angle-double-right"></i> Three Level Menu <span class="fa arrow"></span>
+											</a>
+												<ul class="collapse nav" id="sub-menu">
+													<li>
+														<a href="profile.html#" title="Title"><i class="fa fa-angle-double-right"></i> item <span class="badge badge-primary">3</span></a>
+													</li>
+													<!-- BEGIN 4th LEVEL MENU -->
+													<li>
+														<a href="javascript:;" class="accordion-toggle" data-toggle="collapse"  data-target="#sub-menu2">
+															<i class="fa fa-angle-double-right"></i> 4rth Level <span class="fa arrow"></span>
+														</a>
+															<ul class="collapse nav" id="sub-menu2">
+																<li>
+																	<a href="profile.html#" title="Title"><i class="fa fa-angle-double-right"></i> item1 </a>
+																</li>
+																<li>
+																	<a href="profile.html#" title="Title"><i class="fa fa-angle-double-right"></i> item2</a>
+																</li>
+															</ul>
+													</li>
+													<!-- END 4th LEVEL MENU -->
+												</ul>
+										</li>
+										<!-- ENDTHREE LEVEL MENU -->
+									</ul>
+							</li>
+							<!-- END COMPONENTS DROPDOWN -->							
+							<li>
+								<a href="tables.html">
+									<i class="fa fa-list"></i> Tables<span class="badge badge-primary">New</span> 
+								</a>
+							</li>
+							<li>
+								<a href="typography.html">
+									<i class="fa fa-text-width"></i> Typography 
+								</a>
+							</li>
+							<!-- BEGIN FORMS DROPDOWN -->
+							<li class="panel">
+								<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#forms">
+									<i class="fa fa-edit"></i> Forms <span class="fa arrow"></span>
+								</a>
+									<ul class="collapse nav" id="forms">
+										<li>
+											<a href="forms.html">
+												<i class="fa fa-angle-double-right"></i> Form Elements 
+											</a>
+										</li>
+										<li>
+											<a href="form-tools.html">
+												<i class="fa fa-angle-double-right"></i> Form Tools 
+											</a>
+										</li>										
+										<li>
+											<a href="form-wizard.html">
+												<i class="fa fa-angle-double-right"></i> Wizard & Validation
+											</a>
+										</li>
+									</ul>
+							</li>
+							<!-- END FORMS DROPDOWN -->
+
+							<!-- BEGIN CHARTS DROPDOWN -->
+							<li class="panel">
+								<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#charts">
+									<i class="fa fa-bar-chart-o"></i> Charts <span class="fa arrow"></span>
+								</a>
+									<ul class="collapse nav" id="charts">
+										<li>
+											<a href="flot.html">
+												<i class="fa fa-angle-double-right"></i> Flot Charts 
+											</a>
+										</li>
+										<li>
+											<a href="morris.html">
+												<i class="fa fa-angle-double-right"></i> Morris Charts 
+											</a>
+										</li>
+									</ul>
+							</li>
+							<!-- END CHARTS DROPDOWN -->
+							
+							<!-- Navigation category -->
+							<li>
+								<h4>Support</h4> 								
+							</li>
+							<!-- END Navigation category -->
+
+							<!-- BEGIN MORE PAGES DROPDOWN -->
+							<li class="panel">
+								<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#e-pages">
+									<i class="fa fa-shopping-cart"></i> eCommerce <span class="fa arrow"></span>
+								</a>
+								<ul class="collapse nav" id="e-pages">
+									<li>
+										<a href="products.html">
+											<i class="fa fa-angle-double-right"></i> Products Listing
+										</a>
+									</li>
+								</ul>
+							</li>
+							<!-- END MORE PAGES DROPDOWN -->
+							
+							<!-- BEGIN PAGES DROPDOWN -->
+							<li  class="panel open">
+								<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#pages">
+									<i class="fa fa-list"></i> Additional Pages <span class="fa arrow"></span>
+								</a>
+									<ul class="collapse nav in" id="pages">
+										<li>
+											<a class="active" href="profile.html">
+												<i class="fa fa-angle-double-right"></i> User Profile 
+											</a>
+										</li>
+										<li>
+											<a href="inbox.html">
+												<i class="fa fa-angle-double-right"></i> Inbox 
+											</a>
+										</li>
+										<li>
+											<a href="pricing.html">
+												<i class="fa fa-angle-double-right"></i> Pricing Tables
+											</a>
+										</li>
+										<li>
+											<a href="invoice.html">
+												<i class="fa fa-angle-double-right"></i> Invoice
+											</a>
+										</li>
+										<li>
+											<a href="timeline.html">
+												<i class="fa fa-angle-double-right"></i> Timeline
+											</a>
+										</li>
+										<li>
+											<a href="login.html">
+												<i class="fa fa-angle-double-right"></i> Login & Register 
+											</a>
+										</li>
+										<li>
+											<a href="faqs.html">
+												<i class="fa fa-angle-double-right"></i> FAQs
+											</a>
+										</li>
+										<li>
+											<a href="blank.html">
+												<i class="fa fa-angle-double-right"></i> Blank Page
+											</a>
+										</li>
+									</ul>
+							</li>
+							<!-- END PAGES DROPDOWN -->
+							<!-- BEGIN MORE PAGES DROPDOWN -->
+							<li class="panel">
+								<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#m-pages">
+									<i class="fa fa-tag"></i> More Pages <span class="fa arrow"></span>
+								</a>
+									<ul class="collapse nav" id="m-pages">
+										<li>
+											<a href="gallery.html">
+												<i class="fa fa-angle-double-right"></i> Gallery
+											</a>
+										</li>
+										<li>
+											<a href="error-404.html">
+												<i class="fa fa-angle-double-right"></i> Error 404
+											</a>
+										</li>
+										<li>
+											<a href="error-500.html">
+												<i class="fa fa-angle-double-right"></i> Error 505
+											</a>
+										</li>
+									</ul>
+							</li>
+							<!-- END MORE PAGES DROPDOWN -->
+						</ul><!-- /.side-nav -->
+
+						<div class="sidebar-labels">
+							<h4>Labels</h4>							
+							<ul>
+								<li><a href="profile.html#"><i class="fa fa-circle-o text-primary"></i> My Recent <span class="badge badge-primary">3</span></a></li>
+								<li><a href="profile.html#"><i class="fa fa-circle-o text-success"></i> Background</a></li>
+							</ul>
+						</div>
+						
+						<div class="sidebar-alerts">							
+							<div class="alert fade in">
+								<span>Sales Report</span>
+								<div class="progress progress-mini progress-striped active no-margin-bottom">
+									<div class="progress-bar progress-bar-primary" style="width: 36%"></div>
+								</div>
+								<small>Calculating daily bias... 36%</small>
+							</div>
+						</div>
+						
+					</div><!-- /.navbar-collapse -->
+				</nav><!-- /.navbar-side -->
+				<!-- END SIDE NAVIGATION -->
+				
+
+				<!-- BEGIN MAIN PAGE CONTENT -->
+				<div id="page-wrapper">
+					<!-- BEGIN PAGE HEADING ROW -->
+						<div class="row">
+							<div class="col-lg-12">
+								<!-- BEGIN BREADCRUMB -->
+								<div class="breadcrumbs">
+									<ul class="breadcrumb">
+										<li>
+											<a href="profile.html#">Home</a>
+										</li>
+										<li><a href="profile.html#">Additional Pages</a></li>
+										<li class="active">User Profile</li>
+									</ul>
+									
+									<div class="b-right hidden-xs">
+										<ul>
+											<li><a href="profile.html#" title=""><i class="fa fa-signal"></i></a></li>
+											<li><a href="profile.html#" title=""><i class="fa fa-comments"></i></a></li>
+											<li class="dropdown"><a href="profile.html#" title="" data-toggle="dropdown"><i class="fa fa-plus"></i><span> Tasks</span></a>
+												<ul class="dropdown-menu dropdown-primary dropdown-menu-right">
+													<li><a href="profile.html#">Add new task</a></li>
+													<li><a href="profile.html#">Statement</a></li>
+													<li><a href="profile.html#">Settings</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- END BREADCRUMB -->
+								
+								<div class="page-header title">
+								<!-- PAGE TITLE ROW -->
+									<h1>John's Profile <span class="sub-title">included x-editable</span></h1>									
+								</div>
+								
+								<!-- /#ek-layout-button -->	
+								<div class="qs-layout-menu">
+									<div class="btn btn-gray qs-setting-btn" id="qs-setting-btn">
+										<i class="fa fa-cog bigger-150 icon-only"></i>
+									</div>
+									<div class="qs-setting-box" id="qs-setting-box">
+									
+										<div class="hidden-xs hidden-sm">
+											<span class="bigger-120">Layout Options</span>
+											
+											<div class="hr hr-dotted hr-8"></div>
+											<label>
+												<input type="checkbox" class="tc" id="fixed-navbar" />
+													<span id="#fixed-navbar" class="labels"> Fixed NavBar</span>
+											</label>
+											<label>
+												<input type="checkbox" class="tc" id="fixed-sidebar" />
+													<span id="#fixed-sidebar" class="labels"> Fixed NavBar+SideBar</span>
+											</label>
+											<label>
+												<input type="checkbox" class="tc" id="sidebar-toggle" />
+													<span id="#sidebar-toggle" class="labels"> Sidebar Toggle</span>
+											</label>
+											<label>
+												<input type="checkbox" class="tc" id="in-container" />
+													<span id="#in-container" class="labels"> Inside<strong>.container</strong></span>
+											</label>
+										
+											<div class="space-4"></div>
+										</div>
+										
+										<span class="bigger-120">Color Options</span>
+										
+										<div class="hr hr-dotted hr-8"></div>
+										
+										<label>
+											<input type="checkbox" class="tc" id="side-bar-color" />
+											<span id="#side-bar-color" class="labels"> SideBar (Light)</span>
+										</label>
+										
+										<ul>									
+											<li><button class="btn" style="background-color:#d15050;" onclick="swapStyle('assets/css/themes/style.css')"></button></li>
+											<li><button class="btn" style="background-color:#86618f;" onclick="swapStyle('assets/css/themes/style-1.css')"></button></li> 
+											<li><button class="btn" style="background-color:#ba5d32;" onclick="swapStyle('assets/css/themes/style-2.css')"></button></li>
+											<li><button class="btn" style="background-color:#488075;" onclick="swapStyle('assets/css/themes/style-3.css')"></button></li>
+											<li><button class="btn" style="background-color:#4e72c2;" onclick="swapStyle('assets/css/themes/style-4.css')"></button></li>
+										</ul>
+										
+									</div>
+								</div>
+								<!-- /#ek-layout-button -->	
+								
+							</div><!-- /.col-lg-12 -->
+						</div><!-- /.row -->
+					<!-- END PAGE HEADING ROW -->					
+						<div class="row">
+							<div class="col-lg-12">
+							
+					<!-- START YOUR CONTENT HERE -->
+							<div class="row">
+								<div class="col-lg-3 col-md-3">
+									<div class="well well-sm white">
+										<div class="profile-pic">
+											<a href="profile.html#">
+												<img src="assets/images/user-1.jpg" class="img-responsive"  alt="">
+											</a>
+										</div>
+										<p class="text-center">
+											<button type="button" class="btn btn-facebook btn-xs" data-placement="top" data-rel="tooltip" title="Visit My Facebook" role="button"><i class="fa fa-facebook icon-only"></i></button>
+											<button type="button" class="btn btn-twitter btn-xs" data-placement="top" data-rel="tooltip" title="Visit My Twitter" role="button"><i class="fa fa-twitter icon-only"></i></button>
+											<button type="button" class="btn btn-googleplus btn-xs" role="button" data-placement="top" data-rel="tooltip" title="Google +"><i class="fa fa-google-plus icon-only"></i></button>
+										</p>
+									</div>
+									<div class="alert bg-primary">
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc lorem, rutrum non porta.</p>
+									</div>
+								</div>
+								<div class="col-lg-9 col-md-9">
+									<div class="tc-tabs"><!-- Nav tabs style 1 -->
+										<ul class="nav nav-tabs tab-lg-button tab-color-dark background-dark white">
+											<li class="active"><a href="profile.html#p1" data-toggle="tab"><i class="fa fa-desktop bigger-130"></i>Overview</a></li>
+											<li><a href="profile.html#p2" data-toggle="tab"><i class="fa fa-edit bigger-130"></i>Edit Account</a></li>
+											<li><a href="profile.html#p3" data-toggle="tab"><i class="fa fa-building-o bigger-130"></i>Projects</a></li>
+										</ul>
+												<!-- Tab panes -->
+										<div class="tab-content">
+											<div class="tab-pane fade in active" id="p1">
+												<div class="row">													
+													<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+														<div class="portlet no-border">
+															<div class="portlet-heading">
+																<div class="portlet-title">
+																	<h2>John Smith</h2>
+																</div>
+																<div class="clearfix"></div>
+															</div>
+															<div class="portlet-body">
+																<div class="editable" id="profile">
+																	Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam tincidunt erat volutpat.
+																</div>
+																
+																<div class="space-4"></div>
+																
+																<address>
+																	<a href="mailto:#" id="email">john.smith@example.com</a>
+																</address>
+																
+																<span class="">Last Login </span><span class="editable" id="slider">7 hours ago</span>
+																
+																<div class="space-4"></div>
+																
+																<ul class="list-inline well well-sm">
+																	<li><i class="fa fa-flag bigger-110"></i> <a href="profile.html#" id="country" data-value="US" class="editable">Uinited State</a></li>
+																	<li><i class="fa fa-calendar bigger-110"></i> <a href="profile.html#" id="dob" class="editable">28th March, 2014</a></li>
+																	<li><i class="glyphicon glyphicon-certificate bigger-110"></i> RedHat Certification</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+														<div class="portlet no-border">
+															<div class="portlet-heading dark">
+																<div class="portlet-title">
+																	<h4>Skills</h4>
+																</div>
+																<div class="portlet-widgets">
+																	<i class="fa fa-sort-alpha-desc bigger-110"></i>
+																</div>
+																<div class="clearfix"></div>
+															</div>
+															<div class="portlet-body skills light">
+																<div class="progress" data-percent="75%">
+																	<div class="progress-bar progress-bar-success" role="progressbar" style="width: 75%">
+																		<span class="sr-only">75% Complete</span>
+																	</div>
+																	<span class="progress-type">HTML / HTML5</span>
+																	<span class="progress-completed">75%</span>
+																</div>
+																<div class="progress" data-percent="40%">
+																	<div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
+																		<span class="sr-only">40% Complete</span>
+																	</div>
+																	<span class="progress-type">ASP.Net</span>
+																	<span class="progress-completed">40%</span>
+																</div>
+																<div class="progress" data-percent="26%">
+																	<div class="progress-bar progress-bar-danger" role="progressbar" style="width: 26%">
+																		<span class="sr-only">26% Complete</span>
+																	</div>
+																	<span class="progress-type">Java</span>
+																	<span class="progress-completed">26%</span>
+																</div>
+																<div class="progress" data-percent="80%">
+																	<div class="progress-bar" role="progressbar" style="width: 80%">
+																		<span class="sr-only">80% Complete</span>
+																	</div>
+																	<span class="progress-type">jQuery / JavaScript</span>
+																	<span class="progress-completed">80%</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="portlet no-border-bottom">
+															<div class="portlet-heading dark">
+																<div class="portlet-title">
+																	<h4><i class="fa fa-rss"></i> Recent Activities</h4>
+																</div>
+																<div class="portlet-widgets">
+																	<a href="javascript:;"><i class="fa fa-refresh"></i></a>
+																	<span class="divider"></span>
+																	<a href="profile.html#" class="tooltip-danger" data-placement="left" data-rel="tooltip" title="Clear"><i class="fa fa-trash-o bigger-110"></i></a>
+																</div>
+																<div class="clearfix"></div>
+															</div>
+															<div class="portlet-body no-padding">
+																<ul class="lists">
+																	<li>
+																		<span class="date">17/7/2014</span>
+																		<span class="icons"><i class="fa fa-warning"></i></span>
+																		Server rdp32 is overloaded
+																	</li>
+																	<li>
+																		<span class="date">17/7/2014</span>
+																		<span class="icons"><i class="fa fa-warning"></i></span>
+																		Email Sent to Sameer Matalia <a href="profile.html#">[Ticket ID: 332335]</a>
+																	</li>
+																	<li>
+																		<span class="date">17/7/2014</span>
+																		<span class="icons"><i class="fa fa-warning"></i></span>
+																		Module Suspend Successful - Reason: <a href="profile.html#">#827101</a>
+																	</li>
+																	<li>
+																		<span class="date">17/7/2014</span>
+																		<span class="icons"><i class="fa fa-warning"></i></span>
+																		Cron Job: Starting Processing Overdue Suspensions
+																	</li>
+																	<li>
+																		<span class="date">17/7/2014</span>
+																		<span class="icons"><i class="fa fa-warning"></i></span>
+																		Email Sent to <a href="profile.html#">Sunil Gupta</a> (Add new domain)
+																	</li>
+																	<li>
+																		<span class="date">17/7/2014</span>
+																		<span class="icons"><i class="fa fa-warning"></i></span>
+																		<a href="profile.html#">New order</a> received. Please take care of it.
+																	</li>
+																</ul>
+															</div>
+														</div>
+														
+														<div class="hr hr-12 hr-double"></div>
+														<div class="action-buttons">
+															<a href="profile.html#"><i class="fa fa-search-plus"></i> View all</a>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="p2">
+												<h2>Account details</h2>
+												<div class="hr hr-12 hr-double"></div>
+												<form class="form-horizontal" role="form" method="post">
+													<div class="form-group">
+														<label class="col-sm-3 control-label">First Name:</label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control" placeholder="john">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label">Last Name:</label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control" placeholder="Smith">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label">Company:</label>
+														<div class="col-sm-5">
+															<input type="text" class="form-control" placeholder="eKoders, Ltd.">
+														</div>
+													</div>													
+													<div class="form-group">
+														<label class="col-sm-3 control-label">Email</label>
+														<div class="col-sm-4">
+															<div class="input-group">
+																<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+																<input type="email" class="form-control" placeholder="john.smith@example.com" disabled>
+															</div>
+														</div>
+													</div>
+													
+													<hr class="separator">
+													
+													<div class="form-group">
+														<label class="col-sm-3 control-label"></label>
+														<div class="col-sm-9">
+															<div class="tcb">
+																<label>
+																	<input type="checkbox" class="tc tc-red">
+																	<span class="labels"> Tick to Pasword Modifaction</span>
+																</label>
+															</div>
+														</div>
+													</div>
+														<div class="myPassword" style="display: none;">
+															<div class="form-group">
+																<label class="col-sm-3 control-label">Existing Password:</label>
+																<div class="col-sm-4">
+																	<div class="input-group">
+																		<input type="password" class="form-control" id="form-field-1">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-3 control-label">New Password:</label>
+																<div class="col-sm-4">
+																	<div class="input-group">
+																		<input type="password" class="form-control" id="form-field-2">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-3 control-label">Confirm New Password:</label>
+																<div class="col-sm-4">
+																	<div class="input-group">
+																		<input type="password" class="form-control" id="form-field-3">
+																	</div>
+																</div>
+															</div>
+														</div>
+													
+													<hr class="separator">
+													
+													<div class="form-group">
+														<label class="col-sm-3 control-label">About Me:</label>
+														<div class="col-sm-9">
+															<textarea id="about-editor" class="form-control"></textarea>
+														</div>
+													</div>													
+													<div class="form-group">
+														<label class="col-sm-3 control-label">Address:</label>
+														<div class="col-sm-7">
+															<input type="text" class="form-control" placeholder="795 Folsom Ave, Suite 600">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label">City:</label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control" placeholder="San Francisco">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label">State/Region:</label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control" placeholder="Florida">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label">Zip code:</label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control" placeholder="94107">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label">Country:</label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control" placeholder="United State">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label">Phone Number:</label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control" placeholder="+1 5643234765">
+														</div>
+													</div>												
+													<div class="form-actions">
+														<div class="form-group">
+															<div class="col-sm-offset-3 col-sm-9">
+																<button type="submit" class="btn btn-primary">Submit</button>
+																<button type="submit" class="btn btn-inverse">Cancel</button>
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="tab-pane fade" id="p3">
+												Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica.
+											</div>
+										</div>
+									</div><!--nav-tabs style 1-->
+								</div>
+							</div>		
+					<!-- END YOUR CONTENT HERE -->
+					
+							</div>
+						</div>
+						
+					<!-- BEGIN FOOTER CONTENT -->		
+						<div class="footer">
+							<div class="footer-inner">
+								<!-- basics/footer -->
+								<div class="footer-content">
+									&copy; 2014 <a href="profile.html#">eKoders</a>, All Rights Reserved.
+								</div>
+								<!-- /basics/footer -->
+							</div>
+						</div>
+						<button type="button" id="back-to-top" class="btn btn-primary btn-sm back-to-top">
+							<i class="fa fa-angle-double-up icon-only bigger-110"></i>
+						</button>
+					<!-- END FOOTER CONTENT -->
+						
+				</div><!-- /#page-wrapper -->	  
+			<!-- END MAIN PAGE CONTENT -->
+		</div>  
+	</div>
+	 
+    <!-- core JavaScript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/js/plugins/pace/pace.min.js"></script>
+	
+	<!-- PAGE LEVEL PLUGINS JS -->
+	<script src="assets/js/plugins/jqueryui/jquery-ui.custom.min.js"></script>
+	<script src="assets/js/plugins/jqueryui/jquery.ui.touch-punch.min.js"></script>
+	<script src="assets/js/plugins/select2/select2.min.js"></script>
+	<script src="assets/js/plugins/bootstrap-wysihtml/wysihtml.min.js"></script>
+	<script src="assets/js/plugins/bootstrap-wysihtml/bootstrap-wysihtml.js"></script>
+	<script src="assets/js/plugins/bootstrap-editable/bootstrap-editable.min.js"></script>
+	<script src="assets/js/plugins/bootstrap-editable/ek-editable.js"></script>
+	
+	<script src="assets/js/plugins/bootstrap-wysiwyg/bootstrap-wysiwyg.js"></script>
+	<script src="assets/js/plugins/bootstrap-wysiwyg/ek-wysiwyg.js"></script>
+	<script src="assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+	
+    <!-- Themes Core Scripts -->	
+	<script src="assets/js/main.js"></script>
+
+	<!-- REQUIRE FOR SPEECH COMMANDS -->
+	<script src="assets/js/speech-commands.js"></script>
+	<script src="assets/js/plugins/gritter/jquery.gritter.min.js"></script>
+
+	<!-- initial page level scripts for examples -->
+	<script src="assets/js/plugins/slimscroll/jquery.slimscroll.init.js"></script>
+	<script type="text/javaScript">
+		$(document).ready(function() {
+			//toggle `popup` / `inline` mode
+			$.fn.editable.defaults.mode = 'inline';
+			
+			//make profile editable with bootstrap wysiwyg
+			$('#profile').editable({
+			    type: 'wysiwyg',			
+				wysiwyg : {
+					//css : {'max-width':'300px'}
+				},
+				success: function(response, newValue) {
+				}
+			});     
+    
+			//make email editable
+			$(function(){
+				$('#email').editable({
+					type: 'text',
+					//uncomment bellow lines to send data on server
+					//pk: 1,
+					//url: '/post',
+					title: 'Update your email',
+					mode: 'inline', //can also use popup
+				});
+			});
+
+			$('#slider').editable({
+				type: 'slider',					
+				slider : {
+					min : 1,
+					max: 24,
+					step:1,
+					width: 175
+					//,nativeUI: true//if true and browser support input[type=range], native browser control will be used
+				},
+				success: function(response, newValue) {
+					if(parseInt(newValue) == 1)
+						$(this).html(newValue + " hour ago");
+					else $(this).html(newValue + " hours ago");
+				}
+			});
+				
+			//make Countries editable with Select2
+			 var countries = [];
+				$.each({'BD': 'Bangladesh', 'BE': 'Belgium', 'BF': 'Burkina Faso', 'BG': 'Bulgaria', 'BA': 'Bosnia and Herzegovina', 'BB': 'Barbados', 'WF': 'Wallis and Futuna', 'BL': 'Saint Bartelemey', 'BM': 'Bermuda', 'BN': 'Brunei Darussalam', 'BO': 'Bolivia', 'BH': 'Bahrain', 'BI': 'Burundi', 'BJ': 'Benin', 'BT': 'Bhutan', 'JM': 'Jamaica', 'BV': 'Bouvet Island', 'BW': 'Botswana', 'WS': 'Samoa', 'BR': 'Brazil', 'BS': 'Bahamas', 'JE': 'Jersey', 'BY': 'Belarus', 'O1': 'Other Country', 'LV': 'Latvia', 'RW': 'Rwanda', 'RS': 'Serbia', 'TL': 'Timor-Leste', 'RE': 'Reunion', 'LU': 'Luxembourg', 'TJ': 'Tajikistan', 'RO': 'Romania', 'PG': 'Papua New Guinea', 'GW': 'Guinea-Bissau', 'GU': 'Guam', 'GT': 'Guatemala', 'GS': 'South Georgia and the South Sandwich Islands', 'GR': 'Greece', 'GQ': 'Equatorial Guinea', 'GP': 'Guadeloupe', 'JP': 'Japan', 'GY': 'Guyana', 'GG': 'Guernsey', 'GF': 'French Guiana', 'GE': 'Georgia', 'GD': 'Grenada', 'GB': 'United Kingdom', 'GA': 'Gabon', 'SV': 'El Salvador', 'GN': 'Guinea', 'GM': 'Gambia', 'GL': 'Greenland', 'GI': 'Gibraltar', 'GH': 'Ghana', 'OM': 'Oman', 'TN': 'Tunisia', 'JO': 'Jordan', 'HR': 'Croatia', 'HT': 'Haiti', 'HU': 'Hungary', 'HK': 'Hong Kong', 'HN': 'Honduras', 'HM': 'Heard Island and McDonald Islands', 'VE': 'Venezuela', 'PR': 'Puerto Rico', 'PS': 'Palestinian Territory', 'PW': 'Palau', 'PT': 'Portugal', 'SJ': 'Svalbard and Jan Mayen', 'PY': 'Paraguay', 'IQ': 'Iraq', 'PA': 'Panama', 'PF': 'French Polynesia', 'BZ': 'Belize', 'PE': 'Peru', 'PK': 'Pakistan', 'PH': 'Philippines', 'PN': 'Pitcairn', 'TM': 'Turkmenistan', 'PL': 'Poland', 'PM': 'Saint Pierre and Miquelon', 'ZM': 'Zambia', 'EH': 'Western Sahara', 'RU': 'Russian Federation', 'EE': 'Estonia', 'EG': 'Egypt', 'TK': 'Tokelau', 'ZA': 'South Africa', 'EC': 'Ecuador', 'IT': 'Italy', 'VN': 'Vietnam', 'SB': 'Solomon Islands', 'EU': 'Europe', 'ET': 'Ethiopia', 'SO': 'Somalia', 'ZW': 'Zimbabwe', 'SA': 'Saudi Arabia', 'ES': 'Spain', 'ER': 'Eritrea', 'ME': 'Montenegro', 'MD': 'Moldova, Republic of', 'MG': 'Madagascar', 'MF': 'Saint Martin', 'MA': 'Morocco', 'MC': 'Monaco', 'UZ': 'Uzbekistan', 'MM': 'Myanmar', 'ML': 'Mali', 'MO': 'Macao', 'MN': 'Mongolia', 'MH': 'Marshall Islands', 'MK': 'Macedonia', 'MU': 'Mauritius', 'MT': 'Malta', 'MW': 'Malawi', 'MV': 'Maldives', 'MQ': 'Martinique', 'MP': 'Northern Mariana Islands', 'MS': 'Montserrat', 'MR': 'Mauritania', 'IM': 'Isle of Man', 'UG': 'Uganda', 'TZ': 'Tanzania, United Republic of', 'MY': 'Malaysia', 'MX': 'Mexico', 'IL': 'Israel', 'FR': 'France', 'IO': 'British Indian Ocean Territory', 'FX': 'France, Metropolitan', 'SH': 'Saint Helena', 'FI': 'Finland', 'FJ': 'Fiji', 'FK': 'Falkland Islands (Malvinas)', 'FM': 'Micronesia, Federated States of', 'FO': 'Faroe Islands', 'NI': 'Nicaragua', 'NL': 'Netherlands', 'NO': 'Norway', 'NA': 'Namibia', 'VU': 'Vanuatu', 'NC': 'New Caledonia', 'NE': 'Niger', 'NF': 'Norfolk Island', 'NG': 'Nigeria', 'NZ': 'New Zealand', 'NP': 'Nepal', 'NR': 'Nauru', 'NU': 'Niue', 'CK': 'Cook Islands', 'CI': 'Cote dIvoire', 'CH': 'Switzerland', 'CO': 'Colombia', 'CN': 'China', 'CM': 'Cameroon', 'CL': 'Chile', 'CC': 'Cocos (Keeling) Islands', 'CA': 'Canada', 'CG': 'Congo', 'CF': 'Central African Republic', 'CD': 'Congo, The Democratic Republic of the', 'CZ': 'Czech Republic', 'CY': 'Cyprus', 'CX': 'Christmas Island', 'CR': 'Costa Rica', 'CV': 'Cape Verde', 'CU': 'Cuba', 'SZ': 'Swaziland', 'SY': 'Syrian Arab Republic', 'KG': 'Kyrgyzstan', 'KE': 'Kenya', 'SR': 'Suriname', 'KI': 'Kiribati', 'KH': 'Cambodia', 'KN': 'Saint Kitts and Nevis', 'KM': 'Comoros', 'ST': 'Sao Tome and Principe', 'SK': 'Slovakia', 'KR': 'Korea, Republic of', 'SI': 'Slovenia', 'KP': 'Korea, Democratic Peoples Republic of', 'KW': 'Kuwait', 'SN': 'Senegal', 'SM': 'San Marino', 'SL': 'Sierra Leone', 'SC': 'Seychelles', 'KZ': 'Kazakhstan', 'KY': 'Cayman Islands', 'SG': 'Singapore', 'SE': 'Sweden', 'SD': 'Sudan', 'DO': 'Dominican Republic', 'DM': 'Dominica', 'DJ': 'Djibouti', 'DK': 'Denmark', 'VG': 'Virgin Islands, British', 'DE': 'Germany', 'YE': 'Yemen', 'DZ': 'Algeria', 'US': 'United States', 'UY': 'Uruguay', 'YT': 'Mayotte', 'UM': 'United States Minor Outlying Islands', 'LB': 'Lebanon', 'LC': 'Saint Lucia', 'LA': 'Lao Peoples Democratic Republic', 'TV': 'Tuvalu', 'TW': 'Taiwan', 'TT': 'Trinidad and Tobago', 'TR': 'Turkey', 'LK': 'Sri Lanka', 'LI': 'Liechtenstein', 'A1': 'Anonymous Proxy', 'TO': 'Tonga', 'LT': 'Lithuania', 'A2': 'Satellite Provider', 'LR': 'Liberia', 'LS': 'Lesotho', 'TH': 'Thailand', 'TF': 'French Southern Territories', 'TG': 'Togo', 'TD': 'Chad', 'TC': 'Turks and Caicos Islands', 'LY': 'Libyan Arab Jamahiriya', 'VA': 'Holy See (Vatican City State)', 'VC': 'Saint Vincent and the Grenadines', 'AE': 'United Arab Emirates', 'AD': 'Andorra', 'AG': 'Antigua and Barbuda', 'AF': 'Afghanistan', 'AI': 'Anguilla', 'VI': 'Virgin Islands, U.S.', 'IS': 'Iceland', 'IR': 'Iran, Islamic Republic of', 'AM': 'Armenia', 'AL': 'Albania', 'AO': 'Angola', 'AN': 'Netherlands Antilles', 'AQ': 'Antarctica', 'AP': 'Asia/Pacific Region', 'AS': 'American Samoa', 'AR': 'Argentina', 'AU': 'Australia', 'AT': 'Austria', 'AW': 'Aruba', 'IN': 'India', 'AX': 'Aland Islands', 'AZ': 'Azerbaijan', 'IE': 'Ireland', 'ID': 'Indonesia', 'UA': 'Ukraine', 'QA': 'Qatar', 'MZ': 'Mozambique'}, function(k, v) {
+				countries.push({id: k, text: v});
+			});
+			$('#country').editable({
+				type: 'select2',
+				inputclass: 'form-control input-medium',
+				source: countries,
+				select2: {width: 175, placeholder: 'Select country', allowClear: true}
+			});
+
+			//make date editable with bootstrap datepicker plugin
+			$('.datepicker').datepicker();
+			$(function(){
+				$('#dob').editable({
+					type: 'date',
+					format: 'yyyy-mm-dd',    
+					viewformat: 'dd/mm/yyyy',
+					title: 'Date of Birth',
+					placement:'right',
+					datepicker: {
+						weekStart: 1
+					}
+				});
+			});				
+			//custome button style for editable			
+			$.fn.editableform.buttons = 
+				'<button type="submit" class="btn btn-primary editable-submit btn-sm"><i class="fa fa-check icon-only"></i></button>' +
+				'<button type="button" class="btn editable-cancel btn-inverse btn-sm"><i class="fa fa-times icon-only"></i></button>';         			
+			
+			// for more document http://vitalets.github.io/x-editable/docs.html
+			
+			
+
+
+			//Edit profile form functions			
+			// password checkbox
+			$(":checkbox").click(function(event) {
+			if ($(this).is(":checked"))
+				$(".myPassword").show();
+			else
+				$(".myPassword").hide();
+			});
+			
+			// wysihtml editor
+			$('#about-editor').wysihtml5();
+			
+		});
+	</script>	
+  </body>
+</html>
