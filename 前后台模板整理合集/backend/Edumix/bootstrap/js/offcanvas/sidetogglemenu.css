@@ -1,0 +1,110 @@
+body {
+    /* CSS for BODY transition when menu is set to push BODY content. */
+    
+    -moz-transition: left 100ms ease-in-out, right 100ms ease-in-out;
+    -webkit-transition: left 100ms ease-in-out, right 100ms ease-in-out;
+    transition: left 100ms ease-in-out, right 100ms ease-in-out;
+}
+.sidetogglemenu {
+    /* shared class for side toggle menus */
+    
+    width: 260px;
+    /* default menu width */
+    
+    height: 100%;
+    position: fixed;
+    top: -100%;
+    clear: both;
+    display: block;
+    visibility: 'hidden';
+    box-shadow: 5px 0 5px rgba(174, 174, 174, .8);
+    -moz-transition: all 100ms ease-in-out;
+    /* change 100ms to slide in animation time */
+    
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+.sidetogglemenu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.sidetogglemenu a {
+    padding: 10px;
+    display: block;
+    color: #595959;
+    text-decoration: none;
+    border-bottom: 1px solid #C0C0C0;
+}
+.sidetogglemenu a:hover {
+    /* background: red; */
+    
+    color: white;
+}
+/* #######  Additional CSS for toggle menu #togglemenu2  ####### */
+
+#togglemenu2 {
+    width: 260px;
+    border-width: 0;
+}
+#togglemenu2 ul a {
+    color: white;
+    border-bottom: 1px solid #eee;
+    font: bold 14px;
+    text-transform: uppercase;
+}
+#togglemenu2 a:hover {
+    background: #162a50;
+    color: white;
+}
+/* #######  Responsive Menu related CSS  ####### */
+
+div#smallscreentoggler {
+    /* CSS for small screen menus toggler, shown when device width is below specified */
+    
+    width: 1.5em;
+    z-index: 10000;
+    color: white;
+    position: relative;
+    float: right;
+    overflow: hidden;
+    background: gray;
+    font: normal 1.8em Arial;
+    margin-bottom: 0.5em;
+    text-align: center;
+    box-shadow: -3px 3px 5px gray;
+    cursor: pointer;
+    border-radius: 2px;
+    display: none;
+    -moz-transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+div#smallscreentoggler:hover {
+    background: #eee;
+    color: black;
+    -moz-transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+@media screen and (max-width: 480px) {
+    /* CSS when device width is 480px or less */
+    
+    div#smallscreentoggler {
+        display: block;
+        /* show small screen menus toggler */
+    }
+    .sidetogglemenu {
+        /* Set position of menus to static */
+        
+        position: static;
+        border-width: 0;
+        border-top-width: 1px;
+        width: 98% !important;
+        height: auto;
+        box-shadow: 5px 0 5px rgba(174, 174, 174, .8) !important;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        display: none;
+    }
+}
