@@ -1,0 +1,1 @@
+jQuery(document).ready(function(a){socialShare()});function socialShare(){$(".ls-mail-img").mouseenter(function(){$(this).addClass("overlay-hover")}).mouseleave(function(){$(this).removeClass("overlay-hover")})};

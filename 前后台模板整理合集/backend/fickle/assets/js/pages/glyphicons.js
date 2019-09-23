@@ -1,0 +1,1 @@
+jQuery(document).ready(function(a){glyphicons_icons()});function glyphicons_icons(){$("ul.ls-glyphicons-list li").click(function(){var b=$(this).children("span").attr("class");var a='<div class="popupIcon"><i class="'+b+'"></i><pre><code>&lt;i class="'+b+'"&gt;&lt;/i&gt;</code></pre></div>';bootbox.alert(a,function(){})})};

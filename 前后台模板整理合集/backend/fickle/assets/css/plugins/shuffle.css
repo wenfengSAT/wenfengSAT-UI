@@ -1,0 +1,134 @@
+.picture-item {
+    position: relative;
+    margin-top: 20px;
+}
+
+.picture-item.shuffle-item {
+    margin-left: 0;
+    /* shuffle items shouldn't have a left margin*/
+}
+
+.picture-item.col-md-4:not(.picture-item--h2) .picture-item__details {
+    width: 100%;
+    background-color: #fff;
+}
+
+.picture-item.col-md-4:not(.picture-item--h2) .picture-item__description {
+    display: none;
+}
+
+.picture-item .picture-item__inner {
+    height: 100%;
+    overflow: hidden;
+    -moz-box-shadow: 0px 1px 1px #B5B2B2;
+    -webkit-box-shadow: 0px 1px 1px #B5B2B2;
+    box-shadow: 0px 1px 1px #B5B2B2;
+}
+
+.picture-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.picture-item .picture-item__details,
+.picture-item .picture-item__description {
+    padding: 10px;
+}
+
+.picture-item .picture-item__description {
+    margin: 0;
+    padding-top: 0;
+    padding-right: 2em;
+}
+
+.picture-item .picture-item__tags {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/*
+  Shuffle needs either relative or absolute positioning on the container
+  It will set it for you, but it'll cause another style recalculation and layout.
+  AKA worse performance - so just set it here
+ */
+.shuffle--container {
+    position: relative;
+    overflow: hidden;
+}
+
+.shuffle--fluid .shuffle__sizer {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Animate in styles */
+.shuffle--animatein {
+    overflow: visible;
+}
+
+.shuffle--animatein .picture-item__inner {
+    opacity: 0;
+    -webkit-transform: translate(0, 220px);
+    -ms-transform: translate(0, 220px);
+    transform: translate(0, 220px);
+}
+
+.shuffle--animatein .picture-item__inner--transition {
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+}
+
+.shuffle--animatein .picture-item.in .picture-item__inner {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.picture-item__title a {
+    color: #585353;
+}
+
+.picture-item.col-md-3 .picture-item__details {
+    font-size: 14px;
+}
+
+.picture-item.col-md-6:not(.picture-item--h2) .picture-item__details {
+    width: 100%;
+    background-color: #fff;
+}
+
+.picture-item.col-md-3:not(.picture-item--h2) .picture-item__details {
+    width: 100%;
+    background-color: #fff;
+}
+
+/**************************************************/
+@media (max-width: 47.9375em) {
+    .picture-item {
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .picture-item.picture-item--h2 {
+        height: auto;
+    }
+
+    .picture-item .picture-item__details,
+    .picture-item .picture-item__description {
+        font-size: .875em;
+        padding: .625em;
+    }
+
+    .picture-item .picture-item__description {
+        padding-right: .875em;
+        padding-bottom: 1.25em;
+    }
+
+    .filter > .row,
+    .filter > .row > div {
+        margin: 10px 0;
+    }
+}
