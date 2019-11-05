@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="super-theme-example">
+			<a id="msgDemo" href="javascript:void(0)" class="easyui-linkbutton">右下角显示</a>
+			<a id="msgDemo2" href="javascript:void(0)" class="easyui-linkbutton">顶部中间显示</a>
+			<a id="msgDemo3" href="javascript:void(0)" class="easyui-linkbutton">右上角显示</a>
+		</div>
+		<script type="text/javascript">
+			$("#msgDemo").on('click', function() {
+				$.messager.show({
+					title: '我的消息',
+					msg: '消息将在3秒后关闭。',
+					timeout: 3000,
+					showType: 'slide'
+				});
+			});
+
+			$("#msgDemo2").on('click', function() {
+				$.messager.show({
+					height: 42,
+					timeout: 1500,
+					showSpeed: 200,
+					msg: '<i class="fa fa-info-circle"></i>&nbsp; 这是一条提示消息',
+					style: {
+						right: '',
+						top: document.body.scrollTop + document.documentElement.scrollTop + 20,
+						bottom: '',
+						'z-index': 999,
+						'box-shadow': '0 1px 6px rgba(0,0,0,.2)'
+					}
+				});
+			});
+
+			$("#msgDemo3").on('click', function() {
+				$.messager.show({
+					height: 42,
+					timeout: 1500,
+					showSpeed: 200,
+					msg: '<i class="fa fa-info-circle"></i>&nbsp; 这是一条提示消息',
+					style: {
+						left: '',
+						right: 20,
+						top: document.body.scrollTop + document.documentElement.scrollTop + 20,
+						'z-index': 999,
+						'box-shadow': '0 1px 6px rgba(0,0,0,.2)'
+					}
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+
+	<body>
+		<style type="text/css">
+			.form-item {
+				margin-bottom: 15px;
+				width: 50%;
+				float: left;
+			}
+			
+			.form-item>label {
+				min-width: 72px;
+				display: inline-block;
+			}
+			
+			.form-item input,
+			select {
+				width: 170px;
+			}
+		</style>
+		<script type="text/javascript">
+			//树形下拉数据
+			//data-options="url:'json/tree.json',method:'get'"
+			var treeJson = [{
+				"id": 1,
+				"text": "Node 1",
+				"children": [{
+					"id": 11,
+					"text": "Node 11"
+				}, {
+					"id": 12,
+					"text": "Node 12"
+				}]
+			}, {
+				"id": 2,
+				"text": "Node 2"
+			}];
+		</script>
+		<div class="super-theme-example">
+			<form id="ff" method="post">
+				<div class="form-item">
+					<label for="" class="label-top">用户名：</label>
+					<input id="username" class="easyui-validatebox easyui-textbox" prompt="请输入用户名" data-options="required:true,validType:'length[3,10]'">
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">文本输入框：</label>
+					<input class="easyui-textbox" data-options="iconCls:'fa fa-user',iconAlign:'left'" prompt="请输入文本">
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">密码输入框：</label>
+					<input class="easyui-passwordbox" prompt="Password" iconWidth="28">
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">下拉框：</label>
+					<select id="ec" class="easyui-combobox" data-options="editable:false,panelHeight:null" name="dept">
+						<option value="aa">选项1</option>
+						<option>选项2</option>
+						<option>伤害</option>
+						<option>电风扇</option>
+						<option>共担风险</option>
+					</select>
+				</div>
+				<div class="form-item">
+					<label for="">树形下拉框：</label>
+					<select class="easyui-combotree" data-options="data:treeJson"></select>
+				</div>
+				<div class="form-item">
+					<label for="">表格下拉框</label>
+					<input id="ccGrid" />
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">数值输入框：</label>
+					<input type="text" class="easyui-numberbox" value="100" data-options="min:0,precision:2" />
+				</div>
+
+				<div class="form-item">
+					<label for="" class="label-top">日历：</label>
+					<input id="dd" type="text" class="easyui-datebox" required="required" />
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">数字微调：</label>
+					<input id="ss" class="easyui-numberspinner" required="required" data-options="min:10,max:100,editable:false">
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">时间微调：</label>
+					<input id="ss" class="easyui-timespinner" required="required" data-options="min:'08:30',showSeconds:true" />
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">文件选择：</label>
+					<input class="easyui-filebox" data-options="buttonText:'上传头像',buttonIcon:'fa fa-upload'">
+				</div>
+				<div class="form-item">
+					<label for="" class="label-top">开关：</label>
+					<input class="easyui-switchbutton" checked>
+					<input class="easyui-switchbutton" data-options="onText:'开',offText:'关'">
+					<input class="easyui-switchbutton" data-options="disabled:true">
+				</div>
+				<div class="form-item">
+				</div>
+				<div class="form-item">
+					<input class="easyui-slider" value="12" style="width:250px" data-options="showTip:true" />
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript">
+			var ccGridJson={
+                "total": 28,
+                "rows": [
+                    {
+                        "productid": "FI-SW-01",
+                        "productname": "Koi",
+                        "unitcost": 10.00,
+                        "status": "P",
+                        "listprice": 36.50,
+                        "attr1": "Large",
+                        "itemid": "EST-1"
+                    }, {
+                        "productid": "K9-DL-01",
+                        "productname": "Dalmation",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 18.50,
+                        "attr1": "Spotted Adult Female",
+                        "itemid": "EST-10"
+                    }, {
+                        "productid": "RP-SN-01",
+                        "productname": "Rattlesnake",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 38.50,
+                        "attr1": "Venomless",
+                        "itemid": "EST-11"
+                    }, {
+                        "productid": "RP-SN-01",
+                        "productname": "Rattlesnake",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 26.50,
+                        "attr1": "Rattleless",
+                        "itemid": "EST-12"
+                    }, {
+                        "productid": "RP-LI-02",
+                        "productname": "Iguana",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 35.50,
+                        "attr1": "Green Adult",
+                        "itemid": "EST-13"
+                    }, {
+                        "productid": "FL-DSH-01",
+                        "productname": "Manx",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 158.50,
+                        "attr1": "Tailless",
+                        "itemid": "EST-14"
+                    }, {
+                        "productid": "FL-DSH-01",
+                        "productname": "Manx",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 83.50,
+                        "attr1": "With tail",
+                        "itemid": "EST-15"
+                    }, {
+                        "productid": "FL-DLH-02",
+                        "productname": "Persian",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 23.50,
+                        "attr1": "Adult Female",
+                        "itemid": "EST-16"
+                    }, {
+                        "productid": "FL-DLH-02",
+                        "productname": "Persian",
+                        "unitcost": 12.00,
+                        "status": "P",
+                        "listprice": 89.50,
+                        "attr1": "Adult Male",
+                        "itemid": "EST-17"
+                    }, {
+                        "productid": "AV-CB-01",
+                        "productname": "Amazon Parrot",
+                        "unitcost": 92.00,
+                        "status": "P",
+                        "listprice": 63.50,
+                        "attr1": "Adult Male",
+                        "itemid": "EST-18"
+                    }
+                ]
+            };
+			$('#ccGrid').combogrid({
+				panelWidth: 300,
+				idField: 'productid',
+				textField: 'productid',
+				method: 'get',
+				data:ccGridJson,
+				//url: 'json/datagrid_data.json',
+				columns: [
+					[{
+							field: 'productid',
+							title: 'productid'
+						},
+						{
+							field: 'productname',
+							title: 'productname'
+						},
+						{
+							field: 'unitcost',
+							title: 'unitcost'
+						},
+						{
+							field: 'itemid',
+							title: 'itemid'
+						}
+					]
+				]
+			});
+		</script>
+	</body>
+
+</html>

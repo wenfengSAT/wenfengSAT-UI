@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="super-theme-example">
+			<a href="javascript:void(0)" id="mb" class="easyui-menubutton" data-options="menu:'#mmDemo',noline:true,iconCls:'fa fa-tags'">Edit</a>
+			<div id="mmDemo">
+				<div>Undo</div>
+				<div>
+					<span>Open</span>
+					<div style="width:150px;">
+						<div><b>Word</b></div>
+						<div>
+							<span>Open</span>
+							<div style="width:150px;">
+								<div><b>Word</b></div>
+								<div>Excel</div>
+								<div>PowerPoint</div>
+							</div>
+						</div>
+						<div>PowerPoint</div>
+					</div>
+				</div>
+				<div>Cut</div>
+				<div>Copy</div>
+				<div>Paste</div>
+				<div class="menu-sep"></div>
+				<div>Delete</div>
+				<div>Select All</div>
+			</div>
+			<br />
+			<br />
+			<!--右击菜单-->
+			<div id="mmDemo2" class="easyui-menu" data-options="onClick:menuHandler" style="width:120px;">
+				<div data-options="name:'new'">New</div>
+				<div data-options="name:'save',iconCls:'fa fa-save'">Save</div>
+				<div data-options="name:'print',iconCls:'fa fa-print'">Print</div>
+				<div class="menu-sep"></div>
+				<div data-options="name:'exit'">Exit</div>
+			</div>
+			<div id="log" class="easyui-panel" title="右击" style="height:250px;padding:10px">
+			</div>
+			<script>
+				function menuHandler(item) {
+					console.log('<p>Click Item: ' + item.name + '</p>')
+				}
+				$(function() {
+					$(document).bind('contextmenu', function(e) {
+						e.preventDefault();
+						$('#mmDemo2').menu('show', {
+							left: e.pageX,
+							top: e.pageY
+						});
+					});
+				});
+			</script>
+		</div>
+	</body>
+
+</html>
