@@ -1,0 +1,806 @@
+/*----------------------------------------------------------------------------- 
+
+	-	Before-After -
+
+Screen Stylesheet 
+
+version:   	1.0 
+date:      	07/27/11 
+author:		freshline
+email:     	support@version-four.com 
+website:   	http://www.version-four.com
+-----------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------
+	-	Shadow Effects for the Banner -
+-------------------------------------------*/
+.shadow1 {	
+	-webkit-box-shadow: 0px 40px 55px -40px #000;
+	-moz-box-shadow: 0px 40px 55px -40px #000;
+	box-shadow: 0px 40px 55px -40px #000;
+}
+
+.shadow2 {
+	-webkit-box-shadow: inset 0px 0px 6px 2px #7e7f7f;  
+	-moz-box-shadow: inset 0px 0px 6px 2px #7e7f7f;  
+	box-shadow: inset 0px 0px 6px 2px #7e7f7f; 
+}
+
+.shadow3 {
+	-webkit-box-shadow: 30px 10px 60px -20px #000;
+	-moz-box-shadow: 30px 10px 60px -20px #000;
+	box-shadow: 30px 10px 60px -20px #000;	
+}
+
+
+
+/*#####################
+	- VERSION I.
+  #####################*/
+
+/*---------------------------------------
+	- CLEARING THE DEFAULT SETTINGS - 
+-----------------------------------------*/
+.beforeafter_slider  ul, li { 
+    margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; 
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+
+/*-------------------------------------------------
+	- Centered Banner, with 10px White Border - 
+	- Standard Font for Each Slide - 
+		 - Rounded Border -
+---------------------------------------------------*/
+.beforeafter_slider {		
+	margin-left:auto;
+	margin-right:auto;			
+	display:none;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-family: 'Oswald', sans-serif;
+	color: #000;
+	background-color:#fff;	
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/*------------------------------
+	- Rounded Mask on Images -
+--------------------------------*/
+.beforeafter_slider #mask {
+	position:absolute;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+
+/*--------------------------------------------------------
+	- The Loader Size, Source and position on the Banner
+----------------------------------------------------------*/
+.beforeafter_slider .loader{
+	background-image:url(../images/loader/loader_round_blue.gif);
+	background-repeat:none;
+	width:18px;
+	height:18px;
+	margin-left:auto;
+	margin-right:auto;
+	top:45%;	
+	z-index:1000;
+	position:relative;
+	
+}
+
+
+
+.beforeafter_slider .timer, .beforeafter_slider_3 .timer{
+	background-image:url(../images/loader/timer_black.png);
+	position:relative;
+	width:10px;
+	height:10px;
+	background-position:0px 0px;
+	top:6px;
+	left:6px;
+	z-index:1000;
+}
+
+.beforeafter_slider_2 .timer{
+	background-image:url(../images/loader/timer_white.png);
+	position:relative;
+	width:10px;
+	height:10px;
+	background-position:0px 0px;
+	top:6px;
+	left:6px;
+	z-index:1000;
+}
+
+
+
+
+/*--------------------------------------------
+	-	The Logo in the right top Corner -
+----------------------------------------------*/
+.beforeafter_slider #bannerlogo {
+	position:absolute;
+	left:765px;
+	top:5px;
+	z-index:1500;
+	cursor:point;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.beforeafter_slider #bannerlogo img{
+	border-style:none;	
+	border:none;
+}
+
+#bannerlogo a:link {border:none;}
+#bannerlogo a:visited {border:none;}
+
+
+/*----------------------------------------------------------------
+	-	Image Thumbnails, borders, Marings, rounded corners - 
+------------------------------------------------------------------*/
+.beforeafter_slider #image_thumbnail{
+	width:146px;
+	height:50px;
+	position:absolute;	
+	background-color:#fff;	
+	margin-left:-60px;
+	margin-top:-51px;	
+	-webkit-border-radius:3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 4px 0px  #1f2120;
+	-moz-box-shadow:  0px 0px 4px 0px  #1f2120;
+	box-shadow: 0px 0px 4px 0px  #1f2120;	
+	cursor:pointer;
+}
+
+/*---------------------------------------------------
+	-	Small Arrow under the Image Thumbnails -
+-----------------------------------------------------*/
+.beforeafter_slider #image_thumbnail_arrow{
+	width:9px;
+	height:5px;	
+	background-image:url(../images/navigation/arrow_down_white.png);
+	background-repeat:no-repeat;
+	position:absolute;
+
+}
+
+
+/*-------------------------------------------
+	- Toolbox (thumbnail, next,prev holder)
+---------------------------------------------*/
+.beforeafter_slider #toolbox {
+	/*display:none;*/
+	background-color:#1f2120;
+	width:auto;
+	height:40px;
+	position:relative;
+	top:285px;
+	float:right;
+	margin-right:18px;
+	padding-left:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 6px 0px  #1f2120;
+	-moz-box-shadow:  0px 0px 6px 0px  #1f2120;
+	box-shadow: 0px 0px 6px 0px  #1f2120;	
+	
+}
+
+/*-------------------------------------
+	- Toolbox - Next Button -
+--------------------------------------*/
+.beforeafter_slider #toolbox #next {
+	margin-top:8px;
+	margin-left:5px;
+	margin-right:5px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/nextprev.png);
+	background-position:top left;
+	width:28px;
+	height:22px;
+	cursor:pointer;	
+}
+
+/*-------------------------------------
+	- Toolbox - Prev Button -
+--------------------------------------*/
+.beforeafter_slider #toolbox #previous {
+	margin-top:8px;
+	margin-left:5px;
+	margin-right:15px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/nextprev.png);
+	background-position:top right;
+	width:28px;
+	height:22px;
+	cursor:pointer;
+}
+
+/*------------------------------------------
+	- Toolbox - divider between buttons -
+--------------------------------------------*/
+.beforeafter_slider #toolbox #mini_divider {
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/toolbar_separator.png);
+	width:2px;
+	height:28px;
+}
+
+/*-----------------------------------------
+	- Toolbox - Mini Thumbnail Buttons -
+-------------------------------------------*/
+.beforeafter_slider #toolbox .mini_thumbnail_buttons {
+	margin-top:8px;
+	margin-left:2px;
+	margin-right:2px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/buttons.png);
+	background-position:top left;
+	width:22px;
+	height:22px;
+	cursor:pointer;
+}
+
+
+/*-------------------------------------------
+	- Before / After the Drag Button  -
+--------------------------------------------*/
+.beforeafter_slider #drag {
+	position:absolute;
+	background-image:url(../images/navigation/drag_h_white.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+	height:20px;
+	width:42px;
+	top:50%;
+	z-index:500;
+	cursor:pointer;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;								
+}
+
+
+/*-------------------------------------------
+	- Before / After the Divider LINE  -
+--------------------------------------------*/
+.beforeafter_slider #divider{										
+	position:absolute;										
+	height:1000px;
+	z-index:202;
+	top:0px;
+	border-left:2px #fff solid;														
+}					
+
+
+
+
+
+
+/*#####################
+	- VERSION II.
+  #####################*/
+
+/*---------------------------------------
+	- CLEARING THE DEFAULT SETTINGS - 
+-----------------------------------------*/
+.beforeafter_slider_2  ul, li { 
+    margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; 
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+
+/*-------------------------------------------------
+	- Centered Banner, with 10px White Border - 
+---------------------------------------------------*/
+.beforeafter_slider_2 {		
+		
+	display:none;
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+/*------------------------------
+	- Rounded Mask on Images -
+--------------------------------*/
+.beforeafter_slider_2 #mask {
+	position:absolute;
+	-webkit-border-radius:0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+
+/*--------------------------------------
+	- Standard Font for Each Slide - 
+		 - Rounded Border -
+---------------------------------*/
+.beforeafter_slider_2 {
+	font-family: 'Oswald', sans-serif;
+	color: #000;
+	background-color:#fff;
+	background:url(../images/background/pattern/royal_line/royal_greyline_2.jpg);
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+/*--------------------------------------------------------
+	- The Loader Size, Source and position on the Banner
+----------------------------------------------------------*/
+.beforeafter_slider_2 .loader{
+	background-image:url(../images/loader/loader_round_black.gif);
+	background-repeat:none;
+	width:18px;
+	height:18px;
+	margin-left:auto;
+	margin-right:auto;
+	top:45%;	
+	z-index:1000;
+	position:relative;
+	
+}
+
+/*--------------------------------------------
+	-	The Logo in the right top Corner -
+----------------------------------------------*/
+.beforeafter_slider_2 #bannerlogo {
+	position:absolute;
+	left:765px;
+	top:5px;
+	z-index:1500;
+	cursor:point;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.beforeafter_slider_2 #bannerlogo img{
+	border-style:none;	
+	border:none;
+}
+
+
+
+/*----------------------------------------------------------------
+	-	Image Thumbnails, borders, Marings, rounded corners - 
+------------------------------------------------------------------*/
+.beforeafter_slider_2 #image_thumbnail{
+	width:80px;
+	height:80px;
+	position:absolute;	
+	background-color:#000;	
+	margin-left:-27px;
+	margin-top:-81px;	
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 4px 0px  #1f2120;
+	-moz-box-shadow:  0px 0px 4px 0px  #1f2120;
+	box-shadow: 0px 0px 4px 0px  #1f2120;	
+	cursor:pointer;
+}
+
+/*---------------------------------------------------
+	-	Small Arrow under the Image Thumbnails -
+-----------------------------------------------------*/
+.beforeafter_slider_2 #image_thumbnail_arrow{
+	width:9px;
+	height:5px;	
+	background-image:url(../images/navigation/arrow_down_black.png);
+	background-repeat:no-repeat;
+	position:absolute;
+
+}
+
+
+/*-------------------------------------------
+	- Toolbox (thumbnail, next,prev holder)
+---------------------------------------------*/
+.beforeafter_slider_2 #toolbox {
+	/*display:none;*/
+	background-color:#fff;
+	background:url(../images/background/pattern/royal_line/royal_greyline_2.jpg);
+	width:auto;
+	height:40px;
+	position:absolute;
+	top:311px;
+	left:51px;
+	float:right;
+	margin-right:18px;
+	padding-left:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 6px 0px  #1f2120;
+	-moz-box-shadow:  0px 0px 6px 0px  #1f2120;
+	box-shadow: 0px 0px 6px 0px  #1f2120;	
+	
+}
+
+/*-------------------------------------
+	- Toolbox - Next Button -
+--------------------------------------*/
+.beforeafter_slider_2 #toolbox #next {
+	margin-top:8px;
+	margin-left:5px;
+	margin-right:5px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/nextprev_invert.png);
+	background-position:top left;
+	width:28px;
+	height:22px;
+	cursor:pointer;	
+}
+
+/*-------------------------------------
+	- Toolbox - Prev Button -
+--------------------------------------*/
+.beforeafter_slider_2 #toolbox #previous {
+	margin-top:8px;
+	margin-left:5px;
+	margin-right:15px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/nextprev_invert.png);
+	background-position:top right;
+	width:28px;
+	height:22px;
+	cursor:pointer;
+}
+
+/*------------------------------------------
+	- Toolbox - divider between buttons -
+--------------------------------------------*/
+.beforeafter_slider_2 #toolbox #mini_divider {
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/toolbar_separator_2.png);
+	width:2px;
+	height:28px;
+}
+
+/*-----------------------------------------
+	- Toolbox - Mini Thumbnail Buttons -
+-------------------------------------------*/
+.beforeafter_slider_2 #toolbox .mini_thumbnail_buttons {
+	margin-top:8px;
+	margin-left:2px;
+	margin-right:2px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/buttons_invert.png);
+	background-position:top left;
+	width:22px;
+	height:22px;
+	cursor:pointer;
+}
+
+
+/*-------------------------------------------
+	- Before / After the Drag Button  -
+--------------------------------------------*/
+.beforeafter_slider_2 #drag {
+	position:absolute;
+	background-image:url(../images/navigation/drag_h_black.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+	height:20px;
+	top:80%;
+	width:42px;
+	z-index:500;
+	cursor:pointer;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;								
+}
+
+
+/*-------------------------------------------
+	- Before / After the Divider LINE  -
+--------------------------------------------*/
+.beforeafter_slider_2 #divider{										
+	position:absolute;										
+	height:1000px;
+	z-index:202;
+	top:0px;
+	border-left:2px #000 solid;														
+}					
+
+
+
+
+
+/*#####################
+	- VERSION III.
+  #####################*/
+
+/*---------------------------------------
+	- CLEARING THE DEFAULT SETTINGS - 
+-----------------------------------------*/
+.beforeafter_slider_3  ul, li { 
+    margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; 
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+
+/*-------------------------------------------------
+	- Centered Banner, with 10px White Border - 
+---------------------------------------------------*/
+.beforeafter_slider_3 {		
+	
+	
+	display:none;
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+/*------------------------------
+	- Rounded Mask on Images -
+--------------------------------*/
+.beforeafter_slider_3 #mask {
+	position:absolute;
+	-webkit-border-radius:0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	top: 1px;
+    left: 1px;
+}
+
+
+/*--------------------------------------
+	- Standard Font for Each Slide - 
+		 - Rounded Border -
+---------------------------------*/
+.beforeafter_slider_3 {
+	font-family: 'Oswald', sans-serif;
+	color: #000;
+	background-color:#1f2120;
+	-webkit-border-radius:0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+
+/*--------------------------------------------------------
+	- The Loader Size, Source and position on the Banner
+----------------------------------------------------------*/
+.beforeafter_slider_3 .loader{
+	background-image:url(../images/loader/loader_round_blue.gif);
+	background-repeat:none;
+	width:18px;
+	height:18px;
+	margin-left:auto;
+	margin-right:auto;
+	top:45%;	
+	z-index:1000;
+	position:relative;
+	
+}
+
+
+
+
+
+/*--------------------------------------------
+	-	The Logo in the right top Corner -
+----------------------------------------------*/
+.beforeafter_slider_3 #bannerlogo {
+	position:absolute;
+	left:765px;
+	top:5px;
+	z-index:1500;
+	cursor:point;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.beforeafter_slider_3 #bannerlogo img{
+	border-style:none;	
+	border:none;
+}
+
+
+/*----------------------------------------------------------------
+	-	Image Thumbnails, borders, Marings, rounded corners - 
+------------------------------------------------------------------*/
+.beforeafter_slider_3 #image_thumbnail{
+	width:96px;
+	height:50px;
+	position:absolute;	
+	background-color:#bbb7ac;	
+	margin-left:-35px;
+	margin-top:39px;	
+	-webkit-border-radius:3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 4px 0px  #1f2120;
+	-moz-box-shadow:  0px 0px 4px 0px  #1f2120;
+	box-shadow: 0px 0px 4px 0px  #1f2120;	
+	cursor:pointer;
+}
+
+/*---------------------------------------------------
+	-	Small Arrow under the Image Thumbnails - 
+		background-image:url(../images/navigation/arrow_down_white.png);
+-----------------------------------------------------*/
+.beforeafter_slider_3 #image_thumbnail_arrow{
+	width:9px;
+	height:5px;	
+	background-repeat:no-repeat;
+	position:absolute;
+
+}
+
+
+/*-------------------------------------------
+	- Toolbox (thumbnail, next,prev holder)
+---------------------------------------------*/
+.beforeafter_slider_3 #toolbox {
+	/*display:none;*/
+	background-color:#1f2120;
+	width:300px;
+	height:40px;
+	position:relative;
+	top:0px;
+	float:left;
+	margin-right:0px;
+	padding-left:10px;
+	-webkit-border-radius:0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: 0px 0px 6px 0px  #1f2120;
+	-moz-box-shadow:  0px 0px 6px 0px  #1f2120;
+	box-shadow: 0px 0px 6px 0px  #1f2120;	
+	
+}
+
+/*-------------------------------------
+	- Toolbox - Next Button -
+--------------------------------------*/
+.beforeafter_slider_3 #toolbox #next {
+	margin-top:8px;
+	margin-left:5px;
+	margin-right:5px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/nextprev.png);
+	background-position:top left;
+	width:28px;
+	height:22px;
+	cursor:pointer;	
+}
+
+/*-------------------------------------
+	- Toolbox - Prev Button -
+--------------------------------------*/
+.beforeafter_slider_3 #toolbox #previous {
+	margin-top:8px;
+	margin-left:5px;
+	margin-right:15px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/nextprev.png);
+	background-position:top right;
+	width:28px;
+	height:22px;
+	cursor:pointer;
+}
+
+/*------------------------------------------
+	- Toolbox - divider between buttons -
+--------------------------------------------*/
+.beforeafter_slider_3 #toolbox #mini_divider {
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/toolbar_separator.png);
+	width:2px;
+	height:28px;
+}
+
+/*-----------------------------------------
+	- Toolbox - Mini Thumbnail Buttons -
+-------------------------------------------*/
+.beforeafter_slider_3 #toolbox .mini_thumbnail_buttons {
+	margin-top:8px;
+	margin-left:2px;
+	margin-right:2px;
+	float:right;
+	overflow:hidden;
+	background-image:url(../images/navigation/buttons.png);
+	background-position:top left;
+	width:22px;
+	height:22px;
+	cursor:pointer;
+}
+
+
+/*-------------------------------------------
+	- Before / After the Drag Button  -
+--------------------------------------------*/
+.beforeafter_slider_3 #drag {
+	position:absolute;
+	background-image:url(../images/navigation/drag_h_white.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+	top:50%;
+	height:20px;
+	width:42px;
+	z-index:500;
+	cursor:pointer;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;								
+}
+
+/*-------------------------------------------
+	- Before / After the Divider LINE  -
+--------------------------------------------*/
+.beforeafter_slider_3 #divider{										
+	position:absolute;										
+	height:1000px;
+	z-index:202;
+	top:0px;
+	border-left:2px #fff solid;														
+}					
+
+
