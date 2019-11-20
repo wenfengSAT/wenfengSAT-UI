@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery-latest.js"></script>
+<script type="text/javascript" src="../jquery.edittable.js?v=0.2.0"></script>
+<script src="../jquery-ui.js"></script>
+<link rel="stylesheet" href="../jquery.edittable.css?v=0.2.0">
+<link rel="stylesheet" href="../jquery-ui.css">
+</head>
+<body>
+<div id="edittable"></div>
+<button onclick="add()">新增</button>
+</body>
+<script>
+var mytable;
+$(document).ready(function () {
+	mytable = $('#edittable').editTable({
+	data: [
+		[]
+	],
+	headerCols: [
+		'产品名称',
+		'To',
+		'Price'
+	],
+    //data: [['']],           // Fill the table with a js array (this is overridden by the textarea content if not empty)
+    //tableClass: 'inputtable',   // Table class, for styling
+    //jsonData: false,        // Fill the table with json data (this will override data property)
+    //headerCols: false,      // Fix columns number and names (array of column names)
+    maxRows: 999,           // Max number of rows which can be added
+    first_row: false,        // First row should be highlighted?
+    //row_template: false,    // An array of column types set in field_templates
+    //field_templates: false, // An array of custom field type objects
+
+    // Validate fields
+    validate_field: function (col_id, value, col_type, $element) {
+		console.log(col_id + "===" + value + "===" + col_type + "===" + $element);
+		if(value == ""){
+			console.log($element);
+			 $element.animate({'background-color':'#DB4A39'});
+			return false;
+		}
+        return true;
+    }
+});
+});
+
+function add(){
+	console.log(mytable.isValidated());
+	console.log(mytable.getData());
+	console.log(mytable.getJsonData());
+}
+
+/*
+mytable.loadData(dataArray);    // Fill the table with js data
+mytable.loadJsonData(jsonData); // Fill the table with JSON data
+mytable.getData();              // Get a js array of the table data
+mytable.getJsonData();          // Get JSON from the table data
+mytable.reset();                // Reset the table to the initial set of data
+mytable.isValidated()           // Check if the table pass validation set with validate_field
+*/
+
+</script>
+</html>
