@@ -1,0 +1,1 @@
+define({  "name": "后台管理",  "version": "0.1.0",  "description": "后台管理接口文档详细说明",  "title": "后台管理接口文档说明",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2018-07-27T02:52:35.475Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }});
