@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<title>Form Advance Components</title>
+<meta name="description" content="Flatter - Flat Admin Theme">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="image/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="image/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="image/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="image/touch/apple-touch-icon-57x57-precomposed.png">
+<link rel="shortcut icon" href="image/touch/apple-touch-icon.png">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="lib/select2/select2-bootstrap.css">
+<link rel="stylesheet" href="lib/select2/select2.css">
+<link rel="stylesheet" href="lib/switchery/switchery.min.css">
+<link rel="stylesheet" href="lib/datepicker/css/datepicker.css">
+<link rel="stylesheet" href="lib/timepicker/css/bootstrap-timepicker.css">
+<link rel="stylesheet" href="lib/colorpicker/css/bootstrap-colorpicker.css">
+<link rel="stylesheet" href="lib/wysiwyg/css/bootstrap3-wysiwyg5.css">
+<link rel="stylesheet" href="lib/icheck/skins/all.css">
+<link rel="stylesheet" href="lib/file-input/file-input.css">
+<link rel="stylesheet" href="lib/bootstrap3-editable/css/bootstrap-editable.css">
+<link rel="stylesheet" href="lib/offlinejs/themes/offline-theme-dark.css">
+<link rel="stylesheet" href="css/bootstrap-override.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/library.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="lib/jqueryui/js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body id="body">
+
+		<!-- Header -->
+		<header class="navbar main-header">
+		  		<a class="navbar-brand" href="index.html">
+                    flatter
+                </a>
+               <ul class="nav navbar-nav navbar-left sidebar-toggle-ul">
+                    <li class="navbar-main hidden-lg hidden-md">
+                        <a href="javascript:void(0);" id="sidebar-toggle">
+                            <span class="meta">
+                                <span class="icon"><i class="fa fa-bars"></i></span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-main hidden-sm hidden-xs">
+                        <a href="javascript:void(0);" id="sidebar-collapse">
+                            <span class="meta">
+                                <span class="icon"><i class="fa fa-outdent"></i></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+				<ul class="nav navbar-nav navbar-left">
+
+					<form class="navbar-form navbar-left margintop" role="search">
+				        <div class="form-group">
+				          <input type="text" class="form-control search" placeholder="Search">
+				        </div>
+			        </form>
+
+                 	<li class="dropdown hide-xs-mobile">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+						  <li><a href="#" id="fixed-sidebar-link">Fixed sidebar</a></li>
+						  <li><a href="#" id="fixed-navbar-link">Fixed Navbar</a></li>
+			          </ul>
+			        </li>
+				</ul>
+
+
+
+                 <ul class="nav navbar-nav navbar-right">
+                 	<li class="dropdown icons-dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o"></i></a>
+			          <ul class="dropdown-menu list-group">
+						  <li class="list-group-item heading"><p>Notification</p></li>
+						  <a href="#" class="list-group-item"><i class="fa fa-user"></i> <p>John sent you friend request</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-envelope-o"></i> <p>Sam sent important mail</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-calendar"></i> <p>You have pending job</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-money"></i> <p>Received $1826 from client</p></a>
+
+			          </ul>
+			        </li>
+
+
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">John <img class="img-circle" src="img/avatar.png" alt="avatar" /> <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#"><i class="fa fa-globe"></i> Notification <span class="label label-danger"> 5</span></a></li>
+			            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+			            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+			            <li><a href="#"><i class="fa fa-share"></i> Logout</a></li>
+			          </ul>
+			        </li>
+			     </ul>
+	   </header>
+
+
+        <div class="sidebar sidebar-left">
+        	<div class="content">
+	             <ul class="nav nav-tabs nav-justified sidetabs">
+				  <li class="active"><a href="#home" data-toggle="tab" ><i class="fa fa-compass"></i> </a></li>
+				  <li><a href="#users" data-toggle="tab"><i class="fa fa-user"></i> </a></li>
+				  <li><a href="#email" data-toggle="tab"><i class="fa fa-envelope-o"></i></a></li>
+				</ul>
+
+				<div class="tab-content sidetabs">
+				  <div class="tab-pane active" id="home">
+					  	 <ul class="sidemenu">
+						    <li class="sidebar-header">Home</li>
+						    <li>
+						        <a href="index.html">
+						            <span class="icon"><i class="fa fa-dashboard"></i></span>
+						            <span class="name">Dashboard</span>
+						            <span class="number pull-right"><span class="label label-primary">5</span></span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-chain"></i></span>
+						            <span class="name">Elements</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Elements</p></li>
+						        		<li><a href="general-elements.html">General</a></li>
+			                            <li><a href="typography-elements.html">Typography</a></li>
+			                            <li><a href="buttons-elements.html">Buttons</a></li>
+			                            <li><a href="widgets-elements.html">Widgets</a></li>
+			                            <li><a href="slider-elements.html">Slider</a></li>
+			                            <li><a href="panels-elements.html">Panels</a></li>
+			                            <li><a href="alerts-elements.html">Alerts</a></li>
+			                            <li><a href="tabs-accordions-elements.html">Tabs & Accordions</a></li>
+			                            <li><a href="modals-popover-elements.html">Modals & Popover</a></li>
+			                    </ul>
+						    </li>
+						     <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-gears"></i></span>
+						            <span class="name">Components</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Components</p></li>
+			                            <li><a href="grids.html">Grids</a></li>
+			                            <li><a href="calendar.html">Calendar</a></li>
+			                            <li><a href="gallery.html">Gallery</a></li>
+			                            <li><a href="draggable.html">Draggable Portlet</a></li>
+			                            <li><a href="font-awesome.html">Font Awesome</a></li>
+			                    </ul>
+						    </li>
+						    <li class="active">
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa fa-tasks"></i></span>
+						            <span class="name">Forms</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Forms</p></li>
+			                            <li><a href="form-elements.html">Form Elements</a></li>
+			                            <li><a href="form-validation.html">Form Validation</a></li>
+			                            <li><a href="form-wizards.html">Form Wizards</a></li>
+			                            <li><a class="active" href="form-advancecomponents.html">Advance Components</a></li>
+			                            <li><a href="form-fileupload.html">File Upload</a></li>
+			                    </ul>
+
+						    </li>
+						     <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-envelope-o"></i></span>
+						            <span class="name">Mail</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Mail</p></li>
+						        		<li><a href="mail-inbox.html">Inbox</a></li>
+			                            <li><a href="mail-compose.html">Compose</a></li>
+			                            <li><a href="mail-view.html">View</a></li>
+
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-table"></i></span>
+						            <span class="name">Tables</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Tables</p></li>
+						        		<li><a href="basic-tables.html">Basic Tables</a></li>
+			                            <li><a href="data-tables.html">Data Tables</a></li>
+			                            <li><a href="editable-tables.html">Editable Tables</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-bar-chart-o"></i></span>
+						            <span class="name">Charts</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Charts</p></li>
+						        		<li><a href="c3-charts.html">C3 Charts</a></li>
+			                            <li><a href="morris-charts.html">Morris Charts</a></li>
+			                            <li><a href="flot-charts.html">Flot Charts</a></li>
+			                            <li><a href="chartsjs-charts.html">Chartsjs</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-map-marker"></i></span>
+						            <span class="name">Maps</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Maps</p></li>
+						        		<li><a href="google-maps.html">Google Maps</a></li>
+			                            <li><a href="vector-maps.html">Vector Maps</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-file"></i></span>
+						            <span class="name">Pages</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Pages</p></li>
+			                            <li><a href="login.html">Login</a></li>
+			                            <li><a href="register.html">Register</a></li>
+			                            <li><a href="404.html">404 error</a></li>
+			                            <li><a href="500.html">500 error</a></li>
+			                            <li><a href="lockscreen.html">Lockscreen</a></li>
+			                            <li><a href="pricing-table.html">Pricing Table</a></li>
+			                            <li><a href="timeline.html">Timeline</a></li>
+			                            <li><a href="invoice.html">Invoice</a></li>
+			                            <li><a href="mailapp-inbox.html">MailApp Inbox</a></li>
+			                            <li><a href="mailapp-compose.html">MailApp Compose</a></li>
+			                            <li><a href="mailapp-view.html">MailApp View</a></li>
+			                            <li><a href="blank.html">Blank Page</a></li>
+			                    </ul>
+						    </li>
+					</ul>
+				  </div>
+
+				  <div class="tab-pane" id="users">
+					  <ul class="sidemenu">
+						    <li class="sidebar-header">Users</li>
+						    <li class="active">
+						        <a href="index.html">
+						            <span class="icon"><i class="fa fa-home"></i></span>
+						            <span class="name">Users</span>
+						            <span class="number pull-right"><span class="label label-danger">5</span></span>
+						        </a>
+								</li>
+					  </ul>
+				  </div>
+
+				  <div class="tab-pane" id="email">
+				  		<ul class="sidemenu">
+						    <li class="sidebar-header">Email</li>
+						    <li>
+						        <a href="mail-inbox.html">
+						            <span class="icon"><i class="fa fa-inbox"></i></span>
+						            <span class="name">Inbox</span>
+						            <span class="number pull-right"><span class="label label-success">10</span></span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="mail-compose.html">
+						            <span class="icon"><i class="fa fa-edit"></i></span>
+						            <span class="name">Compose</span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="mail-view.html">
+						            <span class="icon"><i class="fa fa-file-o"></i></span>
+						            <span class="name">View</span>
+						        </a>
+						    </li>
+				  		</ul>
+				  </div>
+				</div>
+        	</div>
+        </div>
+		<!-- Header -->
+          <section id="main-wrapper">
+			  <ol class="breadcrumb subtitle pull-right">
+				  <li><a href="index.html">Home</a></li>
+				  <li>Forms</li>
+				  <li class="active">Advance Components</li>
+			  </ol>
+			  <h3 class="subtitle">Advance Components</h3>
+			  <hr>
+			  <div class="row">
+			   <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Checkbox & Radio</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+					  	<div class="row">
+					  	 <form class="form-horizontal" role="form">
+								  	<div class="col-sm-6">
+											  <div class="form-group">
+												    <label class="col-sm-3 control-label">Checkbox</label>
+												    <div class="col-sm-9">
+												      <input type="checkbox" class="minimal-input-black" checked>
+													  <label for="minimal-input-black">Black Checkbox</label>
+													  <br>
+													   <input  type="checkbox" class="minimal-input-red" checked>
+													   <label for="minimal-input-red">Red Checkbox</label>
+													  <br>
+													  <input  type="checkbox" class="minimal-input-green" checked>
+													   <label for="minimal-input-green">Green Checkbox</label>
+													  <br>
+													  <input  type="checkbox" class="minimal-input-blue" checked>
+													   <label for="minimal-input-blue">Blue Checkbox</label>
+													  <br>
+													  <input  type="checkbox" class="minimal-input-yellow" checked>
+													   <label for="minimal-input-yellow">Yellow Checkbox</label>
+													  <br>
+													   <input  type="checkbox" class="minimal-input-purple" checked>
+													   <label for="minimal-input-purple">Purple Checkbox</label>
+													  <br>
+													  <input type="checkbox" class="minimal-input-disabled" disabled checked>
+													  <label for="minimal-input-disabled">Disabled</label>
+
+												    </div>
+										      </div>
+								  	</div>
+								  	<div class="col-sm-6">
+								  				<div class="form-group">
+												     <label class="col-sm-3 control-label">Radios</label>
+												     <div class="col-sm-9">
+										                   <input type="radio" class="minimal-input-black" >
+														  <label for="minimal-input-black">Black radio</label>
+														  <br>
+														   <input  type="radio" class="minimal-input-red">
+														   <label for="minimal-input-red">Red radio</label>
+														  <br>
+														  <input  type="radio" class="minimal-input-green">
+														   <label for="minimal-input-green">Green radio</label>
+														  <br>
+														  <input  type="radio" class="minimal-input-blue">
+														   <label for="minimal-input-blue">Blue radio</label>
+														  <br>
+														  <input  type="radio" class="minimal-input-yellow" >
+														   <label for="minimal-input-yellow">Yellow radio</label>
+														  <br>
+														   <input  type="radio" class="minimal-input-purple">
+														   <label for="minimal-input-purple">Purple radio</label>
+														  <br>
+														  <input type="radio" class="minimal-input-disabled" disabled checked>
+														  <label for="minimal-input-disabled">Disabled</label>
+												   </div>
+										      </div>
+								  	</div>
+							   </form>
+						  	</div><!-- Panel Row 1 -->
+
+						  <div class="row">
+					  	   <form class="form-horizontal" role="form">
+								  	<div class="col-sm-6">
+											  <div class="form-group">
+												    <label class="col-sm-3 control-label">Flat Checkbox</label>
+												    <div class="col-sm-9">
+												      <input type="checkbox" class="flat-input-black" checked>
+													  <label for="flat-input-black">Black Checkbox</label>
+													  <br>
+													   <input  type="checkbox" class="flat-input-red" checked>
+													   <label for="flat-input-red">Red Checkbox</label>
+													  <br>
+													  <input  type="checkbox" class="flat-input-green" checked>
+													   <label for="flat-input-green">Green Checkbox</label>
+													  <br>
+													  <input  type="checkbox" class="flat-input-blue" checked>
+													   <label for="flat-input-blue">Blue Checkbox</label>
+													  <br>
+													  <input  type="checkbox" class="flat-input-yellow" checked>
+													   <label for="flat-input-yellow">Yellow Checkbox</label>
+													  <br>
+													   <input  type="checkbox" class="flat-input-purple" checked>
+													   <label for="flat-input-purple">Purple Checkbox</label>
+													  <br>
+													  <input type="checkbox" class="flat-input-disabled" disabled checked>
+													  <label for="flat-input-disabled">Disabled</label>
+
+												    </div>
+										      </div>
+								  	</div>
+								  	<div class="col-sm-6">
+								  				<div class="form-group">
+												     <label class="col-sm-3 control-label">Flat Radios</label>
+												     <div class="col-sm-9">
+										                   <input type="radio" class="flat-input-black" >
+														  <label for="flat-input-black">Black radio</label>
+														  <br>
+														   <input  type="radio" class="flat-input-red">
+														   <label for="flat-input-red">Red radio</label>
+														  <br>
+														  <input  type="radio" class="flat-input-green">
+														   <label for="flat-input-green">Green radio</label>
+														  <br>
+														  <input  type="radio" class="flat-input-blue">
+														   <label for="flat-input-blue">Blue radio</label>
+														  <br>
+														  <input  type="radio" class="flat-input-yellow" >
+														   <label for="flat-input-yellow">Yellow radio</label>
+														  <br>
+														   <input  type="radio" class="flat-input-purple">
+														   <label for="flat-input-purple">Purple radio</label>
+														  <br>
+														  <input type="radio" class="flat-input-disabled" disabled checked>
+														  <label for="flat-input-disabled">Disabled</label>
+												   </div>
+										      </div>
+								  	</div>
+							   </form>
+						  	</div><!-- Panel Row 1 -->
+
+
+
+
+					  	</div>
+					  </div>
+				  	</div>
+			   </div>
+			  </div>
+
+			  <div class="row">
+			   <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Select Box</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+						  <form class="form-horizontal" role="form">
+
+						  	<div class="form-group">
+							    <label class="col-sm-2 control-label">Switch Buttons</label>
+							    <div class="col-sm-10">
+								  <input type="checkbox" class="js-switch-blue" checked />
+								  <input type="checkbox" class="js-switch-green" checked />
+								  <input type="checkbox" class="js-switch-red" checked />
+								  <input type="checkbox" class="js-switch-sky" checked />
+								  <input type="checkbox" class="js-switch-yellow" checked />
+								  <input type="checkbox" class="js-switch-pink" checked />
+								  <input type="checkbox" class="js-switch-teal" checked />
+								  <input type="checkbox" class="js-switch-darkred" checked />
+							    </div>
+							  </div>
+
+
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">Selectbox</label>
+							    <div class="col-sm-10">
+							      <select style="width:300px" id="select1">
+					               <optgroup label="Alaskan/Hawaiian Time Zone">
+					                   <option value="AK">Alaska</option>
+					                   <option value="HI">Hawaii</option>
+					               </optgroup>
+					               <optgroup label="Pacific Time Zone">
+					                   <option value="CA">California</option>
+					                   <option value="NV">Nevada</option>
+					                   <option value="OR">Oregon</option>
+					                   <option value="WA">Washington</option>
+					               </optgroup>
+					               <optgroup label="Mountain Time Zone">
+					                   <option value="AZ">Arizona</option>
+					                   <option value="CO">Colorado</option>
+					                   <option value="ID">Idaho</option>
+					                   <option value="MT">Montana</option><option value="NE">Nebraska</option>
+					                   <option value="NM">New Mexico</option>
+					                   <option value="ND">North Dakota</option>
+					                   <option value="UT">Utah</option>
+					                   <option value="WY">Wyoming</option>
+					               </optgroup>
+					               <optgroup label="Central Time Zone">
+					                   <option value="AL">Alabama</option>
+					                   <option value="AR">Arkansas</option>
+					                   <option value="IL">Illinois</option>
+					                   <option value="IA">Iowa</option>
+					                   <option value="KS">Kansas</option>
+					                   <option value="KY">Kentucky</option>
+					                   <option value="LA">Louisiana</option>
+					                   <option value="MN">Minnesota</option>
+					                   <option value="MS">Mississippi</option>
+					                   <option value="MO">Missouri</option>
+					                   <option value="OK">Oklahoma</option>
+					                   <option value="SD">South Dakota</option>
+					                   <option value="TX">Texas</option>
+					                   <option value="TN">Tennessee</option>
+					                   <option value="WI">Wisconsin</option>
+					               </optgroup>
+					              </select>
+							    </div>
+							  </div>
+
+
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">Select Multiple</label>
+							    <div class="col-sm-10">
+							      <select style="width:300px" class="form-control" id="selectm" multiple>
+					               <optgroup label="Alaskan/Hawaiian Time Zone">
+					                   <option value="AK">Alaska</option>
+					                   <option value="HI">Hawaii</option>
+					               </optgroup>
+					               <optgroup label="Pacific Time Zone">
+					                   <option value="CA">California</option>
+					                   <option value="NV">Nevada</option>
+					                   <option value="OR">Oregon</option>
+					                   <option value="WA">Washington</option>
+					               </optgroup>
+					              </select>
+							    </div>
+							  </div>
+
+
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">Tags</label>
+							    <div class="col-sm-10">
+							      <input type="hidden" class="form-control" id="tags" style="width:100%" value="brown, red, green"/>
+							    </div>
+							  </div>
+
+						  </form>
+					  </div>
+					</div>
+				</div>
+			  </div>
+
+			   <div class="row">
+			   <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Pickers</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+
+						  <form class="form-horizontal" role="form">
+					  		<div class="form-group">
+							    <label class="col-sm-2 control-label">Date Picker</label>
+							    <div class="col-sm-3">
+							      <input type="text" class="col-sm-2 form-control" data-date-format="dd/mm/yyyy" value="16/04/2012" id="dp1" >
+							    </div>
+							  </div>
+
+
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">Date Range</label>
+							    <div class="col-sm-6">
+							    	<div class="input-group">
+								      <span class="input-group-addon">From</span>
+								      <input type="text" class="form-control" data-date-format="dd/mm/yyyy" value="16/04/2012" id="dp2" >
+								      <span class="input-group-addon">To</span>
+								      <input type="text" class="form-control" data-date-format="dd/mm/yyyy" value="20/04/2012" id="dp3" >
+							    	</div>
+							    </div>
+							  </div>
+
+
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">Time Picker</label>
+							    <div class="col-sm-3">
+							    	<div class="input-group bootstrap-timepicker">
+									  <input id="timepicker1" type="text" class="form-control">
+									  <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+									</div>
+							    </div>
+							  </div>
+
+
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">24hr Time</label>
+							    <div class="col-sm-3">
+							    	<div class="input-group bootstrap-timepicker">
+									  <input id="timepicker2" type="text" class="form-control">
+									  <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+									</div>
+							    </div>
+							  </div>
+
+
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">Color Picker</label>
+							    <div class="col-sm-3">
+							    	<div class="input-group colorpicker">
+									    <input type="text" value="#1caeed" class="form-control" />
+									    <span class="input-group-addon"><i></i></span>
+									</div>
+							    </div>
+							  </div>
+
+							   <div class="form-group">
+							    <label class="col-sm-2 control-label">RGBA Picker</label>
+							    <div class="col-sm-3">
+									    <input type="text" class="form-control" data-horizontal="true" id="rgba" value="#8fff00">
+							    </div>
+							  </div>
+
+						  </form>
+
+					  </div>
+				  	</div>
+			   </div>
+			</div>
+
+			<div class="row">
+			   <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">X-Editable</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+
+					  		<table id="user" class="table table-bordered table-striped" style="clear: both">
+				                <tbody>
+				                    <tr>
+				                        <td width="35%">Simple text field</td>
+				                        <td width="65%"><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter username">superuser</a></td>
+				                    </tr>
+				                    <tr>
+				                        <td>Empty text field, required</td>
+				                        <td><a href="#" id="firstname" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required"
+				                         data-title="Enter your firstname"></a></td>
+				                    </tr>
+				                    <tr>
+				                        <td>Select, local array, custom display</td>
+				                        <td><a href="#" id="sex" data-type="select" data-pk="1" data-value="" data-title="Select sex"></a></td>
+				                    </tr>
+				                    <tr>
+				                        <td>Textarea, buttons below. Submit by <i>ctrl+enter</i></td>
+				                        <td><a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..."
+				                        data-title="Enter comments">awesome user!</a></td>
+				                    </tr>
+				                    <tr>
+				                        <td>Checklist</td>
+				                        <td><a href="#" id="fruits" data-type="checklist" data-value="2,3" data-title="Select fruits"></a></td>
+				                    </tr>
+								</tbody>
+						   </table>
+					  </div>
+				  	</div>
+			   </div>
+			</div>
+
+			<div class="row">
+			   <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Input Mask</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+					  	<form class="form-horizontal" role="form">
+					  		  <div class="form-group">
+							    <label class="col-sm-2 control-label">Phone</label>
+							    <div class="col-sm-10">
+							      	<input type="text" class="form-control" data-mask="(999)-999-9999" placeholder="Phone">
+							      	<label for="phone-format">(999)-999-9999</label>
+							    </div>
+							  </div>
+
+							   <div class="form-group">
+							    <label class="col-sm-2 control-label">ISBN</label>
+							    <div class="col-sm-10">
+							      	<input type="text" class="form-control" data-mask="999-99-999-9999-9" placeholder="ISBN">
+							      	<label for="isbn-format">999-99-999-9999-9</label>
+							    </div>
+							  </div>
+
+							   <div class="form-group">
+							    <label class="col-sm-2 control-label">Date</label>
+							    <div class="col-sm-10">
+							      	<input type="text" class="form-control" data-mask="99/99/9999" placeholder="Date">
+							      	<label for="date-format">99/99/9999</label>
+							    </div>
+							  </div>
+
+							   <div class="form-group">
+							    <label class="col-sm-2 control-label">Time</label>
+							    <div class="col-sm-10">
+							      	<input type="text" class="form-control" data-mask="99:99:99" placeholder="Time">
+							      	<label for="time-format">99:99:99</label>
+							    </div>
+							  </div>
+
+							   <div class="form-group">
+							    <label class="col-sm-2 control-label">IPv4</label>
+							    <div class="col-sm-10">
+							      	<input type="text" class="form-control" data-mask="999.999.999.999" placeholder="IPv4">
+							      	<label for="time-format">999.999.999.999</label>
+							    </div>
+							  </div>
+
+					  	</form>
+					  </div>
+				  	</div>
+			   </div>
+			</div>
+
+
+			<div class="row">
+			   <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">File Input</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+					  		<form class="form-horizontal" role="form">
+					  		  <div class="form-group">
+							    <label class="col-sm-2 control-label">File Input Button</label>
+							    <div class="col-sm-10">
+							      	<div class="fileupload fileupload-new" data-provides="fileupload">
+									    <span class="btn btn-white btn-file">
+									    <span class="fileupload-new"><i class="fa fa-upload"></i> Select file</span>
+									    <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+									    <input type="file" multiple class="default" />
+									    </span>
+									      <span class="fileupload-preview" style="margin-left:5px;"></span>
+									    <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+									</div>
+							    </div>
+							  </div>
+
+							  <div class="form-group">
+							    <label class="col-sm-2 control-label">File Thumbnail</label>
+							    <div class="col-sm-10">
+
+							      	<div class="fileupload fileupload-new" data-provides="fileupload">
+								      <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+								      	<img src="img/200x150.gif"/>
+								      </div>
+								      <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px;
+								      max-height: 150px; line-height: 20px;"></div>
+								      <div>
+								       <span class="btn btn-white btn-file">
+								       <span class="fileupload-new"><i class="fa fa-upload"></i> Select image</span>
+								       <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+								       <input type="file" class="default" />
+								       </span>
+								          <btn class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash-o"></i> Remove</btn>
+								   </div>
+
+							    </div>
+							  </div>
+					  		</form>
+					  </div>
+				  	</div>
+			   </div>
+			</div>
+
+			<div class="row">
+			   <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">WYSIWYG Editor</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+						  <textarea id="wysiwyg" class="textarea form-control" style="width: 100%; height: 200px"></textarea>
+					  </div>
+				  	</div>
+			   </div>
+			</div>
+
+		  </section>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/form-validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="lib/datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="lib/timepicker/js/bootstrap-timepicker.js"></script>
+<script type="text/javascript" src="lib/colorpicker/js/bootstrap-colorpicker.js"></script>
+<script type="text/javascript" src="lib/wysiwyg/js/wysihtml5-0.3.0.min.js"></script>
+<script type="text/javascript" src="lib/wysiwyg/js/bootstrap3-wysihtml5.js"></script>
+<script type="text/javascript" src="lib/select2/select2.min.js"></script>
+<script type="text/javascript" src="lib/switchery/switchery.min.js"></script>
+<script type="text/javascript" src="lib/icheck/icheck.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script type="text/javascript" src="lib/file-input/file-input.js"></script>
+<script type="text/javascript" src="lib/mask-input/mask-input.js"></script>
+<script type="text/javascript" src="js/form-advancecomponents.js"></script>
+<script type="text/javascript" src="lib/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="lib/jquery-easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="lib/offlinejs/offline.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<title>File Upload</title>
+<meta name="description" content="Flatter - Flat Admin Theme">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="image/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="image/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="image/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="image/touch/apple-touch-icon-57x57-precomposed.png">
+<link rel="shortcut icon" href="image/touch/apple-touch-icon.png">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/offlinejs/themes/offline-theme-dark.css">
+<link rel="stylesheet" href="css/bootstrap-override.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="lib/dropzone/css/dropzone.css">
+<link rel="stylesheet" href="lib/jquery-fileupload/css/jquery.fileupload.css">
+<link rel="stylesheet" href="lib/jquery-fileupload/css/jquery.fileupload-ui.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/library.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="lib/jqueryui/js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body id="body">
+
+		<!-- Header -->
+		<header class="navbar main-header">
+		  		<a class="navbar-brand" href="index.html">
+                    flatter
+                </a>
+               <ul class="nav navbar-nav navbar-left sidebar-toggle-ul">
+                    <li class="navbar-main hidden-lg hidden-md">
+                        <a href="javascript:void(0);" id="sidebar-toggle">
+                            <span class="meta">
+                                <span class="icon"><i class="fa fa-bars"></i></span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-main hidden-sm hidden-xs">
+                        <a href="javascript:void(0);" id="sidebar-collapse">
+                            <span class="meta">
+                                <span class="icon"><i class="fa fa-outdent"></i></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+				<ul class="nav navbar-nav navbar-left">
+
+					<form class="navbar-form navbar-left margintop" role="search">
+				        <div class="form-group">
+				          <input type="text" class="form-control search" placeholder="Search">
+				        </div>
+			        </form>
+
+                 	<li class="dropdown hide-xs-mobile">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+						  <li><a href="#" id="fixed-sidebar-link">Fixed sidebar</a></li>
+						  <li><a href="#" id="fixed-navbar-link">Fixed Navbar</a></li>
+			          </ul>
+			        </li>
+				</ul>
+
+
+
+                 <ul class="nav navbar-nav navbar-right">
+                 	<li class="dropdown icons-dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o"></i></a>
+			          <ul class="dropdown-menu list-group">
+						  <li class="list-group-item heading"><p>Notification</p></li>
+						  <a href="#" class="list-group-item"><i class="fa fa-user"></i> <p>John sent you friend request</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-envelope-o"></i> <p>Sam sent important mail</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-calendar"></i> <p>You have pending job</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-money"></i> <p>Received $1826 from client</p></a>
+
+			          </ul>
+			        </li>
+
+
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">John <img class="img-circle" src="img/avatar.png" alt="avatar" /> <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#"><i class="fa fa-globe"></i> Notification <span class="label label-danger"> 5</span></a></li>
+			            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+			            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+			            <li><a href="#"><i class="fa fa-share"></i> Logout</a></li>
+			          </ul>
+			        </li>
+			     </ul>
+	   </header>
+
+
+        <div class="sidebar sidebar-left">
+        	<div class="content">
+	             <ul class="nav nav-tabs nav-justified sidetabs">
+				  <li class="active"><a href="#home" data-toggle="tab" ><i class="fa fa-compass"></i> </a></li>
+				  <li><a href="#users" data-toggle="tab"><i class="fa fa-user"></i> </a></li>
+				  <li><a href="#email" data-toggle="tab"><i class="fa fa-envelope-o"></i></a></li>
+				</ul>
+
+				<div class="tab-content sidetabs">
+				  <div class="tab-pane active" id="home">
+					  	 <ul class="sidemenu">
+						    <li class="sidebar-header">Home</li>
+						    <li>
+						        <a href="index.html">
+						            <span class="icon"><i class="fa fa-dashboard"></i></span>
+						            <span class="name">Dashboard</span>
+						            <span class="number pull-right"><span class="label label-primary">5</span></span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-chain"></i></span>
+						            <span class="name">Elements</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Elements</p></li>
+						        		<li><a href="general-elements.html">General</a></li>
+			                            <li><a href="typography-elements.html">Typography</a></li>
+			                            <li><a href="buttons-elements.html">Buttons</a></li>
+			                            <li><a href="widgets-elements.html">Widgets</a></li>
+			                            <li><a href="slider-elements.html">Slider</a></li>
+			                            <li><a href="panels-elements.html">Panels</a></li>
+			                            <li><a href="alerts-elements.html">Alerts</a></li>
+			                            <li><a href="tabs-accordions-elements.html">Tabs & Accordions</a></li>
+			                            <li><a href="modals-popover-elements.html">Modals & Popover</a></li>
+			                    </ul>
+						    </li>
+						     <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-gears"></i></span>
+						            <span class="name">Components</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Components</p></li>
+			                            <li><a href="grids.html">Grids</a></li>
+			                            <li><a href="calendar.html">Calendar</a></li>
+			                            <li><a href="gallery.html">Gallery</a></li>
+			                            <li><a href="draggable.html">Draggable Portlet</a></li>
+			                            <li><a href="font-awesome.html">Font Awesome</a></li>
+			                    </ul>
+						    </li>
+						    <li class="active">
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa fa-tasks"></i></span>
+						            <span class="name">Forms</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Forms</p></li>
+			                            <li><a href="form-elements.html">Form Elements</a></li>
+			                            <li><a href="form-validation.html">Form Validation</a></li>
+			                            <li><a href="form-wizards.html">Form Wizards</a></li>
+			                            <li><a href="form-advancecomponents.html">Advance Components</a></li>
+			                            <li><a class="active" href="form-fileupload.html">File Upload</a></li>
+			                    </ul>
+
+						    </li>
+						     <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-envelope-o"></i></span>
+						            <span class="name">Mail</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Mail</p></li>
+						        		<li><a href="mail-inbox.html">Inbox</a></li>
+			                            <li><a href="mail-compose.html">Compose</a></li>
+			                            <li><a href="mail-view.html">View</a></li>
+
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-table"></i></span>
+						            <span class="name">Tables</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Tables</p></li>
+						        		<li><a href="basic-tables.html">Basic Tables</a></li>
+			                            <li><a href="data-tables.html">Data Tables</a></li>
+			                            <li><a href="editable-tables.html">Editable Tables</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-bar-chart-o"></i></span>
+						            <span class="name">Charts</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Charts</p></li>
+						        		<li><a href="c3-charts.html">C3 Charts</a></li>
+			                            <li><a href="morris-charts.html">Morris Charts</a></li>
+			                            <li><a href="flot-charts.html">Flot Charts</a></li>
+			                            <li><a href="chartsjs-charts.html">Chartsjs</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-map-marker"></i></span>
+						            <span class="name">Maps</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Maps</p></li>
+						        		<li><a href="google-maps.html">Google Maps</a></li>
+			                            <li><a href="vector-maps.html">Vector Maps</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-file"></i></span>
+						            <span class="name">Pages</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Pages</p></li>
+			                            <li><a href="login.html">Login</a></li>
+			                            <li><a href="register.html">Register</a></li>
+			                            <li><a href="404.html">404 error</a></li>
+			                            <li><a href="500.html">500 error</a></li>
+			                            <li><a href="lockscreen.html">Lockscreen</a></li>
+			                            <li><a href="pricing-table.html">Pricing Table</a></li>
+			                            <li><a href="timeline.html">Timeline</a></li>
+			                            <li><a href="invoice.html">Invoice</a></li>
+			                            <li><a href="mailapp-inbox.html">MailApp Inbox</a></li>
+			                            <li><a href="mailapp-compose.html">MailApp Compose</a></li>
+			                            <li><a href="mailapp-view.html">MailApp View</a></li>
+			                            <li><a href="blank.html">Blank Page</a></li>
+			                    </ul>
+						    </li>
+					</ul>
+				  </div>
+
+				  <div class="tab-pane" id="users">
+					  <ul class="sidemenu">
+						    <li class="sidebar-header">Users</li>
+						    <li class="active">
+						        <a href="index.html">
+						            <span class="icon"><i class="fa fa-home"></i></span>
+						            <span class="name">Users</span>
+						            <span class="number pull-right"><span class="label label-danger">5</span></span>
+						        </a>
+								</li>
+					  </ul>
+				  </div>
+
+				  <div class="tab-pane" id="email">
+				  		<ul class="sidemenu">
+						    <li class="sidebar-header">Email</li>
+						    <li>
+						        <a href="mail-inbox.html">
+						            <span class="icon"><i class="fa fa-inbox"></i></span>
+						            <span class="name">Inbox</span>
+						            <span class="number pull-right"><span class="label label-success">10</span></span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="mail-compose.html">
+						            <span class="icon"><i class="fa fa-edit"></i></span>
+						            <span class="name">Compose</span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="mail-view.html">
+						            <span class="icon"><i class="fa fa-file-o"></i></span>
+						            <span class="name">View</span>
+						        </a>
+						    </li>
+				  		</ul>
+				  </div>
+				</div>
+        	</div>
+        </div>
+		<!-- Header -->
+        <section id="main-wrapper">
+        	<ol class="breadcrumb subtitle pull-right">
+				  <li><a href="index.html">Home</a></li>
+				  <li>Forms</li>
+				  <li class="active">File Upload</li>
+			  </ol>
+			  <h3 class="subtitle">File Upload</h3>
+			  <hr>
+          	<div class="row">
+			  <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Dropzone</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+						  <form action="http://www.torrentplease.com/dropzone.php" class="dropzone" id="my-awesome-dropzone"></form>
+					  </div>
+					</div>
+				</div>
+          	</div>
+
+          	<div class="row">
+			  <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Multiple File Upload</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+
+						  <form id="fileupload" action="http://www.torrentplease.com/dropzone.php" method="POST" enctype="multipart/form-data">
+						        <!-- Redirect browsers with JavaScript disabled to the origin page -->
+						        <noscript><input type="hidden" name="redirect" value="http://www.torrentplease.com/dropzone.php"></noscript>
+						        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+						        <div class="row fileupload-buttonbar">
+						            <div class="col-lg-7">
+						                <!-- The fileinput-button span is used to style the file input field as button -->
+						                <span class="btn btn-success fileinput-button">
+						                    <i class="glyphicon glyphicon-plus"></i>
+						                    <span>Add files...</span>
+						                    <input type="file" name="files[]" multiple>
+						                </span>
+						                <button type="submit" class="btn btn-primary start">
+						                    <i class="glyphicon glyphicon-upload"></i>
+						                    <span>Start upload</span>
+						                </button>
+						                <button type="reset" class="btn btn-warning cancel">
+						                    <i class="glyphicon glyphicon-ban-circle"></i>
+						                    <span>Cancel upload</span>
+						                </button>
+						                <button type="button" class="btn btn-danger delete">
+						                    <i class="glyphicon glyphicon-trash"></i>
+						                    <span>Delete</span>
+						                </button>
+						                <input type="checkbox" class="toggle">
+						                <!-- The global file processing state -->
+						                <span class="fileupload-process"></span>
+						            </div>
+						            <!-- The global progress state -->
+						            <div class="col-lg-5 fileupload-progress fade">
+						                <!-- The global progress bar -->
+						                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+						                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+						                </div>
+						                <!-- The extended global progress state -->
+						                <div class="progress-extended">&nbsp;</div>
+						            </div>
+						        </div>
+						        <!-- The table listing the files available for upload/download -->
+						        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+						</form>
+						<!-- The template to display files available for upload -->
+							<script id="template-upload" type="text/x-tmpl">
+							{% for (var i=0, file; file=o.files[i]; i++) { %}
+							    <tr class="template-upload fade">
+							        <td>
+							            <span class="preview"></span>
+							        </td>
+							        <td>
+							            <p class="name">{%=file.name%}</p>
+							            <strong class="error text-danger"></strong>
+							        </td>
+							        <td>
+							            <p class="size">Processing...</p>
+							            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+							            aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+							        </td>
+							        <td>
+							            {% if (!i && !o.options.autoUpload) { %}
+							                <button class="btn btn-primary start" disabled>
+							                    <i class="glyphicon glyphicon-upload"></i>
+							                    <span>Start</span>
+							                </button>
+							            {% } %}
+							            {% if (!i) { %}
+							                <button class="btn btn-warning cancel">
+							                    <i class="glyphicon glyphicon-ban-circle"></i>
+							                    <span>Cancel</span>
+							                </button>
+							            {% } %}
+							        </td>
+							    </tr>
+							{% } %}
+							</script>
+							<!-- The template to display files available for download -->
+							<script id="template-download" type="text/x-tmpl">
+							{% for (var i=0, file; file=o.files[i]; i++) { %}
+							    <tr class="template-download fade">
+							        <td>
+							            <span class="preview">
+							                {% if (file.thumbnailUrl) { %}
+							                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+							                {% } %}
+							            </span>
+							        </td>
+							        <td>
+							            <p class="name">
+							                {% if (file.url) { %}
+							                    <a href="{%=file.url%}" title="{%=file.name%}"
+							                    download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+							                {% } else { %}
+							                    <span>{%=file.name%}</span>
+							                {% } %}
+							            </p>
+							            {% if (file.error) { %}
+							                <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+							            {% } %}
+							        </td>
+							        <td>
+							            <span class="size">{%=o.formatFileSize(file.size)%}</span>
+							        </td>
+							        <td>
+							            {% if (file.deleteUrl) { %}
+							                <button class="btn btn-danger delete" data-type="{%=file.deleteType%}"
+							                data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+							                    <i class="glyphicon glyphicon-trash"></i>
+							                    <span>Delete</span>
+							                </button>
+							                <input type="checkbox" name="delete" value="1" class="toggle">
+							            {% } else { %}
+							                <button class="btn btn-warning cancel">
+							                    <i class="glyphicon glyphicon-ban-circle"></i>
+							                    <span>Cancel</span>
+							                </button>
+							            {% } %}
+							        </td>
+							    </tr>
+							{% } %}
+							</script>
+
+					  </div>
+					</div>
+				</div>
+          	</div>
+	    </section>
+
+
+
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/dropzone/dropzone.min.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/vendor/jquery.ui.widget.js"></script>
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script type="text/javascript" src="lib/jquery-fileupload/js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script type="text/javascript" src="lib/jquery-fileupload/js/load-image.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script type="text/javascript" src="lib/jquery-fileupload/js/canvas-to-blob.min.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.fileupload-process.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.fileupload-image.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.fileupload-audio.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.fileupload-video.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.fileupload-validate.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/jquery.fileupload-ui.js"></script>
+<script type="text/javascript" src="lib/jquery-fileupload/js/main.js"></script>
+<script type="text/javascript" src="lib/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="lib/jquery-easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="lib/offlinejs/offline.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

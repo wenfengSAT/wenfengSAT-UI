@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<title>Modals & Popover</title>
+<meta name="description" content="Flatter - Flat Admin Theme">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="image/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="image/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="image/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="image/touch/apple-touch-icon-57x57-precomposed.png">
+<link rel="shortcut icon" href="image/touch/apple-touch-icon.png">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/offlinejs/themes/offline-theme-dark.css">
+<link rel="stylesheet" href="css/bootstrap-override.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="lib/jqueryui/js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body id="body">
+
+		<!-- Header -->
+		<header class="navbar main-header">
+		  		<a class="navbar-brand" href="index.html">
+                    flatter
+                </a>
+               <ul class="nav navbar-nav navbar-left sidebar-toggle-ul">
+                    <li class="navbar-main hidden-lg hidden-md">
+                        <a href="javascript:void(0);" id="sidebar-toggle">
+                            <span class="meta">
+                                <span class="icon"><i class="fa fa-bars"></i></span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-main hidden-sm hidden-xs">
+                        <a href="javascript:void(0);" id="sidebar-collapse">
+                            <span class="meta">
+                                <span class="icon"><i class="fa fa-outdent"></i></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+				<ul class="nav navbar-nav navbar-left">
+
+					<form class="navbar-form navbar-left margintop" role="search">
+				        <div class="form-group">
+				          <input type="text" class="form-control search" placeholder="Search">
+				        </div>
+			        </form>
+
+                 	<li class="dropdown hide-xs-mobile">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+						  <li><a href="#" id="fixed-sidebar-link">Fixed sidebar</a></li>
+						  <li><a href="#" id="fixed-navbar-link">Fixed Navbar</a></li>
+			          </ul>
+			        </li>
+				</ul>
+
+
+
+                 <ul class="nav navbar-nav navbar-right">
+                 	<li class="dropdown icons-dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o"></i></a>
+			          <ul class="dropdown-menu list-group">
+						  <li class="list-group-item heading"><p>Notification</p></li>
+						  <a href="#" class="list-group-item"><i class="fa fa-user"></i> <p>John sent you friend request</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-envelope-o"></i> <p>Sam sent important mail</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-calendar"></i> <p>You have pending job</p></a>
+						  <a href="#" class="list-group-item"><i class="fa fa-money"></i> <p>Received $1826 from client</p></a>
+
+			          </ul>
+			        </li>
+
+
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">John <img class="img-circle" src="img/avatar.png" alt="avatar" /> <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#"><i class="fa fa-globe"></i> Notification <span class="label label-danger"> 5</span></a></li>
+			            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+			            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+			            <li><a href="#"><i class="fa fa-share"></i> Logout</a></li>
+			          </ul>
+			        </li>
+			     </ul>
+	   </header>
+
+
+        <div class="sidebar sidebar-left">
+        	<div class="content">
+	             <ul class="nav nav-tabs nav-justified sidetabs">
+				  <li class="active"><a href="#home" data-toggle="tab" ><i class="fa fa-compass"></i> </a></li>
+				  <li><a href="#users" data-toggle="tab"><i class="fa fa-user"></i> </a></li>
+				  <li><a href="#email" data-toggle="tab"><i class="fa fa-envelope-o"></i></a></li>
+				</ul>
+
+				<div class="tab-content sidetabs">
+				  <div class="tab-pane active" id="home">
+					  	 <ul class="sidemenu">
+						    <li class="sidebar-header">Home</li>
+						    <li>
+						        <a href="index.html">
+						            <span class="icon"><i class="fa fa-dashboard"></i></span>
+						            <span class="name">Dashboard</span>
+						            <span class="number pull-right"><span class="label label-primary">5</span></span>
+						        </a>
+						    </li>
+						    <li class="active">
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-chain"></i></span>
+						            <span class="name">Elements</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Elements</p></li>
+						        		<li><a href="general-elements.html">General</a></li>
+			                            <li><a href="typography-elements.html">Typography</a></li>
+			                            <li><a href="buttons-elements.html">Buttons</a></li>
+			                            <li><a href="widgets-elements.html">Widgets</a></li>
+			                            <li><a href="slider-elements.html">Slider</a></li>
+			                            <li><a href="panels-elements.html">Panels</a></li>
+			                            <li><a href="alerts-elements.html">Alerts</a></li>
+			                            <li><a href="tabs-accordions-elements.html">Tabs & Accordions</a></li>
+			                            <li><a class="active" href="modals-popover-elements.html">Modals & Popover</a></li>
+			                    </ul>
+						    </li>
+						     <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-gears"></i></span>
+						            <span class="name">Components</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Components</p></li>
+			                            <li><a href="grids.html">Grids</a></li>
+			                            <li><a href="calendar.html">Calendar</a></li>
+			                            <li><a href="gallery.html">Gallery</a></li>
+			                            <li><a href="draggable.html">Draggable Portlet</a></li>
+			                            <li><a href="font-awesome.html">Font Awesome</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa fa-tasks"></i></span>
+						            <span class="name">Forms</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Forms</p></li>
+			                            <li><a href="form-elements.html">Form Elements</a></li>
+			                            <li><a href="form-validation.html">Form Validation</a></li>
+			                            <li><a href="form-wizards.html">Form Wizards</a></li>
+			                            <li><a href="form-advancecomponents.html">Advance Components</a></li>
+			                            <li><a href="form-fileupload.html">File Upload</a></li>
+			                    </ul>
+
+						    </li>
+						     <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-envelope-o"></i></span>
+						            <span class="name">Mail</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Mail</p></li>
+						        		<li><a href="mail-inbox.html">Inbox</a></li>
+			                            <li><a href="mail-compose.html">Compose</a></li>
+			                            <li><a href="mail-view.html">View</a></li>
+
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-table"></i></span>
+						            <span class="name">Tables</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Tables</p></li>
+						        		<li><a href="basic-tables.html">Basic Tables</a></li>
+			                            <li><a href="data-tables.html">Data Tables</a></li>
+			                            <li><a href="editable-tables.html">Editable Tables</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-bar-chart-o"></i></span>
+						            <span class="name">Charts</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Charts</p></li>
+						        		<li><a href="c3-charts.html">C3 Charts</a></li>
+			                            <li><a href="morris-charts.html">Morris Charts</a></li>
+			                            <li><a href="flot-charts.html">Flot Charts</a></li>
+			                            <li><a href="chartsjs-charts.html">Chartsjs</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-map-marker"></i></span>
+						            <span class="name">Maps</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Maps</p></li>
+						        		<li><a href="google-maps.html">Google Maps</a></li>
+			                            <li><a href="vector-maps.html">Vector Maps</a></li>
+			                    </ul>
+						    </li>
+						    <li>
+						        <a href="javascript:void(0);">
+						            <span class="icon"><i class="fa fa-file"></i></span>
+						            <span class="name">Pages</span>
+						            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+						        </a>
+						        <ul class="sidebar-dropdown">
+						        		<li class="sidebar-dropdown-title"><p>Pages</p></li>
+			                            <li><a href="login.html">Login</a></li>
+			                            <li><a href="register.html">Register</a></li>
+			                            <li><a href="404.html">404 error</a></li>
+			                            <li><a href="500.html">500 error</a></li>
+			                            <li><a href="lockscreen.html">Lockscreen</a></li>
+			                            <li><a href="pricing-table.html">Pricing Table</a></li>
+			                            <li><a href="timeline.html">Timeline</a></li>
+			                            <li><a href="invoice.html">Invoice</a></li>
+			                            <li><a href="mailapp-inbox.html">MailApp Inbox</a></li>
+			                            <li><a href="mailapp-compose.html">MailApp Compose</a></li>
+			                            <li><a href="mailapp-view.html">MailApp View</a></li>
+			                            <li><a href="blank.html">Blank Page</a></li>
+			                    </ul>
+						    </li>
+					</ul>
+				  </div>
+
+				  <div class="tab-pane" id="users">
+					  <ul class="sidemenu">
+						    <li class="sidebar-header">Users</li>
+						    <li class="active">
+						        <a href="index.html">
+						            <span class="icon"><i class="fa fa-home"></i></span>
+						            <span class="name">Users</span>
+						            <span class="number pull-right"><span class="label label-danger">5</span></span>
+						        </a>
+								</li>
+					  </ul>
+				  </div>
+
+				  <div class="tab-pane" id="email">
+				  		<ul class="sidemenu">
+						    <li class="sidebar-header">Email</li>
+						    <li>
+						        <a href="mail-inbox.html">
+						            <span class="icon"><i class="fa fa-inbox"></i></span>
+						            <span class="name">Inbox</span>
+						            <span class="number pull-right"><span class="label label-success">10</span></span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="mail-compose.html">
+						            <span class="icon"><i class="fa fa-edit"></i></span>
+						            <span class="name">Compose</span>
+						        </a>
+						    </li>
+						    <li>
+						        <a href="mail-view.html">
+						            <span class="icon"><i class="fa fa-file-o"></i></span>
+						            <span class="name">View</span>
+						        </a>
+						    </li>
+				  		</ul>
+				  </div>
+				</div>
+        	</div>
+        </div>
+		<!-- Header -->
+          <section id="main-wrapper">
+			  <ol class="breadcrumb subtitle pull-right">
+				  <li><a href="index.html">Home</a></li>
+				  <li>Elements</li>
+				  <li class="active">Modals</li>
+				</ol>
+				<h3 class="subtitle">Modals</h3>
+	          <hr/>
+	          <div class="row">
+			  <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Modals Type</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+					  	 <p class="lead">Modals have two optional sizes, available via modifier classes to be placed on a .modal-dialog.</p>
+						  <div class="row">
+						  	<div class="col-md-3 margintop">
+					    	<!-- Simple Modal Button -->
+							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+							  Launch modal
+							</button>
+
+							<!-- Simple Modal -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							      </div>
+							      <div class="modal-body">
+							        ...
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							        <button type="button" class="btn btn-primary">Save changes</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						  	</div><!-- col -->
+
+						  	<div class="col-md-3 margintop">
+							<!-- Large modal Button -->
+							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target=".example-modal-lg">Large modal</button>
+
+							<!-- Large modal -->
+							<div class="modal fade example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							  <div class="modal-dialog modal-lg">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							      </div>
+							      <div class="modal-body">
+							        ...
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							        <button type="button" class="btn btn-primary">Save changes</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						  	</div><!-- col -->
+
+						  	<div class="col-md-3 margintop">
+							<!-- Small modal Button -->
+							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target=".example-modal-sm">Small modal</button>
+
+							<!-- Small modal -->
+							<div class="modal fade example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+							   <div class="modal-dialog modal-sm">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							      </div>
+							      <div class="modal-body">
+							        ...
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							        <button type="button" class="btn btn-primary">Save changes</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						  	</div><!-- col -->
+
+						  	<div class="col-md-3 margintop">
+							<!-- Modal Form Button -->
+							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalform">Modal Form</button>
+
+							<!-- Modal Form -->
+							<div class="modal fade" id="modalform" tabindex="-1" role="dialog" aria-hidden="true">
+							   <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+							      </div>
+							      <div class="modal-body" style="margin-bottom:-30px;">
+									  <form class="form-horizontal" role="form">
+										  <div class="form-group">
+										    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+										    <div class="col-sm-10">
+										      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										    </div>
+										  </div>
+										  <div class="form-group">
+										    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+										    <div class="col-sm-10">
+										      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+										    </div>
+										  </div>
+										  <div class="form-group">
+										    <div class="col-sm-offset-2 col-sm-10">
+										      <div class="checkbox">
+										        <label>
+										          <input type="checkbox"> Remember me
+										        </label>
+										      </div>
+										    </div>
+										  </div>
+										</form>
+							      </div>
+							      <div class="modal-footer">
+							      	<button type="button" class="btn btn-primary">Sign In</button>
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						  	</div><!-- col -->
+						  </div><!-- Row in Panel -->
+					  </div>
+					</div>
+				</div>
+	          </div>
+
+			  <!-- Row 2 -->
+			  <div class="row">
+			  <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Popover</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+					  	<div class="row">
+					  	 <div class="col-md-6 margintop">
+
+						  <a href="#" class="btn btn-success" id="popover" data-toggle="popover" title=""
+						  data-content="And here's some amazing content. It's very engaging. right?" role="button" data-original-title="A Title">Click to toggle popover</a>
+
+						  <a href="#" class="btn btn-info" id="popover-full-top" data-toggle="popover" title="" data-placement="top"
+						  data-content="And here's some amazing content. It's very engaging. right?" role="button" data-original-title="A Title">Top Popover with heading</a>
+
+					  	 </div>
+					  	 <div class="col-md-6 margintop">
+
+						  <button type="button" class="btn btn-default" id="popover-left" data-container="body" data-toggle="popover"
+						  data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+						  Popover on left
+						 </button>
+
+						<button type="button" class="btn btn-default" id="popover-top" data-container="body" data-toggle="popover"
+						 data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+						  Popover on top
+						 </button>
+
+						<button type="button" class="btn btn-default" id="popover-bottom" data-container="body" data-toggle="popover"
+						 data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+						  Popover on bottom
+						</button>
+
+						<button type="button" class="btn btn-default" id="popover-right" data-container="body" data-toggle="popover"
+						 data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+						  Popover on right
+						</button>
+					  	</div>
+					  	</div><!-- Row Inside Panel -->
+					  </div>
+					</div>
+				</div>
+	          </div>
+
+	          <!-- Row 3 -->
+	          <div class="row">
+			  <div class="col-md-12">
+				  	<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Tooltips</h3>
+					    			<div class="panel-options pull-right">
+                                           <i class="fa fa-chevron-down"></i>
+                                           <i class="fa fa-times"></i>
+                                      </div>
+					  </div>
+					  <div class="panel-body">
+
+					  	<button type="button" class="btn btn-default" id="tooltip-left" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+						&nbsp; <button type="button" class="btn btn-default" id="tooltip-top" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+						&nbsp; <button type="button" class="btn btn-default" id="tooltip-bottom" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+						&nbsp; <button type="button" class="btn btn-default" id="tooltip-right" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+					  </div>
+					</div>
+				</div>
+	          </div>
+
+
+		  </section>
+
+
+
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="lib/jquery-easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="lib/offlinejs/offline.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
