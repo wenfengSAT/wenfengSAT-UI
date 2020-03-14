@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<title>Fusion - A Responsive HTML5 Admin UI Template Theme</title>
+<meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description" content="Fusion - A Responsive HTML5 Admin UI Template Theme">
+<meta name="author" content="AdminDesigns">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font CSS (Via CDN) -->
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+<!-- Required Plugin CSS 
+<link rel="stylesheet" type="text/css" href="vendor/plugins/calendar/fullcalendar.css" media="screen" data-css="plugin">
+<link rel="stylesheet" type="text/css" href="vendor/plugins/colorpicker/colorpicker.css" data-css="plugin">
+-->
+
+<!-- Theme CSS -->
+<link rel="stylesheet" type="text/css" href="css/vendor.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/utility.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<script> var boxtest = localStorage.getItem('boxed'); if (boxtest === 'true') {document.body.className+=' boxed-layout';} </script> 
+<!-- Start: Theme Preview Pane -->
+<div id="skin-toolbox">
+  <div class="skin-toolbox-toggle"> <i class="fa fa-wrench"></i> </div>
+  <div class="skin-toolbox-panel">
+    <form id="skin-toolbox-form">
+      <h4 class="pl5">Theme Options</h4>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="ajax-option" checked/>
+          <label for="ajax-option">Ajax Loading</label>
+        </div>
+      </div>
+      <h4 class="pl5 mt20">Stylesss Options</h4>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="header-option" checked/>
+          <label for="header-option">Fixed Header</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="sidebar-option"/>
+          <label for="sidebar-option">Fixed Sidebar</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="breadcrumb-hidden"/>
+          <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="usermenu-hidden"/>
+          <label for="usermenu-hidden">Hide Usermenu</label>
+        </div>
+      </div>
+      <h4 class="pl5 mt20">Layout Options</h4>
+      <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="optionsRadios" id="fullwidth-option" checked>
+          Fullwidth </label>
+      </div>
+      <div class="form-group mb20">
+        <label class="radio-inline">
+          <input type="radio" name="optionsRadios" id="boxed-option">
+          Boxed Layouts </label>
+      </div>
+      <h4 class="pl5 mt20">Header Colors</h4>
+      <div class="form-group mb10">
+      	<div class="toggle-color-wrap">
+            <div class="toggle-color-swap bg-purple3" data-swap="bg-purple3"></div>
+            <div class="toggle-color-swap bg-purple2" data-swap="bg-purple2"></div>
+            <div class="toggle-color-swap bg-blue4-alt" data-swap="bg-blue4-alt"></div>
+            <div class="toggle-color-swap bg-blue5-alt" data-swap="bg-blue5-alt"></div>
+            <div class="toggle-color-swap bg-blue6-alt" data-swap="bg-blue6-alt"></div>
+            <div class="toggle-color-swap bg-red2" data-swap="bg-red2"></div>
+            <div class="toggle-color-swap bg-orange2" data-swap="bg-orange2"></div>
+            <div class="toggle-color-swap bg-brown-alt" data-swap="bg-brown-alt"></div>
+            <div class="toggle-color-swap bg-dark3" data-swap="bg-dark3"></div>
+            <div class="toggle-color-swap bg-white" data-swap="bg-white"></div>
+            <div class="clearfix"></div>
+        </div>
+      </div>      
+      <div class="form-group"> <a href="customizer.html" id="customizer-link" class="btn btn-gradient btn-block">CUSTOMIZER</a> </div>
+    </form>
+  </div>
+</div>
+<!-- End: Theme Preview Pane --> 
+
+<!-- Start: Header -->
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-branding"> <span id="toggle_sidemenu_l" class="glyphicons glyphicons-show_lines"></span> <a class="navbar-brand" href="dashboard.html"><img src="img/logos/header-logo.png"></a> </div>
+  <div class="navbar-left">
+    <div class="navbar-divider"></div>
+    <div id="settings_menu"> <span class="glyphicons glyphicons-settings dropdown-toggle cursor" data-toggle="dropdown"></span>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-bell text-purple mr15"></span>Users</a></li>
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-notes text-blue mr15"></span>Servers</a></li>
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-facebook text-orange mr15"></span>Crons</a></li>
+      </ul>
+    </div>
+    <div id="language_menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="flag-xs flag-us"></span> <span class="small va-m">US</span> <i class="fa fa-angle-down"></i> </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-in"></span> Hindu</a></li>
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-tr"></span> Turkish</a></li>
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-es"></span> Spanish</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-right">
+    <div class="navbar-search">
+      <input type="text" id="HeaderSearch" placeholder="Search..." value="Search...">
+    </div>
+    <div class="navbar-menus">
+      <div class="btn-group" id="alert_menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicons glyphicons-bell"></span> <b>3</b> </button>
+        <ul class="dropdown-menu media-list" role="menu">
+          <li class="dropdown-header">Recent Messages<span class="pull-right glyphicons glyphicons-bell"></span></li>
+          <li class="p15 pb10">
+            <ul class="list-unstyled">
+              <li><span class="glyphicons glyphicons-bell text-orange2 fs16 mr15"></span><b>CEO</b> lunch meeting Tuesday</li>
+              <li class="pt10"><span class="glyphicons glyphicons-facebook text-blue2 fs16 mr15"></span>Facebook likes are at <b>4,100</b></li>
+              <li class="pt10"><span class="glyphicons glyphicons-paperclip text-teal2 fs16 mr15"></span>Mark <b>uploaded</b> 3 new Docs</li>
+              <li class="pt10"><span class="glyphicons glyphicons-gift text-purple2 fs16 mr15"></span>It's <b>Marks</b> 34th Birthday</li>
+              <li class="pt10"><span class="glyphicons glyphicons-cup text-red2 fs16 mr15"></span>Best new employee awarded to <b>Jessica</b></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-group" id="comment_menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicons glyphicons-display"></span> <b>7</b> </button>
+        <div class="dropdown-menu" role="menu">
+          <ul class="nav nav-tabs tabs-border-bottom" role="tablist">
+            <li class="active"><a href="#header_tab1" role="tab" data-toggle="tab">Messages</a></li>
+            <li><a href="#header_tab2" role="tab" data-toggle="tab">Tickets</a></li>
+            <li><a href="#header_tab3" role="tab" data-toggle="tab">Todo List</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content pn border-none dropdown-persist">
+            <div class="tab-pane active" id="header_tab1">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <input class="dropdownSearch" type="text" placeholder="Search...">
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="cBox cBox-inline ml20">
+                      <input type="checkbox" id="headercBox1" name="check" value="None"/>
+                      <label for="headercBox1">Delete</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p15">
+                <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Simon Rivers <small class="text-light5"> - 3 hours ago</small></h5>
+                    <p class="text-muted"> Hey Louis, I was wondering if</p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-online" src="img/avatars/6.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Tracy Rope <small class="text-light5"> - 8 hours ago</small></h5>
+                    <p class="text-muted"> Bam baby get at, I was</p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-online" src="img/avatars/8.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Courtney Dash <small class="text-light5"> - 3 days ago</small></h5>
+                    <p class="text-muted"> I was wonde awesome brief </p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-light5" src="img/avatars/2.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Simon Rivers <small class="text-light5"> - 3 hours ago</small></h5>
+                    <p class="text-muted mbn"> Hey Louis, I was wondering </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="header_tab2">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="cBox cBox-inline cBox-orange ml15 p1">
+                  <input type="checkbox" id="headercBox2" name="check" value="None"/>
+                  <label for="headercBox2">Closed</label>
+                </div>
+                <div class="cBox cBox-inline cBox-purple">
+                  <input type="checkbox" id="headercBox3" name="check" value="None"/>
+                  <label for="headercBox3">Low</label>
+                </div>
+                <div class="cBox cBox-inline cBox-blue">
+                  <input type="checkbox" id="headercBox4" name="check" value="None"/>
+                  <label for="headercBox4">Med</label>
+                </div>
+                <div class="cBox cBox-inline cBox-red2 cBox-gradient">
+                  <input type="checkbox" id="headercBox5" name="check" value="None" checked/>
+                  <label for="headercBox5">Urgent</label>
+                </div>
+              </div>
+              <div class="sortable mt10 mb10">
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #1]</b> - Validation Errors <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #2]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #3]</b> - User hacked <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #4]</b> - Mailbox Debug <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #5]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #6]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #7]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="header_tab3">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input class="dropdownSearch" type="text" placeholder="Create New Item...">
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox7" name="check" value="None"/>
+                    <label for="headercBox7"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#2]</b> - IE8 Profile Drag Errors <span class="label label-sm bg-grey2 ml10">Javascript</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox6" name="check" value="None"/>
+                    <label for="headercBox6"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#1]</b> - Validation Errors on USCM testing facitiliy <small class="text-red2">- Urgent</small></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox9" name="check" value="None"/>
+                    <label for="headercBox9"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#4]</b> - CSS Problems with Tables <span class="label label-sm bg-orange2 ml10">CSS</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox10" name="check" value="None"/>
+                    <label for="headercBox10"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#5]</b> - PHP Form validation errors occuring on email page<span class="label label-sm bg-purple2 ml10">PHP</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox8" name="check" value="None"/>
+                    <label for="headercBox8"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 pb15 va-m"><b class="text-muted">[#3]</b> - Mailbox Validation Errors on Firefox</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group" id="toggle_sidemenu_r">
+        <button type="button"> <span class="glyphicons glyphicons-parents"></span> </button>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End: Header --> 
+<!-- Start: Main -->
+<div id="main"> 
+  <!-- Start: Sidebar -->
+  <aside id="sidebar_left">
+    <div class="user-info">
+      <div class="media"> <a class="pull-left" href="#">
+        <div class="media-object border border-purple br64 bw2 p2"> <img class="br64" src="img/avatars/5.jpg" alt="..."> </div>
+        </a>
+        <div class="mobile-link"> <span class="glyphicons glyphicons-show_big_thumbnails"></span> </div>
+        <div class="media-body">
+          <h5 class="media-heading mt5 mbn fw700 cursor">John.Smith<span class="caret ml5"></span></h5>
+          <div class="media-links fs11"><a href="#">Menu</a><i class="fa fa-circle text-muted fs3 p8 va-m"></i><a href="screen-lock.html">Sign Out</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="user-divider"></div>
+    <div class="user-menu">
+      <div class="row text-center mb15">
+        <div class="col-xs-4"> <a href="dashboard.html"> <span class="glyphicons glyphicons-home fs22 text-blue2"></span>
+          <h5 class="fs11">Home</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="messages.html"> <span class="glyphicons glyphicons-inbox fs22 text-orange2"></span>
+          <h5 class="fs11">Inbox</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="tables.html"> <span class="glyphicons glyphicons-bell fs22 text-purple2"></span>
+          <h5 class="fs11">Data</h5>
+          </a> </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-xs-4 text-center"> <a href="timeline.html"> <span class="glyphicons glyphicons-imac fs22 text-grey3"></span>
+          <h5 class="fs11">Views</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="profile.html"> <span class="glyphicons glyphicons-settings fs22 text-green2"></span>
+          <h5 class="fs11">Settings</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="gallery.html"> <span class="glyphicons glyphicons-restart fs22 text-light6"></span>
+          <h5 class="fs11">Images</h5>
+          </a> </div>
+      </div>
+    </div>
+    <div class="sidebar-menu">
+      <ul class="nav sidebar-nav">
+        <li> <a href="customizer.html" class="ajax-disable"><span class="glyphicons glyphicons-eyedropper"></span> <span class="sidebar-title">Customizer</span> <span class="sidebar-title-tray"> <span class="label label-xs bg-purple2">New</span> </span> </a> </li>
+        <li> <a href="messages.html" class="ajax-disable"><span class="glyphicons glyphicons-inbox"></span><span class="sidebar-title">Messages</span></a> </li>
+        <li> <a href="dashboard.html"><span class="glyphicons glyphicons-home"></span><span class="sidebar-title">Dashboard</span></a> </li>
+        <li> <a class="accordion-toggle" href="#resources"><span class="glyphicons glyphicons-settings"></span><span class="sidebar-title">Resources</span><span class="caret"></span></a>
+          <ul id="resources" class="nav sub-nav">
+            <li><a href="dashboard.html"><span class="glyphicons glyphicons-magic"></span>Dashboard </a></li>
+            <li><a class="ajax-disable" href="../documentation/index.html"><span class="glyphicons glyphicons-book"></span> Documentation </a></li>
+            <li><a class="ajax-disable" href="login.html"><span class="glyphicons glyphicons-power"></span> Login Page</a></li>
+            <li><a class="ajax-disable" href="screen-lock.html"><span class="glyphicons glyphicons-lock"></span> Screen Lock</a></li>
+            <li><a class="ajax-disable" href="coming-soon.html"><span class="glyphicons glyphicons-road"></span> Coming Soon</a></li>
+            <li><a class="ajax-disable" href="404-page.html"><span class="glyphicons glyphicons-circle_remove"></span> 404 Page</a></li>
+            <li><a class="ajax-disable" href="500-page.html"><span class="glyphicons glyphicons-circle_exclamation_mark"></span> 500 Page</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideOne"><span class="glyphicons glyphicons-adjust_alt"></span><span class="sidebar-title">UI Elements</span><span class="caret"></span></a>
+          <ul id="sideOne" class="nav sub-nav">
+            <li><a href="portlets.html"><span class="glyphicons glyphicons-sort"></span> Portlets</a></li>
+            <li><a href="elements.html"><span class="glyphicons glyphicons-paperclip"></span> Elements</a></li>
+            <li><a class="ajax-disable" href="charts.html"><span class="glyphicons glyphicons-stats"></span> Charts</a></li>
+            <li><a href="tabs.html"><span class="glyphicons glyphicons-adjust"></span> Tabs</a></li>
+            <li><a href="buttons.html"><span class="glyphicons glyphicons-macbook"></span> Buttons</a></li>
+            <li><a href="typography.html"><span class="glyphicons glyphicons-font"></span> Typography</a></li>
+            <li><a href="grid.html"><span class="glyphicons glyphicons-show_big_thumbnails"></span> Grid</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideTwo"><span class="glyphicons glyphicons-vcard"></span><span class="sidebar-title">Form Elements</span><span class="caret"></span></a>
+          <ul id="sideTwo" class="nav sub-nav">
+            <li><a href="forms.html"><span class="glyphicons glyphicons-link"></span> Form Elements</a></li>
+            <li><a href="editors.html"><span class="glyphicons glyphicons-pencil"></span> Editors</a></li>
+            <li><a href="editable.html"><span class="glyphicons glyphicons-edit"></span> Inline Editing</a></li>
+            <li><a href="xedit.html"><span class="glyphicons glyphicons-check"></span> X-editable</a></li>
+            <li><a href="tables.html"><span class="glyphicons glyphicons-table"></span> Tables</a></li>
+            <li><a href="treeview.html"><span class="glyphicons glyphicons-tree_conifer"></span> Treeview</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideSix"><span class="glyphicons glyphicons-globe"></span><span class="sidebar-title">Maps</span><span class="caret"></span></a>
+          <ul id="sideSix" class="nav sub-nav">
+            <li><a href="maps.html"><span class="glyphicons glyphicons-global"></span> GMaps</a></li>
+            <li><a href="map-full.html"><span class="glyphicons glyphicons-globe_af"></span> Window Map</a></li>
+            <li><a href="maps-vector.html"><span class="glyphicons glyphicons-vector_path_circle"></span> Vector Maps</a></li>
+          </ul>
+        </li>
+        <li class="active"> <a class="accordion-toggle menu-open" href="#sideSeven"><span class="glyphicons glyphicons-book_open"></span><span class="sidebar-title">Pages</span><span class="caret"></span></a>
+          <ul id="sideSeven" class="nav sub-nav">
+            <li><a href="profile.html"><span class="glyphicons glyphicons glyphicons-user"></span> Profile</a></li>
+            <li><a href="timeline.html"><span class="glyphicons glyphicons-film"></span> Timeline</a></li>
+            <li><a href="gallery.html"><span class="glyphicons glyphicons-picture"></span> Gallery</a></li>
+            <li><a href="invoice.html"><span class="glyphicons glyphicons glyphicons-print"></span> Printable Invoice</a></li>
+            <li class="active"><a href="calendar.html"><span class="glyphicons glyphicons-calendar"></span> Calendar</a></li>
+            <li><a href="faq.html"><span class="glyphicons glyphicons-edit"></span> Faq Page</a></li>
+            <li><a href="blank.html"><span class="glyphicons glyphicons-unchecked"></span> Blank Page</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideFive"><span class="glyphicons glyphicons-magic"></span><span class="sidebar-title">Extras</span><span class="caret"></span></a>
+          <ul id="sideFive" class="nav sub-nav">
+            <li><a href="icons.html"><span class="glyphicons glyphicons-flash"></span> Icons</a></li>
+            <li><a href="animations.html"><span class="glyphicons glyphicons-fire"></span> Animations</a></li>
+            <li><a href="sliders.html"><span class="glyphicons glyphicons-retweet"></span> Sliders</a></li>
+            <li><a href="image-tools.html"><span class="glyphicons glyphicons-camera"></span> Image Tools</a></li>
+            <li><a href="sketchpad.html"><span class="glyphicons glyphicons-vector_path_square"></span> Sketchpad</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideEight"><span class="glyphicons glyphicons-more_items"></span><span class="sidebar-title">Multi Level Nav</span><span class="caret"></span></a>
+          <ul id="sideEight" class="nav sub-nav">
+            <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+            <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+            <li><a class="accordion-toggle" href="#sideEight-sub"><span class="glyphicons glyphicons-show_lines"></span>2nd Level Nav<span class="caret"></span></a>
+              <ul id="sideEight-sub" class="nav sub-nav">
+                <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                <li><a class="accordion-toggle" href="#sideEight-sub-2"><span class="glyphicons glyphicons-show_lines"></span>3rd Level Nav<span class="caret"></span></a>
+                  <ul id="sideEight-sub-2" class="nav sub-nav">
+                    <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                    <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                    <li><a class="accordion-toggle" href="#sideEight-sub-2"><span class="glyphicons glyphicons-show_lines"></span>4th Level Nav<span class="caret"></span></a>
+                      <ul id="sideEight-sub-3" class="nav sub-nav">
+                        <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                        <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                        <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- End: Sidebar --> 
+  <!-- Start: Content -->
+  <section id="content_wrapper">
+    <div id="topbar">
+      <div class="topbar-left">
+        <ol class="breadcrumb">
+          <li class="crumb-active"><a href="calendar.html">Calendar</a></li>
+          <li class="crumb-icon"><a href="dashboard.html"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li class="crumb-link"><a href="index.html">Home</a></li>
+          <li class="crumb-trail">Calendar</li>
+        </ol>
+      </div>
+      <div class="topbar-right pt30">
+      	<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#calendarModal">Add New Event</button>
+      </div>
+    </div>
+    <div id="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div id='calendar'></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Content --> 
+  
+  <!-- Start: Right Sidebar -->
+  <aside id="sidebar_right">
+    <div class="sidebar-right-header">
+      <div class="pull-right posr"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-circle text-orange2 fs8"></i> <span class="caret text-muted"></span> </a>
+        <ul class="dropdown-menu dropdown-sm" role="menu">
+          <li class="menu-arrow">
+            <div class="menu-arrow-up"></div>
+          </li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-green2 pr5"></i> Online</a></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-red2 pr5"></i> Busy</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-orange2 pr5"></i> Away</a></li>
+        </ul>
+      </div>
+      <div class="media mtn"> <a class="pull-left mt5" href="#"> <img class="thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="small mt5 mbn text-cloud"><b>Current Status:</b></h5>
+          <h5 class="small text-white"><b>"Away: Lunch meeting"</b></h5>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar_right_content p25">
+      <div class="sidebar_right_menu row text-center">
+        <div class="col-xs-4 pln"> <a href="calendar.html"> <span class="glyphicons glyphicons-imac fs22 text-grey2"></span>
+          <h5 class="fs11 text-white">Calendar</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="profile.html"> <span class="glyphicons glyphicons-settings fs22 text-green"></span>
+          <h5 class="fs11 text-white">Settings</h5>
+          </a> </div>
+        <div class="col-xs-4 prn"> <a href="messages.html"> <span class="glyphicons glyphicons-inbox fs22 text-orange"></span>
+          <h5 class="fs11 text-white">Inbox</h5>
+          </a> </div>
+      </div>
+      <hr class="mb25 mtn border-dark3"/>
+      <h5 class="text-muted fs13 mb25">Notes</h5>
+      <h5 class="text-white mbn">9:30 AM - Ford Pitch</h5>
+      <p class="text-light6 fs12 fw600 mb15">Client expects a working draft</p>
+      <h5 class="text-white mbn">12:15 AM - Lunch Meeting</h5>
+      <p class="text-light6 fs12 fw600 mb15">To discuss Ford Pitch outcome</p>
+      <h5 class="text-white mbn">2:30 AM - Computer Repair</h5>
+      <p class="text-light6 fs12 fw600 mb15">Coming to replace failing HD </p>
+      <h5 class="text-white mbn">4:15 AM - First Yoga Class</h5>
+      <p class="text-light6 fs12 fw600">Ask about your free classes</p>
+      <hr class="mb25 mt25 border-dark3"/>
+      <h5 class="text-muted fs13 pull-left mr20">Users</h5>
+      <div class="btn-group pull-left">
+        <button type="button" class="btn btn-gradient btn-xs bg-blue7-alt dropdown-toggle fs11 fw600" data-toggle="dropdown"><i class="fa fa-circle text-green2 fs8 pr5"></i> Online <span class="caret caret-sm ml5"></span> </button>
+        <ul class="dropdown-menu dropdown-sm" role="menu">
+          <li class="menu-arrow">
+            <div class="menu-arrow-up"></div>
+          </li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-green2 pr5"></i> Online</a></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-red2 pr5"></i> Busy</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-orange2 pr5"></i> Away</a></li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+      <div class="media mt30 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/4.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Simon Rivers</h5>
+          <p class="text-muted fs12"> What's up, buddy</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/5.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Eric Ulrich</h5>
+          <p class="text-muted fs12"> Client Problem pg.14</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/6.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Hershel Sandin</h5>
+          <p class="text-muted fs12"> Looking for an intern?</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/7.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Jacob Hill</h5>
+          <p class="text-muted fs12"> Lunch meeting tomorrow.</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/3.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Dante Harper</h5>
+          <p class="text-muted fs12"> I have a new twitter!</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-- End: Right Sidebar --> 
+</div>
+<!-- End: Main -->
+
+<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <div class="modal-title"><span class="glyphicon glyphicon-pencil text-purple2 mr10"></span><b>Add New Event</b></div>
+      </div>
+      <div class="modal-body">
+        <div id="create_event" class=" mt10">
+          <form id="create-event-form">
+            <div class="form-group">
+              <input type="text" class="form-control event-name" placeholder="Event Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control colorpicker mtn" placeholder="Select a Color" value="">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control event-desc" placeholder="Event Description"></textarea>
+            </div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="create-event-form btn bg-blue2">Create Event</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Google Map API --> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+
+<!-- jQuery --> 
+<script type="text/javascript" src="vendor/jquery/jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script> <!-- Bootstrap --> 
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script> 
+
+<!-- Page Plugins --> 
+<script type="text/javascript" src="vendor/plugins/calendar/fullcalendar.min.js"></script> 
+<script type="text/javascript" src="vendor/plugins/calendar/gcal.js"></script> 
+<script type="text/javascript" src="vendor/plugins/colorpicker/bootstrap-colorpicker.js"></script> 
+
+<!-- Theme Javascript --> 
+<script type="text/javascript" src="js/utility/spin.min.js"></script> 
+<script type="text/javascript" src="js/utility/underscore-min.js"></script> 
+<script type="text/javascript" src="js/main.js"></script> 
+<script type="text/javascript" src="js/ajax.js"></script> 
+<script type="text/javascript" src="js/custom.js"></script> 
+<script type="text/javascript">
+jQuery(document).ready(function () {
+	  
+	 "use strict";
+
+    // Init Theme Core 	  
+    Core.init();     
+     
+	
+	// Init Calendar Plugin
+	var date = new Date();
+	var d = date.getDate();
+	var m = date.getMonth();
+	var y = date.getFullYear();
+		
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,agendaWeek,agendaDay'
+		},
+		editable: true,
+		droppable: true, // this allows things to be dropped onto the calendar !!!
+		drop: function(date, allDay, jsEvent, ui ) { // this function is called when something is dropped
+		
+			// retrieve the dropped element's stored Event Object
+			var originalEventObject = $(this).data('eventObject');
+			
+			// we need to copy it, so that multiple events don't have a reference to the same object
+			var copiedEventObject = $.extend({}, originalEventObject);
+			
+			// assign it the date that was reported
+			copiedEventObject.start = date;
+			copiedEventObject.allDay = allDay;
+		
+			// render the event on the calendar
+			// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+			$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+			
+			// is the "remove after drop" checkbox checked?
+			// if so, remove the element from the "Draggable Events" list
+			$(this).remove();
+			
+		},
+		
+		events: [
+			{
+				title: 'All Day Event',
+				start: new Date(y, m, 9),
+				color: '#a287d4'
+			},
+			{
+				title: 'Long Event',
+				start: new Date(y, m, d-5),
+				end: new Date(y, m, d-3),
+				color: '#4b87ae'
+			},
+			{
+				id: 999,
+				title: 'Repeating Event',
+				start: new Date(y, m, d+3, 16, 0),
+				allDay: false,
+				color: '#a287d4'
+			},
+			{
+				id: 999,
+				title: 'Repeating Event',
+				start: new Date(y, m, d+10, 16, 0),
+				allDay: false,
+				color: '#95e5e7'
+			},
+			{
+				title: 'Meeting',
+				start: new Date(y, m, d, 10, 30),
+				allDay: false,
+				color: '#efac75'
+			},
+			{
+				title: 'Lunch',
+				start: new Date(y, m, d, 12, 0),
+				end: new Date(y, m, d, 14, 0),
+				allDay: false,
+				color: '#95e5e7'
+			},
+			{
+				title: 'Birthday Party',
+				start: new Date(y, m, d+1, 19, 0),
+				end: new Date(y, m, d+1, 22, 30),
+				allDay: false,
+				color: '#a287d4'
+			},
+			{
+				title: 'Mandatory!',
+				start: new Date(y, m, 22),
+				color: '#a0d65a'
+			}
+		]
+	});
+	
+	// Init external calendar events
+	function FCexternals() {
+		if ($('#external-events').length) {
+			
+		  $('#external-events .external-event').each(function(index) {
+						  
+			  // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+			  // it doesn't need to have a start or end
+			  var eventObject = {
+				  title: $.trim($(this).text()), // use the element's text as the event title
+				  color: ($(this).attr('color')),
+			  };
+
+			  // store the Event Object in the DOM element so we can get to it later
+			  $(this).data('eventObject', eventObject);
+	
+			  // make the event draggable using jQuery UI
+			  $(this).draggable({
+				  zIndex: 999,
+				  revert: true,      // will cause the event to go back to its
+				  revertDuration: 0  //  original position after the drag
+			  });
+			
+		  });
+		}
+		}
+
+	var count = 0;
+	
+	// Populate custom external event with form data then
+	// run externals() to repopulate event object
+	$(".create-event-form").on('click', function( event ) {
+		event.preventDefault();
+		count += 1;
+
+		if (!$('#external-events').length) {
+			$('#content').prepend('<div id="external-events"></div>');
+		}
+		
+		var color = $("#create-event-form .colorpicker").val(),
+			title1 = $("#create-event-form input").val();
+			
+		if (title1 === "" ) {var title1 = "Example Title";}
+
+		$("#external-events").append("<div class='external-event' color='" + color + "' style='background:" + color + "'>" + title1 + "</div>");
+		title1 = $("#create-event-form input").val("");
+		FCexternals();				
+	});
+
+	FCexternals();
+	 
+	// Init Colorpicker Plugin
+	$('.colorpicker').colorpicker();
+
+ });
+
+</script>
+</body>
+</html>

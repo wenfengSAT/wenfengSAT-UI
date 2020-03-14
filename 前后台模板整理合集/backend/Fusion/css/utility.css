@@ -1,0 +1,881 @@
+/* Author: AdminDesigns.com
+ * Last Updated: 01/12/14
+ * Copyright 2014 Admin Designs
+======================================================= 
+   Table of Contents
+======================================================= 
+    I. BOXED-LAYOUT STYLES
+   II. DEMO STYLES
+  III. RESPONSIVE STYLES
+   IV. PRINT STYLES
+=======================================================
+   I. BOXED-LAYOUT STYLES
+      A. Global
+	  B. NavBar
+	  C. Sidebar
+	  D. Container
+	  E. Column Adjustments
+-------------------------------------------------------	  
+ * This file contains changes needed alter the page
+ * layout of every page from fullwidth to boxed-layout
+ * It's activated by adding the  "boxed-layout" class
+ * to the pages body tag. The Main content is changed 
+ * to 1150px wide. If window is <1150px we return to
+ * a fluid 100% width layout.
+=======================================================
+ A. Global
+======================================================= */
+body.boxed-layout {
+  background: #f9f9f9; }
+
+body.boxed-layout #main {
+  width: 1150px !important;
+  margin: 0 auto;
+  overflow: hidden; }
+
+@media (max-width: 1150px) {
+  body.boxed-layout #main,
+  body.boxed-layout .navbar {
+    width: 100% !important; } }
+/* The background for Fusions main content 
+ * is usually added with the psuedo selector 
+ * ":after" on "#content_wrapper". For boxed layout we 
+ * move this to #main and hide "#content_wrapper:after" 
+ * This prevents a sidebar transition bug */
+body.boxed-layout #content_wrapper {
+  border-left: 1px solid #ccc; }
+
+body.boxed-layout #content_wrapper:after {
+  display: none; }
+
+body.boxed-layout #main:after {
+  content: "";
+  position: fixed;
+  width: 1152px;
+  top: 0;
+  bottom: 0;
+  display: block;
+  z-index: -2;
+  margin-left: -1px;
+  border-left: 1px solid #c9c9c9;
+  border-right: 1px solid #c9c9c9;
+  background: #e8e8e8; }
+
+/*===============================================
+  B. Navbar
+================================================= */
+body.boxed-layout .navbar {
+  width: 1150px !important;
+  margin: 0 auto !important;
+  box-shadow: none;
+  border-bottom: 1px solid #c9c9c9; }
+
+body.boxed-layout .navbar .navbar-right {
+  width: 355px; }
+
+body.boxed-layout .navbar #toggle_sidemenu_r {
+  display: none; }
+
+/*===============================================
+  C. Sidebar
+================================================= */
+body.boxed-layout #sidebar-search {
+  box-shadow: none; }
+
+body.boxed-layout #sidebar:before {
+  margin-left: 1px;
+  border-right: 1px solid #CCC; }
+
+/*===============================================
+  E. COLUMN ADJUSTMENTS - IMPORTANT
+================================================= 
+ * IMPORTANT - Many pages have had the width of 
+ * their columns completely altered. All pages 
+ * requiring the same column adjustments have
+ * been grouped together and then listed in a 
+ * directory(see below). Percentages listed 
+ * below refer to the columns new width.
+* ---------------------------------------------
+   PAGES REQUIRING 100% COLUMNS(in order):
+   * DASHBOARD.HTML
+   * CHARTS.HTML 
+   * TABS.HTML 
+   * FORMS.HTML 
+   * EDITORS.HTML 
+   * MAPS.HTML 
+   * ELEMENTS.HTML 
+   * VALIDATION.HTML 
+   * WIZARD.HTML 
+   * PRICING-TABLES.HTML 
+   * FILE-MANAGERS.HTML 
+   * UPLOAD-TOOLS.HTML 
+   * DYNAMIC-GALLERY.HTML 
+   * IMAGE-TOOLS.HTML 
+   * INVOICE-PAGE.HTML
+   * WIDGETS.HTML
+   * FAQ.HTML
+   * GALLERY.HTML
+   * TIMELINE.HTML
+--------------------------------------------------
+ * Notes: Most columns were targeted using the
+ * direct descendant CSS operator as to not effect
+ * other columns used further down the page. If 
+ * you have changed a columns default Fusion 
+ * HTML you will need to update this.
+-------------------------------------------------*/
+body.boxed-layout.dashboard-page .container > .row > .col-md-4,
+body.boxed-layout.dashboard-page .container > .row > .col-md-8,
+body.boxed-layout.charts-page .container > .row > .col-md-6,
+body.boxed-layout.tabs-page .container > .row > .col-md-6,
+body.boxed-layout.forms-page .container > .row > .col-md-6,
+body.boxed-layout.editors-page .container > .row > .col-md-6,
+body.boxed-layout.maps-page .container > .row > .col-md-6,
+body.boxed-layout.elements-page .container > .row > .col-md-6,
+body.boxed-layout.validation-page .container > .row > .col-md-6,
+body.boxed-layout.wizard-page .container > .row > .col-md-10.col-md-offset-1,
+body.boxed-layout.pricing-tables-page .container > .row > .col-md-10.col-md-offset-1,
+body.boxed-layout.file-manager-page .container > .row > .col-lg-10.col-lg-offset-1,
+body.boxed-layout.upload-tools-page .container > .row > .col-md-6,
+body.boxed-layout.dynamic-gallery-page .container > .row > .col-md-10.col-md-offset-1,
+body.boxed-layout.image-tools-page .container > .row > .col-md-6,
+body.boxed-layout.invoice-page .container > .row > .col-lg-11,
+body.boxed-layout.widgets-page .container > .row > .col-lg-8,
+body.boxed-layout.widgets-page .container > .row > .col-lg-4,
+body.boxed-layout.faq-page .container > .row > .col-lg-10,
+body.boxed-layout.gallery-page .container > .row > .col-md-10,
+body.boxed-layout.timeline-page #timeline {
+  width: 100%;
+  float: none;
+  margin-left: 0; }
+
+/* ---------------------------------------
+   PAGES REQUIRING 90% COLUMNS(in order):
+   * EDITABLE.HTML
+   * XEDIT.HTML
+   * PROFILE.HTML
+----------------------------------------*/
+body.boxed-layout.editable-page .container > .row .col-md-10.col-md-offset-1,
+body.boxed-layout.xedit-page .container > .row .col-md-8,
+body.boxed-layout.profile-page .container > .row > .col-lg-4,
+body.boxed-layout.profile-page .container > .row > .col-lg-8 {
+  width: 90%;
+  float: none;
+  margin: 0 auto; }
+
+/* ----------------------------------------
+   PAGES REQUIRING 50% COLUMNS(in order):
+   * PORTLETS.HTML 
+   * TYPOGRAPHY.HTML 
+------------------------------------------*/
+@media (min-width: 1200px) {
+  body.boxed-layout.portlets-page .container > .row > .col-lg-4.col-sm-6,
+  body.boxed-layout.typography-page .container > .row > .col-lg-3 {
+    width: 50%;
+    float: left; } }
+/* -----------------------------------------
+	PAGES REQUIRING A CUSTOM LAYOUT(in order):
+    * SKETCHPAD.HTML - 92%
+	* MESSAGES.HTML - 85%
+	* ICONS.HTML - 80% + 20% COLUMN
+-------------------------------------------*/
+body.boxed-layout.sketchpad-page .container > .row > .col-lg-7 {
+  width: 92%;
+  margin-left: 7%; }
+
+body.boxed-layout.messages-page .container > .row > .col-lg-4,
+body.boxed-layout.messages-page .container > .row > .col-lg-8 {
+  width: 85%;
+  float: none;
+  margin: 0 auto; }
+
+body.boxed-layout.icons-page .container > .row > .col-md-9 {
+  width: 80%;
+  margin-left: 0;
+  float: left; }
+
+body.boxed-layout.icons-page .container > .row > .col-md-3 {
+  width: 20%;
+  float: left; }
+
+/* ----------------------------------------
+ * All column changes have been listed 
+ * above. The styles below are for pages 
+ * which require adjustments to individual 
+ * elements(buttons, backgrounds, etc)
+/* ----------------------------------------
+   PAGES LISTED BELOW INCLUDE(in order):
+   * DASHBOARD/INDEX.HTML
+   * TIMELINE.HTML
+   * GALLERY.HTML
+   * MESSAGES.HTML
+   * PROFILE.HTML
+   * FAQ.HTML
+   * DATATABLES.HTML
+   * ICONS.HTML
+   * ANIMATIONS.HTML
+   * SKETCHPAD.HTML
+   * WIDGETS.HTML
+   * INVOICE-PAGE.HTML
+   * MINIMAL(login, screenlock, etc)
+-----------------------------------------*/
+/* DASHBOARD.HTML / INDEX.HTML */
+body.boxed-layout.dashboard-page .message-widget {
+  margin-top: 0; }
+
+body.boxed-layout.dashboard-page .console-btn-5,
+body.boxed-layout.dashboard-page #timeline-widget,
+body.boxed-layout.dashboard-page #console-search-btn {
+  display: none !important; }
+
+@media (min-width: 1368px) {
+  body.boxed-layout.dashboard-page #console-btns .row > div {
+    width: 25%;
+    float: left; } }
+/* TIMELINE.HTML */
+body.boxed-layout.timeline-page #timeline .panel-menu .glyphicons {
+  display: none; }
+
+/* GALLERY.HTML */
+body.boxed-layout.gallery-page .container > .row .placeholder {
+  height: 50px; }
+
+/*  MESSAGES.HTML  */
+body.boxed-layout.messages-page .container > .row > .col-lg-4 .panel {
+  margin-bottom: 20px; }
+
+body.boxed-layout.messages-page .container > .row table tr:nth-of-type(3),
+body.boxed-layout.messages-page .container > .row table tr:nth-of-type(4),
+body.boxed-layout.messages-page .container > .row table tr:nth-of-type(5) {
+  display: none; }
+
+/* PROFILE.HTML */
+body.boxed-layout.profile-page .container > .row > .col-lg-4 .panel {
+  margin-bottom: 20px; }
+
+body.boxed-layout.profile-page .container > .row .console-btn {
+  margin-bottom: 0; }
+
+body.boxed-layout.profile-page .container > .row .profile-panel .panel-footer {
+  padding: 10px 16px 4px; }
+
+/* FAQ.HTML */
+body.boxed-layout.faq-page .faq-panel > .panel-sidemenu {
+  display: none; }
+
+body.boxed-layout.faq-page .faq-panel > .panel-body {
+  width: 93%;
+  margin: 30px 3.5% 40px; }
+
+body.boxed-layout.faq-page .faq-panel > .panel-body #search-widget {
+  margin-bottom: 30px; }
+
+/* DATATABLES.HTML */
+body.boxed-layout.datatables-page table th:nth-of-type(2),
+body.boxed-layout.datatables-page table td:nth-of-type(2),
+body.boxed-layout.datatables-page table td:nth-of-type(4),
+body.boxed-layout.datatables-page table th:nth-of-type(4) {
+  display: none !important; }
+
+/* ICONS.HTML */
+body.boxed-layout.icons-page #icon-nav ul {
+  width: 110%; }
+
+body.boxed-layout.icons-page #icon-nav ul .console-icon {
+  display: none; }
+
+@media (max-width: 1150px) {
+  body.boxed-layout.icons-page #icon-nav {
+    right: 0; } }
+/* ANIMATIONS.HTML */
+body.boxed-layout.animations-page .container > .row #animate-me-panel {
+  position: fixed;
+  max-width: 350px; }
+
+/* SKETCHPAD.HTML */
+body.boxed-layout.sketchpad-page .container > .row > .col-lg-4 {
+  display: none !important;
+  width: 0; }
+
+/* WIDGETS.HTML */
+body.boxed-layout.widgets-page .container > .row #timeline-widget {
+  display: block !important; }
+
+body.boxed-layout.widgets-page .container > .row .timeline-widget {
+  width: 370px;
+  margin: 0 auto; }
+
+/* INVOICE-PAGE.HTML */
+body.boxed-layout.invoice-page .container > .row > .col-lg-11 .panel-sidemenu {
+  display: none; }
+
+body.boxed-layout.invoice-page .container > .row > .col-lg-11 #invoice-item {
+  width: 95%;
+  margin: 40px 2.5% 60px; }
+
+/*  MINIMAL PAGE
+  - coming-soon, login, screen-lock
+----------------------------------------*/
+body.boxed-layout.coming-soon-page {
+  background: #f7f7f7; }
+
+body.boxed-layout.login-page,
+body.boxed-layout.screenlock-page {
+  background: url(../img/patterns/5.png) repeat top left #f6f6f6; }
+
+body.boxed-layout.coming-soon-page #main:after,
+body.boxed-layout.login-page #main:after,
+body.boxed-layout.screenlock-page #main:after {
+  display: none; }
+
+/* ==============================================
+   III. DEMO PAGES
+      A. Customizer.html
+	  B. Upload-tools.html
+	  C. Timeline.html
+	  D. Sliders.html
+	  E. Portlets.html
+	  F. Maps.html
+	  G. Gallery.html
+	  H. Dynamic-gallery.html
+	  I. Forms.html
+	  J. Elements.html
+	  K. Charts.html
+	  L. Animations.html
+	  M. Buttons.html
+	  N. 404/500.html
+	  O. Icons.html
+	  P. Global Changes
+	  P. Popout-Toolbox Header Skins
+	  
+ * This file is reserved for changes required only
+ * for the themes demo. These styles may be vital
+ * to Fusions appearance but often times will not
+ * be useful in a true production environment.
+ 
+ * For example each slider in sliders.html has a
+ * margin of 65px, a large number only needed 
+ * because six sliders have been stacked on top 
+ * of each other. This would most likely not 
+ * happen in a real enviroment.
+================================================= 
+ A. Misc/Global
+================================================= */
+.ajax-loading {
+  overflow-y: scroll; }
+
+/*===============================================
+  B. Customizer.html
+================================================= */
+#skin-menu {
+  display: block; }
+
+#skin-toolbox {
+  color: #FFF;
+  position: fixed;
+  top: 120px;
+  right: -175px;
+  width: 175px;
+  height: 485px;
+  z-index: 1055;
+  overflow: visible !important;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: right 0.1s ease-in-out;
+  -moz-transition: right 0.1s ease-in-out;
+  transition: right 0.1s ease-in-out; }
+
+#skin-toolbox.toolbox-open {
+  right: 0; }
+
+.skin-toolbox-toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: -36px;
+  width: 36px;
+  height: 40px;
+  line-height: 42px;
+  background: rgba(0, 0, 0, 0.7); }
+
+.skin-toolbox-toggle .fa {
+  font-size: 20px;
+  padding-left: 9px; }
+
+.skin-option {
+  float: left;
+  width: 22px;
+  height: 22px;
+  margin: 5px;
+  padding: 3px;
+  background-color: #dadada;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1) inset, 0 1px 0 white;
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1) inset, 0 1px 0 white; }
+
+.skin-color {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  cursor: pointer; }
+
+.skin-toolbox-panel {
+  padding: 15px 15px 0; }
+
+.skin-toolbox-panel .form-group {
+  margin-bottom: 8px; }
+
+.skin-toolbox-panel label {
+  font-size: 12px; }
+
+.skin-option.active {
+  border: 1px solid #f0ad4e; }
+
+#customizer-link {
+  font-size: 14px; }
+
+/*===============================================
+  B. Upload-tools.html
+================================================= */
+body.upload-tools-page .dropzone {
+  min-height: 405px; }
+
+body.upload-tools-page .panel-body {
+  min-height: 300px; }
+
+/*===============================================
+  C. Timeline.html
+================================================= */
+body.timeline-page .panel-clone {
+  display: none; }
+
+/*===============================================
+  D. Sliders.html
+================================================= */
+.slider-example .form-horizontal .col-md-9 {
+  margin-top: 65px; }
+
+.slider-example .form-horizontal .col-md-2 {
+  margin-top: 62px;
+  margin-right: 20px; }
+
+.slider-example .form-horizontal .form-group.first .col-md-9 {
+  margin-top: 45px; }
+
+.slider-example .form-horizontal .form-group.first .col-md-2 {
+  margin-top: 42px; }
+
+.slider-example .form-horizontal .form-group:last-child {
+  margin-bottom: 40px; }
+
+/*===============================================
+  E. Portlets.html
+================================================= */
+body.portlets-page .panel .tab-content {
+  padding: 0;
+  border: 0;
+  min-height: 95px; }
+
+body.portlets-page #accordion {
+  margin-bottom: 35px; }
+
+/*===============================================
+  F. Maps.html
+================================================= */
+body.maps-page .map {
+  width: 100%;
+  height: 400px; }
+
+body.maps-page .panel-menu button {
+  margin-right: 8px;
+  min-width: 65px; }
+
+/*===============================================
+  G. Gallery.html
+================================================= */
+body.gallery-page {
+  overflow: scroll; }
+
+/*===============================================
+  I. Forms.html
+================================================= */
+body.forms-page #focusedInput {
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  border-color: #a674e4; }
+
+/*===============================================
+  J. Elements.html
+================================================= */
+body.elements-page .panel button {
+  margin-right: 6px;
+  margin-bottom: 8px; }
+
+body.elements-page .panel .btn-group button {
+  margin-right: 0;
+  margin-bottom: 0; }
+
+body.elements-page .btn-block {
+  border-radius: 0; }
+
+/*===============================================
+  K. Charts.html
+================================================= */
+body.charts-page .panel-menu label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  margin-right: 5px; }
+
+body.charts-page .legend table tr td {
+  padding: 5px 10px 5px 5px; }
+
+/*===============================================
+  L. Animations.html
+================================================= */
+.animate-me-btns a {
+  margin: 5px 5px 7px; }
+
+.animate-me-btns .tab-content {
+  border: 0;
+  padding-bottom: 30px; }
+
+/*===============================================
+  M. Buttons.html
+================================================= */
+body.buttons-page .panel button {
+  margin-right: 6px;
+  margin-bottom: 8px; }
+
+body.buttons-page .panel .btn-group {
+  margin-right: 5px; }
+
+body.buttons-page .panel .btn-group button {
+  margin-right: 0;
+  margin-bottom: 8px; }
+
+body.buttons-page .panel .btn-group-vertical button {
+  margin-right: 0;
+  margin-bottom: 0; }
+
+body.buttons-page .social-buttons-panel button {
+  margin: 10px; }
+
+body.buttons-page .zocial, a.zocial {
+  min-height: 32px;
+  margin: 8px; }
+
+body.buttons-page .zocial.icon {
+  min-height: 28px; }
+
+body.buttons-page .zocial.icon.facebook:before {
+  padding-right: 5px; }
+
+/*===============================================
+  N. 404/500.html
+================================================= */
+.icon-option-menu li a {
+  cursor: pointer; }
+
+.icon-option-menu li a i {
+  padding-right: 6px;
+  color: #777; }
+
+/*===============================================
+  N. Editors
+================================================= */
+/* CKEDITOR BUTTON DISABLES - IMPORTANT */
+#cke_8 {
+  display: none; }
+
+.note-editor .note-toolbar > .btn-group.note-para {
+  border-right: none; }
+
+.editor-color-swapper {
+  z-index: 1024;
+  position: absolute;
+  top: 40px;
+  right: 22px; }
+
+/*===============================================
+  O. Icons.html
+================================================= */
+#icon-nav.affix {
+  top: 80px; }
+
+#icon-nav ul {
+  width: 220px; }
+
+#icon-nav li:hover span {
+  color: #444; }
+
+#icon-nav li.active span {
+  color: #428bca; }
+
+.panel-body .page-header {
+  color: #428bca;
+  font-size: 18px; }
+
+#glyphicons-icon-list,
+#glyphicon-icon-list,
+#imoon-icon-list,
+.fa-icon-list {
+  font-size: 12px;
+  padding-left: 0;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+  list-style: none;
+  overflow: hidden; }
+
+#glyphicons-icon-list li,
+#glyphicon-icon-list li,
+#imoon-icon-list li,
+.fa-icon-list li {
+  float: left;
+  width: 20%;
+  height: 100px;
+  padding: 5px;
+  line-height: 1.4;
+  text-align: center; }
+
+#glyphicons-icon-list .glyphicons,
+#glyphicon-icon-list .glyphicon,
+#imoon-icon-list .imoon,
+.fa-icon-list .fa {
+  display: block;
+  margin: 5px auto 15px;
+  font-size: 24px; }
+
+#glyphicons-icon-list li:hover,
+#glyphicon-icon-list li:hover,
+#imoon-icon-list li:hover,
+.fa-icon-list li:hover {
+  color: #428bca; }
+
+/*===============================================
+  P. Global Changes
+================================================= */
+/* Disables hover effect for multi-level menu */
+ul.sidebar-nav ul#sideEight.sub-nav > li > a:hover {
+  background-color: transparent; }
+
+.panel-tabs > li > a:hover {
+  background-color: #f2f2f2; }
+
+#return-arrow {
+  color: #555;
+  padding-left: 15px;
+  padding-top: 15px;
+  position: fixed;
+  opacity: 0.7;
+  cursor: pointer;
+  display: block;
+  z-index: 1050; }
+
+#return-arrow i.fa {
+  float: left;
+  padding-top: 2px; }
+
+#return-arrow span {
+  float: left;
+  padding-left: 15px;
+  padding-top: 0px;
+  font-size: 16px; }
+
+#return-arrow:hover {
+  opacity: 1; }
+
+/*===============================================
+  Q. Popout Toolbox - Header Colors
+================================================= */
+.toggle-color-swap {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 3px 3px;
+  border: 1px solid #222; }
+
+.toggle-color-swap:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: url(../img/patterns/swatch-bg.png) no-repeat top left; }
+
+/* Navbar */
+.navbar.navbar-white-text {
+  background-image: none;
+  border-color: transparent; }
+
+/* Toggle Button */
+.navbar.navbar-white-text #toggle_sidemenu_l {
+  color: #fff; }
+
+/* Search Bar */
+.navbar.navbar-white-text .navbar-search input {
+  border-color: transparent; }
+
+/* Menu Buttons */
+.navbar.navbar-white-text .navbar-menus > div > button > span {
+  color: #fff; }
+
+/* Menu Buttons Badge */
+.navbar.navbar-white-text .navbar-menus > .btn-group > button > b {
+  color: #fff;
+  background: #f05050;
+  border-color: transparent; }
+
+/* Settings Icon/Menu */
+.navbar.navbar-white-text #settings_menu .glyphicons {
+  color: #fff; }
+
+/* Language Menu Text */
+.navbar.navbar-white-text #language_menu a > span {
+  color: #fff; }
+
+/* ==============================================
+   III. RESPONSIVE STYLES
+      A. Header
+	  B. Content
+	  C. Sidebar
+	  D. Dashboard.html
+	  	  
+* These styles control various aspects of the
+* site which benefit from being responsive 
+================================================= 
+  B. Content
+================================================= */
+#content {
+  padding: 20px 13px 50px 17px; }
+
+/* CONTENT STATE ON LARGE RESOLUTIONS */
+@media (min-width: 1200px) {
+  #topbar {
+    padding: 0 21px 0 23px; }
+
+  #content {
+    padding: 20px 20px 50px 23px; } }
+/* HEADER RESPONSIVE STYLES */
+@media (max-width: 815px) {
+  .navbar-search {
+    display: none; }
+
+  .navbar-right {
+    max-width: 175px; }
+
+  .navbar-left {
+    display: none; } }
+/* HEADER RESPONSIVE STYLES */
+@media (max-width: 1050px) {
+  .sidebar-rtl .navbar-right {
+    max-width: 175px; }
+
+  .sidebar-rtl .navbar-search {
+    display: none; } }
+/* HEADER RESPONSIVE STYLES */
+@media (max-width: 670px) {
+  #topbar {
+    display: none; }
+
+  .navbar-branding {
+    max-width: 75px; }
+
+  .navbar-brand {
+    display: none; }
+
+  .sidebar-rtl .navbar .navbar-right {
+    max-width: 55px; }
+
+  .sidebar-rtl .navbar #alert_menu,
+  .sidebar-rtl .navbar #comment_menu {
+    display: none; } }
+/*===================================================
+  IV. PRINT STYLES - Designed soley for Invoice Page
+      Problems will arise if you attempt to use
+	  these styles globally
+=====================================================*/
+@media print {
+  /* Reset + Hide Primary Page Components */
+  header.navbar,
+  #sidebar_left,
+  #sidebar_right,
+  #topbar,
+  #skin-toolbox,
+  .panel-heading,
+  .invoice-buttons,
+  .panel-sidemenu {
+    display: none !important;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; }
+
+  /* Modify Primary Container */
+  #content_wrapper {
+    background: 0;
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    transition: none; }
+
+  #content {
+    padding: 0;
+    background: none; }
+
+  #content_wrapper:after {
+    margin: 0;
+    display: none; }
+
+  /* Shorten and center page */
+  #main {
+    width: 1000px !important;
+    margin: 0 auto; }
+
+  /* Remove all Panel Borders */
+  .panel {
+    border: 0;
+    margin: 0; }
+
+  /* Hide Image Logo and reveal Text logo */
+  .invoice-logo {
+    display: none !important; }
+
+  .invoice-logo-text {
+    display: block !important;
+    visibility: visible !important; }
+
+  /* Modify Invoice Container */
+  .table-layout > .col-md-10 {
+    width: 100% !important;
+    padding: 0 !important; }
+
+  /* Modify Invoice Panels */
+  #invoice-info {
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
+    background-color: #ddd; }
+
+  /* Modify Invoice Panels */
+  #invoice-info > .col-md-4 {
+    float: none;
+    display: inline-block;
+    width: 33%;
+    padding: 0; }
+
+  #invoice-info > .col-md-4:nth-child(2) {
+    text-align: center; }
+
+  #invoice-info > .col-md-4:last-child {
+    text-align: right;
+    position: relative;
+    top: 8px; }
+
+  #invoice-info > .col-md-4 .panel-body {
+    padding: 10px; } }
+/* @import "utility/customizer"; */

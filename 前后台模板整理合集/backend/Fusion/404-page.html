@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<title>Fusion - A Responsive HTML5 Admin UI Template Theme</title>
+<meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description" content="Fusion - A Responsive HTML5 Admin UI Template Theme">
+<meta name="author" content="AdminDesigns">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font CSS (Via CDN) -->
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+<!-- Page CSS -->
+<link rel="stylesheet" type="text/css" href="css/vendor/fonts/icomoon/icomoon.min.css">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" type="text/css" href="css/vendor.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/utility.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="minimal error-page">
+<script> var boxtest = localStorage.getItem('boxed'); if (boxtest === 'true') {document.body.className+=' boxed-layout';} </script> 
+
+<!-- Start: Header -->
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-branding"> <span id="toggle_sidemenu_l" class="glyphicons glyphicons-show_lines"></span> <a class="navbar-brand" href="dashboard.html"><img src="img/logos/header-logo.png"></a> </div>
+</header>
+
+<!-- Start: Main -->
+<div id="main">
+  <div id="content" class="pn"> <a href="dashboard.html" id="return-arrow"> <i class="fa fa-arrow-left fa-3x text-purple2"></i> <span> Return <br>
+    to Theme </span> </a>
+    <h1 class="error-title"> 404! </h1>
+    <h2 class="error-subtitle">Page Not Found.</h2>
+    <div class="mid-section">
+      <div class="mid-content">
+        <input type="text" class="form-control" placeholder="Ask me a question!" value="Ask me a question!">
+        <div class="pull-left"> <img src="img/logos/logo-publish-white.png" class="img-responsive mt10" alt="logo"> </div>
+        <div class="pull-right mt20"> <i class="fa fa-facebook-square fs40 text-white mr20"></i> <i class="fa fa-twitter-square fs40 text-white mr20"></i> <i class="fa fa-google-plus-square fs40 text-white mr20"></i> <i class="fa fa-envelope-square fs40 text-white"></i> </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="old stuff hidden"> <img src="img/logos/logo-publish.png" class="img-responsive" alt="logo">
+      <h3 class="mb50"> A webful of video awesomeness </h3>
+      <h1 class="mb50 pt30"> <b class="text-purple2">404</b> - Oh no something went <b class="text-purple2">Wrong</b> here </h1>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- End: Main --> 
+
+<!-- Google Map API --> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+
+<!-- jQuery --> 
+<script type="text/javascript" src="vendor/jquery/jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script> <!-- Bootstrap --> 
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script> 
+
+<!-- Theme Javascript --> 
+<script type="text/javascript" src="js/utility/spin.min.js"></script> 
+<script type="text/javascript" src="js/utility/underscore-min.js"></script> 
+<script type="text/javascript" src="js/main.js"></script> 
+<script type="text/javascript" src="js/ajax.js"></script> 
+<script type="text/javascript" src="js/custom.js"></script> 
+<script type="text/javascript">
+jQuery(document).ready(function () {
+	  
+	 "use strict";
+
+     // Init Theme Core 	  
+     Core.init();
+
+     // Enable Ajax Loading 	  
+     Ajax.init();     
+     
+	
+	$('.icon-option-menu li a').click(function () {
+		iconName = $(this).children('i').attr('class');	
+		
+	$('.error-icon span').removeClass('animated fadeIn text-purple2').animate({
+		opacity: 0
+		}, 350,
+		 function() {
+			$(this).removeClass().addClass('text-purple2 ' + iconName).animate({opacity: 1}, 350);
+		});	
+  });
+
+
+ });
+</script>
+</body>
+</html>

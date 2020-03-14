@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<title>Fusion - A Responsive HTML5 Admin UI Template Theme</title>
+<meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description" content="Fusion - A Responsive HTML5 Admin UI Template Theme">
+<meta name="author" content="AdminDesigns">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font CSS (Via CDN) -->
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+<!-- Required Plugin CSS 
+<link rel="stylesheet" type="text/css" href="vendor/plugins/ladda/ladda.min.css">
+-->
+
+<!-- Theme CSS -->
+<link rel="stylesheet" type="text/css" href="css/vendor.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/utility.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="buttons-page">
+<script> var boxtest = localStorage.getItem('boxed'); if (boxtest === 'true') {document.body.className+=' boxed-layout';} </script> 
+
+<!-- Start: Theme Preview Pane -->
+<div id="skin-toolbox">
+  <div class="skin-toolbox-toggle"> <i class="fa fa-wrench"></i> </div>
+  <div class="skin-toolbox-panel">
+    <form id="skin-toolbox-form">
+      <h4 class="pl5">Theme Options</h4>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="ajax-option" checked/>
+          <label for="ajax-option">Ajax Loading</label>
+        </div>
+      </div>
+      <h4 class="pl5 mt20">Stylesss Options</h4>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="header-option" checked/>
+          <label for="header-option">Fixed Header</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="sidebar-option"/>
+          <label for="sidebar-option">Fixed Sidebar</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="breadcrumb-hidden"/>
+          <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="usermenu-hidden"/>
+          <label for="usermenu-hidden">Hide Usermenu</label>
+        </div>
+      </div>
+      <h4 class="pl5 mt20">Layout Options</h4>
+      <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="optionsRadios" id="fullwidth-option" checked>
+          Fullwidth </label>
+      </div>
+      <div class="form-group mb20">
+        <label class="radio-inline">
+          <input type="radio" name="optionsRadios" id="boxed-option">
+          Boxed Layouts </label>
+      </div>
+      <h4 class="pl5 mt20">Header Colors</h4>
+      <div class="form-group mb10">
+      	<div class="toggle-color-wrap">
+            <div class="toggle-color-swap bg-purple3" data-swap="bg-purple3"></div>
+            <div class="toggle-color-swap bg-purple2" data-swap="bg-purple2"></div>
+            <div class="toggle-color-swap bg-blue4-alt" data-swap="bg-blue4-alt"></div>
+            <div class="toggle-color-swap bg-blue5-alt" data-swap="bg-blue5-alt"></div>
+            <div class="toggle-color-swap bg-blue6-alt" data-swap="bg-blue6-alt"></div>
+            <div class="toggle-color-swap bg-red2" data-swap="bg-red2"></div>
+            <div class="toggle-color-swap bg-orange2" data-swap="bg-orange2"></div>
+            <div class="toggle-color-swap bg-brown-alt" data-swap="bg-brown-alt"></div>
+            <div class="toggle-color-swap bg-dark3" data-swap="bg-dark3"></div>
+            <div class="toggle-color-swap bg-white" data-swap="bg-white"></div>
+            <div class="clearfix"></div>
+        </div>
+      </div>      
+      <div class="form-group"> <a href="customizer.html" id="customizer-link" class="btn btn-gradient btn-block">CUSTOMIZER</a> </div>
+    </form>
+  </div>
+</div>
+<!-- End: Theme Preview Pane --> 
+
+<!-- Start: Header -->
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-branding"> <span id="toggle_sidemenu_l" class="glyphicons glyphicons-show_lines"></span> <a class="navbar-brand" href="dashboard.html"><img src="img/logos/header-logo.png"></a> </div>
+  <div class="navbar-left">
+    <div class="navbar-divider"></div>
+    <div id="settings_menu"> <span class="glyphicons glyphicons-settings dropdown-toggle cursor" data-toggle="dropdown"></span>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-bell text-purple mr15"></span>Users</a></li>
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-notes text-blue mr15"></span>Servers</a></li>
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-facebook text-orange mr15"></span>Crons</a></li>
+      </ul>
+    </div>
+    <div id="language_menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="flag-xs flag-us"></span> <span class="small va-m">US</span> <i class="fa fa-angle-down"></i> </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-in"></span> Hindu</a></li>
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-tr"></span> Turkish</a></li>
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-es"></span> Spanish</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-right">
+    <div class="navbar-search">
+      <input type="text" id="HeaderSearch" placeholder="Search..." value="Search...">
+    </div>
+    <div class="navbar-menus">
+      <div class="btn-group" id="alert_menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicons glyphicons-bell"></span> <b>3</b> </button>
+        <ul class="dropdown-menu media-list" role="menu">
+          <li class="dropdown-header">Recent Messages<span class="pull-right glyphicons glyphicons-bell"></span></li>
+          <li class="p15 pb10">
+            <ul class="list-unstyled">
+              <li><span class="glyphicons glyphicons-bell text-orange2 fs16 mr15"></span><b>CEO</b> lunch meeting Tuesday</li>
+              <li class="pt10"><span class="glyphicons glyphicons-facebook text-blue2 fs16 mr15"></span>Facebook likes are at <b>4,100</b></li>
+              <li class="pt10"><span class="glyphicons glyphicons-paperclip text-teal2 fs16 mr15"></span>Mark <b>uploaded</b> 3 new Docs</li>
+              <li class="pt10"><span class="glyphicons glyphicons-gift text-purple2 fs16 mr15"></span>It's <b>Marks</b> 34th Birthday</li>
+              <li class="pt10"><span class="glyphicons glyphicons-cup text-red2 fs16 mr15"></span>Best new employee awarded to <b>Jessica</b></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-group" id="comment_menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicons glyphicons-display"></span> <b>7</b> </button>
+        <div class="dropdown-menu" role="menu">
+          <ul class="nav nav-tabs tabs-border-bottom" role="tablist">
+            <li class="active"><a href="#header_tab1" role="tab" data-toggle="tab">Messages</a></li>
+            <li><a href="#header_tab2" role="tab" data-toggle="tab">Tickets</a></li>
+            <li><a href="#header_tab3" role="tab" data-toggle="tab">Todo List</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content pn border-none dropdown-persist">
+            <div class="tab-pane active" id="header_tab1">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <input class="dropdownSearch" type="text" placeholder="Search...">
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="cBox cBox-inline ml20">
+                      <input type="checkbox" id="headercBox1" name="check" value="None"/>
+                      <label for="headercBox1">Delete</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p15">
+                <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Simon Rivers <small class="text-light5"> - 3 hours ago</small></h5>
+                    <p class="text-muted"> Hey Louis, I was wondering if</p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-online" src="img/avatars/6.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Tracy Rope <small class="text-light5"> - 8 hours ago</small></h5>
+                    <p class="text-muted"> Bam baby get at, I was</p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-online" src="img/avatars/8.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Courtney Dash <small class="text-light5"> - 3 days ago</small></h5>
+                    <p class="text-muted"> I was wonde awesome brief </p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-light5" src="img/avatars/2.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Simon Rivers <small class="text-light5"> - 3 hours ago</small></h5>
+                    <p class="text-muted mbn"> Hey Louis, I was wondering </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="header_tab2">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="cBox cBox-inline cBox-orange ml15 p1">
+                  <input type="checkbox" id="headercBox2" name="check" value="None"/>
+                  <label for="headercBox2">Closed</label>
+                </div>
+                <div class="cBox cBox-inline cBox-purple">
+                  <input type="checkbox" id="headercBox3" name="check" value="None"/>
+                  <label for="headercBox3">Low</label>
+                </div>
+                <div class="cBox cBox-inline cBox-blue">
+                  <input type="checkbox" id="headercBox4" name="check" value="None"/>
+                  <label for="headercBox4">Med</label>
+                </div>
+                <div class="cBox cBox-inline cBox-red2 cBox-gradient">
+                  <input type="checkbox" id="headercBox5" name="check" value="None" checked/>
+                  <label for="headercBox5">Urgent</label>
+                </div>
+              </div>
+              <div class="sortable mt10 mb10">
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #1]</b> - Validation Errors <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #2]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #3]</b> - User hacked <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #4]</b> - Mailbox Debug <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #5]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #6]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #7]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="header_tab3">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input class="dropdownSearch" type="text" placeholder="Create New Item...">
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox7" name="check" value="None"/>
+                    <label for="headercBox7"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#2]</b> - IE8 Profile Drag Errors <span class="label label-sm bg-grey2 ml10">Javascript</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox6" name="check" value="None"/>
+                    <label for="headercBox6"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#1]</b> - Validation Errors on USCM testing facitiliy <small class="text-red2">- Urgent</small></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox9" name="check" value="None"/>
+                    <label for="headercBox9"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#4]</b> - CSS Problems with Tables <span class="label label-sm bg-orange2 ml10">CSS</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox10" name="check" value="None"/>
+                    <label for="headercBox10"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#5]</b> - PHP Form validation errors occuring on email page<span class="label label-sm bg-purple2 ml10">PHP</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox8" name="check" value="None"/>
+                    <label for="headercBox8"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 pb15 va-m"><b class="text-muted">[#3]</b> - Mailbox Validation Errors on Firefox</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group" id="toggle_sidemenu_r">
+        <button type="button"> <span class="glyphicons glyphicons-parents"></span> </button>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End: Header --> 
+<!-- Start: Main -->
+<div id="main">
+<!-- Start: Sidebar -->
+<aside id="sidebar_left">
+  <div class="user-info">
+    <div class="media"> <a class="pull-left" href="#">
+      <div class="media-object border border-purple br64 bw2 p2"> <img class="br64" src="img/avatars/5.jpg" alt="..."> </div>
+      </a>
+      <div class="mobile-link"> <span class="glyphicons glyphicons-show_big_thumbnails"></span> </div>
+      <div class="media-body">
+        <h5 class="media-heading mt5 mbn fw700 cursor">John.Smith<span class="caret ml5"></span></h5>
+        <div class="media-links fs11"><a href="#">Menu</a><i class="fa fa-circle text-muted fs3 p8 va-m"></i><a href="screen-lock.html">Sign Out</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="user-divider"></div>
+  <div class="user-menu">
+    <div class="row text-center mb15">
+      <div class="col-xs-4"> <a href="dashboard.html"> <span class="glyphicons glyphicons-home fs22 text-blue2"></span>
+        <h5 class="fs11">Home</h5>
+        </a> </div>
+      <div class="col-xs-4"> <a href="messages.html"> <span class="glyphicons glyphicons-inbox fs22 text-orange2"></span>
+        <h5 class="fs11">Inbox</h5>
+        </a> </div>
+      <div class="col-xs-4"> <a href="tables.html"> <span class="glyphicons glyphicons-bell fs22 text-purple2"></span>
+        <h5 class="fs11">Data</h5>
+        </a> </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-xs-4 text-center"> <a href="timeline.html"> <span class="glyphicons glyphicons-imac fs22 text-grey3"></span>
+        <h5 class="fs11">Views</h5>
+        </a> </div>
+      <div class="col-xs-4"> <a href="profile.html"> <span class="glyphicons glyphicons-settings fs22 text-green2"></span>
+        <h5 class="fs11">Settings</h5>
+        </a> </div>
+      <div class="col-xs-4"> <a href="gallery.html"> <span class="glyphicons glyphicons-restart fs22 text-light6"></span>
+        <h5 class="fs11">Images</h5>
+        </a> </div>
+    </div>
+  </div>
+  <div class="sidebar-menu">
+    <ul class="nav sidebar-nav">
+      <li> <a href="customizer.html" class="ajax-disable"><span class="glyphicons glyphicons-eyedropper"></span> <span class="sidebar-title">Customizer</span> <span class="sidebar-title-tray"> <span class="label label-xs bg-purple2">New</span> </span> </a> </li>
+      <li> <a href="messages.html" class="ajax-disable"><span class="glyphicons glyphicons-inbox"></span><span class="sidebar-title">Messages</span></a> </li>
+      <li> <a href="dashboard.html"><span class="glyphicons glyphicons-home"></span><span class="sidebar-title">Dashboard</span></a> </li>
+      <li> <a class="accordion-toggle" href="#resources"><span class="glyphicons glyphicons-settings"></span><span class="sidebar-title">Resources</span><span class="caret"></span></a>
+        <ul id="resources" class="nav sub-nav">
+          <li><a href="dashboard.html"><span class="glyphicons glyphicons-magic"></span>Dashboard </a></li>
+          <li><a class="ajax-disable" href="../documentation/index.html"><span class="glyphicons glyphicons-book"></span> Documentation </a></li>
+          <li><a class="ajax-disable" href="login.html"><span class="glyphicons glyphicons-power"></span> Login Page</a></li>
+          <li><a class="ajax-disable" href="screen-lock.html"><span class="glyphicons glyphicons-lock"></span> Screen Lock</a></li>
+          <li><a class="ajax-disable" href="coming-soon.html"><span class="glyphicons glyphicons-road"></span> Coming Soon</a></li>
+          <li><a class="ajax-disable" href="404-page.html"><span class="glyphicons glyphicons-circle_remove"></span> 404 Page</a></li>
+          <li><a class="ajax-disable" href="500-page.html"><span class="glyphicons glyphicons-circle_exclamation_mark"></span> 500 Page</a></li>
+        </ul>
+      </li>
+      <li class="active"> <a class="accordion-toggle menu-open" href="#sideOne"><span class="glyphicons glyphicons-adjust_alt"></span><span class="sidebar-title">UI Elements</span><span class="caret"></span></a>
+        <ul id="sideOne" class="nav sub-nav">
+          <li><a href="portlets.html"><span class="glyphicons glyphicons-sort"></span> Portlets</a></li>
+          <li><a href="elements.html"><span class="glyphicons glyphicons-paperclip"></span> Elements</a></li>
+          <li><a class="ajax-disable" href="charts.html"><span class="glyphicons glyphicons-stats"></span> Charts</a></li>
+          <li><a href="tabs.html"><span class="glyphicons glyphicons-adjust"></span> Tabs</a></li>
+          <li class="active"><a href="buttons.html"><span class="glyphicons glyphicons-macbook"></span> Buttons</a></li>
+          <li><a href="typography.html"><span class="glyphicons glyphicons-font"></span> Typography</a></li>
+          <li><a href="grid.html"><span class="glyphicons glyphicons-show_big_thumbnails"></span> Grid</a></li>
+        </ul>
+      </li>
+      <li> <a class="accordion-toggle" href="#sideTwo"><span class="glyphicons glyphicons-vcard"></span><span class="sidebar-title">Form Elements</span><span class="caret"></span></a>
+        <ul id="sideTwo" class="nav sub-nav">
+          <li><a href="forms.html"><span class="glyphicons glyphicons-link"></span> Form Elements</a></li>
+          <li><a href="wizard.html"><span class="glyphicons glyphicons-magic"></span> Form Wizard</a></li>
+          <li><a href="editors.html"><span class="glyphicons glyphicons-pencil"></span> Editors</a></li>
+          <li><a href="editable.html"><span class="glyphicons glyphicons-edit"></span> Inline Editing</a></li>
+          <li><a href="xedit.html"><span class="glyphicons glyphicons-check"></span> X-editable</a></li>
+          <li><a href="tables.html"><span class="glyphicons glyphicons-table"></span> Tables</a></li>
+          <li><a href="treeview.html"><span class="glyphicons glyphicons-tree_conifer"></span> Treeview</a></li>
+        </ul>
+      </li>
+      <li> <a class="accordion-toggle" href="#sideSix"><span class="glyphicons glyphicons-globe"></span><span class="sidebar-title">Maps</span><span class="caret"></span></a>
+        <ul id="sideSix" class="nav sub-nav">
+          <li><a href="maps.html"><span class="glyphicons glyphicons-global"></span> GMaps</a></li>
+          <li><a href="map-full.html"><span class="glyphicons glyphicons-globe_af"></span> Window Map</a></li>
+          <li><a href="maps-vector.html"><span class="glyphicons glyphicons-vector_path_circle"></span> Vector Maps</a></li>
+        </ul>
+      </li>
+      <li> <a class="accordion-toggle" href="#sideSeven"><span class="glyphicons glyphicons-book_open"></span><span class="sidebar-title">Pages</span><span class="caret"></span></a>
+        <ul id="sideSeven" class="nav sub-nav">
+          <li><a href="profile.html"><span class="glyphicons glyphicons glyphicons-user"></span> Profile</a></li>
+          <li><a href="timeline.html"><span class="glyphicons glyphicons-film"></span> Timeline</a></li>
+          <li><a href="gallery.html"><span class="glyphicons glyphicons-picture"></span> Gallery</a></li>
+          <li><a href="invoice.html"><span class="glyphicons glyphicons glyphicons-print"></span> Printable Invoice</a></li>
+          <li><a href="calendar.html"><span class="glyphicons glyphicons-calendar"></span> Calendar</a></li>
+          <li><a href="faq.html"><span class="glyphicons glyphicons-edit"></span> Faq Page</a></li>
+          <li><a href="blank.html"><span class="glyphicons glyphicons-unchecked"></span> Blank Page</a></li>
+        </ul>
+      </li>
+      <li> <a class="accordion-toggle" href="#sideFive"><span class="glyphicons glyphicons-magic"></span><span class="sidebar-title">Extras</span><span class="caret"></span></a>
+        <ul id="sideFive" class="nav sub-nav">
+          <li><a href="icons.html"><span class="glyphicons glyphicons-flash"></span> Icons</a></li>
+          <li><a href="animations.html"><span class="glyphicons glyphicons-fire"></span> Animations</a></li>
+          <li><a href="sliders.html"><span class="glyphicons glyphicons-retweet"></span> Sliders</a></li>
+          <li><a href="image-tools.html"><span class="glyphicons glyphicons-camera"></span> Image Tools</a></li>
+          <li><a href="sketchpad.html"><span class="glyphicons glyphicons-vector_path_square"></span> Sketchpad</a></li>
+        </ul>
+      </li>
+      <li> <a class="accordion-toggle" href="#sideEight"><span class="glyphicons glyphicons-more_items"></span><span class="sidebar-title">Multi Level Nav</span><span class="caret"></span></a>
+        <ul id="sideEight" class="nav sub-nav">
+          <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+          <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+          <li><a class="accordion-toggle" href="#sideEight-sub"><span class="glyphicons glyphicons-show_lines"></span>2nd Level Nav<span class="caret"></span></a>
+            <ul id="sideEight-sub" class="nav sub-nav">
+              <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+              <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+              <li><a class="accordion-toggle" href="#sideEight-sub-2"><span class="glyphicons glyphicons-show_lines"></span>3rd Level Nav<span class="caret"></span></a>
+                <ul id="sideEight-sub-2" class="nav sub-nav">
+                  <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                  <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                  <li><a class="accordion-toggle" href="#sideEight-sub-2"><span class="glyphicons glyphicons-show_lines"></span>4th Level Nav<span class="caret"></span></a>
+                    <ul id="sideEight-sub-3" class="nav sub-nav">
+                      <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                      <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                      <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</aside>
+<!-- End: Sidebar --> 
+<!-- Start: Content -->
+<section id="content_wrapper">
+<div id="topbar">
+  <div class="topbar-left">
+    <ol class="breadcrumb">
+      <li class="crumb-active"><a href="buttons.html">Buttons</a></li>
+      <li class="crumb-icon"><a href="dashboard.html"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li class="crumb-link"><a href="index.html">Home</a></li>
+      <li class="crumb-trail">Buttons</li>
+    </ol>
+  </div>
+</div>
+<div id="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-heading"> <span class="panel-title"> <span class="glyphicon glyphicon-star"></span> Custom Bootstrap Colors </span> </div>
+            <div class="panel-body">
+              <h4 class="panel-body-title">Default State</h4>
+              <p>
+                <button type="button" class="btn btn-alert">Alert</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-default">Default</button>
+              </p>
+              <h4 class="panel-body-title">Disabled State</h4>
+              <p>
+                <button type="button" class="btn btn-alert" disabled="disabled">Alert</button>
+                <button type="button" class="btn btn-primary" disabled="disabled">Primary</button>
+                <button type="button" class="btn btn-success" disabled="disabled">Success</button>
+                <button type="button" class="btn btn-info" disabled="disabled">Info</button>
+                <button type="button" class="btn btn-warning" disabled="disabled">Warning</button>
+                <button type="button" class="btn btn-danger" disabled="disabled">Danger</button>
+                <button type="button" class="btn btn-default" disabled="disabled">Default</button>
+              </p>
+              <h4 class="panel-body-title">Custom Bootstrap Gradients</h4>
+              <p>
+                <button type="button" class="btn btn-alert btn-gradient"><i class="fa fa-bolt"></i> Alert</button>
+                <button type="button" class="btn btn-primary btn-gradient"><i class="fa fa-star-o"></i> Primary</button>
+                <button type="button" class="btn btn-success btn-gradient"><i class="fa fa-check"></i> Success</button>
+                <button type="button" class="btn btn-info btn-gradient"><i class="fa fa-info"></i> Info</button>
+                <button type="button" class="btn btn-warning btn-gradient"><i class="fa fa-warning"></i> Warning</button>
+                <button type="button" class="btn btn-danger btn-gradient"><i class="fa fa-bell-o"></i> Danger</button>
+                <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-home"></i> Default</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-heading"> <span class="panel-title"> <span class="glyphicon glyphicon-tasks"></span> Button Options </span> </div>
+            <div class="panel-body">
+              <h4 class="panel-body-title">Button + Loading Spinner</h4>
+              <p>
+                <button class="btn btn-info ladda-button" data-style="expand-left"><span class="ladda-label">Left</span></button>
+                <button class="btn btn-primary ladda-button" data-style="expand-right"><span class="ladda-label">Right</span></button>
+                <button class="btn btn-success ladda-button" data-style="expand-up"><span class="ladda-label">Up</span></button>
+                <button class="btn btn-alert ladda-button mr25" data-style="expand-down"><span class="ladda-label">Down</span></button>
+                <button class="btn btn-info ladda-button" data-style="expand-left"><span class="ladda-label"><i class="fa fa-arrow-left"></i> </span></button>
+                <button class="btn btn-primary ladda-button" data-style="expand-right"><span class="ladda-label"><i class="fa fa-arrow-right"></i> </span></button>
+                <button class="btn btn-success ladda-button" data-style="expand-up"><span class="ladda-label"><i class="fa fa-arrow-up"></i> </span></button>
+                <button class="btn btn-alert ladda-button" data-style="expand-down"><span class="ladda-label"><i class="fa fa-arrow-down"></i> </span></button>
+              </p>
+              <h4 class="panel-body-title">Button + Loading Bar/Spinner</h4>
+              <p>
+                <button class="btn btn-info ladda-button progress-button" data-style="expand-left"><span class="ladda-label">Left</span></button>
+                <button class="btn btn-primary ladda-button progress-button" data-style="expand-right"><span class="ladda-label">Right</span></button>
+                <button class="btn btn-success ladda-button progress-button" data-style="expand-up"><span class="ladda-label">Up</span></button>
+                <button class="btn btn-alert ladda-button progress-button mr25" data-style="expand-down"><span class="ladda-label">Down</span></button>
+                <button class="btn btn-info ladda-button progress-button" data-style="expand-left"><span class="ladda-label"><i class="fa fa-arrow-left"></i> </span></button>
+                <button class="btn btn-primary ladda-button progress-button" data-style="expand-right"><span class="ladda-label"><i class="fa fa-arrow-right"></i> </span></button>
+                <button class="btn btn-success ladda-button progress-button" data-style="expand-up"><span class="ladda-label"><i class="fa fa-arrow-up"></i> </span></button>
+                <button class="btn btn-alert ladda-button progress-button" data-style="expand-down"><span class="ladda-label"><i class="fa fa-arrow-down"></i> </span></button>
+              </p>
+              <h4 class="panel-body-title">Icon Only Buttons </h4>
+              <p>
+                <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-home"></i> </button>
+                <button type="button" class="btn btn-primary btn-gradient"><i class="fa fa-rocket"></i> </button>
+                <button type="button" class="btn btn-success btn-gradient"><i class="fa fa-pencil"></i> </button>
+                <button type="button" class="btn btn-info btn-gradient"><i class="fa fa-clock-o"></i> </button>
+                <button type="button" class="btn btn-warning btn-gradient"><i class="fa fa-pencil"></i> </button>
+                <button type="button" class="btn btn-danger btn-gradient"><i class="fa fa-clock-o"></i> </button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-default btn-lg btn-gradient"><i class="fa fa-home"></i> </button>
+                <button type="button" class="btn btn-primary btn-lg btn-gradient"><i class="fa fa-rocket"></i> </button>
+                <button type="button" class="btn btn-success btn-lg btn-gradient"><i class="fa fa-pencil"></i> </button>
+                <button type="button" class="btn btn-info btn-lg btn-gradient"><i class="fa fa-clock-o"></i> </button>
+                <button type="button" class="btn btn-warning btn-lg btn-gradient"><i class="fa fa-pencil"></i> </button>
+                <button type="button" class="btn btn-danger btn-lg btn-gradient"><i class="fa fa-clock-o"></i> </button>
+              </p>
+              <h4 class="panel-body-title">Button Sizes</h4>
+              <p>
+                <button type="button" class="btn btn-info btn-gradient btn-lg">Large button</button>
+                <button type="button" class="btn btn-default btn-gradient btn-lg">Large button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-info btn-gradient">Default button</button>
+                <button type="button" class="btn btn-default btn-gradient">Default button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-info btn-gradient btn-sm">Small button</button>
+                <button type="button" class="btn btn-default btn-gradient btn-sm">Small button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-info btn-gradient btn-xs">Extra small button</button>
+                <button type="button" class="btn btn-default btn-gradient btn-xs">Extra small button</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-heading"> <span class="panel-title"> <span class="glyphicon glyphicon-star-empty"></span> Custom Theme Colors </span>
+              <ul class="nav panel-tabs">
+                <li class="active"><a href="#themeColors" data-toggle="tab">Theme Colors</a></li>
+                <li><a href="#customColors" data-toggle="tab">Advanced Colors</a></li>
+              </ul>
+            </div>
+            <div class="panel-body">
+              <div class="tab-content border-none pn">
+                <div id="themeColors" class="tab-pane active">
+                  <h4 class="panel-body-title">With Gradient & Icon</h4>
+                  <p class="mb10">
+                    <button type="button" class="btn bg-teal3 bg-gradient"><i class="fa fa-home"></i> Teal</button>
+                    <button type="button" class="btn bg-teal3"><i class="fa fa-home"></i> Teal</button>
+                    <button type="button" class="btn bg-teal2"><i class="fa fa-home"></i> Teal</button>
+                    <button type="button" class="btn bg-teal"><i class="fa fa-home"></i> Teal</button>
+                    <br />
+                    <button type="button" class="btn bg-blue3 bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue3"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue2"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue"><i class="fa fa-home"></i> Blue</button>
+                    <br />
+                    <button type="button" class="btn bg-purple3 bg-gradient"><i class="fa fa-home"></i> Purple</button>
+                    <button type="button" class="btn bg-purple3"><i class="fa fa-home"></i> Purple</button>
+                    <button type="button" class="btn bg-purple2"><i class="fa fa-home"></i> Purple</button>
+                    <button type="button" class="btn bg-purple"><i class="fa fa-home"></i> Purple</button>
+                    <br />
+                    <button type="button" class="btn bg-pink3 bg-gradient"><i class="fa fa-home"></i> Pink</button>
+                    <button type="button" class="btn bg-pink3"><i class="fa fa-home"></i> Pink</button>
+                    <button type="button" class="btn bg-pink2"><i class="fa fa-home"></i> Pink</button>
+                    <button type="button" class="btn bg-pink"><i class="fa fa-home"></i> Pink</button>
+                    <br />
+                    <button type="button" class="btn bg-red3 bg-gradient"><i class="fa fa-home"></i> Red</button>
+                    <button type="button" class="btn bg-red3"><i class="fa fa-home"></i> Red</button>
+                    <button type="button" class="btn bg-red2"><i class="fa fa-home"></i> Red</button>
+                    <button type="button" class="btn bg-red"><i class="fa fa-home"></i> Red</button>
+                    <br />
+                    <button type="button" class="btn bg-orange3 bg-gradient"><i class="fa fa-home"></i> Orange</button>
+                    <button type="button" class="btn bg-orange3"><i class="fa fa-home"></i> Orange</button>
+                    <button type="button" class="btn bg-orange2"><i class="fa fa-home"></i> Orange</button>
+                    <button type="button" class="btn bg-orange"><i class="fa fa-home"></i> Orange</button>
+                    <br />
+                    <button type="button" class="btn bg-yellow3 bg-gradient"><i class="fa fa-home"></i> Yellow</button>
+                    <button type="button" class="btn bg-yellow3"><i class="fa fa-home"></i> Yellow</button>
+                    <button type="button" class="btn bg-yellow2"><i class="fa fa-home"></i> Yellow</button>
+                    <button type="button" class="btn bg-yellow"><i class="fa fa-home"></i> Yellow</button>
+                    <br />
+                    <button type="button" class="btn bg-green3 bg-gradient"><i class="fa fa-home"></i> Green</button>
+                    <button type="button" class="btn bg-green3"><i class="fa fa-home"></i> Green</button>
+                    <button type="button" class="btn bg-green2"><i class="fa fa-home"></i> Green</button>
+                    <button type="button" class="btn bg-green"><i class="fa fa-home"></i> Green</button>
+                    <br />
+                    <button type="button" class="btn bg-grey3 bg-gradient"><i class="fa fa-home"></i> Grey</button>
+                    <button type="button" class="btn bg-grey3"><i class="fa fa-home"></i> Grey</button>
+                    <button type="button" class="btn bg-grey2"><i class="fa fa-home"></i> Grey</button>
+                    <button type="button" class="btn bg-grey"><i class="fa fa-home"></i> Grey</button>
+                  </p>
+                </div>
+                <div id="customColors" class="tab-pane">
+                  <h4 class="panel-body-title">Default State</h4>
+                  <p class="mb10">
+                    <button type="button" class="btn bg-blue-alt">Blue</button>
+                    <button type="button" class="btn bg-blue2-alt">Blue</button>
+                    <button type="button" class="btn bg-blue3-alt">Blue</button>
+                    <button type="button" class="btn bg-blue4-alt">Blue</button>
+                    <button type="button" class="btn bg-blue5-alt">Blue</button>
+                    <button type="button" class="btn bg-blue6-alt">Blue</button>
+                    <button type="button" class="btn bg-blue7-alt">Blue</button>
+                    <br />
+                    <button type="button" class="btn bg-green-alt">Green</button>
+                    <button type="button" class="btn bg-green2-alt">Green</button>
+                    <button type="button" class="btn bg-green3-alt">Green</button>
+                    <button type="button" class="btn bg-green4-alt">Green</button>
+                    <button type="button" class="btn bg-green5-alt">Green</button>
+                    <br />
+                    <button type="button" class="btn bg-red-alt">Red</button>
+                    <button type="button" class="btn bg-red2-alt">Red</button>
+                    <button type="button" class="btn bg-red3-alt">Red</button>
+                    <button type="button" class="btn bg-red4-alt">Red</button>
+                    <br />
+                    <button type="button" class="btn bg-purple-alt">Purple</button>
+                    <button type="button" class="btn bg-purple2-alt">Purple</button>
+                    <button type="button" class="btn bg-purple3-alt">Purple</button>
+                    <button type="button" class="btn bg-purple4-alt">Purple</button>
+                    <br />
+                    <button type="button" class="btn bg-orange-alt">Orange</button>
+                    <button type="button" class="btn bg-orange2-alt">Orange</button>
+                    <button type="button" class="btn bg-orange3-alt">Orange</button>
+                    <button type="button" class="btn bg-yellow-alt">Yellow</button>
+                    <button type="button" class="btn bg-yellow2-alt">Yellow</button>
+                    <br />
+                    <button type="button" class="btn bg-creme-alt">Creme</button>
+                    <button type="button" class="btn bg-creme2-alt">Creme</button>
+                    <button type="button" class="btn bg-brown-alt">Brown</button>
+                    <button type="button" class="btn bg-brown2-alt">Brown</button>
+                    <button type="button" class="btn bg-brown3-alt">Brown</button>
+                    <br />
+                    <button type="button" class="btn bg-dark">Dark</button>
+                    <button type="button" class="btn bg-dark2">Dark</button>
+                    <button type="button" class="btn bg-dark3">Dark</button>
+                    <button type="button" class="btn bg-dark4">Dark</button>
+                    <button type="button" class="btn bg-dark5">Dark</button>
+                    <br />
+                    <button type="button" class="btn bg-light">Light</button>
+                    <button type="button" class="btn bg-light2">Light</button>
+                    <button type="button" class="btn bg-light3">Light</button>
+                    <button type="button" class="btn bg-light4">Light</button>
+                    <button type="button" class="btn bg-light5">Light</button>
+                    <button type="button" class="btn bg-light6">Light</button>
+                    <button type="button" class="btn bg-light7">Light</button>
+                  </p>
+                  <h4 class="panel-body-title">With Gradient & Icon</h4>
+                  <p class="mb10">
+                    <button type="button" class="btn bg-blue-alt bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue2-alt bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue3-alt bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue4-alt bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue5-alt bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue6-alt bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <button type="button" class="btn bg-blue7-alt bg-gradient"><i class="fa fa-home"></i> Blue</button>
+                    <br />
+                    <button type="button" class="btn bg-green-alt bg-gradient"><i class="fa fa-home"></i> Green</button>
+                    <button type="button" class="btn bg-green2-alt bg-gradient"><i class="fa fa-home"></i> Green</button>
+                    <button type="button" class="btn bg-green3-alt bg-gradient"><i class="fa fa-home"></i> Green</button>
+                    <button type="button" class="btn bg-green4-alt bg-gradient"><i class="fa fa-home"></i> Green</button>
+                    <button type="button" class="btn bg-green5-alt bg-gradient"><i class="fa fa-home"></i> Green</button>
+                    <br />
+                    <button type="button" class="btn bg-red-alt bg-gradient"><i class="fa fa-home"></i> Red</button>
+                    <button type="button" class="btn bg-red2-alt bg-gradient"><i class="fa fa-home"></i> Red</button>
+                    <button type="button" class="btn bg-red3-alt bg-gradient"><i class="fa fa-home"></i> Red</button>
+                    <button type="button" class="btn bg-red4-alt bg-gradient"><i class="fa fa-home"></i> Red</button>
+                    <br />
+                    <button type="button" class="btn bg-purple-alt bg-gradient"><i class="fa fa-home"></i> Purple</button>
+                    <button type="button" class="btn bg-purple2-alt bg-gradient"><i class="fa fa-home"></i> Purple</button>
+                    <button type="button" class="btn bg-purple3-alt bg-gradient"><i class="fa fa-home"></i> Purple</button>
+                    <button type="button" class="btn bg-purple4-alt bg-gradient"><i class="fa fa-home"></i> Purple</button>
+                    <br />
+                    <button type="button" class="btn bg-orange-alt bg-gradient"><i class="fa fa-home"></i> Orange</button>
+                    <button type="button" class="btn bg-orange2-alt bg-gradient"><i class="fa fa-home"></i> Orange</button>
+                    <button type="button" class="btn bg-orange3-alt bg-gradient"><i class="fa fa-home"></i> Orange</button>
+                    <button type="button" class="btn bg-yellow-alt bg-gradient"><i class="fa fa-home"></i> Yellow</button>
+                    <br />
+                    <button type="button" class="btn bg-creme-alt bg-gradient"><i class="fa fa-home"></i> Creme</button>
+                    <button type="button" class="btn bg-creme2-alt bg-gradient"><i class="fa fa-home"></i> Creme</button>
+                    <button type="button" class="btn bg-brown-alt bg-gradient"><i class="fa fa-home"></i> Brown</button>
+                    <button type="button" class="btn bg-brown2-alt bg-gradient"><i class="fa fa-home"></i> Brown</button>
+                    <button type="button" class="btn bg-brown3-alt bg-gradient"><i class="fa fa-home"></i> Brown</button>
+                    <br />
+                    <button type="button" class="btn bg-dark bg-gradient"><i class="fa fa-home"></i> Dark</button>
+                    <button type="button" class="btn bg-dark2 bg-gradient"><i class="fa fa-home"></i> Dark</button>
+                    <button type="button" class="btn bg-dark3 bg-gradient"><i class="fa fa-home"></i> Dark</button>
+                    <button type="button" class="btn bg-dark4 bg-gradient"><i class="fa fa-home"></i> Dark</button>
+                    <button type="button" class="btn bg-dark5 bg-gradient"><i class="fa fa-home"></i> Dark</button>
+                    <br />
+                    <button type="button" class="btn bg-light bg-gradient"><i class="fa fa-home"></i> Light</button>
+                    <button type="button" class="btn bg-light2 bg-gradient"><i class="fa fa-home"></i> Light</button>
+                    <button type="button" class="btn bg-light3 bg-gradient"><i class="fa fa-home"></i> Light</button>
+                    <button type="button" class="btn bg-light4 bg-gradient"><i class="fa fa-home"></i> Light</button>
+                    <button type="button" class="btn bg-light5 bg-gradient"><i class="fa fa-home"></i> Light</button>
+                    <button type="button" class="btn bg-light6 bg-gradient"><i class="fa fa-home"></i> Light</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel panel-visible">
+              <div class="panel-heading"> <span class="panel-title"> <span class="glyphicon glyphicon-th"></span> Button Groups </span> </div>
+              <div class="panel-body">
+                <h4 class="panel-body-title">Button Groups</h4>
+                <div class="btn-group mr10">
+                  <button type="button" class="btn btn-default">Left</button>
+                  <button type="button" class="btn btn-default">Middle</button>
+                  <button type="button" class="btn btn-default">Right</button>
+                </div>
+                <div class="btn-group mr10">
+                  <button type="button" class="btn btn-default">1</button>
+                  <button type="button" class="btn btn-default">2</button>
+                  <button type="button" class="btn btn-default">3</button>
+                  <button type="button" class="btn btn-default">4</button>
+                </div>
+                <div class="btn-group mr10">
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-backward"></i> </button>
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-play"></i> </button>
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-pause"></i> </button>
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-forward"></i> </button>
+                </div>
+                <div class="btn-group mr10">
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-arrow-up"></i> </button>
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-arrow-right"></i> </button>
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-arrow-down"></i> </button>
+                  <button type="button" class="btn btn-default btn-gradient"><i class="fa fa-arrow-left"></i> </button>
+                </div>
+                <h4 class="panel-body-title">Dropdowns</h4>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Default <span class="caret"></span> </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Primary <span class="caret"></span> </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"> Success <span class="caret"></span> </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"> Info <span class="caret"></span> </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"> Warning <span class="caret"></span> </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"> Danger <span class="caret"></span> </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <h4 class="panel-body-title">Dropdowns + Divider (Gradient Style)</h4>
+                <p>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-alert btn-gradient">Default</button>
+                  <button type="button" class="btn btn-alert btn-gradient dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary btn-gradient">Primary</button>
+                  <button type="button" class="btn btn-primary btn-gradient dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success btn-gradient">Success</button>
+                  <button type="button" class="btn btn-success btn-gradient dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-info btn-gradient">Info</button>
+                  <button type="button" class="btn btn-info btn-gradient dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-warning btn-gradient">Warning</button>
+                  <button type="button" class="btn btn-warning btn-gradient dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-danger btn-gradient">Danger</button>
+                  <button type="button" class="btn btn-danger btn-gradient dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <h4 class="panel-body-title">Vertical and DropUp Menus</h4>
+                <div class="btn-group-vertical pull-left mr10">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-gradient dropdown-toggle" data-toggle="dropdown"> Danger <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-gradient dropdown-toggle" data-toggle="dropdown"> Danger <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-gradient dropdown-toggle" data-toggle="dropdown"> Danger <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn-group dropup">
+                  <button type="button" class="btn btn-primary btn-gradient dropdown-toggle" data-toggle="dropdown"> Dropdown <span class="caret"></span> </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group dropup">
+                  <button type="button" class="btn btn-success btn-gradient">Dropdown</button>
+                  <button type="button" class="btn btn-success btn-gradient dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel">
+              <div class="panel-heading"> <span class="panel-title"> <span class="glyphicon glyphicon-unchecked"></span> Block Style Buttons </span> </div>
+              <div class="panel-body">
+                <p>
+                  <button type="button" class="btn btn-info btn-lg btn-block btn-gradient btn-square">A Block Style Button</button>
+                  <button type="button" class="btn btn-primary btn-lg btn-block btn-gradient btn-square">A Block Style Button</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <div class="panel-heading"> <span class="panel-title"> <span class="glyphicon glyphicon-user"></span> Social Media Buttons </span>
+            <ul class="nav panel-tabs">
+              <li class="active"><a href="#tab1" data-toggle="tab"><i class="fa fa-pencil"></i> With Text</a></li>
+              <li><a href="#tab2" data-toggle="tab"><i class="fa fa-picture-o "></i> Just Icons</a></li>
+            </ul>
+          </div>
+          <div class="panel-body alerts-panel">
+            <div class="tab-content border-none pn">
+              <div id="tab1" class="tab-pane active">
+                <button class="zocial facebook">Sign in with Facebook</button>
+                <button class="zocial tumblr">Follow me on Tumblr</button>
+                <button class="zocial twitter">Sign in with Twitter</button>
+                <button class="zocial linkedin">Sign in with LinkedIn</button>
+                <button class="zocial google">Sign in with Google</button>
+                <button class="zocial googleplus">Sign in with Google+</button>
+                <button class="zocial pinterest">Follow me on Pinterest</button>
+                <button class="zocial github">Fork me on Github</button>
+                <button class="zocial dribbble">Sign in with Dribbble</button>
+                <button class="zocial gmail">Sign in with Gmail</button>
+                <button class="zocial soundcloud">Follow me on Soundcloud</button>
+                <button class="zocial itunes">Available on iTunes</button>
+                <button class="zocial paypal">Pay with Paypal</button>
+                <button class="zocial amazon">Sign in with Amazon</button>
+                <button class="zocial skype">Call me on Skype</button>
+                <button class="zocial cloudapp">Sign in to CloudApp</button>
+                <button class="zocial forrst">Follow me on Forrst</button>
+                <button class="zocial spotify">Play on Spotify</button>
+                <button class="zocial instapaper">Read It Later</button>
+                <button class="zocial smashing">Read on Smashing Magazine</button>
+                <button class="zocial dropbox">Sync with Dropbox</button>
+                <button class="zocial appstore">Available on the App Store</button>
+                <button class="zocial macstore">Available on the Mac App Store</button>
+                <button class="zocial android">Available on Android Market</button>
+                <button class="zocial evernote">Clip to Evernote</button>
+                <button class="zocial quora">Follow me on Quora</button>
+                <button class="zocial lanyrd">Attend on Lanyrd</button>
+                <button class="zocial lastfm">Sign in with Last.fm</button>
+                <button class="zocial yelp">Write a review on Yelp</button>
+                <button class="zocial foursquare">Check in with foursquare</button>
+                <button class="zocial klout">Influence with Klout</button>
+                <button class="zocial wikipedia">View on Wikipedia</button>
+                <button class="zocial disqus">Sign in with Disqus</button>
+                <button class="zocial intensedebate">Sign in with IntenseDebate</button>
+                <button class="zocial vimeo">Upload to Vimeo</button>
+                <button class="zocial scribd">Read more on Scribd</button>
+                <button class="zocial wordpress">Sign in with WordPress</button>
+                <button class="zocial songkick">Sign in with Songkick</button>
+                <button class="zocial posterous">Sign in with Posterous</button>
+                <button class="zocial eventbrite">Sign in with Eventbrite</button>
+                <button class="zocial flattr">Tip with Flattr</button>
+                <button class="zocial plancast">Follow me on Plancast</button>
+                <button class="zocial youtube">Subscribe on YouTube</button>
+              </div>
+              <div id="tab2" class="tab-pane">
+                <button class="zocial icon facebook">Sign in with Facebook</button>
+                <button class="zocial icon googleplus">Sign in with Google+</button>
+                <button class="zocial icon twitter">Sign in with Twitter</button>
+                <button class="zocial icon google">Sign in with Google</button>
+                <button class="zocial icon linkedin">Sign in with LinkedIn</button>
+                <button class="zocial icon paypal">Pay with Paypal</button>
+                <button class="zocial icon amazon">Sign in with Amazon</button>
+                <button class="zocial icon dropbox">Sync with Dropbox</button>
+                <button class="zocial icon evernote">Clip to Evernote</button>
+                <button class="zocial icon skype">Call me on Skype</button>
+                <button class="zocial icon guest">Sign in as guest</button>
+                <button class="zocial icon spotify">Play on Spotify</button>
+                <button class="zocial icon lastfm">Sign in with Last.fm</button>
+                <button class="zocial icon songkick">Sign in with Songkick</button>
+                <button class="zocial icon forrst">Follow me on Forrst</button>
+                <button class="zocial icon dribbble">Sign in with Dribbble</button>
+                <button class="zocial icon cloudapp">Sign in to CloudApp</button>
+                <button class="zocial icon github">Fork me on Github</button>
+                <button class="zocial pinterest icon">Follow me on Pinterest</button>
+                <button class="zocial quora icon">Follow me on Quora</button>
+                <button class="zocial pinboard icon">Bookmark with Pinboard</button>
+                <button class="zocial lanyrd icon">Attend on Lanyrd</button>
+                <button class="zocial icon itunes">Download on iTunes</button>
+                <button class="zocial icon android">Download on Android</button>
+                <button class="zocial icon disqus">Sign in with Disqus</button>
+                <button class="zocial icon yahoo">Sign in with Yahoo</button>
+                <button class="zocial icon vimeo">Upload to Vimeo</button>
+                <button class="zocial icon chrome">Add to Chrome</button>
+                <button class="zocial icon ie">Get a new browser</button>
+                <button class="zocial icon html5">Made from HTML5</button>
+                <button class="zocial icon instapaper">Read It Later</button>
+                <button class="zocial icon scribd">Read more on Scribd</button>
+                <button class="zocial icon wikipedia">View on Wikipedia</button>
+                <button class="zocial icon flattr">Tip with Flattr</button>
+                <button class="zocial icon tumblr">Follow me on Tumblr</button>
+                <button class="zocial icon posterous">Subscribe to my Posterous</button>
+                <button class="zocial icon gowalla">Check in with Gowalla</button>
+                <button class="zocial icon foursquare">Check in with foursquare</button>
+                <button class="zocial icon yelp">Write a review on Yelp</button>
+                <button class="zocial icon soundcloud">Follow me on Soundcloud</button>
+                <button class="zocial icon smashing">Read on Smashing Magazine</button>
+                <button class="zocial icon wordpress">Sign in with WordPress</button>
+                <button class="zocial icon intensedebate">Sign in with IntenseDebate</button>
+                <button class="zocial icon openid">Sign in with OpenID</button>
+                <button class="zocial icon gmail">Sign in with Gmail</button>
+                <button class="zocial icon eventbrite">Sign in with Eventbrite</button>
+                <button class="zocial icon eventasaurus">Sign in with Eventasaurus</button>
+                <button class="zocial icon meetup">Sign in with Meetup.com</button>
+                <button class="zocial icon aol">Sign in with AIM</button>
+                <button class="zocial icon plancast">Follow me on Plancast</button>
+                <button class="zocial icon youtube">Subscribe on YouTube</button>
+                <button class="zocial icon appstore">Available on the Mac App Store</button>
+                <button class="zocial icon creativecommons">View Creative Commons Licence</button>
+                <button class="zocial icon rss">Subscribe to RSS</button>
+                <button class="zocial weibo icon">Follow me on Weibo</button>
+                <button class="zocial plurk icon">Follow me on Plurk</button>
+                <button class="zocial grooveshark icon">Follow me on Grooveshark</button>
+                <button class="zocial blogger icon">Post on Blogger</button>
+                <button class="zocial viadeo icon">Sign in with Viadeo</button>
+                <button class="zocial podcast icon">Subscribe to this Podcast</button>
+                <button class="zocial fivehundredpx icon">View Portfolio on 500px</button>
+                <button class="zocial bitcoin icon">Bitcoin accepted here</button>
+                <button class="zocial ninetyninedesigns icon">View Portfolio on 99Designs</button>
+                <button class="zocial stumbleupon icon">Stumble!</button>
+                <button class="zocial itunes icon">Download on iTunes</button>
+                <button class="zocial myspace icon">Find me on Myspace</button>
+                <button class="zocial windows icon">Sign in with Windows Live</button>
+                <button class="zocial eventful icon">Find Events with Eventful</button>
+                <button class="zocial klout icon">Influence with Klout</button>
+                <button class="zocial xing icon">Sign in with Xing</button>
+                <button class="zocial flickr icon">Upload to Flickr</button>
+                <button class="zocial delicious icon">Sign in with Del.icio.us</button>
+                <button class="zocial googleplay icon">Download from Google Play</button>
+                <button class="zocial opentable icon">Reserve with OpenTable</button>
+                <button class="zocial digg icon">Digg this</button>
+                <button class="zocial reddit icon">Share on Reddit</button>
+                <button class="zocial angellist icon">Fund us on AngelList</button>
+                <button class="zocial instagram icon">Sign in with Instagram</button>
+                <button class="zocial steam icon">Sign in with Steam</button>
+                <button class="zocial vk icon">Sign in with VKontakte</button>
+                <button class="zocial appnet icon">Sign in with App.net</button>
+                <button class="zocial stripe icon">Sign in with Stripe</button>
+                <button class="zocial dwolla icon">Sign in with Dwolla</button>
+                <button class="zocial drupal icon">Built with Drupal</button>
+                <button class="zocial statusnet icon">Share with Status.net/Indenti.ca</button>
+                <button class="zocial pocket icon">Save for later</button>
+                <button class="zocial acrobat icon">Download Adobe Acrobat</button>
+                <button class="zocial bitbucket icon">Fork from Bitbucket</button>
+                <button class="zocial buffer icon">Buffer</button>
+                <button class="zocial lego icon">Make me out of Lego</button>
+                <button class="zocial logmein icon">Log in</button>
+                <button class="zocial ycombinator icon">Hacker News</button>
+                <button class="zocial stackoverflow icon">Sign in with Stackoverflow</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- End: Content --> 
+  
+  <!-- Start: Right Sidebar -->
+  <aside id="sidebar_right">
+    <div class="sidebar-right-header">
+      <div class="pull-right posr"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-circle text-orange2 fs8"></i> <span class="caret text-muted"></span> </a>
+        <ul class="dropdown-menu dropdown-sm" role="menu">
+          <li class="menu-arrow">
+            <div class="menu-arrow-up"></div>
+          </li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-green2 pr5"></i> Online</a></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-red2 pr5"></i> Busy</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-orange2 pr5"></i> Away</a></li>
+        </ul>
+      </div>
+      <div class="media mtn"> <a class="pull-left mt5" href="#"> <img class="thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="small mt5 mbn text-cloud"><b>Current Status:</b></h5>
+          <h5 class="small text-white"><b>"Away: Lunch meeting"</b></h5>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar_right_content p25">
+      <div class="sidebar_right_menu row text-center">
+        <div class="col-xs-4 pln"> <a href="calendar.html"> <span class="glyphicons glyphicons-imac fs22 text-grey2"></span>
+          <h5 class="fs11 text-white">Calendar</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="profile.html"> <span class="glyphicons glyphicons-settings fs22 text-green"></span>
+          <h5 class="fs11 text-white">Settings</h5>
+          </a> </div>
+        <div class="col-xs-4 prn"> <a href="messages.html"> <span class="glyphicons glyphicons-inbox fs22 text-orange"></span>
+          <h5 class="fs11 text-white">Inbox</h5>
+          </a> </div>
+      </div>
+      <hr class="mb25 mtn border-dark3"/>
+      <h5 class="text-muted fs13 mb25">Notes</h5>
+      <h5 class="text-white mbn">9:30 AM - Ford Pitch</h5>
+      <p class="text-light6 fs12 fw600 mb15">Client expects a working draft</p>
+      <h5 class="text-white mbn">12:15 AM - Lunch Meeting</h5>
+      <p class="text-light6 fs12 fw600 mb15">To discuss Ford Pitch outcome</p>
+      <h5 class="text-white mbn">2:30 AM - Computer Repair</h5>
+      <p class="text-light6 fs12 fw600 mb15">Coming to replace failing HD </p>
+      <h5 class="text-white mbn">4:15 AM - First Yoga Class</h5>
+      <p class="text-light6 fs12 fw600">Ask about your free classes</p>
+      <hr class="mb25 mt25 border-dark3"/>
+      <h5 class="text-muted fs13 pull-left mr20">Users</h5>
+      <div class="btn-group pull-left">
+        <button type="button" class="btn btn-gradient btn-xs bg-blue7-alt dropdown-toggle fs11 fw600" data-toggle="dropdown"><i class="fa fa-circle text-green2 fs8 pr5"></i> Online <span class="caret caret-sm ml5"></span> </button>
+        <ul class="dropdown-menu dropdown-sm" role="menu">
+          <li class="menu-arrow">
+            <div class="menu-arrow-up"></div>
+          </li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-green2 pr5"></i> Online</a></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-red2 pr5"></i> Busy</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-orange2 pr5"></i> Away</a></li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+      <div class="media mt30 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/4.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Simon Rivers</h5>
+          <p class="text-muted fs12"> What's up, buddy</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/5.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Eric Ulrich</h5>
+          <p class="text-muted fs12"> Client Problem pg.14</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/6.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Hershel Sandin</h5>
+          <p class="text-muted fs12"> Looking for an intern?</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/7.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Jacob Hill</h5>
+          <p class="text-muted fs12"> Lunch meeting tomorrow.</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/3.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Dante Harper</h5>
+          <p class="text-muted fs12"> I have a new twitter!</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+<!-- End: Main --> 
+
+<!-- Google Map API --> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+
+<!-- jQuery --> 
+<script type="text/javascript" src="vendor/jquery/jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script> <!-- Bootstrap --> 
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script> 
+
+<!-- Page Plugins --> 
+<script type="text/javascript" src="vendor/plugins/ladda/ladda.min.js"></script> 
+
+<!-- Theme Javascript --> 
+<script type="text/javascript" src="js/utility/spin.min.js"></script> 
+<script type="text/javascript" src="js/utility/underscore-min.js"></script> 
+<script type="text/javascript" src="js/main.js"></script> 
+<script type="text/javascript" src="js/ajax.js"></script> 
+<script type="text/javascript" src="js/custom.js"></script> 
+<script type="text/javascript">
+jQuery(document).ready(function () {
+	  
+	 "use strict";
+
+     // Init Theme Core 	  
+     Core.init();
+
+     // Enable Ajax Loading 	  
+     Ajax.init();     
+     
+	
+	// Init Ladda Plugin on buttons
+	Ladda.bind( '.ladda-button', { timeout: 2000 } );
+
+	// Bind progress buttons and simulate loading progress. Note: Button still requires ".ladda-button" class.
+	Ladda.bind( '.progress-button', {
+		callback: function( instance ) {
+			var progress = 0;
+			var interval = setInterval( function() {
+				progress = Math.min( progress + Math.random() * 0.1, 1 );
+				instance.setProgress( progress );
+
+				if( progress === 1 ) {
+					instance.stop();
+					clearInterval( interval );
+				}
+			}, 200 );
+		}
+	});
+		
+});
+</script>
+</body>
+</html>

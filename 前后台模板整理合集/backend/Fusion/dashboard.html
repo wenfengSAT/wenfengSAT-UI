@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<title>Fusion - A Responsive HTML5 Admin UI Template Theme</title>
+<meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description" content="Fusion - A Responsive HTML5 Admin UI Template Theme">
+<meta name="author" content="AdminDesigns">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font CSS (Via CDN) -->
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+<!-- Required Plugin CSS 
+<link rel="stylesheet" type="text/css" href="vendor/plugins/morris/morris.css">
+<link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/css/datatables.min.css">
+-->
+
+<!-- Theme CSS -->
+<link rel="stylesheet" type="text/css" href="css/vendor.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/utility.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55837308-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body class="dashboard-page">
+<script> var boxtest = localStorage.getItem('boxed'); if (boxtest === 'true') {document.body.className+=' boxed-layout';} </script> 
+<!-- Start: Theme Preview Pane -->
+<div id="skin-toolbox">
+  <div class="skin-toolbox-toggle"> <i class="fa fa-wrench"></i> </div>
+  <div class="skin-toolbox-panel">
+    <form id="skin-toolbox-form">
+      <h4 class="pl5">Theme Options</h4>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="ajax-option" checked/>
+          <label for="ajax-option">Ajax Loading</label>
+        </div>
+      </div>
+      <h4 class="pl5 mt20">Stylesss Options</h4>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="header-option" checked/>
+          <label for="header-option">Fixed Header</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="sidebar-option"/>
+          <label for="sidebar-option">Fixed Sidebar</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="breadcrumb-hidden"/>
+          <label for="breadcrumb-hidden">Hide Breadcrumbs</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="cBox cBox-inline">
+          <input type="checkbox" id="usermenu-hidden"/>
+          <label for="usermenu-hidden">Hide Usermenu</label>
+        </div>
+      </div>
+      <h4 class="pl5 mt20">Layout Options</h4>
+      <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="optionsRadios" id="fullwidth-option" checked>
+          Fullwidth </label>
+      </div>
+      <div class="form-group mb20">
+        <label class="radio-inline">
+          <input type="radio" name="optionsRadios" id="boxed-option">
+          Boxed Layouts </label>
+      </div>
+      <h4 class="pl5 mt20">Header Colors</h4>
+      <div class="form-group mb10">
+      	<div class="toggle-color-wrap">
+            <div class="toggle-color-swap bg-purple3" data-swap="bg-purple3"></div>
+            <div class="toggle-color-swap bg-purple2" data-swap="bg-purple2"></div>
+            <div class="toggle-color-swap bg-blue4-alt" data-swap="bg-blue4-alt"></div>
+            <div class="toggle-color-swap bg-blue5-alt" data-swap="bg-blue5-alt"></div>
+            <div class="toggle-color-swap bg-blue6-alt" data-swap="bg-blue6-alt"></div>
+            <div class="toggle-color-swap bg-red2" data-swap="bg-red2"></div>
+            <div class="toggle-color-swap bg-orange2" data-swap="bg-orange2"></div>
+            <div class="toggle-color-swap bg-brown-alt" data-swap="bg-brown-alt"></div>
+            <div class="toggle-color-swap bg-dark3" data-swap="bg-dark3"></div>
+            <div class="toggle-color-swap bg-white" data-swap="bg-white"></div>
+            <div class="clearfix"></div>
+        </div>
+      </div>      
+      <div class="form-group"> <a href="customizer.html" id="customizer-link" class="btn btn-gradient btn-block">CUSTOMIZER</a> </div>
+    </form>
+  </div>
+</div>
+
+<!-- Start: Header -->
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-branding"> <span id="toggle_sidemenu_l" class="glyphicons glyphicons-show_lines"></span> <a class="navbar-brand" href="dashboard.html"><img src="img/logos/header-logo.png"></a> </div>
+  <div class="navbar-left">
+    <div class="navbar-divider"></div>
+    <div id="settings_menu"> <span class="glyphicons glyphicons-settings dropdown-toggle cursor" data-toggle="dropdown"></span>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-user text-red2 mr15"></span>Users</a></li>
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-cargo text-purple2 mr15"></span>Servers</a></li>
+        <li><a href="javascript:void(0);"><span class="glyphicons glyphicons-history text-grey2 mr15"></span>Crons</a></li>
+      </ul>
+    </div>
+    <div id="language_menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="flag-xs flag-us"></span> <span class="small va-m">US</span> <i class="fa fa-angle-down text-dark"></i> </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-in"></span> Hindu</a></li>
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-tr"></span> Turkish</a></li>
+        <li><a href="javascript:void(0);"><span class="flag-xs flag-es"></span> Spanish</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-right">
+    <div class="navbar-search">
+      <input type="text" id="HeaderSearch" placeholder="Search..." value="Search...">
+    </div>
+    <div class="navbar-menus">
+      <div class="btn-group" id="alert_menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicons glyphicons-bell"></span> <b>3</b> </button>
+        <ul class="dropdown-menu media-list" role="menu">
+          <li class="dropdown-header">Recent Alerts<span class="pull-right glyphicons glyphicons-bell"></span></li>
+          <li class="p15 pb10">
+            <ul class="list-unstyled">
+              <li><span class="glyphicons glyphicons-bell text-orange2 fs16 mr15"></span><b>CEO</b> lunch meeting Tuesday</li>
+              <li class="pt10"><span class="glyphicons glyphicons-facebook text-blue2 fs16 mr15"></span>Facebook likes are at <b>4,100</b></li>
+              <li class="pt10"><span class="glyphicons glyphicons-paperclip text-teal2 fs16 mr15"></span>Mark <b>uploaded</b> 3 new Docs</li>
+              <li class="pt10"><span class="glyphicons glyphicons-gift text-purple2 fs16 mr15"></span>It's <b>Marks</b> 34th Birthday</li>
+              <li class="pt10"><span class="glyphicons glyphicons-cup text-red2 fs16 mr15"></span>Best new employee awarded to <b>Jessica</b></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-group" id="comment_menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicons glyphicons-display"></span> <b>7</b> </button>
+        <div class="dropdown-menu" role="menu">
+          <ul class="nav nav-tabs tabs-border-bottom" role="tablist">
+            <li class="active"><a href="#header_tab1" role="tab" data-toggle="tab">Messages</a></li>
+            <li><a href="#header_tab2" role="tab" data-toggle="tab">Tickets</a></li>
+            <li><a href="#header_tab3" role="tab" data-toggle="tab">Todo List</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content pn border-none dropdown-persist">
+            <div class="tab-pane active" id="header_tab1">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <input class="dropdownSearch" type="text" placeholder="Search...">
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="cBox cBox-inline ml20">
+                      <input type="checkbox" id="headercBox1" name="check" value="None"/>
+                      <label for="headercBox1">Delete</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p15">
+                <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Simon Rivers <small class="text-light5"> - 3 hours ago</small></h5>
+                    <p class="text-muted"> Hey Louis, I was wondering if</p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-online" src="img/avatars/6.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Tracy Rope <small class="text-light5"> - 8 hours ago</small></h5>
+                    <p class="text-muted"> Bam baby get at, I was</p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-online" src="img/avatars/8.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Courtney Dash <small class="text-light5"> - 3 days ago</small></h5>
+                    <p class="text-muted"> I was wonde awesome brief </p>
+                  </div>
+                </div>
+                <div class="media mt10 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded border-light5" src="img/avatars/2.jpg" alt="..."> </a>
+                  <div class="media-body">
+                    <h5 class="media-heading mbn">Simon Rivers <small class="text-light5"> - 3 hours ago</small></h5>
+                    <p class="text-muted mbn"> Hey Louis, I was wondering </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="header_tab2">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="cBox cBox-inline cBox-orange ml15 p1">
+                  <input type="checkbox" id="headercBox2" name="check" value="None"/>
+                  <label for="headercBox2">Closed</label>
+                </div>
+                <div class="cBox cBox-inline cBox-purple">
+                  <input type="checkbox" id="headercBox3" name="check" value="None"/>
+                  <label for="headercBox3">Low</label>
+                </div>
+                <div class="cBox cBox-inline cBox-blue">
+                  <input type="checkbox" id="headercBox4" name="check" value="None"/>
+                  <label for="headercBox4">Med</label>
+                </div>
+                <div class="cBox cBox-inline cBox-red2 cBox-gradient">
+                  <input type="checkbox" id="headercBox5" name="check" value="None" checked/>
+                  <label for="headercBox5">Urgent</label>
+                </div>
+              </div>
+              <div class="sortable mt10 mb10">
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #1]</b> - Validation Errors <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #2]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #3]</b> - User hacked <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #4]</b> - Mailbox Debug <small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #5]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #6]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+                <div class="todo-item table-layout p8">
+                  <div class="todo-handle va-m">
+                    <div class="v-handle"></div>
+                  </div>
+                  <div class="todo-body va-m"><b class="text-muted">[Ticket #7]</b> - User Profile Debug<small class="text-blue2"> [read more..]</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="header_tab3">
+              <div class="dropdown-submenu dropdown-persist">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input class="dropdownSearch" type="text" placeholder="Create New Item...">
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox7" name="check" value="None"/>
+                    <label for="headercBox7"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#2]</b> - IE8 Profile Drag Errors <span class="label label-sm bg-grey2 ml10">Javascript</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox6" name="check" value="None"/>
+                    <label for="headercBox6"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#1]</b> - Validation Errors on USCM testing facitiliy <small class="text-red2">- Urgent</small></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox9" name="check" value="None"/>
+                    <label for="headercBox9"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#4]</b> - CSS Problems with Tables <span class="label label-sm bg-orange2 ml10">CSS</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox10" name="check" value="None"/>
+                    <label for="headercBox10"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 va-m"><b class="text-muted">[#5]</b> - PHP Form validation errors occuring on email page<span class="label label-sm bg-purple2 ml10">PHP</span></div>
+              </div>
+              <div class="ticket-item table-layout">
+                <div class="ticket-handle va-m">
+                  <div class="cBox ml10">
+                    <input type="checkbox" id="headercBox8" name="check" value="None"/>
+                    <label for="headercBox8"></label>
+                  </div>
+                </div>
+                <div class="ticket-body p10 pb15 va-m"><b class="text-muted">[#3]</b> - Mailbox Validation Errors on Firefox</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group" id="toggle_sidemenu_r">
+        <button type="button"> <span class="glyphicons glyphicons-parents"></span> </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Start: Main -->
+<div id="main"> 
+  
+  <!-- Start: Sidebar -->
+  <aside id="sidebar_left">
+    <div class="user-info">
+      <div class="media"> <a class="pull-left" href="#">
+        <div class="media-object border border-purple br64 bw2 p2"> <img class="br64" src="img/avatars/5.jpg" alt="..."> </div>
+        </a>
+        <div class="mobile-link"> <span class="glyphicons glyphicons-show_big_thumbnails"></span> </div>
+        <div class="media-body">
+          <h5 class="media-heading mt5 mbn fw700 cursor">John.Smith<span class="caret ml5"></span></h5>
+          <div class="media-links fs11"><a href="#">Menu</a><i class="fa fa-circle text-muted fs3 p8 va-m"></i><a href="screen-lock.html">Sign Out</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="user-divider"></div>
+    <div class="user-menu">
+      <div class="row text-center mb15">
+        <div class="col-xs-4"> <a href="dashboard.html"> <span class="glyphicons glyphicons-home fs22 text-blue2"></span>
+          <h5 class="fs11">Home</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="messages.html"> <span class="glyphicons glyphicons-inbox fs22 text-orange2"></span>
+          <h5 class="fs11">Inbox</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="tables.html"> <span class="glyphicons glyphicons-bell fs22 text-purple2"></span>
+          <h5 class="fs11">Data</h5>
+          </a> </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-xs-4 text-center"> <a href="timeline.html"> <span class="glyphicons glyphicons-imac fs22 text-grey3"></span>
+          <h5 class="fs11">Views</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="profile.html"> <span class="glyphicons glyphicons-settings fs22 text-green2"></span>
+          <h5 class="fs11">Settings</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="gallery.html"> <span class="glyphicons glyphicons-restart fs22 text-light6"></span>
+          <h5 class="fs11">Images</h5>
+          </a> </div>
+      </div>
+    </div>
+    <div class="sidebar-menu">
+      <ul class="nav">
+        <li> <a href="customizer.html" class="ajax-disable"><span class="glyphicons glyphicons-eyedropper"></span> <span class="sidebar-title">Customizer</span> <span class="sidebar-title-tray"> <span class="label label-xs bg-purple2">New</span> </span> </a> </li>
+        <li> <a href="messages.html" class="ajax-disable"><span class="glyphicons glyphicons-inbox"></span><span class="sidebar-title">Messages</span></a> </li>
+        <li class="active"> <a href="dashboard.html"><span class="glyphicons glyphicons-home"></span><span class="sidebar-title">Dashboard</span></a> </li>
+        <li> <a class="accordion-toggle menu-open" href="#resources"><span class="glyphicons glyphicons-settings"></span><span class="sidebar-title">Resources</span><span class="caret"></span></a>
+          <ul id="resources" class="nav sub-nav">
+            <li><a class="ajax-disable" href="../documentation/index.html"><span class="glyphicons glyphicons-book"></span> Documentation </a></li>
+            <li class="divider"></li>
+            <li><a class="ajax-disable" href="login.html"><span class="glyphicons glyphicons-power"></span> Login Page</a></li>
+            <li><a class="ajax-disable" href="screen-lock.html"><span class="glyphicons glyphicons-lock"></span> Screen Lock</a></li>
+            <li><a class="ajax-disable" href="coming-soon.html"><span class="glyphicons glyphicons-road"></span> Coming Soon</a></li>
+            <li><a class="ajax-disable" href="404-page.html"><span class="glyphicons glyphicons-circle_remove"></span> 404 Page</a></li>
+            <li><a class="ajax-disable" href="500-page.html"><span class="glyphicons glyphicons-circle_exclamation_mark"></span> 500 Page</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideOne"><span class="glyphicons glyphicons-adjust_alt"></span><span class="sidebar-title">UI Elements</span><span class="caret"></span></a>
+          <ul id="sideOne" class="nav sub-nav">
+            <li><a href="portlets.html"><span class="glyphicons glyphicons-sort"></span> Portlets</a></li>
+            <li><a href="elements.html"><span class="glyphicons glyphicons-paperclip"></span> Elements</a></li>
+            <li><a href="charts.html"><span class="glyphicons glyphicons-stats"></span> Charts</a></li>
+            <li><a href="tabs.html"><span class="glyphicons glyphicons-adjust"></span> Tabs</a></li>
+            <li><a href="buttons.html"><span class="glyphicons glyphicons-macbook"></span> Buttons</a></li>
+            <li><a href="typography.html"><span class="glyphicons glyphicons-font"></span> Typography</a></li>
+            <li><a href="grid.html"><span class="glyphicons glyphicons-show_big_thumbnails"></span> Grid</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideTwo"><span class="glyphicons glyphicons-vcard"></span><span class="sidebar-title">Form Elements</span><span class="caret"></span></a>
+          <ul id="sideTwo" class="nav sub-nav">
+            <li><a href="forms.html"><span class="glyphicons glyphicons-link"></span> Form Elements</a></li>
+            <li><a href="editors.html"><span class="glyphicons glyphicons-pencil"></span> Editors</a></li>
+            <li><a href="editable.html"><span class="glyphicons glyphicons-edit"></span> Inline Editing</a></li>
+            <li><a href="xedit.html"><span class="glyphicons glyphicons-check"></span> X-editable</a></li>
+            <li><a href="tables.html"><span class="glyphicons glyphicons-table"></span> Tables</a></li>
+            <li><a href="treeview.html"><span class="glyphicons glyphicons-tree_conifer"></span> Treeview</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideSix"><span class="glyphicons glyphicons-globe"></span><span class="sidebar-title">Maps</span><span class="caret"></span></a>
+          <ul id="sideSix" class="nav sub-nav">
+            <li><a href="maps.html"><span class="glyphicons glyphicons-global"></span> GMaps</a></li>
+            <li><a href="map-full.html"><span class="glyphicons glyphicons-globe_af"></span> Window Map</a></li>
+            <li><a href="maps-vector.html"><span class="glyphicons glyphicons-vector_path_circle"></span> Vector Maps</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideSeven"><span class="glyphicons glyphicons-book_open"></span><span class="sidebar-title">Pages</span><span class="caret"></span></a>
+          <ul id="sideSeven" class="nav sub-nav">
+            <li><a href="profile.html"><span class="glyphicons glyphicons glyphicons-user"></span> Profile</a></li>
+            <li><a href="invoice.html"><span class="glyphicons glyphicons-print"></span> Printable Invoice</a></li>
+            <li><a href="timeline.html"><span class="glyphicons glyphicons-film"></span> Timeline</a></li>
+            <li><a href="gallery.html"><span class="glyphicons glyphicons-picture"></span> Gallery</a></li>
+            <li><a href="calendar.html"><span class="glyphicons glyphicons-calendar"></span> Calendar</a></li>
+            <li><a href="faq.html"><span class="glyphicons glyphicons-edit"></span> Faq Page</a></li>
+            <li><a href="blank.html"><span class="glyphicons glyphicons-unchecked"></span> Blank Page</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideFive"><span class="glyphicons glyphicons-magic"></span><span class="sidebar-title">Extras</span><span class="caret"></span></a>
+          <ul id="sideFive" class="nav sub-nav">
+            <li><a href="icons.html"><span class="glyphicons glyphicons-flash"></span> Icons</a></li>
+            <li><a href="animations.html"><span class="glyphicons glyphicons-fire"></span> Animations</a></li>
+            <li><a href="sliders.html"><span class="glyphicons glyphicons-retweet"></span> Sliders</a></li>
+            <li><a href="image-tools.html"><span class="glyphicons glyphicons-camera"></span> Image Tools</a></li>
+            <li><a href="sketchpad.html"><span class="glyphicons glyphicons-vector_path_square"></span> Sketchpad</a></li>
+          </ul>
+        </li>
+        <li> <a class="accordion-toggle" href="#sideEight"><span class="glyphicons glyphicons-more_items"></span><span class="sidebar-title">Multi Level Nav</span><span class="caret"></span></a>
+          <ul id="sideEight" class="nav sub-nav">
+            <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+            <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+            <li><a class="accordion-toggle" href="#sideEight-sub"><span class="glyphicons glyphicons-show_lines"></span>2nd Level Nav<span class="caret"></span></a>
+              <ul id="sideEight-sub" class="nav sub-nav">
+                <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                <li><a class="accordion-toggle" href="#sideEight-sub-2"><span class="glyphicons glyphicons-show_lines"></span>3rd Level Nav<span class="caret"></span></a>
+                  <ul id="sideEight-sub-2" class="nav sub-nav">
+                    <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                    <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                    <li><a class="accordion-toggle" href="#sideEight-sub-2"><span class="glyphicons glyphicons-show_lines"></span>4th Level Nav<span class="caret"></span></a>
+                      <ul id="sideEight-sub-3" class="nav sub-nav">
+                        <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #1</a></li>
+                        <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #2</a></li>
+                        <li><a href="javascript:void(0);" class="ajax-disable"><span class="glyphicons glyphicons-ok_2"></span> Item #3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  
+  <!-- Start: Content -->
+  <section id="content_wrapper">
+    <div id="topbar">
+      <div class="topbar-left">
+        <ol class="breadcrumb">
+          <li class="crumb-active"><a href="dashboard.html">Dashboard</a></li>
+          <li class="crumb-icon"><a href="dashboard.html"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li class="crumb-link"><a href="index.html">Home</a></li>
+          <li class="crumb-trail">Dashboard</li>
+        </ol>
+      </div>
+      <div class="topbar-right">
+        <div class="dashboard-widget-tray">
+          <button type="button" class="btn btn-default btn-gradient btn-sm br4">Widgets</button>
+          <button type="button" class="btn btn-default btn-gradient btn-sm br4"><i class="fa fa-gear text-purple2"></i></button>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="widget-dropdown" class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-overflow mb10">
+            <div class="panel-body pn pl20">
+              <div class="icon-bg"><i class="fa fa-envelope text-grey"></i></div>
+              <h2 class="mt15 lh15 text-grey2"><b>728</b></h2>
+              <h5 class="text-muted">Connections</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-overflow mb10">
+            <div class="panel-body pn pl20">
+              <div class="icon-bg"><i class="fa fa-bar-chart-o text-teal"></i></div>
+              <h2 class="mt15 lh15 text-teal2"><b>267</b></h2>
+              <h5 class="text-muted">Reach</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-overflow mb10">
+            <div class="panel-body pn pl20">
+              <div class="icon-bg"><i class="fa fa-comments-o text-blue"></i></div>
+              <h2 class="mt15 lh15 text-blue2"><b>523</b></h2>
+              <h5 class="text-muted">Comments</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-overflow mb10">
+            <div class="panel-body pn pl20">
+              <div class="icon-bg"><i class="fa fa-twitter text-purple"></i></div>
+              <h2 class="mt15 lh15 text-purple2"><b>348</b></h2>
+              <h5 class="text-muted">Tweets</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-heading"> <span class="panel-title"><i class="fa fa-pencil"></i> Live Site Activity </span>
+              <ul class="nav panel-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Statistics</a></li>
+                <li><a href="#tab2" data-toggle="tab">Social</a></li>
+                <li><a href="#tab3" data-toggle="tab">Tickets</a></li>
+              </ul>
+            </div>
+            <div class="panel-body pn">
+              <div class="tab-content border-none pn">
+                <div id="tab1" class="tab-pane active p15">
+                  <div class="row">
+                    <div class="col-lg-8 pn">
+                      <div id="graph" style="height: 395px; width: 100%;"></div>
+                    </div>
+                    <div class="col-lg-4 visible-lg pl5">
+                      <h4 class="text-uppercase mbn"> Server Statistics </h4>
+                      <h6 class="mb15"> Summary of recent server events. </h6>
+                      <div class="small mb5"> Disk Usage (82.2%)</div>
+                      <div class="progress progress-sm mb10">
+                        <div class="progress-bar progress-bar-purple" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 86%;"> <span class="sr-only">60% Complete</span> </div>
+                      </div>
+                      <div class="small mb5"> Disk Usage (82.2%)</div>
+                      <div class="progress progress-sm mb10">
+                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"> <span class="sr-only">60% Complete</span> </div>
+                      </div>
+                      <div class="small mb5"> Disk Usage (82.2%)</div>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar progress-bar-teal" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 24%"> <span class="sr-only">40% Complete (success)</span> </div>
+                      </div>
+                      <div class="btn-tray mt25 mb15">
+                        <h4 class="text-uppercase mbn hidden"> Map Events </h4>
+                        <h6 class="mb15 hidden"> Summary of locational sales. </h6>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-gradient btn-block btn-sm">USA</button>
+                          </div>
+                          <div class="col-md-4 pln prn">
+                            <button type="button" class="btn btn-default btn-gradient btn-block btn-sm">Turkey</button>
+                          </div>
+                          <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-gradient btn-block btn-sm">India</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="map1" class="jvector-simple" style="width: 100%; height: 155px;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2" class="tab-pane">
+                  <div class="table-layout">
+                    <div class="col-sm-3 va-t panel-sidemenu p25 border-right hidden-xs">
+                      <h4 class="mb25"> Social </h4>
+                      <div id="choices"></div>
+                      <div class="divider"></div>
+                      <ul class="list-unstyled fs12">
+                        <li class="text-muted"><span class="glyphicons glyphicons-facebook text-blue2 fs16 mr15"></span>27 <b>Likes</b> <small>- 1 Hours ago</small></li>
+                        <li class="pt5 text-muted"><span class="glyphicons glyphicons-twitter text-teal2 fs16 mr15"></span>14 <b>Tweets</b> <small>- 4 Hours ago</small></li>
+                        <li class="pt5 text-muted"><span class="glyphicons glyphicons-pinterest text-red2 fs16 mr15"></span>29 <b>Shares</b> <small>- 7 Hours ago</small></li>
+                        <li class="pt5 text-muted"><span class="glyphicons glyphicons-twitter text-teal2 fs16 mr15"></span>42 <b>Tweets</b> <small>- 8 Hours ago</small></li>
+                        <li class="pt5 text-muted"><span class="glyphicons glyphicons-instagram text-orange2 fs16 mr15"></span>16 <b>Comments</b> <small>- 12 Hours ago</small></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-9 p20 pb35">
+                      <div class="chart-toggle" style="height: 365px; width: 100%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab3" class="tab-pane p15">
+                  <table class="table table-widget table-striped table-checklist mt15" id="datatable">
+                    <thead>
+                      <tr>
+                        <th>Task</th>
+                        <th>Progress</th>
+                        <th>Skills</th>
+                        <th>Notes</th>
+                        <th>Deadline</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-slash">Test Building presentation <b>Capacity</b></td>
+                        <td><div class="progress">
+                            <div class="progress-bar progress-bar-purple" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">40% Complete (success)</span> </div>
+                          </div></td>
+                        <td><span class="label bg-grey2">Patience</span></td>
+                        <td class="text-slash text-muted"><small>400 people will attend</small></td>
+                        <td class="text-slash semi-bold">11/14/2013</td>
+                        <td class="text-right"><div class="cBox cBox-inline">
+                            <input type="checkbox" id="tableBox" name="check" value="None"/>
+                            <label for="tableBox"></label>
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td class="text-slash">Write check to <b>Kids Hospital</b> for Holiday</td>
+                        <td><div class="progress">
+                            <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span> </div>
+                          </div></td>
+                        <td><span class="label bg-blue">A Heart</span></td>
+                        <td class="text-slash text-muted"><small>Amount is still $4,500</small></td>
+                        <td class="text-slash semi-bold">11/14/2013</td>
+                        <td class="text-right"><div class="cBox cBox-inline">
+                            <input type="checkbox" id="tableBox2" name="check" value="None"/>
+                            <label for="tableBox2"></label>
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td class="text-slash"><b>Upload</b> all 1400 Icons to Server</td>
+                        <td><div class="progress">
+                            <div class="progress-bar progress-bar-teal" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete</span> </div>
+                          </div></td>
+                        <td><span class="label bg-orange">Python</span><span class="label bg-purple">DB</span></td>
+                        <td class="text-slash text-muted"><small>400 people will attend</small></td>
+                        <td class="text-slash semi-bold">11/14/2013</td>
+                        <td class="text-right"><div class="cBox cBox-inline">
+                            <input type="checkbox" id="tableBox3" name="check" value="None"/>
+                            <label for="tableBox3"></label>
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td class="text-slash">Restyle <b>Themeforest</b> website design</td>
+                        <td><div class="progress">
+                            <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%"><span class="sr-only">60% Complete (warning)</span> </div>
+                          </div></td>
+                        <td><span class="label bg-teal">CSS</span><span class="label bg-green">Html</span></td>
+                        <td class="text-slash text-muted"><small>400 people will attend</small></td>
+                        <td class="text-slash semi-bold">11/14/2013</td>
+                        <td class="text-right"><div class="cBox cBox-inline">
+                            <input type="checkbox" id="tableBox4" name="check" value="None"/>
+                            <label for="tableBox4"></label>
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td class="text-slash">Write check to <b>Kids Hospital</b> for Holiday</td>
+                        <td><div class="progress">
+                            <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span> </div>
+                          </div></td>
+                        <td><span class="label bg-blue">A Heart</span></td>
+                        <td class="text-slash text-muted"><small>Amount is still $4,500</small></td>
+                        <td class="text-slash semi-bold">11/14/2013</td>
+                        <td class="text-right"><div class="cBox cBox-inline">
+                            <input type="checkbox" id="tableBox5" name="check" value="None"/>
+                            <label for="tableBox5"></label>
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td class="text-slash">Write check to <b>Kids Hospital</b> for Holiday</td>
+                        <td><div class="progress">
+                            <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span> </div>
+                          </div></td>
+                        <td><span class="label bg-blue">A Heart</span></td>
+                        <td class="text-slash text-muted"><small>Amount is still $4,500</small></td>
+                        <td class="text-slash semi-bold">11/14/2013</td>
+                        <td class="text-right"><div class="cBox cBox-inline">
+                            <input type="checkbox" id="tableBox6" name="check" value="None"/>
+                            <label for="tableBox6"></label>
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td class="text-slash"><b>Upload</b> all 1400 Icons to Server</td>
+                        <td><div class="progress">
+                            <div class="progress-bar progress-bar-teal" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete</span> </div>
+                          </div></td>
+                        <td><span class="label bg-orange">Python</span><span class="label bg-purple">DB</span></td>
+                        <td class="text-slash text-muted"><small>400 people will attend</small></td>
+                        <td class="text-slash semi-bold">11/14/2013</td>
+                        <td class="text-right"><div class="cBox cBox-inline">
+                            <input type="checkbox" id="tableBox7" name="check" value="None"/>
+                            <label for="tableBox7"></label>
+                          </div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <div class="row">
+                <div class="col-lg-3 visible-lg mt5">
+                  <div class="text-block text-center">
+                    <h5 class="mbn text-muted">This Years Total Sales</h5>
+                    <h4 class="mb5"><b>$1,532,512 </b></h4>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-9 mt5 pr25">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-3 text-center">
+                      <div class="media">
+                        <div class="media-object pull-left pt10 mrn"><span class="stateface stateface-ca fs26 text-purple"></span></div>
+                        <div class="media-body">
+                          <h6 class="media-heading mbn">San Jose, CA </h6>
+                          <h5 class="mb5">$47,112</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 text-center">
+                      <div class="media">
+                        <div class="media-object pull-left pt10 mrn"><span class="stateface stateface-tx fs24 text-orange"></span></div>
+                        <div class="media-body">
+                          <h6 class="media-heading mbn">Denver, CO </h6>
+                          <h5 class="mb5">$32,512</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 text-center">
+                      <div class="media">
+                        <div class="media-object pull-left pt10 mrn"><span class="stateface stateface-mo fs22 text-teal"></span></div>
+                        <div class="media-body">
+                          <h6 class="media-heading mbn">St. Louis, MO </h6>
+                          <h5 class="mb5">$14,532</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 text-center prn">
+                      <div class="media">
+                        <div class="media-object pull-left pt10 mrn"><span class="stateface stateface-ny fs24 text-green2"></span></div>
+                        <div class="media-body">
+                          <h6 class="media-heading mbn">New York, NY </h6>
+                          <h5 class="mb5">$75,116</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="panel panel-overflow mb10 hidden">
+            <div class="row">
+              <div class="col-md-4 facebook-color text-center p20"> <i class="fa fa-facebook fs35 text-white"></i> </div>
+              <div class="col-md-4 twitter-color text-center p20"> <i class="fa fa-facebook fs35 text-white"></i> </div>
+              <div class="col-md-4 bg-orange text-center p20"> <i class="fa fa-facebook fs35 text-white"></i> </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 text-center p10">
+                <h3 class="text-muted"> 1,215 </h3>
+              </div>
+              <div class="col-md-4 text-center p10">
+                <h3> 584 </h3>
+              </div>
+              <div class="col-md-4 text-center p10">
+                <h3> 907 </h3>
+              </div>
+            </div>
+          </div>
+          <div class="row hidden">
+            <div class="col-sm-6">
+              <div class="panel panel-overflow mb10">
+                <div class="row table-layout">
+                  <div class="col-xs-5 facebook-color text-center va-m p10"> <i class="fa fa-facebook fs35 text-white"></i> </div>
+                  <div class="col-xs-7 va-m pl15">
+                    <h3 class="mt15 lh5"><b>5,159</b></h3>
+                    <h5 class="text-muted">Likes</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="panel panel-overflow mb10">
+                <div class="row table-layout">
+                  <div class="col-xs-5 twitter-color text-center va-m p10"> <i class="fa fa-twitter fs35 text-white"></i> </div>
+                  <div class="col-xs-7 va-m pl15">
+                    <h3 class="mt15 lh5"><b>248</b></h3>
+                    <h5 class="text-muted">Tweets</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row hidden">
+            <div class="col-sm-6">
+              <div class="panel panel-overflow mb10">
+                <div class="row table-layout">
+                  <div class="col-xs-5 bg-green2 text-center va-m p10"> <i class="fa fa-credit-card fs35 text-white"></i> </div>
+                  <div class="col-xs-7 va-m pl15">
+                    <h3 class="mt15 lh5"><b>1459</b></h3>
+                    <h5 class="text-muted">Orders</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="panel panel-overflow mb10">
+                <div class="row table-layout">
+                  <div class="col-xs-5 bg-grey2 text-center va-m p10"> <i class="fa fa-inbox fs35 text-white"></i> </div>
+                  <div class="col-xs-7 va-m pl15">
+                    <h3 class="mt15 lh5"><b>32</b></h3>
+                    <h5 class="text-muted">Emails</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-overflow">
+            <div class="panel-heading hidden"> <span class="panel-title"> <i class="fa fa-calendar"></i> Thursday - April 10th</span>
+              <div class="panel-header-menu pull-right mr10"><span class="small text-muted">14/22/2014</span></div>
+            </div>
+            <div class="row table-layout table-clear-xs">
+              <div class="col-sm-4 panel-sidemenu border-right p25 pt20">
+                <h4 class="mb25"> Todays Appointments </h4>
+                <div class="media"> <a class="pull-left" href="#">
+                  <div class="media-object border border-orange br64 bw2 p2"> <span class="glyphicon glyphicon-magnet icon-circle bg-orange2 text-white"></span> </div>
+                  </a>
+                  <div class="media-body">
+                    <h5 class="media-heading p4">Simon Rivers <br/>
+                      <small> What's up, buddy</small></h5>
+                  </div>
+                </div>
+                <div class="media"> <a class="pull-left mr15" href="#">
+                  <div class="media-object border border-purple br64 bw2 p2"> <span class="glyphicon glyphicon-magnet icon-circle bg-purple2 text-white"></span> </div>
+                  </a>
+                  <div class="media-body">
+                    <h5 class="media-heading p4">Tracy Faught <br/>
+                      <small> What's up, buddy</small></h5>
+                  </div>
+                </div>
+                <div class="media"> <a class="pull-left mr15" href="#">
+                  <div class="media-object border border-teal br64 bw2 p2"> <span class="glyphicon glyphicon-magnet icon-circle bg-teal2 text-white"></span> </div>
+                  </a>
+                  <div class="media-body">
+                    <h5 class="media-heading p4">Kevin Smith <br/>
+                      <small> What's up, buddy</small></h5>
+                  </div>
+                </div>
+                <div class="media"> <a class="pull-left mr15" href="#">
+                  <div class="media-object border border-orange br64 bw2 p2"> <span class="glyphicon glyphicon-magnet icon-circle bg-orange2 icon-purple text-white"></span> </div>
+                  </a>
+                  <div class="media-body">
+                    <h5 class="media-heading p4">Courtney Sullivan <br/>
+                      <small> What's up, buddy</small></h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8 va-m p15 pt20">
+                <div id="clndr"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-overflow chat-panel">
+            <div class="panel-heading"> <span class="panel-title"> <i class="fa fa-calendar"></i> Group Chat</span>
+              <div class="pull-right pr15"><span class="small text-muted">4 New Messages</span></div>
+            </div>
+            <div class="panel-body p20 pb10 pt10">
+              <div class="panel-tray hidden">
+                <div class="panel-tray-toggle"> <i class="fa fa-gear"></i> </div>
+                <div class="panel-tray-body">
+                  <input class="form-control input-xs" type="text" placeholder="Filter..">
+                  <div class="p10">
+                    <h5 class="media-heading mb10">Simon Rivers <small class="text-green2"> - Online Now</small></h5>
+                    <h5 class="media-heading mb10">Mike Ross <small class="text-green2"> - Online Now</small></h5>
+                    <h5 class="media-heading mb10">Shiela Scary <small class="text-red2"> - Busy</small></h5>
+                    <h5 class="media-heading mb10">Dell Lat <small class="text-muted"> - 11 Hours</small></h5>
+                    <h5 class="media-heading mb10">Forest Whitaker <small class="text-muted"> - 2 Days</small></h5>
+                    <h5 class="media-heading mb10">Ryan Markup <small class="text-muted"> - 3 Hours</small></h5>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 pl10">
+                  <div class="media mt15"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+                    <div class="media-body">
+                      <h5 class="media-heading mb5">Simon Rivers <small> - 3 hours ago</small></h5>
+                      <p class="text-muted"> Hey Louis, I was wondering if you had time yet</p>
+                    </div>
+                  </div>
+                  <div class="media mt15"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/6.jpg" alt="..."> </a>
+                    <div class="media-body">
+                      <h5 class="media-heading mb5">Tracy Rope <small> - 8 hours ago</small></h5>
+                      <p class="text-muted"> Bam baby get at, I was wondering</p>
+                    </div>
+                  </div>
+                  <div class="media mt15 mbn"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/8.jpg" alt="..."> </a>
+                    <div class="media-body">
+                      <h5 class="media-heading mb5">Courtney Dash <small> - 3 days ago</small></h5>
+                      <p class="text-muted"> I was wonde awesome brief and walnuts </p>
+                    </div>
+                  </div>
+                  <div class="media mt15"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+                    <div class="media-body">
+                      <h5 class="media-heading mb5">Simon Rivers <small> - 3 hours ago</small></h5>
+                      <p class="text-muted"> Hey Louis, I was wondering if you had time yet</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <div class="row">
+                <div class="col-xs-8 col-sm-9 prn">
+                  <input type="text" class="form-control" placeholder="Type Here...">
+                </div>
+                <div class="col-xs-4 col-sm-3">
+                  <button type="button" class="btn btn-default btn-gradient btn-block">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Start: Right Sidebar -->
+  <aside id="sidebar_right">
+    <div class="sidebar-right-header">
+      <div class="pull-right posr"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-circle text-orange2 fs8"></i> <span class="caret text-muted"></span> </a>
+        <ul class="dropdown-menu dropdown-sm" role="menu">
+          <li class="menu-arrow">
+            <div class="menu-arrow-up"></div>
+          </li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-green2 pr5"></i> Online</a></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-red2 pr5"></i> Busy</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-orange2 pr5"></i> Away</a></li>
+        </ul>
+      </div>
+      <div class="media mtn"> <a class="pull-left mt5" href="#"> <img class="thumbnail thumbnail-sm rounded" src="img/avatars/2.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="small mt5 mbn text-cloud"><b>Current Status:</b></h5>
+          <h5 class="small text-white"><b>"Away: Lunch meeting"</b></h5>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar_right_content p25">
+      <div class="sidebar_right_menu row text-center">
+        <div class="col-xs-4 pln"> <a href="calendar.html"> <span class="glyphicons glyphicons-imac fs22 text-grey2"></span>
+          <h5 class="fs11 text-white">Calendar</h5>
+          </a> </div>
+        <div class="col-xs-4"> <a href="profile.html"> <span class="glyphicons glyphicons-settings fs22 text-green"></span>
+          <h5 class="fs11 text-white">Settings</h5>
+          </a> </div>
+        <div class="col-xs-4 prn"> <a href="messages.html"> <span class="glyphicons glyphicons-inbox fs22 text-orange"></span>
+          <h5 class="fs11 text-white">Inbox</h5>
+          </a> </div>
+      </div>
+      <hr class="mb25 mtn border-dark3"/>
+      <h5 class="text-muted fs13 mb25">Notes</h5>
+      <h5 class="text-white mbn">9:30 AM - Ford Pitch</h5>
+      <p class="text-light6 fs12 fw600 mb15">Client expects a working draft</p>
+      <h5 class="text-white mbn">12:15 AM - Lunch Meeting</h5>
+      <p class="text-light6 fs12 fw600 mb15">To discuss Ford Pitch outcome</p>
+      <h5 class="text-white mbn">2:30 AM - Computer Repair</h5>
+      <p class="text-light6 fs12 fw600 mb15">Coming to replace failing HD </p>
+      <h5 class="text-white mbn">4:15 AM - First Yoga Class</h5>
+      <p class="text-light6 fs12 fw600">Ask about your free classes</p>
+      <hr class="mb25 mt25 border-dark3"/>
+      <h5 class="text-muted fs13 pull-left mr20">Users</h5>
+      <div class="btn-group pull-left">
+        <button type="button" class="btn btn-gradient btn-xs bg-blue7-alt dropdown-toggle fs11 fw600" data-toggle="dropdown"><i class="fa fa-circle text-green2 fs8 pr5"></i> Online <span class="caret caret-sm ml5"></span> </button>
+        <ul class="dropdown-menu dropdown-sm" role="menu">
+          <li class="menu-arrow">
+            <div class="menu-arrow-up"></div>
+          </li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-green2 pr5"></i> Online</a></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-red2 pr5"></i> Busy</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-circle text-orange2 pr5"></i> Away</a></li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+      <div class="media mt30 border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/4.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Simon Rivers</h5>
+          <p class="text-muted fs12"> What's up, buddy</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/5.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Eric Ulrich</h5>
+          <p class="text-muted fs12"> Client Problem pg.14</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/6.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Hershel Sandin</h5>
+          <p class="text-muted fs12"> Looking for an intern?</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/7.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Jacob Hill</h5>
+          <p class="text-muted fs12"> Lunch meeting tomorrow.</p>
+        </div>
+      </div>
+      <div class="media border-none"> <a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" src="img/avatars/3.jpg" alt="..."> </a>
+        <div class="media-body">
+          <h5 class="media-heading text-white mbn">Dante Harper</h5>
+          <p class="text-muted fs12"> I have a new twitter!</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+<!-- End #Main --> 
+
+<!-- Google Map API --> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+
+<!-- jQuery --> 
+<script type="text/javascript" src="vendor/jquery/jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script> <!-- Bootstrap --> 
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script> 
+
+<!-- Page Plugins --> 
+<script type="text/javascript" src="vendor/plugins/raphael/raphael.js"></script> 
+<script type="text/javascript" src="vendor/plugins/morris/morris.js"></script> 
+<script type="text/javascript" src="vendor/plugins/datatables/js/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="vendor/plugins/datatables/js/datatables.js"></script> 
+<script type="text/javascript" src="vendor/plugins/jvectormap/jquery-jvectormap.min.js"></script> 
+<script type="text/javascript" src="vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script> 
+<script type="text/javascript" src="vendor/plugins/clndr/clndr.js"></script> 
+<script type="text/javascript" src="vendor/plugins/clndr/moment.js"></script> 
+
+<!-- Flot Plugins --> 
+<script type="text/javascript" src="vendor/plugins/jqueryflot/jquery.flot.min.js"></script> 
+
+<!-- Theme Javascript --> 
+<script type="text/javascript" src="js/utility/spin.min.js"></script> 
+<script type="text/javascript" src="js/utility/underscore-min.js"></script> 
+<script type="text/javascript" src="js/main.js"></script> 
+<script type="text/javascript" src="js/ajax.js"></script> 
+<script type="text/javascript" src="js/custom.js"></script> 
+<script type="text/javascript">
+jQuery(document).ready(function () {
+	  
+	 "use strict";
+
+     // Init Theme Core 	  
+     Core.init();
+
+     // Enable Ajax Loading 	  
+     Ajax.init();
+	 
+	 // Dashboard Widgets Slidedown
+     $('.dashboard-widget-tray .btn:first-child').on('click', function() {
+		$('#widget-dropdown').slideToggle('fast'); 
+	 });
+	 	 
+	 var runFlotChart = function () {	 
+		 
+        // Add a series of colors to be used in the charts and pie graphs
+        var Colors = [blueColor, purpleColor, orangeColor, greenColor, redColor, tealColor, yellowColor];
+
+		if ($(".chart-toggle").length) {
+			
+			var datasets = {
+				"Facebook": {
+					label: "Facebook",
+					data: [[1, 40], [2, 8000], [3, 3400], [4, 6000], [5, 9100], [6, 43500], [7, 16000], [8, 2000], [9, 800], [10, 600]]
+				},        
+				"Twitter": {
+					label: "Twitter",
+					data: [[1, 40], [2, 100], [3, 200], [4, 1000], [5, 11100], [6, 1500], [7, 2400], [8, 5000], [9, 12000], [10, 24000]]
+				},        
+				"Pinterest": {
+					label: "Pinterest",
+					data: [[1, 40], [2, 7000], [3, 1700], [4, 15000], [5, 14400], [6, 9500], [7, 5600], [8, 700], [9, 800], [10, 400]]
+				},           
+				"Instagram": {
+					label: "Instagram",
+					data: [[1, 16000], [2, 7000], [3, 200], [4, 3300], [5, 8000], [6, 500], [7, 600], [8, 3700], [9, 5800], [10, 2300]]
+				},        
+			};
+	
+			// hard-code color indices to prevent them from shifting as
+			// countries are turned on/off
+			var i = 0;
+			$.each(datasets, function(key, val) {
+				val.color = i;
+				++i;
+			});
+	
+			// insert checkboxes 
+			var choiceContainer = $("#choices");
+			$.each(datasets, function(key, val) {				
+				choiceContainer.append("<div class='cBox mt15 " + key.toLowerCase() +"-bg'><input type='checkbox' name='" + key + "' checked='checked' id='" + key + "'/> <label for='" + key + "'>" + val.label + "</label></div>");
+			});
+			
+			choiceContainer.find("input").click(function() {
+				plotAccordingToChoices();
+			});
+			
+		    var plotAccordingToChoices = function() {
+				var data = [];
+				choiceContainer.find("input:checked").each(function () {
+					var key = $(this).attr("name");
+					if (key && datasets[key]) {
+						data.push(datasets[key]);
+					}
+				});
+	
+				if (data.length > 0) {
+					$.plot(".chart-toggle", data, {
+						grid: {
+							show: true,
+							aboveData: true,
+							color: "#3f3f3f",
+							labelMargin: 5,
+							axisMargin: 0,
+							borderWidth: 0,
+							borderColor: null,
+							minBorderMargin: 5,
+							clickable: true,
+							hoverable: true,
+							autoHighlight: true,
+							mouseActiveRadius: 20
+						},
+						series: {
+							lines: {
+								show: true,
+								fill: 0.5,
+								lineWidth: 2,
+								steps: false
+							},
+							points: {
+								show: false
+							}
+						},
+						yaxis: {
+							min: 0
+						},
+						xaxis: {
+							ticks: 11,
+							tickDecimals: 0
+						},
+						colors: Colors,
+						shadowSize: 1,
+						tooltip: true,
+						//activate tooltip
+						tooltipOpts: {
+							content: "%s : %y.0",
+							shifts: {
+								x: -30,
+								y: -50
+							}
+						}
+					});
+				}
+			}
+			plotAccordingToChoices();
+	    } 
+	 };		 
+		 
+	 // Jvector Map Plugin
+     var runJvectorMap = function () {
+        var mapData = [900, 700, 350, 500];
+           // Init Jvector Map
+        $('#map1').vectorMap({
+           map: 'us_lcc_en',
+           //regionsSelectable: true,
+           backgroundColor: '#FFF',
+           series: {
+              markers: [{
+                 attribute: 'r',
+                 scale: [3, 7],
+                 values: mapData
+              }]
+           },
+           regionStyle: {
+              initial: {
+                 fill: '#E5E5E5'
+              },
+              hover: {
+                 "fill-opacity": 0.3
+              }
+           },
+           markers: [{
+              latLng: [37.78, -122.41],
+              name: 'San Francisco,CA'
+           }, {
+              latLng: [36.73, -103.98],
+              name: 'Texas,TX'
+           }, {
+              latLng: [38.62, -90.19],
+              name: 'St. Louis,MO'
+           }, {
+              latLng: [40.67, -73.94],
+              name: 'New York City,NY'
+           }],
+           markerStyle: {
+              initial: {
+                 fill: '#a288d5',
+                 stroke: '#b49ae0',
+                 "fill-opacity": 1,
+                 "stroke-width": 10,
+                 "stroke-opacity": 0.3,
+                 r: 3
+              },
+              hover: {
+                 stroke: 'black',
+                 "stroke-width": 2
+              },
+              selected: {
+                 fill: 'blue'
+              },
+              selectedHover: {}
+           },
+        });
+		
+		
+		// Manual code to alter the Vector map plugin to 
+		// allow for individual coloring of countries
+        var states = ['US-CA', 'US-TX', 'US-MO', 'US-NY'];
+        var colors = ['#e2ceeb', '#f1dccb', '#d7f0f0', '#b6e2a0'];
+        var colors2 = ['#c384dd', '#efac75', '#95e5e7', '#7ec35d'];
+        $.each(states, function (i, e) {
+           $("[data-code=" + e + "]").css({
+              fill: colors[i]
+           });
+        });
+        $('.jvector-simple').find('.jvectormap-marker').each(function (i, e) {
+           $(e).css({
+              fill: colors2[i],
+              stroke: colors2[i]
+           });
+        });
+     }
+	 
+	 // Clndr Plugin
+     var runClndr = function () {
+        // Init Clndr Widget (small calendar)
+        $('#clndr').clndr({
+           daysOfTheWeek: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        });
+     }
+	 
+	 // Datatables Plugin
+     var runDatatables = function () {
+	    $('#datatable, #datatable_2').dataTable({
+			"bSort": true,
+			"bPaginate": false,
+			"bLengthChange": false,
+			"bFilter": false,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"aoColumnDefs": [{
+			   'bSortable': false,
+			   'aTargets': [-1]
+			}]
+	    });
+     }
+	 
+	 // Morris Charts Plugin
+     var runMorrisCharts = function () {
+        // Use Morris.Area instead of Morris.Line
+        Morris.Area({
+           element: 'graph',
+           data: [{
+              y: '2006',
+              a: 0,
+              b: 0,
+              c: 0
+           }, {
+              y: '2007',
+              a: 25,
+              b: 35,
+              c: 25
+           }, {
+              y: '2008',
+              a: 30,
+              b: 30,
+              c: 29
+           }, {
+              y: '2009',
+              a: 35,
+              b: 40,
+              c: 35
+           }, {
+              y: '2010',
+              a: 40,
+              b: 50,
+              c: 65
+           }, {
+              y: '2011',
+              a: 180,
+              b: 350,
+              c: 240
+           }, {
+              y: '2012',
+              a: 40,
+              b: 50,
+              c: 75
+           }, {
+              y: '2013',
+              a: 40,
+              b: 50,
+              c: 25
+           }, {
+              y: '2014',
+              a: 30,
+              b: 40,
+              c: 15
+           }, {
+              y: '2015',
+              a: 25,
+              b: 35,
+              c: 5
+           }, {
+              y: '2016',
+              a: 0,
+              b: 0,
+              c: 0
+           }],
+           xkey: 'y',
+           ykeys: ['a', 'b', 'c'],
+           labels: ['Series A', 'Series B', 'Series C'],
+           lineColors: [orangeColor, purpleColor, tealColor],
+        });
+     }
+	 
+	 // Init Jquery Sortable
+	$(".sortable").sortable();
+    $(".sortable").disableSelection();
+
+	 // Init All Dashboard required Widgets
+     runJvectorMap();
+     runClndr();
+     runDatatables();
+     runMorrisCharts();
+
+	//////////////////////////////////////
+	// Responsive Dashboard Chart Helpers
+	 	 
+	// Update chart size anytime the window is resized or when our primary 
+	// content container undergoes an animation(indicating a size change).
+	$(window).resize(_.debounce(function(){
+		if  ($('#graph').length){
+			$('#graph').empty();
+			runMorrisCharts()
+		}
+		if  ($('.chart-toggle').length){
+		$('.chart-toggle').empty();
+		$('#choices').empty();
+		runFlotChart();
+		}
+	}, 200));
+
+	// When a panel tab is clicked check to see if the new tab contains a chart.
+	// If it does we need to recreate it as the container size changes on tab show
+	$('.panel-tabs li').on('click', function() {
+		var Graph1 = $($(this).find('a').attr('href')).find('.chart-toggle');	
+		var Graph2 = $($(this).find('a').attr('href')).find('#graph');	
+		if ($(Graph1).length) {
+			$(Graph1).empty();
+			$('#choices').empty();
+			var timeout = setTimeout(function() {
+				runFlotChart();	
+			},100);
+		}
+		else if ($(Graph2).length) {
+			$(Graph2).empty();
+			$('#choices').empty();
+			var timeout = setTimeout(function() {
+				runMorrisCharts()	
+			},100);
+		}
+	});	
+	
+	$('body').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+		$('#graph').empty();
+		runMorrisCharts();	
+ 	});
+	
+  });
+</script>
+</body>
+</html>
