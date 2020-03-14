@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Flex Admin - Responsive Admin Theme</title>
+
+    <!-- PACE LOAD BAR PLUGIN - This creates the subtle load bar effect at the top of the page. -->
+    <link href="css/plugins/pace/pace.css" rel="stylesheet">
+    <script src="js/plugins/pace/pace.js"></script>
+
+    <!-- GLOBAL STYLES - Include these on every page. -->
+    <link href="css/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel="stylesheet" type="text/css">
+    <link href="icons/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- PAGE LEVEL PLUGIN STYLES -->
+    <link href="css/plugins/ladda/ladda-themeless.min.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-multiselect/bootstrap-multiselect.css" rel="stylesheet">
+
+    <!-- THEME STYLES - Include these on every page. -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins.css" rel="stylesheet">
+
+    <!-- THEME DEMO STYLES - Use these styles for reference if needed. Otherwise they can be deleted. -->
+    <link href="css/demo.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- begin TOP NAVIGATION -->
+        <nav class="navbar-top" role="navigation">
+
+            <!-- begin BRAND HEADING -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <i class="fa fa-bars"></i> Menu
+                </button>
+                <div class="navbar-brand">
+                    <a href="index.html">
+                        <img src="img/flex-admin-logo.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- end BRAND HEADING -->
+
+            <div class="nav-top">
+
+                <!-- begin LEFT SIDE WIDGETS -->
+                <ul class="nav navbar-left">
+                    <li class="tooltip-sidebar-toggle">
+                        <a href="#" id="sidebar-toggle" data-toggle="tooltip" data-placement="right" title="Sidebar Toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <!-- You may add more widgets here using <li> -->
+                </ul>
+                <!-- end LEFT SIDE WIDGETS -->
+
+                <!-- begin MESSAGES/ALERTS/TASKS/USER ACTIONS DROPDOWNS -->
+                <ul class="nav navbar-right">
+
+                    <!-- begin MESSAGES DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="messages-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope"></i>
+                            <span class="number">4</span> <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-scroll dropdown-messages">
+
+                            <!-- Messages Dropdown Heading -->
+                            <li class="dropdown-header">
+                                <i class="fa fa-envelope"></i> 4 New Messages
+                            </li>
+
+                            <!-- Messages Dropdown Body - This is contained within a SlimScroll fixed height box. You can change the height using the SlimScroll jQuery features. -->
+                            <li id="messageScroll">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <div class="row">
+                                                <div class="col-xs-2">
+                                                    <img class="img-circle" src="img/user-profile-1.jpg" alt="">
+                                                </div>
+                                                <div class="col-xs-10">
+                                                    <p>
+                                                        <strong>Jane Smith</strong>: Hi again! I wanted to let you know that the order...
+                                                    </p>
+                                                    <p class="small">
+                                                        <i class="fa fa-clock-o"></i> 12 minutes ago
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="row">
+                                                <div class="col-xs-2">
+                                                    <img class="img-circle" src="img/user-profile-2.jpg" alt="">
+                                                </div>
+                                                <div class="col-xs-10">
+                                                    <p>
+                                                        <strong>Roddy Austin</strong>: Thanks for the info, if you need anything from...
+                                                    </p>
+                                                    <p class="small">
+                                                        <i class="fa fa-clock-o"></i> 3:39 PM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="row">
+                                                <div class="col-xs-2">
+                                                    <img class="img-circle" src="img/user-profile-3.jpg" alt="">
+                                                </div>
+                                                <div class="col-xs-10">
+                                                    <p>
+                                                        <strong>Stacy Gibson</strong>: Hey, what was the purchase order number for the...
+                                                    </p>
+                                                    <p class="small">
+                                                        <i class="fa fa-clock-o"></i> Yesterday at 10:23 AM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="row">
+                                                <div class="col-xs-2">
+                                                    <img class="img-circle" src="img/user-profile-4.jpg" alt="">
+                                                </div>
+                                                <div class="col-xs-10">
+                                                    <p>
+                                                        <strong>Jeffrey Cortez</strong>: Check out this video I found the other day, it's...
+                                                    </p>
+                                                    <p class="small">
+                                                        <i class="fa fa-clock-o"></i> Tuesday at 12:23 PM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Messages Dropdown Footer -->
+                            <li class="dropdown-footer">
+                                <a href="mailbox.html">Read All Messages</a>
+                            </li>
+
+                        </ul>
+                        <!-- /.dropdown-menu -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <!-- end MESSAGES DROPDOWN -->
+
+                    <!-- begin ALERTS DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="alerts-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell"></i> 
+                            <span class="number">9</span><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-scroll dropdown-alerts">
+
+                            <!-- Alerts Dropdown Heading -->
+                            <li class="dropdown-header">
+                                <i class="fa fa-bell"></i> 9 New Alerts
+                            </li>
+
+                            <!-- Alerts Dropdown Body - This is contained within a SlimScroll fixed height box. You can change the height using the SlimScroll jQuery features. -->
+                            <li id="alertScroll">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon green pull-left">
+                                                <i class="fa fa-money"></i>
+                                            </div>
+                                            Order #2931 Received
+                                            <span class="small pull-right">
+                                                <strong>
+                                                    <em>3 minutes ago</em>
+                                                </strong>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon blue pull-left">
+                                                <i class="fa fa-comment"></i>
+                                            </div>
+                                            New Comments
+                                            <span class="badge blue pull-right">15</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon orange pull-left">
+                                                <i class="fa fa-wrench"></i>
+                                            </div>
+                                            Crawl Errors Detected
+                                            <span class="badge orange pull-right">3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon yellow pull-left">
+                                                <i class="fa fa-question-circle"></i>
+                                            </div>
+                                            Server #2 Not Responding
+                                            <span class="small pull-right">
+                                                <strong>
+                                                    <em>5:25 PM</em>
+                                                </strong>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon red pull-left">
+                                                <i class="fa fa-bolt"></i>
+                                            </div>
+                                            Server #4 Crashed
+                                            <span class="small pull-right">
+                                                <strong>
+                                                    <em>3:34 PM</em>
+                                                </strong>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon green pull-left">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                            New Users
+                                            <span class="badge green pull-right">5</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon orange pull-left">
+                                                <i class="fa fa-download"></i>
+                                            </div>
+                                            Downloads
+                                            <span class="badge orange pull-right">16</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon purple pull-left">
+                                                <i class="fa fa-cloud-upload"></i>
+                                            </div>
+                                            Server #8 Rebooted
+                                            <span class="small pull-right">
+                                                <strong>
+                                                    <em>12 hours ago</em>
+                                                </strong>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon red pull-left">
+                                                <i class="fa fa-bolt"></i>
+                                            </div>
+                                            Server #8 Crashed
+                                            <span class="small pull-right">
+                                                <strong>
+                                                    <em>12 hours ago</em>
+                                                </strong>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Alerts Dropdown Footer -->
+                            <li class="dropdown-footer">
+                                <a href="#">View All Alerts</a>
+                            </li>
+
+                        </ul>
+                        <!-- /.dropdown-menu -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <!-- end ALERTS DROPDOWN -->
+
+                    <!-- begin TASKS DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="tasks-link dropdown-toggle" data-toggle=dropdown>
+                            <i class="fa fa-tasks"></i> 
+                            <span class=number>10</span><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-scroll dropdown-tasks">
+
+                            <!-- Tasks Dropdown Header -->
+                            <li class="dropdown-header">
+                                <i class="fa fa-tasks"></i> 10 Pending Tasks
+                            </li>
+
+                            <!-- Tasks Dropdown Body - This is contained within a SlimScroll fixed height box. You can change the height using the SlimScroll jQuery features. -->
+                            <li id="taskScroll">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Software Update 2.1
+                                                <span class="pull-right">
+                                                    <strong>60%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Server #2 Hardware Upgrade
+                                                <span class="pull-right">
+                                                    <strong>90%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress progress-striped">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Call Ticket #2032
+                                                <span class="pull-right">
+                                                    <strong>72%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress progress-striped active">
+                                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Emergency Maintenance
+                                                <span class="pull-right">
+                                                    <strong>36%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress progress-striped">
+                                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100" style="width: 36%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Purchase Order #439
+                                                <span class="pull-right">
+                                                    <strong>52%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress progress-striped">
+                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" style="width: 52%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                March Content Update
+                                                <span class="pull-right">
+                                                    <strong>14%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100" style="width: 14%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Client #42 Data Scrubbing
+                                                <span class="pull-right">
+                                                    <strong>68%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress progress-striped">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                PHP Upgrade Server #6
+                                                <span class="pull-right">
+                                                    <strong>85%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Malware Scan
+                                                <span class="pull-right">
+                                                    <strong>66%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress progress-striped active">
+                                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                New Employee Intake
+                                                <span class="pull-right">
+                                                    <strong>98%</strong>
+                                                </span>
+                                            </p>
+                                            <div class="progress progress-striped active">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Tasks Dropdown Footer -->
+                            <li class="dropdown-footer">
+                                <a href="#">View All Tasks</a>
+                            </li>
+
+                        </ul>
+                        <!-- /.dropdown-menu -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <!-- end TASKS DROPDOWN -->
+
+                    <!-- begin USER ACTIONS DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="profile.html">
+                                    <i class="fa fa-user"></i> My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailbox.html">
+                                    <i class="fa fa-envelope"></i> My Messages
+                                    <span class="badge green pull-right">4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-bell"></i> My Alerts
+                                    <span class="badge orange pull-right">9</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-tasks"></i> My Tasks
+                                    <span class="badge blue pull-right">10</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="calendar.html">
+                                    <i class="fa fa-calendar"></i> My Calendar
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-gear"></i> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a class="logout_open" href="#logout">
+                                    <i class="fa fa-sign-out"></i> Logout
+                                    <strong>John Smith</strong>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-menu -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <!-- end USER ACTIONS DROPDOWN -->
+
+                </ul>
+                <!-- /.nav -->
+                <!-- end MESSAGES/ALERTS/TASKS/USER ACTIONS DROPDOWNS -->
+
+            </div>
+            <!-- /.nav-top -->
+        </nav>
+        <!-- /.navbar-top -->
+        <!-- end TOP NAVIGATION -->
+
+        <!-- begin SIDE NAVIGATION -->
+        <nav class="navbar-side" role="navigation">
+            <div class="navbar-collapse sidebar-collapse collapse">
+                <ul id="side" class="nav navbar-nav side-nav">
+                    <!-- begin SIDE NAV USER PANEL -->
+                    <li class="side-user hidden-xs">
+                        <img class="img-circle" src="img/profile-pic.jpg" alt="">
+                        <p class="welcome">
+                            <i class="fa fa-key"></i> Logged in as
+                        </p>
+                        <p class="name tooltip-sidebar-logout">
+                            John
+                            <span class="last-name">Smith</span> <a style="color: inherit" class="logout_open" href="#logout" data-toggle="tooltip" data-placement="top" title="Logout"><i class="fa fa-sign-out"></i></a>
+                        </p>
+                        <div class="clearfix"></div>
+                    </li>
+                    <!-- end SIDE NAV USER PANEL -->
+                    <!-- begin SIDE NAV SEARCH -->
+                    <li class="nav-search">
+                        <form role="form">
+                            <input type="search" class="form-control" placeholder="Search...">
+                            <button class="btn">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <!-- end SIDE NAV SEARCH -->
+                    <!-- begin DASHBOARD LINK -->
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-dashboard"></i> Dashboard
+                        </a>
+                    </li>
+                    <!-- end DASHBOARD LINK -->
+                    <!-- begin CHARTS DROPDOWN -->
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#charts">
+                            <i class="fa fa-bar-chart-o"></i> Charts <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="charts">
+                            <li>
+                                <a href="flot.html">
+                                    <i class="fa fa-angle-double-right"></i> Flot Charts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="morris.html">
+                                    <i class="fa fa-angle-double-right"></i> Morris.js
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end CHARTS DROPDOWN -->
+                    <!-- begin FORMS DROPDOWN -->
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#forms">
+                            <i class="fa fa-edit"></i> Forms <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="forms">
+                            <li>
+                                <a href="basic-form-elements.html">
+                                    <i class="fa fa-angle-double-right"></i> Basic Elements
+                                </a>
+                            </li>
+                            <li>
+                                <a href="advanced-form-elements.html">
+                                    <i class="fa fa-angle-double-right"></i> Advanced Elements
+                                </a>
+                            </li>
+                            <li>
+                                <a href="validation.html">
+                                    <i class="fa fa-angle-double-right"></i> Validation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="wysiwyg-editor.html">
+                                    <i class="fa fa-angle-double-right"></i> WYSIWYG Editor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dropzone-uploader.html">
+                                    <i class="fa fa-angle-double-right"></i> Dropzone Uploader
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end FORMS DROPDOWN -->
+                    <!-- begin CALENDAR LINK -->
+                    <li>
+                        <a href="calendar.html">
+                            <i class="fa fa-calendar"></i> Calendar
+                        </a>
+                    </li>
+                    <!-- end CALENDAR LINK -->
+                    <!-- begin TABLES DROPDOWN -->
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#tables">
+                            <i class="fa fa-table"></i> Tables <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="tables">
+                            <li>
+                                <a href="basic-tables.html">
+                                    <i class="fa fa-angle-double-right"></i> Basic Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="advanced-tables.html">
+                                    <i class="fa fa-angle-double-right"></i> Advanced Tables
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end TABLES DROPDOWN -->
+                    <!-- begin UI ELEMENTS DROPDOWN -->
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#ui-elements">
+                            <i class="fa fa-wrench"></i> UI Elements <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav in" id="ui-elements">
+                            <li>
+                                <a href="portlets.html">
+                                    <i class="fa fa-angle-double-right"></i> Portlets &amp; Widgets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="buttons.html">
+                                    <i class="fa fa-angle-double-right"></i> Buttons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tabs-accordions.html">
+                                    <i class="fa fa-angle-double-right"></i> Tabs &amp; Accordions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">
+                                    <i class="fa fa-angle-double-right"></i> Popups &amp; Notifications
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sliders.html">
+                                    <i class="fa fa-angle-double-right"></i> Sliders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="typography.html">
+                                    <i class="fa fa-angle-double-right"></i> Typography
+                                </a>
+                            </li>
+                            <li>
+                                <a href="icons.html">
+                                    <i class="fa fa-angle-double-right"></i> Icons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="grid.html">
+                                    <i class="fa fa-angle-double-right"></i> Grid
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end UI ELEMENTS DROPDOWN -->
+                    <!-- begin MESSAGE CENTER DROPDOWN -->
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#message-center">
+                            <i class="fa fa-inbox"></i> Message Center <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="message-center">
+                            <li>
+                                <a href="mailbox.html">
+                                    <i class="fa fa-angle-double-right"></i> Mailbox
+                                </a>
+                            </li>
+                            <li>
+                                <a href="compose-message.html">
+                                    <i class="fa fa-angle-double-right"></i> Compose Message
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chat.html">
+                                    <i class="fa fa-angle-double-right"></i> Chat
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end MESSAGE CENTER DROPDOWN -->
+                    <!-- begin PAGES DROPDOWN -->
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#pages">
+                            <i class="fa fa-files-o"></i> Pages <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="pages">
+                            <li>
+                                <a href="profile.html">
+                                    <i class="fa fa-angle-double-right"></i> User Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">
+                                    <i class="fa fa-angle-double-right"></i> Invoice
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pricing.html">
+                                    <i class="fa fa-angle-double-right"></i> Pricing Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faq.html">
+                                    <i class="fa fa-angle-double-right"></i> FAQ Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="search-results.html">
+                                    <i class="fa fa-angle-double-right"></i> Search Results
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-angle-double-right"></i> Login Basic
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login-social.html">
+                                    <i class="fa fa-angle-double-right"></i> Login Social
+                                </a>
+                            </li>
+                            <li>
+                                <a href="404.html">
+                                    <i class="fa fa-angle-double-right"></i> 404 Error
+                                </a>
+                            </li>
+                            <li>
+                                <a href="500.html">
+                                    <i class="fa fa-angle-double-right"></i> 500 Error
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blank.html">
+                                    <i class="fa fa-angle-double-right"></i> Blank Page
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end PAGES DROPDOWN -->
+                </ul>
+                <!-- /.side-nav -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <!-- /.navbar-side -->
+        <!-- end SIDE NAVIGATION -->
+
+        <!-- begin MAIN PAGE CONTENT -->
+        <div id="page-wrapper">
+
+            <div class="page-content">
+
+                <!-- begin PAGE TITLE ROW -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-title">
+                            <h1>Buttons
+                                <small>Size and Color Options</small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li><i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                </li>
+                                <li class="active">Buttons</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <!-- end PAGE TITLE ROW -->
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+
+                        <div class="portlet portlet-default">
+                            <div class="portlet-heading">
+                                <div class="portlet-title">
+                                    <h4>Buttons</h4>
+                                </div>
+                                <div class="portlet-widgets">
+                                    <a href="#"><i class="fa fa-gear"></i></a>
+                                    <span class="divider"></span>
+                                    <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                                    <span class="divider"></span>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#buttons"><i class="fa fa-chevron-down"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="buttons" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <h3>Flex Admin Buttons</h3>
+                                    <button class="btn btn-default">Default</button>
+                                    <button class="btn btn-green">Green</button>
+                                    <button class="btn btn-blue">Blue</button>
+                                    <button class="btn btn-orange">Orange</button>
+                                    <button class="btn btn-red">Red</button>
+                                    <button class="btn btn-purple">Purple</button>
+                                    <button class="btn btn-white">White</button>
+                                    <hr>
+
+                                    <h3>Flex Admin Buttons (Disabled)</h3>
+                                    <button class="btn btn-default disabled">Default</button>
+                                    <button class="btn btn-green disabled">Green</button>
+                                    <button class="btn btn-blue disabled">Blue</button>
+                                    <button class="btn btn-orange disabled">Orange</button>
+                                    <button class="btn btn-red disabled">Red</button>
+                                    <button class="btn btn-purple disabled">Purple</button>
+                                    <button class="btn btn-white disabled">White</button>
+                                    <hr>
+
+                                    <h3>Squared Buttons</h3>
+                                    <button class="btn btn-default btn-square">Default</button>
+                                    <button class="btn btn-green btn-square">Green</button>
+                                    <button class="btn btn-blue btn-square">Blue</button>
+                                    <button class="btn btn-orange btn-square">Orange</button>
+                                    <button class="btn btn-red btn-square">Red</button>
+                                    <button class="btn btn-purple btn-square">Purple</button>
+                                    <button class="btn btn-white btn-square">White</button>
+                                    <hr>
+
+                                    <h3>Bootstrap Buttons</h3>
+                                    <button class="btn btn-primary">Primary</button>
+                                    <button class="btn btn-success">Success</button>
+                                    <button class="btn btn-info">Info</button>
+                                    <button class="btn btn-warning">Warning</button>
+                                    <button class="btn btn-danger">Danger</button>
+                                    <button class="btn btn-link">Link</button>
+                                    <hr>
+
+                                    <h3>Bootstrap Buttons (Disabled)</h3>
+                                    <button class="btn btn-primary disabled">Primary</button>
+                                    <button class="btn btn-success disabled">Success</button>
+                                    <button class="btn btn-info disabled">Info</button>
+                                    <button class="btn btn-warning disabled">Warning</button>
+                                    <button class="btn btn-danger disabled">Danger</button>
+                                    <button class="btn btn-link disabled">Link</button>
+                                    <hr>
+
+                                    <h3>Button Sizes</h3>
+                                    <p>
+                                        <button type="button" class="btn btn-default btn-lg">Large button</button>
+                                        <button type="button" class="btn btn-green btn-lg">Large button</button>
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-default">Default button</button>
+                                        <button type="button" class="btn btn-green">Default button</button>
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-default btn-sm">Small button</button>
+                                        <button type="button" class="btn btn-green btn-sm">Small button</button>
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+                                        <button type="button" class="btn btn-green btn-xs">Extra small button</button>
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-default btn-block">Block level button</button>
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-green btn-block">Block level button</button>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portlet portlet-green">
+                            <div class="portlet-heading">
+                                <div class="portlet-title">
+                                    <h4>Button Groups</h4>
+                                </div>
+                                <div class="portlet-widgets">
+                                    <a href="#"><i class="fa fa-gear"></i></a>
+                                    <span class="divider"></span>
+                                    <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                                    <span class="divider"></span>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#buttonGroups"><i class="fa fa-chevron-down"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="buttonGroups" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+
+                                    <h3>Basic Example</h3>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-white">Left</button>
+                                        <button type="button" class="btn btn-white">Middle</button>
+                                        <button type="button" class="btn btn-white">Right</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-green">Left</button>
+                                        <button type="button" class="btn btn-red">Middle</button>
+                                        <button type="button" class="btn btn-purple">Right</button>
+                                    </div>
+                                    <hr>
+
+                                    <h3>Button Toolbar</h3>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-white">1</button>
+                                        <button type="button" class="btn btn-white">2</button>
+                                        <button type="button" class="btn btn-white">3</button>
+                                        <button type="button" class="btn btn-white">4</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-white">5</button>
+                                        <button type="button" class="btn btn-white">6</button>
+                                        <button type="button" class="btn btn-white">7</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-white">8</button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">1</button>
+                                        <button type="button" class="btn btn-default">2</button>
+                                        <button type="button" class="btn btn-default">3</button>
+                                        <button type="button" class="btn btn-default">4</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">5</button>
+                                        <button type="button" class="btn btn-default">6</button>
+                                        <button type="button" class="btn btn-default">7</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">8</button>
+                                    </div>
+                                    <hr>
+
+                                    <h3>Sizing</h3>
+                                    <div class="btn-group btn-group-lg">
+                                        <button type="button" class="btn btn-green">Left</button>
+                                        <button type="button" class="btn btn-green">Middle</button>
+                                        <button type="button" class="btn btn-green">Right</button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-orange">Left</button>
+                                        <button type="button" class="btn btn-orange">Middle</button>
+                                        <button type="button" class="btn btn-orange">Right</button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-purple">Left</button>
+                                        <button type="button" class="btn btn-purple">Middle</button>
+                                        <button type="button" class="btn btn-purple">Right</button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="btn-group btn-group-xs">
+                                        <button type="button" class="btn btn-red">Left</button>
+                                        <button type="button" class="btn btn-red">Middle</button>
+                                        <button type="button" class="btn btn-red">Right</button>
+                                    </div>
+                                    <hr>
+
+                                    <h3>Nesting</h3>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-white">1</button>
+                                        <button type="button" class="btn btn-white">2</button>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+                                                Dropdown
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <h3>Vertical Variation</h3>
+                                    <div class="btn-group-vertical">
+                                        <button type="button" class="btn btn-default">Button</button>
+                                        <button type="button" class="btn btn-default">Button</button>
+                                        <div class="btn-group">
+                                            <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                Dropdown
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-default">Button</button>
+                                        <button type="button" class="btn btn-default">Button</button>
+                                        <div class="btn-group">
+                                            <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                Dropdown
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                Dropdown
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                Dropdown
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                                <li><a href="#">Dropdown link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <h3>Justified Link Variation</h3>
+                                    <div class="btn-group btn-group-justified">
+                                        <a class="btn btn-green" role="button">Left</a>
+                                        <a class="btn btn-red" role="button">Middle</a>
+                                        <a class="btn btn-blue" role="button">Right</a>
+                                    </div>
+                                    <br>
+                                    <div class="btn-group btn-group-justified">
+                                        <a class="btn btn-default" role="button">Left</a>
+                                        <a class="btn btn-white" role="button">Middle</a>
+                                        <div class="btn-group">
+                                            <a class="btn btn-orange dropdown-toggle" data-toggle="dropdown">
+                          Right <span class="caret"></span>
+                        </a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Action</a>
+                                                </li>
+                                                <li><a href="#">Another action</a>
+                                                </li>
+                                                <li><a href="#">Something else here</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.col-lg-6 -->
+
+                    <div class="col-lg-6">
+
+                        <div class="portlet portlet-orange">
+                            <div class="portlet-heading">
+                                <div class="portlet-title">
+                                    <h4>Social Buttons</h4>
+                                </div>
+                                <div class="portlet-widgets">
+                                    <a href="#"><i class="fa fa-gear"></i></a>
+                                    <span class="divider"></span>
+                                    <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                                    <span class="divider"></span>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#socialButtons"><i class="fa fa-chevron-down"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="socialButtons" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div class="row">
+                                        <div class="col-sm-6 social-buttons">
+                                            <h3>Social Buttons</h3>
+                                            <a class="btn btn-block btn-social btn-bitbucket">
+                                                <i class="fa fa-bitbucket"></i> Sign in with Bitbucket
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-dropbox">
+                                                <i class="fa fa-dropbox"></i> Sign in with Dropbox
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-facebook">
+                                                <i class="fa fa-facebook"></i> Sign in with Facebook
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-flickr">
+                                                <i class="fa fa-flickr"></i> Sign in with Flickr
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-github">
+                                                <i class="fa fa-github"></i> Sign in with GitHub
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-google-plus">
+                                                <i class="fa fa-google-plus"></i> Sign in with Google
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-instagram">
+                                                <i class="fa fa-instagram"></i> Sign in with Instagram
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-linkedin">
+                                                <i class="fa fa-linkedin"></i> Sign in with LinkedIn
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-pinterest">
+                                                <i class="fa fa-pinterest"></i> Sign in with Pinterest
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-tumblr">
+                                                <i class="fa fa-tumblr"></i> Sign in with Tumblr
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-twitter">
+                                                <i class="fa fa-twitter"></i> Sign in with Twitter
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-vk">
+                                                <i class="fa fa-vk"></i> Sign in with VK
+                                            </a>
+
+                                            <hr>
+
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="social-sizes">
+                                                <h3>Different Sizes</h3>
+                                                <a class="btn btn-block btn-social btn-lg btn-google-plus">
+                                                    <i class="fa fa-google-plus"></i>
+                                                    Sign in with Google
+                                                </a>
+                                                <a class="btn btn-block btn-social btn-google-plus">
+                                                    <i class="fa fa-google-plus"></i>
+                                                    Sign in with Google
+                                                </a>
+                                                <a class="btn btn-block btn-social btn-sm btn-google-plus">
+                                                    <i class="fa fa-google-plus"></i>
+                                                    Sign in with Google
+                                                </a>
+                                                <a class="btn btn-block btn-social btn-xs btn-google-plus">
+                                                    <i class="fa fa-google-plus"></i>
+                                                    Sign in with Google
+                                                </a>
+                                                <hr>
+                                                <div class="text-center">
+                                                    <a class="btn btn-social-icon btn-lg btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                                                    <a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                                                    <a class="btn btn-social-icon btn-sm btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                                                    <a class="btn btn-social-icon btn-xs btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <a class="btn btn-social-icon btn-bitbucket"><i class="fa fa-bitbucket"></i></a>
+                                                <a class="btn btn-social-icon btn-dropbox"><i class="fa fa-dropbox"></i></a>
+                                                <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                                                <a class="btn btn-social-icon btn-flickr"><i class="fa fa-flickr"></i></a>
+                                                <a class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></a>
+                                                <a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                                                <a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+                                                <a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                                                <a class="btn btn-social-icon btn-pinterest"><i class="fa fa-pinterest"></i></a>
+                                                <a class="btn btn-social-icon btn-tumblr"><i class="fa fa-tumblr"></i></a>
+                                                <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                                                <a class="btn btn-social-icon btn-vk"><i class="fa fa-vk"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portlet portlet-blue">
+                            <div class="portlet-heading">
+                                <div class="portlet-title">
+                                    <h4>Button Dropdowns</h4>
+                                </div>
+                                <div class="portlet-widgets">
+                                    <a href="#"><i class="fa fa-gear"></i></a>
+                                    <span class="divider"></span>
+                                    <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                                    <span class="divider"></span>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#buttonDropdowns"><i class="fa fa-chevron-down"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="buttonDropdowns" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+
+                                    <h3>Single Button Dropdowns</h3>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-green dropdown-toggle" data-toggle="dropdown">Green
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-blue dropdown-toggle" data-toggle="dropdown">Blue
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown">Orange
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-red dropdown-toggle" data-toggle="dropdown">Red
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown">Purple
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">White
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <hr>
+
+                                    <h3>Split Button Dropdowns</h3>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">Default</button>
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-green">Green</button>
+                                        <button type="button" class="btn btn-green dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-blue">Blue</button>
+                                        <button type="button" class="btn btn-blue dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-orange">Orange</button>
+                                        <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-red">Red</button>
+                                        <button type="button" class="btn btn-red dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-purple">Purple</button>
+                                        <button type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-white">White</button>
+                                        <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <hr>
+
+                                    <h3>Sizing</h3>
+                                    <div class="btn-group">
+                                        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                                            Large button
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <br>
+                                    <br>
+                                    <div class="btn-group">
+                                        <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                                            Small button
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <br>
+                                    <br>
+                                    <div class="btn-group">
+                                        <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                                            Extra small button
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <hr>
+
+                                    <h3>Dropup Variation</h3>
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-default">Dropup</button>
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-green">Right dropup</button>
+                                        <button type="button" class="btn btn-green dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right" role="menu">
+                                            <li><a href="#">Action</a>
+                                            </li>
+                                            <li><a href="#">Another action</a>
+                                            </li>
+                                            <li><a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portlet portlet-red">
+                            <div class="portlet-heading">
+                                <div class="portlet-title">
+                                    <h4>Advanced Multi Selects</h4>
+                                </div>
+                                <div class="portlet-widgets">
+                                    <a href="#"><i class="fa fa-gear"></i></a>
+                                    <span class="divider"></span>
+                                    <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                                    <span class="divider"></span>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#multiSelect"><i class="fa fa-chevron-down"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="multiSelect" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+
+                                    <h3>Radio Dropdown</h3>
+                                    <p>
+                                        <select id="multiselect1">
+                                            <option value="cheese" selected>Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+                                    </p>
+                                    <hr>
+
+                                    <h3>Checklist Dropdown</h3>
+                                    <p>
+                                        <select id="multiselect2" multiple="multiple">
+                                            <option value="cheese" selected>Cheese</option>
+                                            <option value="tomatoes" selected>Tomatoes</option>
+                                            <option value="mozarella" selected>Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+                                    </p>
+                                    <hr>
+
+                                    <h3>Checklist Dropdown with Select All</h3>
+                                    <p>
+                                        <select id="multiselect3" multiple="multiple">
+                                            <option value="cheese">Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+                                    </p>
+                                    <hr>
+
+                                    <h3>Checklist Dropdown with Search</h3>
+                                    <p>
+                                        <select id="multiselect4" multiple="multiple"></select>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portlet portlet-default">
+                            <div class="portlet-heading">
+                                <div class="portlet-title">
+                                    <h4>Button Loading States</h4>
+                                </div>
+                                <div class="portlet-widgets">
+                                    <a href="#"><i class="fa fa-gear"></i></a>
+                                    <span class="divider"></span>
+                                    <a href="javascript:;"><i class="fa fa-refresh"></i></a>
+                                    <span class="divider"></span>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#buttonStates"><i class="fa fa-chevron-down"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="buttonStates" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+
+                                    <h3>Expanding Spinner</h3>
+                                    <button class="btn btn-default ladda-button" data-style="expand-left">
+                                        <span class="ladda-label">Expand Left</span>
+                                    </button>
+                                    <button class="btn btn-default ladda-button" data-style="expand-right">
+                                        <span class="ladda-label">Expand Right</span>
+                                    </button>
+                                    <button class="btn btn-default ladda-button" data-style="expand-up">
+                                        <span class="ladda-label">Expand Up</span>
+                                    </button>
+                                    <button class="btn btn-default ladda-button" data-style="expand-down">
+                                        <span class="ladda-label">Expand Down</span>
+                                    </button>
+                                    <hr>
+
+                                    <h3>Zooming Spinner</h3>
+                                    <button class="btn btn-green ladda-button" data-style="zoom-in">
+                                        <span class="ladda-label">Zoom In</span>
+                                    </button>
+                                    <button class="btn btn-green ladda-button" data-style="zoom-out">
+                                        <span class="ladda-label">Zoom Out</span>
+                                    </button>
+                                    <hr>
+
+                                    <h3>Sliding Spinner</h3>
+                                    <button class="btn btn-orange ladda-button" data-style="slide-left">
+                                        <span class="ladda-label">Slide Left</span>
+                                    </button>
+                                    <button class="btn btn-orange ladda-button" data-style="slide-right">
+                                        <span class="ladda-label">Slide Right</span>
+                                    </button>
+                                    <button class="btn btn-orange ladda-button" data-style="slide-up">
+                                        <span class="ladda-label">Slide Up</span>
+                                    </button>
+                                    <button class="btn btn-orange ladda-button" data-style="slide-down">
+                                        <span class="ladda-label">Slide Down</span>
+                                    </button>
+                                    <hr>
+
+                                    <h3>Loading Bar</h3>
+                                    <div class="progress-demo">
+                                        <button class="btn btn-purple ladda-button" data-style="expand-right">
+                                            <span class="ladda-label">Expand Right</span>
+                                        </button>
+                                        <button class="btn btn-purple ladda-button" data-style="expand-left">
+                                            <span class="ladda-label">Expand Left</span>
+                                        </button>
+                                        <button class="btn btn-purple ladda-button" data-style="contract">
+                                            <span class="ladda-label">Contract</span>
+                                        </button>
+                                    </div>
+                                    <hr>
+
+                                    <h3>Sizes</h3>
+                                    <button class="btn btn-red btn-xs ladda-button" data-style="expand-right" data-size="xs">
+                                        <span class="ladda-label">Extra Small</span>
+                                    </button>
+                                    <button class="btn btn-red btn-sm ladda-button" data-style="expand-right" data-size="s">
+                                        <span class="ladda-label">Small</span>
+                                    </button>
+                                    <button class="btn btn-red btn-lg ladda-button" data-style="expand-right" data-size="l">
+                                        <span class="ladda-label">Large</span>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.col-lg-6 -->
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.page-content -->
+
+        </div>
+        <!-- /#page-wrapper -->
+        <!-- end MAIN PAGE CONTENT -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- GLOBAL SCRIPTS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="js/plugins/popupoverlay/defaults.js"></script>
+    <!-- Logout Notification Box -->
+    <div id="logout">
+        <div class="logout-message">
+            <img class="img-circle img-logout" src="img/profile-pic.jpg" alt="">
+            <h3>
+                <i class="fa fa-sign-out text-green"></i> Ready to go?
+            </h3>
+            <p>Select "Logout" below if you are ready<br> to end your current session.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="login.html" class="btn btn-green">
+                        <strong>Logout</strong>
+                    </a>
+                </li>
+                <li>
+                    <button class="logout_close btn btn-green">Cancel</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /#logout -->
+    <!-- Logout Notification jQuery -->
+    <script src="js/plugins/popupoverlay/logout.js"></script>
+    <!-- HISRC Retina Images -->
+    <script src="js/plugins/hisrc/hisrc.js"></script>
+
+    <!-- PAGE LEVEL PLUGIN SCRIPTS -->
+    <script src="js/plugins/ladda/spin.min.js"></script>
+    <script src="js/plugins/ladda/ladda.min.js"></script>
+    <script src="js/plugins/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+
+    <!-- THEME SCRIPTS -->
+    <script src="js/flex.js"></script>
+    <script src="js/demo/buttons-demo.js"></script>
+
+</body>
+
+</html>
