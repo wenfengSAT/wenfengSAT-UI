@@ -1,0 +1,219 @@
+/*
+ * ************************************************************* *
+ * Name        : eNotify                                         *
+ * Description : CSS for the notification plugin.                *
+ * Version     : Version 1                                       *
+ * Author      : CreativeMilk                                    *
+ * Author URI  : www.creativemilk.net                            *
+ * Updated     : 2014-01-03 22:30:40 UTC+02:00                   *
+ * Copyright   : (c) 2011 CreativeMilk                           *
+ * ************************************************************* *
+ */
+
+/*
+ * ===============================================================
+ * GROWL
+ * ===============================================================
+ */ 
+ 
+.e-growl-left-top,
+.e-growl-left-bottom,
+.e-growl-right-top,
+.e-growl-right-bottom{
+	position : fixed;
+	z-index  : 8000;
+}
+.e-growl-left-top{
+	top    : 20px;
+	left   : 20px;
+	margin : 0;
+}
+.e-growl-left-bottom{
+	bottom : 10px;
+	left   : 20px;
+	margin : 0;
+}
+.e-growl-right-top{
+	top    : 20px;
+	right  : 20px;
+	margin : 0;
+}
+.e-growl-right-bottom{
+	right  : 20px;
+	bottom : 10px;
+	margin : 0;
+}
+.e-growl-wrapper{
+	width      : 260px;
+	padding    : 0;
+	list-style : none;
+}
+.e-growl-wrapper li{
+	float  : left;
+	width  : 100%;
+	margin : 0 0 20px 0;
+}
+.e-growl-left-top .e-growl,
+.e-growl-left-bottom .e-growl{
+	left : -320px;
+}
+.e-growl-right-top .e-growl,
+.e-growl-right-bottom .e-growl{
+	right : -320px;
+}
+.e-growl{
+	position                : relative;
+	display                 : none;
+	float                   : left;
+	z-index                 : 9100;
+	width                   : 260px;
+	padding                 : 15px 15px 10px 15px;
+	background-clip         : padding-box;	
+	list-style              : none;
+	-webkit-background-clip : padding-box; 
+	-moz-background-clip    : padding; 
+}
+.e-growl > span{
+	position    : absolute;
+	top         : 0;
+	right       : 0;
+	height      : 16px;
+	width       : 16px;
+	cursor      : pointer;
+	font-size   : 10px;
+	font-weight : bold;
+	line-height : 14px;
+	text-align  : center;
+}
+.e-growl-img{
+	float  : left;	
+	height : 40px;
+	width  : 40px;
+}
+.e-growl-img img{
+	float  : left;
+	height : 100%;
+	width  : 100%;
+}
+.e-growl-content{
+	float : right;
+	width : 180px;
+}
+.e-growl-content h5{
+	margin      : 0 10px 5px 0;
+	font-size   : 13px;
+	line-height : 13px;
+}
+.e-growl-content p{
+	margin      : 0 0 5px 0;
+	font-size   : 11px;
+	line-height : 16px;
+}
+
+/* colors */
+
+.growl-default{
+	background-color : rgb(0,0,0);/* fallback */
+	background-color : rgba(0,0,0,0.8);
+	color            : #fff;
+}
+.growl-white{
+	background-color : rgb(255,255,255);/* fallback */
+	background-color : rgba(255,255,255,0.8);
+	color            : #000;
+}
+
+/*
+ * ===============================================================
+ * NOTIFICATION
+ * ===============================================================
+ */ 
+
+.e-notification-top{
+	position : fixed;
+	top      : 0;
+	left     : 0;
+	width    : 100%;
+	z-index  : 9000;
+}
+.e-notification-bottom{
+	position : fixed;
+	bottom   : 0;
+	left     : 0;
+	width    : 100%;
+	z-index  : 9000;
+}
+.e-notification{
+	position    : relative;
+	display     : none;
+	z-index     : 9000;
+	height      : 30px;
+	padding     : 0 10px;
+	line-height : 30px;
+	text-align  : center;	
+	text-align  : left;
+}
+.e-notification-top .e-notification,
+.e-notification-bottom .e-notification{
+	margin      : 0;
+	padding     : 0;
+	line-height : 28px;
+	text-align  : center;
+}
+.e-notification-top .e-notification{
+	border-top : none;
+}
+.e-notification-bottom .e-notification{
+	border-bottom : none;
+}
+.e-notification img{
+	height : 16px;
+	width  : 16px;
+	margin : 0 5px 2px 0;
+}
+.e-notification > span{
+	position    : absolute;
+	top         : 5px;
+	right       : 5px;
+	height      : 30px;
+	width       : 30px;
+	cursor      : pointer;
+	font-family : Verdana,Geneva,sans-serif;
+	font-size   : 10px;
+	line-height : 18px;
+	text-align  : center;
+}
+
+/*
+ * ===============================================================
+ * ELOADER
+ * ===============================================================
+ */ 
+
+#e-loader{
+	display : none;
+	z-index : 9800!important;
+}
+#e-loader-overlay{
+	position         : fixed;
+	top              : 0;
+	left             : 0;
+	z-index          : 9801;
+	height           : 100%;
+	width            : 100%;
+	background-color : #000;
+}
+#e-loader-img{
+	position              : fixed;
+	z-index               : 9999;		
+	background-color      : #fff;
+	border-radius         : 5px;
+	-webkit-border-radius : 5px;
+	-moz-border-radius    : 5px;
+}
+#e-loader-img img{
+	float   : left;
+	margin  : 10px;
+	padding : 0;
+}
+

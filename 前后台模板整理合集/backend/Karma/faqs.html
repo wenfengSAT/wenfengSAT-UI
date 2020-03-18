@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7 no-js"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7 no-js"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8 no-js">      <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9 no-js">           <![endif]-->
+<!--[if gt IE 9]>  <html class="no-js">                       <![endif]-->
+<!--[if !IE]><!--> <html class="no-js">                       <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Karma - Responsive minimalistic bootstrapped admin theme.</title>
+
+    <!-- // IOS webapp icons // -->
+    
+    <meta name="apple-mobile-web-app-title" content="Karma Webapp">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/mobile/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/mobile/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/mobile/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/mobile/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/mobile/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/mobile/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/mobile/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" />
+    
+    <!-- // IOS webapp splash screens // -->
+    
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+          href="http://themes.creativemilk.net/images/mobile/apple-touch-startup-image-1536x2008.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+          href="http://themes.creativemilk.net/images/mobile/apple-touch-startup-image-1496x2048.png"/>     
+ 	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
+          href="http://themes.creativemilk.net/images/mobile/apple-touch-startup-image-768x1004.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
+          href="http://themes.creativemilk.net/images/mobile/apple-touch-startup-image-748x1024.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" 
+          href="http://themes.creativemilk.net/images/mobile/apple-touch-startup-image-640x1096.png"/>    
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+          href="http://themes.creativemilk.net/images/mobile/apple-touch-startup-image-640x920.png"/>    
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+          href="http://themes.creativemilk.net/images/mobile/apple-touch-startup-image-320x460.png"/>    
+    
+    <!-- // Windows 8 tile // -->
+    
+    <meta name="application-name" content="Karma Webapp">
+    <meta name="msapplication-TileColor" content="#333333" />
+	<meta name="msapplication-TileImage" content="images/mobile/windows8-icon.png" />
+
+    <!-- // Handheld devices misc // -->
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    
+    <!-- // Stylesheets // -->
+    
+    <link rel="stylesheet" href="bootstrap/core/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/select2/select2.css"/>
+    <link rel="stylesheet" href="bootstrap/datepicker/css/datepicker.css"/>
+    <link rel="stylesheet" href="bootstrap/fileupload/bootstrap-fileupload.min.css"/>
+    <link rel="stylesheet" href="bootstrap/typeahead/typeahead.min.css"/>
+    <link rel="stylesheet" href="bootstrap/colorpicker/css/colorpicker.css"/>
+    <link rel="stylesheet" href="bootstrap/timepicker/css/bootstrap-timepicker.min.css"/>
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="css/bootstrap-extended.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/helpers.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/light-theme.css"/>
+    <link rel="stylesheet" href="css/mediaqueries.css"/>
+    
+    <!-- // Helpers // -->
+    
+    <script src="js/plugins/modernizr.min.js"></script> 
+    <script src="js/plugins/mobiledevices.js"></script>
+    
+    <!-- // jQuery core // -->
+    
+    <script src="js/libs/jquery-1.11.0.min.js"></script>
+    <script src="js/libs/jquery-ui-1.10.4.min.js"></script>
+    
+    <!-- // Bootstrap // -->
+    
+    <script src="bootstrap/core/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap/select2/select2.min.js"></script>
+	<script src="bootstrap/bootboxjs/bootboxjs.min.js"></script>
+    <script src="bootstrap/holder/holder.min.js"></script>
+    <script src="bootstrap/typeahead/typeahead.min.js"></script>
+	<script src="bootstrap/datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="bootstrap/fileupload/bootstrap-fileupload.min.js"></script>
+	<script src="bootstrap/inputmask/bootstrap-inputmask.min.js"></script>
+    <script src="bootstrap/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    <script src="bootstrap/timepicker/js/bootstrap-timepicker.min.js"></script>
+    
+    <!-- // Custom/premium plugins // -->
+    
+    <script src="js/plugins/responsivetables.1.0.min.js"></script> 
+    <script src="js/plugins/responsivehelper.1.0.min.js"></script>  
+    <script src="js/plugins/mainmenu.1.0.min.js"></script>
+    <script src="js/plugins/easyfiletree.1.0.min.js"></script> 
+  	<script src="js/plugins/autosaveforms.1.0.min.js"></script> 
+    <script src="js/plugins/chainedinputs.1.0.min.js"></script>
+	<script src="js/plugins/checkboxtoggle.1.0.min.js"></script> 
+    <script src="js/plugins/bootstraptabsextend.1.0.min.js"></script>
+    <script src="js/plugins/lockscreen.1.0.min.js"></script>
+    <script src="js/plugins/autoexpand.1.0.min.js"></script>
+    <script src="js/plugins/notify.1.0.min.js"></script>
+ 	<script src="js/plugins/nanogress.1.0.min.js"></script>
+    <script src="js/plugins/powerwizard.1.0.min.js"></script>
+    <script src="js/plugins/simpleselect.1.0.min.js"></script>
+    <script src="js/plugins/tinycontextmenu.1.0.min.js"></script>
+      
+    <!-- // Third-party plugins // -->
+    
+    <script src="js/plugins/tinyscrollbar.min.js"></script>  
+    <script src="js/plugins/jquery.knob.js"></script> 
+    <script src="js/plugins/prism.min.js"></script>            
+    <script src="js/plugins/h5f.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+    <script src="js/plugins/gmap3.min.js"></script>
+    <script src="js/plugins/jquery.tablesorter.min.js"></script>
+    <script src="js/plugins/jquery.tablesorter.widgets.min.js"></script>
+    <script src="js/plugins/jquery.tablesorter.pager.min.js"></script>
+    <script src="js/plugins/fullcalendar.min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/plugins/hogan-2.0.0.js"></script>
+    <script src="js/plugins/jquery.nouislider.min.js"></script>
+    <script src="js/plugins/jquery.autosize-min.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/jquery.pwstrength.min.js"></script>
+    <script src="js/plugins/jquery.mixitup.min.js"></script>
+    <script src="js/plugins/jquery.vticker.min.js"></script>
+    <script src="js/flot/jquery.flot.min.js"></script>
+    <script src="js/flot/jquery.flot.resize.min.js"></script>
+    <script src="js/flot/excanvas.min.js"></script>
+    <script src="js/plugins/layout.min.js"></script>
+    <script src="js/plugins/masonry.pkgd.min.js"></script>
+    <script src="js/plugins/json2.js"></script>
+    
+    <!-- // Custom //-->
+    
+    <script src="js/plugins/theme-demo.min.js"></script>    
+     
+</head>
+<body> 
+	<div id="container" class="clearfix">
+
+    <!-- ******************************************** 
+         * SIDEBAR MAIN:                            *
+         *                                          *
+         * the part which contains the main         *
+         * navigation, logo, search and more...     *
+         ******************************************** -->
+                   
+		<aside id="sidebar-main" class="sidebar">
+            
+        	<div class="sidebar-logo">
+            	<a href="index.html" id="logo-big"><h1>karma</h1><h2>/webapp</h2></a>
+            </div><!-- End .sidebar-logo -->
+            
+            <!-- ********** -->
+            <!-- NEW MODULE -->
+            <!-- ********** -->
+                    
+            <div class="sidebar-module"> 
+                <div class="sidebar-profile">
+                    <img src="images/users/user-1.jpg" alt="" class="avatar"/>
+                    <span class="indicator-dot">2</span>
+                    <ul class="sidebar-profile-list">
+                        <li><h3>Hi, Steven Watson</h3></li>
+                        <li><a href="faqs.html#">Profile</a>  | <a href="faqs.html#">Mail</a> | <a href="faqs.html#">Logout</a></li>
+                    </ul>
+                </div><!-- End .sidebar-profile -->
+            </div><!-- End .sidebar-module --> 
+            
+            <div class="sidebar-line"><!-- A seperator line --></div>
+            
+            <!-- * Tabs can be removed, if so dont forget * -->
+            <!-- * to remove the .tab-pane divs(wrapper). * -->
+             
+            <ul class="ext-tabs-sidebar">
+                <li class="active">
+                    <a href="faqs.html#sidebar-tab-1"><i class="fa fa-bars"></i> Navigation</a>
+                </li>
+                <li>
+                    <a href="faqs.html#sidebar-tab-2"><i class="fa fa-picture-o"></i> Gallery</a>
+                </li>            
+            </ul><!-- End .ext-tabs-sidebar -->
+            <div class="tab-content">
+                <div id="sidebar-tab-1" class="tab-pane active clearfix">
+                
+                    <!-- ********** -->
+                    <!-- NEW MODULE -->
+                    <!-- ********** -->
+                    
+                    <div class="sidebar-module"> 
+                        <nav class="sidebar-nav-v2">                         
+                            <ul>
+                                <li>
+                                    <a href="index.html"><i class="fa fa-dashboard"></i> Dashboard <span class="indicator-pill">32</span></a>
+                                </li>
+                                <li>
+                                    <a href="statistics.html"><i class="fa fa-sun-o"></i> Statistics<span class="indicator-dot">2</span></a>
+                                </li>
+                                <li>
+                                    <a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a>
+                                </li>
+                                <li>
+                                    <a href="calendar.html"><i class="fa fa-calendar-o"></i> Calendar</a>
+                                </li>                 
+                                <li>
+                                    <a href="faqs.html#"><i class="fa fa-envelope-o"></i> Form Elements <i class="fa fa-caret-left pull-right"></i></a>
+                                    
+                                    <!-- * sub menu * -->
+                                    <ul>
+                                        <li>
+                                            <a href="forms.html">Forms</a>
+                                        </li> 
+                                        <li>
+                                            <a href="forgot.html">Forgot Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="login.html">Login Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="login2.html">Login 2 Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="reset.html">Reset Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="signup.html">Signup Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html">Wizard</a>
+                                        </li>  
+                                        <li>
+                                            <a href="wysiwyg.html">WYSIWYG</a>
+                                        </li>                                                          
+                                    </ul>
+                                    
+                                </li>
+                                <li  class="menu-open">
+                                    <a href="faqs.html#"><i class="fa fa-file-o"></i> Pages <i class="fa fa-caret-left pull-right"></i></a>
+                                                            
+                                    <!-- * sub menu * -->
+                                    <ul>
+                                        <li>
+                                            <a href="faqs.html#">Billing</a>
+                                        </li>                          
+                                        <li>
+                                            <a href="comments.html">Comments</a>
+                                        </li> 
+                                        <li>
+                                            <a href="clients.html">Clients</a>
+                                        </li>
+                                        <li class="page-arrow active-page">
+                                            <a href="faqs.html">FAQs</a>
+                                        </li> 
+                                        <li>
+                                            <a href="files.html">Files</a>
+                                        </li> 
+                                        <li>
+                                            <a href="planning.html">Planning</a>
+                                        </li>  
+                                        <li>
+                                            <a href="faqs.html#">Social</a>
+                                        </li>  
+                                        <li>
+                                            <a href="ticketsupport.html">Ticket Support</a>
+                                        </li>
+                                        <li>
+                                            <a href="timeline.html">Timeline</a>
+                                        </li>
+                                        <li>
+                                            <a href="wiki.html">Wiki</a>
+                                        </li>                                                                                        
+                                    </ul>
+                                    
+                                </li>                         
+                                <li>
+                                    <a href="faqs.html#"><i class="fa fa-star-o"></i> UI Elements<i class="fa fa-caret-left pull-right"></i></a>
+                                    
+                                    <!-- * sub menu * -->
+                                    <ul>                            
+                                        <li>
+                                            <a href="buttonsandicons.html">Buttons &amp; Icons</a>
+                                        </li>
+                                        <li>
+                                            <a href="notifications.html">Notifications</a>
+                                        </li>                                    
+                                        <li>
+                                            <a href="dropdownmenu.html">Dropdown &amp; Menu</a>
+                                        </li> 
+                                        <li>
+                                            <a href="misc.html">Misc</a>
+                                        </li>  
+                                        <li>
+                                            <a href="tabs.html">Tabs</a>
+                                        </li>
+                                        <li>
+                                            <a href="toolbars.html">Toolbars</a>
+                                        </li>                                                                                                                         
+                                    </ul>
+                                    
+                                </li>
+                                <li class="seperator"><!-- * seperator line * --></li>
+                                <li>
+                                    <a href="media.html"><i class="fa fa-picture-o"></i> Media</a>
+                                </li>
+                                <li>
+                                    <a href="modules.html"><i class="fa fa-wrench"></i> Modules</a>
+                                </li> 
+								<li>
+                                    <a href="faqs.html#"><i class="fa fa-bars"></i> Menu Levels<i class="fa fa-caret-left pull-right"></i></a>
+                                    
+                                    <!-- * sub menu * -->
+                                    <ul>                            
+                                        <li>
+                                            <a href="faqs.html#">Sub level 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="faqs.html#">Sub level 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="faqs.html#">Sub level 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="faqs.html#">Sub level 1<i class="fa fa-caret-left pull-right"></i></a>
+                                            
+                                                <!-- * sub sub menu * -->
+                                                <ul>
+                                                    <li>
+                                                        <a href="faqs.html#">Sub level 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="faqs.html#">Sub level 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="faqs.html#">Sub level 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="faqs.html#">Sub level 2</a>
+                                                    </li>                                              
+                                                </ul> 
+                                                	
+                                        </li> 
+                                        <li>
+                                            <a href="faqs.html#">Sub level 1</a>
+                                        </li>                                                                                                                       
+                                    </ul>
+                                    
+                                </li>                          
+                                <li>
+                                    <a href="tables.html"><i class="fa fa-table"></i> Tables</a>
+                                </li>                           
+                                <li>
+                                    <a href="pagelayout.html"><i class="fa fa-th"></i> Page Layout</a>
+                                </li>                     
+                                <li>
+                                    <a href="faqs.html#"><i class="fa fa-warning"></i> Error Pages <i class="fa fa-caret-left pull-right"></i></a>
+                                    
+                                    <!-- * sub menu * -->
+                                    <ul>                            
+                                        <li>
+                                            <a href="400.html">400</a>
+                                        </li>
+                                        <li>
+                                            <a href="401.html">401</a>
+                                        </li>
+                                        <li>
+                                            <a href="403.html">403</a>
+                                        </li>
+                                        <li>
+                                            <a href="404.html">404</a>
+                                        </li>
+                                        <li>
+                                            <a href="500.html">500</a>
+                                        </li>
+                                        <li>
+                                            <a href="503.html">503</a>
+                                        </li>                                                                                                                  
+                                    </ul>
+                                    
+                                </li>
+                                <li>
+                                    <a href="maps.html"><i class="fa fa-map-marker"></i> Maps</a>
+                                </li> 
+                                <li>
+                                    <a href="widgets.html"><i class="fa fa-columns"></i> Widgets</a>
+                                </li> 
+                                <li>
+                                    <a href="sitemap.html"><i class="fa fa-sitemap"></i> Sitemap</a>
+                                </li>                                                                                                                   
+                            </ul>
+                        </nav><!-- End .sidebar-nav-v1 --> 
+             		</div><!-- End .sidebar-module -->                 
+                </div>
+            	<div id="sidebar-tab-2" class="tab-pane clearfix">
+
+                    <!-- ********** -->
+                    <!-- NEW MODULE -->
+                    <!-- ********** -->
+                    
+                    <div class="sidebar-module">                        
+                        <div class="thumbs-list thumbs-small">
+                            <ul>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li> 
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>
+                                <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/60x60/karma-grey" alt=""/></a></li>                                                                                                                                          
+                            </ul>                                                                    
+                        </div><!-- End .thumbs-list -->
+            		</div><!-- End .sidebar-module --> 
+                </div>
+            </div><!-- End .tab-content -->
+            
+            <div class="sidebar-line"><!-- A seperator line --></div>
+             
+        </aside><!-- End aside --> 
+
+        <div id="main" class="clearfix">
+        
+        <!-- ******************************************** 
+             * MAIN HEADER:                             *
+             *                                          *  
+             * the part which contains the breadcrumbs, *
+             * dropdown menus, toggle sidebar button    *
+             ******************************************** -->
+
+			<header id="header-main">
+            	<div class="header-main-top">
+                	<div class="pull-left">
+                    
+                    	<!-- * This is the responsive logo * --> 
+                                   
+                    	<a href="index.html" id="logo-small"><h4>karma</h4><h5>/webapp</h5></a>
+                    </div>
+                    <div class="pull-right">
+                    
+                    	<!-- * This is the trigger that will show/hide the menu * -->
+                        <!-- * if the layout is in responsive mode              * -->
+                        
+						<a href="faqs.html#" id="responsive-menu-trigger">
+                        	<i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div><!-- End #header-main-top --> 
+                <div class="header-main-bottom">
+                	<div class="pull-left">                        
+                    	<ul class="breadcrumb">
+                            <li><a href="faqs.html#">Home</a></li>
+                            <li><a href="faqs.html#">Library</a></li>
+                            <li class="active">Data</li>
+                        </ul><!-- End .breadcrumb -->
+                    </div>
+                    <div class="pull-right">
+                        <p>Version 1.0.0</p>
+                    </div> 
+                </div><!-- End #header-main-bottom -->            
+            </header><!-- End #header-main --> 
+        
+            <div id="content" class="clearfix">
+
+                <!-- ********************************************
+                     * WINDOW:                                  *
+                     *                                          *
+                     * the part which contains the main content *
+                     ******************************************** -->
+                                     
+                <div class="window">
+                    <div class="inner-padding">
+                        <div class="subheading">
+                            <h3>FAQs</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla urna a tellus elementum rutrum. Morbi sed ipsum at purus adipiscing 
+                                volutpat et vitae ligula. Fusce a ante enim. Morbi eu enim a neque pulvinar dictum. In imperdiet ultrices leo sit amet blandit. 
+                                Vestibulum fermentum turpis a risus pellentesque vitae luctus mi ultrices. Maecenas ornare, odio sed molestie iaculis, mi libero aliquam metus, 
+                                ac tempor felis elit vitae purus. Sed rhoncus, purus et ullamcorper rhoncus, quam metus faucibus eros, vel tristique tortor massa id diam. 
+                                Vestibulum augue lectus, commodo eget rutrum rutrum, ornare et nibh. Vivamus urna dui, molestie sed iaculis non, molestie sed tortor. 
+                                Mauris vel convallis ipsum. 
+                            </div>
+                        </div> 
+                        <div class="spacer-40"></div> 
+                        <div class="faq">
+                            <article class="faq-group faq-open">
+                                <header>
+                                	<i class="fa fa-minus"></i>
+                                	<h3>Maecenas ornare, odio sed molestie.</h3>
+                                </header>
+                                <div class="faq-content clearfix">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla urna a tellus elementum rutrum. Morbi sed ipsum at purus adipiscing 
+                                        volutpat et vitae ligula. Fusce a ante enim. Morbi eu enim a neque pulvinar dictum. In imperdiet ultrices leo sit amet blandit. 
+                                        Vestibulum fermentum turpis a risus pellentesque vitae luctus mi ultrices. Maecenas ornare, odio sed molestie iaculis, mi libero aliquam metus, 
+                                    </p>
+                                    <div class="spacer-10"></div>
+                                    <p>
+                                    	ac tempor felis elit vitae purus. Sed rhoncus, purus et ullamcorper rhoncus, quam metus faucibus eros, vel tristique tortor massa id diam. 
+                                    	Vestibulum augue lectus, commodo eget rutrum rutrum, ornare et nibh. Vivamus urna dui, molestie sed iaculis non, molestie sed tortor.
+                                        Mauris vel convallis ipsum. 
+                                    </p>
+                                    <div class="spacer-20"></div>
+                                    <p>For more information</p>
+                                    <div class="spacer-20"></div>                                   
+                                    <ul>
+                                    	<li><a href="faqs.html#" class="bold">Example number one</a></li>
+                                        <li><a href="faqs.html#" class="bold">Example number two</a></li>
+                                        <li><a href="faqs.html#" class="bold">Example number three</a></li>
+                                    </ul> 
+                                </div>
+                            </article><!-- End .faq-group -->
+                            <article class="faq-group">
+                                <header>
+                                	<i class="fa fa-plus"></i>
+                                	<h3>Nulla fringilla urna a tellus elementum rutrum. Morbi sed ipsum at purus adipiscing.</h3>
+                                </header>
+                                <div class="faq-content clearfix">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla urna a tellus elementum rutrum. Morbi sed ipsum at purus adipiscing 
+                                        volutpat et vitae ligula. Fusce a ante enim. Morbi eu enim a neque pulvinar dictum. In imperdiet ultrices leo sit amet blandit. 
+                                        Vestibulum fermentum turpis a risus pellentesque vitae luctus mi ultrices. Maecenas ornare, odio sed molestie iaculis, mi libero aliquam metus, 
+                                    </p>
+                                    <div class="spacer-10"></div>
+                                    <p>
+                                    	ac tempor felis elit vitae purus. Sed rhoncus, purus et ullamcorper rhoncus, quam metus faucibus eros, vel tristique tortor massa id diam. 
+                                    	Vestibulum augue lectus, commodo eget rutrum rutrum, ornare et nibh. Vivamus urna dui, molestie sed iaculis non, molestie sed tortor.
+                                        Mauris vel convallis ipsum. 
+                                    </p>
+                                    <div class="spacer-20"></div>
+                                    <strong>For more information</strong>
+                                    <div class="spacer-10"></div>
+                                    <ul>
+                                    	<li>quam metus faucibus eros</li>
+                                        <li>ipsum at purus adipiscing volutpat et</li>
+                                        <li>pellentesque vitae luctus mi ultrices</li>
+                                        <li>commodo eget rutrum rutrum, ornare
+                                        	<ul>
+                                            	<li>fermentum turpis a risus</li>
+                                                <li>vitae luctus mi</li>
+                                                <li>molestie iaculis, mi libero</li>
+                                            </ul>
+                                        </li>
+                                        <li>ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                    </ul> 
+                                </div>
+                            </article><!-- End .faq-group -->
+                            <article class="faq-group">
+                                <header>
+                                	<i class="fa fa-plus"></i>
+                                	<h3>Mauris vel convallis ipsum pulvinar.</h3>
+                                </header>
+                                <div class="faq-content clearfix">
+                                    <ol>
+                                    	<li>quam metus faucibus eros</li>
+                                        <li>ipsum at purus adipiscing volutpat et</li>
+                                        <li>pellentesque vitae luctus mi ultrices</li>
+                                        <li>commodo eget rutrum rutrum, ornare</li>
+                                        <li>fermentum turpis a risus</li>
+                                        <li>vitae luctus mi</li>
+                                        <li>molestie iaculis, mi libero</li>
+                                        <li>ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                    </ol> 
+                                </div>
+                            </article><!-- End .faq-group -->
+                            <article class="faq-group">
+                                <header>
+                                	<i class="fa fa-plus"></i>
+                                	<h3>Pellentesque vitae luctus mi ultrices dolor.</h3>
+                                </header>
+                                <div class="faq-content clearfix">
+                                    <p>
+                                    	Act tempor felis elit vitae purus. Sed rhoncus, purus et ullamcorper rhoncus, quam metus faucibus eros, vel tristique tortor massa id diam. 
+                                    	Vestibulum augue lectus, commodo eget rutrum rutrum, ornare et nibh. Vivamus urna dui, molestie sed iaculis non, molestie sed tortor.
+                                        Mauris vel convallis ipsum. 
+                                    </p>
+                                    <dl>
+                                    	<dt>Quam metus faucibus eros</dt>
+                                        <dd>
+                                        	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim lectus ante, eu vulputate nisl. Curabitur nulla ligula, 
+                                        	ultricies vel consectetur et, interdum ac ligula.
+                                        </dd>
+                                    	<dt>Donec dignissim lectus ante, eu vulputate nisl</dt>
+                                        <dd>
+                                        	Aliquam vestibulum, lorem id pharetra bibendum, neque sapien blandit purus, in semper risus turpis id diam. Vivamus ligula nisi, 
+                                            lobortis rutrum adipiscing ut, aliquet eu massa. Cras iaculis nisi tellus, tincidunt cursus orci. Sed sed purus enim, at porttitor libero. 
+                                        </dd>
+                                    	<dt>Lorem ipsum dolor sit amet, consectetur adipiscing elit</dt>
+                                        <dd>
+                                        	Ut pretium blandit luctus. Nulla in dapibus est. Maecenas gravida ipsum at felis tincidunt tincidunt sodales ante tristique. 
+                                            Duis quis lectus arcu, eget vulputate velit. Donec nulla ligula, cursus eu facilisis ac, molestie eu urna. Praesent iaculis, 
+                                            augue et dignissim fringilla, orci ante vulputate nisl, non faucibus ligula purus id massa. 
+                                    	<dt>quam metus faucibus eros</dt>
+                                        <dd>
+                                        	Etiam quis erat at urna ultrices fermentum nec ut quam. Suspendisse potenti. Duis ante felis, hendrerit et ullamcorper at, 
+                                            faucibus ac urna. Etiam sagittis pulvinar varius. 
+                                        </dd>
+                                    </dl> 
+                                </div>
+                            </article><!-- End .faq-group -->
+                            <div class="row">
+                                <div class="col-sm-6"> 
+                                    <article class="faq-group">
+                                        <header>
+                                            <i class="fa fa-plus"></i>
+                                            <h3>Vivamus ura dui, molestie sed iaculis non.</h3>
+                                        </header>
+                                        <div class="faq-content clearfix">
+                                            <div class="thumbs-list">
+                                                <ul>
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li>
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li>
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li>
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li>
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li>
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li> 
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li>
+                                                    <li><a href="faqs.html#"><img class="media-object" src="http://themes.creativemilk.net/files/karma/leftsidebar/light/holder.js/95x95/karma-grey" alt=""/></a></li>                                    
+                                                </ul>                                                                    
+                                            </div><!-- End .thumbs-list -->
+                                        </div>
+                                    </article><!-- End .faq-group -->
+                                </div>
+                            	<div class="col-sm-6"> 
+                                    <article class="faq-group">
+                                        <header>
+                                            <i class="fa fa-plus"></i>
+                                            <h3>Dolor tempor felis elit vitae purus rhoncus.</h3>
+                                        </header>
+                                        <div class="faq-content clearfix">
+                                            <p>
+                                                Dolor tempor felis elit vitae purus. Sed rhoncus, purus et ullamcorper rhoncus, quam metus faucibus eros, vel tristique tortor massa id diam. 
+                                                Vestibulum augue lectus, commodo eget rutrum rutrum, ornare et nibh. Vivamus urna dui, molestie sed iaculis non, molestie sed tortor.
+                                                Mauris vel convallis ipsum. 
+                                            </p>
+                                        </div>
+                                    </article><!-- End .faq-group -->
+                            	</div>
+                        	</div>
+                        </div>       
+                    </div><!-- End .inner-padding -->
+                    <div class="spacer-30"></div> 
+                </div><!-- End .window --> 
+                
+                <!-- ********************************************
+                     * FOOTER MAIN:                             *
+                     *                                          *
+                     * the part which contains things like      * 
+                     * chat, buttons, copyright and             *
+                     * dropup menu(s).                          *
+                     ******************************************** -->
+                    
+                <footer id="footer-main" class="footer-sticky">
+                    <div class="footer-main-inner">
+                        <div class="pull-left">
+                            <p>Copyright © 2013 CreativeMilk</p>
+                        </div> 
+                        <div class="pull-right">
+                            <div class="dropup">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="faqs.html#">
+                                    <i class="fa fa-folder"></i>
+                                </a>
+                                <ul role="menu" class="dropdown-menu pull-center ext-dropdown-icons-vertical">
+                                    <li>
+                                        <a href="faqs.html#"><i class="fa fa-comments"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="faqs.html#"><i class="fa fa-rss"></i></a>
+                                    </li>
+                                    <li class="disabled">
+                                        <a href="faqs.html#"><i class="fa fa-link"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="faqs.html#"><i class="fa fa-file"></i></a>
+                                    </li>
+                                </ul>
+                            </div><!-- End .dropup -->        
+                            <div class="dropup">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="faqs.html#">
+                                    <i class="fa fa-inbox"></i>
+                                </a>
+                                <div role="menu" class="dropdown-menu ext-dropdown-inbox pull-right">
+                                    <div class="ext-dropdown-header">
+                                        <h5>Inbox</h5>
+                                        <a href="faqs.html#" class="btn btn-default btn-sm delete-master"><i class="fa fa-trash-o"></i></a>
+                                        <span class="indicator-dot">3</span>
+                                    </div>
+                                    <div class="ext-dropdown-inbox-content">
+                                        <div>
+                                            <a href="faqs.html#">He did you get my new blog post?</a>
+                                            <ul>
+                                                <li><span>Send by:</span> <a href="faqs.html#">Debra Hopper</a></li>
+                                                <li><span>Date:</span> Dec 12, 2012 - 14:03:09</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="faqs.html#">Reply</a> - 
+                                                    <a href="faqs.html#">Read</a> -
+                                                    <a href="faqs.html#">Spam</a> -  
+                                                    <a href="faqs.html#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <a href="faqs.html#">I really love your karma theme</a>
+                                            <ul>
+                                                <li><span>Send by:</span> <a href="faqs.html#">Nathan Rupertson</a></li>
+                                                <li><span>Date:</span> Dec 3, 2012 - 22:44:12</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="faqs.html#">Reply</a> - 
+                                                    <a href="faqs.html#">Read</a> -
+                                                    <a href="faqs.html#">Spam</a> -  
+                                                    <a href="faqs.html#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <a href="faqs.html#">Feedback of a happy customer</a>
+                                            <ul>
+                                                <li><span>Send by:</span> <a href="faqs.html#">Steven Watson</a></li>
+                                                <li><span>Date:</span> Nov 18, 2012 - 10:53:59</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="faqs.html#">Reply</a> - 
+                                                    <a href="faqs.html#">Read</a> -
+                                                    <a href="faqs.html#">Spam</a> -  
+                                                    <a href="faqs.html#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <span>No new emails</span>                                                                      	
+                                    </div>
+                                    <div class="ext-dropdown-footer">
+                                        <div class="progress bar-small">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                        <p>60%</p>
+                                        <a href="faqs.html#" class="btn btn-default btn-sm"><i class="fa fa-caret-right"></i></a>
+                                    </div>                 
+                                </div>
+                            </div><!-- End .dropup -->                                       
+                            <a href="faqs.html#" class="btn" id="toggle-footer">
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                        </div> 
+                    </div><!-- End .footer-main-inner -->   
+                </footer><!-- End #footer-main --> 
+            </div><!-- End #content -->  
+    	</div><!-- End #main -->     
+    </div><!-- End #container --> 
+</body>
+</html>

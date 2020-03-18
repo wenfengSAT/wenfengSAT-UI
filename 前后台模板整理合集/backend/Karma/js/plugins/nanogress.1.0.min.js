@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : NanoGress                                        *
+ * Date       : December 2012                                    *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : --/--/----                                       *
+ * Developer  : Mark                                             *
+ * Dependency : jQuery UI core                                   *
+ * Lib        : jQuery 1.7+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){function t(){}t();e.nanoGress={start:function(t){function i(){var t=Math.floor(Math.random()*5)+1;e(".nanogress-bar").animate({width:"+="+t+"%"},t*1e3,function(){r=r+t;if(r<=93){i()}})}if(typeof t==="undefined"){var t=""}if(t.target){var n=e(t.target)}else{var n=e("body")}n.append('<div class="nanogress"><div class="nanogress-bar"></div></div>');i();var r=0},end:function(t){if(typeof t==="undefined"){var t=""}if(t.delay){var n=t.delay}else{var n=0}setTimeout(function(){e(".nanogress-bar").stop(true).animate({width:"100%"},400,function(){e(this).parent().delay(200).fadeOut(200,function(){e(this).remove();if(typeof t.onEnd=="function"){t.onEnd.call(this)}})})},n)}}})

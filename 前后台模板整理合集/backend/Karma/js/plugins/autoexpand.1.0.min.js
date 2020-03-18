@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : Auto expand                                      *
+ * Date       : September 2012                                   *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : 2013-12-21 12:58:08 UTC+02:00                    *
+ * Developer  : Mark                                             *
+ * Dependency :                                                  *
+ * Lib        : jQuery 1.7+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){function n(n,r){this.obj=e(n);this.o=e.extend({},e.fn[t].defaults,r);this.init()}var t="autoExpand";n.prototype={init:function(){var t=this;t.obj.on("focus",function(){var n=e(this).innerHeight();if(e(this).data("autoexpand-size")>1){var r=e(this).attr("data-autoexpand-size")}else{r=t.o.height}e(this).attr("data-autoexpand-default",n).animate({height:r},t.o.speed,function(){if(typeof t.o.onFocus=="function"){t.o.onFocus.call(this,{item:e(this)})}})});t.obj.on("blur",function(){var n=e(this).attr("data-autoexpand-default");if(t.o.keepOpen=="false"||t.o.keepOpen=="present"&&e(this).val().length==0){e(this).animate({height:n},t.o.speed,function(){if(typeof t.o.onBlur=="function"){t.o.onBlur.call(this,{item:e(this)})}})}})},update:function(e){var t=this},destroy:function(){e.removeData(this.obj,this.pluginName)}};e.fn[t]=function(r,i){return this.each(function(){var s=e(this);var o=s.data(t);var u=typeof r=="object"&&r;if(!o){s.data(t,o=new n(this,u))}if(typeof r=="string"){o[r](i)}})};e.fn[t].defaults={speed:200,height:150,keepOpen:"present",onFocus:function(e){},onBlur:function(e){}}})

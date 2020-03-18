@@ -1,0 +1,150 @@
+/*
+ * ************************************************************* *
+ * Name        : Lock screen                                     *
+ * Theme URI   :                                                 *
+ * Description : Lock screen stylesheet.                         *
+ * Version     : Version 1                                       *
+ * Author      : CreativeMilk                                    *
+ * Author URI  : www.creativemilk.net                            *
+ * Updated     : 2014-01-01 23:55:39 UTC+02:00                   *
+ * Copyright   : (c) 2012 CreativeMilk                           *
+ * ************************************************************* *
+ */
+
+.lockscreen-ready{ }/* Active if modal is visible. This class is added to the body tag.*/
+
+.lockscreen{
+	position : fixed;
+	display  : none;	
+	top      : 0;
+	right    : 0;
+	bottom   : 0;
+	left     : 0;
+	z-index  : 9999;
+	height   : 100%;
+	width    : 100%;
+}
+.lockscreen#lockscreen-target{
+	position : absolute;
+	z-index  : 9;
+}
+.lockscreen-overlay{
+	height         : 100%;
+	width          : 100%;
+	opacity        : 0.8;
+	-ms-filter     : "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	-moz-opacity   : 0.8;
+	-khtml-opacity : 0.8;	
+}
+#lockscreen-target .lockscreen-overlay{
+	opacity        : 0.5;
+	-ms-filter     : "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	-moz-opacity   : 0.5;
+	-khtml-opacity : 0.5;
+}
+.lockscreen-modal{
+	position : absolute;
+	top      : 50%;
+	left     : 50%;
+	width    : 220px;
+	margin   : 0 0 0 -110px;
+	padding  : 40px;
+}
+#lockscreen-target .lockscreen-modal{
+	margin-top : -75px;
+}
+#lockscreen-slider .lockscreen-modal{
+	margin-top : -117px;
+}
+#lockscreen-form .lockscreen-modal{
+	margin-top : -134px;
+}
+#lockscreen-button .lockscreen-modal{
+	margin-top : -114px;
+}
+.lockscreen-avatar{
+	float  : left;
+	height : 78px;
+	width  : 78px;
+	margin : 0 0 40px 29px;
+}
+.lockscreen-user{
+	float      : left;
+	width      : 100%;
+	margin     : 0 0 20px 0;
+	font-size  : 14px;
+	text-align : center;
+}
+.lockscreen-placeholder{
+	float : left;
+	width : 100%;
+}
+.lockscreen-slider{
+	height  : 36px;
+	padding : 2px;
+}
+.lockscreen-slider-inner{
+	position     : relative;
+	height       : 30px;
+	margin-right : 40px;
+}
+.lockscreen-slider .ui-slider-handle{
+	position   : absolute;
+	top        : 0;
+	left       : 0;
+	z-index    : 1;
+	height     : 30px;
+	width      : 40px;
+	cursor     : e-resize;
+	text-align : center;
+}
+.lockscreen-slider .ui-slider-handle i{
+	cursor      : e-resize;
+	line-height : 30px;
+}
+.lockscreen-slider-text{
+	position    : absolute;
+	top         : 0;
+	right       : 0;
+	left        : 0;
+	height      : 30px;
+	width       : 134px;
+	padding     : 0 10px;
+	cursor      : default;
+	font-weight : bold;
+	line-height : 30px;
+	text-align  : right;
+}
+.lockscreen-password{
+	margin     : 0 0 10px 0;
+	text-align : center;
+}
+.lockscreen-button{
+	float  : left;
+	width  : 100%;
+	margin : 0;	
+}
+.lockscreen-button .btn{
+	width  : 100%;
+	margin : 0;
+}
+.lockscreen-modal .btn{
+	margin : 0;
+}
+.lockscreen-loader{
+	position            : absolute;
+	left                : 0;
+	top                 : 0;
+	height              : 100%;
+	width               : 100%;
+	z-index             : 100;
+	display             : none;
+	background-position : center center;
+	background-repeat   : no-repeat;
+}
+.lockscreen-loader img{
+	position : absolute;
+	left     : 50%;
+	top      : 50%;
+	margin   : -12px 0 0 -12px;
+}

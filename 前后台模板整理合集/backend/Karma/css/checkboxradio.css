@@ -1,0 +1,108 @@
+/*
+ * ************************************************************* *
+ * Name        : checkboxradio.css                               *
+ * Theme URI   :                                                 *
+ * Description : Checkbox and radio buttons styling.             *
+ * Version     : Version 1                                       *
+ * Author      : CreativeMilk                                    *
+ * Author URI  : www.creativemilk.net                            *
+ * Updated     : 2014-01-20 00:31:50 UTC+02:00                   *
+ * Copyright   : (c) 2013 CreativeMilk                           *
+ * ************************************************************* *
+ */
+ 
+label{
+	position : relative;
+}
+label input[type="radio"],
+label input[type="checkbox"]{
+	height         : 14px;
+	width          : 14px;
+	margin         : 0 5px 0 0;
+	padding        : 0;		
+	opacity        : 0;
+	border         : 0;
+	outline        : 0;
+	filter         : alpha(opacity=0);
+	-ms-filter     : "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-moz-opacity   : 0;
+	-khtml-opacity : 0;
+	z-index        : 2;
+	position       : relative;
+}
+label input[type="radio"] + span,
+label input[type="checkbox"] + span{
+	position          : absolute;
+	left              : 0;
+	top               : 8px;
+	height            : 14px;
+	width             : 14px;
+	margin            : 0;
+	background-repeat : no-repeat;
+	z-index           : 1;
+}
+label input[type="checkbox"] + span,
+label input[type="checkbox"]:required + span{
+	background-position : 0 0;
+}
+label input[type="checkbox"]:hover + span{
+	background-position : 0 -14px;
+}
+label input[type="checkbox"]:checked + span{
+	background-position : 0 -28px;
+}
+label input[type="checkbox"]:checked:hover + span{
+	background-position : 0 -42px;
+}
+/*
+It goes right into invalid so not sure if this is a bug or default behavior.
+
+label input[type="checkbox"]:required:invalid + span{
+	background-position : 0 -56px;
+}
+*/
+label input[type="radio"] + span{
+	background-position : -14px 0;
+}
+label input[type="radio"]:hover + span{
+	background-position : -14px -14px;
+}
+label input[type="radio"]:checked + span{
+	background-position : -14px -28px;
+}
+label input[type="radio"]:checked:hover + span{
+	background-position : -14px -42px;
+}
+/*
+It goes right into invalid so not sure if this is a bug or default behavior.
+
+label input[type="radio"]:required:invalid + span{
+	background-position : 0 -56px;
+}
+*/
+label input[type="radio"]:disabled + span,
+label input[type="checkbox"]:disabled + span{
+	cursor  : not-allowed;
+	opacity : 0.5;
+}
+
+/* Clothing labels layout */
+
+.radio-box input[type="radio"] + span{
+	float            : left;
+	height           : 20px;
+	line-height      : 20px;
+	width            : 40px;
+	text-align       : center;
+	font-weight      : bold;
+	margin           : -5px 0 0 0 0;
+	background-image : none;
+	cursor           : default;
+	font-size        : 12px;
+	position         : relative;
+	top              : 0;
+}
+.radio-box input[type="radio"]{
+	margin-left : -20px;
+}
+.radio-box input[type="radio"]:checked + span{ }

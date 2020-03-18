@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : Simple Select                                    *
+ * Date       : Feb 2013                                         *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : 2013-12-23 13:11:46 UTC+02:00                    *
+ * Developer  : Mark                                             *
+ * Dependency :                                                  *
+ * Lib        : jQuery 1.7+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){function n(n,r){this.obj=e(n);this.o=e.extend({},e.fn[t].defaults,r);this.init()}var t="simpleSelect";n.prototype={init:function(){var e=this;e._build();e._events();e.update()},_build:function(e){var t=this;if(!t.obj.attr("multiple")){t.obj.wrap('<div class="simpelselect-container"></div>').parent().prepend('<div class="simpelselect-inner"><div class="simpleselect-value"></div><div class="simpleselect-btn">'+t.o.icon+"</div></div>")}},_events:function(t){var n=this;n.obj.change(function(t){var r=e(this).parent();var i=r.find(":selected").text();var s=e(this).val();r.find(".simpleselect-value").text(i);if(typeof n.o.onChange=="function"){n.o.onChange.call(this,{item:e(this),value:s})}})},update:function(e){var t=this;var n=t.obj.find("option:selected").text();t.obj.parent().find(".simpleselect-value").text(n)},destroy:function(){e.removeData(this.obj,this.pluginName)}};e.fn[t]=function(r,i){return this.each(function(){var s=e(this);var o=s.data(t);var u=typeof r=="object"&&r;if(!o){s.data(t,o=new n(this,u))}if(typeof r=="string"){o[r](i)}})};e.fn[t].defaults={icon:'<i class="fa fa-caret-down"></i>',onChange:function(){}}})

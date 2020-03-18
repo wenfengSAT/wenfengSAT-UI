@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : Tiny Context Menu                                *
+ * Date       : September 2013                                   *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : 2013-12-27 22:18:53 UTC+02:00                    *
+ * Developer  : Mark                                             *
+ * Dependency :                                                  *
+ * Lib        : jQuery 1.7+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+ 
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){function n(n,r){this.obj=e(n);this.o=e.extend({},e.fn[t].defaults,r);this.init()}var t="tinyContextMenu";n.prototype={init:function(){var t=this;t.obj.mousedown(function(n){if(n.which===3){var r=e("body").offset();var i=n.pageX-r.left+t.o.offsetX;var s=n.pageY-r.top+t.o.offsetY;e(t.o.container).css({left:i,top:s}).show();if(typeof t.o.onShow=="function"){t.o.onShow.call(this,{container:t.o.container})}e(this).on("contextmenu",function(e){e.preventDefault()})}});e("body").on("click mousedown",function(n){if(e(t.o.container).is(":visible")){if(!e(n.target).is(t.obj)||n.type=="click"){e(t.o.container).hide()}if(typeof t.o.onHide=="function"){t.o.onHide.call(this,{container:t.o.container})}}});e(t.o.container).on("contextmenu",function(e){e.preventDefault()})},update:function(){},destroy:function(){e.removeData(this.obj,this.pluginName);e(this.o.container).remove()}};e.fn[t]=function(r){return this.each(function(){var i=e(this);var s=i.data(t);var o=typeof r=="object"&&r;if(!s){i.data(t,s=new n(this,o))}if(typeof r=="string"){s[r]()}})};e.fn[t].defaults={container:"",offsetX:0,offsetY:0,onShow:function(e){},onHide:function(e){}}})

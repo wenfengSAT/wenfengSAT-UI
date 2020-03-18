@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : Show password                                    *
+ * Date       : Feb 2013                                         *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : 2014-01-05 00:16:59 UTC+02:00                    *
+ * Developer  : Mark                                             *
+ * Dependency : jQuery UI core                                   *
+ * Lib        : jQuery 1.7+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+
+;(function(e,t,n,r){function s(t,n){this.obj=e(t);this.o=e.extend({},e.fn[i].defaults,n);this.init()}var i="showPassword";s.prototype={init:function(){var t=this;t.obj.wrap('<div class="showpassword-wrap"></div>');e(t.o.template).addClass("showpassword-hint").appendTo(".showpassword-wrap");t._events()},_events:function(t){var n=this;var r=n.obj;var i=n.obj.next(".showpassword-hint");e("body").on("click",n.o.trigger,function(t){if(i.is(":hidden")){e(this).text(n.o.labelHide);r.hide();i.show();if(typeof n.o.onHide=="function"){n.o.onHide.call(this)}}else{e(this).text(n.o.labelShow);i.hide();r.show();if(typeof n.o.onShow=="function"){n.o.onShow.call(this)}}t.preventDefault()});e("body").on("keyup",n.obj.parent().find("input"),function(t){if(e(t.target).is(".showpassword-hint")){n.obj.val(i.val())}else{i.val(r.val())}if(typeof n.o.keyup=="function"){n.o.keyup.call(this)}})},update:function(e){var t=this},destroy:function(){e.removeData(this.obj,this.pluginName)}};e.fn[i]=function(t,n){return this.each(function(){var r=e(this);var o=r.data(i);var u=typeof t=="object"&&t;if(!o){r.data(i,o=new s(this,u))}if(typeof t=="string"){o[t](n)}})};e.fn[i].defaults={trigger:"#showpassword-trigger",template:'<input class="form-control" type="text"/>',labelShow:"Show password",labelHide:"Hide password",keyup:function(){},onShow:function(){},onHide:function(){}}})(jQuery,window,document)

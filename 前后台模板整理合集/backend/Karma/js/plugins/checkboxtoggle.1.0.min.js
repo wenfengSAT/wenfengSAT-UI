@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : Checkbox Toggle                                  *
+ * Date       : December 2012                                    *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : 2014-02-10 15:45:37 UTC+02:00                    *
+ * Developer  : Mark                                             *
+ * Dependency :                                                  *
+ * Lib        : jQuery 1.7+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){function n(n,r){this.obj=e(n);this.o=e.extend({},e.fn[t].defaults,r);this.init()}var t="checkboxToggle";n.prototype={init:function(){if("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch){clickEvent="touchstart"}else{clickEvent="click"}var t=this;var n=null;var r="[type=checkbox]:not(:disabled)";t.obj.on(clickEvent,r+", "+t.o.trigger,function(s){var o=t.o.exclude==""||t.o.exclude==" "?"xxxx, "+t.o.trigger:t.o.exclude+", "+t.o.trigger;var u=t.obj.find(t.o.trigger);var a=t.obj.find(r).not(t.o.exclude);var f=e(this).attr("data-checkboxtoggle-only");var l=function(){var e=t.obj.find(r+":checked").not(o).length;return e};var c=function(){var e=t.obj.find(r).not(o).length==l()?true:false;return e};if(e(this).is(t.o.trigger)){if(f=="select"){a.prop("checked",true);t.obj.find('[data-checkboxtoggle-only="select"]').prop("checked",true).end().find('[data-checkboxtoggle-only="unselect"]').prop("checked",false)}else if(f=="unselect"){a.prop("checked",false);t.obj.find('[data-checkboxtoggle-only="unselect"]').prop("checked",true)}else{if(c()){a.prop("checked",false);t.obj.find('[data-checkboxtoggle-only="unselect"]').prop("checked",true)}else{a.prop("checked",true);t.obj.find('[data-checkboxtoggle-only="select"]').prop("checked",true).end().find('[data-checkboxtoggle-only="unselect"]').prop("checked",false)}}if(typeof t.o.onToggle=="function"){t.o.onToggle.call(this,{item:e(this),allChecked:c(),totalChecked:l()})}if(e(this).is("a")){s.preventDefault()}}else{if(!e(this).is(t.o.exclude)){if(!n){n=this}if(t.o.allowShiftSelect&&s.shiftKey){var h=a.index(e(this));var p=a.index(n);for(i=Math.min(h,p);i<=Math.max(h,p);i++){if(a.eq(h).is(":checked")){a.eq(i).prop("checked",true)}else{a.eq(i).prop("checked",false)}if(typeof t.o.onToggle=="function"){t.o.onToggle.call(this,{item:a.eq(i),allChecked:c(),totalChecked:l()})}}n=e(this)}if(c()){u.not('[data-checkboxtoggle-only="unselect"]').prop("checked",true)}else{u.prop("checked",false)}if(l()==0){t.obj.find('[data-checkboxtoggle-only="unselect"]').prop("checked",true)}if(typeof t.o.onSelect=="function"){t.o.onSelect.call(this,{item:e(this),allChecked:c(),totalChecked:l()})}}}})},update:function(){},destroy:function(){e.removeData(this.obj,this.pluginName)}};e.fn[t]=function(r){return this.each(function(){var i=e(this);var s=i.data(t);var o=typeof r=="object"&&r;if(!s){i.data(t,s=new n(this,o))}if(typeof r=="string"){s[r]()}})};e.fn[t].defaults={trigger:".checkbox-master",exclude:"",allowShiftSelect:true,onToggle:function(e){},onSelect:function(e){}}})

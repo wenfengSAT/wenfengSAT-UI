@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : Chained inputs                                   *
+ * Date       : March 2011                                       *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : 2013-12-21 21:50:14 UTC+02:00                    *
+ * Developer  : Mark                                             *
+ * Dependency :                                                  *
+ * Lib        : jQuery 1.6+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+ 
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){e.fn.chainedInputs=function(t){t=e.extend({},e.fn.chainedInputs.options,t);return this.each(function(){var n=e(this);n.on("keyup","[data-chained-group]",function(){var n=e(this).attr("data-chained-group");var r=e(this).attr("maxlength");var i=e(this).val().length;var s=e('[data-chained-group="'+n+'"]').length-1;var o=e(this).index('[data-chained-group="'+n+'"]');if(!r){var r=t.maxLength}if(i==r){if(o==s){if(t.onEndBlur===true){e(this).blur()}if(typeof t.onEnd=="function"){t.onEnd.call(this)}}else{e('[data-chained-group="'+n+'"]').eq(o+1).focus();if(typeof t.onSwitch=="function"){t.onSwitch.call(this,{item:e(this)})}}}});n.on("focus","[data-chained-group]",function(){if(this.createTextRange){var t=this.createTextRange();t.moveStart("character",this.value.length);t.collapse();t.select()}else{var n=e(this).val().length*2;this.setSelectionRange(n,n)}})})};e.fn.chainedInputs.options={maxLength:5,onEndBlur:true,onSwitch:function(e){},onEnd:function(){}}})

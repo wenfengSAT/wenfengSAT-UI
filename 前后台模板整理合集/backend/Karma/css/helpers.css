@@ -1,0 +1,380 @@
+/*
+ * ************************************************************* *
+ * Name        : Helpers.css                                     *
+ * Theme URI   :                                                 *
+ * Description : Helpers/reset stylesheet.                       *
+ * Version     : Version 1                                       *
+ * Author      : CreativeMilk                                    *
+ * Author URI  : www.creativemilk.net                            *
+ * Updated     : --/--/----                                      *
+ * Copyright   : (c) 2012 CreativeMilk                           *
+ * ************************************************************* *
+ */
+ 
+/*
+ * ===============================================================
+ * FORMS
+ * ===============================================================
+ */
+
+/* Forms */
+
+select,
+input[type="button"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"]{
+	-webkit-box-sizing      : border-box;  /* Saf3-4, iOS 1-3.2, Android < 1.6 */
+	-khtml-box-sizing       : border-box;  /* konqueror */     
+	-moz-box-sizing         : border-box;  /* FF1-3.6 */
+	-ms-box-sizing          : border-box;  /* ie8 */		 
+	box-sizing              : border-box;  /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+	-webkit-background-clip : padding-box; /* Saf3-4, iOS 1-3.2, Android < 1.6 */
+	-khtml-box-sizing       : padding-box; /* konqueror */ 
+	-moz-background-clip    : padding;     /* FF1-3.6 */
+	background-clip         : padding-box; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */			
+}
+::-webkit-input-placeholder{ }
+:-moz-placeholder{ }
+:-ms-input-placeholder{/* IE 10 */}
+textarea{
+	height             : 120px;
+	resize             : vertical;
+	-webkit-box-sizing : border-box;
+	-khtml-box-sizing  : border-box; 
+	-moz-box-sizing    : border-box;
+	-ms-box-sizing     : border-box;	 
+	box-sizing         : border-box;	
+}
+label{
+	width       : auto;
+	line-height : 22px;
+	font-size   : 13px;
+	padding     : 4px 0;
+}
+label.label-block{
+	display:block;
+}
+.form-helper{
+	width      : 100%;
+	float      : left;
+	font-style : italic;
+	font-size  : 11px;
+	margin     : 0 0 10px 0;
+}
+.helper-text-box{
+	width     : 100%;
+	float     : left;
+	font-size : 11px;
+	margin    : 5px 0 10px 0;
+}
+.form-helper-header{
+	font-weight : bold;
+}
+.helper-text-box p{
+	margin : 0;
+}
+.section-helper-footer{
+	margin : 10px 0 0 0;
+}
+.asteriks{
+	color       : #d45252;
+	font-weight : bold;
+	font-size   : 16px;
+}
+.stacked-labels{
+	margin-bottom : -10px;
+}
+.stacked-labels,
+.stacked-labels > label{
+	clear : both;
+	float : left;
+	width : auto;
+}
+.inline-labels label{
+	margin : 0 10px 0 0;
+}
+
+/*
+ * ===============================================================
+ * INTERFACE
+ * ===============================================================
+ */
+ 
+.or-line{
+	width            : 100%;
+	height           : 1px;
+	float            : left;
+	background-color : #bbb;
+	position         : relative;
+}
+.or-line span{
+	width            : 50px;
+	height           : 10px;
+	font-size        : 12px;
+	margin           : 0 0 0 -25px;
+	position         : absolute;
+	left             : 50%;
+	top              : -5px;
+	text-align       : center;
+	background-color : #fff;
+	line-height      : 10px;
+}
+.hr-totop{
+	height           : 1px;
+	width            : 100%;
+	clear            : both;
+	margin           : 0;
+	position         : relative;
+	background-color : #eee
+}
+.hr-totop span{
+	padding          : 0 5px;
+	position:absolute;
+	right:10px;
+	top:-10px;
+	font-size        : 11px;
+	cursor           : pointer;
+	color            : #999;
+	background-color : #fff
+}
+
+/*
+ * ===============================================================
+ * HELPER CLASSES
+ * ===============================================================
+ */
+ 
+.box{
+	border  : 1px solid #ccc;
+	padding : 20px;
+}
+.resize-horizontal{
+	resize : horizontal
+}
+.noresizing{
+	resize : none
+}
+.boldunderline{
+	font-weight     : bold;
+	text-decoration : underline;
+}
+.underline{
+	text-decoration : underline;
+}
+.clear{
+	clear       : both;
+	display     : block;
+	font-size   : 0;
+	height      : 0;
+	line-height : 0;
+	overflow    : hidden;
+	width       : 100%;
+}
+.relative{
+	position : relative;
+}
+.widget:before,
+.widget:after,
+.inner-spacer:before,
+.inner-padding:after,
+.timeline-msg:before,
+.timeline-msg:after{
+	content     : "\0020";
+	display     : block;
+	height      : 0;
+	overflow    : hidden; 
+	font-size   : 0;
+	line-height : 0;
+	visibility  : hidden;
+}
+.widget:after,
+.inner-padding:after,
+.timeline-msg:after{
+	clear : both; 
+}
+.widget:after,
+.inner-padding:after,
+.timeline-msg:after{
+	zoom : 1;/*IE*/
+}
+.marker,
+mark{
+	background-color : rgb(230,60,60);
+	color            : #fff;
+	font-style       : italic;
+	font-weight      : bold;
+	padding          : 0 3px;
+}
+.tip{
+	font-weight : bold;
+	color       : #F00;
+	font-size   : 11px;
+}
+.text-center{
+	text-align : center;
+}
+.vertical-line{
+	width            : 1px;
+	height           : 100%;
+	float            : left;
+	background-color : #bbb;
+	margin           : 0;
+}
+.bold{
+	font-weight : bold
+}
+.noborder{
+	border : none!important;
+}
+.overflow-x-100{
+	height     : 100px;
+	overflow-x : auto;
+}
+.overflow-x{
+	overflow-x : auto;
+}
+.overflow-y{
+	overflow-y : auto;
+}
+.overflow{
+	overflow : auto;
+}
+.relative{
+	position : relative;
+}
+.highlight-link:hover{
+	text-decoration:underline;
+}
+.nofloat{
+	float:none!important;
+}
+.block{
+	width:100%;
+	clear:both;
+	display:block;
+	float:none;
+}
+
+/* Layout helpers */
+
+.spacer-5,
+.spacer-10,
+.spacer-15,
+.spacer-20,
+.spacer-25,
+.spacer-30,
+.spacer-35,
+.spacer-40,
+.spacer-45,
+.spacer-50{
+	width : 100%;
+	clear : both;
+}
+.spacer-5{
+	height : 5px;
+}
+.spacer-10{
+	height : 10px;
+}
+.spacer-15{
+	height : 15px;
+}
+.spacer-20{
+	height : 20px;
+}
+.spacer-25{
+	height : 25px;
+}
+.spacer-30{
+	height : 30px;
+}
+.spacer-35{
+	height : 35px;
+}
+.spacer-40{
+	height : 40px;
+}
+.spacer-45{
+	height : 45px;
+}
+.spacer-50{
+	height : 50px;
+}
+.width-25{
+	width : 25px;
+}
+.width-30{
+	width : 30px;
+}
+.width-50{
+	width : 50px;
+}
+.width-100{
+	width : 100px;
+}
+.width-150{
+	width : 150px;
+}
+.width-200{
+	width : 200px;
+}
+.nopadding{
+	padding : 0!important;
+}
+.nomargin{
+	margin : 0!important;
+}
+.inner-padding{
+	padding : 20px;
+	margin  : 0;
+}
+.table .inner-padding{
+	padding : 15px;
+	margin  : 0;
+}
+.margin-0-5-0-5{
+	margin : 0 5px;
+}
+.margin-0-5-0-0{
+	margin : 0 5px 0 0;
+}
+.margin-0-10-0-10{
+	margin : 0 10px;
+}
+.margin-0-10-0-0{
+	margin : 0 10px 0 0;
+}
+.margin-0-15-0-15{
+	margin : 0 15px;
+}
+.margin-0-15-0-0{
+	margin : 0 15px 0 0;
+}
+.margin-0-20-0-20{
+	margin : 0 20px;
+}
+.margin-20-0-20-0{
+	margin : 20px 0;
+}
+.margin-0-20-0-0{
+	margin : 0 20px 0 0;
+}
+
+

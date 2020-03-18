@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : MainMenu                                         *
+ * Date       : December 2012                                    *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : --/--/----                                       *
+ * Developer  : Richard                                          *
+ * Dependency : jQuery UI core                                   *
+ * Lib        : jQuery 1.4+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){e.fn.mainMenu=function(t){t=e.extend({},e.fn.mainMenu.options,t);return this.each(function(){var n=e(this);var r=n.children().children();var i=t.closeClass;var s=t.openClass;var o=t.speed;var u=t.openAll;if("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch){var a="click tap"}else{var a="click"}r.on(a,"a",function(t){if(e(this).attr("href").lastIndexOf("#")>=0||e(this).attr("href").indexOf("javascript")>=0){if(e(this).next().is(":hidden")){e(this).find("."+s).removeClass(s).addClass(i)}else{e(this).find("."+i).removeClass(i).addClass(s)}e(this).next().stop(true,true).animate({height:"toggle"},o);t.preventDefault()}})})};e.fn.mainMenu.options={closeClass:"fa-caret-up",openClass:"fa-caret-down",speed:400}})

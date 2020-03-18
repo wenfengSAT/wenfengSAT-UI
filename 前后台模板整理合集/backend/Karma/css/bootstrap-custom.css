@@ -1,0 +1,887 @@
+/*
+ * ************************************************************* *
+ * Name        : Bootstrap Custom                                *
+ * Theme URI   :                                                 *
+ * Description : The code in this file is used to customize the  *
+ *               bootstrap code, this to fit the style of the    *
+ *				 theme. In most cases it's removing/resetting    *
+ *               elements, the bootstrap-extended.css file is    *
+ *               used to add new stuff.                          *
+ * Version     : Version 1                                       *
+ * Author      : CreativeMilk                                    *
+ * Author URI  : www.creativemilk.net                            *
+ * Updated     : 2013-11-09 01:07:35 UTC+02:00                   *
+ * Copyright   : (c) 2012 CreativeMilk                           *
+ * ************************************************************* *
+ */
+
+/* Responsive helper plugin reset */
+
+.pull-right.block > .btn,
+.pull-right.block > .btn-group,
+.pull-right.block > .dropdown,
+.pull-right.block > .dropup,
+.pull-right.block > .input-group{
+	margin : 0 10px 10px 0!important;
+	
+}
+
+/* Icons */
+
+[class*=" fa-"], 
+[class*=" icon-"]{
+	width      : 13px;
+	text-align : center;
+}
+
+/* Grid */
+
+.row{
+	margin-right : -20px;
+	margin-left  : -20px;
+}
+[class^="col-sx-"], 
+[class*=" col-sx-"],
+[class^="col-sm-"], 
+[class*=" col-sm-"],
+[class^="col-md-"], 
+[class*=" col-md-"],
+[class^="col-lg-"], 
+[class*=" col-lg-"]{
+	padding : 0 20px;
+}
+
+/* Butons */
+
+.btn{
+	position    : relative;
+	height      : 30px;
+	padding     : 5px 10px 5px 10px;
+	font-size   : 13px;
+	text-shadow : none;
+	box-shadow  : none;
+	line-height : 19px;
+}
+.btn:hover *{
+	cursor:pointer;
+}
+.btn.active,
+.btn:hover{
+	z-index : 5!important;
+}
+.btn,
+.btn-group{
+	position  : relative;
+	float     : left;
+	min-width : 32px;
+	margin    : 0 10px 10px 0;
+}
+.btn.btn-block{
+	margin : 0;
+}
+.btn.btn-lg{
+	height      : 40px;
+	padding     : 10px 20px;
+	font-weight : bold;
+}
+.btn.btn-lg i{
+	font-weight : bold;
+}
+.btn.btn-sm{
+	height      : 24px;
+	min-width   : 26px;
+	padding     : 3px 5px 2px 5px;
+	font-size   : 11px;
+	line-height : 17px;
+}
+.btn.btn-sm .fa{
+	font-size : 11px;
+	line-height:10px;
+}
+.btn.btn-xs{
+	height      : 20px;
+	min-width   : 20px;
+	padding     : 1px 4px 1px 4px;
+	font-size   : 10px;
+	line-height : 16px;
+}
+.btn.btn-xs i{
+	font-size : 10px;
+}
+.btn,
+.btn:hover,
+.btn:focus{
+	transition : none!important;
+}
+.btn.btn-link,
+.btn.btn-link:hover{
+	border : none;
+}
+.btn-group > .btn,
+.dropdown > .btn,
+.dropup > .btn{
+	margin : 0;
+}
+.btn.pull-right{
+	margin-right : 0;
+}
+.pull-right > .btn,
+.pull-right > .btn-group{
+	margin : 0 0 10px 10px;
+}
+.btn-group > .btn{
+	margin : 0  0 0 -1px;
+}
+.btn-group > .btn:first-child{
+	margin : 0;
+}
+.btn-link:hover{
+	text-decoration : underline;
+}
+.btn[type=submit]{
+	margin-bottom : 0;
+}
+/* min-width issue in ie9 fix */
+.lte9 .btn,
+.lte9 .btn-group{
+	min-width:inherit!important;
+}
+
+/* Progress bar */
+
+.progress-bar{
+	box-shadow:none;
+}
+
+/* Carousel */
+
+.carousel{
+	float:left
+}
+
+/* Tooltip */
+
+.tooltip-inner{
+	padding     : 5px 10px;
+	font-size   : 11px;
+	font-weight : normal;
+}
+
+/* Forms */
+
+form{
+	float : left;
+	width : 100%;
+}
+.pull-right > form.input-group{
+	width:200px;
+}
+.pull-right > form.input-group{
+	width:178px;
+}
+.form-control{
+	clear      : both;
+	height     : 30px;
+	font-size  : 13px;
+	box-shadow : none;
+	transition : none;
+}
+.form-control:focus{
+	box-shadow : none
+}
+select.form-control{
+	padding : 5px;
+}
+textarea:focus, 
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus, 
+input[type="date"]:focus, 
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="url"]:focus, 
+input[type="search"]:focus, 
+input[type="tel"]:focus, 
+input[type="color"]:focus, 
+.uneditable-input:focus {
+	box-shadow : none;
+	outline    : 0 none;
+}
+input.form-control{
+	padding : 0 5px;
+}
+textarea.form-control{
+	padding : 5px;
+}
+textarea,
+textarea.form-control{
+	height : 100px
+}
+.form-control.input-sm{
+	height     : 24px;
+	min-height : 24px;
+	padding    : 2px 5px!important;
+	font-size  : 11px;
+}
+.form-control.input-lg{
+	height      : 40px;
+	padding     : 10px!important;
+	font-weight : bold;
+}
+.form-control,
+.form-control:focus{
+	box-shadow : none
+}
+.checkbox-inline{
+	padding-right : 20px;
+	padding-left  : 0;
+}
+label{
+	margin : 0;
+}
+fieldset{
+	padding : 10px 20px 20px 20px;
+}
+legend{
+	width     : auto;
+	margin    : -1px 0 0 -10px;
+	padding   : 5px 10px;
+	font-size : 14px;
+	border    : none;
+}
+form .btn{
+	margin-bottom : 0;
+}
+
+/* Misc */
+
+hr{
+	margin : 0;
+	width  : 100%;
+	clear  : both;
+}
+
+/* Form groups */
+
+.input-group-addon > label{
+	margin  : -5px 0 -5px -5px;
+	height  : 26px;
+	padding : 5px;
+	width   : 18px;
+}
+.input-group-addon > label > span{
+	left : 5px!important;
+	top  : 7px!important;
+}
+.input-group-addon{
+	height  : 30px;
+	padding : 4px 10px;
+}
+.input-group-btn > .btn,
+.input-group-btn > .dropup,
+.input-group-btn > .dropdown{
+	float  : none;	
+	margin : 0 0 0 -1px;
+}
+.input-group-btn > .btn + .btn{
+	margin-left : -5px;
+}
+.input-group .input-group-btn:first-child > .btn,
+.input-group .input-group-btn:first-child > .dropup,
+.input-group .input-group-btn:first-child > .dropdown{
+	margin : 0 -5px 0 0;
+}
+.input-group .input-group-btn:first-child > .btn + .btn,
+.input-group .input-group-btn:first-child > .dropup + .btn,
+.input-group .input-group-btn:first-child > .dropdown + .btn{
+	margin : 0 -1px 0 0;
+}
+.help-block{
+	clear : both;
+}
+
+/* Dropdown/dropup */
+
+.dropup{
+	position : relative;
+}
+.dropup,
+.dropdown{
+	float   : left;
+	margin  : 0 10px 10px 0;
+	padding : 0!important;
+}
+.dropdown-toggle > img{
+	margin : 0 0 2px 0;
+}
+.dropdown-menu{
+	top        : 30px;
+	padding    : 10px 0;	
+	font-size  : 13px;
+	text-align : left;
+}
+.btn.btn-sm + .dropdown-menu{
+	top : 24px;
+}
+.btn.btn-xs + .dropdown-menu{
+	top : 20px;
+}
+.dropdown > .dropdown-menu:before,
+.btn-group > .dropdown-menu:before{
+	content      : "";
+	position     : absolute;
+	display      : inline-block;
+	top          : -7px;
+	left         : 4px;
+	border-right : 7px solid transparent;
+	border-left  : 7px solid transparent;
+}
+.dropdown > .dropdown-menu:after,
+.btn-group > .dropdown-menu:after{
+	content      : "";
+	position     : absolute;
+	display      : inline-block;
+	top          : -6px;
+	left         : 5px;
+	border-right : 6px solid transparent;
+	border-left  : 6px solid transparent;
+}
+.dropup > .dropdown-menu:before{
+	content       : "";
+	position      : absolute;
+	display       : inline-block;
+	top           : auto;
+	bottom        : -7px;
+	left          : 4px;
+	border-right  : 7px solid transparent;
+	border-bottom : none;
+	border-left   : 7px solid transparent;
+}
+.dropup > .dropdown-menu:after {
+	content       : "";
+	position      : absolute;
+	display       : inline-block;
+	top           : auto;
+	bottom        : -6px;
+	left          : 5px;
+	border-right  : 6px solid transparent;
+	border-bottom : none;
+	border-left   : 6px solid transparent;
+}
+.pull-right.dropdown-menu:before{
+	right : 4px;
+	left  : auto;
+}
+.pull-right.dropdown-menu:after{
+	right : 5px;
+	left  : auto;
+}
+.dropdown-menu .divider{
+	overflow : visible;
+}
+.dropdown-menu .divider span{
+	float       : left;
+	margin      : -6px 0 0 15px;
+	padding     : 0 5px;
+	font-size   : 10px;
+	line-height : 12px;
+}
+.dropdown-menu li > a > i{
+	float  : left;
+	margin : 2px 10px 6px 0;
+}
+.dropdown-menu li.disabled a i,
+.dropdown-menu li.disabled:hover a i{
+	cursor : default;
+}
+.dropdown-menu li > a{
+	width       : 100%;
+	padding     : 10px 20px;
+	line-height : 20px;
+}
+.dropup.open,
+.dropdown.open,
+.dropup:hover,
+.dropdown:hover{
+	z-index : 10;
+}
+.pull-right .dropup,
+.pull-right .dropdown{
+	float  : left;
+	margin : 0 0 10px 10px;
+}
+li.dropdown,
+.dropdown > .btn,
+.dropup > .btn{
+	position : relative
+	margin   : 0;
+}
+.dropup .dropdown-menu{
+	bottom : 31px;
+}
+.btn-group.open .btn.dropdown-toggle{
+	box-shadow         : none;
+	-webkit-box-shadow : none;
+	-moz-box-shadow    : none;
+}
+.btn-group .dropdown + .btn{
+	margin : 0 0 0 -1px;
+}
+.btn-group .dropdown{
+	margin : 0;
+}
+.disabled a:hover i{
+	cursor : not-allowed!important;
+}
+.dropdown-menu h5{
+	font-weight:500
+}
+
+/* Labels */
+
+.label{
+	float       : left;
+	height      : 20px;
+	margin      : 0 5px 5px 0;
+	line-height : 16px;
+}
+.label .fa{
+	width:12px;
+	float:left;
+	margin:0 5px 0 0;
+	line-height:16px;
+	text-align:center;	
+}
+.label .fa.pull-right{
+	width:12px;
+	float:none!important;
+	margin:0 0 0 5px;
+}
+
+/* List group */
+
+.list-group-item.active{
+	z-index:2;
+}
+
+/* Tabs */
+
+.tab-pane{
+	position:relative
+}
+
+/* Panels */
+
+.panel{
+	box-shadow : none;
+}
+.panel-heading{
+	padding : 12px 20px 10px 20px
+}
+.panel-footer{
+	padding : 10px 20px;
+}
+.panel-body{
+	padding : 20px;
+}
+
+/* Breadcrumbs */
+
+.breadcrumb{
+	float       : left;
+	height      : 30px;
+	margin      : 0 20px;
+	padding     : 0;
+	background  : none;
+	line-height : 30px;
+	text-shadow : none;
+}
+.breadcrumb a{
+	text-shadow : none;
+}
+
+/* Pagination */
+
+.pagination{
+	float  : left;
+	height : 30px;
+	margin : 0;	
+}
+.pagination > li > a, 
+.pagination > li > span {
+	position : relative;
+	padding  : 5px 10px 4px 10px;
+}
+.pagination > li > a{
+	margin : 0 0 0 -1px;
+}
+.pagination > li:first-child > a{
+	margin : 0;
+}
+.pagination > li:hover > a{
+	z-index : 2
+}
+
+/* Alert */
+
+.alert{
+	padding : 9px 20px 9px 20px;
+}
+.alert-block{
+	padding : 20px;
+}
+.alert i{
+	margin : 0 10px 0 0;
+	color  : inherit;
+}
+.alert .close{
+	text-shadow : none;
+	top         : 0;
+	font-size   : 20px;
+	opacity     : 0.5;
+	color       : inherit;
+}
+.alert h4{
+	margin-bottom : 10px;
+	font-size     : 13px;
+	font-weight   : bold;
+}
+.alert-inline-top{
+	margin : 0;
+}
+.alert-dismissable .close{
+	top   : -4px;
+	right : 0;
+}
+
+/* List group */
+
+.list-group-item .badge{
+	margin-top : 1px;
+}
+
+/* Modal */
+
+.modal-backdrop{
+	z-index : 5000;
+}
+.modal{
+	z-index    : 5001;
+	overflow-y : auto;	
+}
+.modal .close{
+	text-shadow : none;
+	margin-top  : 3px;
+}
+.modal-footer .btn{
+	margin-bottom : 0;
+}
+body.modal-open, 
+.modal-open .navbar-fixed-top, 
+.modal-open .navbar-fixed-bottom{
+	margin-right : 0;
+}
+.modal-footer {
+	margin-top : 0;
+}
+.modal-content{
+	box-shadow:none;
+}
+
+/* Tables */
+
+.table{
+	float        : left;
+	width        : 100%;
+	margin       : 0;
+	table-layout : fixed;
+}
+.table thead > tr > th, 
+.table tbody > tr > th, 
+.table tfoot > tr > th, 
+.table thead > tr > td, 
+.table tbody > tr > td, 
+.table tfoot > tr > td {
+	padding     : 10px;
+	line-height : 20px;
+}
+.table-condensed thead > tr > th, 
+.table-condensed tbody > tr > th, 
+.table-condensed tfoot > tr > th, 
+.table-condensed thead > tr > td, 
+.table-condensed tbody > tr > td, 
+.table-condensed tfoot > tr > td {
+	padding : 5px;
+}
+.table-bordered > thead > tr > th, 
+.table-bordered > thead > tr > td{
+	border-bottom-width : 1px;
+}
+
+/* Blockquote */
+blockquote small{
+	margin-top:10px;
+}
+
+/*
+ * ===============================================================
+ * THIRDPARTY BOOTSTRAP PLUGINS
+ * We overirde the plugins here, this way you can update the css
+ * files without worring that you have to change the css files.
+ * ===============================================================
+ */ 
+ 
+/* Select2 */ 
+
+.select2-container{
+	float : left;
+	width : 100%;
+}
+.select2-container .select2-choice {
+	height           : 30px;
+	background-image : none;
+	line-height      : 30px;
+}
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+	box-shadow         : none;
+	outline            : none;
+	-webkit-box-shadow : none;
+	-moz-box-shadow    : none;
+	-o-box-shadow      : none;
+}
+.select2-container .select2-choice .select2-arrow {
+	width : 30px;	
+}
+.select2-container .select2-choice .select2-arrow b {
+	float  : left;
+	height : 24px;
+	width  : 24px;
+	margin : 1px 0 0 6px;	
+}
+.select2-search{
+	display : block;
+}
+.select2-drop{
+	margin  : 3px 0 0 0;
+	padding : 10px 0;
+}
+.select2-drop:before {
+	content      : "";
+	position     : absolute;
+	display      : inline-block;
+	top          : -7px;
+	right        : 7px;
+	border-right : 7px solid transparent;
+	border-left  : 7px solid transparent;
+}
+.select2-drop:after {
+	content      : "";
+	position     : absolute;
+	display      : inline-block;
+	top          : -6px;
+	right        : 8px;
+	border-right : 6px solid transparent;
+	border-left  : 6px solid transparent;
+}
+.select2-drop .select2-search{
+	width  : auto;
+	margin : 0 5px 5px 5px;
+}
+.select2-drop ul{
+	margin  : 0;
+	padding : 0;
+}
+.select2-drop .select2-result-label{
+	margin  : 0;
+	padding : 5px 10px;
+}
+.select2-container-multi .select2-choices .select2-search-field input {
+	height : 100%;
+	margin : 0;
+}
+.select2-drop.select2-drop-above{
+	margin : 0;
+}
+.select2-drop.select2-drop-above.select2-drop:before,
+.select2-drop.select2-drop-above.select2-drop:after{
+	margin-top    : 0;
+	border-right  : 0;
+	border-bottom : 0;
+	border-left   : 0;
+}
+.select2-container .select2-choice > .select2-chosen{
+	margin-right : 40px;
+}
+.select2-container-multi.select2-container-active .select2-choices{
+	box-shadow         : none;
+	-webkit-box-shadow : none;
+}
+
+/* Datepicker */
+
+.datepicker-days{
+	margin : 0 10px;
+}
+
+/* File Upload */
+
+.fileupload .uneditable-input[class*="span"]{
+	float : left!important;
+}
+.input-group .btn.fileupload-exists{
+	display : none;
+	margin  : 0 0 0 -1px;
+}
+.fileupload-exists .btn.fileupload-exists{
+	display : inline-block;
+}
+.fileupload-preview{
+	margin-bottom : 20px;
+}
+.fileupload .uneditable-input{
+	float        : left;
+	height       : 30px;
+	width        : 200px;
+	padding      : 0 10px;
+	line-height  : 30px;
+	border-right : none;
+}
+
+/* Typeahead */
+
+span.twitter-typeahead{
+	display : block!important;
+}
+.tt-hint{
+	z-index : 0;
+	height  : 30px;
+	width   : 100%;
+	margin  : 0;
+	padding : 0 5px;
+}
+#typeahead-sidebar-search{
+	display:block!important;
+}
+#container .tt-dropdown-menu{
+	top                : 29px;
+	z-index            : 2000;
+	width              : 100%;/* fallback*/
+	width              : calc(100% + 35px);
+	padding            : 15px 0;
+	text-align         : left;
+	box-shadow         : none;	
+	-webkit-box-shadow : none;
+	-moz-box-shadow    : none;
+}
+#container .form-input-group .tt-dropdown-menu{
+	width : 100%;/* fallback*/
+	width : calc(100% + 30px);
+}
+ol.tt-dropdown-menu.tt-is-open{
+	margin-top : 3px;
+}
+.tt-dropdown-menu:before{
+	content      : "";
+	position     : absolute;
+	display      : inline-block;
+	top          : -7px;
+	left         : 9px;
+	border-right : 7px solid transparent;
+	border-left  : 7px solid transparent;
+}
+.tt-dropdown-menu:after {
+	content      : "";
+	position     : absolute;
+	display      : inline-block;
+	top          : -6px;
+	left         : 10px;
+	border-right : 6px solid transparent;
+	border-left  : 6px solid transparent;
+}
+.tt-block{
+	float  : left;
+	width  : 100%;
+	margin : 0;
+}
+.tt-suggestion{
+	float   : left;
+	width   : 100%;
+	padding : 5px 20px;
+}
+.tt-name{
+	float : left;
+	width : auto;
+}
+.tt-language{
+	float      : right;
+	width      : auto;
+	font-size  : 11px;
+	font-style : italic;
+}
+.tt-description{
+	float      : left;
+	width      : 100%;
+	font-size  : 11px;
+	font-style : italic;
+}
+
+/* Color picker */
+
+.input-group.color .input-group-addon i{
+	display : block;
+	height  : 16px;
+	width   : 16px;
+	margin  : 0;
+	cursor  : pointer;
+}
+.colorpicker.dropdown-menu{
+	padding : 5px;
+}
+
+/* Time picker */
+
+.bootstrap-timepicker-widget table{
+	margin : 1px 0;
+}
+.bootstrap-timepicker-widget table td a{
+	height     : 38px;
+	width      : 38px;
+	padding    : 0;
+	text-align : center;
+}
+.bootstrap-timepicker-widget table td a i{
+	line-height : 30px;
+}
+.bootstrap-timepicker-widget table td input{
+	height      : 30px;
+	width       : 38px;
+	line-height : 30px;	
+}
+
+/* BootBox */
+
+.bootbox .modal-dialog{
+	width : 400px;	
+}
+.bootbox-form{
+	float : none
+}
+.bootbox .modal-footer .btn-primary{
+	float  : right;
+	margin : 0;
+}
+
+/* Datatables */
+
+table.tablesorter-bootstrap .tablesorter-header, 
+table.tablesorter-bootstrap tfoot th, 
+table.tablesorter-bootstrap tfoot td {
+	font-size   : 13px;
+	font-weight : 600;
+}
+

@@ -1,0 +1,17 @@
+/*
+ * ************************************************************* *
+ * Name       : Responsive helper                                *
+ * Date       : June 2013                                        *
+ * Owner      : CreativeMilk                                     *
+ * Url        : www.creativemilk.net                             *
+ * Version    : 1.0                                              *
+ * Updated    : 2013-12-22 17:50:46 UTC+02:00                    *
+ * Developer  : Mark                                             *
+ * Dependency :                                                  *
+ * Lib        : jQuery 1.7+                                      *
+ * Licence    : NOT free                                         *
+ * This is part of a themeforest file                            *
+ * ************************************************************* *
+ */
+ 
+;(function(e){if(typeof define==="function"&&define.amd){define([jquery],e)}else{e(jQuery)}})(function(e){function n(n,r){this.obj=e(n);this.o=e.extend({},e.fn[t].defaults,r);this.init()}var t="responsiveHelper";n.prototype={init:function(){var e=this;e._resize()},_set:function(){var t=this;var n=null;t.obj.each(function(r,i){var s=e(this);var o=t.o.containerClass;var u=t.o.childrenClass;var a="data-rh-width";var f="data-breakpoint";e(this).children().each(function(t,r){n+=e(this).width()});if(s.attr(f)){var l=s.attr("data-breakpoint")}else{var l=e(this).width()}if(s.attr(a)){var c=e(this).attr(a)}else{var c=n}if(c>l){if(o.length>1){s.addClass(o)}if(u.length>1){s.children().addClass(u)}s.attr(a,c);if(typeof t.o.inResponsive=="function"){t.o.inResponsive.call(this,s)}}else{if(o.length>1){s.removeClass(o)}if(u.length>1){s.children().removeClass(u)}s.removeAttr(a);if(typeof t.o.outResponsive=="function"){t.o.outResponsive.call(this,s)}}})},_resize:function(){var t=this;e(window).resize(function(e){t._set();if(typeof t.o.onResize=="function"){t.o.onResize.call(this,t.obj)}})},update:function(){},destroy:function(){e.removeData(this.obj,this.pluginName)}};e.fn[t]=function(r){return this.each(function(){var i=e(this);var s=i.data(t);var o=typeof r=="object"&&r;if(!s){i.data(t,s=new n(this,o))}if(typeof r=="string"){s[r]()}})};e.fn[t].defaults={containerClass:"",childrenClass:"",inResponsive:function(e){},outResponsive:function(e){},onResize:function(e){}}})
