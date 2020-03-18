@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lockscreen | Kentut - Responsive Dashboard Web App</title>
+    <link rel="stylesheet" href="assets/css/kentut.css"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="tooltips" id="lockscreen" onload="startTime()">
+
+    <!-- start:wrapper -->
+    <div class="container">
+        <div class="lockscreen">
+            <div class="text-center">
+                <img src="assets/img/avatar/avatar-8.jpg" class="img-circle img-responsive">
+                <h2>ROODEVEL</h2>
+                <div id="time"></div>
+                <p>Locked</p>
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <input type="pasword" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <a href="index.html" class="btn btn-default"><i class="fa fa-arrow-right"></i></a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end:wrapper -->
+
+    <!-- start:javascript-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/kentut.js"></script>
+    <!-- end:javascript -->
+
+    <!-- start:plugins javascript -->
+    <script src="assets/plugins/retina/retina.min.js"></script>
+    <script src="bower_components/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="bower_components/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/backstretch/jquery.backstretch.min.js"></script>
+    <script>
+        function startTime()
+        {
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            // add a zero in front of numbers<10
+            m=checkTime(m);
+            s=checkTime(s);
+            document.getElementById('time').innerHTML=h+":"+m+":"+s;
+            t=setTimeout(function(){startTime()},500);
+        }
+
+        function checkTime(i)
+        {
+            if (i<10)
+            {
+                i="0" + i;
+            }
+            return i;
+        }
+    </script>
+    <!-- end:plugins javascript -->
+
+</body>
+</html>
