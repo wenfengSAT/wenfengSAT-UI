@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Material Admin</title>
+    
+        <!-- Vendor CSS -->
+        <link href="vendors/animate-css/animate.min.css" rel="stylesheet">
+        <link href="vendors/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+        <link href="vendors/material-icons/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/socicon/socicon.min.css" rel="stylesheet">
+    
+        <!-- CSS -->
+        <link href="css/app.min.1.css" rel="stylesheet">
+        <link href="css/app.min.2.css" rel="stylesheet">
+        
+        <!-- Following CSS codes are used only fore demo purposes thus you can remove anytime -->
+        <style type="text/css">
+            .card-body .md, .card-body .socicon {
+                font-size: 23px;
+                vertical-align: middle;
+                color: #333;
+                margin-right: 10px;
+            }
+            
+            .card-body .col-sm-4 {
+                padding: 0 7px;
+            }
+            
+            .card-body .col-sm-4 p {
+                padding: 8px;
+                border-radius: 2px;
+                margin-bottom: 0;
+            }
+            
+            .card-body .col-sm-4 p:hover {
+                background: #eee;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header id="header">
+            <ul class="header-inner">
+                <li id="menu-trigger" data-trigger="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+            
+                <li class="logo hidden-xs">
+                    <a href="index.html">Material Admin</a>
+                </li>
+                
+                <li class="pull-right">
+                <ul class="top-menu">
+                    <li id="toggle-width">
+                        <div class="toggle-switch">
+                            <input id="tw-switch" type="checkbox" hidden="hidden">
+                            <label for="tw-switch" class="ts-helper"></label>
+                        </div>
+                    </li>
+                    <li id="top-search">
+                        <a class="tm-search" href=""></a>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="tm-message" href=""><i class="tmn-counts">6</i></a>
+                        <div class="dropdown-menu dropdown-menu-lg pull-right">
+                            <div class="listview">
+                                <div class="lv-header">
+                                    Messages
+                                </div>
+                                <div class="lv-body c-overflow">
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/1.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">David Belle</div>
+                                                <small class="lv-small">Cum sociis natoque penatibus et magnis dis parturient montes</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Jonathan Morris</div>
+                                                <small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Fredric Mitchell Jr.</div>
+                                                <small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Glenn Jecobs</div>
+                                                <small class="lv-small">Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Bill Phillips</div>
+                                                <small class="lv-small">Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a class="lv-footer" href="">View All</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="tm-notification" href=""><i class="tmn-counts">9</i></a>
+                        <div class="dropdown-menu dropdown-menu-lg pull-right">
+                            <div class="listview" id="notifications">
+                                <div class="lv-header">
+                                    Notification
+                    
+                                    <ul class="actions">
+                                        <li class="dropdown">
+                                            <a href="" data-clear="notification">
+                                                <i class="md md-done-all"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="lv-body c-overflow">
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/1.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">David Belle</div>
+                                                <small class="lv-small">Cum sociis natoque penatibus et magnis dis parturient montes</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Jonathan Morris</div>
+                                                <small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Fredric Mitchell Jr.</div>
+                                                <small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Glenn Jecobs</div>
+                                                <small class="lv-small">Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Bill Phillips</div>
+                                                <small class="lv-small">Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                    
+                                <a class="lv-footer" href="">View Previous</a>
+                            </div>
+                    
+                        </div>
+                    </li>
+                    <li class="dropdown hidden-xs">
+                        <a data-toggle="dropdown" class="tm-task" href=""><i class="tmn-counts">2</i></a>
+                        <div class="dropdown-menu pull-right dropdown-menu-lg">
+                            <div class="listview">
+                                <div class="lv-header">
+                                    Tasks
+                                </div>
+                                <div class="lv-body">
+                                    <div class="lv-item">
+                                        <div class="lv-title m-b-5">HTML5 Validation Report</div>
+                    
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                                                <span class="sr-only">95% Complete (success)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lv-item">
+                                        <div class="lv-title m-b-5">Google Chrome Extension</div>
+                    
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% Complete (success)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lv-item">
+                                        <div class="lv-title m-b-5">Social Intranet Projects</div>
+                    
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lv-item">
+                                        <div class="lv-title m-b-5">Bootstrap Admin Template</div>
+                    
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                <span class="sr-only">60% Complete (warning)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lv-item">
+                                        <div class="lv-title m-b-5">Youtube Client App</div>
+                    
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <a class="lv-footer" href="">View All</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="tm-settings" href=""></a>
+                        <ul class="dropdown-menu dm-icon pull-right">
+                            <li>
+                                <a data-action="fullscreen" href=""><i class="md md-fullscreen"></i> Toggle Fullscreen</a>
+                            </li>
+                            <li>
+                                <a data-action="clear-localstorage" href=""><i class="md md-delete"></i> Clear Local Storage</a>
+                            </li>
+                            <li>
+                                <a href=""><i class="md md-person"></i> Privacy Settings</a>
+                            </li>
+                            <li>
+                                <a href=""><i class="md md-settings"></i> Other Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs" id="chat-trigger" data-trigger="#chat">
+                        <a class="tm-chat" href=""></a>
+                    </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>
+        
+        <section id="main">
+            <aside id="sidebar">
+                <div class="sidebar-inner">
+                    <div class="si-inner">
+                        <div class="profile-menu">
+                            <a href="">
+                                <div class="profile-pic">
+                                    <img src="img/profile-pics/1.jpg" alt="">
+                                </div>
+                
+                                <div class="profile-info">
+                                    Malinda Hollaway
+                
+                                    <i class="md md-arrow-drop-down"></i>
+                                </div>
+                            </a>
+                
+                            <ul class="main-menu">
+                                <li>
+                                    <a href="profile-about.html"><i class="md md-person"></i> View Profile</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="md md-settings-input-antenna"></i> Privacy Settings</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="md md-settings"></i> Settings</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="md md-history"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                
+                        <ul class="main-menu">
+                            <li><a href="index.html"><i class="md md-home"></i> Home</a></li>
+                            <li><a href="typography.html"><i class="md md-format-underline"></i> Typography</a></li>
+                            <li class="sub-menu">
+                                <a href=""><i class="md md-now-widgets"></i> Widgets</a>
+
+                                <ul>
+                                    <li><a href="widget-templates.html">Templates</a></li>
+                                    <li><a class="active" href="widgets.html">Widgets</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href=""><i class="md md-view-list"></i> Tables</a>
+                
+                                <ul>
+                                    <li><a href="tables.html">Normal Tables</a></li>
+                                    <li><a href="data-tables.html">Data Tables</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href=""><i class="md md-my-library-books"></i> Forms</a>
+                
+                                <ul>
+                                    <li><a href="form-elements.html">Basic Form Elements</a></li>
+                                    <li><a href="form-components.html">Form Components</a></li>
+                                    <li><a href="form-examples.html">Form Examples</a></li>
+                                    <li><a href="form-validations.html">Form Validation</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu active toggled">
+                                <a href=""><i class="md md-swap-calls"></i>User Interface</a>
+                                <ul>
+                                    <li><a href="colors.html">Colors</a></li>
+                                    <li><a href="animations.html">Animations</a></li>
+                                    <li><a href="box-shadow.html">Box Shadow</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a class="active" href="icons.html">Icons</a></li>
+                                    <li><a href="alerts.html">Alerts</a></li>
+                                    <li><a href="notification-dialog.html">Notifications & Dialogs</a></li>
+                                    <li><a href="media.html">Media</a></li>
+                                    <li><a href="components.html">Components</a></li>
+                                    <li><a href="other-components.html">Others</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href=""><i class="md md-trending-up"></i>Charts</a>
+                                <ul>
+                                    <li><a href="flot-charts.html">Flot Charts</a></li>
+                                    <li><a href="other-charts.html">Other Charts</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="calendar.html"><i class="md md-today"></i> Calendar</a></li>
+                            <li><a href="generic-classes.html"><i class="md md-layers"></i> Generic Classes</a></li>
+                            <li class="sub-menu">
+                                <a href=""><i class="md md-content-copy"></i> Sample Pages</a>
+                                <ul>
+                                    <li><a href="profile-about.html">Profile</a></li>
+                                    <li><a href="list-view.html">List View</a></li>
+                                    <li><a href="messages.html">Messages</a></li>
+                                    <li><a href="login.html">Login and Sign Up</a></li>
+                                    <li><a href="404.html">Error 404</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            
+            <aside id="chat">
+                <ul class="tab-nav tn-justified" role="tablist">
+                    <li role="presentation" class="active"><a href="#friends" aria-controls="friends" role="tab" data-toggle="tab">Friends</a></li>
+                    <li role="presentation"><a href="#online" aria-controls="online" role="tab" data-toggle="tab">Online Now</a></li>
+                </ul>
+            
+                <div class="chat-search">
+                    <div class="fg-line">
+                        <input type="text" class="form-control" placeholder="Search People">
+                    </div>
+                </div>
+            
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="friends">
+                        <div class="listview">
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                        <i class="chat-status-busy"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Jonathan Morris</div>
+                                        <small class="lv-small">Available</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left">
+                                        <img class="lv-img-sm" src="img/profile-pics/1.jpg" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">David Belle</div>
+                                        <small class="lv-small">Last seen 3 hours ago</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                        <i class="chat-status-online"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Fredric Mitchell Jr.</div>
+                                        <small class="lv-small">Availble</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                        <i class="chat-status-online"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Glenn Jecobs</div>
+                                        <small class="lv-small">Availble</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left">
+                                        <img class="lv-img-sm" src="img/profile-pics/5.jpg" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Bill Phillips</div>
+                                        <small class="lv-small">Last seen 3 days ago</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left">
+                                        <img class="lv-img-sm" src="img/profile-pics/6.jpg" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Wendy Mitchell</div>
+                                        <small class="lv-small">Last seen 2 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/7.jpg" alt="">
+                                        <i class="chat-status-busy"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Teena Bell Ann</div>
+                                        <small class="lv-small">Busy</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="online">
+                        <div class="listview">
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                        <i class="chat-status-busy"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Jonathan Morris</div>
+                                        <small class="lv-small">Available</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                        <i class="chat-status-online"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Fredric Mitchell Jr.</div>
+                                        <small class="lv-small">Availble</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                        <i class="chat-status-online"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Glenn Jecobs</div>
+                                        <small class="lv-small">Availble</small>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a class="lv-item" href="">
+                                <div class="media">
+                                    <div class="pull-left p-relative">
+                                        <img class="lv-img-sm" src="img/profile-pics/7.jpg" alt="">
+                                        <i class="chat-status-busy"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">Teena Bell Ann</div>
+                                        <small class="lv-small">Busy</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        
+        
+            <section id="content">
+                <div class="container">
+                    <div class="block-header">
+                        <h2>Material Design Iconic Font</h2>
+                        
+                        <ul class="actions">
+                            <li>
+                                <a href="">
+                                    <i class="md md-trending-up"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="md md-done-all"></i>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="md md-more-vert"></i>
+                                </a>
+                    
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a href="">Refresh</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Manage Widgets</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Widgets Settings</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Action</h2>
+                        </div>
+                    
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-3d-rotation"></i> md-3d-rotation</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-accessibility"></i> md-accessibility</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-account-balance"></i> md-account-balance</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-account-balance-wallet"></i> md-account-balance-wallet</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-account-box"></i> md-account-box</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-account-child"></i> md-account-child</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-account-circle"></i> md-account-circle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-add-shopping-cart"></i> md-add-shopping-cart</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-alarm"></i> md-alarm</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-alarm-add"></i> md-alarm-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-alarm-off"></i> md-alarm-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-alarm-on"></i> md-alarm-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-android"></i> md-android</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-announcement"></i> md-announcement</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-aspect-ratio"></i> md-aspect-ratio</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assessment"></i> md-assessment</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assignment"></i> md-assignment</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assignment-ind"></i> md-assignment-ind</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assignment-late"></i> md-assignment-late</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assignment-return"></i> md-assignment-return</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assignment-returned"></i> md-assignment-returned</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assignment-turned-in"></i> md-assignment-turned-in</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-autorenew"></i> md-autorenew</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-backup"></i> md-backup</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-book"></i> md-book</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bookmark"></i> md-bookmark</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bookmark-outline"></i> md-bookmark-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bug-report"></i> md-bug-report</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cached"></i> md-cached</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-class"></i> md-class</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-credit-card"></i> md-credit-card</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dashboard"></i> md-dashboard</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-delete"></i> md-delete</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-description"></i> md-description</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dns"></i> md-dns</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-done"></i> md-done</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-done-all"></i> md-done-all</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-event"></i> md-event</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-exit-to-app"></i> md-exit-to-app</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-explore"></i> md-explore</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-extension"></i> md-extension</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-face-unlock"></i> md-face-unlock</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-favorite"></i> md-favorite</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-favorite-outline"></i> md-favorite-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-find-in-page"></i> md-find-in-page</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-find-replace"></i> md-find-replace</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flip-to-back"></i> md-flip-to-back</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flip-to-front"></i> md-flip-to-front</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-get-app"></i> md-get-app</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-grade"></i> md-grade</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-group-work"></i> md-group-work</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-help"></i> md-help</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-highlight-remove"></i> md-highlight-remove</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-history"></i> md-history</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-home"></i> md-home</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-https"></i> md-https</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-info"></i> md-info</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-info-outline"></i> md-info-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-input"></i> md-input</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-invert-colors"></i> md-invert-colors</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-label"></i> md-label</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-label-outline"></i> md-label-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-language"></i> md-language</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-launch"></i> md-launch</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-list"></i> md-list</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-lock"></i> md-lock</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-lock-open"></i> md-lock-open</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-lock-outline"></i> md-lock-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-loyalty"></i> md-loyalty</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-markunread-mailbox"></i> md-markunread-mailbox</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-note-add"></i> md-note-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-open-in-browser"></i> md-open-in-browser</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-open-in-new"></i> md-open-in-new</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-open-with"></i> md-open-with</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-pageview"></i> md-pageview</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-payment"></i> md-payment</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-camera-mic"></i> md-perm-camera-mic</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-contact-cal"></i> md-perm-contact-cal</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-data-setting"></i> md-perm-data-setting</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-device-info"></i> md-perm-device-info</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-identity"></i> md-perm-identity</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-media"></i> md-perm-media</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-phone-msg"></i> md-perm-phone-msg</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-perm-scan-wifi"></i> md-perm-scan-wifi</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-picture-in-picture"></i> md-picture-in-picture</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-polymer"></i> md-polymer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-print"></i> md-print</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-query-builder"></i> md-query-builder</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-question-answer"></i> md-question-answer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-receipt"></i> md-receipt</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-redeem"></i> md-redeem</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-report-problem"></i> md-report-problem</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-restore"></i> md-restore</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-room"></i> md-room</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-schedule"></i> md-schedule</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-search"></i> md-search</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings"></i> md-settings</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-applications"></i> md-settings-applications</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-backup-restore"></i> md-settings-backup-restore</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-bluetooth"></i> md-settings-bluetooth</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-cell"></i> md-settings-cell</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-display"></i> md-settings-display</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-ethernet"></i> md-settings-ethernet</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-input-antenna"></i> md-settings-input-antenna</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-input-component"></i> md-settings-input-component</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-input-composite"></i> md-settings-input-composite</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-input-hdmi"></i> md-settings-input-hdmi</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-input-svideo"></i> md-settings-input-svideo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-overscan"></i> md-settings-overscan</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-phone"></i> md-settings-phone</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-power"></i> md-settings-power</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-remote"></i> md-settings-remote</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-voice"></i> md-settings-voice</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-shop"></i> md-shop</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-shopping-basket"></i> md-shopping-basket</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-shopping-cart"></i> md-shopping-cart</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-shop-two"></i> md-shop-two</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-speaker-notes"></i> md-speaker-notes</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-spellcheck"></i> md-spellcheck</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-star-rate"></i> md-star-rate</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-stars"></i> md-stars</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-store"></i> md-store</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-subject"></i> md-subject</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-swap-horiz"></i> md-swap-horiz</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-swap-vert"></i> md-swap-vert</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-swap-vert-circle"></i> md-swap-vert-circle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-system-update-tv"></i> md-system-update-tv</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tab"></i> md-tab</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tab-unselected"></i> md-tab-unselected</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-theaters"></i> md-theaters</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-thumb-down"></i> md-thumb-down</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-thumbs-up-down"></i> md-thumbs-up-down</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-thumb-up"></i> md-thumb-up</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-toc"></i> md-toc</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-today"></i> md-today</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-track-changes"></i> md-track-changes</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-translate"></i> md-translate</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-trending-down"></i> md-trending-down</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-trending-neutral"></i> md-trending-neutral</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-trending-up"></i> md-trending-up</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-turned-in"></i> md-turned-in</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-turned-in-not"></i> md-turned-in-not</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-verified-user"></i> md-verified-user</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-agenda"></i> md-view-agenda</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-array"></i> md-view-array</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-carousel"></i> md-view-carousel</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-column"></i> md-view-column</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-day"></i> md-view-day</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-headline"></i> md-view-headline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-list"></i> md-view-list</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-module"></i> md-view-module</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-quilt"></i> md-view-quilt</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-stream"></i> md-view-stream</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-view-week"></i> md-view-week</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-visibility"></i> md-visibility</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-visibility-off"></i> md-visibility-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wallet-giftcard"></i> md-wallet-giftcard</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wallet-membership"></i> md-wallet-membership</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wallet-travel"></i> md-wallet-travel</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-work"></i> md-work</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Alert</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-error"></i> md-error</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-warning"></i> md-warning</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Audio/Video</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-album"></i> md-album</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-av-timer"></i> md-av-timer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-closed-caption"></i> md-closed-caption</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-equalizer"></i> md-equalizer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-explicit"></i> md-explicit</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-fast-forward"></i> md-fast-forward</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-fast-rewind"></i> md-fast-rewind</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-games"></i> md-games</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-hearing"></i> md-hearing</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-high-quality"></i> md-high-quality</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-loop"></i> md-loop</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mic"></i> md-mic</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mic-none"></i> md-mic-none</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mic-off"></i> md-mic-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-movie"></i> md-movie</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-my-library-add"></i> md-my-library-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-my-library-books"></i> md-my-library-books</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-my-library-music"></i> md-my-library-music</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-new-releases"></i> md-new-releases</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-not-interested"></i> md-not-interested</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-pause"></i> md-pause</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-pause-circle-fill"></i> md-pause-circle-fill</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-pause-circle-outline"></i> md-pause-circle-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-play-arrow"></i> md-play-arrow</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-play-circle-fill"></i> md-play-circle-fill</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-play-circle-outline"></i> md-play-circle-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-playlist-add"></i> md-playlist-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-play-shopping-bag"></i> md-play-shopping-bag</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-queue"></i> md-queue</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-queue-music"></i> md-queue-music</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-radio"></i> md-radio</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-recent-actors"></i> md-recent-actors</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-repeat"></i> md-repeat</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-repeat-one"></i> md-repeat-one</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-replay"></i> md-replay</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-shuffle"></i> md-shuffle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-skip-next"></i> md-skip-next</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-skip-previous"></i> md-skip-previous</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-snooze"></i> md-snooze</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-stop"></i> md-stop</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-subtitles"></i> md-subtitles</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-surround-sound"></i> md-surround-sound</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-videocam"></i> md-videocam</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-videocam-off"></i> md-videocam-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-video-collection"></i> md-video-collection</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-volume-down"></i> md-volume-down</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-volume-mute"></i> md-volume-mute</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-volume-off"></i> md-volume-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-volume-up"></i> md-volume-up</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-web"></i> md-web</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Communication</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-business"></i> md-business</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-call"></i> md-call</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-call-end"></i> md-call-end</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-call-made"></i> md-call-made</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-call-merge"></i> md-call-merge</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-call-missed"></i> md-call-missed</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-call-received"></i> md-call-received</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-call-split"></i> md-call-split</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-chat"></i> md-chat</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-clear-all"></i> md-clear-all</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-comment"></i> md-comment</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-contacts"></i> md-contacts</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dialer-sip"></i> md-dialer-sip</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dialpad"></i> md-dialpad</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dnd-on"></i> md-dnd-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-email"></i> md-email</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-forum"></i> md-forum</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-import-export"></i> md-import-export</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-invert-colors-off"></i> md-invert-colors-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-invert-colors-on"></i> md-invert-colors-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-live-help"></i> md-live-help</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-location-off"></i> md-location-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-location-on"></i> md-location-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-message"></i> md-message</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-messenger"></i> md-messenger</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-no-sim"></i> md-no-sim</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone"></i> md-phone</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-portable-wifi-off"></i> md-portable-wifi-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-quick-contacts-dialer"></i> md-quick-contacts-dialer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-quick-contacts-mail"></i> md-quick-contacts-mail</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-ring-volume"></i> md-ring-volume</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-stay-current-landscape"></i> md-stay-current-landscape</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-stay-current-portrait"></i> md-stay-current-portrait</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-stay-primary-landscape"></i> md-stay-primary-landscape</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-stay-primary-portrait"></i> md-stay-primary-portrait</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-swap-calls"></i> md-swap-calls</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-textsms"></i> md-textsms</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-voicemail"></i> md-voicemail</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-vpn-key"></i> md-vpn-key</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Content</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-add"></i> md-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-add-box"></i> md-add-box</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-add-circle"></i> md-add-circle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-add-circle-outline"></i> md-add-circle-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-archive"></i> md-archive</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-backspace"></i> md-backspace</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-block"></i> md-block</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-clear"></i> md-clear</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-content-copy"></i> md-content-copy</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-content-cut"></i> md-content-cut</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-content-paste"></i> md-content-paste</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-create"></i> md-create</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-drafts"></i> md-drafts</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-list"></i> md-filter-list</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flag"></i> md-flag</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-forward"></i> md-forward</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-gesture"></i> md-gesture</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-inbox"></i> md-inbox</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-link"></i> md-link</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mail"></i> md-mail</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-markunread"></i> md-markunread</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-redo"></i> md-redo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-remove"></i> md-remove</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-remove-circle"></i> md-remove-circle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-remove-circle-outline"></i> md-remove-circle-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-reply"></i> md-reply</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-reply-all"></i> md-reply-all</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-report"></i> md-report</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-save"></i> md-save</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-select-all"></i> md-select-all</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-send"></i> md-send</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sort"></i> md-sort</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-text-format"></i> md-text-format</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-undo"></i> md-undo</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Device</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-access-alarm"></i> md-access-alarm</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-access-alarms"></i> md-access-alarms</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-access-time"></i> md-access-time</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-add-alarm"></i> md-add-alarm</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-airplanemode-off"></i> md-airplanemode-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-airplanemode-on"></i> md-airplanemode-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-20"></i> md-battery-20</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-30"></i> md-battery-30</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-50"></i> md-battery-50</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-60"></i> md-battery-60</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-80"></i> md-battery-80</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-90"></i> md-battery-90</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-alert"></i> md-battery-alert</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-charging-20"></i> md-battery-charging-20</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-charging-30"></i> md-battery-charging-30</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-charging-50"></i> md-battery-charging-50</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-charging-60"></i> md-battery-charging-60</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-charging-80"></i> md-battery-charging-80</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-charging-90"></i> md-battery-charging-90</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-charging-full"></i> md-battery-charging-full</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-full"></i> md-battery-full</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-std"></i> md-battery-std</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-battery-unknown"></i> md-battery-unknown</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bluetooth"></i> md-bluetooth</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bluetooth-connected"></i> md-bluetooth-connected</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bluetooth-disabled"></i> md-bluetooth-disabled</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bluetooth-searching"></i> md-bluetooth-searching</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-auto"></i> md-brightness-auto</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-high"></i> md-brightness-high</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-low"></i> md-brightness-low</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-medium"></i> md-brightness-medium</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-data-usage"></i> md-data-usage</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-developer-mode"></i> md-developer-mode</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-devices"></i> md-devices</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dvr"></i> md-dvr</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-gps-fixed"></i> md-gps-fixed</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-gps-not-fixed"></i> md-gps-not-fixed</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-gps-off"></i> md-gps-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-location-disabled"></i> md-location-disabled</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-location-searching"></i> md-location-searching</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-multitrack-audio"></i> md-multitrack-audio</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-network-cell"></i> md-network-cell</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-network-wifi"></i> md-network-wifi</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-nfc"></i> md-nfc</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-now-wallpaper"></i> md-now-wallpaper</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-now-widgets"></i> md-now-widgets</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-screen-lock-landscape"></i> md-screen-lock-landscape</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-screen-lock-portrait"></i> md-screen-lock-portrait</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-screen-lock-rotation"></i> md-screen-lock-rotation</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-screen-rotation"></i> md-screen-rotation</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sd-storage"></i> md-sd-storage</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-settings-system-daydream"></i> md-settings-system-daydream</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-0-bar"></i> md-signal-cellular-0-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-1-bar"></i> md-signal-cellular-1-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-2-bar"></i> md-signal-cellular-2-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-3-bar"></i> md-signal-cellular-3-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-4-bar"></i> md-signal-cellular-4-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-connected-no-internet-0-bar"></i> md-signal-cellular-connected-no-internet-0-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-connected-no-internet-1-bar"></i> md-signal-cellular-connected-no-internet-1-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-connected-no-internet-2-bar"></i> md-signal-cellular-connected-no-internet-2-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-connected-no-internet-3-bar"></i> md-signal-cellular-connected-no-internet-3-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-connected-no-internet-4-bar"></i> md-signal-cellular-connected-no-internet-4-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-no-sim"></i> md-signal-cellular-no-sim</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-null"></i> md-signal-cellular-null</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-cellular-off"></i> md-signal-cellular-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-wifi-0-bar"></i> md-signal-wifi-0-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-wifi-1-bar"></i> md-signal-wifi-1-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-wifi-2-bar"></i> md-signal-wifi-2-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-wifi-3-bar"></i> md-signal-wifi-3-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-wifi-4-bar"></i> md-signal-wifi-4-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-signal-wifi-off"></i> md-signal-wifi-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-storage"></i> md-storage</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-usb"></i> md-usb</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wifi-lock"></i> md-wifi-lock</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wifi-tethering"></i> md-wifi-tethering</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Editor</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-attach-file"></i> md-attach-file</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-attach-money"></i> md-attach-money</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-all"></i> md-border-all</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-bottom"></i> md-border-bottom</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-clear"></i> md-border-clear</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-color"></i> md-border-color</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-horizontal"></i> md-border-horizontal</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-inner"></i> md-border-inner</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-left"></i> md-border-left</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-outer"></i> md-border-outer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-right"></i> md-border-right</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-style"></i> md-border-style</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-top"></i> md-border-top</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-border-vertical"></i> md-border-vertical</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-align-center"></i> md-format-align-center</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-align-justify"></i> md-format-align-justify</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-align-left"></i> md-format-align-left</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-align-right"></i> md-format-align-right</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-bold"></i> md-format-bold</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-clear"></i> md-format-clear</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-color-fill"></i> md-format-color-fill</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-color-reset"></i> md-format-color-reset</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-color-text"></i> md-format-color-text</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-indent-decrease"></i> md-format-indent-decrease</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-indent-increase"></i> md-format-indent-increase</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-italic"></i> md-format-italic</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-line-spacing"></i> md-format-line-spacing</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-list-bulleted"></i> md-format-list-bulleted</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-list-numbered"></i> md-format-list-numbered</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-paint"></i> md-format-paint</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-quote"></i> md-format-quote</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-size"></i> md-format-size</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-strikethrough"></i> md-format-strikethrough</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-textdirection-l-to-r"></i> md-format-textdirection-l-to-r</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-textdirection-r-to-l"></i> md-format-textdirection-r-to-l</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-format-underline"></i> md-format-underline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-functions"></i> md-functions</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-insert-chart"></i> md-insert-chart</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-insert-comment"></i> md-insert-comment</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-insert-drive-file"></i> md-insert-drive-file</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-insert-emoticon"></i> md-insert-emoticon</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-insert-invitation"></i> md-insert-invitation</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-insert-link"></i> md-insert-link</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-insert-photo"></i> md-insert-photo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-merge-type"></i> md-merge-type</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mode-comment"></i> md-mode-comment</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mode-edit"></i> md-mode-edit</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-publish"></i> md-publish</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-vertical-align-bottom"></i> md-vertical-align-bottom</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-vertical-align-center"></i> md-vertical-align-center</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-vertical-align-top"></i> md-vertical-align-top</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wrap-text"></i> md-wrap-text</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>File</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-attachment"></i> md-attachment</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cloud"></i> md-cloud</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cloud-circle"></i> md-cloud-circle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cloud-done"></i> md-cloud-done</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cloud-download"></i> md-cloud-download</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cloud-off"></i> md-cloud-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cloud-queue"></i> md-cloud-queue</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cloud-upload"></i> md-cloud-upload</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-file-download"></i> md-file-download</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-file-upload"></i> md-file-upload</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-folder"></i> md-folder</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-folder-open"></i> md-folder-open</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-folder-shared"></i> md-folder-shared</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Hardware</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cast"></i> md-cast</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cast-connected"></i> md-cast-connected</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-computer"></i> md-computer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-desktop-mac"></i> md-desktop-mac</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-desktop-windows"></i> md-desktop-windows</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dock"></i> md-dock</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-gamepad"></i> md-gamepad</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-headset"></i> md-headset</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-headset-mic"></i> md-headset-mic</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard"></i> md-keyboard</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-alt"></i> md-keyboard-alt</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-arrow-down"></i> md-keyboard-arrow-down</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-arrow-left"></i> md-keyboard-arrow-left</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-arrow-right"></i> md-keyboard-arrow-right</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-arrow-up"></i> md-keyboard-arrow-up</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-backspace"></i> md-keyboard-backspace</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-capslock"></i> md-keyboard-capslock</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-control"></i> md-keyboard-control</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-hide"></i> md-keyboard-hide</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-return"></i> md-keyboard-return</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-tab"></i> md-keyboard-tab</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-keyboard-voice"></i> md-keyboard-voice</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-laptop"></i> md-laptop</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-laptop-chromebook"></i> md-laptop-chromebook</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-laptop-mac"></i> md-laptop-mac</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-laptop-windows"></i> md-laptop-windows</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-memory"></i> md-memory</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mouse"></i> md-mouse</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-android"></i> md-phone-android</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-iphone"></i> md-phone-iphone</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phonelink"></i> md-phonelink</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phonelink-off"></i> md-phonelink-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-security"></i> md-security</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sim-card"></i> md-sim-card</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-smartphone"></i> md-smartphone</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-speaker"></i> md-speaker</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tablet"></i> md-tablet</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tablet-android"></i> md-tablet-android</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tablet-mac"></i> md-tablet-mac</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tv"></i> md-tv</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-watch"></i> md-watch</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Image</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-add-to-photos"></i> md-add-to-photos</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-adjust"></i> md-adjust</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-assistant-photo"></i> md-assistant-photo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-audiotrack"></i> md-audiotrack</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-blur-circular"></i> md-blur-circular</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-blur-linear"></i> md-blur-linear</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-blur-off"></i> md-blur-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-blur-on"></i> md-blur-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-1"></i> md-brightness-1</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-2"></i> md-brightness-2</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-3"></i> md-brightness-3</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-4"></i> md-brightness-4</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-5"></i> md-brightness-5</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-6"></i> md-brightness-6</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brightness-7"></i> md-brightness-7</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-brush"></i> md-brush</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-camera"></i> md-camera</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-camera-alt"></i> md-camera-alt</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-camera-front"></i> md-camera-front</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-camera-rear"></i> md-camera-rear</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-camera-roll"></i> md-camera-roll</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-center-focus-strong"></i> md-center-focus-strong</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-center-focus-weak"></i> md-center-focus-weak</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-collections"></i> md-collections</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-colorize"></i> md-colorize</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-color-lens"></i> md-color-lens</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-compare"></i> md-compare</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-control-point"></i> md-control-point</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-control-point-duplicate"></i> md-control-point-duplicate</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop"></i> md-crop</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-3-2"></i> md-crop-3-2</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-5-4"></i> md-crop-5-4</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-7-5"></i> md-crop-7-5</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-16-9"></i> md-crop-16-9</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-din"></i> md-crop-din</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-free"></i> md-crop-free</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-landscape"></i> md-crop-landscape</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-original"></i> md-crop-original</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-portrait"></i> md-crop-portrait</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-crop-square"></i> md-crop-square</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dehaze"></i> md-dehaze</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-details"></i> md-details</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-edit"></i> md-edit</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-exposure"></i> md-exposure</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-exposure-minus-1"></i> md-exposure-minus-1</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-exposure-minus-2"></i> md-exposure-minus-2</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-exposure-zero"></i> md-exposure-zero</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-exposure-plus-1"></i> md-exposure-plus-1</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-exposure-plus-2"></i> md-exposure-plus-2</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter"></i> md-filter</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-1"></i> md-filter-1</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-2"></i> md-filter-2</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-3"></i> md-filter-3</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-4"></i> md-filter-4</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-5"></i> md-filter-5</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-6"></i> md-filter-6</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-7"></i> md-filter-7</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-8"></i> md-filter-8</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-9"></i> md-filter-9</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-9-plus"></i> md-filter-9-plus</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-b-and-w"></i> md-filter-b-and-w</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-center-focus"></i> md-filter-center-focus</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-drama"></i> md-filter-drama</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-frames"></i> md-filter-frames</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-hdr"></i> md-filter-hdr</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-none"></i> md-filter-none</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-tilt-shift"></i> md-filter-tilt-shift</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-filter-vintage"></i> md-filter-vintage</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flare"></i> md-flare</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flash-auto"></i> md-flash-auto</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flash-off"></i> md-flash-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flash-on"></i> md-flash-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flip"></i> md-flip</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-gradient"></i> md-gradient</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-grain"></i> md-grain</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-grid-off"></i> md-grid-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-grid-on"></i> md-grid-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-hdr-off"></i> md-hdr-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-hdr-on"></i> md-hdr-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-hdr-strong"></i> md-hdr-strong</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-hdr-weak"></i> md-hdr-weak</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-healing"></i> md-healing</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-image"></i> md-image</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-image-aspect-ratio"></i> md-image-aspect-ratio</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-iso"></i> md-iso</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-landscape"></i> md-landscape</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-leak-add"></i> md-leak-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-leak-remove"></i> md-leak-remove</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-lens"></i> md-lens</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-looks"></i> md-looks</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-looks-1"></i> md-looks-1</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-looks-2"></i> md-looks-2</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-looks-3"></i> md-looks-3</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-looks-4"></i> md-looks-4</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-looks-5"></i> md-looks-5</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-looks-6"></i> md-looks-6</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-loupe"></i> md-loupe</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-movie-creation"></i> md-movie-creation</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-nature"></i> md-nature</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-nature-people"></i> md-nature-people</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-navigate-before"></i> md-navigate-before</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-navigate-next"></i> md-navigate-next</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-palette"></i> md-palette</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-panorama"></i> md-panorama</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-panorama-fisheye"></i> md-panorama-fisheye</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-panorama-horizontal"></i> md-panorama-horizontal</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-panorama-vertical"></i> md-panorama-vertical</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-panorama-wide-angle"></i> md-panorama-wide-angle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-photo"></i> md-photo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-photo-album"></i> md-photo-album</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-photo-camera"></i> md-photo-camera</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-photo-library"></i> md-photo-library</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-portrait"></i> md-portrait</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-remove-red-eye"></i> md-remove-red-eye</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-rotate-left"></i> md-rotate-left</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-rotate-right"></i> md-rotate-right</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-slideshow"></i> md-slideshow</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-straighten"></i> md-straighten</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-style"></i> md-style</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-switch-camera"></i> md-switch-camera</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-switch-video"></i> md-switch-video</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tag-faces"></i> md-tag-faces</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-texture"></i> md-texture</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-timelapse"></i> md-timelapse</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-timer"></i> md-timer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-timer-3"></i> md-timer-3</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-timer-10"></i> md-timer-10</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-timer-auto"></i> md-timer-auto</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-timer-off"></i> md-timer-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tonality"></i> md-tonality</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-transform"></i> md-transform</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tune"></i> md-tune</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wb-auto"></i> md-wb-auto</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wb-cloudy"></i> md-wb-cloudy</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wb-incandescent"></i> md-wb-incandescent</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wb-irradescent"></i> md-wb-irradescent</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-wb-sunny"></i> md-wb-sunny</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Maps</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-beenhere"></i> md-beenhere</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions"></i> md-directions</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-bike"></i> md-directions-bike</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-bus"></i> md-directions-bus</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-car"></i> md-directions-car</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-ferry"></i> md-directions-ferry</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-subway"></i> md-directions-subway</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-train"></i> md-directions-train</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-transit"></i> md-directions-transit</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-directions-walk"></i> md-directions-walk</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-flight"></i> md-flight</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-hotel"></i> md-hotel</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-layers"></i> md-layers</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-layers-clear"></i> md-layers-clear</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-airport"></i> md-local-airport</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-atm"></i> md-local-atm</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-attraction"></i> md-local-attraction</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-bar"></i> md-local-bar</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-cafe"></i> md-local-cafe</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-car-wash"></i> md-local-car-wash</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-convenience-store"></i> md-local-convenience-store</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-drink"></i> md-local-drink</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-florist"></i> md-local-florist</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-gas-station"></i> md-local-gas-station</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-grocery-store"></i> md-local-grocery-store</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-hospital"></i> md-local-hospital</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-hotel"></i> md-local-hotel</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-laundry-service"></i> md-local-laundry-service</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-library"></i> md-local-library</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-mall"></i> md-local-mall</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-movies"></i> md-local-movies</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-offer"></i> md-local-offer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-parking"></i> md-local-parking</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-pharmacy"></i> md-local-pharmacy</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-phone"></i> md-local-phone</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-pizza"></i> md-local-pizza</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-play"></i> md-local-play</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-post-office"></i> md-local-post-office</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-print-shop"></i> md-local-print-shop</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-restaurant"></i> md-local-restaurant</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-see"></i> md-local-see</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-shipping"></i> md-local-shipping</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-local-taxi"></i> md-local-taxi</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-location-history"></i> md-location-history</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-map"></i> md-map</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-my-location"></i> md-my-location</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-navigation"></i> md-navigation</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-pin-drop"></i> md-pin-drop</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-place"></i> md-place</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-rate-review"></i> md-rate-review</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-restaurant-menu"></i> md-restaurant-menu</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-satellite"></i> md-satellite</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-store-mall-directory"></i> md-store-mall-directory</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-terrain"></i> md-terrain</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-traffic"></i> md-traffic</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Navigation</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-apps"></i> md-apps</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cancel"></i> md-cancel</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-arrow-drop-down-circle"></i> md-arrow-drop-down-circle</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-arrow-drop-down"></i> md-arrow-drop-down</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-arrow-drop-up"></i> md-arrow-drop-up</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-arrow-back"></i> md-arrow-back</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-arrow-forward"></i> md-arrow-forward</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-check"></i> md-check</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-close"></i> md-close</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-chevron-left"></i> md-chevron-left</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-chevron-right"></i> md-chevron-right</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-expand-less"></i> md-expand-less</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-expand-more"></i> md-expand-more</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-fullscreen"></i> md-fullscreen</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-fullscreen-exit"></i> md-fullscreen-exit</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-menu"></i> md-menu</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-more-horiz"></i> md-more-horiz</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-more-vert"></i> md-more-vert</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-refresh"></i> md-refresh</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-unfold-less"></i> md-unfold-less</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-unfold-more"></i> md-unfold-more</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Notification</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-adb"></i> md-adb</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-bluetooth-audio"></i> md-bluetooth-audio</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-disc-full"></i> md-disc-full</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-dnd-forwardslash"></i> md-dnd-forwardslash</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-do-not-disturb"></i> md-do-not-disturb</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-drive-eta"></i> md-drive-eta</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-event-available"></i> md-event-available</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-event-busy"></i> md-event-busy</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-event-note"></i> md-event-note</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-folder-special"></i> md-folder-special</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mms"></i> md-mms</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-more"></i> md-more</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-network-locked"></i> md-network-locked</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-bluetooth-speaker"></i> md-phone-bluetooth-speaker</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-forwarded"></i> md-phone-forwarded</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-in-talk"></i> md-phone-in-talk</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-locked"></i> md-phone-locked</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-missed"></i> md-phone-missed</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-phone-paused"></i> md-phone-paused</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-play-download"></i> md-play-download</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-play-install"></i> md-play-install</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sd-card"></i> md-sd-card</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sim-card-alert"></i> md-sim-card-alert</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sms"></i> md-sms</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sms-failed"></i> md-sms-failed</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sync"></i> md-sync</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sync-disabled"></i> md-sync-disabled</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-sync-problem"></i> md-sync-problem</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-system-update"></i> md-system-update</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-tap-and-play"></i> md-tap-and-play</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-time-to-leave"></i> md-time-to-leave</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-vibration"></i> md-vibration</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-voice-chat"></i> md-voice-chat</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-vpn-lock"></i> md-vpn-lock</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Social</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-cake"></i> md-cake</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-domain"></i> md-domain</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-location-city"></i> md-location-city</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-mood"></i> md-mood</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-notifications-none"></i> md-notifications-none</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-notifications"></i> md-notifications</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-notifications-off"></i> md-notifications-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-notifications-on"></i> md-notifications-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-notifications-paused"></i> md-notifications-paused</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-pages"></i> md-pages</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-party-mode"></i> md-party-mode</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-group"></i> md-group</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-group-add"></i> md-group-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-people"></i> md-people</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-people-outline"></i> md-people-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-person"></i> md-person</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-person-add"></i> md-person-add</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-person-outline"></i> md-person-outline</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-plus-one"></i> md-plus-one</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-poll"></i> md-poll</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-public"></i> md-public</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-school"></i> md-school</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-share"></i> md-share</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-whatshot"></i> md-whatshot</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Toggle</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-check-box"></i> md-check-box</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-check-box-outline-blank"></i> md-check-box-outline-blank</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-radio-button-off"></i> md-radio-button-off</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-radio-button-on"></i> md-radio-button-on</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-star"></i> md-star</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-star-half"></i> md-star-half</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="md md-star-outline"></i> md-star-outline</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Social Icons <small>You'll have to include the class 'socicon' alongside with the following classes in order to generate and display the desired icon</small></h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-twitter"></i> socicon-twitter</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-facebook"></i> socicon-facebook</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-google"></i> socicon-google</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-pinterest"></i> socicon-pinterest</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-foursquare"></i> socicon-foursquare</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-yahoo"></i> socicon-yahoo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-skype"></i> socicon-skype</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-yelp"></i> socicon-yelp</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-feedburner"></i> socicon-feedburner</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-linkedin"></i> socicon-linkedin</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-viadeo"></i> socicon-viadeo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-xing"></i> socicon-xing</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-myspace"></i> socicon-myspace</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-soundcloud"></i> socicon-soundcloud</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-spotify"></i> socicon-spotify</p></div>                           
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-grooveshark"></i> socicon-grooveshark</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-lastfm"></i> socicon-lastfm</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-youtube"></i> socicon-youtube</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-vimeo"></i> socicon-vimeo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-dailymotion"></i> socicon-dailymotion</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-vine"></i> socicon-vine</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-flickr"></i> socicon-flickr</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-500px"></i> socicon-500px</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-instagram"></i> socicon-instagram</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-wordpress"></i> socicon-wordpress</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-tumblr"></i> socicon-tumblr</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-blogger"></i> socicon-blogger</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-technorati"></i> socicon-technorati</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-reddit"></i> socicon-reddit</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-dribbble"></i> socicon-dribbble</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-stumbleupon"></i> socicon-stumbleupon</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-digg"></i> socicon-digg</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-envato"></i> socicon-envato</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-behance"></i> socicon-beahnce</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-delicious"></i> socicon-delicious</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-deviantart"></i> socicon-devientart</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-forrst"></i> socicon-forrst</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-playstore"></i> socicon-playstore</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-zerply"></i> socicon-zerply</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-wikipedia"></i> socicon-wikipedia</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-apple"></i> socicon-apple</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-flattr"></i> socicon-flattr</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-github"></i> socicon-github</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-chimein"></i> socicon-chimein</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-friendfeed"></i> socicon-friendfeed</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-newsvine"></i> socicon-newsvine</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-identica"></i> socicon-identica</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-bebo"></i> socicon-bebo</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-zynga"></i> socicon-zynga</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-steam"></i> socicon-steam</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-xbox"></i> socicon-xbox</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-windows"></i> socicon-windows</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-outlook"></i> socicon-outlook</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-coderwall"></i> socicon-coderwall</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-tripadvisor"></i> socicon-tripadvisor</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-appnet"></i> socicon-appnet</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-goodreads"></i> socicon-goodreads</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-triplej"></i> socicon-triplej</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-lanyrd"></i> socicon-lanyrd</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-slideshare"></i> socicon-slideshare</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-buffer"></i> socicon-buffer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-rss"></i> socicon-rss</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-vkontakte"></i> socicon-vkontakte</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-disqus"></i> socicon-disqus</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-houzz"></i> socicon-houzz</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-mail"></i> socicon-mail</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-patreon"></i> socicon-patreon</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-paypal"></i> socicon-paypal</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-playstation"></i> socicon-playstation</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-smugmug"></i> socicon-smugmug</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-swarm"></i> socicon-swarm</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-triplej"></i> socicon-triplej</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-yammer"></i> socicon-yammer</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-stackoverflow"></i> socicon-stackoverflow</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-drupal"></i> socicon-drupal</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-odnoklassniki"></i> socicon-odnoklassniki</p></div>
+                                <div class="col-sm-4 col-xs-6"><p><i class="socicon socicon-android"></i> socicon-android</p></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <!-- Older IE warning message -->
+        <!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1 class="c-white">IE SUCKS!</h1>
+                <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser <br/>in order to access the maximum functionality of this website. </p>
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="img/browsers/chrome.png" alt="">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="img/browsers/firefox.png" alt="">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="img/browsers/safari.png" alt="">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                            <div>IE (New)</div>
+                        </a>
+                    </li>
+                </ul>
+                <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+            </div>   
+        <![endif]-->
+    
+        <!-- Javascript Libraries -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script src="vendors/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="vendors/waves/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/sweet-alert/sweet-alert.min.js"></script>
+        
+        <script src="js/functions.js"></script>
+        <script src="js/demo.js"></script>
+    
+    
+    </body>
+</html>
