@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minoral 1.3 - Vector Maps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="js/plugins/jvectormaps/css/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="css/jquery.nouislider.min.css">
+    <link rel="stylesheet" href="js/plugins/tabdrop/css/tabdrop.css">
+
+    <link href="css/minoral.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="brownish-scheme">
+
+    <!-- Preloader -->
+    <div class="mask"><div id="loader"></div></div>
+    <!--/Preloader -->
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      
+
+
+      <!-- Make page fluid -->
+      <div class="row">
+        
+
+
+
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+          
+
+
+          <!-- Branding -->
+          <div class="navbar-header col-md-2">
+            <a class="navbar-brand" href="index.html">
+              <strong>MIN</strong> <span class="divider vertical"></span> ORAL
+            </a>
+            <div class="sidebar-collapse">
+              <a href="vector-maps.html#">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Branding end -->
+
+
+          <!-- .nav-collapse -->
+          <div class="navbar-collapse">
+            
+
+            
+
+            <!-- Content collapsing at 768px to sidebar -->
+            <div class="collapsing-content">
+
+
+
+
+              <!-- Quick Actions -->
+              <ul class="nav navbar-nav">
+                <li class="divided">
+                  <a href="vector-maps.html#" class="page-refresh"><i class="fa fa-refresh"></i></a>
+                  <span class="divider vertical"></span>
+                </li>
+                
+                <li class="dropdown quick-action tasks">
+                  <a class="dropdown-toggle button" data-toggle="dropdown" href="vector-maps.html#">
+                    <i class="fa fa-tasks"></i>
+                    <span class="overlay-label green">5</span>
+                  </a>
+                  <ul class="dropdown-menu wide arrow green nopadding">
+                    <li><h1>You have <strong>5</strong> new tasks</h1></li>
+                    <li>
+                      <a href="vector-maps.html#">
+                        <div class="task-info">
+                          <div class="desc">Layout</div>
+                          <div class="percent">80%</div>
+                        </div>
+                        <div class="progress progress-striped progress-thin">
+                          <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            <span class="sr-only">40% Complete (success)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="vector-maps.html#">
+                        <div class="task-info">
+                          <div class="desc">Schemes</div>
+                          <div class="percent">15%</div>
+                        </div>
+                        <div class="progress progress-striped active progress-thin">
+                          <div class="progress-bar progress-bar-cyan" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                            <span class="sr-only">45% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="vector-maps.html#">
+                        <div class="task-info">
+                          <div class="desc">Forms</div>
+                          <div class="percent">5%</div>
+                        </div>
+                        <div class="progress progress-striped progress-thin">
+                          <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
+                            <span class="sr-only">5% Complete (warning)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="vector-maps.html#">
+                        <div class="task-info">
+                          <div class="desc">JavaScript</div>
+                          <div class="percent">30%</div>
+                        </div>
+                        <div class="progress progress-striped progress-thin">
+                          <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                            <span class="sr-only">30% Complete (danger)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="vector-maps.html#">
+                        <div class="task-info">
+                          <div class="desc">Dropdowns</div>
+                          <div class="percent">60%</div>
+                        </div>
+                        <div class="progress progress-striped progress-thin">
+                          <div class="progress-bar progress-bar-amethyst" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><a href="vector-maps.html#">Check all tasks <i class="fa fa-angle-right"></i></a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown quick-action notifications">
+                  <a class="dropdown-toggle button" data-toggle="dropdown" href="vector-maps.html#">
+                    <i class="fa fa-bell"></i>
+                    <span class="overlay-label orange">12</span>
+                  </a>
+                  <ul class="dropdown-menu wide arrow orange nopadding">
+                    <li><h1>You have <strong>12</strong> new notifications</h1></li>
+
+                    <li>
+                      <a href="vector-maps.html#">
+                        <span class="label label-green"><i class="fa fa-user"></i></span>
+                        New user registered.
+                        <span class="small">18 mins</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="vector-maps.html#">
+                        <span class="label label-red"><i class="fa fa-power-off"></i></span>
+                        Server down.
+                        <span class="small">27 mins</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="vector-maps.html#">
+                        <span class="label label-orange"><i class="fa fa-plus"></i></span>
+                        New order.
+                        <span class="small">36 mins</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="vector-maps.html#">
+                        <span class="label label-cyan"><i class="fa fa-power-off"></i></span>
+                        Server restared.
+                        <span class="small">45 mins</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="vector-maps.html#">
+                        <span class="label label-amethyst"><i class="fa fa-power-off"></i></span>
+                        Server started.
+                        <span class="small">50 mins</span>
+                      </a>
+                    </li>
+
+                     <li><a href="vector-maps.html#">Check all notifications <i class="fa fa-angle-right"></i></a></li>
+                  </ul>
+                </li>
+
+              </ul>
+              <!-- Quick Actions end -->
+
+
+
+
+
+              <!-- Search -->
+              <div class="search">
+                <input type="text" placeholder="&#61442; Search in maps...">
+              </div>
+              <!-- Search end -->
+
+
+
+
+
+              <!-- User Controls -->
+              <div class="user-controls">
+                <ul>
+
+                 
+                  <li class="dropdown messages">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="vector-maps.html#">
+                      <span class="badge badge-red" id="user-new-messages">3</span> John <strong>Douey</strong> <i class="fa fa-angle-down"></i>
+                    </a>
+                    <div class="profile-photo">
+                      <img src="images/profile-photo.jpg" alt />
+                    </div>
+                    <ul class="dropdown-menu wide arrow red nopadding">
+                      <li><h1>You have <strong>3</strong> new messages</h1></li>
+
+                      <li>
+                        <a class="cyan" href="vector-maps.html#">
+                          <div class="profile-photo">
+                            <img src="images/ici-avatar.jpg" alt />
+                          </div>
+                          <div class="message-info">
+                            <span class="sender">Ing. Imrich Kamarel</span>
+                            <span class="time">12 mins</span>
+                            <div class="message-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a class="green" href="vector-maps.html#">
+                          <div class="profile-photo">
+                            <img src="images/arnold-avatar.jpg" alt />
+                          </div>
+                          <div class="message-info">
+                            <span class="sender">Arnold Karlsberg</span>
+                            <span class="time">1 hour</span>
+                            <div class="message-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="vector-maps.html#">
+                          <div class="profile-photo">
+                            <img src="images/profile-photo.jpg" alt />
+                          </div>
+                          <div class="message-info">
+                            <span class="sender">John Douey</span>
+                            <span class="time">3 hours</span>
+                            <div class="message-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a class="red" href="vector-maps.html#">
+                          <div class="profile-photo">
+                            <img src="images/peter-avatar.jpg" alt />
+                          </div>
+                          <div class="message-info">
+                            <span class="sender">Peter Kay</span>
+                            <span class="time">5 hours</span>
+                            <div class="message-content">Ut enim ad minim veniam, quis nostrud exercitation</div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a class="orange" href="vector-maps.html#">
+                          <div class="profile-photo">
+                            <img src="images/george-avatar.jpg" alt />
+                          </div>
+                          <div class="message-info">
+                            <span class="sender">George McCain</span>
+                            <span class="time">6 hours</span>
+                            <div class="message-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+                          </div>
+                        </a>
+                      </li>
+
+
+                      <li><a href="vector-maps.html#">Check all messages <i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown settings">
+                    <a class="dropdown-toggle options" data-toggle="dropdown" href="vector-maps.html#">
+                      <i class="fa fa-cog"></i>
+                    </a>
+                    
+                    <ul class="dropdown-menu arrow">
+
+                      <li>
+                        <h3>Color schemes:</h3>
+                        <ul id="color-schemes">
+                          <li><a href="vector-maps.html#" class="brownish-scheme" title="Brownish"></a></li>
+                          <li><a href="vector-maps.html#" class="darkgrey-scheme" title="Dark Grey"></a></li>
+                          <li><a href="vector-maps.html#" class="lightgrey-scheme" title="Light Grey"></a></li>
+                          <li><a href="vector-maps.html#" class="cyan-scheme" title="Cyan"></a></li>
+                          <li><a href="vector-maps.html#" class="red-scheme" title="Red"></a></li>
+                          <li><a href="vector-maps.html#" class="orange-scheme" title="Orange"></a></li>
+                          <li><a href="vector-maps.html#" class="green-scheme" title="Green"></a></li>
+                          <li><a href="vector-maps.html#" class="amethyst-scheme" title="Amethyst"></a></li>
+                        </ul>
+                      </li>
+
+                      <li class="divider"></li>
+
+                      <li>
+                        <a href="vector-maps.html#"><i class="fa fa-user"></i> Profile</a>
+                      </li>
+
+                      <li>
+                        <a href="vector-maps.html#"><i class="fa fa-calendar"></i> Calendar</a>
+                      </li>
+
+                      <li>
+                        <a href="vector-maps.html#"><i class="fa fa-envelope"></i> Inbox <span class="badge badge-red" id="user-inbox">3</span></a>
+                      </li>
+
+                      <li class="divider"></li>
+
+                      <li>
+                        <a href="vector-maps.html#"><i class="fa fa-power-off"></i> Logout</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+              <!-- User Controls end -->
+
+            
+
+
+
+            </div>
+            <!-- /Content collapsing at 768px to sidebar -->
+
+
+
+            <!-- Sidebar -->
+            <ul class="nav navbar-nav side-nav" id="navigation">
+              <li class="collapsed-content">
+                <!-- Collapsed content pasting here at 768px -->
+              </li>
+              <li class="user-status status-online" id="user-status">
+                <div class="profile-photo">
+                  <img src="images/profile-photo.jpg" alt />
+                </div>
+                <div class="user">
+                  John <strong>Douey</strong>
+                  <span class="role">Administrator</span>
+                  <div class="status">
+                    <ul>
+                      <li class="dropdown change-status">
+                        <a class="dropdown-toggle my-status" data-toggle="dropdown" href="vector-maps.html#">Online</a>
+                        
+                        <ul class="dropdown-menu arrow">
+                          <li>
+                            <a href="vector-maps.html#" id="status-online" data-status="status-online">Online</a>
+                          </li>
+
+                          <li>
+                            <a href="vector-maps.html#" id="status-away" data-status="status-away">Away</a>
+                          </li>
+
+                          <li>
+                            <a href="vector-maps.html#" id="status-invisible" data-status="status-invisible">Invisible</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown" title="Dashboard">
+                  <i class="fa fa-dashboard">
+                    <span class="overlay-label red"></span>
+                  </i> 
+                  Dashboard <b class="fa fa-angle-left dropdown-arrow"></b>
+                  <span class="badge badge-cyan">1</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="index.html" title="Overview">
+                      <i class="fa fa-eye"><span class="overlay-label red80"></span></i>
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mail.html" title="Inbox">
+                      <i class="fa fa-envelope"><span class="overlay-label red60"></span></i>
+                      Inbox
+                    </a>
+                  </li>
+                  
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown" title="Forms">
+                  <i class="fa fa-list">
+                    <span class="overlay-label green"></span>
+                  </i>
+                  Forms <b class="fa fa-angle-left dropdown-arrow"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="form-elements.html" title="Common Elements">
+                      <i class="fa fa-thumb-tack"><span class="overlay-label green80"></span></i>
+                      Common Elements
+                    </a>
+                  </li>
+                  <li>
+                    <a href="validation-elements.html" title="Validation">
+                      <i class="fa fa-check-square"><span class="overlay-label green60"></span></i>
+                      Validation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="form-wizard.html"  title="Form Wizard">
+                      <i class="fa fa-shield"><span class="overlay-label green40"></span></i>
+                      Form Wizard
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown" title="Interface">
+                  <i class="fa fa-pencil">
+                    <span class="overlay-label amethyst"></span>
+                  </i>
+                  Interface <b class="fa fa-angle-left dropdown-arrow"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="ui-elements.html" title="UI Elements">
+                      <i class="fa fa-puzzle-piece"><span class="overlay-label amethyst80"></span></i>
+                      UI Elements
+                    </a>
+                  </li>
+                  <li>
+                    <a href="typography.html" title="Typography">
+                      <i class="fa fa-font"><span class="overlay-label amethyst60"></span></i>
+                      Typography
+                    </a>
+                  </li>
+                  <li>
+                    <a href="nestable.html" title="Nestable Lists">
+                      <i class="fa fa-arrows"><span class="overlay-label amethyst40"></span></i>
+                      Nestable Lists
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tiles.html" title="Tiles">
+                      <i class="fa fa-th"><span class="overlay-label amethyst40"></span></i>
+                      Tiles
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="buttons.html" title="Buttons & Icons">
+                  <i class="fa fa-tint">
+                    <span class="overlay-label orange"></span>
+                  </i>
+                  Buttons & Icons
+                </a>
+              </li>
+              <li>
+                <a href="grid.html" title="Grid Layout">
+                  <i class="fa fa-th">
+                    <span class="overlay-label cyan"></span> 
+                  </i>
+                  Grid Layout
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown" title="Tables">
+                  <i class="fa fa-th-large">
+                    <span class="overlay-label greensea"></span>
+                  </i>
+                  Tables <b class="fa fa-angle-left dropdown-arrow"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="tables.html" title="Bootstrap Tables">
+                      <i class="fa fa-puzzle-piece"><span class="overlay-label greensea80"></span></i>
+                      Bootstrap Tables
+                    </a>
+                  </li>
+                  <li>
+                    <a href="datatables.html" title="DataTables">
+                      <i class="fa fa-lightbulb-o"><span class="overlay-label greensea60"></span></i>
+                      DataTables
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown open">
+                <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown" title="Example Pages">
+                  <i class="fa fa-desktop">
+                    <span class="overlay-label drank"></span>  
+                  </i>
+                  Example Pages <b class="fa fa-angle-left dropdown-arrow"></b>
+                  <span class="label label-greensea">mails</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="login.html" title="Login Page">
+                      <i class="fa fa-user"><span class="overlay-label drank80"></span></i>
+                      Login Page
+                    </a>
+                  </li>
+                  <li>
+                    <a href="calendar.html" title="Calendar">
+                      <i class="fa fa-calendar"><span class="overlay-label drank60"></span></i>
+                      Calendar
+                    </a>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown-submenu" title="Mail">
+                      <i class="fa fa-exclamation-circle"><span class="overlay-label drank40"></span></i>
+                      Error Pages <b class="fa fa-angle-left dropdown-arrow"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="page404.html" title="Page 404">
+                          <i class="fa fa-level-up"></i>
+                          Page 404
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page403.html" title="Page 403">
+                          <i class="fa fa-level-up"></i>
+                          Page 403
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page500.html" title="Page 500">
+                          <i class="fa fa-level-up"></i>
+                          Page 500
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page503.html" title="Page 503">
+                          <i class="fa fa-level-up"></i>
+                          Page 503
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-offline.html" title="Page Offline">
+                          <i class="fa fa-level-up"></i>
+                          Offline
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="gallery.html" title="Gallery">
+                      <i class="fa fa-camera"><span class="overlay-label drank20"></span></i>
+                      Gallery
+                    </a>
+                  </li>
+                  <li>
+                    <a href="timeline.html" title="Timeline">
+                      <i class="fa fa-clock-o"><span class="overlay-label drank20"></span></i>
+                      Timeline
+                    </a>
+                  </li>
+                  <li>
+                    <a href="chat.html" title="Chat">
+                      <i class="fa fa-comments"><span class="overlay-label drank20"></span></i>
+                      Chat
+                    </a>
+                  </li>
+                  <li>
+                    <a href="search-result.html" title="Search Results">
+                      <i class="fa fa-search"><span class="overlay-label drank20"></span></i>
+                      Search Results
+                    </a>
+                  </li>
+                  <li>
+                    <a href="nav-right.html" title="RTL Direction">
+                      <i class="fa fa-align-right"><span class="overlay-label drank20"></span></i>
+                      RTL Direction
+                    </a>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown-submenu" title="Mail">
+                      <i class="fa fa-envelope"><span class="overlay-label drank20"></span></i>
+                      Mail <b class="fa fa-angle-left dropdown-arrow"></b>
+                      <span class="label label-greensea">mails</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="mail.html" title="Vertical View">
+                          <i class="fa fa-level-up"></i>
+                          Vertical View
+                          <span class="label label-greensea">mails</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mail-horizontal.html" title="Horizontal View">
+                          <i class="fa fa-level-up"></i>
+                          Horizontal View
+                          <span class="badge badge-red">3</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu open">
+                    <a href="vector-maps.html#" class="dropdown-toggle" data-toggle="dropdown-submenu" title="Maps">
+                      <i class="fa fa-map-marker"><span class="overlay-label drank20"></span></i>
+                      Maps <b class="fa fa-angle-left dropdown-arrow"></b>
+                      <span class="badge badge-red">2</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="active">
+                        <a href="vector-maps.html" title="Vector Maps">
+                          <i class="fa fa-level-up"></i>
+                          Vector Maps
+                        </a>
+                      </li>
+                      <li>
+                        <a href="google-maps.html" title="Google Maps">
+                          <i class="fa fa-level-up"></i>
+                          Google Maps
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="widgets.html" title="Widgets">
+                  <i class="fa fa-play-circle">
+                    <span class="overlay-label hotpink"></span>  
+                  </i>
+                  Widgets
+                </a>
+              </li>
+              <li>
+                <a href="charts.html" title="Charts & Graphs">
+                  <i class="fa fa-bar-chart-o">
+                    <span class="overlay-label dutch"></span>  
+                  </i>
+                  Charts & Graphs
+                </a>
+              </li>
+            </ul>
+            <!-- Sidebar end -->
+
+
+
+
+
+          </div>
+          <!--/.nav-collapse -->
+
+
+
+
+
+        </div>
+        <!-- Fixed navbar end -->
+        
+
+
+
+
+        
+        <!-- Page content -->
+        <div id="content" class="col-md-12">
+          
+
+
+
+
+
+
+
+
+          <!-- breadcrumbs -->
+          <div class="breadcrumbs">
+            <ol class="breadcrumb">
+              <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="vector-maps.html#">Example Pages</a></li>
+              <li class="active">Vector Maps</li>
+            </ol>
+          </div>
+          <!-- /breadcrumbs -->
+
+
+
+
+
+
+
+          <!-- submenu -->
+          <div class="submenu">
+            <h1>Example Pages</h1>
+            <div class="collapsed">
+              <a href="vector-maps.html#" id="submenutoggle"><h1>Example Pages <i class="fa fa-bars"></i></h1></a>
+            </div>
+            <ul class="nav nav-tabs">
+              <li><a href="login.html">Login Page</a></li>
+              <li><a href="calendar.html">Calendar</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="vector-maps.html#">
+                  Error Pages <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="page404.html">Page 404</a></li>
+                  <li><a href="page403.html">Page 403</a></li>
+                  <li><a href="page500.html">Page 500</a></li>
+                  <li><a href="page503.html">Page 503</a></li>
+                  <li><a href="page-offline.html">Offline</a></li>
+                </ul>
+              </li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="timeline.html">Timeline</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="search-result.html">Search Results</a></li>
+              <li><a href="nav-right.html">RTL Direction</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="vector-maps.html#">
+                  Mail <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="mail.html">Vertical View</a></li>
+                  <li><a href="mail-horizontal.html">Horizontal View</a></li>
+                </ul>
+              </li>
+              <li class="dropdown active">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="vector-maps.html#">
+                  Maps <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="active"><a href="vector-maps.html">Vector Maps</a></li>
+                  <li><a href="google-maps.html">Google Maps</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- /submenu -->
+
+
+          
+          
+
+
+
+
+          <!-- content main container -->
+          <div class="main">
+            
+            
+
+
+            <!-- row -->
+            <div class="row">
+
+
+
+
+              <!-- col 12 -->
+              <div class="col-md-12">
+              
+
+                
+                <!-- tile -->
+                <section class="tile">
+
+
+                  <!-- tile header -->
+                  <div class="tile-header nopadding">
+                    <div class="controls">
+                      <a href="vector-maps.html#" class="refresh"><i class="fa fa-refresh"></i></a>
+                      <a href="vector-maps.html#" class="remove"><i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <!-- /tile header -->
+
+                  <!-- tile body -->
+                  <div class="tile-body tab-content nopadding" style="padding-bottom: 1px;">
+                      
+                    <div class="tab-pane fade in active" id="gdpContainer">
+                      <div id="gdp" style="height: 570px;"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="markersContainer">
+                      <div id="markers" style="height: 570px;"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="unemploymentContainer">
+                      <div id="unemployment" style="height: 570px;"></div>
+                      <div id="value" class="slider-value"></div>
+                      <div class="noUiSlider margin-15" id="slider"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="regionsContainer">
+                      <div id="regions" style="height: 570px;"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="franceContainer">
+                      <div id="france" style="height: 570px;"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="colorsContainer">
+                      <div id="colors" style="height: 570px;"></div>
+                      <button id="randomColors" class="btn btn-greensea margin-15">Random Colors</button>
+                    </div>
+
+                    <div class="tab-pane fade" id="mallContainer">
+                      <div id="mall" style="height: 570px;"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="reverseContainer">
+                      <div id="reverse" style="height: 570px;"></div>
+                    </div>
+
+                  </div>
+                  <!-- /tile body -->
+
+                  <!-- tile footer -->
+                  <div class="tile-footer nopadding">
+
+                    <ul class="nav nav-pills tabdrop">
+                      <li class="active"><a href="vector-maps.html#gdpContainer" data-toggle="pill" data-id="gdp">GDP by country visualization</a></li>
+                      <li><a href="vector-maps.html#markersContainer" data-toggle="pill" data-id="markers">Markers on the world map</a></li>
+                      <li><a href="vector-maps.html#unemploymentContainer" data-toggle="pill" data-id="unemployment">USA unemployment</a></li>
+                      <li><a href="vector-maps.html#regionsContainer" data-toggle="pill" data-id="regions">Regions selection</a></li> 
+                      <li><a href="vector-maps.html#franceContainer" data-toggle="pill" data-id="france">France elections</a></li> 
+                      <li><a href="vector-maps.html#colorsContainer" data-toggle="pill" data-id="colors">Random colors</a></li> 
+                      <li><a href="vector-maps.html#mallContainer" data-toggle="pill" data-id="mall">Map of the mall</a></li> 
+                      <li><a href="vector-maps.html#reverseContainer" data-toggle="pill" data-id="reverse">Reverse projection</a></li>                  
+                    </ul>
+
+                  </div>
+                  <!-- /tile footer -->
+                
+
+                  <!-- show code btn -->
+                  <button class="btn show-code" data-toggle="modal" data-target="#mapsModal">
+                    show code
+                  </button>
+                  <!-- /show code btn -->
+
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="mapsModal" tabindex="-1" role="dialog" aria-labelledby="mapsCode" aria-hidden="true">
+                    <div class="modal-dialog wide">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="mapsCode">Vector Maps tile - Source Code</h4>
+                        </div>
+                        <div class="modal-body">
+
+
+<!-- Source Code -->
+
+<pre class="prettyprint linenums">
+//tile
+&lt;section class="tile"&gt;
+
+  //tile header
+  &lt;div class="tile-header nopadding"&gt;
+    &lt;div class="controls"&gt;
+      &lt;a href="#" class="refresh"&gt;&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a href="#" class="remove"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  // /tile header
+
+  //tile body
+  &lt;div class="tile-body tab-content nopadding" style="padding-bottom: 1px;"&gt;
+                      
+    &lt;div class="tab-pane fade in active" id="gdpContainer"&gt;
+      &lt;div id="gdp" style="height: 570px;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="markersContainer"&gt;
+      &lt;div id="markers" style="height: 570px;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="unemploymentContainer"&gt;
+      &lt;div id="unemployment" style="height: 570px;"&gt;&lt;/div&gt;
+      &lt;div id="value" class="slider-value"&gt;&lt;/div&gt;
+      &lt;div class="noUiSlider margin-15" id="slider"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="regionsContainer"&gt;
+      &lt;div id="regions" style="height: 570px;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="franceContainer"&gt;
+      &lt;div id="france" style="height: 570px;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="colorsContainer"&gt;
+      &lt;div id="colors" style="height: 570px;"&gt;&lt;/div&gt;
+      &lt;button id="randomColors" class="btn btn-greensea margin-15"&gt;Random Colors&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="mallContainer"&gt;
+      &lt;div id="mall" style="height: 570px;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="reverseContainer"&gt;
+      &lt;div id="reverse" style="height: 570px;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  // /tile body
+
+  //tile footer
+  &lt;div class="tile-footer nopadding"&gt;
+
+    &lt;ul class="nav nav-pills"&gt;
+      &lt;li class="active"&gt;&lt;a href="#gdpContainer" data-toggle="pill" data-id="gdp"&gt;GDP by country visualization&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#markersContainer" data-toggle="pill" data-id="markers"&gt;Markers on the world map&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#unemploymentContainer" data-toggle="pill" data-id="unemployment"&gt;USA unemployment&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#regionsContainer" data-toggle="pill" data-id="regions"&gt;Regions selection&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="#franceContainer" data-toggle="pill" data-id="france"&gt;France elections&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="#colorsContainer" data-toggle="pill" data-id="colors"&gt;Random colors&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="#mallContainer" data-toggle="pill" data-id="mall"&gt;Map of the mall&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href="#reverseContainer" data-toggle="pill" data-id="reverse"&gt;Reverse projection&lt;/a&gt;&lt;/li&gt;                  
+    &lt;/ul&gt;
+
+  &lt;/div&gt;
+  // /tile footer
+
+&lt;/section&gt;
+// /tile
+
+//****************************//
+//*********** jquery *********//
+//****************************//
+
+// GDP by country visualization
+var initGdpMap = function(){
+  $('#gdp').vectorMap({
+    map: 'world_mill_en',
+    series: {
+      regions: [{
+        values: gdpData,
+        scale: ['#C8EEFF', '#0071A4'],
+        normalizeFunction: 'polynomial'
+      }]
+    },
+    onLabelShow: function(e, el, code){
+      el.html(el.html()+' (GDP - '+gdpData[code]+')');
+    }
+  });
+};
+
+initGdpMap();
+
+// Markers on the world map
+var initMarkersMap = function() {
+  $('#markers').vectorMap({
+    map: 'world_mill_en',
+    scaleColors: ['#C8EEFF', '#0071A4'],
+    normalizeFunction: 'polynomial',
+    hoverOpacity: 0.7,
+    hoverColor: false,
+    markerStyle: {
+      initial: {
+        fill: '#F8E23B',
+        stroke: '#383f47'
+      }
+    },
+    backgroundColor: '#383f47',
+    markers: [
+      {latLng: [41.90, 12.45], name: 'Vatican City'},
+      {latLng: [43.73, 7.41], name: 'Monaco'},
+      {latLng: [-0.52, 166.93], name: 'Nauru'},
+      {latLng: [-8.51, 179.21], name: 'Tuvalu'},
+      {latLng: [43.93, 12.46], name: 'San Marino'},
+      {latLng: [47.14, 9.52], name: 'Liechtenstein'},
+      {latLng: [7.11, 171.06], name: 'Marshall Islands'},
+      {latLng: [17.3, -62.73], name: 'Saint Kitts and Nevis'},
+      {latLng: [3.2, 73.22], name: 'Maldives'},
+      {latLng: [35.88, 14.5], name: 'Malta'},
+      {latLng: [12.05, -61.75], name: 'Grenada'},
+      {latLng: [13.16, -61.23], name: 'Saint Vincent and the Grenadines'},
+      {latLng: [13.16, -59.55], name: 'Barbados'},
+      {latLng: [17.11, -61.85], name: 'Antigua and Barbuda'},
+      {latLng: [-4.61, 55.45], name: 'Seychelles'},
+      {latLng: [7.35, 134.46], name: 'Palau'},
+      {latLng: [42.5, 1.51], name: 'Andorra'},
+      {latLng: [14.01, -60.98], name: 'Saint Lucia'},
+      {latLng: [6.91, 158.18], name: 'Federated States of Micronesia'},
+      {latLng: [1.3, 103.8], name: 'Singapore'},
+      {latLng: [1.46, 173.03], name: 'Kiribati'},
+      {latLng: [-21.13, -175.2], name: 'Tonga'},
+      {latLng: [15.3, -61.38], name: 'Dominica'},
+      {latLng: [-20.2, 57.5], name: 'Mauritius'},
+      {latLng: [26.02, 50.55], name: 'Bahrain'},
+      {latLng: [0.33, 6.73], name: 'São Tomé and Príncipe'}
+    ]
+  });    
+};
+
+initMarkersMap();
+
+// USA unemployment
+var initUnemploymentMap = function() {
+  $.getJSON('js/plugins/jvectormaps/json/us-unemployment.json', function(data){
+    
+    var val = 2009;
+        statesValues = jvm.values.apply({}, jvm.values(data.states)),
+        metroPopValues = Array.prototype.concat.apply([], jvm.values(data.metro.population)),
+        metroUnemplValues = Array.prototype.concat.apply([], jvm.values(data.metro.unemployment));
+
+    $('#unemployment').vectorMap({
+      map: 'us_aea_en',
+      markers: data.metro.coords,
+      series: {
+        markers: [{
+          attribute: 'fill',
+          scale: ['#FEE5D9', '#A50F15'],
+          values: data.metro.unemployment[val],
+          min: jvm.min(metroUnemplValues),
+          max: jvm.max(metroUnemplValues)
+        },{
+          attribute: 'r',
+          scale: [5, 20],
+          values: data.metro.population[val],
+          min: jvm.min(metroPopValues),
+          max: jvm.max(metroPopValues)
+        }],
+        regions: [{
+          scale: ['#DEEBF7', '#08519C'],
+          attribute: 'fill',
+          values: data.states[val],
+          min: jvm.min(statesValues),
+          max: jvm.max(statesValues)
+        }]
+      },
+      onMarkerLabelShow: function(event, label, index){
+        label.html(
+           '&lt;b&gt;'+data.metro.names[index]+'&lt;/b&gt;&lt;br/&gt;'+'&lt;b&gt;Population: &lt;/b&gt;'+data.metro.population[val][index]+'&lt;br/&gt;'+'&lt;b&gt;Unemployment rate: &lt;/b&gt;'+data.metro.unemployment[val][index]+'%'
+        );
+      },
+      onRegionLabelShow: function(event, label, code){
+        label.html(
+          '&lt;b&gt;'+label.html()+'&lt;/b&gt;&lt;br/&gt;'+'&lt;b&gt;Unemployment rate: &lt;/b&gt;'+data.states[val][code]+'%'
+        );
+      }
+    });
+
+    var mapObject = $('#unemployment').vectorMap('get', 'mapObject');
+
+    $("#slider").noUiSlider({
+      range: [2005,2009],
+      start: 2009,
+      handles: 1,
+      step: 1,
+      serialization: {
+        to: [ $('#value'), 'text' ],
+        resolution: 1
+      },
+      slide: function(e) {
+        val = $(this).val();
+        mapObject.series.regions[0].setValues(data.states[val]);
+        mapObject.series.markers[0].setValues(data.metro.unemployment[val]);
+        mapObject.series.markers[1].setValues(data.metro.population[val]);
+      }
+    });
+  });
+};
+
+initUnemploymentMap();
+
+//Regions selection
+var initRegionsMap = function() {
+  var map,
+  markers = [
+    {latLng: [52.50, 13.39], name: 'Berlin'},
+    {latLng: [53.56, 10.00], name: 'Hamburg'},
+    {latLng: [48.13, 11.56], name: 'Munich'},
+    {latLng: [50.95, 6.96], name: 'Cologne'},
+    {latLng: [50.11, 8.68], name: 'Frankfurt am Main'},
+    {latLng: [48.77, 9.17], name: 'Stuttgart'},
+    {latLng: [51.23, 6.78], name: 'Düsseldorf'},
+    {latLng: [51.51, 7.46], name: 'Dortmund'},
+    {latLng: [51.45, 7.01], name: 'Essen'},
+    {latLng: [53.07, 8.80], name: 'Bremen'}
+  ],
+  cityAreaData = [
+    887.70,
+    755.16,
+    310.69,
+    405.17,
+    248.31,
+    207.35,
+    217.22,
+    280.71,
+    210.32,
+    325.42
+  ]
+
+  map = new jvm.WorldMap({
+    container: $('#regions'),
+    map: 'de_merc_en',
+    regionsSelectable: true,
+    markersSelectable: true,
+    markers: markers,
+    markerStyle: {
+      initial: {
+        fill: '#4DAC26'
+      },
+      selected: {
+        fill: '#CA0020'
+      }
+    },
+    regionStyle: {
+      initial: {
+        fill: '#B8E186'
+      },
+      selected: {
+        fill: '#F4A582'
+      }
+    },
+    series: {
+      markers: [{
+        attribute: 'r',
+        scale: [5, 15],
+        values: cityAreaData
+      }]
+    },
+    onRegionSelected: function(){
+      if (window.localStorage) {
+        window.localStorage.setItem(
+          'jvectormap-selected-regions',
+          JSON.stringify(map.getSelectedRegions())
+        );
+      }
+    },
+    onMarkerSelected: function(){
+      if (window.localStorage) {
+        window.localStorage.setItem(
+          'jvectormap-selected-markers',
+          JSON.stringify(map.getSelectedMarkers())
+        );
+      }
+    }
+  });
+  map.setSelectedRegions( JSON.parse( window.localStorage.getItem('jvectormap-selected-regions') || '[]' ) );
+  map.setSelectedMarkers( JSON.parse( window.localStorage.getItem('jvectormap-selected-markers') || '[]' ) );
+};
+
+initRegionsMap();
+
+//France elections
+var initFranceMap = function() {
+  $.getJSON('js/plugins/jvectormaps/json/france-elections.json', function(data){
+    new jvm.WorldMap({
+      map: 'fr_merc_en',
+      container: $('#france'),
+      series: {
+        regions: [{
+          scale: {
+            '1': '#4169E1',
+            '2': '#FF69B4'
+          },
+          attribute: 'fill',
+          values: data['year2012'].results
+        }]
+      }
+    });
+  });
+};
+
+initFranceMap();
+
+//Random colors
+var initColorsMap = function() {
+  var palette = ['#66C2A5', '#FC8D62', '#8DA0CB', '#E78AC3', '#A6D854'],
+    generateColors = function(){
+      var colors = {},
+          key;
+
+      for (key in map.regions) {
+        colors[key] = palette[Math.floor(Math.random()*palette.length)];
+      }
+      return colors;
+    },
+    map;
+
+  map = new jvm.WorldMap({
+    map: 'es_merc_en',
+    container: $('#colors'),
+    series: {
+      regions: [{
+        attribute: 'fill'
+      }]
+    }
+  });
+  
+  map.series.regions[0].setValues(generateColors());
+  
+  $('#randomColors').click(function(e){
+    e.preventDefault();
+    map.series.regions[0].setValues(generateColors());
+  });
+};
+
+initColorsMap();
+
+//Map of the mall
+var initMallMap = function() {
+  $('#mall').vectorMap({
+    map: 'mall',
+    backgroundColor: 'transparent',
+    markers: [{
+      coords: [60, 110],
+      name: 'Escalator 1',
+      style: {fill: 'yellow'}
+    },{
+      coords: [260, 95],
+      name: 'Escalator 2',
+      style: {fill: 'yellow'}
+    },{
+      coords: [434, 95],
+      name: 'Escalator 3',
+      style: {fill: 'yellow'}
+    },{
+      coords: [634, 110],
+      name: 'Escalator 4',
+      style: {fill: 'yellow'}
+    }],
+    series: {
+      regions: [{
+        values: {
+          F102: 'SPORTS & OUTDOOR',
+          F103: 'HOME DECOR',
+          F105: 'FASHION',
+          F106: 'OTHER',
+          F108: 'BEAUTY & SPA',
+          F109: 'FASHION',
+          F110: 'BEAUTY & SPA',
+          F111: 'URBAN FAVORITES',
+          F114: 'SERVICES',
+          F166: 'DINING',
+          F167: 'FASHION',
+          F169: 'DINING',
+          F170: 'ENTERTAINMENT',
+          F172: 'DINING',
+          F174: 'DINING',
+          F115: 'KIDS STUFF',
+          F117: 'LIFESTYLE',
+          F118: 'URBAN FAVORITES',
+          F119: 'FASHION',
+          F120: 'FASHION',
+          F122: 'KIDS STUFF',
+          F124: 'KIDS STUFF',
+          F125: 'KIDS STUFF',
+          F126: 'KIDS STUFF',
+          F128: 'KIDS STUFF',
+          F129: 'LIFESTYLE',
+          F130: 'HOME DECOR',
+          F132: 'DINING',
+          F133: 'SPORTS & OUTDOOR',
+          F134: 'KIDS STUFF',
+          F135: 'LIFESTYLE',
+          F136: 'LIFESTYLE',
+          F139: 'KIDS STUFF',
+          F153: 'DINING',
+          F155: 'FASHION',
+          F156: 'URBAN FAVORITES',
+          F157: 'URBAN FAVORITES',
+          F158: 'LINGERIE & UNDERWEAR',
+          F159: 'FASHION',
+          F160: 'FASHION',
+          F162: 'FASHION',
+          F164: 'FASHION',
+          F165: 'FASHION',
+          FR01: 'REST ROOMS',
+          FR02: 'REST ROOMS',
+          FR03: 'REST ROOMS',
+          FR04: 'REST ROOMS',
+          FFC: 'DINING'
+        },
+        scale: {
+          "FASHION": "#2761ad",
+          "LINGERIE & UNDERWEAR": "#d58aa3",
+          "BEAUTY & SPA": "#ee549f",
+          "URBAN FAVORITES": "#15bbba",
+          "SPORTS & OUTDOOR": "#8864ab",
+          "KIDS STUFF": "#ef4e36",
+          "ENTERTAINMENT": "#e47325",
+          "HOME DECOR": "#a2614f",
+          "LIFESTYLE": "#8a8934",
+          "DINING": "#73bb43",
+          "REST ROOMS": "#6c260f",
+          "SERVICES": "#504d7c",
+          "OTHER": "#c7b789"
+        }
+      }]
+    },
+    onRegionLabelShow: function(e, el, code){
+      if (el.html() === '') {
+        e.preventDefault();
+      }
+    }
+  });
+};
+
+initMallMap();
+
+//Reverse projection
+var initReverseMap = function() {
+  var map,
+      markerIndex = 0,
+      markersCoords = {};
+
+  map = new jvm.WorldMap({
+    map: 'us_lcc_en',
+    markerStyle: {
+      initial: {
+        fill: 'red'
+      }
+    },
+    container: $('#reverse'),
+    onMarkerLabelShow: function(e, label, code){
+      map.label.text(markersCoords[code].lat.toFixed(2)+', '+markersCoords[code].lng.toFixed(2));
+    },
+    onMarkerClick: function(e, code){
+      map.removeMarkers([code]);
+      map.label.hide();
+    }
+  });
+
+  map.container.click(function(e){
+    var latLng = map.pointToLatLng(e.offsetX, e.offsetY),
+        targetCls = $(e.target).attr('class');
+
+    if (latLng && (!targetCls || (targetCls && $(e.target).attr('class').indexOf('jvectormap-marker') === -1))) {
+      markersCoords[markerIndex] = latLng;
+      map.addMarker(markerIndex, {latLng: [latLng.lat, latLng.lng]});
+      markerIndex += 1;
+    }
+  });
+};
+
+initReverseMap();
+
+// Resize maps after tab show
+$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {   
+  $('.tab-pane').resize();    
+});
+
+//  Initialize tabDrop
+$('.tabdrop').tabdrop({text: '&lt;i class="fa fa-th-list"&gt;&lt;/i&gt;'});
+
+
+</pre>
+<!-- /Source Code -->
+
+
+
+                        </div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+                
+
+
+                </section>
+                <!-- /tile -->
+
+
+
+
+
+              </div>
+              <!-- /col 12 -->
+
+
+              
+            </div>
+            <!-- /row -->
+
+
+
+          </div>
+          <!-- /content container -->
+
+
+
+
+
+
+        </div>
+        <!-- Page content end -->
+
+
+
+
+
+
+      </div>
+      <!-- Make page fluid-->
+
+
+
+
+    </div>
+    <!-- Wrap all page content end -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&amp;skin=sons-of-obsidian"></script>
+    <script src="js/plugins/jquery.nicescroll.min.js"></script>
+    <script src="js/plugins/blockui/jquery.blockUI.js"></script>
+
+    <script src="js/plugins/jvectormaps/jquery-jvectormap-1.2.2.min.js"></script>        
+    <script src="js/plugins/jvectormaps/addons/gdp-data.js"></script>                           
+    <script src="js/plugins/jvectormaps/addons/jquery-jvectormap-world-mill-en.js"></script>    
+    <script src="js/plugins/jvectormaps/addons/jquery-jvectormap-us-aea-en.js"></script>      
+    <script src="js/plugins/jvectormaps/addons/jquery-jvectormap-de-merc-en.js"></script>       
+    <script src="js/plugins/jvectormaps/addons/jquery-jvectormap-fr-merc-en.js"></script>       
+    <script src="js/plugins/jvectormaps/addons/jquery-jvectormap-es-merc-en.js"></script>       
+    <script src="js/plugins/jvectormaps/addons/mall-map.js"></script>                           
+    <script src="js/plugins/jvectormaps/addons/jquery-jvectormap-us-lcc-en.js"></script> 
+
+    <script src="js/plugins/no-ui-slider/jquery.nouislider.min.js"></script> 
+
+    <script src="js/plugins/tabdrop/bootstrap-tabdrop.min.js"></script>      
+
+    <script src="js/minoral.min.js"></script>
+
+    <script>
+    $(function(){
+      
+      // GDP by country visualization
+      var initGdpMap = function(){
+        $('#gdp').vectorMap({
+          map: 'world_mill_en',
+          series: {
+            regions: [{
+              values: gdpData,
+              scale: ['#C8EEFF', '#0071A4'],
+              normalizeFunction: 'polynomial'
+            }]
+          },
+          onLabelShow: function(e, el, code){
+            el.html(el.html()+' (GDP - '+gdpData[code]+')');
+          }
+        });
+      };
+
+      initGdpMap();
+
+      // Markers on the world map
+      var initMarkersMap = function() {
+        $('#markers').vectorMap({
+          map: 'world_mill_en',
+          scaleColors: ['#C8EEFF', '#0071A4'],
+          normalizeFunction: 'polynomial',
+          hoverOpacity: 0.7,
+          hoverColor: false,
+          markerStyle: {
+            initial: {
+              fill: '#F8E23B',
+              stroke: '#383f47'
+            }
+          },
+          backgroundColor: '#383f47',
+          markers: [
+            {latLng: [41.90, 12.45], name: 'Vatican City'},
+            {latLng: [43.73, 7.41], name: 'Monaco'},
+            {latLng: [-0.52, 166.93], name: 'Nauru'},
+            {latLng: [-8.51, 179.21], name: 'Tuvalu'},
+            {latLng: [43.93, 12.46], name: 'San Marino'},
+            {latLng: [47.14, 9.52], name: 'Liechtenstein'},
+            {latLng: [7.11, 171.06], name: 'Marshall Islands'},
+            {latLng: [17.3, -62.73], name: 'Saint Kitts and Nevis'},
+            {latLng: [3.2, 73.22], name: 'Maldives'},
+            {latLng: [35.88, 14.5], name: 'Malta'},
+            {latLng: [12.05, -61.75], name: 'Grenada'},
+            {latLng: [13.16, -61.23], name: 'Saint Vincent and the Grenadines'},
+            {latLng: [13.16, -59.55], name: 'Barbados'},
+            {latLng: [17.11, -61.85], name: 'Antigua and Barbuda'},
+            {latLng: [-4.61, 55.45], name: 'Seychelles'},
+            {latLng: [7.35, 134.46], name: 'Palau'},
+            {latLng: [42.5, 1.51], name: 'Andorra'},
+            {latLng: [14.01, -60.98], name: 'Saint Lucia'},
+            {latLng: [6.91, 158.18], name: 'Federated States of Micronesia'},
+            {latLng: [1.3, 103.8], name: 'Singapore'},
+            {latLng: [1.46, 173.03], name: 'Kiribati'},
+            {latLng: [-21.13, -175.2], name: 'Tonga'},
+            {latLng: [15.3, -61.38], name: 'Dominica'},
+            {latLng: [-20.2, 57.5], name: 'Mauritius'},
+            {latLng: [26.02, 50.55], name: 'Bahrain'},
+            {latLng: [0.33, 6.73], name: 'São Tomé and Príncipe'}
+          ]
+        });    
+      };
+
+      initMarkersMap();
+
+      // USA unemployment
+      var initUnemploymentMap = function() {
+        $.getJSON('js/plugins/jvectormaps/json/us-unemployment.json', function(data){
+          
+          var val = 2009;
+              statesValues = jvm.values.apply({}, jvm.values(data.states)),
+              metroPopValues = Array.prototype.concat.apply([], jvm.values(data.metro.population)),
+              metroUnemplValues = Array.prototype.concat.apply([], jvm.values(data.metro.unemployment));
+
+          $('#unemployment').vectorMap({
+            map: 'us_aea_en',
+            markers: data.metro.coords,
+            series: {
+              markers: [{
+                attribute: 'fill',
+                scale: ['#FEE5D9', '#A50F15'],
+                values: data.metro.unemployment[val],
+                min: jvm.min(metroUnemplValues),
+                max: jvm.max(metroUnemplValues)
+              },{
+                attribute: 'r',
+                scale: [5, 20],
+                values: data.metro.population[val],
+                min: jvm.min(metroPopValues),
+                max: jvm.max(metroPopValues)
+              }],
+              regions: [{
+                scale: ['#DEEBF7', '#08519C'],
+                attribute: 'fill',
+                values: data.states[val],
+                min: jvm.min(statesValues),
+                max: jvm.max(statesValues)
+              }]
+            },
+            onMarkerLabelShow: function(event, label, index){
+              label.html(
+                 '<b>'+data.metro.names[index]+'</b><br/>'+'<b>Population: </b>'+data.metro.population[val][index]+'</br>'+'<b>Unemployment rate: </b>'+data.metro.unemployment[val][index]+'%'
+              );
+            },
+            onRegionLabelShow: function(event, label, code){
+              label.html(
+                '<b>'+label.html()+'</b></br>'+'<b>Unemployment rate: </b>'+data.states[val][code]+'%'
+              );
+            }
+          });
+
+          var mapObject = $('#unemployment').vectorMap('get', 'mapObject');
+
+          $("#slider").noUiSlider({
+            range: [2005,2009],
+            start: 2009,
+            handles: 1,
+            step: 1,
+            serialization: {
+              to: [ $('#value'), 'text' ],
+              resolution: 1
+            },
+            slide: function(e) {
+              val = $(this).val();
+              mapObject.series.regions[0].setValues(data.states[val]);
+              mapObject.series.markers[0].setValues(data.metro.unemployment[val]);
+              mapObject.series.markers[1].setValues(data.metro.population[val]);
+            }
+          });
+        });
+      };
+
+      initUnemploymentMap();
+
+      //Regions selection
+      var initRegionsMap = function() {
+        var map,
+        markers = [
+          {latLng: [52.50, 13.39], name: 'Berlin'},
+          {latLng: [53.56, 10.00], name: 'Hamburg'},
+          {latLng: [48.13, 11.56], name: 'Munich'},
+          {latLng: [50.95, 6.96], name: 'Cologne'},
+          {latLng: [50.11, 8.68], name: 'Frankfurt am Main'},
+          {latLng: [48.77, 9.17], name: 'Stuttgart'},
+          {latLng: [51.23, 6.78], name: 'Düsseldorf'},
+          {latLng: [51.51, 7.46], name: 'Dortmund'},
+          {latLng: [51.45, 7.01], name: 'Essen'},
+          {latLng: [53.07, 8.80], name: 'Bremen'}
+        ],
+        cityAreaData = [
+          887.70,
+          755.16,
+          310.69,
+          405.17,
+          248.31,
+          207.35,
+          217.22,
+          280.71,
+          210.32,
+          325.42
+        ]
+
+        map = new jvm.WorldMap({
+          container: $('#regions'),
+          map: 'de_merc_en',
+          regionsSelectable: true,
+          markersSelectable: true,
+          markers: markers,
+          markerStyle: {
+            initial: {
+              fill: '#4DAC26'
+            },
+            selected: {
+              fill: '#CA0020'
+            }
+          },
+          regionStyle: {
+            initial: {
+              fill: '#B8E186'
+            },
+            selected: {
+              fill: '#F4A582'
+            }
+          },
+          series: {
+            markers: [{
+              attribute: 'r',
+              scale: [5, 15],
+              values: cityAreaData
+            }]
+          },
+          onRegionSelected: function(){
+            if (window.localStorage) {
+              window.localStorage.setItem(
+                'jvectormap-selected-regions',
+                JSON.stringify(map.getSelectedRegions())
+              );
+            }
+          },
+          onMarkerSelected: function(){
+            if (window.localStorage) {
+              window.localStorage.setItem(
+                'jvectormap-selected-markers',
+                JSON.stringify(map.getSelectedMarkers())
+              );
+            }
+          }
+        });
+        map.setSelectedRegions( JSON.parse( window.localStorage.getItem('jvectormap-selected-regions') || '[]' ) );
+        map.setSelectedMarkers( JSON.parse( window.localStorage.getItem('jvectormap-selected-markers') || '[]' ) );
+      };
+
+      initRegionsMap();
+
+      //France elections
+      var initFranceMap = function() {
+        $.getJSON('js/plugins/jvectormaps/json/france-elections.json', function(data){
+          new jvm.WorldMap({
+            map: 'fr_merc_en',
+            container: $('#france'),
+            series: {
+              regions: [{
+                scale: {
+                  '1': '#4169E1',
+                  '2': '#FF69B4'
+                },
+                attribute: 'fill',
+                values: data['year2012'].results
+              }]
+            }
+          });
+        });
+      };
+
+      initFranceMap();
+
+      //Random colors
+      var initColorsMap = function() {
+        var palette = ['#66C2A5', '#FC8D62', '#8DA0CB', '#E78AC3', '#A6D854'],
+          generateColors = function(){
+            var colors = {},
+                key;
+
+            for (key in map.regions) {
+              colors[key] = palette[Math.floor(Math.random()*palette.length)];
+            }
+            return colors;
+          },
+          map;
+
+        map = new jvm.WorldMap({
+          map: 'es_merc_en',
+          container: $('#colors'),
+          series: {
+            regions: [{
+              attribute: 'fill'
+            }]
+          }
+        });
+        
+        map.series.regions[0].setValues(generateColors());
+        
+        $('#randomColors').click(function(e){
+          e.preventDefault();
+          map.series.regions[0].setValues(generateColors());
+        });
+      };
+
+      initColorsMap();
+
+      //Map of the mall
+      var initMallMap = function() {
+        $('#mall').vectorMap({
+          map: 'mall',
+          backgroundColor: 'transparent',
+          markers: [{
+            coords: [60, 110],
+            name: 'Escalator 1',
+            style: {fill: 'yellow'}
+          },{
+            coords: [260, 95],
+            name: 'Escalator 2',
+            style: {fill: 'yellow'}
+          },{
+            coords: [434, 95],
+            name: 'Escalator 3',
+            style: {fill: 'yellow'}
+          },{
+            coords: [634, 110],
+            name: 'Escalator 4',
+            style: {fill: 'yellow'}
+          }],
+          series: {
+            regions: [{
+              values: {
+                F102: 'SPORTS & OUTDOOR',
+                F103: 'HOME DECOR',
+                F105: 'FASHION',
+                F106: 'OTHER',
+                F108: 'BEAUTY & SPA',
+                F109: 'FASHION',
+                F110: 'BEAUTY & SPA',
+                F111: 'URBAN FAVORITES',
+                F114: 'SERVICES',
+                F166: 'DINING',
+                F167: 'FASHION',
+                F169: 'DINING',
+                F170: 'ENTERTAINMENT',
+                F172: 'DINING',
+                F174: 'DINING',
+                F115: 'KIDS STUFF',
+                F117: 'LIFESTYLE',
+                F118: 'URBAN FAVORITES',
+                F119: 'FASHION',
+                F120: 'FASHION',
+                F122: 'KIDS STUFF',
+                F124: 'KIDS STUFF',
+                F125: 'KIDS STUFF',
+                F126: 'KIDS STUFF',
+                F128: 'KIDS STUFF',
+                F129: 'LIFESTYLE',
+                F130: 'HOME DECOR',
+                F132: 'DINING',
+                F133: 'SPORTS & OUTDOOR',
+                F134: 'KIDS STUFF',
+                F135: 'LIFESTYLE',
+                F136: 'LIFESTYLE',
+                F139: 'KIDS STUFF',
+                F153: 'DINING',
+                F155: 'FASHION',
+                F156: 'URBAN FAVORITES',
+                F157: 'URBAN FAVORITES',
+                F158: 'LINGERIE & UNDERWEAR',
+                F159: 'FASHION',
+                F160: 'FASHION',
+                F162: 'FASHION',
+                F164: 'FASHION',
+                F165: 'FASHION',
+                FR01: 'REST ROOMS',
+                FR02: 'REST ROOMS',
+                FR03: 'REST ROOMS',
+                FR04: 'REST ROOMS',
+                FFC: 'DINING'
+              },
+              scale: {
+                "FASHION": "#2761ad",
+                "LINGERIE & UNDERWEAR": "#d58aa3",
+                "BEAUTY & SPA": "#ee549f",
+                "URBAN FAVORITES": "#15bbba",
+                "SPORTS & OUTDOOR": "#8864ab",
+                "KIDS STUFF": "#ef4e36",
+                "ENTERTAINMENT": "#e47325",
+                "HOME DECOR": "#a2614f",
+                "LIFESTYLE": "#8a8934",
+                "DINING": "#73bb43",
+                "REST ROOMS": "#6c260f",
+                "SERVICES": "#504d7c",
+                "OTHER": "#c7b789"
+              }
+            }]
+          },
+          onRegionLabelShow: function(e, el, code){
+            if (el.html() === '') {
+              e.preventDefault();
+            }
+          }
+        });
+      };
+
+      initMallMap();
+
+      //Reverse projection
+      var initReverseMap = function() {
+        var map,
+            markerIndex = 0,
+            markersCoords = {};
+
+        map = new jvm.WorldMap({
+          map: 'us_lcc_en',
+          markerStyle: {
+            initial: {
+              fill: 'red'
+            }
+          },
+          container: $('#reverse'),
+          onMarkerLabelShow: function(e, label, code){
+            map.label.text(markersCoords[code].lat.toFixed(2)+', '+markersCoords[code].lng.toFixed(2));
+          },
+          onMarkerClick: function(e, code){
+            map.removeMarkers([code]);
+            map.label.hide();
+          }
+        });
+
+        map.container.click(function(e){
+          var latLng = map.pointToLatLng(e.offsetX, e.offsetY),
+              targetCls = $(e.target).attr('class');
+
+          if (latLng && (!targetCls || (targetCls && $(e.target).attr('class').indexOf('jvectormap-marker') === -1))) {
+            markersCoords[markerIndex] = latLng;
+            map.addMarker(markerIndex, {latLng: [latLng.lat, latLng.lng]});
+            markerIndex += 1;
+          }
+        });
+      };
+
+      initReverseMap();
+
+      // Resize maps after tab show
+      $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {   
+        $('.tab-pane').resize();    
+        $("html").getNiceScroll().resize();
+      });
+
+      //  Initialize tabDrop
+      $('.tabdrop').tabdrop({text: '<i class="fa fa-th-list"></i>'});
+
+    })
+      
+    </script>
+  </body>
+</html>
