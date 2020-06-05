@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+ <head>
+    
+        <!-- start: Meta -->
+        <meta charset="utf-8">
+        <title>Mosaik - Admin template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- end: Meta -->
+
+        <!-- start: CSS -->
+      <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css"> 
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <!-- end: CSS -->
+
+      <!-- start: JS -->
+      <script src="assets/js/jquery-1.9.1.js"></script>
+      <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/lib/justgage/justgage.1.0.1.js"></script>
+      <script src="assets/lib/justgage/raphael.2.1.0.min.js"></script> 
+      <script src="assets/js/jquery.sparkline.js"></script>
+      <script src="assets/js/charts.js"></script>
+      <script src="assets/js/date.js"></script>
+      <script src="assets/js/daterangepicker.js"></script>   
+      <!-- end: JS -->
+        
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+
+        <!--[if gte IE 9]>
+         <style type="text/css">.gradient {filter: none;}</style>
+        <![endif]-->
+
+</head><!--end: head -->
+
+<body> 
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+
+      <ul class="nav pull-right">
+
+        <li>
+        <form class="search form-inline">
+            <input type="text" placeholder="hint to search">
+        </form>                        
+
+        </li>
+
+        <li class="dropdown header-border">
+           <a id="search-toggle" class="visible-phone search-submit"><i class="icon-search"></i></a>
+        </li>
+        
+        <li class="dropdown header-border">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="email-notify"><i class="icon-envelope"></i><span class="email-alert"><i class="icon-circle"></i> </span></span>
+            </a>
+
+            <ul class="dropdown-menu block-dark messages">
+                <li class="view-all"><a href="#"><strong>View all messages</strong></a></li>   
+                <li><a href="#">
+                    <div class="avatar"><img height="45" width="45" src="assets/images/rogie.jpg" alt="Your profile"></div>
+                    <div class="info">Antonio Heide <span class="timer">36 min</span></div>    
+                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem necessitatibus.</div>
+                    </a>
+                </li>
+                <li><a href="#">
+                    <div class="avatar"><img height="45" width="45" src="assets/images/iljamiskov.jpg" alt="Your profile"></div>
+                    <div class="info">Melissa Evans <span class="timer">52 min</span></div>    
+                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio ad placeat incidunt iste non enim nisi quae culpa.</div>
+                    </a>
+                </li>                                               
+            </ul>
+        </li>   
+
+        <li class="dropdown header-border">
+            <a href="#" role="button" class="dropdown-toggle " data-toggle="dropdown">
+
+                <span class="email-notify"><i class="icon-bell-alt"></i><span class="email-alert"><i class="icon-circle"></i> </span></span>
+            </a>
+
+            <ul class="dropdown-menu block-dark messages msg-notify">
+                <li class="view-all"><a href="#">View all notifications</a></li>   
+                <li><a href="#"><div><span class="badge badge-danger"><i class="icon-comment"></i></span>  new comment <span class="timer">2 min</span></div></a></li>      
+                <li><a href="#"><div><span class="badge badge-info"><i class="icon-twitter"></i></span>  new follower <span class="timer">6 min</span></div></a></li> 
+                <li><a href="#"><div><span class="badge badge-success"><i class="icon-thumbs-up"></i></span> new like <span class="timer">9 min</span></div></a></li>                        
+                <li><a href="#"><div><span class="badge badge-info"><i class="icon-twitter"></i></span> new follower <span class="timer">25 min</span></div></a></li> 
+                <li><a href="#"><div><span class="badge badge-inverse"><i class="icon-user"></i></span> new registration <span class="timer">32 min</span></div></a></li>                        
+                <li><a href="#"><div><span class="badge badge-danger"><i class="icon-comment"></i></span> new comment <span class="timer">2 hours</span></div></a></li>     
+                <li><a href="#"><div><span class="badge badge-primary"><i class="icon-map-marker"></i></span> new localization <span class="timer">Yesterday</span></div></a></li>     
+            </ul>
+        </li>                                   
+
+        <li class="dropdown header-border">
+            <a href="#" role="button" class="dropdown-toggle profile-header" data-toggle="dropdown">
+                <div class="thumb-account">
+                    <img height="43" width="43" src="assets/images/timeline-team.jpg" alt="Your profile">
+                    <span><i class="icon-caret-down"></i></span>
+                </div>
+            </a>
+
+            <ul class="dropdown-menu block-dark account">
+                <li class="first"><a tabindex="-1" href="#"><span data-toggle="modal" class="pull-right" href="#myModalSettings" ><span class="btn btn-primary"><i class="icon-cog"></i></span></span> Settings</a>
+                </li>
+
+                    <li class="profile">
+                        <span>
+                            <span class="heading"><strong>Profile</strong> <a class="pull-right text-primary text-weight-regular" href="#">edit</a></span>
+                            <a class="img thumb" href="#">
+                                <img alt="Avatar" width="70" height="70" src="assets/images/avatar.jpg">
+                            </a>
+                            <span class="details">
+                                <a class="strong text-regular" href="#">Straptrooper</a>
+                                contact@mosaik.com
+                            </span>
+                        </span>
+                        <span class="clearfix"></span>
+
+                    </li>
+                <li class="last"><a tabindex="-1" href="sign-in.html"><span class="pull-right"><span class="btn btn-primary">Sign out</span></span> &nbsp;<span class="info-account"><i class="icon-info-sign"></i></a></span>
+                </li>
+
+            </ul>
+        </li>
+          
+      </ul>
+
+      <a class="brand" href="index.html">
+          <span class="title">M<span class="hidden-phone">osaik</span>    </span> <span class="logo"></span>
+      </a>
+
+      <button id="side-toggle" class="hidden-phone btn btn-primary side-toggle-btn"><i class="icon-trello"></i></button>
+
+    </div>
+</div><!-- navbar --> 
+
+<!-- modal header settings --> 
+<div aria-hidden="true" aria-labelledby="myModalSettings1" role="dialog" tabindex="-1" class="modal modal-default hide" id="myModalSettings">
+  <div class="modal-header ">
+    <button aria-hidden="true" data-dismiss="modal" class="close" type="button"></button>
+    <h3 id="myModalSettings1">Setting</h3>
+  </div>
+  <div class="modal-body">
+
+    <form action="#" class="form-dark">
+
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-user"></i></span>
+          <input type="text" name="fullname" placeholder="Username">
+        </div> 
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-lock"></i></span>
+        <input type="password" placeholder="ID network">
+        </div>
+
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-globe"></i></span>
+          <input type="text" name="country" placeholder="Country">
+        </div> 
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-phone"></i></span>
+        <input type="text" placeholder="Phone">
+        </div>
+      <hr class="modal-hr">
+
+      <span>Select value :</span>
+      <label for="settings1" class="checkbox rounded-checkbox checkbox-dark">
+          <input  value="1" type="checkbox" id="settings1" class="checkbox">
+          <span class="check"><span></span></span>
+          Low 
+      </label>  
+       <label for="settings2" class="checkbox rounded-checkbox checkbox-dark">
+          <input  value="1" type="checkbox" id="settings2" class="checkbox">
+          <span class="check"><span></span></span>
+          medium
+      </label>  
+       <label for="settings3" class="checkbox rounded-checkbox checkbox-dark">
+          <input  value="1" type="checkbox" id="settings3" class="checkbox">
+          <span class="check"><span></span></span>                                  
+          High
+      </label>  
+
+      <hr class="modal-hr">
+
+      <label for="settings-rg" class="checkbox">
+      <span class="label-switch">Active yout account : </span> 
+
+          <span class="switch">
+            <input  value="1" type="checkbox" id="settings-rg">
+            <span class="switch-container"><span class="on">On</span>
+              <span class="mid"></span>
+              <span class="off">Off</span></span>
+          </span>
+      </label>
+
+      <hr class="modal-hr">
+
+      <label class="reg-radio" for="#">
+          Add contact automatically :
+      <input type="radio" id="settings1-1-1" name="radio-1-set" class="regular-radio radio-dark" checked /><label for="settings1-1-1"></label> On
+      <input type="radio" id="settings1-1-2" name="radio-1-set" class="regular-radio radio-dark" /><label for="settings1-1-2"></label>  Off
+      </label>                        
+
+    </form> 
+    
+  </div>
+  <div class="modal-footer">
+    <button aria-hidden="true" data-dismiss="modal" class="btn btn-info">Cancel</button>
+    <button aria-hidden="true" data-dismiss="modal" class="btn btn-primary">Save</button>
+
+  </div>
+</div><!-- modal header settings -->   
+
+<div class="sidebar-nav" id="sidebar">
+
+    <form action="#" class="search form-inline">
+        <input type="text" placeholder="Search...">
+    </form>    
+
+    <div class="hidden-phone">
+          <div class="tabs dashtabs sidetabs">
+              <ul class="nav nav-tabs" id="myTab-1">
+                <li class="first-child active"><a data-toggle="tab" href="#charge">
+                <span class="icon-stack">
+                  <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+                  <span class="dashlight"><i class="icon-bolt"></i></span>
+                 </span>                        
+                    Charge 
+                </a></li>
+                <li><a data-toggle="tab" href="#upload">
+                <span class="icon-stack">
+                  <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+                  <span class="dashlight"><i class="icon-download-alt"></i></span>
+                 </span> 
+                    Download </a></li>
+              </ul>                     
+              <div class="block-body ">
+
+                  <div class="tab-content" id="myTabContent-1">
+                    <div id="charge" class="tab-pane fade in active">
+                    <div class="knob-center"><strong> Cpu usage</strong>
+                     <input class="knob" data-width="200" data-displayPrevious=true data-fgColor="#FFDB98" data-skin="tron" value="75" data-thickness=".2"><span>%</span>
+
+                     </div>
+                    </div>
+                    <div id="upload" class="tab-pane fade">
+
+                        <div class="project">
+
+                            <ul class="unstyled">
+                              <li class="first-child">
+                                <strong class="label label-primary"> 97%</strong> Update Jquery
+                                <div class="progress">
+                                  <div style="width: 97%;" class="bar"></div>
+                                </div>                          
+                              </li>
+                              <li>
+                                <strong class="label label-danger"> 62%</strong> Update awsome font
+                                <div class="progress progress-danger">
+                                  <div style="width: 63%;" class="bar"></div>
+                                </div>                          
+                              </li>
+                              <li class="last-child">
+                                <strong class="label label-warning"> 32%</strong> Update backbone
+                                <div class="progress progress-warning">
+                                  <div style="width: 32%;" class="bar"></div>
+                                </div>                          
+                              </li>                                                                        
+
+                            </ul>
+
+
+                          </div>
+
+
+                    </div>
+                  </div>
+
+              </div>
+          </div> 
+
+    </div>    
+
+     <div class="clearfix"></div>  
+
+    <a data-toggle="collapse" data-target=".nav-collapse" class="btn-sidebar">
+        <span class="notify navigation span12"><i class="icon-reorder"></i> Navigation <span class="pull-right label sidebar-label label-primary"><i class="icon-angle-down"></i> </span></span>
+    </a>
+
+    <div class="nav-collapse subnav-collapse collapse ">
+        <a href="index.html" class="nav-header active" ><i class="icon-dashboard"></i><span class="hidden-tablet">Dashboard</span></a>
+
+        <a href="#chart" class="nav-header" data-toggle="collapse"><i class="icon-file"></i><span class="hidden-tablet">Pages<span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="chart" class="nav nav-list collapse">
+            <li ><a href="product.html"><i class="icon-shopping-cart"></i><span class="hidden-tablet"> Product</span></a></li>
+            <li ><a href="users.html"><i class="icon-group"></i><span class="hidden-tablet"> Users</span></a></li>
+            <li ><a href="invoice.html"><i class="icon-file-text "></i><span class="hidden-tablet"> Invoice</span></a></li>
+            <li ><a href="charts.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Charts</span></a></li> 
+            <li ><a href="inbox.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Inbox</span></a></li>            
+            <li ><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
+            <li ><a href="gallery.html"><i class="icon-camera"></i><span class="hidden-tablet"> Gallery</span></a></li>
+            <li ><a href="error.html"><i class="icon-code "></i><span class="hidden-tablet"> Error Pages</span></a></li>
+        </ul>  
+
+        <a href="#ui-elements" class="nav-header" data-toggle="collapse"><i class="icon-tasks"></i> <span class="hidden-tablet">UI Elements <span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="ui-elements" class="nav nav-list collapse">
+            <li><a href="grid.html"><i class="icon-ellipsis-horizontal"></i><span class="hidden-tablet"> Grid Layout</a></li>
+            <li><a href="button.html"><i class="icon-circle"></i><span class="hidden-tablet"> Buttons</span></a></li> 
+            <li ><a href="block.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Block</span></a></li>
+            <li><a href="interface.html"><i class="icon-laptop"></i><span class="hidden-tablet"> Interface elements</span></a></li>
+            <li><a href="components.html"><i class="icon-table"></i><span class="hidden-tablet"> Components</span></a></li>
+            <li><a href="icons.html"><i class="icon-info-sign"></i><span class="hidden-tablet"> Icons</span></a></li>
+            <li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
+        </ul>     
+
+        <a href="#form" class="nav-header" data-toggle="collapse"><i class="icon-edit"></i><span class="hidden-tablet">Forms<span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="form" class="nav nav-list collapse">
+            <li><a href="tables.html"><i class="icon-table"></i><span class="hidden-tablet"> Tables</span></a></li>
+            <li><a href="validate.html"><i class="icon-ok"></i><span class="hidden-tablet"> Validate</span></a></li>
+            <li><a href="wizard.html"><i class="icon-exchange"></i><span class="hidden-tablet"> Wizard</span></a></li>
+            <li><a href="widgets.html"><i class="icon-reorder"></i><span class="hidden-tablet"> Widgets</span></a></li>
+        </ul>                     
+
+        <a href="#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-lock"></i><span class="hidden-tablet">Account<span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="accounts-menu" class="nav nav-list collapse">
+            <li ><a href="sign-in.html"><i class="icon-signin"></i><span class="hidden-tablet"> Sign In</span></a></li>
+            <li ><a href="sign-up.html"><i class="icon-signout"></i><span class="hidden-tablet"> Sign Up</span></a></li>
+            <li ><a href="password.html"><i class="icon-lock"></i><span class="hidden-tablet"> Reset Password</span></a></li>
+        </ul>   
+
+    </div>
+</div><!-- sidebar --> 
+
+<div class="content">
+
+  <div class="tabs dashtabs">
+      <ul class="dash nav nav-tabs" id="myTab-1">
+            <li class="first-child active">
+            	<a data-toggle="tab" href="#icon">
+	            	<span class="icon-stack">
+			          <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+			          <span class="dashlight"><i class="icon-info-sign"></i></span>
+	       			 </span>            		
+					<span class="hidden-phone">Icon</span> 
+				</a>
+			</li>
+            <li>
+            	<a data-toggle="tab" href="#widget">
+	            	<span class="icon-stack">
+			          <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+			          <span class="dashlight"><i class="icon-puzzle-piece"></i></span>
+	       			 </span>
+	         		<span class="hidden-phone">Widget</span> 
+         		</a>
+         	</li>
+            <li>
+            	<a data-toggle="tab" href="#inbox">
+	            	<span class="icon-stack">
+			          <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+			          <span class="dashlight"><i class="icon-inbox"></i></span>
+	       			 </span>
+	         		<span class="hidden-phone">Inbox</span> 
+         		</a>
+         	</li>         	
+            <li>
+            	<a data-toggle="tab" href="#account">
+	            	<span class="icon-stack">
+			          <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+			          <span class="dashlight"><i class="icon-user"></i></span>
+	       			 </span>
+	         		<span class="hidden-phone">Account</span> 
+         		</a>
+         	</li>          	
+	
+			<li class=pull-right> 
+				<div class="dark-well">
+
+				   <div id="reportrange" class="pull-right notify well-picker">
+				      <i class="icon-calendar"></i>
+				      <span></span> <b class="caret"></b>
+				   </div>
+
+				   <script type="text/javascript">
+				   //Datepicker
+				   $(document).ready(function() {
+				      $('#reportrange').daterangepicker(
+				         {
+				            ranges: {
+				               'Today': ['today', 'today'],
+				               'Yesterday': ['yesterday', 'yesterday'],
+				               'Last 7 Days': [Date.today().add({ days: -6 }), 'today'],
+				               'Last 30 Days': [Date.today().add({ days: -29 }), 'today'],
+				               'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+				               'Last Month': [Date.today().moveToFirstDayOfMonth().add({ months: -1 }), Date.today().moveToFirstDayOfMonth().add({ days: -1 })]
+				            },
+				            opens: 'left',
+				            format: 'MM/dd/yyyy',
+				            separator: ' to ',
+				            startDate: Date.today().add({ days: -29 }),
+				            endDate: Date.today(),
+				            minDate: '01/01/2012',
+				            maxDate: '12/31/2013',
+				            locale: {
+				                applyLabel: 'Submit',
+				                fromLabel: 'From',
+				                toLabel: 'To',
+				                customRangeLabel: 'Custom Range',
+				                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+				                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+				                firstDay: 1
+				            },
+				            showWeekNumbers: true,
+				            buttonClasses: ['notify'],
+				            dateLimit: false
+				         }, 
+				         function(start, end) {
+				            $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+				         }
+				      );
+
+				      //Set the initial state of the picker label
+				      $('#reportrange span').html(Date.today().add({ days: -29 }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
+
+				   });
+				   </script>
+
+				</div>                
+			</li>              
+      </ul><!-- Tabs -->                    
+      <div class="block-body ">
+          <div class="tab-content" id="myTabContent-1">
+
+          	<!-- tabs icon -->
+            <div id="icon" class="tab-pane active">
+
+		        <div class="container-fluid">
+
+		          <div class="row-fluid">
+
+		            <div class="block span12 icon">
+		                <p class="block-heading">New Icons </p>  
+		                <div class="block-body">
+
+		                  <div class="row-fluid set-1">                  
+
+		                    <div class="span3">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-cloud-download"></i> icon-cloud-download</li>
+		                        <li><i class="icon-cloud-upload"></i> icon-cloud-upload</li>
+		                        <li><i class="icon-lightbulb"></i> icon-lightbulb</li>
+		                        <li><i class="icon-exchange"></i> icon-exchange</li>
+		                        <li><i class="icon-bell-alt"></i> icon-bell-alt</li>
+		                        <li><i class="icon-file-alt"></i> icon-file-alt</li>
+		                        <li><i class="icon-beer"></i> icon-beer</li>
+		                        <li><i class="icon-coffee"></i> icon-coffee</li>
+		                        <li><i class="icon-food"></i> icon-food</li>
+		                        <li><i class="icon-fighter-jet"></i> icon-fighter-jet</li>
+		                      </ul>
+		                    </div>
+		                    <div class="span3">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-user-md"></i> icon-user-md</li>
+		                        <li><i class="icon-stethoscope"></i> icon-stethoscope</li>
+		                        <li><i class="icon-suitcase"></i> icon-suitcase</li>
+		                        <li><i class="icon-building"></i> icon-building</li>
+		                        <li><i class="icon-hospital"></i> icon-hospital</li>
+		                        <li><i class="icon-ambulance"></i> icon-ambulance</li>
+		                        <li><i class="icon-medkit"></i> icon-medkit</li>
+		                        <li><i class="icon-h-sign"></i> icon-h-sign</li>
+		                        <li><i class="icon-plus-sign-alt"></i> icon-plus-sign-alt</li>
+		                        <li><i class="icon-spinner"></i> icon-spinner</li>
+		                      </ul>
+		                    </div>
+		                    <div class="span3">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-angle-left"></i> icon-angle-left</li>
+		                        <li><i class="icon-angle-right"></i> icon-angle-right</li>
+		                        <li><i class="icon-angle-up"></i> icon-angle-up</li>
+		                        <li><i class="icon-angle-down"></i> icon-angle-down</li>
+		                        <li><i class="icon-double-angle-left"></i> icon-double-angle-left</li>
+		                        <li><i class="icon-double-angle-right"></i> icon-double-angle-right</li>
+		                        <li><i class="icon-double-angle-up"></i> icon-double-angle-up</li>
+		                        <li><i class="icon-double-angle-down"></i> icon-double-angle-down</li>
+		                        <li><i class="icon-circle-blank"></i> icon-circle-blank</li>
+		                        <li><i class="icon-circle"></i> icon-circle</li>
+		                      </ul>
+		                    </div>
+		                    <div class="span2">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-desktop"></i> icon-desktop</li>
+		                        <li><i class="icon-laptop"></i> icon-laptop</li>
+		                        <li><i class="icon-tablet"></i> icon-tablet</li>
+		                        <li><i class="icon-mobile-phone"></i> icon-mobile-phone</li>
+		                        <li><i class="icon-quote-left"></i> icon-quote-left</li>
+		                        <li><i class="icon-quote-right"></i> icon-quote-right</li>
+		                        <li><i class="icon-reply"></i> icon-reply</li>
+		                        <li><i class="icon-github-alt"></i> icon-github-alt</li>
+		                        <li><i class="icon-folder-close-alt"></i> icon-folder-close-alt</li>
+		                        <li><i class="icon-folder-open-alt"></i> icon-folder-open-alt</li>
+		                      </ul>
+		                    </div>   
+
+		                  </div>
+		                </div> 
+		                   
+		           </div>
+
+		          </div> 
+
+		          <div class="row-fluid">
+
+		            <div class="block span12 icon">
+		                <p class="block-heading">Web Application Icons</p>  
+		                <div class="block-body">
+
+
+		                  <h3 class="set-2"></h3>  
+		                  
+		                  <div class="row-fluid set-2">                   
+
+		                   <div class="span3">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-adjust"></i> icon-adjust</li>
+		                        <li><i class="icon-asterisk"></i> icon-asterisk</li>
+		                        <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+		                        <li><i class="icon-bar-chart"></i> icon-bar-chart</li>
+		                        <li><i class="icon-barcode"></i> icon-barcode</li>
+		                        <li><i class="icon-beaker"></i> icon-beaker</li>
+		                        <li><i class="icon-beer"></i> icon-beer</li>
+		                        <li><i class="icon-bell"></i> icon-bell</li>
+		                        <li><i class="icon-bell-alt"></i> icon-bell-alt</li>
+		                        <li><i class="icon-bolt"></i> icon-bolt</li>
+		                        <li><i class="icon-book"></i> icon-book</li>
+		                        <li><i class="icon-bookmark"></i> icon-bookmark</li>
+		                        <li><i class="icon-bookmark-empty"></i> icon-bookmark-empty</li>
+		                        <li><i class="icon-briefcase"></i> icon-briefcase</li>
+		                        <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+		                        <li><i class="icon-calendar"></i> icon-calendar</li>
+		                        <li><i class="icon-camera"></i> icon-camera</li>
+		                        <li><i class="icon-camera-retro"></i> icon-camera-retro</li>
+		                        <li><i class="icon-certificate"></i> icon-certificate</li>
+		                        <li><i class="icon-check"></i> icon-check</li>
+		                        <li><i class="icon-check-empty"></i> icon-check-empty</li>
+		                        <li><i class="icon-circle"></i> icon-circle</li>
+		                        <li><i class="icon-circle-blank"></i> icon-circle-blank</li>
+		                        <li><i class="icon-cloud"></i> icon-cloud</li>
+		                        <li><i class="icon-cloud-download"></i> icon-cloud-download</li>
+		                        <li><i class="icon-cloud-upload"></i> icon-cloud-upload</li>
+		                        <li><i class="icon-coffee"></i> icon-coffee</li>
+		                        <li><i class="icon-cog"></i> icon-cog</li>
+		                        <li><i class="icon-cogs"></i> icon-cogs</li>
+		                        <li><i class="icon-comment"></i> icon-comment</li>
+		                        <li><i class="icon-comment-alt"></i> icon-comment-alt</li>
+		                        <li><i class="icon-comments"></i> icon-comments</li>
+		                        <li><i class="icon-comments-alt"></i> icon-comments-alt</li>
+		                        <li><i class="icon-credit-card"></i> icon-credit-card</li>
+		                        <li><i class="icon-dashboard"></i> icon-dashboard</li>
+		                        <li><i class="icon-desktop"></i> icon-desktop</li>
+		                        <li><i class="icon-download"></i> icon-download</li>
+		                        <li><i class="icon-download-alt"></i> icon-download-alt</li>
+		                      </ul>
+		                    </div>
+
+		                    <div class="span3">
+		                        <ul class="unstyled">
+		                          <li><i class="icon-edit"></i> icon-edit</li>
+		                          <li><i class="icon-envelope"></i> icon-envelope</li>
+		                          <li><i class="icon-envelope-alt"></i> icon-envelope-alt</li>
+		                          <li><i class="icon-exchange"></i> icon-exchange</li>
+		                          <li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+		                          <li><i class="icon-external-link"></i> icon-external-link</li>
+		                          <li><i class="icon-eye-close"></i> icon-eye-close</li>
+		                          <li><i class="icon-eye-open"></i> icon-eye-open</li>
+		                          <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+		                          <li><i class="icon-fighter-jet"></i> icon-fighter-jet</li>
+		                          <li><i class="icon-film"></i> icon-film</li>
+		                          <li><i class="icon-filter"></i> icon-filter</li>
+		                          <li><i class="icon-fire"></i> icon-fire</li>
+		                          <li><i class="icon-flag"></i> icon-flag</li>
+		                          <li><i class="icon-folder-close"></i> icon-folder-close</li>
+		                          <li><i class="icon-folder-open"></i> icon-folder-open</li>
+		                          <li><i class="icon-folder-close-alt"></i> icon-folder-close-alt</li>
+		                          <li><i class="icon-folder-open-alt"></i> icon-folder-open-alt</li>
+		                          <li><i class="icon-food"></i> icon-food</li>
+		                          <li><i class="icon-gift"></i> icon-gift</li>
+		                          <li><i class="icon-glass"></i> icon-glass</li>
+		                          <li><i class="icon-globe"></i> icon-globe</li>
+		                          <li><i class="icon-group"></i> icon-group</li>
+		                          <li><i class="icon-hdd"></i> icon-hdd</li>
+		                          <li><i class="icon-headphones"></i> icon-headphones</li>
+		                          <li><i class="icon-heart"></i> icon-heart</li>
+		                          <li><i class="icon-heart-empty"></i> icon-heart-empty</li>
+		                          <li><i class="icon-home"></i> icon-home</li>
+		                          <li><i class="icon-inbox"></i> icon-inbox</li>
+		                          <li><i class="icon-info-sign"></i> icon-info-sign</li>
+		                          <li><i class="icon-key"></i> icon-key</li>
+		                          <li><i class="icon-leaf"></i> icon-leaf</li>
+		                          <li><i class="icon-laptop"></i> icon-laptop</li>
+		                          <li><i class="icon-legal"></i> icon-legal</li>
+		                          <li><i class="icon-lemon"></i> icon-lemon</li>
+		                          <li><i class="icon-lightbulb"></i> icon-lightbulb</li>
+		                          <li><i class="icon-lock"></i> icon-lock</li>
+		                          <li><i class="icon-unlock"></i> icon-unlock</li>
+		                        </ul>
+		                    </div>          
+
+		                    <div class="span3">
+		                          <ul class="unstyled">
+		                            <li><i class="icon-magic"></i> icon-magic</li>
+		                            <li><i class="icon-magnet"></i> icon-magnet</li>
+		                            <li><i class="icon-map-marker"></i> icon-map-marker</li>
+		                            <li><i class="icon-minus"></i> icon-minus</li>
+		                            <li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+		                            <li><i class="icon-mobile-phone"></i> icon-mobile-phone</li>
+		                            <li><i class="icon-money"></i> icon-money</li>
+		                            <li><i class="icon-move"></i> icon-move</li>
+		                            <li><i class="icon-music"></i> icon-music</li>
+		                            <li><i class="icon-off"></i> icon-off</li>
+		                            <li><i class="icon-ok"></i> icon-ok</li>
+		                            <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+		                            <li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+		                            <li><i class="icon-pencil"></i> icon-pencil</li>
+		                            <li><i class="icon-picture"></i> icon-picture</li>
+		                            <li><i class="icon-plane"></i> icon-plane</li>
+		                            <li><i class="icon-plus"></i> icon-plus</li>
+		                            <li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+		                            <li><i class="icon-print"></i> icon-print</li>
+		                            <li><i class="icon-pushpin"></i> icon-pushpin</li>
+		                            <li><i class="icon-qrcode"></i> icon-qrcode</li>
+		                            <li><i class="icon-question-sign"></i> icon-question-sign</li>
+		                            <li><i class="icon-quote-left"></i> icon-quote-left</li>
+		                            <li><i class="icon-quote-right"></i> icon-quote-right</li>
+		                            <li><i class="icon-random"></i> icon-random</li>
+		                            <li><i class="icon-refresh"></i> icon-refresh</li>
+		                            <li><i class="icon-remove"></i> icon-remove</li>
+		                            <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+		                            <li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+		                            <li><i class="icon-reorder"></i> icon-reorder</li>
+		                            <li><i class="icon-reply"></i> icon-reply</li>
+		                            <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+		                            <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+		                            <li><i class="icon-retweet"></i> icon-retweet</li>
+		                            <li><i class="icon-road"></i> icon-road</li>
+		                            <li><i class="icon-rss"></i> icon-rss</li>
+		                            <li><i class="icon-screenshot"></i> icon-screenshot</li>
+		                            <li><i class="icon-search"></i> icon-search</li>
+		                          </ul>
+		                    </div>   
+
+		                    <div class="span2">
+		                            <ul class="unstyled">
+		                              <li><i class="icon-share"></i> icon-share</li>
+		                              <li><i class="icon-share-alt"></i> icon-share-alt</li>
+		                              <li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+		                              <li><i class="icon-signal"></i> icon-signal</li>
+		                              <li><i class="icon-signin"></i> icon-signin</li>
+		                              <li><i class="icon-signout"></i> icon-signout</li>
+		                              <li><i class="icon-sitemap"></i> icon-sitemap</li>
+		                              <li><i class="icon-sort"></i> icon-sort</li>
+		                              <li><i class="icon-sort-down"></i> icon-sort-down</li>
+		                              <li><i class="icon-sort-up"></i> icon-sort-up</li>
+		                              <li><i class="icon-spinner"></i> icon-spinner</li>
+		                              <li><i class="icon-star"></i> icon-star</li>
+		                              <li><i class="icon-star-empty"></i> icon-star-empty</li>
+		                              <li><i class="icon-star-half"></i> icon-star-half</li>
+		                              <li><i class="icon-tablet"></i> icon-tablet</li>
+		                              <li><i class="icon-tag"></i> icon-tag</li>
+		                              <li><i class="icon-tags"></i> icon-tags</li>
+		                              <li><i class="icon-tasks"></i> icon-tasks</li>
+		                              <li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+		                              <li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+		                              <li><i class="icon-time"></i> icon-time</li>
+		                              <li><i class="icon-tint"></i> icon-tint</li>
+		                              <li><i class="icon-trash"></i> icon-trash</li>
+		                              <li><i class="icon-trophy"></i> icon-trophy</li>
+		                              <li><i class="icon-truck"></i> icon-truck</li>
+		                              <li><i class="icon-umbrella"></i> icon-umbrella</li>
+		                              <li><i class="icon-upload"></i> icon-upload</li>
+		                              <li><i class="icon-upload-alt"></i> icon-upload-alt</li>
+		                              <li><i class="icon-user"></i> icon-user</li>
+		                              <li><i class="icon-user-md"></i> icon-user-md</li>
+		                              <li><i class="icon-volume-off"></i> icon-volume-off</li>
+		                              <li><i class="icon-volume-down"></i> icon-volume-down</li>
+		                              <li><i class="icon-volume-up"></i> icon-volume-up</li>
+		                              <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+		                              <li><i class="icon-wrench"></i> icon-wrench</li>
+		                              <li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+		                              <li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+		                            </ul>
+		                    </div>                        
+
+		                  </div>
+
+		                </div>  
+		            </div> 
+		          </div> 
+		           
+		          <div class="row-fluid">
+
+		            <div class="block span12 icon">
+		                <p class="block-heading">Text Editor Icons</p>  
+		                <div class="block-body">
+		                           
+		                  <div class="row-fluid set-3">                  
+
+		                    <div class="span3">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-file"></i> icon-file</li>
+		                        <li><i class="icon-file-alt"></i> icon-file-alt</li>
+		                        <li><i class="icon-cut"></i> icon-cut</li>
+		                        <li><i class="icon-copy"></i> icon-copy</li>
+		                        <li><i class="icon-paste"></i> icon-paste</li>
+		                        <li><i class="icon-save"></i> icon-save</li>
+		                        <li><i class="icon-undo"></i> icon-undo</li>
+		                        <li><i class="icon-repeat"></i> icon-repeat</li>
+		                      </ul>
+		                    </div>
+		                    <div class="span3">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-text-height"></i> icon-text-height</li>
+		                        <li><i class="icon-text-width"></i> icon-text-width</li>
+		                        <li><i class="icon-align-left"></i> icon-align-left</li>
+		                        <li><i class="icon-align-center"></i> icon-align-center</li>
+		                        <li><i class="icon-align-right"></i> icon-align-right</li>
+		                        <li><i class="icon-align-justify"></i> icon-align-justify</li>
+		                        <li><i class="icon-indent-left"></i> icon-indent-left</li>
+		                        <li><i class="icon-indent-right"></i> icon-indent-right</li>
+		                      </ul>
+		                    </div>
+		                    <div class="span3">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-font"></i> icon-font</li>
+		                        <li><i class="icon-bold"></i> icon-bold</li>
+		                        <li><i class="icon-italic"></i> icon-italic</li>
+		                        <li><i class="icon-strikethrough"></i> icon-strikethrough</li>
+		                        <li><i class="icon-underline"></i> icon-underline</li>
+		                        <li><i class="icon-link"></i> icon-link</li>
+		                        <li><i class="icon-paper-clip"></i> icon-paper-clip</li>
+		                        <li><i class="icon-columns"></i> icon-columns</li>
+		                      </ul>
+		                    </div>
+		                    <div class="span2">
+		                      <ul class="unstyled">
+		                        <li><i class="icon-table"></i> icon-table</li>
+		                        <li><i class="icon-th-large"></i> icon-th-large</li>
+		                        <li><i class="icon-th"></i> icon-th</li>
+		                        <li><i class="icon-th-list"></i> icon-th-list</li>
+		                        <li><i class="icon-list"></i> icon-list</li>
+		                        <li><i class="icon-list-ol"></i> icon-list-ol</li>
+		                        <li><i class="icon-list-ul"></i> icon-list-ul</li>
+		                        <li><i class="icon-list-alt"></i> icon-list-alt</li>
+		                      </ul>
+		                    </div>   
+
+		                  </div>  
+
+		                </div>  
+		            </div> 
+		          </div> 
+		           
+		        </div>
+
+            </div><!-- tabs icon -->
+
+			<!-- tabs widget -->
+            <div id="widget" class="tab-pane">
+
+				<div class="row-fluid">
+
+					<div class="block span4">
+					  <p class="block-heading">
+					    <span class="block-icon pull-right">
+					          <a href="#" class="demo-cancel-click" rel="tooltip" title="settings"><i class="icon-cog"></i></a>
+					    </span>
+
+					    <span>Chat</span>
+					  </p>                  
+					  <div class="block-body chat">
+
+					    <div class="left">
+					        <img src="assets/images/alagoon.jpg" alt="avatar" class="chat-avatar pull-left">
+					        <div class="message">
+					          <div class="arrow-left"></div>
+					          <p><strong>Wyatt Prescott</strong> <small> April 12, 2013 10:07</small></p>
+					          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur quas voluptates.
+					        </div>
+					    </div>                                                        
+
+					    <div class="right">
+					        <img src="assets/images/cibawoman.jpg" alt="avatar" class="chat-avatar pull-right">
+					        <div class="message">
+					          <div class="arrow-right"></div>
+					          <p><strong>Janet Parker</strong> <small> April 12, 2013 12:07</small></p>
+					          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur quas.
+					        </div>
+					    </div> 
+
+					    <div class="left">
+					        <img src="assets/images/alagoon.jpg" alt="avatar" class="chat-avatar pull-left">
+					        <div class="message">
+					          <div class="arrow-left"></div>
+					          <p><strong>Wyatt Prescott</strong> <small> April 12, 2013 10:07</small></p>
+					            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta molestiae optio ea?   
+					        </div>
+					    </div>                                                        
+
+					    <div class="right">
+					        <img src="assets/images/cibawoman.jpg" alt="avatar" class="chat-avatar pull-right">
+					        <div class="message">
+					          <div class="arrow-right"></div>
+					          <p><strong>Janet Parker</strong> <small> April 12, 2013 12:07</small></p>
+					          Lorem ipsum dolor sit amet, consectetur adipisicing elit!
+					        </div>
+					    </div>                       
+					    <div class="chat-form ">
+					      <textarea placeholder="Enter your message..."></textarea>
+					      <button class="btn btn-info">Send message</button>
+					    </div>
+
+					  </div>
+					</div>                   
+
+						<div class="block span4">
+					    <p class="block-heading">
+					      <span class="block-icon pull-right">
+					            <a title="" rel="tooltip" class="demo-cancel-click" href="#" data-original-title="Refresh"><i class="icon-refresh"></i></a>
+					      </span>
+
+					      <span>Admin</span>
+					    </p>                  
+					    <div class="block-body">
+
+					      <ul class="admin unstyled">
+					        <li>
+					          <img class="avatar pull-left" alt="avatar" src="assets/images/ogvidius.jpg">
+					          <p><strong>Marvin Lawson</strong></p>
+					          <button class="btn btn-primary"><i class="icon-envelope"></i> </button>
+					          <button class="btn btn-info"><i class="icon-facebook"></i> </button>
+					          <button class="btn btn-inverse"><i class="icon-github"></i> </button>
+					          <hr>
+					        </li>
+					        <li>
+					          <img class="avatar pull-left" alt="avatar" src="assets/images/acoops.jpg">
+					          <p><strong>Roberta Hansen</strong></p>
+					          <button class="btn btn-primary"><i class="icon-envelope"></i> </button>
+					          <button class="btn btn-info"><i class="icon-facebook"></i> </button>
+					          <button class="btn btn-inverse"><i class="icon-github"></i> </button>
+					          <hr>
+					        </li>
+					        <li>
+					          <img class="avatar pull-left" alt="avatar" src="assets/images/ogvidius.jpg">
+					          <p><strong>Marvin Lawson</strong></p>
+					          <button class="btn btn-primary"><i class="icon-envelope"></i> </button>
+					          <button class="btn btn-info"><i class="icon-facebook"></i> </button>
+					          <button class="btn btn-inverse"><i class="icon-github"></i> </button>
+					          <hr>
+					        </li>
+					        <li>
+					          <img class="avatar pull-left" alt="avatar" src="assets/images/acoops.jpg">
+					          <p><strong>Roberta Hansen</strong></p>
+					          <button class="btn btn-primary"><i class="icon-envelope"></i> </button>
+					          <button class="btn btn-info"><i class="icon-facebook"></i> </button>
+					          <button class="btn btn-inverse"><i class="icon-github"></i> </button>
+					          <hr>
+					        </li>
+					        <li>
+					          <img class="avatar pull-left" alt="avatar" src="assets/images/ogvidius.jpg">
+					          <p><strong>Marvin Lawson</strong></p>
+					          <button class="btn btn-primary"><i class="icon-envelope"></i> </button>
+					          <button class="btn btn-info"><i class="icon-facebook"></i> </button>
+					          <button class="btn btn-inverse"><i class="icon-github"></i> </button>
+					        </li>                                                                        
+					      </ul>
+
+
+					    </div>
+					  </div>							                                   
+
+					<div class="block span4">
+					  <p class="block-heading">
+					    <span class="block-icon pull-right">
+					          <a href="#" class="demo-cancel-click" rel="tooltip" title="Refresh"><i class="icon-refresh"></i></a>
+					    </span>
+
+					    <span>Activity</span>
+					  </p>                  
+					  <div class="stat block-body">
+
+					    <ul class="unstyled">
+					      <li class="first-child">
+					        <span class="badge badge-success"> <i class="icon-envelope"></i></span><strong> 3</strong> email <span class="pull-right"><small>16 April</small></span>
+					      </li>
+					      <li>
+					        <span class="badge badge-info"> <i class="icon-picture"></i></span><strong> 8</strong> New picture <span class="pull-right"><small>12 April</small></span>
+					      </li>
+					      <li>
+					        <span class="badge badge-info"> <i class="icon-cloud"></i></span><strong> 30</strong> cloud files  <span class="pull-right"><small>9 April</small></span>
+					      </li>
+					      <li>
+					        <span class="badge badge-inverse"> <i class="icon-search"></i></span><strong> 105</strong> search <span class="pull-right"><small>9 April</small></span>
+					      </li>
+					      <li>
+					        <span class="badge badge-warning"> <i class="icon-download"></i></span><strong> 25</strong> download <span class="pull-right"><small>9 April</small></span>
+					      </li>                                                
+					      <li>
+					        <span class="badge badge-important"> <i class="icon-tag"></i></span><strong> 86</strong> New  tag  <span class="pull-right"><small>7 April</small></span>
+					      </li>
+					      <li>
+					        <span class="badge badge-info"> <i class="icon-gift"></i></span><strong> 8</strong> gift  <span class="pull-right"><small>4 April</small></span>
+					      </li>                                                                        
+					      <li>
+					        <span class="badge badge-info"> <i class="icon-cloud"></i></span><strong> 30</strong> cloud files  <span class="pull-right"><small>9 April</small></span>
+					      </li>
+					      <li>
+					        <span class="badge badge-inverse"> <i class="icon-search"></i></span><strong> 105</strong> search <span class="pull-right"><small>9 April</small></span>
+					      </li>
+					      <li class="last-child">
+					        <span class="badge badge-warning"> <i class="icon-download"></i></span><strong> 25</strong> download <span class="pull-right"><small>9 April</small></span>
+					      </li>                                                
+					    </ul>
+
+
+					  </div>
+					</div>    
+
+				</div> 
+
+				<div class="row-fluid">
+
+					<div class="block span4">
+						    <p class="block-heading">
+						      <span class="block-icon pull-right">
+						            <a title="" rel="tooltip" class="demo-cancel-click" href="#" data-original-title="Refresh"><i class="icon-refresh"></i></a>
+						      </span>
+
+						      <span>Monstly stat</span>
+						    </p>                  
+						    <div class="stat block-body">
+
+						      <ul class="unstyled">
+						        <li class="first-child">
+						          <span class="btn btn-success"> <i class="icon-arrow-up"></i></span><strong> 7</strong> New followers <span class="pull-right"><small>16 April</small></span>
+						        </li>
+						        <li>
+						          <span class="btn btn-success"> <i class="icon-arrow-up"></i></span><strong> 4</strong> New likes <span class="pull-right"><small>12 April</small></span>
+						        </li>
+						        <li>
+						          <span class="btn btn-info"> <i class="icon-minus"></i></span><strong> 305</strong> users <span class="pull-right"><small>9 April</small></span>
+						        </li>
+						        <li>
+						          <span class="btn btn-info"> <i class="icon-minus"></i></span><strong> 5</strong> admins <span class="pull-right"><small>9 April</small></span>
+						        </li>
+						        <li>
+						          <span class="btn btn-info"> <i class="icon-minus"></i></span><strong> 15</strong> Lead <span class="pull-right"><small>9 April</small></span>
+						        </li>                                                
+						        <li>
+						          <span class="btn btn-danger"> <i class="icon-arrow-down"></i></span><strong> 4</strong> New  localization  <span class="pull-right"><small>7 April</small></span>
+						        </li>
+						        <li class="last-child">
+						          <span class="btn btn-danger"> <i class="icon-arrow-down"></i></span><strong> 4</strong> New Registrations  <span class="pull-right"><small>4 April</small></span>
+						        </li>                                                                        
+
+						      </ul>
+
+
+						    </div>
+					</div>
+
+
+
+					<div class="block span4">
+					  <p class="block-heading">
+					    <span class="block-icon pull-right">
+					          <a href="#" class="demo-cancel-click" rel="tooltip" title="settings"><i class="icon-cog"></i></a>
+					    </span>
+
+					    <span>Task In progress</span>
+					  </p>                  
+					  <div class="block-body project">
+
+					    <ul class="unstyled">
+					      <li class="first-child">
+					        <span class="btn btn-inverse"> <i class="icon-refresh"></i></span>  update Jquery <strong class="label label-info"> 80%</strong>
+					        <div class="progress">
+					          <div class="bar" style="width: 80%;"></div>
+					        </div>                          
+					      </li>
+					      <li>
+					        <span class="btn btn-inverse"> <i class="icon-refresh"></i></span>  update awsome font <strong class="label label-info"> 48%</strong>
+					        <div class="progress">
+					          <div class="bar" style="width: 48%;"></div>
+					        </div>                          
+					      </li>
+					      <li>
+					        <span class="btn btn-inverse"> <i class="icon-fire"></i></span>  update firefox <strong class="label label-danger"> 34%</strong>
+					        <div class="progress progress-danger">
+					          <div class="bar" style="width: 34%;"></div>
+					        </div>                          
+					      </li>
+					      <li>
+					        <span class="btn btn-inverse"> <i class="icon-refresh"></i></span>  update Opera mobile <strong class="label label-info"> 66%</strong>
+					        <div class="progress">
+					          <div class="bar" style="width: 66%;"></div>
+					        </div>                          
+					      </li>
+					      <li class="last-child">
+					        <span class="btn btn-inverse"> <i class="icon-exclamation-sign"></i></span>  update backbone <strong class="label label-warning"> 95%</strong>
+					        <div class="progress progress-warning">
+					          <div class="bar" style="width: 95%;"></div>
+					        </div>                          
+					      </li>                                                                        
+
+					    </ul>
+
+
+					  </div>
+					</div>  							  
+
+                </div>
+
+            </div><!-- tabs widget -->
+
+			<!-- tabs inbox -->
+            <div id="inbox" class="tab-pane">
+				
+	          <div class="container-fluid">
+	            <div class="row-fluid">
+	              <div class="block span12 inbox">
+	                  <p class="block-heading" data-toggle="collapse">Inbox 
+	                    <span class="pull-right">
+	                        <button class="btn btn-info"><i class="icon-chevron-left"></i></button>
+	                        <button class="btn btn-info"><i class="icon-chevron-right"></i></button>
+	                    </span>
+	                  </p>
+	                  <div class="block-body">
+
+	                      <div class="inbox-filter">
+	                          <div class="btn-group">
+	                            <a class="btn btn-inbox-filter" href="#">
+	                                <label for="#inbox-check" class="checkbox rounded-checkbox">
+	                                    <input  value="1" type="checkbox" id="#inbox-check" class="checkbox">
+	                                    <span class="check"><span></span></span>
+	                                </label>	                            
+                            	</a>
+	                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
+	                            <ul class="dropdown-menu">
+	                              <li><a href="#"><i class="icon-exclamation-sign"></i> All</a></li>
+	                              <li><a href="#"><i class="icon-star"></i> Starred</a></li>
+	                              <li><a href="#"><i class="icon-star-empty"></i> Unstarred</a></li>
+	                            </ul>
+	                          </div>
+
+	                          <div class="btn demo-cancel-click" rel="tooltip" title="Refresh"><i class="icon-refresh"></i></div>
+
+	                          <div class="btn-group">
+	                              <button class="btn demo-cancel-click" rel="tooltip" title="Archive"><i class="icon-folder-close"></i></button>
+	                              <button class="btn demo-cancel-click" rel="tooltip" title="Label"><i class="icon-tag"></i></button>
+	                              <button class="btn demo-cancel-click" rel="tooltip" title="Delete"><i class="icon-trash"></i></button>
+	                          </div>
+
+	                      </div> 
+
+	                     <table class="table">  
+	                          <tbody>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox1" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox1" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>
+	                            <td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>      
+	                            <td>Wyatt Prescott</td>
+	                            <td class="inbox-message"><span class="label label-warning">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>
+	                            <td class="center">2013/03/01</td>                                      
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox2" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox2" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>
+								<td class="td-star"><i class="icon-star"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>   
+	                            <td>Taylor Barrett</td>
+	                            <td class="inbox-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>
+	                            <td class="center">2013/02/01</td>                                       
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox3" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox3" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>
+								<td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>   
+	                            <td>Janet Parker</td>
+	                            <td class="inbox-message"><span class="label label-important">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>
+	                            <td class="center">2013/04/01</td>                                     
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox4" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox4" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>	                            <td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>   
+	                            <td>Roberta Hansen</td>
+	                            <td class="inbox-message"><span class="label label-disabled">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>                             
+	                            <td class="center">2013/07/01</td>                                      
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox5" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox5" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>	                            
+								<td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>   
+	                            <td>Marvin Lawson</td>
+	                            <td class="inbox-message"><span class="label label-success">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>                             
+	                            <td class="center">2013/09/01</td>                                      
+	                          </tr>  
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox6" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox6" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>	                            
+								<td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>      
+	                            <td>Wyatt Prescott</td>
+	                            <td class="inbox-message"><span class="label label-warning">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>
+	                            <td class="center">2013/03/01</td>                                      
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox7" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox7" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>	                            
+								<td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>   
+	                            <td>Taylor Barrett</td>
+	                            <td class="inbox-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>
+	                            <td class="center">2013/02/01</td>                                       
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox8" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox8" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>	                            
+								<td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-camera"></i></td>   
+	                            <td>Janet Parker</td>
+	                            <td class="inbox-message"><span class="label label-important">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>
+	                            <td class="center">2013/04/01</td>                                      
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox9" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox9" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>	                            
+								<td class="td-star"><i class="icon-star"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>   
+	                            <td>Roberta Hansen</td>
+	                            <td class="inbox-message"><span class="label label-disabled">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>                             
+	                            <td class="center">2013/07/01</td>                                      
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check">
+                                <label for="#inbox10" class="checkbox rounded-checkbox">
+                                    <input  value="1" type="checkbox" id="#inbox10" class="checkbox">
+                                    <span class="check"><span></span></span>
+                                </label>
+								</td>	                            
+								<td class="td-star"><i class="icon-star-empty"></i></td>
+	                            <td class="td-paper"><i class="icon-paper-clip"></i></td>   
+	                            <td>Marvin Lawson</td>
+	                            <td class="inbox-message"><span class="label label-success">Active</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam at quibusdam beatae quia repudiandae iste nemo et minima quam expedita molestias.</td>                             
+	                            <td class="center">2013/09/01</td>                                   
+	                          </tr>                                                              
+	                          </tbody>
+	                       </table>
+	   
+	                </div>
+
+	              </div> 
+
+	            </div> 
+
+	            <div class="alert alert-info">
+	                <button data-dismiss="alert" class="close" type="button"><i class="icon-remove"></i></button>
+	                <strong>Notice :</strong> Add a  signature
+	            </div>            
+	            
+	            <div class="row-fluid">  
+	              <div class="block span12 block-head-btn new">
+	                <p class="block-heading">Lorem ipsum dolor.
+
+	                    <span class="pull-right">
+	                        <button data-toggle="modal" class="btn btn-info" href="#myModal1"><i class="icon-cog"></i></button>
+	                    </span>
+
+	                      <div aria-hidden="true" aria-labelledby="myModalLabel1" role="dialog" tabindex="-1" class="modal hide modal-default" id="myModal1" style="display: none;">
+	                        <div class="modal-header">
+	                          <button aria-hidden="true" data-dismiss="modal" class="close" type="button"></button>
+	                          <h3 id="myModalLabel1">Setting</h3>
+	                        </div>
+	                        <div class="modal-body">
+
+	                      <form action="#" class="inbox-form">
+
+	                        <table class="table">  
+	                          <tbody>
+	                          <tr>
+	                            <td class="td-check"><input type="checkbox"></td>
+	                            <td class="td-star">Notify me when any new message arrives in my inbox.</td>
+	                          </tr> 
+	                          <tr>
+	                            <td class="td-check"><input type="checkbox"></td>
+	                            <td class="td-star">When I send a message to a new person, add them to Other Contacts so that I can auto-complete to them next time.</td>
+	                          </tr>
+	                          <tr>
+	                            <td class="td-check"><input type="checkbox"></td>
+	                            <td class="td-star">Show snippets of the message.</td>
+	                          </tr> 
+	                        </tbody>
+	                       </table>                           
+
+	                      </form> 
+	                          
+	                        </div>
+	                        <div class="modal-footer">
+	                          <button aria-hidden="true" data-dismiss="modal" class="btn btn-primary">Save</button>
+	                        </div>
+	                      </div>                    
+	                </p>
+	                <div class="block-body">
+
+
+	                  <p>
+	                    <span>
+	                    <a title="" 
+	                    data-content=" 
+	                     - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod" 
+	                    data-placement="right" 
+	                    data-toggle="popover" 
+	                    class="btn" href="#"
+	                    data-original-title="support"><i class="icon-user"></i></a>                  
+	                  </span> <strong>support</strong> "support@warpbootstrap.com"</p>
+
+	                  <p>to me </p>                   
+
+	                  <hr>
+
+	                  <p><i class="icon-picture icon-4x pull-left icon-muted"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet accusamus mollitia distinctio dicta quas veritatis ratione laborum laudantium at harum itaque veniam aut labore deserunt consectetur facilis facere suscipit repellendus.</p>
+
+	                  <blockquote><i class="icon-quote-left icon-2x pull-left icon-muted"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis illo asperiores tempora molestias harum nesciunt nisi perferendis quam enim nam qui quaerat doloremque similique debitis reprehenderit quasi exercitationem eligendi voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nam ipsa doloremque corporis deleniti minima saepe! Tenetur exercitationem iure consequuntur amet quia quidem dolorem dolorum impedit esse et voluptatibus quibusdam.</blockquote>
+
+	                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vel fugit quis saepe rem illo est mollitia quibusdam aliquid corporis et aliquam iure praesentium maiores nulla quam voluptas. Voluptatum repudiandae.</p>
+
+	                  <hr>
+
+	                  <p><a class="btn btn-primary" href="">Reply</a> <a class="btn btn-primary" href="">Forward</a></p>
+
+	                </div>
+	                 
+	              </div>
+
+	            </div>             
+
+	            <div class="row-fluid">  
+	              <div class="block span12">
+	                <div class="block-heading">
+	                  <span class="block-icon pull-right">
+	                      <a href="#" class="demo-cancel-click" rel="tooltip" title="Refresh"><i class="icon-refresh"></i></a>
+	                  </span>
+	                  <a href="#widget2container" data-toggle="collapse">New message</a>
+	                </div>
+	                <div id="widget2container" class="block-body collapse in">
+
+	                  <p class="input-inbox">To :<input type="text" class="line" placeholder="email"> </p>
+
+	                  <span> From  : </span>
+
+	                  <div class="btn-group">
+	                    <a href="#" data-toggle="dropdown" class="btn dropdown-toggle">contact@austra.com <i class="icon-angle-down"></i></a>
+	                    <ul class="dropdown-menu">
+	                      <li><a href="#">info@austra.com</a></li>
+	                      <li><a href="#">support@austra.com</a></li>
+	                    </ul>
+	                  </div>                      
+
+	                  <hr>
+
+	                  <p class="input-inbox">Subject :<input type="text" class="line" placeholder=""> </p>
+
+
+	                  <form class="replyForm" method="post" action="">
+
+	                    <fieldset>
+
+	                    <div id="demo">
+	                         <textarea class="textarea" style="width:90%" rows="12">..</textarea>
+	                    </div>                      
+
+	                      <div class="actions"><button tabindex="3" type="submit" class="btn btn-primary">Send</button></div>
+
+	                    </fieldset>
+
+	                  </form>
+
+
+	                </div>
+	                 
+	              </div>
+
+	            </div>
+
+	          </div>			
+
+			</div><!-- tabs inbox -->
+
+			<!-- tabs account -->
+            <div id="account" class="tab-pane">
+				
+
+			</div><!-- tabs account -->				
+
+          </div>
+      </div>
+  </div> 		
+    
+</div><!-- content -->   
+
+<footer>
+	<div class="clearfix">
+		<p class="pull-left"><a class="notify-disabled" href="#"><i class="icon-chevron-up"></i></a></p>
+	    <p class="pull-right">&copy; 2013 <a href="http://mickael-girault.fr" target="_blank">Bootstrap Trooper</a></p>
+	</div>
+</footer><!-- footer -->  
+
+
+<!-- start: JS -->
+<script src="assets/js/scrooly.js"></script>
+<script src="assets/js/responsive-tables.js"></script>
+<script src="assets/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="assets/lib/fullcalendar/fullcalendar.min.js"></script>
+<script src="assets/lib/jasny/bootstrap-fileupload.js"></script>
+<script src="assets/js/wysihtml5-0.3.0.js "></script>
+<script src="assets/js/bootstrap-wysihtml5.js "></script>
+<script src="assets/js/prettyprint.js"></script>
+<script src="assets/js/jquery.spellchecker.js "></script>
+<script src="assets/js/parsley.js"></script>
+<script src="assets/js/jquery.masonry.min.js"></script>
+<script src="assets/js/jquery.knob.js"></script>
+<script src="assets/js/custom.js"></script>
+<!-- end: JS -->
+
+
+<!-- script -->
+
+<script type="text/javascript">
+ //popover
+     $('.popover-test').popover()
+    // popover demo
+    $("a[data-toggle=popover]")
+    .popover()
+    .click(function(e) {
+    e.preventDefault()
+    }) 
+</script>       
+
+<script type="text/javascript">
+//tooltip
+  $("[rel=tooltip]").tooltip();
+  $(function() {
+      $('.demo-cancel-click').click(function(){return false;});
+  });
+</script>
+
+<script type="text/javascript">
+//calendar
+  $(document).ready(function() {
+  
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      editable: true,
+      events: [
+        {
+          title: 'All Day Event',
+          start: new Date(y, m, 1)
+        },
+        {
+          title: 'Long Event',
+          start: new Date(y, m, d-5),
+          end: new Date(y, m, d-2)
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: new Date(y, m, d-3, 16, 0),
+          allDay: false
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: new Date(y, m, d+4, 16, 0),
+          allDay: false
+        },
+        {
+          title: 'Meeting',
+          start: new Date(y, m, d, 10, 30),
+          allDay: false
+        },
+        {
+          title: 'Lunch',
+          start: new Date(y, m, d, 12, 0),
+          end: new Date(y, m, d, 14, 0),
+          allDay: false
+        },
+        {
+          title: 'Birthday Party',
+          start: new Date(y, m, d+1, 19, 0),
+          end: new Date(y, m, d+1, 22, 30),
+          allDay: false
+        },
+        {
+          title: 'Click for Google',
+          start: new Date(y, m, 28),
+          end: new Date(y, m, 29),
+          url: 'http://google.com/'
+        }
+      ]
+    });
+    
+  });
+</script><!-- script -->  
+
+<script type="text/javascript">
+//Knob
+    $(function($) {
+
+        $(".knob").knob({
+            change : function (value) {
+                //console.log("change : " + value);
+            },
+            release : function (value) {
+                //console.log(this.$.attr('value'));
+                console.log("release : " + value);
+            },
+            cancel : function () {
+                console.log("cancel : ", this);
+            },
+            draw : function () {
+
+                // "tron" case
+                if(this.$.data('skin') == 'tron') {
+
+                    var a = this.angle(this.cv)  // Angle
+                        , sa = this.startAngle          // Previous start angle
+                        , sat = this.startAngle         // Start angle
+                        , ea                            // Previous end angle
+                        , eat = sat + a                 // End angle
+                        , r = 1;
+
+                    this.g.lineWidth = this.lineWidth;
+
+                    this.o.cursor
+                        && (sat = eat - 0.3)
+                        && (eat = eat + 0.3);
+
+                    if (this.o.displayPrevious) {
+                        ea = this.startAngle + this.angle(this.v);
+                        this.o.cursor
+                            && (sa = ea - 0.3)
+                            && (ea = ea + 0.3);
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.pColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+                        this.g.stroke();
+                    }
+
+                    this.g.beginPath();
+                    this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+                    this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+                    this.g.stroke();
+
+                    this.g.lineWidth = 2;
+                    this.g.beginPath();
+                    this.g.strokeStyle = this.o.fgColor;
+                    this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                    this.g.stroke();
+
+                    return false;
+                }
+            }
+        });
+
+        // Example of infinite knob, iPod click wheel
+        var v, up=0,down=0,i=0
+            ,$idir = $("div.idir")
+            ,$ival = $("div.ival")
+            ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
+            ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
+        $("input.infinite").knob(
+                            {
+                            min : 0
+                            , max : 20
+                            , stopper : false
+                            , change : function () {
+                                            if(v > this.cv){
+                                                if(up){
+                                                    decr();
+                                                    up=0;
+                                                }else{up=1;down=0;}
+                                            } else {
+                                                if(v < this.cv){
+                                                    if(down){
+                                                        incr();
+                                                        down=0;
+                                                    }else{down=1;up=0;}
+                                                }
+                                            }
+                                            v = this.cv;
+                                        }
+                            });
+    });
+</script>
+
+</body>
+
+</html>
+

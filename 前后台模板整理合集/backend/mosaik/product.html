@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+ <head>
+    
+    <!-- start: Meta -->
+      <meta charset="utf-8">
+      <title>Mosaik - Admin template</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- end: Meta -->
+
+      <!-- start: CSS -->
+      <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css"> 
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <!-- end: CSS -->
+
+      <!-- start: JS -->
+      <script src="assets/js/jquery-1.9.1.js"></script>
+      <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/lib/justgage/justgage.1.0.1.js"></script>
+      <script src="assets/lib/justgage/raphael.2.1.0.min.js"></script> 
+      <script src="assets/js/jquery.sparkline.js"></script>
+      <script src="assets/js/charts.js"></script>
+      <script src="assets/js/date.js"></script>
+      <script src="assets/js/daterangepicker.js"></script>   
+      <!-- end: JS -->
+      
+      <!-- Le fav and touch icons -->
+      <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+      
+      <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+      <!--[if IE 10 ]> <body class="ie ie10 "> <![endif]-->
+
+      <!--[if gte IE 9]>
+       <style type="text/css">.gradient {filter: none;}</style>
+      <![endif]-->
+
+</head><!--end: head -->
+
+<body> 
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+
+      <ul class="nav pull-right">
+
+        <li>
+        <form class="search form-inline">
+            <input type="text" placeholder="hint to search">
+        </form>                        
+
+        </li>
+
+        <li class="dropdown header-border">
+           <a id="search-toggle" class="visible-phone search-submit"><i class="icon-search"></i></a>
+        </li>
+        
+        <li class="dropdown header-border">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="email-notify"><i class="icon-envelope"></i><span class="email-alert"><i class="icon-circle"></i> </span></span>
+            </a>
+
+            <ul class="dropdown-menu block-dark messages">
+                <li class="view-all"><a href="#"><strong>View all messages</strong></a></li>   
+                <li><a href="#">
+                    <div class="avatar"><img height="45" width="45" src="assets/images/rogie.jpg" alt="Your profile"></div>
+                    <div class="info">Antonio Heide <span class="timer">36 min</span></div>    
+                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem necessitatibus.</div>
+                    </a>
+                </li>
+                <li><a href="#">
+                    <div class="avatar"><img height="45" width="45" src="assets/images/iljamiskov.jpg" alt="Your profile"></div>
+                    <div class="info">Melissa Evans <span class="timer">52 min</span></div>    
+                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio ad placeat incidunt iste non enim nisi quae culpa.</div>
+                    </a>
+                </li>                                               
+            </ul>
+        </li>   
+
+        <li class="dropdown header-border">
+            <a href="#" role="button" class="dropdown-toggle " data-toggle="dropdown">
+
+                <span class="email-notify"><i class="icon-bell-alt"></i><span class="email-alert"><i class="icon-circle"></i> </span></span>
+            </a>
+
+            <ul class="dropdown-menu block-dark messages msg-notify">
+                <li class="view-all"><a href="#">View all notifications</a></li>   
+                <li><a href="#"><div><span class="badge badge-danger"><i class="icon-comment"></i></span>  new comment <span class="timer">2 min</span></div></a></li>    
+                <li><a href="#"><div><span class="badge badge-info"><i class="icon-twitter"></i></span>  new follower <span class="timer">6 min</span></div></a></li> 
+                <li><a href="#"><div><span class="badge badge-success"><i class="icon-thumbs-up"></i></span> new like <span class="timer">9 min</span></div></a></li>                        
+                <li><a href="#"><div><span class="badge badge-info"><i class="icon-twitter"></i></span> new follower <span class="timer">25 min</span></div></a></li> 
+                <li><a href="#"><div><span class="badge badge-inverse"><i class="icon-user"></i></span> new registration <span class="timer">32 min</span></div></a></li>                        
+                <li><a href="#"><div><span class="badge badge-danger"><i class="icon-comment"></i></span> new comment <span class="timer">2 hours</span></div></a></li>     
+                <li><a href="#"><div><span class="badge badge-primary"><i class="icon-map-marker"></i></span> new localization <span class="timer">Yesterday</span></div></a></li>     
+            </ul>
+        </li>                                   
+
+        <li class="dropdown header-border">
+            <a href="#" role="button" class="dropdown-toggle profile-header" data-toggle="dropdown">
+                <div class="thumb-account">
+                    <img height="43" width="43" src="assets/images/timeline-team.jpg" alt="Your profile">
+                    <span><i class="icon-caret-down"></i></span>
+                </div>
+            </a>
+
+            <ul class="dropdown-menu block-dark account">
+                <li class="first"><a tabindex="-1" href="#"><span data-toggle="modal" class="pull-right" href="#myModalSettings" ><span class="btn btn-primary"><i class="icon-cog"></i></span></span> Settings</a>
+                </li>
+
+                <li class="profile">
+                  <span>
+                    <span class="heading"><strong>Profile</strong> <a class="pull-right text-primary text-weight-regular" href="#">edit</a></span>
+                    <a class="img thumb" href="#">
+                      <img alt="Avatar" width="70" height="70" src="assets/images/avatar.jpg">
+                    </a>
+                    <span class="details">
+                      <a class="strong text-regular" href="#">Straptrooper</a>
+                      contact@mosaik.com
+                    </span>
+                  </span>
+                  <span class="clearfix"></span>
+
+                </li>
+                <li class="last"><a tabindex="-1" href="sign-in.html"><span class="pull-right"><span class="btn btn-primary">Sign out</span></span> &nbsp;<span class="info-account"><i class="icon-info-sign"></i></a></span>
+                </li>
+
+            </ul>
+        </li>
+          
+      </ul>
+
+      <a class="brand" href="index.html">
+          <span class="title">M<span class="hidden-phone">osaik</span>    </span> <span class="logo"></span>
+      </a>
+
+      <button id="side-toggle" class="hidden-phone btn btn-primary side-toggle-btn"><i class="icon-trello"></i></button>
+
+    </div>
+</div><!-- navbar --> 
+
+<!-- modal header settings --> 
+<div aria-hidden="true" aria-labelledby="myModalSettings1" role="dialog" tabindex="-1" class="modal modal-default hide" id="myModalSettings">
+  <div class="modal-header ">
+    <button aria-hidden="true" data-dismiss="modal" class="close" type="button"></button>
+    <h3 id="myModalSettings1">Setting</h3>
+  </div>
+  <div class="modal-body">
+
+    <form action="#" class="form-dark">
+
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-user"></i></span>
+          <input type="text" name="fullname" placeholder="Username">
+        </div> 
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-lock"></i></span>
+        <input type="password" placeholder="ID network">
+        </div>
+
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-globe"></i></span>
+          <input type="text" name="country" placeholder="Country">
+        </div> 
+        <div class="input-prepend">      
+          <span class="add-dark"><i class="icon-phone"></i></span>
+        <input type="text" placeholder="Phone">
+        </div>
+      <hr class="modal-hr">
+
+      <span>Select value :</span>
+      <label for="settings1" class="checkbox rounded-checkbox checkbox-dark">
+          <input  value="1" type="checkbox" id="settings1" class="checkbox">
+          <span class="check"><span></span></span>
+          Low 
+      </label>  
+       <label for="settings2" class="checkbox rounded-checkbox checkbox-dark">
+          <input  value="1" type="checkbox" id="settings2" class="checkbox">
+          <span class="check"><span></span></span>
+          medium
+      </label>  
+       <label for="settings3" class="checkbox rounded-checkbox checkbox-dark">
+          <input  value="1" type="checkbox" id="settings3" class="checkbox">
+          <span class="check"><span></span></span>                                  
+          High
+      </label>  
+
+      <hr class="modal-hr">
+
+      <label for="settings-rg" class="checkbox">
+      <span class="label-switch">Active yout account : </span> 
+
+          <span class="switch">
+            <input  value="1" type="checkbox" id="settings-rg">
+            <span class="switch-container"><span class="on">On</span>
+              <span class="mid"></span>
+              <span class="off">Off</span></span>
+          </span>
+      </label>
+
+      <hr class="modal-hr">
+
+      <label class="reg-radio" for="#">
+          Add contact automatically :
+      <input type="radio" id="settings1-1-1" name="radio-1-set" class="regular-radio radio-dark" checked /><label for="settings1-1-1"></label> On
+      <input type="radio" id="settings1-1-2" name="radio-1-set" class="regular-radio radio-dark" /><label for="settings1-1-2"></label>  Off
+      </label>                        
+
+    </form> 
+    
+  </div>
+  <div class="modal-footer">
+    <button aria-hidden="true" data-dismiss="modal" class="btn btn-info">Cancel</button>
+    <button aria-hidden="true" data-dismiss="modal" class="btn btn-primary">Save</button>
+
+  </div>
+</div><!-- modal header settings -->   
+
+<div class="sidebar-nav" id="sidebar">
+
+    <form action="#" class="search form-inline">
+        <input type="text" placeholder="Search...">
+    </form>    
+
+    <div class="hidden-phone">
+          <div class="tabs dashtabs sidetabs">
+              <ul class="nav nav-tabs" id="myTab-1">
+                <li class="first-child active"><a data-toggle="tab" href="#charge">
+              <span class="icon-stack">
+              <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+              <span class="dashlight"><i class="icon-bolt"></i></span>
+             </span>                      
+                  Charge 
+                </a></li>
+                <li><a data-toggle="tab" href="#upload">
+              <span class="icon-stack">
+              <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+              <span class="dashlight"><i class="icon-download-alt"></i></span>
+             </span> 
+                  Download </a></li>
+              </ul>                     
+              <div class="block-body ">
+
+                  <div class="tab-content" id="myTabContent-1">
+                    <div id="charge" class="tab-pane fade in active">
+                <div class="knob-center"><strong> Cpu usage</strong>
+               <input class="knob" data-width="200" data-displayPrevious=true data-fgColor="#FFDB98" data-skin="tron" value="75" data-thickness=".2"><span>%</span>
+
+               </div>
+                    </div>
+                    <div id="upload" class="tab-pane fade">
+
+            <div class="project">
+
+                <ul class="unstyled">
+                  <li class="first-child">
+                    <strong class="label label-primary"> 97%</strong> Update Jquery
+                    <div class="progress">
+                      <div style="width: 97%;" class="bar"></div>
+                    </div>                          
+                  </li>
+                  <li>
+                    <strong class="label label-danger"> 62%</strong> Update awsome font
+                    <div class="progress progress-danger">
+                      <div style="width: 63%;" class="bar"></div>
+                    </div>                          
+                  </li>
+                  <li class="last-child">
+                    <strong class="label label-warning"> 32%</strong> Update backbone
+                    <div class="progress progress-warning">
+                      <div style="width: 32%;" class="bar"></div>
+                    </div>                          
+                  </li>                                                                        
+
+                </ul>
+
+
+              </div>
+
+
+                    </div>
+                  </div>
+
+              </div>
+          </div> 
+
+    </div>    
+
+     <div class="clearfix"></div>  
+
+    <a data-toggle="collapse" data-target=".nav-collapse" class="btn-sidebar">
+        <span class="notify navigation span12"><i class="icon-reorder"></i> Navigation <span class="pull-right label sidebar-label label-primary"><i class="icon-angle-down"></i> </span></span>
+    </a>
+
+    <div class="nav-collapse subnav-collapse collapse ">
+        <a href="index.html" class="nav-header active" ><i class="icon-dashboard"></i><span class="hidden-tablet">Dashboard</span></a>
+
+        <a href="#chart" class="nav-header" data-toggle="collapse"><i class="icon-file"></i><span class="hidden-tablet">Pages<span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="chart" class="nav nav-list collapse">
+            <li ><a href="product.html"><i class="icon-shopping-cart"></i><span class="hidden-tablet"> Product</span></a></li>
+            <li ><a href="users.html"><i class="icon-group"></i><span class="hidden-tablet"> Users</span></a></li>
+            <li ><a href="invoice.html"><i class="icon-file-text "></i><span class="hidden-tablet"> Invoice</span></a></li>
+            <li ><a href="charts.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Charts</span></a></li> 
+            <li ><a href="inbox.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Inbox</span></a></li>            
+            <li ><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
+            <li ><a href="gallery.html"><i class="icon-camera"></i><span class="hidden-tablet"> Gallery</span></a></li>
+            <li ><a href="error.html"><i class="icon-code "></i><span class="hidden-tablet"> Error Pages</span></a></li>
+        </ul>  
+
+        <a href="#ui-elements" class="nav-header" data-toggle="collapse"><i class="icon-tasks"></i> <span class="hidden-tablet">UI Elements <span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="ui-elements" class="nav nav-list collapse">
+            <li><a href="grid.html"><i class="icon-ellipsis-horizontal"></i><span class="hidden-tablet"> Grid Layout</a></li>
+            <li><a href="button.html"><i class="icon-circle"></i><span class="hidden-tablet"> Buttons</span></a></li> 
+            <li ><a href="block.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Block</span></a></li>
+            <li><a href="interface.html"><i class="icon-laptop"></i><span class="hidden-tablet"> Interface elements</span></a></li>
+            <li><a href="components.html"><i class="icon-table"></i><span class="hidden-tablet"> Components</span></a></li>
+            <li><a href="icons.html"><i class="icon-info-sign"></i><span class="hidden-tablet"> Icons</span></a></li>
+            <li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
+        </ul>     
+
+        <a href="#form" class="nav-header" data-toggle="collapse"><i class="icon-edit"></i><span class="hidden-tablet">Forms<span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="form" class="nav nav-list collapse">
+            <li><a href="tables.html"><i class="icon-table"></i><span class="hidden-tablet"> Tables</span></a></li>
+            <li><a href="validate.html"><i class="icon-ok"></i><span class="hidden-tablet"> Validate</span></a></li>
+            <li><a href="wizard.html"><i class="icon-exchange"></i><span class="hidden-tablet"> Wizard</span></a></li>
+            <li><a href="widgets.html"><i class="icon-reorder"></i><span class="hidden-tablet"> Widgets</span></a></li>
+        </ul>                     
+
+        <a href="#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-lock"></i><span class="hidden-tablet">Account<span class="label sidebar-label label-inverse"><i class="icon-angle-down"></i> </span></span></a>
+        <ul id="accounts-menu" class="nav nav-list collapse">
+            <li ><a href="sign-in.html"><i class="icon-signin"></i><span class="hidden-tablet"> Sign In</span></a></li>
+            <li ><a href="sign-up.html"><i class="icon-signout"></i><span class="hidden-tablet"> Sign Up</span></a></li>
+            <li ><a href="password.html"><i class="icon-lock"></i><span class="hidden-tablet"> Reset Password</span></a></li>
+        </ul>   
+
+    </div>
+</div><!-- sidebar --> 
+
+
+<div class="content">
+
+  <div class="tabs dashtabs">
+      <ul class="dash nav nav-tabs" id="myTab-1">
+            <li class="first-child active">
+            	<a data-toggle="tab" href="#product">
+	            	<span class="icon-stack">
+			          <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+			          <span class="dashlight"><i class="icon-shopping-cart"></i></span>
+	       			 </span>            		
+					<span class="hidden-phone">Product</span> 
+				</a>
+			</li>
+            <li>
+            	<a data-toggle="tab" href="#card">
+	            	<span class="icon-stack">
+			          <span class="dashicon"><i class="icon-circle icon-stack-base"></i></span>
+			          <span class="dashlight"><i class="icon-credit-card "></i></span>
+	       			 </span>
+	         		<span class="hidden-phone">cart item</span> 
+         		</a>
+         	</li>
+      	
+			<li class=pull-right> 
+				<div class="dark-well">
+
+				   <div id="reportrange" class="pull-right notify well-picker">
+				      <i class="icon-calendar"></i>
+				      <span></span> <b class="caret"></b>
+				   </div>
+
+				   <script type="text/javascript">
+				   //Datepicker
+				   $(document).ready(function() {
+				      $('#reportrange').daterangepicker(
+				         {
+				            ranges: {
+				               'Today': ['today', 'today'],
+				               'Yesterday': ['yesterday', 'yesterday'],
+				               'Last 7 Days': [Date.today().add({ days: -6 }), 'today'],
+				               'Last 30 Days': [Date.today().add({ days: -29 }), 'today'],
+				               'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+				               'Last Month': [Date.today().moveToFirstDayOfMonth().add({ months: -1 }), Date.today().moveToFirstDayOfMonth().add({ days: -1 })]
+				            },
+				            opens: 'left',
+				            format: 'MM/dd/yyyy',
+				            separator: ' to ',
+				            startDate: Date.today().add({ days: -29 }),
+				            endDate: Date.today(),
+				            minDate: '01/01/2012',
+				            maxDate: '12/31/2013',
+				            locale: {
+				                applyLabel: 'Submit',
+				                fromLabel: 'From',
+				                toLabel: 'To',
+				                customRangeLabel: 'Custom Range',
+				                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+				                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+				                firstDay: 1
+				            },
+				            showWeekNumbers: true,
+				            buttonClasses: ['notify'],
+				            dateLimit: false
+				         }, 
+				         function(start, end) {
+				            $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+				         }
+				      );
+
+				      //Set the initial state of the picker label
+				      $('#reportrange span').html(Date.today().add({ days: -29 }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
+
+				   });
+				   </script>
+
+				</div>                
+			</li>              
+      </ul><!-- Tabs -->                    
+      <div class="block-body ">
+          <div class="tab-content" id="myTabContent-1">
+
+          	<!-- tabs product -->
+            <div id="product" class="tab-pane active">
+
+		        <div class="wrapper-content">
+		          <div class="container-fluid">
+		              <div class="row-fluid">
+
+    						<div class="row-fluid">
+
+                                <div class="well">
+
+                                    <div class="btn-disable pull-left">
+                                        Showing <strong>1</strong> to <strong>10</strong> of 25 items
+                                    </div>    
+
+                                    <span class="pull-right">
+                                        <button class="btn btn-primary"><i class="icon-chevron-left"></i></button>
+                                        <button class="btn btn-primary"><i class="icon-chevron-right"></i></button>
+                                    </span>                             
+                                    <div class="clearfix"></div>                   
+                                    <hr>
+
+
+                                    <div class="clearfix"></div> 
+                                    <div class="pull-left btn-group">
+                                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sort by <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Price</a></li>
+                                      <li><a href="#">Best Seller</a></li>
+                                      <li><a href="#">Date added</a></li>
+                                    </ul>
+                                    </div>                            
+
+                                    <div class="pull-left btn-group">
+                                    <a href="#" class="btn demo-cancel-click" rel="tooltip"  data-original-title="Grid view"><i class="icon-th"></i></a>
+                                    <a href="#" class="btn demo-cancel-click" rel="tooltip"  data-original-title="List view"><i class="icon-th-list"></i></a>
+                                    </div>
+                                    <div class="pull-right btn-group">
+                                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Show items <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">20</a></li>
+                                      <li><a href="#">50</a></li>
+                                      <li><a href="#">100</a></li>
+                                    </ul>
+                                    </div>  
+
+                                    <div class="pull-left price-range">                        
+                                    <span>Price :&nbsp;</span>
+                                    <div class="slider">
+                                      <input class="slider" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[100,450]" id="sl2" type="text">
+                                    </div> 
+                                    </div>                                     
+
+                                    <ul class="span2 color-choice unstyled">
+                                      <li class="clr"><span class=""> Colors :</span> </li>
+                                      <li class="clr"><a href="#"><span class="wrapper-clr c1">&nbsp;</span></a></li>
+                                      <li class="clr"><a href="#"><span class="wrapper-clr c2">&nbsp;</span></a></li>
+                                      <li class="clr"><a href="#"><span class="wrapper-clr c3">&nbsp;</span></a></li>
+                                      <li class="clr"><a href="#"><span class="wrapper-clr c4">&nbsp;</span></a></li>
+                                    </ul>                            
+                                    <div class="clearfix"></div>                   
+                                    
+
+
+                                </div>
+
+        						<div id="cbp-pgcontainer" class="cbp-pgcontainer">
+        							<ul class="cbp-pggrid">
+        								<li>
+        									<div class="cbp-pgcontent">
+        										<div class="cbp-pgitem">
+        											<div class="cbp-pgitem-flip">
+        												<img src="assets/images/1_front.png" />
+        											</div>
+        										</div><!-- /cbp-pgitem -->
+        										<ul class="cbp-pgoptions">
+        											<li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+        											<li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+        											<li class="cbp-pgoptsize">								
+        												<span data-size="XL">XL</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-size="XL">XL</span>
+        													<span data-size="L">L</span>
+        													<span data-size="M">M</span>
+        													<span data-size="S">S</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcolor">
+        												<span data-color="c1">Blue</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-color="c1">Blue</span>
+        													<span data-color="c2">Pink</span>
+        													<span data-color="c3">Orange</span>
+        													<span data-color="c4">Green</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+        										</ul><!-- cbp-pgoptions -->
+        									</div><!-- cbp-pgcontent -->
+        									<div class="cbp-pginfo">
+        										<h3>Save my trees</h3>
+        										<span class="cbp-pgprice">$29</span>
+        									</div>
+        								</li>
+        								<li>
+        									<div class="cbp-pgcontent">
+        										<div class="cbp-pgitem">
+        											<div class="cbp-pgitem-flip">
+        												<img src="assets/images/2_front.png" />
+        											</div>
+        										</div><!-- /cbp-pgitem -->
+        										<ul class="cbp-pgoptions">
+        											<li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+        											<li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+        											<li class="cbp-pgoptsize">								
+        												<span data-size="XL">XL</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-size="XL">XL</span>
+        													<span data-size="L">L</span>
+        													<span data-size="M">M</span>
+        													<span data-size="S">S</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcolor">
+        												<span data-color="c2">Pink</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-color="c1">Blue</span>
+        													<span data-color="c2">Pink</span>
+        													<span data-color="c3">Orange</span>
+        													<span data-color="c4">Green</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+        										</ul>
+        									</div>
+        									<div class="cbp-pginfo">
+        										<h3>Nature Lover</h3>
+        										<span class="cbp-pgprice">$19</span>
+        									</div>
+        								</li>
+        								<li>
+        									<div class="cbp-pgcontent">
+        										<div class="cbp-pgitem">
+        											<div class="cbp-pgitem-flip">
+        												<img src="assets/images/3_front.png" />
+        											</div>
+        										</div><!-- /cbp-pgitem -->
+        										<ul class="cbp-pgoptions">
+        											<li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+        											<li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+        											<li class="cbp-pgoptsize">								
+        												<span data-size="XL">XL</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-size="XL">XL</span>
+        													<span data-size="L">L</span>
+        													<span data-size="M">M</span>
+        													<span data-size="S">S</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcolor">
+        												<span data-color="c3">Orange</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-color="c1">Blue</span>
+        													<span data-color="c2">Pink</span>
+        													<span data-color="c3">Orange</span>
+        													<span data-color="c4">Green</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+        										</ul>
+        									</div>
+        									<div class="cbp-pginfo">
+        										<h3>Forrest Walk</h3>
+        										<span class="cbp-pgprice">$39</span>
+        									</div>
+        								</li>
+        								<li>
+        									<div class="cbp-pgcontent">
+        										<div class="cbp-pgitem">
+        											<div class="cbp-pgitem-flip">
+        												<img src="assets/images/4_front.png" />
+        											</div>
+        										</div><!-- /cbp-pgitem -->
+        										<ul class="cbp-pgoptions">
+        											<li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+        											<li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+        											<li class="cbp-pgoptsize">								
+        												<span data-size="XL">XL</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-size="XL">XL</span>
+        													<span data-size="L">L</span>
+        													<span data-size="M">M</span>
+        													<span data-size="S">S</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcolor">
+        												<span data-color="c4">Green</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-color="c1">Blue</span>
+        													<span data-color="c2">Pink</span>
+        													<span data-color="c3">Orange</span>
+        													<span data-color="c4">Green</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+        										</ul>
+        									</div>
+        									<div class="cbp-pginfo">
+        										<h3>Land of Trees</h3>
+        										<span class="cbp-pgprice">$35</span>
+        									</div>
+        								</li>
+        								<li>
+        									<div class="cbp-pgcontent">
+        										<div class="cbp-pgitem">
+        											<div class="cbp-pgitem-flip">
+        												<img src="assets/images/3_front.png" />
+        											</div>
+        										</div><!-- /cbp-pgitem -->
+        										<ul class="cbp-pgoptions">
+        											<li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+        											<li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+        											<li class="cbp-pgoptsize">								
+        												<span data-size="XL">XL</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-size="XL">XL</span>
+        													<span data-size="L">L</span>
+        													<span data-size="M">M</span>
+        													<span data-size="S">S</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcolor">
+        												<span data-color="c3">Orange</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-color="c1">Blue</span>
+        													<span data-color="c2">Pink</span>
+        													<span data-color="c3">Orange</span>
+        													<span data-color="c4">Green</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+        										</ul>
+        									</div>
+        									<div class="cbp-pginfo">
+        										<h3>Tree Shirt</h3>
+        										<span class="cbp-pgprice">$29</span>
+        									</div>
+        								</li>
+        								<li>
+        									<div class="cbp-pgcontent">
+        										<div class="cbp-pgitem">
+        											<div class="cbp-pgitem-flip">
+        												<img src="assets/images/1_front.png" />
+        											</div>
+        										</div><!-- /cbp-pgitem -->
+        										<ul class="cbp-pgoptions">
+        											<li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+        											<li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+        											<li class="cbp-pgoptsize">								
+        												<span data-size="XL">XL</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-size="XL">XL</span>
+        													<span data-size="L">L</span>
+        													<span data-size="M">M</span>
+        													<span data-size="S">S</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcolor">
+        												<span data-color="c1">Blue</span>
+        												<div class="cbp-pgopttooltip">
+        													<span data-color="c1">Blue</span>
+        													<span data-color="c2">Pink</span>
+        													<span data-color="c3">Orange</span>
+        													<span data-color="c4">Green</span>
+        												</div>
+        											</li>
+        											<li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+        										</ul>
+        									</div>
+        									<div class="cbp-pginfo">
+        										<h3>Greenhouse</h3>
+        										<span class="cbp-pgprice">$19</span>
+        									</div>
+        								</li>
+                                        <li>
+                                            <div class="cbp-pgcontent">
+                                                <div class="cbp-pgitem">
+                                                    <div class="cbp-pgitem-flip">
+                                                        <img src="assets/images/1_front.png" />
+                                                    </div>
+                                                </div><!-- /cbp-pgitem -->
+                                                <ul class="cbp-pgoptions">
+                                                    <li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+                                                    <li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+                                                    <li class="cbp-pgoptsize">                              
+                                                        <span data-size="XL">XL</span>
+                                                        <div class="cbp-pgopttooltip">
+                                                            <span data-size="XL">XL</span>
+                                                            <span data-size="L">L</span>
+                                                            <span data-size="M">M</span>
+                                                            <span data-size="S">S</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="cbp-pgoptcolor">
+                                                        <span data-color="c1">Blue</span>
+                                                        <div class="cbp-pgopttooltip">
+                                                            <span data-color="c1">Blue</span>
+                                                            <span data-color="c2">Pink</span>
+                                                            <span data-color="c3">Orange</span>
+                                                            <span data-color="c4">Green</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+                                                </ul><!-- cbp-pgoptions -->
+                                            </div><!-- cbp-pgcontent -->
+                                            <div class="cbp-pginfo">
+                                                <h3>Save my trees</h3>
+                                                <span class="cbp-pgprice">$29</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cbp-pgcontent">
+                                                <div class="cbp-pgitem">
+                                                    <div class="cbp-pgitem-flip">
+                                                        <img src="assets/images/2_front.png" />
+                                                    </div>
+                                                </div><!-- /cbp-pgitem -->
+                                                <ul class="cbp-pgoptions">
+                                                    <li class="cbp-pgoptcompare"><i class="icon-retweet"></i></li>
+                                                    <li class="cbp-pgoptfav"><i class="icon-heart-empty"></i></li>
+                                                    <li class="cbp-pgoptsize">                              
+                                                        <span data-size="XL">XL</span>
+                                                        <div class="cbp-pgopttooltip">
+                                                            <span data-size="XL">XL</span>
+                                                            <span data-size="L">L</span>
+                                                            <span data-size="M">M</span>
+                                                            <span data-size="S">S</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="cbp-pgoptcolor">
+                                                        <span data-color="c2">Pink</span>
+                                                        <div class="cbp-pgopttooltip">
+                                                            <span data-color="c1">Blue</span>
+                                                            <span data-color="c2">Pink</span>
+                                                            <span data-color="c3">Orange</span>
+                                                            <span data-color="c4">Green</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="cbp-pgoptcart"><i class="icon-shopping-cart"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div class="cbp-pginfo">
+                                                <h3>Nature Lover</h3>
+                                                <span class="cbp-pgprice">$19</span>
+                                            </div>
+                                        </li>                                
+        							</ul><!-- /cbp-pggrid -->
+        						</div><!-- /cbp-pgcontainer -->							
+
+
+        					</div> 
+
+                            <div class="well">
+
+                                    <div class="btn-disable pull-left">
+                                        Showing <strong>1</strong> to <strong>10</strong> of 25 items
+                                    </div>    
+
+                                    <span class="pull-right">
+                                        <button class="btn btn-primary"><i class="icon-chevron-left"></i></button>
+                                        <button class="btn btn-primary"><i class="icon-chevron-right"></i></button>
+                                    </span>                             
+                                    <div class="clearfix"></div>                                 
+                   
+                            </div> 
+
+		              </div>
+
+                   
+
+		          </div>
+		        </div><!-- wrapper-content --> 
+
+            </div><!-- tabs product -->
+
+			<!-- tabs card -->
+            <div id="card" class="tab-pane">
+
+                <div class="wrapper-content">
+                  <div class="container-fluid">
+
+                      <div class="row-fluid">
+
+                              <div class="block block-head-btn">
+                                    <p class="block-heading">
+                                      <span class="pull-right">
+                                          <button class="btn btn-info"><i class="icon-archive"></i> <span class="hidden-phone"> Archive</span> </button>
+                                      </span>
+                                      <span>Shop product view</span>
+                                    </p>                  
+                                    <div class="block-body">
+
+                                      <div class="row-fluid">
+
+                                        <div class="block span4">
+                                            <a href="#"><img alt="" src="assets/images/sunset-hair.jpg"></a>
+                                            <div class="more-images">
+                                                <ul class="thumbnails">
+                                                    <li class="span2">
+                                                        <a class="colorbox-image cboxElement" href="#"><img alt="" src="assets/images/girl-flowers.jpg"></a>
+                                                    </li>
+                                                    <li class="span2">
+                                                        <a class="colorbox-image cboxElement" href="#"><img alt="" src="assets/images/white-shoes.jpg"></a>
+                                                    </li>
+                                                    <li class="span2">
+                                                        <a class="colorbox-image cboxElement" href="#"><img alt="" src="assets/images/girl-flowers.jpg"></a>
+                                                    </li>          
+                                                    <li class="span2">
+                                                        <a class="colorbox-image cboxElement" href="#"><img alt="" src="assets/images/white-shoes.jpg"></a>
+                                                    </li>                                                                                      
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="block span4">
+                                            <div class="well">
+                                                <h4>white shoes</h4>
+                                                <div class="price">
+                                                    <span class="strike-price">$69</span>
+                                                    <h4 class="active-price">$49</h4>
+                                                </div>
+                                                <ul class="color-choice unstyled">
+                                                  <li class="clr"><span class=""> Colors :</span> </li>
+                                                  <li class="clr"><a href="#"><span class="wrapper-clr c1">&nbsp;</span></a></li>
+                                                  <li class="clr"><a href="#"><span class="wrapper-clr c2">&nbsp;</span></a></li>
+                                                  <li class="clr"><a href="#"><span class="wrapper-clr c3">&nbsp;</span></a></li>
+                                                  <li class="clr"><a href="#"><span class="wrapper-clr c4">&nbsp;</span></a></li>
+                                                </ul>
+
+                                                <div class="clearfix"></div>
+                                                <hr>
+
+                                                <p>Cotton and polyester blend makes for super soft fleece. Reinforced pocket and zipper stitching, plus cord control (a nifty slit inside the right pocket plus an interior loop). Unisex sizing to fit both guys and girlies.</p>
+
+                                                <div class="sizes">
+                                                    <h5>Sizes</h5>
+                                                    <a class="btn btn-info" href="#">S</a>
+                                                    <a class="btn btn-info" href="#">M</a>
+                                                    <a class="btn btn-info" href="#">L</a>
+                                                    <a class="btn btn-danger" href="#">XL</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-actions">
+                                                <a class="pull-left btn btn-primary" href="#">Add to cart</a>
+                                                <a class="pull-right btn" href="#">Add to whishlist</a>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="block span4">
+
+                                            <div class="accordion" id="accordion2">
+                                              <div class="accordion-group">
+                                                <div class="accordion-heading btn btn-primary btn-block">
+                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                                    Size info
+                                                  </a>
+                                                </div>
+                                                <div id="collapseOne" class="accordion-body collapse in">
+                                                  <div class="well accordion-inner">
+
+                                                    <table class="responsive table">
+                                                      <thead>
+                                                        <tr>
+                                                          <th>Size</th>
+                                                          <th>Chest</th>
+                                                          <th>Waist</th>
+                                                        </tr>
+                                                      </thead>   
+                                                      <tbody>
+                                                      <tr>
+                                                        <td>XS</td>
+                                                        <td class="center">36" - 38"</td>
+                                                        <td class="center">28.5" - 30.5"</td>                                       
+                                                      </tr>
+                                                      <tr>
+                                                        <td>S</td>
+                                                        <td class="center">38" - 40"</td>
+                                                        <td class="center">30.5" - 32.5"</td>                                      
+                                                      </tr>
+                                                      <tr>
+                                                        <td>M</td>
+                                                        <td class="center">40" - 42</td>
+                                                        <td class="center">32.5" - 34.5"</td>                                       
+                                                      </tr>
+                                                      <tr>
+                                                        <td>L</td>
+                                                        <td class="center">42" - 44"</td>
+                                                        <td class="center">34.5" - 36.5"</td>                                       
+                                                      </tr>
+                                                      <tr>
+                                                        <td>XL</td>
+                                                        <td class="center">44" - 46"</td>
+                                                        <td class="center">36.5" - 38.5"</td>                                       
+                                                      </tr>                                   
+                                                      </tbody>
+                                                   </table>                              
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <div class="accordion-group">
+                                                <div class="accordion-heading btn btn-primary btn-block">
+                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                                    Information
+                                                  </a>
+                                                </div>
+                                                <div id="collapseTwo" class="accordion-body collapse">
+                                                  <div class="well accordion-inner">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eveniet sunt quidem esse blanditiis aliquam voluptatibus beatae maxime dolorum quasi iusto rem aut sequi ex asperiores ratione hic repellendus iure?
+
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis repudiandae ratione recusandae debitis cupiditate culpa vel odit obcaecati sunt voluptatum ducimus deleniti ipsum sint voluptates non numquam quas unde earum!
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="accordion-group">
+                                                <div class="accordion-heading btn btn btn-primary btn-block">
+                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                                    Estimated Shippinp
+                                                  </a>
+                                                </div>
+                                                <div id="collapseThree" class="accordion-body collapse">
+                                                  <div class="well accordion-inner">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nobis animi delectus excepturi odit natus optio et dolorum. Similique aliquid quia sapiente nemo rem esse iste quos hic sit dignissimos!
+
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum iure ad voluptas nihil possimus sapiente aut alias quod nesciunt obcaecati atque recusandae maxime mollitia. Molestias sint rem possimus a dicta.
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>                                            
+                    
+                                        </div>                                    
+
+
+                                     </div>
+                            
+
+                                    </div>
+                              </div>                     
+
+                      </div>
+
+                      <div class="row-fluid">
+
+                          <div class="block block-head-btn">
+                            <p class="block-heading">
+                              <span class="pull-right">
+                                  <button class="btn btn-info"><i class="icon-plus"></i><span class="hidden-phone"> Apply gift</span> </button>
+                              </span>
+                              <span>Stuff in your Cart</span>
+                            </p>                  
+                            <div class="block-body">
+
+                                <div class="row-fluid">
+
+                                    <table class="responsive table">
+                                      <thead>
+                                        <tr>
+                                          <th>Title</th>
+                                          <th>Thumbnail</th>
+                                          <th>Description</th>
+                                          <th>Price</th>
+                                          <th>Quantity</th>
+                                          <th>Total</th>
+                                        </tr>
+                                      </thead>   
+                                      <tbody>
+                                      <tr>
+                                        <td><span class="label label-primary">white shoes</span> </td>
+                                        <td> <img src="assets/images/white-shoes.jpg" width="150" height="30" class="img-rounded" alt=""></td>
+                                        <td class="span8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi laboriosam dolorum provident quae repellat amet minus nam.</td>
+                                        <td class="center"><h4>$49</h4></td>                                       
+                                        <td class="center"><input type="text" placeholder="1"> </td>                                       
+                                        <td class="center"><h4>$49</h4></td>                                       
+                                      </tr>
+                                      </tbody>
+                                   </table> 
+
+                                   <div class="form-actions">
+                                       
+                                       <div class="span3 offset9">
+                                           <table class="responsive table">  
+                                              <tbody>
+                                              <tr>
+                                                <td class="center">Subtotal: </td>                                       
+                                                <td class="center">$49</td>                                       
+                                              </tr>
+                                              <tr>
+                                                <td class="center">Estimated Shipping: </td>                                       
+                                                <td class="center">$9.00</td>                                       
+                                              </tr>
+                                              <tr>
+                                                <td class="center"><h4>Estimated Total:</h4> </td>                                       
+                                                <td class="center"><h4>$58</h4></td>                                       
+                                              </tr>                                                                             
+                                              </tbody>
+                                           </table> 
+                                        </div>
+
+                                   </div>    
+
+                                   <div class="span2 pull-right">
+                                       <button class="btn btn-block btn-large btn-primary">CHECK OUT!</button>
+                                       <hr>
+                                   </div>                       
+                                </div>
+
+                            </div>
+                          </div>                     
+
+                      </div>   
+
+                  </div>
+                </div><!-- wrapper-content --> 
+
+
+            </div><!-- tabs card -->
+
+          </div>
+      </div>
+  </div> 		
+    
+</div><!-- content -->   
+
+<footer>
+	<div class="clearfix">
+		<p class="pull-left"><a class="notify-disabled" href="#"><i class="icon-chevron-up"></i></a></p>
+	    <p class="pull-right">&copy; 2013 <a href="http://mickael-girault.fr" target="_blank">Bootstrap Trooper</a></p>
+	</div>
+</footer><!-- footer -->  
+
+
+<!-- start: JS -->
+<script src="assets/js/responsive-tables.js"></script>
+<script src="assets/js/wizard.js"></script>
+<script src="assets/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="assets/lib/fullcalendar/fullcalendar.min.js"></script>
+<script src="assets/lib/pnotify/jquery.pnotify.min.js"></script>
+<script src="assets/lib/jasny/bootstrap-fileupload.js"></script>
+<script src="assets/lib/jasny/bootstrap-inputmask.js"></script>
+<script src="assets/lib/jasny/bootstrap-typeahead.js"></script>   
+<script src="assets/js/bootstrap-slider.js"></script>
+<script src="assets/js/wysihtml5-0.3.0.js async"></script>
+<script src="assets/js/bootstrap-wysihtml5.js async"></script>
+<script src="assets/js/prettyprint.js"></script>
+<script src="assets/js/jquery.spellchecker.js async"></script>
+<script src="assets/js/parsley.js"></script>
+<script src="assets/js/jquery.masonry.min.js"></script>
+<script src="assets/js/jquery.knob.js"></script>
+<script src="assets/js/custom.js"></script>
+<!-- end: JS -->
+
+
+
+
+<!-- script -->
+
+<script type="text/javascript">
+ //popover
+     $('.popover-test').popover()
+    // popover demo
+    $("a[data-toggle=popover]")
+    .popover()
+    .click(function(e) {
+    e.preventDefault()
+    }) 
+</script>       
+
+<script type="text/javascript">
+//tooltip
+  $("[rel=tooltip]").tooltip();
+  $(function() {
+      $('.demo-cancel-click').click(function(){return false;});
+  });
+</script>
+
+<script type="text/javascript">
+//calendar
+  $(document).ready(function() {
+  
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      editable: true,
+      events: [
+        {
+          title: 'All Day Event',
+          start: new Date(y, m, 1)
+        },
+        {
+          title: 'Long Event',
+          start: new Date(y, m, d-5),
+          end: new Date(y, m, d-2)
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: new Date(y, m, d-3, 16, 0),
+          allDay: false
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: new Date(y, m, d+4, 16, 0),
+          allDay: false
+        },
+        {
+          title: 'Meeting',
+          start: new Date(y, m, d, 10, 30),
+          allDay: false
+        },
+        {
+          title: 'Lunch',
+          start: new Date(y, m, d, 12, 0),
+          end: new Date(y, m, d, 14, 0),
+          allDay: false
+        },
+        {
+          title: 'Birthday Party',
+          start: new Date(y, m, d+1, 19, 0),
+          end: new Date(y, m, d+1, 22, 30),
+          allDay: false
+        },
+        {
+          title: 'Click for Google',
+          start: new Date(y, m, 28),
+          end: new Date(y, m, 29),
+          url: 'http://google.com/'
+        }
+      ]
+    });
+    
+  });
+</script><!-- script -->  
+
+<script type="text/javascript">
+//Knob
+    $(function($) {
+
+        $(".knob").knob({
+            change : function (value) {
+                //console.log("change : " + value);
+            },
+            release : function (value) {
+                //console.log(this.$.attr('value'));
+                console.log("release : " + value);
+            },
+            cancel : function () {
+                console.log("cancel : ", this);
+            },
+            draw : function () {
+
+                // "tron" case
+                if(this.$.data('skin') == 'tron') {
+
+                    var a = this.angle(this.cv)  // Angle
+                        , sa = this.startAngle          // Previous start angle
+                        , sat = this.startAngle         // Start angle
+                        , ea                            // Previous end angle
+                        , eat = sat + a                 // End angle
+                        , r = 1;
+
+                    this.g.lineWidth = this.lineWidth;
+
+                    this.o.cursor
+                        && (sat = eat - 0.3)
+                        && (eat = eat + 0.3);
+
+                    if (this.o.displayPrevious) {
+                        ea = this.startAngle + this.angle(this.v);
+                        this.o.cursor
+                            && (sa = ea - 0.3)
+                            && (ea = ea + 0.3);
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.pColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+                        this.g.stroke();
+                    }
+
+                    this.g.beginPath();
+                    this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+                    this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+                    this.g.stroke();
+
+                    this.g.lineWidth = 2;
+                    this.g.beginPath();
+                    this.g.strokeStyle = this.o.fgColor;
+                    this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                    this.g.stroke();
+
+                    return false;
+                }
+            }
+        });
+
+        // Example of infinite knob, iPod click wheel
+        var v, up=0,down=0,i=0
+            ,$idir = $("div.idir")
+            ,$ival = $("div.ival")
+            ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
+            ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
+        $("input.infinite").knob(
+                            {
+                            min : 0
+                            , max : 20
+                            , stopper : false
+                            , change : function () {
+                                            if(v > this.cv){
+                                                if(up){
+                                                    decr();
+                                                    up=0;
+                                                }else{up=1;down=0;}
+                                            } else {
+                                                if(v < this.cv){
+                                                    if(down){
+                                                        incr();
+                                                        down=0;
+                                                    }else{down=1;up=0;}
+                                                }
+                                            }
+                                            v = this.cv;
+                                        }
+                            });
+    });
+</script>
+
+<script>
+// slider range
+    $(function(){
+      window.prettyPrint && prettyPrint();
+
+        $('#sl1').slider({
+          formater: function(value) {
+            return 'Current value: '+value;
+          }
+        });
+        $('#sl2').slider();
+
+        $('#sl3').slider({
+          formater: function(value) {
+            return 'Current value: '+value;
+          }
+        });
+        $('#sl4').slider();
+
+    });
+</script>
+
+
+</body>
+
+</html>
+

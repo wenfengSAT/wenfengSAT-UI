@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+ <head>
+    
+        <!-- start: Meta -->
+        <meta charset="utf-8">
+        <title>Mosaik - Admin template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- end: Meta -->
+
+        <!-- start: CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.css"> 
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+        <link rel="stylesheet" type="text/css" href="assets/lib/fullcalendar/fullcalendar.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/jasny/bootstrap-fileupload.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/pnotify/jquery.pnotify.default.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/pnotify/jquery.pnotify.default.icons.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/todo/css/base.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/todo/css/app.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/masonry.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/wizard.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-wysihtml5.css" >
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.spellchecker.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/slider.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <!-- end: CSS -->
+
+        <!-- start: JS -->
+        <script src="assets/js/jquery-1.9.1.js"></script>
+        <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
+        <script src="assets/lib/justgage/justgage.1.0.1.js"></script>
+        <script src="assets/lib/justgage/raphael.2.1.0.min.js"></script> 
+        <script src="assets/js/jquery.sparkline.js"></script>
+        <script src="assets/js/charts.js"></script>
+        <script src="assets/js/date.js"></script>
+        <script src="assets/js/daterangepicker.js"></script>   
+        <!-- end: JS -->
+
+
+
+        
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+        <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+        <!--[if IE 8 ]> <body class="ie ie8 "> 
+        <style type="text/css">
+            .navbar form.search input,.sidebar-nav form.search input,.sidebar-label,.thumb-account{border: none;}
+            .thumb-account span {width: 2px;}
+            .sidebar-nav .form-inline { display: none;}
+        </style>
+        <![endif]-->
+
+        <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+
+        <!--[if gte IE 9]>
+         <style type="text/css">.gradient {filter: none;}</style>
+        <![endif]-->
+
+</head><!--end: head -->
+
+  <body style="padding:0">   
+
+    <div class="login bgd-account"> 
+   
+      <div class="wrapper">
+        
+      
+          <div class="block-dark sign-block">
+
+            <h3>Sign up</h3>
+
+            <form data-validate="parsley" action="index.html" id="signup-form" class="form-dark">
+              <div class="input-prepend">      
+                <span class="add-dark"><i class="icon-user"></i></span>
+                <input type="text" name="fullname" data-required="true" placeholder="Username">
+              </div> 
+              <div class="input-prepend">      
+                <span class="add-dark"><i class="icon-envelope"></i></span>
+                <input type="email" name="email" data-trigger="change" data-required="true" data-type="email" placeholder="Email">
+              </div>             
+              <div class="input-prepend">      
+                <span class="add-dark"><i class="icon-lock"></i></span>
+               <input type="password" id="eqalToModel" data-required="true" data-equalto="#eqalToModel" placeholder="Password">
+              </div>  
+              <div class="input-prepend">      
+                <span class="add-dark"><i class="icon-ok"></i></span>            
+               <input type="password" id="eqalToModel" data-required="true" data-equalto="#eqalToModel" placeholder="Confirm password"> 
+              </div>                                              
+    
+              <span id="signup-form-valid" onclick="javascript:$('#signup-form').parsley('validate');">
+                <input type="submit" class="btn btn-info pull-right" value="Log In">
+              </span>        
+
+            <label for="remember" class="checkbox rounded-checkbox checkbox-dark">
+                <input  value="remember" type="checkbox" id="remember" class="checkbox">
+                <span class="check"><span></span></span>
+                <span>I agree to the <a data-toggle="modal" href="#myModal1">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+            </label>              
+
+            </form>
+
+            <div aria-hidden="true" aria-labelledby="myModalLabel1" role="dialog" tabindex="-1" class="modal hide modal-inverse" id="myModal1" style="display: none;">
+              <div class="modal-header ">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"></button>
+                <h3 id="myModalLabel1"> Terms of Service </h3>
+              </div>
+              <div class="modal-body">
+                <p><i class="icon-info-sign"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nobis beatae voluptatibus dolor in dolores vitae necessitatibus amet expedita nisi ullam nostrum corporis! Iste necessitatibus maiores ipsam adipisci ab omnis.</p>
+
+                <hr>
+
+                <h4>Team :</h4>
+
+                <ul class="icons-ul">
+                  <li><i class="icon-li icon-play-sign"></i> Edith D. Reed</li>
+                  <li><i class="icon-li icon-play-sign"></i>Gayle R. Manrique</li>
+                  <li><i class="icon-li icon-play-sign"></i>Byron J. Balsamo</li>
+                  <li><i class="icon-li icon-play-sign"></i>Margie D. Dabney</li>
+                  <li><i class="icon-li icon-play-sign"></i>Willie E. Breunig</li>
+                  <li><i class="icon-li icon-play-sign"></i>Golden J. Perry</li>
+                  <li><i class="icon-li icon-play-sign"></i>Charley A. Schmitt</li>
+                  <li><i class="icon-li icon-play-sign"></i>Carmen T. Rose</li>                                      
+                </ul>
+
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">OK</button>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <hr class="hr-dark">    
+
+            <p class="para-account">Already have an account ? <a href="sign-in.html"> Sign in</a></p>
+
+          </div>
+        
+      </div>
+
+   </div>   
+    
+
+
+
+<!-- start: JS -->
+<script src="assets/js/responsive-tables.js"></script>
+<script src="assets/js/wizard.js"></script>
+<script src="assets/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="assets/lib/fullcalendar/fullcalendar.min.js"></script>
+<script src="assets/lib/pnotify/jquery.pnotify.min.js"></script>
+<script src="assets/lib/jasny/bootstrap-fileupload.js"></script>
+<script src="assets/lib/jasny/bootstrap-inputmask.js"></script>
+<script src="assets/lib/jasny/bootstrap-typeahead.js"></script>   
+<script src="assets/js/bootstrap-slider.js"></script>
+<script src="assets/js/wysihtml5-0.3.0.js async"></script>
+<script src="assets/js/bootstrap-wysihtml5.js async"></script>
+<script src="assets/js/prettyprint.js"></script>
+<script src="assets/js/jquery.spellchecker.js async"></script>
+<script src="assets/js/parsley.js"></script>
+<script src="assets/js/jquery.masonry.min.js"></script>
+<script src="assets/js/jquery.knob.js"></script>
+<script src="assets/js/custom.js"></script>
+<!-- end: JS -->
+
+
+  </body>
+</html>
