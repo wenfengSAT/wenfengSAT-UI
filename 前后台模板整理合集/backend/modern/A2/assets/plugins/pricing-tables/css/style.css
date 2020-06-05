@@ -1,0 +1,783 @@
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-header {
+  height: 100px;
+  line-height: 170px;
+  position: relative;
+}
+.cd-header h1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 2.2rem;
+}
+@media only screen and (min-width: 768px) {
+  .cd-header {
+    height: 160px;
+    line-height: 280px;
+  }
+  .cd-header h1 {
+    font-size: 3.6rem;
+    font-weight: 300;
+  }
+}
+
+.cd-pricing-container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto 4em auto;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-container {
+    margin: 0 auto 6em auto;
+  }
+  .cd-pricing-container.cd-full-width {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.cd-pricing-switcher {
+  text-align: center;
+}
+.cd-pricing-switcher .fieldset {
+  display: inline-block;
+  position: relative;
+  padding: 2px;
+  border-radius: 50em;
+  border: 1px solid #22BAA0;
+}
+.cd-pricing-switcher input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+.cd-pricing-switcher label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  float: left;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #5f5f5f;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cd-pricing-switcher input[type="radio"]:checked+label { 
+    color: #fff;
+} 
+
+.cd-pricing-switcher .cd-switch {
+  /* floating background */
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 40px;
+  width: 90px;
+  background-color: #22BAA0;
+  border-radius: 50em;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+}
+.cd-pricing-switcher input[type="radio"]:checked + label + .cd-switch,
+.cd-pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .cd-switch {
+  /* use label:nth-of-type(n) to fix a bug on safari with multiple adjacent-sibling selectors*/
+  -webkit-transform: translateX(90px);
+  -moz-transform: translateX(90px);
+  -ms-transform: translateX(90px);
+  -o-transform: translateX(90px);
+  transform: translateX(90px);
+}
+
+.no-js .cd-pricing-switcher {
+  display: none;
+}
+
+.cd-pricing-list a {
+    text-decoration: none;
+}
+
+.cd-pricing-list {
+  margin: 2em 0 0;
+  padding: 0;
+}
+.cd-pricing-list > li {
+  position: relative;
+  margin-bottom: 1em;
+  list-style-type: none;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-list {
+    margin: 3em 0 0;
+  }
+  .cd-pricing-list:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .cd-pricing-list > li {
+    width: 33.3333333333%;
+    float: left;
+  }
+  .cd-has-margins .cd-pricing-list > li {
+    width: 32.3333333333%;
+    float: left;
+    margin-right: 1.5%;
+  }
+  .cd-has-margins .cd-pricing-list > li:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.cd-pricing-wrapper {
+  /* this is the item that rotates */
+  position: relative;
+  padding: 0;
+}
+.touch .cd-pricing-wrapper {
+  /* fix a bug on IOS8 - rotating elements dissapear*/
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  perspective: 2000px;
+}
+.cd-pricing-wrapper.is-switched .is-visible {
+  /* totate the tables - anticlockwise rotation */
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-animation: cd-rotate 0.5s;
+  -moz-animation: cd-rotate 0.5s;
+  animation: cd-rotate 0.5s;
+}
+.cd-pricing-wrapper.is-switched .is-hidden {
+  /* totate the tables - anticlockwise rotation */
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-animation: cd-rotate-inverse 0.5s;
+  -moz-animation: cd-rotate-inverse 0.5s;
+  animation: cd-rotate-inverse 0.5s;
+  opacity: 0;
+}
+.cd-pricing-wrapper.is-switched .is-selected {
+  opacity: 1;
+}
+.cd-pricing-wrapper.is-switched.reverse-animation .is-visible {
+  /* invert rotation direction - clockwise rotation */
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-animation: cd-rotate-back 0.5s;
+  -moz-animation: cd-rotate-back 0.5s;
+  animation: cd-rotate-back 0.5s;
+}
+.cd-pricing-wrapper.is-switched.reverse-animation .is-hidden {
+  /* invert rotation direction - clockwise rotation */
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-animation: cd-rotate-inverse-back 0.5s;
+  -moz-animation: cd-rotate-inverse-back 0.5s;
+  animation: cd-rotate-inverse-back 0.5s;
+  opacity: 0;
+}
+.cd-pricing-wrapper.is-switched.reverse-animation .is-selected {
+  opacity: 1;
+}
+.cd-pricing-wrapper > li {
+  background-color: #FFFFFF;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Firefox bug - 3D CSS transform, jagged edges */
+  outline: 1px solid transparent;
+  list-style-type: none;
+}
+.cd-pricing-wrapper > li::after {
+  /* subtle gradient layer on the right - to indicate it's possible to scroll */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  pointer-events: none;
+  background: -webkit-linear-gradient( right , #FFFFFF, rgba(255, 255, 255, 0));
+  background: linear-gradient(to left, #FFFFFF, rgba(255, 255, 255, 0));
+}
+.cd-pricing-wrapper > li.is-ended::after {
+  /* class added in jQuery - remove the gradient layer when it's no longer possible to scroll */
+  display: none;
+}
+.cd-pricing-wrapper .is-visible {
+  /* the front item, visible by default */
+  position: relative;
+  z-index: 5;
+}
+.cd-pricing-wrapper .is-hidden {
+  /* the hidden items, right behind the front one */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.cd-pricing-wrapper .is-selected {
+  /* the next item that will be visible */
+  z-index: 3 !important;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-wrapper > li::before {
+    /* separator between pricing tables - visible when number of tables > 3 */
+    content: '';
+    position: absolute;
+    z-index: 6;
+    left: -1px;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 50%;
+    width: 1px;
+    background-color: #b1d6e8;
+  }
+  .cd-pricing-wrapper > li::after {
+    /* hide gradient layer */
+    display: none;
+  }
+  .cd-popular .cd-pricing-wrapper > li {
+    box-shadow: inset 0 0 0 3px #22BAA0;
+  }
+  .cd-has-margins .cd-pricing-wrapper > li, .cd-has-margins .cd-popular .cd-pricing-wrapper > li {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  .cd-secondary-theme .cd-pricing-wrapper > li {
+    background: #3aa0d1;
+    background: -webkit-linear-gradient( bottom , #0BA0BB, #20BEDA);
+    background: linear-gradient(to top, #0BA0BB, #20BEDA);
+  }
+  .cd-secondary-theme .cd-popular .cd-pricing-wrapper > li {
+    background: #22BAA0;
+    background: -webkit-linear-gradient( bottom , #1DA890, #32C6AD);
+    background: linear-gradient(to top, #1DA890, #32C6AD);
+    box-shadow: none;
+  }
+  :nth-of-type(1) > .cd-pricing-wrapper > li::before {
+    /* hide table separator for the first table */
+    display: none;
+  }
+  .cd-has-margins .cd-pricing-wrapper > li {
+    border-radius: 4px 4px 6px 6px;
+  }
+  .cd-has-margins .cd-pricing-wrapper > li::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .cd-full-width .cd-pricing-wrapper > li {
+    padding: 2.5em 0;
+  }
+}
+
+.no-js .cd-pricing-wrapper .is-hidden {
+  position: relative;
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  margin-top: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-popular .cd-pricing-wrapper > li::before {
+    /* hide table separator for .cd-popular table */
+    display: none;
+  }
+
+  .cd-popular + li .cd-pricing-wrapper > li::before {
+    /* hide table separator for tables following .cd-popular table */
+    display: none;
+  }
+}
+.cd-pricing-header {
+  position: relative;
+  z-index: 1;
+  height: 80px;
+  padding: 1em;
+  pointer-events: none;
+  background-color: #12AFCB;
+  color: #FFFFFF;
+}
+.cd-pricing-header h2 {
+  margin-bottom: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cd-popular .cd-pricing-header {
+  background-color: #22BAA0;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-header {
+    height: auto;
+    padding: 1.9em 0.9em 1.6em;
+    pointer-events: auto;
+    text-align: center;
+    color: #173d50;
+    background-color: transparent;
+  }
+  .cd-popular .cd-pricing-header {
+    color: #22BAA0;
+    background-color: transparent;
+  }
+  .cd-secondary-theme .cd-pricing-header {
+    color: #FFFFFF;
+  }
+  .cd-pricing-header h2 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 768px) {
+    .cd-pricing-header h2 {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .cd-price {
+        margin-top: 10px;
+    }
+    
+    .cd-popular .cd-duration {
+        color: #fff!important;
+    }
+}
+
+.cd-currency, .cd-value {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.cd-duration {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #8dc8e4;
+  text-transform: uppercase;
+}
+.cd-popular .cd-duration {
+  color: #22BAA0;
+}
+.cd-duration::before {
+  content: '/';
+  margin-right: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-value {
+    font-size: 7rem;
+    font-weight: 300;
+  }
+
+  .cd-currency, .cd-duration {
+    color: rgba(23, 61, 80, 0.4);
+  }
+  .cd-popular .cd-currency, .cd-popular .cd-duration {
+    color: #22BAA0;
+  }
+  .cd-secondary-theme .cd-currency, .cd-secondary-theme .cd-duration {
+    color: #0BA0BB;
+  }
+  .cd-secondary-theme .cd-popular .cd-currency, .cd-secondary-theme .cd-popular .cd-duration {
+    color: #1DA890;
+  }
+
+  .cd-currency {
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: top;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .cd-duration {
+    font-size: 1.4rem;
+  }
+}
+.cd-pricing-body {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.is-switched .cd-pricing-body {
+  /* fix a bug on Chrome Android */
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-body {
+    overflow-x: visible;
+  }
+}
+
+.cd-pricing-features {
+  width: 600px;
+  padding: 0;
+}
+.cd-pricing-features:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-pricing-features li {
+  width: 100px;
+  float: left;
+  padding: 1.6em 1em;
+  font-size: 1.4rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  list-style-type: none;
+}
+.cd-pricing-features em {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-features {
+    width: auto;
+  }
+  .cd-pricing-features li {
+    float: none;
+    width: auto;
+    padding: 1em;
+  }
+  .cd-popular .cd-pricing-features li {
+    margin: 0 3px;
+  }
+  .cd-pricing-features li:nth-of-type(2n+1) {
+    background-color: rgba(23, 61, 80, 0.06);
+  }
+  .cd-pricing-features em {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .cd-has-margins .cd-popular .cd-pricing-features li, .cd-secondary-theme .cd-popular .cd-pricing-features li {
+    margin: 0;
+  }
+  .cd-secondary-theme .cd-pricing-features li {
+    color: #FFFFFF;
+  }
+  .cd-secondary-theme .cd-pricing-features li:nth-of-type(2n+1) {
+    background-color: transparent;
+  }
+}
+
+.cd-pricing-footer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* on mobile it covers the .cd-pricing-header */
+  height: 80px;
+  width: 100%;
+}
+.cd-pricing-footer::after {
+  /* right arrow visible on mobile */
+  content: '';
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background: url(../img/cd-icon-small-arrow.svg);
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-footer {
+    position: relative;
+    height: auto;
+    padding: 1.8em 0;
+    text-align: center;
+  }
+  .cd-pricing-footer::after {
+    /* hide arrow */
+    display: none;
+  }
+  .cd-has-margins .cd-pricing-footer {
+    padding-bottom: 0;
+  }
+}
+
+.cd-select {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  /* hide button text on mobile */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+}
+@media only screen and (min-width: 768px) {
+  .cd-select {
+    position: static;
+    display: inline-block;
+    height: auto;
+    padding: 1.3em 3em;
+    color: #FFFFFF;
+    border-radius: 2px;
+    background-color: #0c1f28;
+    font-size: 1.4rem;
+    text-indent: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .no-touch .cd-select:hover {
+    color: #FFFFFF;
+    opacity: 0.8;
+  }
+  .cd-popular .cd-select {
+    background-color: #22BAA0;
+  }
+  .cd-secondary-theme .cd-popular .cd-select {
+    background-color: #0c1f28;
+  }
+  .cd-has-margins .cd-select {
+    display: block;
+    padding: 1.7em 0;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+/* -------------------------------- 
+
+xkeyframes 
+
+-------------------------------- */
+@-webkit-keyframes cd-rotate {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+  }
+}
+@-moz-keyframes cd-rotate {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(200deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(180deg);
+  }
+}
+@keyframes cd-rotate {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(200deg);
+    -moz-transform: perspective(2000px) rotateY(200deg);
+    -ms-transform: perspective(2000px) rotateY(200deg);
+    -o-transform: perspective(2000px) rotateY(200deg);
+    transform: perspective(2000px) rotateY(200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+    -moz-transform: perspective(2000px) rotateY(180deg);
+    -ms-transform: perspective(2000px) rotateY(180deg);
+    -o-transform: perspective(2000px) rotateY(180deg);
+    transform: perspective(2000px) rotateY(180deg);
+  }
+}
+@-webkit-keyframes cd-rotate-inverse {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+}
+@-moz-keyframes cd-rotate-inverse {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(20deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+}
+@keyframes cd-rotate-inverse {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+    -ms-transform: perspective(2000px) rotateY(-180deg);
+    -o-transform: perspective(2000px) rotateY(-180deg);
+    transform: perspective(2000px) rotateY(-180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(20deg);
+    -moz-transform: perspective(2000px) rotateY(20deg);
+    -ms-transform: perspective(2000px) rotateY(20deg);
+    -o-transform: perspective(2000px) rotateY(20deg);
+    transform: perspective(2000px) rotateY(20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+}
+@-webkit-keyframes cd-rotate-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+  }
+}
+@-moz-keyframes cd-rotate-back {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(-200deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+  }
+}
+@keyframes cd-rotate-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-200deg);
+    -moz-transform: perspective(2000px) rotateY(-200deg);
+    -ms-transform: perspective(2000px) rotateY(-200deg);
+    -o-transform: perspective(2000px) rotateY(-200deg);
+    transform: perspective(2000px) rotateY(-200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+    -ms-transform: perspective(2000px) rotateY(-180deg);
+    -o-transform: perspective(2000px) rotateY(-180deg);
+    transform: perspective(2000px) rotateY(-180deg);
+  }
+}
+@-webkit-keyframes cd-rotate-inverse-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+}
+@-moz-keyframes cd-rotate-inverse-back {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(-20deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+}
+@keyframes cd-rotate-inverse-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+    -moz-transform: perspective(2000px) rotateY(180deg);
+    -ms-transform: perspective(2000px) rotateY(180deg);
+    -o-transform: perspective(2000px) rotateY(180deg);
+    transform: perspective(2000px) rotateY(180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-20deg);
+    -moz-transform: perspective(2000px) rotateY(-20deg);
+    -ms-transform: perspective(2000px) rotateY(-20deg);
+    -o-transform: perspective(2000px) rotateY(-20deg);
+    transform: perspective(2000px) rotateY(-20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+}

@@ -1,0 +1,286 @@
+.checkout {
+	position: absolute;
+	top: 60px;
+	right: 0;
+	z-index: 10;
+	display: block;
+	width: 89px;
+	height: 89px;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.checkout__button {
+	position: relative;
+	z-index: 10;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.checkout--active .checkout__button {
+	cursor: default;
+	-webkit-transform: translate3d(-360%, -15%, 0);
+	transform: translate3d(-360%, -15%, 0);
+}
+
+.checkout__button:focus {
+	outline: none;
+}
+
+.checkout__text {
+	display: block;
+	color: #74767d;
+	font-weight: 400;
+	font-size: 1.25em;
+}
+
+.checkout__text path {
+    fill: #74767d;
+}
+
+.checkout__icon {
+	display: block;
+	margin: 0 auto;
+    padding: 30px;
+}
+
+.checkout__order {
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	max-width: 100vw;
+	width: 400px;
+	text-align: right;
+	pointer-events: none;
+}
+
+.checkout--active .checkout__order {
+	pointer-events: auto;
+}
+
+.checkout__order::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #e9edf2;
+    border-left: 1px solid #dee2e8;
+    border-bottom: 1px solid #dee2e8;
+	-webkit-transform: translate3d(100%, -100%, 0) translate3d(-89px, 89px, 0);
+	transform: translate3d(100%, -100%, 0) translate3d(-89px, 89px, 0);
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.checkout--active .checkout__order::before {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.checkout__order-inner {
+	position: relative;
+	padding: 2em 1.9em;
+	opacity: 0;
+}
+
+.checkout--active .checkout__order-inner {
+	opacity: 1;
+	-webkit-transition: opacity 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	transition: opacity 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.checkout__close {
+	position: absolute;
+	top: 1.5em;
+	right: 1.5em;
+	overflow: hidden;
+	width: 20px;
+	height: 20px;
+	border: none;
+	background: transparent;
+	color: transparent;
+	text-indent: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(50px, 0, 0);
+	transform: translate3d(50px, 0, 0);
+
+	backface-visibility: hidden;
+}
+
+.checkout__close:focus {
+	outline: none;
+}
+
+.checkout--active .checkout__close {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	-webkit-transition-delay: 0.015s;
+	transition-delay: 0.015s;
+}
+
+.icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #74767d;
+	text-indent: 0;
+}
+
+.icon:hover {
+	color: #426a98;
+}
+
+.checkout__summary {
+	margin: 2.5em 0 0.75em;
+	width: 100%;
+	color: #333;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.85em;
+	line-height: 1.5;
+}
+
+.checkout__summary tr {
+	-webkit-transform: translate3d(250px, 0, 0);
+	transform: translate3d(250px, 0, 0);
+}
+
+.checkout--active .checkout__summary tr {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.checkout--active .checkout__summary tbody tr:nth-child(1) {
+	-webkit-transition-delay: 0.015s;
+	transition-delay: 0.015s;
+}
+
+.checkout--active .checkout__summary tbody tr:nth-child(2) {
+	-webkit-transition-delay: 0.03s;
+	transition-delay: 0.03s;
+}
+
+.checkout--active .checkout__summary tbody tr:nth-child(3) {
+	-webkit-transition-delay: 0.045s;
+	transition-delay: 0.045s;
+}
+
+.checkout--active .checkout__summary tbody tr:nth-child(4) {
+	-webkit-transition-delay: 0.06s;
+	transition-delay: 0.06s;
+}
+
+.checkout--active .checkout__summary tbody tr:nth-child(5) {
+	-webkit-transition-delay: 0.075s;
+	transition-delay: 0.075s;
+}
+
+.checkout--active .checkout__summary tbody tr:nth-child(6) {
+	-webkit-transition-delay: 0.09s;
+	transition-delay: 0.09s;
+}
+
+.checkout--active .checkout__summary tfoot tr {
+	-webkit-transition-delay: 0.105s;
+	transition-delay: 0.105s;
+}
+
+.checkout__summary thead th,
+.checkout__summary tfoot th {
+	color: #333;
+	line-height: 2.5;
+}
+
+.checkout__total {
+	color: #22BAA0;
+}
+
+.checkout__summary tbody tr:first-child td {
+	padding-top: 0.5em;
+}
+
+.checkout__summary tbody td {
+	padding: 0.25em 0;
+	font-weight: 700;
+	font-size: 0.85em;
+}
+
+.checkout__summary tbody td span {
+	color: #22BAA0;
+}
+
+.checkout__summary th:last-child,
+.checkout__summary td:last-child {
+	text-align: right;
+}
+
+.checkout__option {
+	display: inline-block;
+	margin-top: 1em;
+	padding: 0.5em 2em;
+	border: none;
+	border-radius: 1px;
+	background: #333;
+	color: #fff;
+	font-weight: 700;
+	opacity: 0;
+	-webkit-transform: translate3d(50px, 0, 0);
+	transform: translate3d(50px, 0, 0);
+}
+
+.checkout__option:hover {
+	background: #426a98;
+}
+
+.checkout__option--silent {
+	background: none;
+	color: #333;
+	font-weight: 500;
+	font-size: 0.75em;
+}
+
+.checkout__option--silent:hover {
+	background: none;
+	color: #426a98;
+}
+
+.checkout__option:focus {
+	outline: none;
+}
+
+.checkout--active .checkout__option {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+	-webkit-transition-delay: 0.18s;
+	transition-delay: 0.18s;
+}
+
+@media screen and (max-width: 26em) { 
+	.checkout--active .checkout__button {
+		cursor: default;
+		-webkit-transform: translate3d(-240%, -15%, 0);
+		transform: translate3d(-240%, -15%, 0);
+	}
+}
