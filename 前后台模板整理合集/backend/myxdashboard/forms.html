@@ -1,0 +1,560 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MYX Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- theme -->
+    <link rel="stylesheet" type="text/css" href="css/theme/default.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements/form.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements/bootstrap-wysihtml5.css" />
+
+
+
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="logo" /></a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs">
+                <input class="search" type="text" placeholder="Enter keywords" />
+            </li>
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="glyphicon glyphicon-bell"></i>
+                    <span class="count">5</span>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="notifications">
+                            <h3>You have 5 new notifications</h3>
+                            <a href="#" class="item">
+                                <i class="fa fa-bug"></i> Server Error Reports
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cloud-download"></i> Backup Completed
+                                <span class="time"><i class="fa fa-clock-o"></i> 18 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cogs"></i> <strong>System Updated</strong>
+                                <span class="time"><i class="fa fa-clock-o"></i> 20 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-code"></i> Code Error on Line 101
+                                <span class="time"><i class="fa fa-clock-o"></i> 49 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-refresh fa-spin"></i> Spinner Icon
+                                <span class="time"><i class="fa fa-clock-o"></i> 1 day.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="messages">
+                            <a href="#" class="item">
+                                <img src="images/user_2.png" class="display" alt="user" />
+                                <div class="name">Jhane Doe</div>
+                                <div class="msg">
+                                Quisque commodo massa sed ipsum porttitor facilisis.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 5 sec.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="images/user_3.png" class="display" alt="user" />
+                                <div class="name">Jack Daniel</div>
+                                <div class="msg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 37 mins.</span>
+                            </a>
+                            <a href="#" class="item last">
+                                <img src="images/user_4.png" class="display" alt="user" />
+                                <div class="name">Warm Sleepy</div>
+                                <div class="msg">
+                                Hello, how are you? i just though you were here, i'll see you tomorrow.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 2 days.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown"> 
+                <img class="img-circle" src="images/user_1.jpg" alt="avatar"> Erwin Agpasa <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <div class="profile-hidder">
+        <ul class="nav">
+                    <li class="nav-profile">
+                        <div class="image">
+                            <a href="javascript:;"><img src="images/user_1.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <a href="profile.html">Erwin Agpasa <b class="caret"></b></a>
+                            <small>UX-UI Designer</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <ul id="dashboard-menu">
+              <li>
+                <a href="index.html">
+                    <i class="fa fa-laptop"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>    
+            
+            <li>
+                <a href="inbox.html">
+                    <i class="fa fa-inbox"></i>
+                    <span>Inbox</span> <span class="badge pull-right label-success">10</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-table"></i>
+                    <span>Tables</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="table-static.html">Static Tables</a></li>
+                    <li><a href="table-data.html">Data Tables</a></li>
+                    
+                </ul>
+            </li>
+
+
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-signal"></i>
+                    <span>Charts</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="flot.html">Flot Chart</a></li>
+                    <li><a href="morris.html">Morris Chart</a></li>
+                    
+                </ul>
+            </li>
+
+            <li class="active">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a href="forms.html">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>Forms</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Other Pages</span> <b class="caret"></b>
+                </a>
+                <ul class="submenu">
+                     <li><a href="profile.html">Profile Page</a></li>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="invoice.html">
+                    <i class="fa fa-file-text-o"></i>
+                    <span>Invoice</span>
+                </a>
+            </li>
+
+           
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+    <!-- main container -->
+    <div class="content">
+        <div id="pad-wrapper">
+            <h4>Form</h4>
+            
+
+            <!-- Profile Form -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Profile Form</strong></div>
+                <div class="panel-body">
+           
+                    <form class="form-horizontal" method="get" data-validate="parsley">      
+                        <div class="form-group">
+                        <label class="col-lg-3 control-label">Photo</label>
+                            <div class="col-lg-9 media">    
+                            <div class="bg-light pull-left text-center media-large thumb-large">
+                            <i class="fa fa-user fa-4x inline icon-light m-t-large m-b-large"></i>
+                            </div>
+
+                            <div class="media-body">
+                            <input type="file" name="file" title="Change" class="btn-custom btn-small btn-info"><br>
+                            <button class="btn btn-small btn-default">Delete</button>
+                            </div>
+                            </div>
+                        </div>
+              
+                        <div class="form-group">
+                        <label class="col-lg-3 control-label">Email</label>
+                            <div class="col-lg-8">
+                            <input type="text" name="email" placeholder="test@example.com" class="bg-focus form-control" data-required="true" data-type="email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Password</label>
+                            <div class="col-lg-8">
+                            <input type="password" name="password" placeholder="Password" class="bg-focus form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Username</label>
+                            <div class="col-lg-8">
+                            <input type="text" name="username" placeholder="Username" data-required="true" class="form-control">
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                        <label class="col-lg-3 control-label">Account</label>
+                        <div class="col-lg-4">
+                          <select name="account" class="form-control">
+                            <option value="1">Editor</option>
+                            <option value="0">Admin</option>
+                          </select>
+                        </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Registered</label>
+                            <div class="col-lg-9">
+                            <input type="text" class="combodate form-control" data-format="DD-MM-YYYY" data-template="D  MMM  YYYY" name="datetime" value="04-12-2015">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Profile</label>
+                            <div class="col-lg-8">
+                            <textarea placeholder="Profile" rows="5" class="form-control" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
+                                <div class="checkbox">
+                                <label>
+                                <input name="agree" type="checkbox"> Agree the <a href="#">terms and policy</a>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-9 pull-right">                      
+                            <button type="submit" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-info">Save changes</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+            </div>
+            <!-- /Profile Form -->
+
+
+
+
+
+            <!-- All form elements -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>All form elements</strong></div>
+                <div class="panel-body">
+           
+                        <div class="form-group">
+                            <p><strong>Checkboxes &amp; radios</strong></p>
+                            <div class="col-sm-10">
+                                <div class="checkbox i-checks">
+                                    <label> <input type="checkbox" value=""> <i></i> Option one </label>
+                                </div>
+                                
+                                <div class="checkbox i-checks">
+                                    <label> <input type="checkbox" value="" checked=""> <i></i> Option two checked </label>
+                                </div>
+                                
+                                <div class="checkbox i-checks">
+                                    <label> <input type="checkbox" value="" disabled="" checked=""> <i></i> Option three checked and disabled </label>
+                                </div>
+                                
+                                <div class="checkbox i-checks">
+                                    <label> <input type="checkbox" value="" disabled=""> <i></i> Option four disabled </label>
+                                </div>
+                                
+                                <div class="radio i-checks">
+                                    <label> <input type="radio" value="option1" name="a"> <i></i> Option one </label>
+                                </div>
+                                                
+                                <div class="radio i-checks">
+                                    <label> <input type="radio" checked="" value="option2" name="a"> <i></i> Option two checked </label>
+                                </div>
+                                
+                                <div class="radio i-checks">
+                                    <label> <input type="radio" disabled="" checked="" value="option2"> <i></i> Option three checked and disabled </label>
+                                </div>
+                                
+                                <div class="radio i-checks">
+                                    <label> <input type="radio" disabled="" name="a"> <i></i> Option four disabled </label>
+                                </div>
+                            </div>
+                        </div>
+                                        
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <p style="margin:20px auto 10px auto;"><strong>Inline checkboxes</strong></p>
+                            <div class="col-sm-10">
+                                <label class="checkbox-inline i-checks"> <input type="checkbox" value="option1"> a </label>
+                                <label class="checkbox-inline i-checks"> <input type="checkbox" value="option2"> b </label>
+                                <label class="checkbox-inline i-checks"> <input type="checkbox" value="option3"> c </label>
+                            </div>
+                        </div>
+                              
+
+
+
+
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <p style="margin:20px auto 10px auto;"><strong>Datepicker</strong></p>
+
+                            <div class="m-b row">
+                            <div class="col-lg-6">
+                            <input class="input-small form-control datepicker" size="16" type="text" value="04-12-2015" data-date-format="dd-mm-yyyy" >
+                            </div>
+                             </div>
+                        </div><!-- date picker end -->
+
+
+
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <p style="margin:20px auto 10px auto;"><strong>Button addons</strong></p>
+                            <div class="col-sm-12">
+                                <div class="input-group m-b"><span class="input-group-btn">
+                                <button type="button" class="btn btn-primary">Go!</button> </span> <input type="text" class="form-control">
+                                </div>
+                                <br />
+                                <div class="input-group"><input type="text" class="form-control"> <span class="input-group-btn"> <button type="button" class="btn btn-primary">Go!</button> </span></div>
+                                </div>
+                            </div>
+
+
+                                <div class="clearfix"></div>
+                        
+                                <div class="form-group">
+                                    <p style="margin:20px auto 10px auto;"><strong>Segmented</strong></p>
+                                    <div class="col-sm-12">
+                                        <div class="input-group m-b">
+                                            <div class="input-group-btn">
+                                                <button tabindex="-1" class="btn btn-primary" type="button">Action</button>
+                                                <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button"><span class="caret"></span></button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Action</a></li>
+                                                        <li><a href="#">Another action</a></li>
+                                                        <li><a href="#">Something else here</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Separated link</a></li>
+                                                    </ul>
+                                            </div>    
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <br />
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-btn">
+                                                <button tabindex="-1" class="btn btn-primary" type="button">Action</button>
+                                                <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button"><span class="caret"></span></button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li><a href="#">Action</a></li>
+                                                        <li><a href="#">Another action</a></li>
+                                                        <li><a href="#">Something else here</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Separated link</a></li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                </div>
+            </div>
+            </div>
+            <!-- /All form elements -->
+
+
+
+
+
+            <div class="clearfix"></div>
+
+            <!-- wysiwyg editor -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>WYSIWYG Editor</strong></div>
+                <div class="panel-body">
+                <textarea class="textarea form-control" placeholder="Enter text ..." style="width: 100%; height: 200px;"></textarea>
+            </div>
+            </div>
+            </div>
+            <!-- /wysiwyg editor -->
+
+
+
+
+            <div class="clearfix"></div>
+             <footer id="footer"> 
+                <div class="text-center clearfix">
+                    <p><small>&copy myxdashboard 2014, Admin dashboard framework base on bootstrap</small>
+                        <br /><br /> 
+                        <a href="#" class="btn btn-xs btn-circle btn-twitter"><i class="fa fa-twitter"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-facebook"><i class="fa fa-facebook"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-gplus"><i class="fa fa-google-plus"></i></a> 
+                    </p> 
+                </div> 
+            </footer>
+
+
+          </div><!-- /pad-wrapper -->
+    </div><!-- content --> 
+    <!-- /main container -->
+
+
+
+
+
+
+
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/theme.js"></script>
+
+    <script src="js/form/app.js"></script>
+    <script src="js/form/app.plugin.js"></script>
+    <script src="js/form/datepicker/bootstrap-datepicker.js"></script>
+    <script src="js/form/slider/bootstrap-slider.js"></script>
+    <script src="js/form/bootstrap.file-input.js"></script>    
+    <script src="js/form/combodate/moment.min.js"></script>
+    <script src="js/form/combodate/combodate.js"></script>
+    <script src="js/form/parsley/parsley.min.js"></script>
+
+
+
+    <script src="js/tables/jquery.peity.min.js"></script>
+    <script src="js/tables/peity-demo.js"></script>
+    <script src="js/tables/icheck.min.js"></script>
+
+    <!--wysiwyg editor -->
+    <script src="js/editor/wysihtml5-0.3.0.js"></script>
+    <script src="js/editor/bootstrap3-wysihtml5.js"></script>
+
+
+     <script type="text/javascript">
+        //wysihtml5
+       $('.textarea').wysihtml5({
+        "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+        "emphasis": true, //Italics, bold, etc. Default true
+        "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+        "html": true, //Button which allows you to edit the generated HTML. Default false
+        "link": true, //Button to insert a link. Default true
+        "image": true, //Button to insert an image. Default true,
+        "color": false, //Button to change color of font
+        "size": 'sm' //Button size like sm, xs etc.
+    });
+
+
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
+
+</body>
+
+
+
+
+</body>
+</html>

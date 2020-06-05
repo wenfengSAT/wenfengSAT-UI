@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MYX Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- theme -->
+    <link rel="stylesheet" type="text/css" href="css/theme/default.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements/inbox.css" />
+ 
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="logo" /></a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs">
+                <input class="search" type="text" placeholder="Enter keywords" />
+            </li>
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="glyphicon glyphicon-bell"></i>
+                    <span class="count">5</span>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="notifications">
+                            <h3>You have 5 new notifications</h3>
+                            <a href="#" class="item">
+                                <i class="fa fa-bug"></i> Server Error Reports
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cloud-download"></i> Backup Completed
+                                <span class="time"><i class="fa fa-clock-o"></i> 18 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cogs"></i> <strong>System Updated</strong>
+                                <span class="time"><i class="fa fa-clock-o"></i> 20 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-code"></i> Code Error on Line 101
+                                <span class="time"><i class="fa fa-clock-o"></i> 49 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-refresh fa-spin"></i> Spinner Icon
+                                <span class="time"><i class="fa fa-clock-o"></i> 1 day.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="messages">
+                            <a href="#" class="item">
+                                <img src="images/user_2.png" class="display" alt="user" />
+                                <div class="name">Jhane Doe</div>
+                                <div class="msg">
+                                Quisque commodo massa sed ipsum porttitor facilisis.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 5 sec.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="images/user_3.png" class="display" alt="user" />
+                                <div class="name">Jack Daniel</div>
+                                <div class="msg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 37 mins.</span>
+                            </a>
+                            <a href="#" class="item last">
+                                <img src="images/user_4.png" class="display" alt="user" />
+                                <div class="name">Warm Sleepy</div>
+                                <div class="msg">
+                                Hello, how are you? i just though you were here, i'll see you tomorrow.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 2 days.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown"> 
+                <img class="img-circle" src="images/user_1.jpg" alt="avatar"> Erwin Agpasa <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <div class="profile-hidder">
+        <ul class="nav">
+                    <li class="nav-profile">
+                        <div class="image">
+                            <a href="javascript:;"><img src="images/user_1.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <a href="profile.html">Erwin Agpasa <b class="caret"></b></a>
+                            <small>UX-UI Designer</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <ul id="dashboard-menu">
+              <li>
+                <a href="index.html">
+                    <i class="fa fa-laptop"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>    
+             <li class="active">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a href="inbox.html">
+                    <i class="fa fa-inbox"></i>
+                    <span>Inbox</span> <span class="badge pull-right label-success">10</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-table"></i>
+                    <span>Tables</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="table-static.html">Static Tables</a></li>
+                    <li><a href="table-data.html">Data Tables</a></li>
+                    
+                </ul>
+            </li>
+
+
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-signal"></i>
+                    <span>Charts</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="flot.html">Flot Chart</a></li>
+                    <li><a href="morris.html">Morris Chart</a></li>
+                    
+                </ul>
+            </li>
+
+            <li>
+                <a href="forms.html">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>Forms</span>
+                </a>
+            </li>
+
+             <li>                
+                <a class="dropdown-toggle" href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Other Pages</span> <b class="caret"></b>
+                </a>
+                <ul class="submenu">
+                    <li><a href="profile.html">Profile Page</a></li>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="invoice.html">
+                    <i class="fa fa-file-text-o"></i>
+                    <span>Invoice</span>
+                </a>
+            </li>
+
+           
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+    <!-- main container -->
+    <div class="content">
+        <div id="pad-wrapper">
+            
+
+            <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Inbox</strong></div>
+                <div class="panel-body">
+
+
+                    <div class="row">
+                        <div class="col-sm-3 col-md-2">
+                            <div class="btn-group customdrop">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Mail <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Mail</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                    <li><a href="#">Tasks</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-9 col-md-10">
+                            <!-- Split button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default custombtn">
+                                    <div class="checkbox" style="margin: 0;">
+                                       
+                                            <input type="checkbox">
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">All</a></li>
+                                    <li><a href="#">None</a></li>
+                                    <li><a href="#">Read</a></li>
+                                    <li><a href="#">Unread</a></li>
+                                    <li><a href="#">Starred</a></li>
+                                    <li><a href="#">Unstarred</a></li>
+                                </ul>
+                            </div>
+                           
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" title="Refresh">
+                            <span class="glyphicon glyphicon-refresh"></span></button>
+                            <!-- Single button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    More <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Mark all as read</a></li>
+                                    <li class="divider"></li>
+                                    <li class="text-center"><small class="text-muted">Select messages to see more actions</small></li>
+                                </ul>
+                            </div>
+                            <div class="pull-right">
+                                <span class="text-muted"><b>1</b>–<b>50</b> of <b>277</b></span>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-3 col-md-2">
+                            <a href="#" class="btn btn-danger btn-sm btn-block compose" role="button">COMPOSE</a>
+                            <hr />
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="active"><a href="#"><span class="badge pull-right">42</span> Inbox </a>
+                                </li>
+                                <li><a href="#">Starred</a></li>
+                                <li><a href="#">Important</a></li>
+                                <li><a href="#">Sent Mail</a></li>
+                                <li><a href="#"><span class="badge pull-right">3</span>Drafts</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-9 col-md-10">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#home" data-toggle="tab"><span class="glyphicon glyphicon-inbox">
+                                </span>Primary</a></li>
+                                <li><a href="#profile" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>
+                                    Social</a></li>
+                                <li><a href="#messages" data-toggle="tab"><span class="glyphicon glyphicon-tags"></span>
+                                    Promotions</a></li>
+                                <li><a href="#settings" data-toggle="tab"><span class="glyphicon glyphicon-plus no-margin">
+                                </span></a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="home">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item">
+                                            <div class="checkbox">
+                                            <input type="checkbox">
+                                            </div>
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                            <span class="name" style="min-width: 120px;
+                                            display: inline-block;">John Doe</span> 
+                                            <span class="">This is big title</span>
+                                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span> 
+                                            <span class="badge">12:10 AM</span> 
+                                            <span class="pull-right">
+                                                <span class="glyphicon glyphicon-paperclip"></span></span>
+                                        </a>
+                                        
+                                        <a href="#" class="list-group-item">
+                                            <div class="checkbox">
+                                            <input type="checkbox">
+                                            </div>
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                            <span class="name" style="min-width: 120px;display: inline-block;">Jacky Tran</span> 
+                                            <span class="">This is big title</span>
+                                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span> 
+                                            <span class="badge">12:10 AM</span> 
+                                            <span class="pull-right">
+                                            <span class="glyphicon glyphicon-paperclip"></span></span>
+                                        </a>
+
+                                        <a href="#" class="list-group-item read">
+                                            <div class="checkbox">
+                                            <input type="checkbox">
+                                            </div>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="name" style="min-width: 120px;display: inline-block;">Jane Smith</span> 
+                                            <span class="">This is big title</span>
+                                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span>
+                                            <span class="badge">12:10 AM</span> 
+                                            <span class="pull-right"><span class="glyphicon glyphicon-paperclip"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade in" id="profile">
+                                    <div class="list-group">
+                                        <div class="list-group-item">
+                                            <span class="text-center">This tab is empty.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade in" id="messages">
+                                    ...</div>
+                                <div class="tab-pane fade in" id="settings">
+                                    This tab is empty.</div>
+                            </div>
+                            <!-- Ad -->
+                            <div class="row-md-12">
+                                <div class="ad">
+                                    <a href="#" class="title">MyxDashboard</a>
+                                    <div>
+                                        Cool jQuery, CSS3, Admin Dashoard, HTML5, Bootstrap</div>
+                                    <a href="#" class="url">www.domain.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            </div>
+            <!-- /Basic Table -->
+
+
+
+
+
+
+
+            <div class="clearfix"></div>
+             <footer id="footer"> 
+                <div class="text-center clearfix">
+                    <p><small>&copy myxdashboard 2014, Admin dashboard framework base on bootstrap</small>
+                        <br /><br /> 
+                        <a href="#" class="btn btn-xs btn-circle btn-twitter"><i class="fa fa-twitter"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-facebook"><i class="fa fa-facebook"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-gplus"><i class="fa fa-google-plus"></i></a> 
+                    </p> 
+                </div> 
+            </footer>
+
+
+          </div><!-- /pad-wrapper -->
+    </div><!-- content --> 
+    <!-- /main container -->
+
+
+
+
+
+
+
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/theme.js"></script>
+
+
+</body>
+</html>

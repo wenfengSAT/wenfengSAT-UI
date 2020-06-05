@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MYX Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- theme -->
+    <link rel="stylesheet" type="text/css" href="css/theme/default.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements/tables.css" />
+
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="logo" /></a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs">
+                <input class="search" type="text" placeholder="Enter keywords" />
+            </li>
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="glyphicon glyphicon-bell"></i>
+                    <span class="count">5</span>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="notifications">
+                            <h3>You have 5 new notifications</h3>
+                            <a href="#" class="item">
+                                <i class="fa fa-bug"></i> Server Error Reports
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cloud-download"></i> Backup Completed
+                                <span class="time"><i class="fa fa-clock-o"></i> 18 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cogs"></i> <strong>System Updated</strong>
+                                <span class="time"><i class="fa fa-clock-o"></i> 20 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-code"></i> Code Error on Line 101
+                                <span class="time"><i class="fa fa-clock-o"></i> 49 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-refresh fa-spin"></i> Spinner Icon
+                                <span class="time"><i class="fa fa-clock-o"></i> 1 day.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="messages">
+                            <a href="#" class="item">
+                                <img src="images/user_2.png" class="display" alt="user" />
+                                <div class="name">Jhane Doe</div>
+                                <div class="msg">
+                                Quisque commodo massa sed ipsum porttitor facilisis.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 5 sec.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="images/user_3.png" class="display" alt="user" />
+                                <div class="name">Jack Daniel</div>
+                                <div class="msg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 37 mins.</span>
+                            </a>
+                            <a href="#" class="item last">
+                                <img src="images/user_4.png" class="display" alt="user" />
+                                <div class="name">Warm Sleepy</div>
+                                <div class="msg">
+                                Hello, how are you? i just though you were here, i'll see you tomorrow.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 2 days.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown"> 
+                <img class="img-circle" src="images/user_1.jpg" alt="avatar"> Erwin Agpasa <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <div class="profile-hidder">
+        <ul class="nav">
+                    <li class="nav-profile">
+                        <div class="image">
+                            <a href="javascript:;"><img src="images/user_1.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <a href="profile.html">Erwin Agpasa <b class="caret"></b></a>
+                            <small>UX-UI Designer</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <ul id="dashboard-menu">
+              <li>
+                <a href="index.html">
+                    <i class="fa fa-laptop"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>    
+            <li>
+                <a href="inbox.html">
+                    <i class="fa fa-inbox"></i>
+                    <span>Inbox</span> <span class="badge pull-right label-success">10</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-table"></i>
+                    <span>Tables</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="table-static.html">Static Tables</a></li>
+                    <li><a href="table-data.html">Data Tables</a></li>
+                    
+                </ul>
+            </li>
+
+
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-signal"></i>
+                    <span>Charts</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="flot.html">Flot Chart</a></li>
+                    <li><a href="morris.html">Morris Chart</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="forms.html">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>Forms</span>
+                </a>
+            </li>
+            
+               <li>                
+                <a class="dropdown-toggle" href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Other Pages</span> <b class="caret"></b>
+                </a>
+                <ul class="submenu">
+                    <li><a href="profile.html">Profile Page</a></li>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+         
+            <li>
+                <a href="invoice.html">
+                    <i class="fa fa-file-text-o"></i>
+                    <span>Invoice</span>
+                </a>
+            </li>
+
+           
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+    <!-- main container -->
+    <div class="content">
+        <div id="pad-wrapper">
+            <h4>Static Tables</h4>
+            
+
+            <!-- Basic Table -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Basic Table</strong></div>
+                <div class="panel-body">
+
+                            <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Istran</td>
+                                <td>Net</td>
+                                <td>@istran</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Billy</td>
+                                <td>Joe</td>
+                                <td>@Bjoe</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Elvis</td>
+                                <td>Preley</td>
+                                <td>@elvisp</td>
+                            </tr>
+                            </tbody>
+                        </table>
+               
+
+                </div>
+            </div>
+            </div>
+            <!-- /Basic Table -->
+
+
+
+
+            <!-- Striped Table -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Striped Table</strong></div>
+                <div class="panel-body">
+
+                     <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Data</th>
+                                <th>User</th>
+                                <th>Value</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="line" style="display: none;">5,3,2,-1,-3,-2,2,3,5,2</span>
+                                    <svg class="peity" height="16" width="32"></svg>
+                                </td>
+                                <td>Istran</td>
+                                <td class="text-navy"> <i class="fa fa-level-up"></i> 40% </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span class="line" style="display: none;">5,3,9,6,5,9,7,3,5,2</span>
+                                    <svg class="peity" height="16" width="32"></svg>
+                                </td>
+                                <td>Billy</td>
+                                <td class="text-warning"> <i class="fa fa-level-down"></i> -20% </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><span class="line" style="display: none;">1,6,3,9,5,9,5,3,9,6,4</span>
+                                    <svg class="peity" height="16" width="32"></svg></td>
+                                <td>Elvis</td>
+                                <td class="text-navy"> <i class="fa fa-level-up"></i> 26% </td>
+                            </tr>
+                            </tbody>
+                        </table>
+               
+
+                </div>
+            </div>
+            </div>
+            <!-- /Striped Table --> 
+
+
+
+            <!-- Border Table -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Border Table</strong></div>
+                <div class="panel-body">
+
+
+                    <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Istran</td>
+                                    <td>Net</td>
+                                    <td>@istran</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Billy</td>
+                                    <td>Joe</td>
+                                    <td>@billy</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Elvis</td>
+                                    <td>Preley</td>
+                                    <td>@elvis</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                </div>
+            </div>
+            </div>
+            <!-- /Border Table --> 
+
+
+
+            <!-- Hover Table -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Hover Table</strong></div>
+                <div class="panel-body">
+
+
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Data</th>
+                                    <th>User</th>
+                                    <th>Value</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><span class="pie" style="display: none;">0.52,1.041</span>
+                                        <svg class="peity" height="16" width="16"></svg></td>
+                                    <td>Istran</td>
+                                    <td class="text-navy"> <i class="fa fa-level-up"></i> 40% </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><span class="pie" style="display: none;">226,134</span><svg class="peity" height="16" width="16"></svg></td>
+                                    <td>Billy</td>
+                                    <td class="text-warning"> <i class="fa fa-level-down"></i> -20% </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><span class="pie" style="display: none;">0.52/1.561</span><svg class="peity" height="16" width="16"></svg></td>
+                                    <td>Elvis</td>
+                                    <td class="text-navy"> <i class="fa fa-level-up"></i> 26% </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                </div>
+            </div>
+            </div>
+            <!-- /Hover Table --> 
+
+
+
+
+
+            <!-- Custom responsive table -->
+            <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                 <div class="row">
+                    <div class="col-sm-5 m-b-xs"><strong>Custom responsive table</strong></div>
+                        <div class="col-sm-4 m-b-xs">
+                            <div data-toggle="buttons" class="btn-group">
+                                <label class="btn btn-sm btn-white active">
+                                    <input type="radio" id="option1" name="options"> Day </label>
+                                <label class="btn btn-sm btn-white">
+                                    <input type="radio" id="option2" name="options"> Week </label>
+                                <label class="btn btn-sm btn-white">
+                                    <input type="radio" id="option3" name="options"> Month </label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <input type="text" placeholder="Search" class="input-sm form-control"> 
+                                <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-primary"> Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="panel-body">
+
+                <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+
+                                        <th></th>
+                                        <th>Project </th>
+                                        <th>Completed </th>
+                                        <th>Task</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                        <td>Project This is example of project</td>
+                                        <td><span class="pie">0.52/1.561</span></td>
+                                        <td>20%</td>
+                                        <td>Jul 14, 2013</td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                        <td>Alpha project</td>
+                                        <td><span class="pie">6,9</span></td>
+                                        <td>40%</td>
+                                        <td>Jul 16, 2013</td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                        <td>Betha project</td>
+                                        <td><span class="pie">3,1</span></td>
+                                        <td>75%</td>
+                                        <td>Jul 18, 2013</td>
+                                        <td><a href="#"><i class="fa fa-times text-del"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                        <td>Gamma project</td>
+                                        <td><span class="pie">4,9</span></td>
+                                        <td>18%</td>
+                                        <td>Jul 22, 2013</td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                </div>
+            </div>
+            </div>
+            <!-- /Custom responsive table --> 
+
+
+
+            <div class="clearfix"></div>
+             <footer id="footer"> 
+                <div class="text-center clearfix">
+                    <p><small>&copy myxdashboard 2014, Admin dashboard framework base on bootstrap</small>
+                        <br /><br /> 
+                        <a href="#" class="btn btn-xs btn-circle btn-twitter"><i class="fa fa-twitter"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-facebook"><i class="fa fa-facebook"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-gplus"><i class="fa fa-google-plus"></i></a> 
+                    </p> 
+                </div> 
+            </footer>
+
+
+          </div><!-- /pad-wrapper -->
+    </div><!-- content --> 
+    <!-- /main container -->
+
+
+
+
+
+
+
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/theme.js"></script>
+
+    <script src="js/tables/jquery.peity.min.js"></script>
+    <script src="js/tables/peity-demo.js"></script>
+
+    <script src="js/tables/icheck.min.js"></script>
+
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MYX Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- theme -->
+    <link rel="stylesheet" type="text/css" href="css/theme/default.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements/profile.css" />
+ 
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="logo" /></a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs">
+                <input class="search" type="text" placeholder="Enter keywords" />
+            </li>
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="glyphicon glyphicon-bell"></i>
+                    <span class="count">5</span>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="notifications">
+                            <h3>You have 5 new notifications</h3>
+                            <a href="#" class="item">
+                                <i class="fa fa-bug"></i> Server Error Reports
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cloud-download"></i> Backup Completed
+                                <span class="time"><i class="fa fa-clock-o"></i> 18 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cogs"></i> <strong>System Updated</strong>
+                                <span class="time"><i class="fa fa-clock-o"></i> 20 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-code"></i> Code Error on Line 101
+                                <span class="time"><i class="fa fa-clock-o"></i> 49 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-refresh fa-spin"></i> Spinner Icon
+                                <span class="time"><i class="fa fa-clock-o"></i> 1 day.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="messages">
+                            <a href="#" class="item">
+                                <img src="images/user_2.png" class="display" alt="user" />
+                                <div class="name">Jhane Doe</div>
+                                <div class="msg">
+                                Quisque commodo massa sed ipsum porttitor facilisis.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 5 sec.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="images/user_3.png" class="display" alt="user" />
+                                <div class="name">Jack Daniel</div>
+                                <div class="msg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 37 mins.</span>
+                            </a>
+                            <a href="#" class="item last">
+                                <img src="images/user_4.png" class="display" alt="user" />
+                                <div class="name">Warm Sleepy</div>
+                                <div class="msg">
+                                Hello, how are you? i just though you were here, i'll see you tomorrow.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 2 days.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown"> 
+                <img class="img-circle" src="images/user_1.jpg" alt="avatar"> Erwin Agpasa <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <div class="profile-hidder">
+        <ul class="nav">
+                    <li class="nav-profile">
+                        <div class="image">
+                            <a href="javascript:;"><img src="images/user_1.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <a href="profile.html">Erwin Agpasa <b class="caret"></b></a>
+                            <small>UX-UI Designer</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <ul id="dashboard-menu">
+              <li>
+                <a href="index.html">
+                    <i class="fa fa-laptop"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+             <li>
+                <a href="inbox.html">
+                    <i class="fa fa-inbox"></i>
+                    <span>Inbox</span> <span class="badge pull-right label-success">10</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-table"></i>
+                    <span>Tables</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="table-static.html">Static Tables</a></li>
+                    <li><a href="table-data.html">Data Tables</a></li>
+                    
+                </ul>
+            </li>
+
+
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-signal"></i>
+                    <span>Charts</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="flot.html">Flot Chart</a></li>
+                    <li><a href="morris.html">Morris Chart</a></li>
+                    
+                </ul>
+            </li>
+
+            <li>
+                <a href="forms.html">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>Forms</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>              
+                <a class="dropdown-toggle" href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Other Pages</span> <b class="caret"></b>
+                </a>
+                <ul class="submenu">
+                     <li><a href="profile.html">Profile Page</a></li>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+            
+            
+            <li>
+                <a href="invoice.html">
+                    <i class="fa fa-file-text-o"></i>
+                    <span>Invoice</span>
+                </a>
+            </li>
+
+           
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+    <!-- main container -->
+    <div class="content">
+        <div id="pad-wrapper">
+            <h4>Profile</h4>
+            
+
+            <div class="col-md-4">
+            <div class="panel panel-default">
+            <div class="panel-heading"><strong>Details</strong></div>
+            <div class="panel-body no-padding">
+          
+                <div class="ibox-content no-padding border-left-right">
+                <img alt="image" class="img-responsive" src="images/profile_big.jpg">
+                </div>
+
+
+                <div class="ibox-content profile-content">
+                    <h3><strong>Jane Doe</strong></h3>
+                    <p><i class="fa fa-map-marker"></i> Laoag City, Philippines 2900</p>
+                    <h5><strong>About me</strong></h5>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                    veniam, quis nostrud exercitat.</p>
+
+                    <div class="row m-t-lg">
+                        <div class="stats">                        
+                            <div class="statis">
+                            <span class="bar" style="display: none;">5,3,9,6,5,9,7,3,5,2</span>
+                            <h5><strong>169</strong><br />Posts</h5>
+                            </div><!-- /statis -->
+                            
+                            <div class="statis">
+                            <span class="line" style="display: none;">5,3,9,6,5,9,7,3,5,2</span>
+                            <h5><strong>28</strong><br />Following</h5>
+                            </div> <!-- /statis -->
+                            
+                            <div class="statis">
+                            <span class="bar" style="display: none;">5,3,2,-1,-3,-2,2,3,5,2</span>
+                            <h5><strong>240</strong><br />Followers</h5>
+                            </div> <!-- /statis --> 
+                        </div>
+                    </div><!-- /row m-t-lg -->
+
+                    <div class="user-button">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-sm btn-block">
+                                <i class="fa fa-envelope"></i> Send Message</button>
+                            </div>
+                            
+                            <div class="col-md-6">
+                            <button type="button" class="btn btn-default btn-sm btn-block">
+                                <i class="fa fa-coffee"></i> Buy a coffee</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /profile-content -->
+
+
+            </div>
+            </div>
+            </div>
+
+
+
+
+           
+            <div class="col-md-8">
+            <div class="panel panel-default">
+            <div class="panel-heading"><strong>Activities</strong></div>
+            <div class="panel-body">
+                
+                <div class="ibox-content">
+                   <div class="feed-activity-list">
+
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a1.jpg">
+                            </a>
+                                       
+                            <div class="media-body ">
+                                <small class="pull-right text-navy">5m ago</small>
+                                <strong>Vaughn Oremortsac</strong> started following <strong>Oscar Adrian Acosta</strong>.<br>
+                                <small class="text-muted">Today 6:19 am - 12.04.2015</small>
+                                
+                                <div class="actions">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
+                                <a class="btn btn-xs btn-danger"><i class="fa fa-heart"></i> Love</a>
+                                </div>
+                            </div>
+                        </div><!-- feed-element-->
+
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a2.jpg">
+                            </a>
+                            
+                            <div class="media-body ">
+                                <small class="pull-right">30m ago</small>
+                                <strong>Spider Rodas</strong> purchased Ebook pro. <br>
+                                <small class="text-muted">Today 8:52 pm - 1.06.2015</small>
+                            </div>
+                        </div><!-- feed-element-->
+
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a3.jpg">
+                            </a>
+                            
+                            <div class="media-body ">
+                                <small class="pull-right">2h ago</small>
+                                <strong>Pollet Piedad</strong> posted message on <strong>Aifa Agpasa</strong> site. <br>
+                                <small class="text-muted">Today 2:10 pm - 12.06.2016</small>
+                                    <div class="well">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                    </div>
+                                    <div class="pull-right">
+                                        <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
+                                        <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
+                                        <a class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Message</a>
+                                    </div>
+                            </div>
+                        </div><!-- feed-element-->
+
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a4.jpg">
+                            </a>
+                            
+                            <div class="media-body ">
+                                <small class="pull-right">2h ago</small>
+                                <strong>Myan Francisco</strong> add 1 photo on <strong>Hector Sanqui</strong>. <br>
+                                <small class="text-muted">4 days ago at 5:29pm</small>
+                                    <div class="photos">
+                                        <a target="_blank" href="#">
+                                        <img alt="image" class="feed-photo" src="images/p1.jpg"></a>
+                                        <a target="_blank" href="#">
+                                        <img alt="image" class="feed-photo" src="images/p3.jpg"></a>
+                                    </div>
+                            </div>
+                        </div><!-- feed-element-->
+                        
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a5.jpg">
+                            </a>
+                            
+                            <div class="media-body ">
+                                <small class="pull-right text-navy">5h ago</small>
+                                <strong>Nahtanoj Odapsar</strong> started following <strong>Myan Francisco</strong>. <br>
+                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2016</small>
+                                <div class="actions">
+                                    <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
+                                    <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
+                                </div>
+                            </div>
+                        </div><!-- feed-element-->
+
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a6.jpg">
+                            </a>
+                            
+                            <div class="media-body ">
+                                <small class="pull-right">2h ago</small>
+                                <strong>Roselyn Rasay Distor</strong> posted message on <strong>Aifa Agpasa</strong> site. <br>
+                                <small class="text-muted">Yesterday 5:20 pm - 12.06.2016</small>
+                                <div class="well">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                </div>
+                                
+                                <div class="pull-right">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
+                                </div>
+                            </div>
+                        </div><!-- feed-element-->
+
+
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a7.jpg">
+                            </a>
+                            
+                            <div class="media-body ">
+                            <small class="pull-right">23h ago</small>
+                            <strong>Nhadine Lachica</strong> love <strong>Ace Ventura</strong>. <br>
+                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2017</small>
+                            </div>
+                        </div><!-- feed-element-->
+
+
+                        <div class="feed-element">
+                            <a href="#" class="pull-left">
+                            <img alt="image" class="img-circle" src="images/a8.jpg">
+                            </a>
+                            
+                            <div class="media-body ">
+                                <small class="pull-right">46h ago</small>
+                                <strong>Jonas Matias</strong> started following <strong>Luoie Yasay</strong>. <br>
+                                <small class="text-muted">3 days ago at 7:58 pm - 5.06.2017</small>
+                            </div>
+                        </div><!-- feed-element-->
+                    </div><!--feed-activity-list-->
+
+
+                    <button class="btn btn-cprimary btn-block ">
+                        <i class="fa fa-arrow-down"></i> Show More
+                    </button>
+
+                </div><!-- feed-activity-list -->
+            </div><!--ibox-content -->
+
+
+            </div>
+            </div>
+            </div>
+
+
+
+
+
+            <div class="clearfix"></div>
+             <footer id="footer"> 
+                <div class="text-center clearfix">
+                    <p><small>&copy myxdashboard 2014, Admin dashboard framework base on bootstrap</small>
+                        <br /><br /> 
+                        <a href="#" class="btn btn-xs btn-circle btn-twitter"><i class="fa fa-twitter"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-facebook"><i class="fa fa-facebook"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-gplus"><i class="fa fa-google-plus"></i></a> 
+                    </p> 
+                </div> 
+            </footer>
+
+
+          </div><!-- /pad-wrapper -->
+    </div><!-- content --> 
+    <!-- /main container -->
+
+
+
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/theme.js"></script>
+
+   <script src="js/tables/jquery.peity.min.js"></script>
+    <script src="js/tables/peity-demo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MYX Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- theme -->
+    <link rel="stylesheet" type="text/css" href="css/theme/default.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements/flot.css" />
+    
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="logo" /></a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs">
+                <input class="search" type="text" placeholder="Enter keywords" />
+            </li>
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="glyphicon glyphicon-bell"></i>
+                    <span class="count">5</span>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="notifications">
+                            <h3>You have 5 new notifications</h3>
+                            <a href="#" class="item">
+                                <i class="fa fa-bug"></i> Server Error Reports
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cloud-download"></i> Backup Completed
+                                <span class="time"><i class="fa fa-clock-o"></i> 18 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-cogs"></i> <strong>System Updated</strong>
+                                <span class="time"><i class="fa fa-clock-o"></i> 20 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-code"></i> Code Error on Line 101
+                                <span class="time"><i class="fa fa-clock-o"></i> 49 min.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <i class="fa fa-refresh fa-spin"></i> Spinner Icon
+                                <span class="time"><i class="fa fa-clock-o"></i> 1 day.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="notification-dropdown hidden-xs">
+                <a href="#" class="trigger">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <div class="pop-dialog">
+                    <div class="pointer right">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <div class="body">
+                        <a href="#" class="close-icon"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                        <div class="messages">
+                            <a href="#" class="item">
+                                <img src="images/user_2.png" class="display" alt="user" />
+                                <div class="name">Jhane Doe</div>
+                                <div class="msg">
+                                Quisque commodo massa sed ipsum porttitor facilisis.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 5 sec.</span>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="images/user_3.png" class="display" alt="user" />
+                                <div class="name">Jack Daniel</div>
+                                <div class="msg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 37 mins.</span>
+                            </a>
+                            <a href="#" class="item last">
+                                <img src="images/user_4.png" class="display" alt="user" />
+                                <div class="name">Warm Sleepy</div>
+                                <div class="msg">
+                                Hello, how are you? i just though you were here, i'll see you tomorrow.
+                                </div>
+                                <span class="time"><i class="fa fa-clock-o"></i> 2 days.</span>
+                            </a>
+                            <div class="footer">
+                                <a href="#" class="logout">View all messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown"> 
+                <img class="img-circle" src="images/user_1.jpg" alt="avatar"> Erwin Agpasa <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <div class="profile-hidder">
+        <ul class="nav">
+                    <li class="nav-profile">
+                        <div class="image">
+                            <a href="javascript:;"><img src="images/user_1.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <a href="profile.html">Erwin Agpasa <b class="caret"></b></a>
+                            <small>UX-UI Designer</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <ul id="dashboard-menu">
+              <li>
+                <a href="index.html">
+                    <i class="fa fa-laptop"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>    
+            <li>
+                <a href="inbox.html">
+                    <i class="fa fa-inbox"></i>
+                    <span>Inbox</span> <span class="badge pull-right label-success">10</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-table"></i>
+                    <span>Tables</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="table-static.html">Static Tables</a></li>
+                    <li><a href="table-data.html">Data Tables</a></li>
+                    
+                </ul>
+            </li>
+
+            <li class="active">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+               <a class="dropdown-toggle" href="#">              
+                    <i class="fa fa-signal"></i>
+                    <span>Charts</span> <b class="caret"></b>
+                </a>
+                 <ul class="submenu">
+                    <li><a href="flot.html">Flot Chart</a></li>
+                    <li><a href="morris.html">Morris Chart</a></li>
+                    
+                </ul>
+            </li>
+
+            <li>
+                <a href="forms.html">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>Forms</span>
+                </a>
+            </li>
+            
+             <li>                
+                <a class="dropdown-toggle" href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Other Pages</span> <b class="caret"></b>
+                </a>
+                <ul class="submenu">
+                    <li><a href="profile.html">Profile Page</a></li>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="invoice.html">
+                    <i class="fa fa-file-text-o"></i>
+                    <span>Invoice</span>
+                </a>
+            </li>
+
+           
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+    <!-- main container -->
+    <div class="content">
+        <div id="pad-wrapper">
+            <h4>Flot chart</h4>
+            
+            <!-- Live Flot -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Real-time update</div>
+                <div class="panel-body">
+                    <div class="flot-container">
+                        <div id="placeholder" class="flot-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- /Live Flot -->
+
+
+            <!-- Multiple Flot -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Page view</div>
+                <div class="panel-body">
+                    <div id="pageview">
+                        <div id="flotcontainer" class="flot-multi"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- /Multiple Flot -->
+
+
+
+            <!-- Math Flot -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Math Sample
+                </div>
+                
+                <div class="panel-body">
+                    <div class="flot-container">
+                    <div id="interactive" class="flot-placeholder"></div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+            <!-- /Math Flot -->
+
+
+            <!-- Bar Flot -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Bar Chart
+                </div>                
+                <div class="panel-body">
+                    <div id="legendPlaceholder"></div>
+                    <div id="barflotcontainer"></div>
+                </div>
+            </div>
+            </div>
+            <!-- /Bar Flot -->
+
+
+
+            <!-- Pie Flot -->
+            <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Pie Chart
+                </div>                
+                <div class="panel-body">
+                    <div id="legendPlaceholder"></div>
+                    <div id="pie-flotcontainer"></div>
+                </div>
+            </div>
+            </div>
+            <!-- /Pie Flot -->
+
+
+
+
+
+
+
+
+
+
+            <div class="clearfix"></div>
+             <footer id="footer"> 
+                <div class="text-center clearfix">
+                    <p><small>&copy myxdashboard 2014, Admin dashboard framework base on bootstrap</small>
+                        <br /><br /> 
+                        <a href="#" class="btn btn-xs btn-circle btn-twitter"><i class="fa fa-twitter"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-facebook"><i class="fa fa-facebook"></i></a> 
+                        <a href="#" class="btn btn-xs btn-circle btn-gplus"><i class="fa fa-google-plus"></i></a> 
+                    </p> 
+                </div> 
+            </footer>
+
+
+          </div><!-- /pad-wrapper -->
+    </div><!-- content --> 
+    <!-- /main container -->
+
+
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/theme.js"></script>
+
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/excanvas.min.js"></script>
+    <script src="js/flot/jquery.flot.pie.js"></script>
+
+    <script type="text/javascript">
+    //LIVE FLOT
+    $(function() {
+        var data = [],
+            totalPoints = 300;
+
+        function getRandomData() {
+
+            if (data.length > 0)
+                data = data.slice(1);
+
+            while (data.length < totalPoints) {
+
+                var prev = data.length > 0 ? data[data.length - 1] : 50,
+                    y = prev + Math.random() * 10 - 5;
+
+                if (y < 0) {
+                    y = 0;
+                } else if (y > 100) {
+                    y = 100;
+                }
+
+                data.push(y);
+            }
+
+            var res = [];
+            for (var i = 0; i < data.length; ++i) {
+                res.push([i, data[i]])
+            }
+
+            return res;
+        }
+
+        // Set up the control widget
+        var updateInterval = 30;
+        $("#updateInterval").val(updateInterval).change(function () {
+            var v = $(this).val();
+            if (v && !isNaN(+v)) {
+                updateInterval = +v;
+                if (updateInterval < 1) {
+                    updateInterval = 1;
+                } else if (updateInterval > 2000) {
+                    updateInterval = 2000;
+                }
+                $(this).val("" + updateInterval);
+            }
+        });
+
+        var plot = $.plot("#placeholder", [ getRandomData() ], {
+            series: {
+                shadowSize: 0   // Drawing is faster without shadows
+            },
+            yaxis: {
+                min: 0,
+                max: 100
+            },
+            xaxis: {
+                show: false
+            }
+        });
+
+        function update() {
+
+            plot.setData([getRandomData()]);
+            plot.draw();
+            setTimeout(update, updateInterval);
+        }
+
+        update();
+        
+    });
+
+
+
+    //PAGE VIEW FLOT
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var data9_1 = [
+        [1, 1530], [2, 6580], [3, 1980],[4, 6630], [5, 8010], [6, 10800],
+        [7, 3530], [8, 7490], [9, 5230],[10, 2580], [11, 6880], [12, 3640]
+    ]; 
+    var data9_2 = [
+        [1, 530], [2, 9650], [3, 180],[4, 630], [5, 5010], [6, 800],
+        [7, 330], [8, 790], [9, 8230],[10, 2950], [11, 680], [12, 3640]
+    ];
+ 
+    var previousPoint = null;
+ 
+    $.fn.UseTooltip = function () {
+        $(this).bind("plothover", function (event, pos, item) {                         
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+     
+                    $("#tooltip").remove();
+                     
+                    var x = item.datapoint[0];
+                    var y = item.datapoint[1];                
+     
+                    console.log(x+","+y)
+     
+                    showTooltip(item.pageX, item.pageY,
+                      months[x-  1] + "<br/>" + "<strong>" + y + "</strong> (" + item.series.label + ")");
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;
+            }
+        });
+    };
+          
+ 
+        function showTooltip(x, y, contents) {
+            $('<div id="tooltip">' + contents + '</div>').css({
+                position: 'absolute',
+                display: 'none',
+                top: y + 5,
+                left: x + 20,
+                border: '1px solid #4572A7',
+                padding: '2px',     
+                size: '10', 
+                'color':'#fff',  
+                'border-radius': '6px 6px 6px 6px',
+                'background-color': '#333',
+                opacity: 0.80
+            }).appendTo("body").fadeIn(200);
+        }
+         
+        var plot;
+         
+        $(function () {        
+            plot = $.plot($("#pageview #flotcontainer"),
+                [{
+                      data: data9_1,label: "Unique Visits",lines: { show: true},points: { show: true }
+
+                    },
+                    {
+                      data: data9_2,label: "Page View",lines: { show: true},points: { show: true }
+
+                    }
+                ],{            
+                    grid: {
+                        hoverable: true, 
+                        clickable: false, 
+                        //mouseActiveRadius: 30,
+                        //backgroundColor: { colors: ["#D1D1D1", "#7A7A7A"] }
+                    },
+                    xaxis:{
+                           ticks: [
+                                    [1, "Jan"], [2, "Feb"], [3, "Mar"], [4, "Apr"], [5, "May"], [6, "Jun"],
+                                    [7, "Jul"], [8, "Aug"], [9, "Sep"], [10, "Oct"], [11, "Nov"], [12, "Dec"]
+                           ]
+                    }     
+                }
+            );
+         
+            $("#pageview #flotcontainer").UseTooltip();
+        });
+
+
+
+
+
+
+        //MATH
+        $(function() {
+
+        var sin = [],
+            cos = [];
+
+        for (var i = 0; i < 14; i += 0.5) {
+            sin.push([i, Math.sin(i)]);
+            cos.push([i, Math.cos(i)]);
+        }
+
+        var plot = $.plot("#interactive", [
+            { data: sin, label: "sin(x)"},
+            { data: cos, label: "cos(x)"}
+        ], {
+            series: {
+                lines: {
+                    show: true
+                },
+                points: {
+                    show: true
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true
+            },
+            yaxis: {
+                min: -1.2,
+                max: 1.2
+            }
+        });
+
+        $("<div id='tooltip2'></div>").css({
+            position: "absolute",
+            display: "none",
+            border: "1px solid #fdd",
+            padding: "2px",
+            "background-color": "#fee",
+            opacity: 0.80
+        }).appendTo("body");
+
+        $("#interactive").bind("plothover", function (event, pos, item) {
+
+            if ($("#enablePosition:checked").length > 0) {
+                var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
+                $("#hoverdata").text(str);
+            }
+
+                if (item) {
+                    var x = item.datapoint[0].toFixed(2),
+                        y = item.datapoint[1].toFixed(2);
+
+                    $("#tooltip2").html(item.series.label + " of " + x + " = " + y)
+                        .css({top: item.pageY+5, left: item.pageX+5})
+                        .fadeIn(200);
+            }
+        });
+
+        $("#interactive").bind("plotclick", function (event, pos, item) {
+            if (item) {
+                $("#clickdata").text(" - click point " + item.dataIndex + " in " + item.series.label);
+                plot.highlight(item.series, item.datapoint);
+            }
+        });
+
+        // Add the Flot version string to the footer
+        //$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+    });
+
+
+
+
+
+    //BAR FLOT
+    $(function () {    
+        var data12 = GenerateSeries(0);
+         
+        function GenerateSeries(added){
+            var data = [];
+            var start = 100 + added;
+            var end = 200 + added;
+     
+            for(i=1;i<=20;i++){        
+                var d = Math.floor(Math.random() * (end - start + 1) + start);        
+                data.push([i, d]);
+                start++;
+                end++;
+            }
+     
+            return data;
+        }
+     
+        var options = {
+                series:{
+                    bars:{show: true}
+                },
+                bars:{
+                      barWidth:0.8,
+                       lineWidth: 1 // in pixels
+                },            
+                grid:{
+                    backgroundColor: { colors: ["#ffffff", "#fff"] }
+                }
+        };
+     
+        $.plot($("#barflotcontainer"), [data12], options);  
+         
+    });
+
+
+    //PIE CHART
+    $(function () { 
+        var data = [
+            {label: "data1", data:10},
+            {label: "data2", data: 20},
+            {label: "data3", data: 30},
+            {label: "data4", data: 40},
+            {label: "data5", data: 50},
+            {label: "data6", data: 60},
+            {label: "data7", data: 70}
+        ];
+     
+        var options = {
+                series: {
+                    pie: {show: true}
+                        },
+                legend: {
+                    show: false
+                }
+             };
+     
+        $.plot($("#pie-flotcontainer"), data, options);  
+    });
+    </script>
+
+</body>
+</html>
