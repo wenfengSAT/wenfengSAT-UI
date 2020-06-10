@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Dashboard // Opacity Admin</title>
+
+	<!-- Default Styles (DO NOT TOUCH) -->
+	<link rel="stylesheet" href="lib/css/font-awesome.min.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/css/fonts.css">
+	<link rel="stylesheet" href="lib/css/opacity-admin.css"/>
+
+	<!-- Adjustable Styles -->
+	<link rel="stylesheet" href="lib/css/perfect-scrollbar.min.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<script src="lib/js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	 <!-- SETTINGS -->
+  <div class="btn-group" id="settings">
+   <a class="btn btn-info" href="#" onclick="$('#settings .dropdown-menu').toggle();"><span class="fa fa-cogs"></span></a>
+   <div class="dropdown-menu">
+    <div class="title">Backgrounds</div>
+    <div class="main main-nr">
+     <ul class="bgs">
+      <li><a href="#" onclick="setBG(1);"><img src="lib/img/bg1.jpg"></a></li>
+      <li><a href="#" onclick="setBG(2);"><img src="lib/img/bg2.jpg"></a></li>
+      <li><a href="#" onclick="setBG(3);"><img src="lib/img/bg3.jpg"></a></li>
+     </ul>
+    </div>
+    
+   </div>
+  </div>
+
+	<div class="contain">
+
+		<div class="left hidden-xs">
+			<div class="sidebar">
+				<input class="typeahead" type="text" placeholder=""><span id="search-icon" class="glyphicon glyphicon-search"></span>
+				<div class="accordion">
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="index.html"><span class="fa fa-dashboard"></span><span class="full">Dashboard</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="composition.html"><span class="fa fa-font"></span><span class="full">Composition</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="charts.html"><span class="fa fa-bar-chart-o"></span><span class="full">Charts</span><span class="label label-primary">8</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="widgets.html"><span class="fa fa-list-alt"></span><span class="full">Widgets</span></a></div></div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-ui"><span class="icon icon-credit-card"></span><span class="full">UI Elements</span><span class="caret"></span></a></div>
+					 <div id="c-ui" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="general.html" class="sbtn">General</a>
+					  <a href="buttons.html" class="sbtn">Buttons</a>
+					  <a href="notifications.html" class="sbtn">Notifications</a>
+					  <a href="icons.html" class="sbtn">Icons</a> 
+					 </div></div>
+					</div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-forms"><span class="fa fa-pencil-square-o"></span><span class="full">Forms</span><span class="caret"></span></a></div>
+					 <div id="c-forms" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="form_elements.html" class="sbtn">Form Elements</a>
+					  <a href="form_example.html" class="sbtn">Form Examples</a>
+					  <a href="form_validation.html" class="sbtn">Form Validation</a>
+					 </div></div>
+					</div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-tables"><span class="fa fa-table"></span><span class="full">Tables</span><span class="caret"></span></a></div>
+					 <div id="c-tables" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="table_static.html" class="sbtn"><span class="icon icon-th-large"></span>Static Tables</a>
+					  <a href="table_datatables.html" class="sbtn"><span class="fa fa-table"></span>jQuery Datatables</a> 
+					 </div></div>
+					</div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="gallery.html"><span class="fa fa-picture-o"></span><span class="full">Gallery</span><span class="label label-success">7</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="storyboard.html"><span class="fa fa-tasks"></span><span class="full">Storyboard</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="calendar.html"><span class="fa fa-calendar"></span><span class="full">Calendar</span><span class="label label-danger">5</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="maps.html"><span class="fa fa-map-marker"></span><span class="full">Maps</span></a></div></div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-business"><span class="fa fa-building-o"></span><span class="full">Business</span><span class="caret"></span></a></div>
+					 <div id="c-business" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="pricing.html" class="sbtn">Pricing</a>
+					  <a href="invoice.html" class="sbtn">Invoice</a>
+					 </div></div>
+					</div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-pages"><span class="fa fa-file-o"></span><span class="full">Pages</span><span class="caret"></span></a></div>
+					 <div id="c-pages" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="login.html" class="sbtn">Login</a>
+					  <a href="support.html" class="sbtn">Support</a>
+					  <a href="grid.html" class="sbtn">Grid</a>
+					  <a href="404.html" class="sbtn">404 Error</a> 
+					 </div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="right">
+
+			<div class="col-md-12">
+				<div class="logo"><img id="logo" src="lib/img/logo3.png"></div>
+				<div class="logoxs"><img id="logo" src="lib/img/logo_sm.png"></div>
+				<div class="nav">
+					<div class="hov">
+						<div class="btn-group">
+							<a class="con" href="" data-toggle="dropdown"><span class="fa fa-bell"></span></a>
+							<div class="dropdown-menu pull-right" role="menu">
+								<div class="drop-item">
+									<div class="drop-icon font-danger"><span class="fa fa-tachometer"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Phasellus tincidunt tincidunt velit shal...</div>
+										<div class="drop-description">Bandwidth</div>
+										<div class="drop-time">1/31 1:37 PM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-success"><span class="fa fa-shopping-cart"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Ut tempus eros massa ut dolor, aenan...</div>
+										<div class="drop-description">Purchase</div>
+										<div class="drop-time">1/31 11:24 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-warning"><span class="fa fa-laptop"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Aliquet fringilla sem. Suspendisse velit...</div>
+										<div class="drop-description">Server</div>
+										<div class="drop-time">1/31 6:07 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-info"><span class="fa fa-info-circle"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Dolor ut eros velite sem shal tempetus...</div>
+										<div class="drop-description">Statistics</div>
+										<div class="drop-time">1/30 9:46 PM</div>
+									</div>
+								</div>
+								<div class="drop-item drop-footer">
+									<div class="drop-info">
+										<div class="drop-description">See all of the current alerts...</div>
+										<div class="drop-time"><span class="fa fa-angle-double-right"></span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-group">
+							<a class="con" href="" data-toggle="dropdown"><span class="fa fa-envelope"></span></a>
+							<div class="dropdown-menu pull-right" role="menu">
+								<div class="drop-item">
+									<div class="drop-icon font-unread"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Phasellus tincidunt tincidunt velit shal...</div>
+										<div class="drop-description">Angela Johnson</div>
+										<div class="drop-time">1/31 1:37 PM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-unread"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Ut tempus eros massa ut dolor, aenan...</div>
+										<div class="drop-description">Steve Parsons</div>
+										<div class="drop-time">1/31 11:24 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-read"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Aliquet fringilla sem. Suspendisse velit...</div>
+										<div class="drop-description">Sam Wise</div>
+										<div class="drop-time">1/31 6:07 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-read"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Dolor ut eros velite sem shal tempetus...</div>
+										<div class="drop-description">Tim Bolton</div>
+										<div class="drop-time">1/30 9:46 PM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-read"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Sitel velit shal sem ut dolor massa tule...</div>
+										<div class="drop-description">Tim Bolton</div>
+										<div class="drop-time">1/30 9:46 PM</div>
+									</div>
+								</div>
+								<div class="drop-item drop-footer">
+									<div class="drop-info">
+										<div class="drop-description">See all of your messages...</div>
+										<div class="drop-time"><span class="fa fa-angle-double-right"></span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-group">
+							<a class="con" href="" data-toggle="dropdown"><span class="fa fa-user"></span></a>
+							<ul class="dropdown-menu pull-right" role="menu">
+								<li class="profile">
+									<div class="pic"><img src="lib/img/avatars/2.png"></div>
+									<div class="profile-info">
+										Jeffrey
+										<br><a href="#">Profile</a> - <a href="#">Settings</a>
+									</div>
+								</li>
+								<li class="linked"><a href="#"><span class="fa fa-envelope-o"></span>Messages</a></li>
+								<li class="linked"><a href="#"><span class="fa fa-bell-o"></span>Notifications</a></li>
+								<li class="linked"><a href="#"><span class="fa fa-calendar"></span>Tasks/Events</a></li>
+								<li class="linked bottom"><a href="#"><span class="fa fa-reply"></span>Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+    
+			<!-- BEGIN PAGE CONTENT -->
+			<div class="content">
+
+				<!-- BREADCRUMBS -->
+				<div id="bread" class="col-md-12">
+					<div class="crumbs">
+						<ol class="breadcrumb">
+							<li><i class="fa fa-home"></i> <a href="#">Home</a></li>
+							<li class="active">Dashboard</li>
+						</ol>
+					</div>
+				</div>
+				<div id="response" class="col-md-12">
+					<div class="rep">
+						<div style="float:right;" class="hov">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown"><span class="fa fa-bars"></span> Navigation <span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right" role="menu">
+									<li class="linked"><a href="index.html"><span class="fa fa-dashboard"></span><span class="full">Dashboard</span></a></li>
+									<li class="linked"><a href="composition.html"><span class="fa fa-font"></span><span class="full">Composition</span></a></li>
+									<li class="linked"><a href="charts.html"><span class="fa fa-bar-chart-o"></span><span class="full">Charts</span></a></li>
+									<li class="linked"><a href="widgets.html"><span class="fa fa-list-alt"></span><span class="full">Widgets</span></a></li>
+									<li class="linked-head"><span class="icon icon-credit-card"></span>UI Elements</li>
+									<li class="linked"><a href="general.html">General</a></li>
+									<li class="linked"><a href="buttons.html">Buttons</a></li>
+									<li class="linked"><a href="notifications.html">Notifications</a></li>
+									<li class="linked top"><a href="icons.html">Icons</a></li> 
+									<li class="linked-head"><span class="fa fa-pencil-square-o"></span>Forms</li>
+									<li class="linked"><a href="form_elements.html">Form Elements</a></li>
+									<li class="linked"><a href="form_example.html">Form Examples</a></li>
+									<li class="linked top"><a href="form_validation.html">Form Validation</a></li>
+									<li class="linked-head"><span class="fa fa-table"></span>Tables</li>
+									<li class="linked"><a href="table_static.html"><span class="icon icon-th-large"></span>Static Tables</a></li>
+									<li class="linked"><a href="table_datatables.html"><span class="fa fa-table"></span>jQuery Datatables</a></li> 
+									<li class="linked"><a href="gallery.html"><span class="fa fa-picture-o"></span><span class="full">Gallery</span></a></li>
+									<li class="linked"><a href="storyboard.html"><span class="fa fa-tasks"></span><span class="full">Storyboard</span></a></li>
+									<li class="linked"><a href="calendar.html"><span class="fa fa-calendar"></span><span class="full">Calendar</span></a></li>
+									<li class="linked top"><a href="maps.html"><span class="fa fa-map-marker"></span><span class="full">Maps</span></a></li>
+									<li class="linked-head"><span class="fa fa-building-o"></span>Business</li>
+									<li class="linked"><a href="pricing.html">Pricing</a></li>
+									<li class="linked top"><a href="invoice.html">Invoice</a></li>
+									<li class="linked-head"><span class="fa fa-file-o"></span>Pages</li>
+									<li class="linked"><a href="login.html">Login</a></li>
+									<li class="linked"><a href="support.html">Support</a></li>
+									<li class="linked"><a href="grid.html">Grid</a></li>
+									<li class="linked"><a href="404.html">404 Error</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- FIRST ROW FLOT CHART & STATS -->
+				<div class="tbl">
+					<div class="col-md-12">
+						<div class="wdgt wdgt-primary">
+							<div class="wdgt-body wdgt-flot">
+								<div id="placeholder" class="demo-placeholder" style="height:412px;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="wdgt wdgt-success">
+							<div class="wdgt-body wdgt-stats tbl">
+								<div class="col-sm-3"><i class="fa fa-home"></i></div>
+								<div class="col-sm-9">
+									<div class="stats-val">10,234</div>
+									<div class="stats-title">WEBSITE HITS</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="wdgt wdgt-primary">
+							<div class="wdgt-body wdgt-stats tbl">
+								<div class="col-sm-3"><i class="fa fa-user"></i></div>
+								<div class="col-sm-9">
+									<div class="stats-val">1,234</div>
+									<div class="stats-title">UNIQUE USERS</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="wdgt wdgt-warning">
+							<div class="wdgt-body wdgt-stats tbl">
+								<div class="col-sm-3"><i class="fa fa-gift"></i></div>
+								<div class="col-sm-9">
+									<div class="stats-val">$1,899</div>
+									<div class="stats-title">SHOP REVENUE</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tbl">
+
+					<!-- DASHBOARD TABLE EXAMPLE -->
+					<div class="col-md-7">
+						<div class="wdgt wdgt-primary" hide-btn="true">
+							<div class="wdgt-header"><i class="fa fa-group"></i>Users</div>
+							<div class="wdgt-body wdgt-table">
+
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Status</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Jim Stevens</td>
+											<td><span class="label label-warning">CC Out of Date</span></td>
+											<td>
+												<button type="button" class="btn btn-primary btn-table"><i class="icon icon-camera"></i></button>
+												<button type="button" class="btn btn-info btn-table"><i class="icon icon-bookmark"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Mark Matthew</td>
+											<td><span class="label label-success">Premium User</span></td>
+											<td>
+												<button type="button" class="btn btn-primary btn-table"><i class="icon icon-camera"></i></button>
+												<button type="button" class="btn btn-info btn-table"><i class="icon icon-bookmark"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Gus Johanson</td>
+											<td><span class="label label-info">Basic User</span></td>
+											<td>
+												<button type="button" class="btn btn-primary btn-table"><i class="icon icon-camera"></i></button>
+												<button type="button" class="btn btn-info btn-table"><i class="icon icon-bookmark"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Greg McGinty</td>
+											<td><span class="label label-info">Basic User</span></td>
+											<td>
+												<button type="button" class="btn btn-primary btn-table"><i class="icon icon-camera"></i></button>
+												<button type="button" class="btn btn-info btn-table"><i class="icon icon-bookmark"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Art Fredericks</td>
+											<td><span class="label label-success">Premium User</span></td>
+											<td>
+												<button type="button" class="btn btn-primary btn-table"><i class="icon icon-camera"></i></button>
+												<button type="button" class="btn btn-info btn-table"><i class="icon icon-bookmark"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Frank Bellamy</td>
+											<td><span class="label label-warning">CC Out of Date</span></td>
+											<td>
+												<button type="button" class="btn btn-primary btn-table"><i class="icon icon-camera"></i></button>
+												<button type="button" class="btn btn-info btn-table"><i class="icon icon-bookmark"></i></button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+	        
+							</div>
+						</div>
+					</div>
+
+					<!-- DASHBOARD TABS EXAMPLE -->
+					<div class="col-md-5">
+						<div id="tabs" class="wdgt wdgt-success">
+							<div class="wdgt-header">
+								<i class="fa fa-info"></i>Info
+								<ul class="tabs">
+									<li><a href="#tabs-1">Feed</a></li>
+									<li><a href="#tabs-2">Users</a></li>
+									<li><a href="#tabs-3">Messages</a></li>
+								</ul>
+							</div>
+							<div class="wdgt-body wdgt-tabs wdgt-scroll" style="min-height:275px;">
+								<div class="wdgt-tab" id="tabs-1">
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-twitter"></i></div>
+										<div class="feed-info">
+											<h4>@john_appleseed</h4>
+											<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-facebook"></i></div>
+										<div class="feed-info">
+											<h4>@steve_smith</h4>
+											<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-twitter"></i></div>
+										<div class="feed-info">
+											<h4>@bill_brown</h4>
+											<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-facebook"></i></div>
+										<div class="feed-info">
+											<h4>@barry_lee</h4>
+											<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-twitter"></i></div>
+										<div class="feed-info">
+											<h4>@tom_wilson</h4>
+											<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-facebook"></i></div>
+										<div class="feed-info">
+											<h4>@fred_martin</h4>
+											<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+										</div>
+									</div>
+								</div>
+								<div class="wdgt-tab" id="tabs-2">
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user fa-unread"></i></div>
+										<div class="feed-info">
+											<h4>Josh Patel <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Created a new graph... </p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user fa-unread"></i></div>
+										<div class="feed-info">
+											<h4>Amber Taylor <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Logged in... </p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user"></i></div>
+										<div class="feed-info">
+											<h4>Sarah Campbell <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Changed user permissions... </p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user"></i></div>
+										<div class="feed-info">
+											<h4>Holly Williams <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Setup a calendar appointment... </p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user"></i></div>
+										<div class="feed-info">
+											<h4>Mike Thompson <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Updated the database for performance... </p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user"></i></div>
+										<div class="feed-info">
+											<h4>Will Jones <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Created a new login form... </p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user"></i></div>
+										<div class="feed-info">
+											<h4>Carl Jackson <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Generated a new report... </p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-user"></i></div>
+										<div class="feed-info">
+											<h4>Brad Thomas <small>(1/1/1234 1:11 PM)</small></h4>
+											<p>Storyboard ready for review...</p>
+										</div>
+									</div>
+								</div>
+								<div class="wdgt-tab" id="tabs-3">
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope fa-unread"></i></div>
+										<div class="feed-info">
+											<h4>Josh Patel</h4>
+											<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope fa-unread"></i></div>
+										<div class="feed-info">
+											<h4>Amber Taylor</h4>
+											<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+										<div class="feed-info">
+											<h4>Sarah Campbell</h4>
+											<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+										<div class="feed-info">
+											<h4>Holly Williams</h4>
+											<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+										<div class="feed-info">
+											<h4>Mike Thompson</h4>
+											<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+										<div class="feed-info">
+											<h4>Will Jones</h4>
+											<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+										<div class="feed-info">
+											<h4>Carl Jackson</h4>
+											<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+										</div>
+									</div>
+									<div class="wdgt-feed">
+										<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+										<div class="feed-info">
+											<h4>Brad Thomas</h4>
+											<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	     
+				<div class="tbl">
+
+					<!-- DASHBOARD PIE CHART EXAMPLE -->
+					<div class="col-md-5">
+						<div class="wdgt wdgt-dark" hide-btn="true">
+							<div class="wdgt-header"><i class="fa fa-desktop"></i>Browsers</div>
+							<div class="wdgt-body">
+								<div id="pieholder" class="demo-placeholder" style="height:312px;"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- DASHBOARD CHATBOX EXAMPLE -->
+					<div class="col-md-7">
+						<div id="tabs" class="wdgt wdgt-info" hide-btn="true">
+							<div class="wdgt-header"><i class="fa fa-comment-o"></i>Chat</div>
+							<div class="wdgt-body wdgt-messages">
+								<div class="wdgt-chat">
+									<div class="avatar"><img src="lib/img/avatars/2.png" width="65" height="75"></div>
+									<div class="msg">
+										<div class="msg-window msg-left">
+											<h4>Brad Thomas</h4>
+											Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...
+										</div>
+									</div>
+								</div>
+								<div class="wdgt-chat">
+									<div class="msg">
+										<div class="msg-window msg-right">
+											<h4>Steve McQueen</h4>
+											Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla. Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed....
+										</div>
+									</div>
+									<div class="avatar"><img src="lib/img/avatars/5.png" width="65" height="75"></div>
+								</div>
+								<div class="wdgt-chat">
+									<div class="msg">
+										<div class="msg-window msg-right">
+											<h4>Steve McQueen</h4>
+											Phasellus tincidunt tincidunt velit...
+										</div>
+									</div>
+									<div class="avatar"><img src="lib/img/avatars/5.png" width="65" height="75"></div>
+								</div>
+								<div class="wdgt-chat">
+									<div class="avatar"><img src="lib/img/avatars/2.png" width="65" height="75"></div>
+									<div class="msg">
+										<div class="msg-window msg-left">
+											<h4>Brad Thomas</h4>
+											Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...
+										</div>
+									</div>
+								</div>
+								<div class="wdgt-chat">
+									<div class="msg">
+										<div class="msg-window msg-right">
+											<h4>Steve McQueen</h4>
+											Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla. Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed....
+										</div>
+									</div>
+									<div class="avatar"><img src="lib/img/avatars/5.png" width="65" height="75"></div>
+								</div>
+							</div>
+							<div class="wdgt-footer tbl" style="padding-left:0px; padding-right:0px;">
+								<div class="col-xs-8 align-left"><input type="email" class="form-control" id="email" value="Add Message..."></div>
+								<div class="col-xs-4 align-right"><a href="#" class="btn btn-info" style="width:100% !important;">Send</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+ 			</div>
+ 			<!-- END PAGE CONTENT -->
+
+		</div>
+
+	</div>
+
+	<!-- Default JS (DO NOT TOUCH) -->
+	<script src="lib/js/jquery.min.js"></script>
+	<script src="lib/js/jquery-ui.min.js"></script>
+	<script src="lib/js/bootstrap.min.js"></script>
+	<script src="lib/js/opacity.widgets.min.js"></script>
+	<script src="lib/js/hogan.min.js"></script>
+	<script src="lib/js/typeahead.min.js"></script>
+	<script src="lib/js/typeahead-example.js"></script>
+ 
+	<!-- Adjustable JS -->
+	<script src="lib/js/perfect-scrollbar.min.js"></script>
+	<script src="lib/js/opacity.switches.js"></script>
+	<script src="lib/js/flot/jquery.flot.min.js"></script>
+	<script src="lib/js/flot/jquery.flot.pie.min.js"></script>
+	<script src="lib/js/flot/jquery.flot.selection.min.js"></script>
+	<script>
+
+		$(document).ready(function() {
+			$('.switch4').change(function () {
+				if($(this).val() == 0){
+					$('.contain').addClass('round');
+				}else{
+					$('.contain').removeClass('round');
+				}
+			});
+
+			$('.switch5').change(function () {
+				var temp = $(".left").html();
+				if($(this).val() == 0){
+					$(".left").remove();
+					$('.right').after('<div class="left hidden-xs">'+temp+'</div>');
+				}else{
+					$(".left").remove();
+					$('.right').before('<div class="left hidden-xs">'+temp+'</div>');
+				}
+			});
+		});
+
+		function setBG(which){
+			$('body').css('background-image', 'url(lib/img/bg'+which+'.jpg)');
+		}
+
+		$(document).ready(function() {
+			$('a[href="index.html"]').addClass('active').parent().parent().addClass('in');
+			flotSelectionChart(); 
+			flotPieChart();
+			$("#tabs").tabs();
+			$('.wdgt-tab, .wdgt-messages').perfectScrollbar({suppressScrollX:true});
+			$('.wdgt-messages').scrollTop(400);
+		});
+
+		$( window ).resize(function() {
+			flotSelectionChart();
+			flotPieChart();
+		});
+
+		function flotSelectionChart(){
+			var data = [{
+				label: "Website Hits", lines: { show: true, fill: true, fillColor: 'rgba(145, 199, 150, 0.45)' }, points: {show: true},
+				data: [[-0.5, 834], [0.5, 923], [2.5, 1245], [4.5, 1090], [6.5, 999], [8.5, 1056], [10.5, 1097], [12.5, 1354], [13.5, 999]]
+			}, {
+				label: "Unique Visitors", lines: { show: true, fill: true }, points: {show: true}, yaxis: 2,
+				data: [[-0.5, 7865], [0.5, 8976], [2.5, 19134], [4.5, 8452], [6.5, 8321], [8.5, 7987], [10.5, 8098], [12.5, 16237], [13.5, 7999]]
+			}, {
+				label: "Bots", lines: { show: true, fill: false }, points: {show: true}, yaxis: 3,
+				data: [[-0.5, 2144], [0.5, 3456], [2.5, 6777], [4.5, 2333], [6.5, 2111], [8.5, 1889], [10.5, 1999], [12.5, 5555], [13.5, 2000]]
+			}];
+
+			var options = { series: {},
+				colors: [ '#8BC198', '#7897C8', '#DAC582'],
+				legend: { noColumns: 1, backgroundOpacity:0.5, backgroundColor:'#FFF' },
+				xaxis: { 
+					min:0, 
+					max:13,
+					ticks: [
+						[ 0.5, "Sunday" ],
+						[ 2.5, "Monday" ], 
+						[ 4.5, "Tuesday" ],
+						[ 6.5, "Wednesday" ], 
+						[ 8.5, "Thursday" ],
+						[ 10.5, "Today" ],
+						[ 12.5, "Saturday" ]
+					]
+				},
+				yaxes: [
+					{ min:0, max:2000 }, 
+					{ show: false, min:0, max:40000 }, 
+					{ show: false, min:0, max:20000 }
+				],
+				selection: { mode: "x" }
+			};
+
+			var placeholder = $("#placeholder");
+
+			var plot = $.plot(placeholder, data, options);
+
+			plot.setSelection({
+				xaxis: {
+					from: 9.5,
+					to: 11.5
+				}
+			});
+
+		}
+
+		function labelFormatter(label, series) {
+			return "<div style='font-size:8pt; text-align:center; padding:2px; color:rgba(255,255,255,0.8);'>" + Math.round(series.percent) + "% - " + label + " </div>";
+		}
+
+		function flotPieChart(){
+
+			var data = [];
+
+			for (var i = 0; i < 4; i++) {
+				if(i == 0){
+					data[i] = { label: "Firefox", data: 28 }
+				}
+				if(i == 1){ 
+					data[i] = { label: "Chrome", data: 46 }
+				}
+				if(i == 2){
+					data[i] = { label: "Safari", data: 18 }
+				}
+				if(i == 3){
+					data[i] = { label: "IE", data: 8 }
+				}
+			}
+
+			$.plot('#pieholder', data, {
+				colors: [ '#8BC198', '#7897C8', '#DAC582', '#7CACCE'],
+				series: {
+					pie: { 
+						show: true,
+						radius: 1,
+						label: {
+							show: true,
+							radius: 3/4,
+							formatter: labelFormatter,
+							background: {  opacity: 0.5, color: '#000' }
+						}
+					}
+				},
+				legend: { show: false }
+			});
+		}
+	  
+	</script>
+	 
+</body>
+</html>

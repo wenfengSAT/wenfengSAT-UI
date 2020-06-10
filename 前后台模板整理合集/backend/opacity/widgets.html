@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Widgets // Opacity Admin</title>
+
+	<!-- Default Styles (DO NOT TOUCH) -->
+	<link rel="stylesheet" href="lib/css/font-awesome.min.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/css/fonts.css">
+	<link rel="stylesheet" href="lib/css/opacity-admin.css"/>
+
+	<!-- Adjustable Styles -->
+	<link rel="stylesheet" href="lib/css/icheck.css">
+	<link rel="stylesheet" href="lib/css/perfect-scrollbar.min.css">
+	<link rel="stylesheet" href="lib/css/pygments-manni.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<script src="lib/js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<div class="contain">
+
+		<div class="left hidden-xs">
+			<div class="sidebar">
+				<input class="typeahead" type="text" placeholder=""><span id="search-icon" class="glyphicon glyphicon-search"></span>
+				<div class="accordion">
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="index.html"><span class="fa fa-dashboard"></span><span class="full">Dashboard</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="composition.html"><span class="fa fa-font"></span><span class="full">Composition</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="charts.html"><span class="fa fa-bar-chart-o"></span><span class="full">Charts</span><span class="label label-primary">8</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="widgets.html"><span class="fa fa-list-alt"></span><span class="full">Widgets</span></a></div></div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-ui"><span class="icon icon-credit-card"></span><span class="full">UI Elements</span><span class="caret"></span></a></div>
+					 <div id="c-ui" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="general.html" class="sbtn">General</a>
+					  <a href="buttons.html" class="sbtn">Buttons</a>
+					  <a href="notifications.html" class="sbtn">Notifications</a>
+					  <a href="icons.html" class="sbtn">Icons</a> 
+					 </div></div>
+					</div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-forms"><span class="fa fa-pencil-square-o"></span><span class="full">Forms</span><span class="caret"></span></a></div>
+					 <div id="c-forms" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="form_elements.html" class="sbtn">Form Elements</a>
+					  <a href="form_example.html" class="sbtn">Form Examples</a>
+					  <a href="form_validation.html" class="sbtn">Form Validation</a>
+					 </div></div>
+					</div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-tables"><span class="fa fa-table"></span><span class="full">Tables</span><span class="caret"></span></a></div>
+					 <div id="c-tables" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="table_static.html" class="sbtn"><span class="icon icon-th-large"></span>Static Tables</a>
+					  <a href="table_datatables.html" class="sbtn"><span class="fa fa-table"></span>jQuery Datatables</a> 
+					 </div></div>
+					</div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="gallery.html"><span class="fa fa-picture-o"></span><span class="full">Gallery</span><span class="label label-success">7</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="storyboard.html"><span class="fa fa-tasks"></span><span class="full">Storyboard</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="calendar.html"><span class="fa fa-calendar"></span><span class="full">Calendar</span><span class="label label-danger">5</span></a></div></div>
+					<div class="accordion-group"><div class="accordion-heading"><a class="sbtn" href="maps.html"><span class="fa fa-map-marker"></span><span class="full">Maps</span></a></div></div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-business"><span class="fa fa-building-o"></span><span class="full">Business</span><span class="caret"></span></a></div>
+					 <div id="c-business" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="pricing.html" class="sbtn">Pricing</a>
+					  <a href="invoice.html" class="sbtn">Invoice</a>
+					 </div></div>
+					</div>
+					<div class="accordion-group">
+					 <div class="accordion-heading"><a class="sbtn" data-toggle="collapse" href="#c-pages"><span class="fa fa-file-o"></span><span class="full">Pages</span><span class="caret"></span></a></div>
+					 <div id="c-pages" class="accordion-body collapse"><div class="accordion-inner">
+					  <a href="login.html" class="sbtn">Login</a>
+					  <a href="support.html" class="sbtn">Support</a>
+					  <a href="grid.html" class="sbtn">Grid</a>
+					  <a href="404.html" class="sbtn">404 Error</a> 
+					 </div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="right">
+
+			<div class="col-md-12">
+				<div class="logo"><img id="logo" src="lib/img/logo3.png"></div>
+				<div class="logoxs"><img id="logo" src="lib/img/logo_sm.png"></div>
+				<div class="nav">
+					<div class="hov">
+						<div class="btn-group">
+							<a class="con" href="" data-toggle="dropdown"><span class="fa fa-bell"></span></a>
+							<div class="dropdown-menu pull-right" role="menu">
+								<div class="drop-item">
+									<div class="drop-icon font-danger"><span class="fa fa-tachometer"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Phasellus tincidunt tincidunt velit shal...</div>
+										<div class="drop-description">Bandwidth</div>
+										<div class="drop-time">1/31 1:37 PM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-success"><span class="fa fa-shopping-cart"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Ut tempus eros massa ut dolor, aenan...</div>
+										<div class="drop-description">Purchase</div>
+										<div class="drop-time">1/31 11:24 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-warning"><span class="fa fa-laptop"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Aliquet fringilla sem. Suspendisse velit...</div>
+										<div class="drop-description">Server</div>
+										<div class="drop-time">1/31 6:07 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-info"><span class="fa fa-info-circle"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Dolor ut eros velite sem shal tempetus...</div>
+										<div class="drop-description">Statistics</div>
+										<div class="drop-time">1/30 9:46 PM</div>
+									</div>
+								</div>
+								<div class="drop-item drop-footer">
+									<div class="drop-info">
+										<div class="drop-description">See all of the current alerts...</div>
+										<div class="drop-time"><span class="fa fa-angle-double-right"></span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-group">
+							<a class="con" href="" data-toggle="dropdown"><span class="fa fa-envelope"></span></a>
+							<div class="dropdown-menu pull-right" role="menu">
+								<div class="drop-item">
+									<div class="drop-icon font-unread"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Phasellus tincidunt tincidunt velit shal...</div>
+										<div class="drop-description">Angela Johnson</div>
+										<div class="drop-time">1/31 1:37 PM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-unread"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Ut tempus eros massa ut dolor, aenan...</div>
+										<div class="drop-description">Steve Parsons</div>
+										<div class="drop-time">1/31 11:24 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-read"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Aliquet fringilla sem. Suspendisse velit...</div>
+										<div class="drop-description">Sam Wise</div>
+										<div class="drop-time">1/31 6:07 AM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-read"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Dolor ut eros velite sem shal tempetus...</div>
+										<div class="drop-description">Tim Bolton</div>
+										<div class="drop-time">1/30 9:46 PM</div>
+									</div>
+								</div>
+								<div class="drop-item">
+									<div class="drop-icon font-read"><span class="fa fa-envelope-o"></span></div>
+									<div class="drop-info">
+										<div class="drop-content">Sitel velit shal sem ut dolor massa tule...</div>
+										<div class="drop-description">Tim Bolton</div>
+										<div class="drop-time">1/30 9:46 PM</div>
+									</div>
+								</div>
+								<div class="drop-item drop-footer">
+									<div class="drop-info">
+										<div class="drop-description">See all of your messages...</div>
+										<div class="drop-time"><span class="fa fa-angle-double-right"></span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-group">
+							<a class="con" href="" data-toggle="dropdown"><span class="fa fa-user"></span></a>
+							<ul class="dropdown-menu pull-right" role="menu">
+								<li class="profile">
+									<div class="pic"><img src="lib/img/avatars/2.png"></div>
+									<div class="profile-info">
+										Jeffrey
+										<br><a href="#">Profile</a> - <a href="#">Settings</a>
+									</div>
+								</li>
+								<li class="linked"><a href="#"><span class="fa fa-envelope-o"></span>Messages</a></li>
+								<li class="linked"><a href="#"><span class="fa fa-bell-o"></span>Notifications</a></li>
+								<li class="linked"><a href="#"><span class="fa fa-calendar"></span>Tasks/Events</a></li>
+								<li class="linked bottom"><a href="#"><span class="fa fa-reply"></span>Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+    
+			<!-- BEGIN PAGE CONTENT -->
+			<div class="content">
+
+				<!-- BREADCRUMBS -->
+				<div id="bread" class="col-md-12">
+					<div class="crumbs">
+						<ol class="breadcrumb">
+							<li><i class="fa fa-home"></i> <a href="#">Home</a></li>
+							<li class="active"><i class="fa fa-list-alt"></i> Widgets</li>
+						</ol>
+					</div>
+				</div>
+				<div id="response" class="col-md-12">
+					<div class="rep">
+						<div style="float:right;" class="hov">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown"><span class="fa fa-bars"></span> Navigation <span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right" role="menu">
+									<li class="linked"><a href="index.html"><span class="fa fa-dashboard"></span><span class="full">Dashboard</span></a></li>
+									<li class="linked"><a href="composition.html"><span class="fa fa-font"></span><span class="full">Composition</span></a></li>
+									<li class="linked"><a href="charts.html"><span class="fa fa-bar-chart-o"></span><span class="full">Charts</span></a></li>
+									<li class="linked"><a href="widgets.html"><span class="fa fa-list-alt"></span><span class="full">Widgets</span></a></li>
+									<li class="linked-head"><span class="icon icon-credit-card"></span>UI Elements</li>
+									<li class="linked"><a href="general.html">General</a></li>
+									<li class="linked"><a href="buttons.html">Buttons</a></li>
+									<li class="linked"><a href="notifications.html">Notifications</a></li>
+									<li class="linked top"><a href="icons.html">Icons</a></li> 
+									<li class="linked-head"><span class="fa fa-pencil-square-o"></span>Forms</li>
+									<li class="linked"><a href="form_elements.html">Form Elements</a></li>
+									<li class="linked"><a href="form_example.html">Form Examples</a></li>
+									<li class="linked top"><a href="form_validation.html">Form Validation</a></li>
+									<li class="linked-head"><span class="fa fa-table"></span>Tables</li>
+									<li class="linked"><a href="table_static.html"><span class="icon icon-th-large"></span>Static Tables</a></li>
+									<li class="linked"><a href="table_datatables.html"><span class="fa fa-table"></span>jQuery Datatables</a></li> 
+									<li class="linked"><a href="gallery.html"><span class="fa fa-picture-o"></span><span class="full">Gallery</span></a></li>
+									<li class="linked"><a href="storyboard.html"><span class="fa fa-tasks"></span><span class="full">Storyboard</span></a></li>
+									<li class="linked"><a href="calendar.html"><span class="fa fa-calendar"></span><span class="full">Calendar</span></a></li>
+									<li class="linked top"><a href="maps.html"><span class="fa fa-map-marker"></span><span class="full">Maps</span></a></li>
+									<li class="linked-head"><span class="fa fa-building-o"></span>Business</li>
+									<li class="linked"><a href="pricing.html">Pricing</a></li>
+									<li class="linked top"><a href="invoice.html">Invoice</a></li>
+									<li class="linked-head"><span class="fa fa-file-o"></span>Pages</li>
+									<li class="linked"><a href="login.html">Login</a></li>
+									<li class="linked"><a href="support.html">Support</a></li>
+									<li class="linked"><a href="grid.html">Grid</a></li>
+									<li class="linked"><a href="404.html">404 Error</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+     
+				<div class="alert-holder">
+					<div class="alert alert-info">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<span class="icon icon-map-marker"></span>
+						You can make Widgets draggable by adding the&nbsp;&nbsp;<code>.placehoder</code>&nbsp;&nbsp;class to the parent element.
+					</div>
+				</div>
+     
+				<div class="col-md-6 placeholder">
+
+					<div class="wdgt wdgt-default" close-btn="true" hide-btn="true" ajax-btn="true">
+						<div class="wdgt-header">Widget Options</div>
+						<div class="wdgt-body" style="padding-bottom:10px;">
+							<code>&lt;div class="wdgt" hide-btn="true"&gt;</code>
+							<p><br>Hides the widget body for the widget you place it on<br><br></p>
+							<code>&lt;div class="wdgt" close-btn="true"&gt;</code>
+							<p><br>Fades out and closes the widget you place it on<br><br></p>
+							<code>&lt;div class="wdgt" ajax-btn="true" ajax-path="file.html"&gt;</code>
+							<p><br>Loads the file listed at the "ajax-path" into the widget body and replaces the current content</p>
+						</div>
+					</div>
+      
+					<div class="wdgt wdgt-info">
+						<div class="wdgt-header">
+							<i class="fa fa-google-plus"></i>Widget Maps <code>.wdgt-map</code>
+							<div class="switch switch-default" switch-on="Default" switch-off="Styled">
+								<input class="switch4" type="hidden" value="1"/>
+							</div>
+						</div>
+						<div class="wdgt-body wdgt-map" style="height:300px; width:100% !important; ">
+							<div id="map-canvas" style="width:100% !important; "></div>
+						</div>
+					</div>
+
+					<div id="tabs" class="wdgt wdgt-dark">
+						<div class="wdgt-header">
+							<i class="fa fa-folder-o"></i>Tabs & Scrollable
+							<ul class="tabs">
+								<li><a href="#tabs-1">Feed</a></li>
+								<li><a href="#tabs-2">Users</a></li>
+								<li><a href="#tabs-3">Messages</a></li>
+							</ul>
+						</div>
+						<div class="wdgt-body wdgt-tabs wdgt-scroll" style="min-height:275px;">
+							<div class="wdgt-tab" id="tabs-1">
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-twitter"></i></div>
+									<div class="feed-info">
+										<h4>@john_appleseed</h4>
+										<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-facebook"></i></div>
+									<div class="feed-info">
+										<h4>@steve_smith</h4>
+										<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-twitter"></i></div>
+									<div class="feed-info">
+										<h4>@bill_brown</h4>
+										<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-facebook"></i></div>
+									<div class="feed-info">
+										<h4>@barry_lee</h4>
+										<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-twitter"></i></div>
+									<div class="feed-info">
+										<h4>@tom_wilson</h4>
+										<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-facebook"></i></div>
+									<div class="feed-info">
+										<h4>@fred_martin</h4>
+										<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+									</div>
+								</div>
+							</div>
+							<div class="wdgt-tab" id="tabs-2">
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user fa-unread"></i></div>
+									<div class="feed-info">
+										<h4>Josh Patel <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Created a new graph... </p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user fa-unread"></i></div>
+									<div class="feed-info">
+										<h4>Amber Taylor <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Logged in... </p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user"></i></div>
+									<div class="feed-info">
+										<h4>Sarah Campbell <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Changed user permissions... </p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user"></i></div>
+									<div class="feed-info">
+										<h4>Holly Williams <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Setup a calendar appointment... </p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user"></i></div>
+									<div class="feed-info">
+										<h4>Mike Thompson <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Updated the database for performance... </p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user"></i></div>
+									<div class="feed-info">
+										<h4>Will Jones <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Created a new login form... </p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user"></i></div>
+									<div class="feed-info">
+										<h4>Carl Jackson <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Generated a new report... </p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-user"></i></div>
+									<div class="feed-info">
+										<h4>Brad Thomas <small>(1/1/1234 1:11 PM)</small></h4>
+										<p>Storyboard ready for review...</p>
+									</div>
+								</div>
+							</div>
+							<div class="wdgt-tab" id="tabs-3">
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope fa-unread"></i></div>
+									<div class="feed-info">
+										<h4>Josh Patel</h4>
+										<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope fa-unread"></i></div>
+									<div class="feed-info">
+										<h4>Amber Taylor</h4>
+										<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+									<div class="feed-info">
+										<h4>Sarah Campbell</h4>
+										<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+									<div class="feed-info">
+										<h4>Holly Williams</h4>
+										<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+									<div class="feed-info">
+										<h4>Mike Thompson</h4>
+										<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+									<div class="feed-info">
+										<h4>Will Jones</h4>
+										<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+									<div class="feed-info">
+										<h4>Carl Jackson</h4>
+										<p>Ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed...</p>
+									</div>
+								</div>
+								<div class="wdgt-feed">
+									<div class="feed-icon"><i class="fa fa-envelope"></i></div>
+									<div class="feed-info">
+										<h4>Brad Thomas</h4>
+										<p>Phasellus tincidunt tincidunt velit, eu suscipit in. Nam tristique, nulla...</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+     
+				<div class="col-md-6 placeholder">
+
+					<div class="wdgt wdgt-primary">
+						<div class="wdgt-header">
+							<i class="fa fa-table"></i>Widget Table 
+							<code>.wdgt-table</code>
+							<div class="progress progress-sm">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+									<span>60%</span>
+								</div>
+							</div>
+						</div>
+						<div class="wdgt-body wdgt-table">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Name</th>
+										<th>Location</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="center">1</td>
+										<td>Jim Stevens</td>
+										<td>Chicago, IL</td>
+										<td><span class="label label-success">Premium User</span></td>
+									</tr>
+									<tr>
+										<td class="center">2</td>
+										<td>Mark Matthew</td>
+										<td>Raleigh, NC</td>
+										<td><span class="label label-success">Premium User</span></td>
+									</tr>
+									<tr>
+										<td class="center">3</td>
+										<td>Gus Johanson</td>
+										<td>Charleston, SC</td>
+										<td><span class="label label-info">Basic User</span></td>
+									</tr>
+									<tr>
+										<td class="center">4</td>
+										<td>Greg McGinty</td>
+										<td>Irvine, CA</td>
+										<td><span class="label label-info">Basic User</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wdgt wdgt-danger">
+						<div class="wdgt-header">
+							<i class="fa fa-code"></i>Code 
+							<code>.wdgt-code</code>
+							<span class="label label-success">6 Lines</span>
+						</div>
+						<div class="wdgt-body wdgt-code" style="padding-bottom:10px;">
+							<div class="highlight">
+<pre><code class="html">
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;Button #1&lt;/a&gt;</span>
+	<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;Button #2&lt;/a&gt;</span>
+	<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;Button #3&lt;/a&gt;</span>
+	<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;Button #4&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="wdgt wdgt-warning">
+						<div class="wdgt-header">
+							<i class="icon icon-bold"></i>Glyphicons
+							<div class="btn-group">
+								<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+									<i class="icon icon-bell"></i> 
+									<i class="caret"></i>
+								</button>
+								<ul class="dropdown-menu dropdown-primary pull-right" role="menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="wdgt-body">
+							<div style="line-height:45px;">
+								<div class="row fontawesome-icon-list">
+									<div class="col-md-4"><i class="icon icon-adjust"></i>icon icon-adjust</div>
+									<div class="col-md-4"><i class="icon icon-align-center"></i>icon icon-align-center</div>
+									<div class="col-md-4"><i class="icon icon-align-justify"></i>icon icon-align-justify</div>
+									<div class="col-md-4"><i class="icon icon-align-left"></i>icon icon-align-left</div>
+									<div class="col-md-4"><i class="icon icon-align-right"></i>icon icon-align-right</div>
+									<div class="col-md-4"><i class="icon icon-arrow-down"></i>icon icon-arrow-down</div>
+									<div class="col-md-4"><i class="icon icon-arrow-left"></i>icon icon-arrow-left</div>
+									<div class="col-md-4"><i class="icon icon-arrow-right"></i>icon icon-arrow-right</div>
+									<div class="col-md-4"><i class="icon icon-arrow-up"></i>icon icon-arrow-up</div>
+									<div class="col-md-4"><i class="icon icon-asterisk"></i>icon icon-asterisk</div>
+									<div class="col-md-4"><i class="icon icon-backward"></i>icon icon-backward</div>
+									<div class="col-md-4"><i class="icon icon-ban-circle"></i>icon icon-ban-circle</div>
+									<div class="col-md-4"><i class="icon icon-barcode"></i>icon icon-barcode</div>
+									<div class="col-md-4"><i class="icon icon-bell"></i>icon icon-bell</div>
+									<div class="col-md-4"><i class="icon icon-bold"></i>icon icon-bold</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wdgt wdgt-success">
+						<div class="wdgt-header">
+							<i class="fa fa-user"></i>Example Login
+							<div class="btn-group">
+								<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+									Dropdown <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu dropdown-primary pull-right" role="menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="wdgt-body tbl" style="padding-bottom:10px;">
+							<form role="form">
+								<div class="form-group">
+									<label for="email">Email/Username</label>
+									<input type="email" class="form-control col-sm-12" id="email" value="test@domain.com">
+								</div>
+								<div class="form-group">
+									<label for="user">Password</label>
+									<input type="password" class="form-control col-sm-12" id="user" value="password">
+								</div>
+								<div class="form-group">
+									<input tabindex="13" type="checkbox" class="icheck-blue" id="fc1" checked>
+									<label class="checkbox-label" for="fc1">Remember Me</label>
+								</div>
+							</form>
+						</div>
+						<div class="wdgt-footer align-right">
+							<a href="#" class="btn btn-warning">Cancel</a>&nbsp;&nbsp;
+							<a href="#" class="btn btn-info">Login</a>
+						</div>
+					</div>
+				</div>
+    
+ 			</div>
+ 			<!-- END PAGE CONTENT -->
+
+		</div>
+
+	</div>
+
+	<!-- Default JS (DO NOT TOUCH) -->
+	<script src="lib/js/jquery.min.js"></script>
+	<script src="lib/js/jquery-ui.min.js"></script>
+	<script src="lib/js/bootstrap.min.js"></script>
+	<script src="lib/js/opacity.widgets.min.js"></script>
+	<script src="lib/js/hogan.min.js"></script>
+	<script src="lib/js/typeahead.min.js"></script>
+	<script src="lib/js/typeahead-example.js"></script>
+ 
+	<!-- Adjustable JS -->
+	<script src="lib/js/icheck.min.js"></script>
+	<script src="lib/js/perfect-scrollbar.min.js"></script>
+	<script src="lib/js/opacity.switches.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJEVoE5Ix-7HPh0OJWDLV0LgnaFAVslmE&sensor=true"></script>
+	<script>
+		$(document).ready(function() {
+			$('a[href="widgets.html"]').addClass('active').parent().parent().addClass('in');
+
+			$("#tabs").tabs();
+			$('.icheck-blue').iCheck({ checkboxClass: 'icheckbox_flat-blue', radioClass: 'iradio_flat-blue' });
+			$('.wdgt-tab').perfectScrollbar({suppressScrollX:true});
+
+			$('.switch4').change(function () {
+				if(currentStyle == 0){
+					map.setOptions({styles: style4});
+					currentStyle = 1;
+				}else{
+					map.setOptions({styles: style1});
+					currentStyle = 0;
+				}
+			});
+
+			$(".placeholder").sortable({ connectWith: ".placeholder" });
+
+			$(".placeholder .wdgt .wdgt-header").addClass('wdgt-hover');
+
+		});
+
+		var markerColor = "primary";
+		var markerIcon = "calendar";
+		var marker = new Array();
+		var map;
+		var currentStyle = 0;
+
+		// STYLES
+		var style1 = [];
+		var style4 = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]}];
+
+		function getInfoWindow(mrk){
+			var contentString = '<div style="width:200px;color:#448fba;border-bottom:1px solid #DDD; font-size:14px; ">Info Window</div><div style="width:200px;margin-top:10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</div><div style="text-align:right;margin-top:10px;"><button type="button" class="btn btn-warning btn-sm">Warning</button>&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-sm">Primary</button></div>';
+			var infowindow = new google.maps.InfoWindow({ content: contentString, maxWidth: 200  });
+			infowindow.open(map,mrk);
+		}
+
+		function initialize() {        
+			var mapOptions = {          
+				center: new google.maps.LatLng(35.2269, -80.8433),          
+				zoom: 12       
+			};  
+
+			map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+			addMarkers();
+		}
+
+		function addMarkers(){
+			for(var i=0; i < 20; i++){
+				var ran1 = Math.random()/9; if(Math.random() > 0.5) { ran1 = ran1*(0-1); }
+				var ran2 = Math.random()/9; if(Math.random() > 0.5) { ran2 = ran2*(0-1); }
+
+				var myLatlng = new google.maps.LatLng(35.2269 + ran1, -80.8433 + ran2);
+				var image = 'lib/img/markers/'+markerColor+'/'+markerIcon+'.png';
+				marker[i] = new google.maps.Marker({ position: myLatlng, map: map, icon: image});
+
+				google.maps.event.addListener(marker[i], 'click', function() {  getInfoWindow(this);  });
+			}
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+
+</body>
+</html>
