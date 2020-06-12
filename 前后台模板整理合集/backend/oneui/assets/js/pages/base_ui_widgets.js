@@ -1,0 +1,4 @@
+/*
+ *  Document   : base_ui_widgets.js
+ *  Author     : pixelcave
+ */var BaseUIWidgets=function(){var i=function(){var i={type:"line",width:"200px",height:"120px",tooltipOffsetX:-25,tooltipOffsetY:20,lineColor:"#abe37d",fillColor:"#abe37d",spotColor:"#777777",minSpotColor:"#777777",maxSpotColor:"#777777",highlightSpotColor:"#777777",highlightLineColor:"#777777",spotRadius:2,tooltipPrefix:"",tooltipSuffix:" Sales",tooltipFormat:"{{prefix}}{{y}}{{suffix}}"};jQuery(".js-widget-line1").sparkline("html",i),i.lineColor="#fadb7d",i.fillColor="#fadb7d",i.tooltipPrefix="",i.tooltipSuffix=" Tickets",jQuery(".js-widget-line2").sparkline("html",i),i.lineColor="#faad7d",i.fillColor="#faad7d",i.tooltipPrefix="$ ",i.tooltipSuffix="",jQuery(".js-widget-line3").sparkline("html",i)};return{init:function(){i()}}}();jQuery(function(){BaseUIWidgets.init()});

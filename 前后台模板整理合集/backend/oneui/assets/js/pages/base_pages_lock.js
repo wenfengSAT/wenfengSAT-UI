@@ -1,0 +1,5 @@
+/*
+ *  Document   : base_pages_lock.js
+ *  Author     : pixelcave
+ */
+var BasePagesLock=function(){var e=function(){jQuery(".js-validation-lock").validate({errorClass:"help-block text-right animated fadeInDown",errorElement:"div",errorPlacement:function(e,r){jQuery(r).parents(".form-group > div").append(e)},highlight:function(e){jQuery(e).closest(".form-group").removeClass("has-error").addClass("has-error"),jQuery(e).closest(".help-block").remove()},success:function(e){jQuery(e).closest(".form-group").removeClass("has-error"),jQuery(e).closest(".help-block").remove()},rules:{"lock-password":{required:!0,minlength:5}},messages:{"lock-password":{required:"Please provide a password",minlength:"Your password must be at least 5 characters long"}}})};return{init:function(){e()}}}();jQuery(function(){BasePagesLock.init()});

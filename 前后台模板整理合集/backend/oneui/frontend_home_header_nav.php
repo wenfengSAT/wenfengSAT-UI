@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+THIS IS THE DEMO VERSION OF THE UI FRAMEWORK!
+COMMENTS ARE REMOVED, CODE IS COMPRESSED AND CODE STYLE IS ALTERED!
+
+IN THE FULL VERSION
+    THE CODE IS INDENTED CORRECTLY AND WELL COMMENTED!
+    YOU GET AN EXTENSIVE DOCUMENTATION TO GET YOU STARTED!
+    YOU GET THE PHP VERSION (ALONG WITH THE HTML VERSION) WHICH HAS EXTRA FEATURES!
+    YOU GET THE LessCSS FILES OF THE UI FRAMEWORK
+    YOU GET GRUNT FILES FOR LIVE-COMPILING LessCSS FILES AND BUILDING YOU OWN UI FRAMEWORK
+    YOU GET ACCESS TO FRAMEWORK UPDATES WITH NEW FEATURES AND PLUGIN UPGRADES
+    I CAN PROVIDE SUPPORT IF YOU NEED IT :-)
+
+THANK YOU FOR HAVING A LOOK!
+
+** A LICENSE MUST BE ACQUIRED FOR LEGAL USE -> LINK: http://goo.gl/vNS3I **
+** PLEASE SUPPORT ME IF YOU LIKE MY WORK, IT HELPS ME CONTINUE, THANK YOU VERY MUCH! **
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<title>OneUI - Admin Dashboard Template & UI Framework | DEMO</title>
+<meta name="description" content="OneUI - Admin Dashboard Template & UI Framework created by pixelcave and published on Themeforest | This is the demo of OneUI! You need to purchase a license for legal use! | DEMO">
+<meta name="author" content="pixelcave">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+<link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+<link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700"><link rel="stylesheet" href="assets/css/bootstrap.min-1.3.css">
+<link rel="stylesheet" id="css-main" href="assets/css/oneui.min-1.3.css">
+</head>
+<body><div id="page-container" class="header-navbar-fixed header-navbar-transparent">
+<header id="header-navbar" class="content-mini content-mini-full">
+<div class="content-boxed">
+<ul class="nav-header pull-right">
+<li>
+<div class="btn-group">
+<button class="btn btn-link text-white dropdown-toggle" data-toggle="dropdown" type="button">
+<i class="si si-drop"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-right sidebar-mini-hide font-s13">
+<li>
+<a data-toggle="theme" data-theme="default" tabindex="-1" href="javascript:void(0)">
+<i class="fa fa-circle text-default pull-right"></i> <span class="font-w600">Default</span>
+</a>
+</li>
+<li>
+<a data-toggle="theme" data-theme="assets/css/themes/amethyst.min-1.3.css" tabindex="-1" href="javascript:void(0)">
+<i class="fa fa-circle text-amethyst pull-right"></i> <span class="font-w600">Amethyst</span>
+</a>
+</li>
+<li>
+<a data-toggle="theme" data-theme="assets/css/themes/city.min-1.3.css" tabindex="-1" href="javascript:void(0)">
+<i class="fa fa-circle text-city pull-right"></i> <span class="font-w600">City</span>
+</a>
+</li>
+<li>
+<a data-toggle="theme" data-theme="assets/css/themes/flat.min-1.3.css" tabindex="-1" href="javascript:void(0)">
+<i class="fa fa-circle text-flat pull-right"></i> <span class="font-w600">Flat</span>
+</a>
+</li>
+<li>
+<a data-toggle="theme" data-theme="assets/css/themes/modern.min-1.3.css" tabindex="-1" href="javascript:void(0)">
+<i class="fa fa-circle text-modern pull-right"></i> <span class="font-w600">Modern</span>
+</a>
+</li>
+<li>
+<a data-toggle="theme" data-theme="assets/css/themes/smooth.min-1.3.css" tabindex="-1" href="javascript:void(0)">
+<i class="fa fa-circle text-smooth pull-right"></i> <span class="font-w600">Smooth</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="hidden-md hidden-lg">
+<button class="btn btn-link text-white pull-right" data-toggle="class-toggle" data-target=".js-nav-main-header" data-class="nav-main-header-o" type="button">
+<i class="fa fa-navicon"></i>
+</button>
+</li>
+</ul>
+<ul class="js-nav-main-header nav-main-header pull-right">
+<li class="text-right hidden-md hidden-lg">
+<button class="btn btn-link text-white" data-toggle="class-toggle" data-target=".js-nav-main-header" data-class="nav-main-header-o" type="button">
+<i class="fa fa-times"></i>
+</button>
+</li>
+<li>
+<a class="active" href="frontend_home_header_nav.php">Home</a>
+</li>
+<li>
+<a class="nav-submenu" href="javascript:void(0)">Pages</a>
+<ul>
+<li>
+<a href="frontend_team.php">Team</a>
+</li>
+<li>
+<a href="frontend_support.php">Support</a>
+</li>
+<li>
+<a href="frontend_search.php">Search</a>
+</li>
+<li>
+<a href="frontend_about.php">About</a>
+</li>
+<li>
+<a href="frontend_login.php">Login</a>
+</li>
+<li>
+<a href="frontend_signup.php">Sign Up</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="frontend_features.php">Features</a>
+</li>
+<li>
+<a href="frontend_pricing.php">Pricing</a>
+</li>
+<li>
+<a href="frontend_contact.php">Contact</a>
+</li>
+</ul>
+<ul class="nav-header pull-left">
+<li class="header-content">
+<a class="h5" href="frontend_home.php">
+<i class="fa fa-circle-o-notch text-primary"></i> <span class="h4 font-w600 text-white">ne</span>
+</a>
+</li>
+</ul>
+</div>
+</header><main id="main-container"><div class="bg-image" style="background-image: url('assets/img/various/hero1.jpg');">
+<div class="bg-primary-dark-op">
+<section class="content content-full content-boxed overflow-hidden">
+<div class="push-100-t push-50 text-center">
+<h1 class="h2 text-white push-10 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Build your Web Application with One.</h1>
+<h2 class="h5 text-white-op push-50 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Powerful, flexible and reliable UI framework that just works. Your valuable feedback made it happen.</h2>
+<a class="btn btn-rounded btn-noborder btn-lg btn-primary visibility-hidden" data-toggle="appear" data-class="animated bounceIn" data-timeout="800" href="frontend_pricing.php">Purchase Today</a>
+</div>
+<div class="row visibility-hidden" data-toggle="appear" data-class="animated fadeInUp">
+<div class="col-sm-8 col-sm-offset-2">
+<img class="img-responsive pull-b" src="assets/img/various/promo1.jpg" alt="">
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="bg-white">
+<section class="content content-boxed">
+<div class="row items-push-3x push-50-t nice-copy">
+<div class="col-sm-4">
+<div class="text-center push-30">
+<span class="item item-2x item-circle border">
+<i class="si si-rocket"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Bootstrap Powered</h3>
+<p>Bootstrap is a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. OneUI was built on top, extending it to a large degree.</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-screen-smartphone"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Fully Responsive</h3>
+<p>The User Interface will adjust to any screen size. It will look great on mobile devices and desktops at the same time. No need to worry about the UI, just stay focused on the development.</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-clock"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Save time</h3>
+<p>OneUI will save you hundreds of hours of extra development. Start right away coding your functionality and watch your project come to life months sooner.</p>
+</div>
+</div>
+<div class="row items-push-3x nice-copy">
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-check"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Frontend Pages</h3>
+<p>Premium and fully responsive frontend pages are included in OneUI package, too. They use the same resources with the backend, so you can build your web application in one go, using all available components wherever you like.</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push-30">
+<span class="item item-2x item-circle border">{less}</span>
+</div>
+<h3 class="h5 font-w600 text-center push-10">LessCSS</h3>
+<p>OneUI was built from scratch with LessCSS. Completely modular design with components, variables and mixins that will help you customize and extend your framework to the maximum.</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-speedometer"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Grunt Tasks</h3>
+<p>Grunt tasks will make your life easier. You can use them to live-compile your Less files to CSS as you work or build your custom color themes and framework.</p>
+</div>
+</div>
+</section>
+</div>
+<div class="bg-gray-lighter">
+<section class="content content-boxed">
+<div class="row items-push push-20-t push-20 text-center">
+<div class="col-sm-4">
+<div class="h1 push-5" data-toggle="countTo" data-to="15760" data-after="+"></div>
+<div class="font-w600 text-uppercase text-muted">Accounts Today</div>
+</div>
+<div class="col-sm-4">
+<div class="h1 push-5" data-toggle="countTo" data-to="3890" data-after="+"></div>
+<div class="font-w600 text-uppercase text-muted">Products</div>
+</div>
+<div class="col-sm-4">
+<div class="h1 push-5" data-toggle="countTo" data-to="890" data-after="+"></div>
+<div class="font-w600 text-uppercase text-muted">Web Apps</div>
+</div>
+</div>
+</section>
+</div>
+<div class="bg-white">
+<section class="content content-boxed">
+<div class="row items-push-3x push-50-t nice-copy">
+<div class="col-sm-4">
+<div class="text-center push-30">
+<span class="item item-2x item-circle border">
+<i class="si si-compass"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Cross Browser Support</h3>
+<p>OneUI will play nice with all modern browsers such as Chrome, Firefox, Safari, Opera and the latest versions of Internet Explorer (9 and up).</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-book-open"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Documentation</h3>
+<p>OneUI comes packed with a great documentation which covers all the basics to get you familiar with template’s structure and files. It is the best way to get started.</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-rocket"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Clean &amp; Commented Code</h3>
+<p>The code is created with the developer in mind. It is clean, easy to follow, easy to replicate and at the same time well commented, so that you never feel lost.</p>
+</div>
+</div>
+<div class="row items-push-3x nice-copy">
+<div class="col-sm-4">
+<div class="text-center push-30">
+<span class="item item-2x item-circle border">
+<i class="si si-wrench"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Components</h3>
+<p>OneUI comes packed with so many unique components. Carefully picked and integrated to enhance and enrich your project with great functionality. Use them anywhere you want.</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-support"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Support</h3>
+<p>By purchasing a license of OneUI, you are eligible to email support. Should you get stuck somewhere or come accross any issue, don’t worry because I am here to provide assistance.</p>
+</div>
+<div class="col-sm-4">
+<div class="text-center push">
+<span class="item item-2x item-circle border">
+<i class="si si-heart"></i>
+</span>
+</div>
+<h3 class="h5 font-w600 text-uppercase text-center push-10">Crafted With Love</h3>
+<p>I love what I do. I pay extra attention to small details and always try delivering the best I can with each project. My goal is to create a great product for you, that will make your life easier.</p>
+</div>
+</div>
+</section>
+</div>
+<div class="bg-image" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
+<div class="bg-primary-dark-op">
+<section class="content content-full content-boxed">
+<div class="row items-push-2x push-50-t text-center">
+<div class="col-sm-4 visibility-hidden" data-toggle="appear" data-offset="-150">
+<img class="img-avatar img-avatar-thumb" src="assets/img/avatars/avatar6.jpg" alt="">
+<div class="text-warning push-10-t push-15">
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+</div>
+<div class="h4 text-white-op push-5">Professional design in a reliable UI framework! A pure joy to work with!</div>
+<div class="h6 text-gray">- Amy Hunter</div>
+</div>
+<div class="col-sm-4 visibility-hidden" data-toggle="appear" data-offset="-150" data-timeout="150">
+<img class="img-avatar img-avatar-thumb" src="assets/img/avatars/avatar15.jpg" alt="">
+<div class="text-warning push-10-t push-15">
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+</div>
+<div class="h4 text-white-op push-5">Awesome support! Our Web Application looks and works great!</div>
+<div class="h6 text-gray">- Scott Ruiz</div>
+</div>
+<div class="col-sm-4 visibility-hidden" data-toggle="appear" data-offset="-150" data-timeout="300">
+<img class="img-avatar img-avatar-thumb" src="assets/img/avatars/avatar3.jpg" alt="">
+<div class="text-warning push-10-t push-15">
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+<i class="fa fa-fw fa-star"></i>
+</div>
+<div class="h4 text-white-op push-5">Incredible value for money, highly recommended!</div>
+<div class="h6 text-gray">- Amber Walker</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="bg-gray-lighter">
+<section class="content content-full content-boxed">
+<div class="push-20-t push-20 text-center">
+<h3 class="h4 push-20 visibility-hidden" data-toggle="appear">Clean design in one powerful package. It was made for your next awesome project.</h3>
+<a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated bounceIn" href="frontend_pricing.php">Get Started Today</a>
+</div>
+</section>
+</div>
+</main>
+<footer id="page-footer" class="bg-white">
+<div class="content content-boxed">
+<div class="row push-30-t items-push-2x">
+<div class="col-sm-4">
+<h3 class="h5 font-w600 text-uppercase push-20">Company</h3>
+<ul class="list list-simple-mini font-s13">
+<li>
+<a class="font-w600" href="frontend_home.php">Home</a>
+</li>
+<li>
+<a class="font-w600" href="frontend_features.php">Features</a>
+</li>
+<li>
+<a class="font-w600" href="frontend_pricing.php">Pricing</a>
+</li>
+<li>
+<a class="font-w600" href="frontend_about.php">About Us</a>
+</li>
+<li>
+<a class="font-w600" href="frontend_contact.php">Contact Us</a>
+</li>
+</ul>
+</div>
+<div class="col-sm-4">
+<h3 class="h5 font-w600 text-uppercase push-20">Support</h3>
+<ul class="list list-simple-mini font-s13">
+<li>
+<a class="font-w600" href="frontend_login.php">Log In</a>
+</li>
+<li>
+<a class="font-w600" href="frontend_signup.php">Sign Up</a>
+</li>
+<li>
+<a class="font-w600" href="frontend_support.php">Support Center</a>
+</li>
+<li>
+<a class="font-w600" href="javascript:void(0)">Privacy Policy</a>
+</li>
+<li>
+<a class="font-w600" href="javascript:void(0)">Terms &amp; Conditions</a>
+</li>
+</ul>
+</div>
+<div class="col-sm-4">
+<h3 class="h5 font-w600 text-uppercase push-20">Get In Touch</h3>
+<div class="font-s13 push">
+<strong>Company, Inc.</strong><br>
+980 Folsom Ave, Suite 1230<br>
+San Francisco, CA 94107<br>
+<abbr title="Phone">P:</abbr> (123) 456-7890
+</div>
+<div class="font-s13">
+<i class="si si-envelope-open"></i> company@example.com
+</div>
+</div>
+</div>
+<div class="font-s12 push-20 clearfix">
+<hr class="remove-margin-t">
+<div class="pull-right">
+Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>
+</div>
+<div class="pull-left">
+<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">OneUI 1.3</a> &copy; <span class="js-year-copy"></span>
+</div>
+</div>
+</div>
+</footer>
+</div><script src="assets/js/oneui.min-1.3.js"></script><script>jQuery(function(){App.initHelpers(['appear', 'appear-countTo']);});</script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-16158021-6', 'auto');ga('send', 'pageview');</script>
+</body>
+</html>
