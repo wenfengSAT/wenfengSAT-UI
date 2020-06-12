@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="admin template, admin dashboard, inbox templte, calendar template, form validation">
+<meta name="author" content="DazeinCreative">
+<meta name="description" content="ORB - Powerfull and Massive Admin Dashboard Template with tonns of useful features">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORB Front End | Products</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/frontend.css">
+<script type="text/javascript" src="js/vendors/modernizr/modernizr.custom.js"></script>
+</head>
+
+<body>
+<div class="smooth-overflow frontend"> 
+  
+  <!--Navigation-->
+  
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand text-blue" href="#">ORB</a> </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="portfolio-item.html">Project</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="blog-post.html">Blog Post</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="faq.html">Faq</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="registration.html">Registration</a></li>
+              <li><a href="countdown.html">CountDown</a></li>
+              <li><a href="contacts.php">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">eCommerce<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="products-checkout.html">Checkout</a></li>
+              <li><a href="product.html">Pruduct Page</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <!--Sign In Form-->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" id="menuLogin"> <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Sign In</a>
+            <div class="dropdown-menu">
+              <form action="index.html" id="login-form" class="orb-form">
+                <fieldset>
+                  <section>
+                    <div class="row">
+                      <div class="col col-12">
+                        <label class="input"> <i class="icon-append fa fa-user"></i>
+                          <input type="email" name="email" placeholder="Login">
+                        </label>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="row">
+                      <div class="col col-12">
+                        <label class="input"> <i class="icon-append fa fa-lock"></i>
+                          <input type="password" name="password" placeholder="Password">
+                        </label>
+                        <div class="note"><a href="#" class="modal-opener">Forgot password?</a></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="row">
+                      <div class="col col-12">
+                        <label class="checkbox">
+                          <input type="checkbox" name="remember" checked>
+                          <i></i>Keep me logged in</label>
+                      </div>
+                    </div>
+                  </section>
+                </fieldset>
+                <button type="submit" class="btn btn-default">Sign in</button>
+                <a href="registration.html" class="btn">Register</a>
+              </form>
+            </div>
+          </li>
+        </ul>
+        <!--/Sign In Form--> 
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.container-fluid --> 
+  </nav>
+  
+  <!--/Navigation--> 
+  
+  <!--Navbar Cart-->
+  
+  <nav role="navigation" class="navbar-cart" id="cart-navigation">
+    <div class="container">
+      <div id="navCart" class="pull-right">
+        <div class="btn-group">
+          <button data-toggle="dropdown" data-hover="dropdown" data-delay="100" class="btn btn-wish dropdown-toggle showWish" type="button"> <i class="entypo-heart"></i> Saved <span class="wishCount badge">0</span> <span class="caret"></span> </button>
+          <div role="menu" class="dropdown-menu wishMenu">
+            <table class="table-striped" id="wishContainer">
+              <thead>
+                <tr>
+                  <th colspan="4">Wish list</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4"><button type="button" class="btn btn-danger btn-sm emptyWish pull-right">Empty wish list</button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button data-toggle="dropdown" data-hover="dropdown" data-delay="100" class="btn btn-cart dropdown-toggle showCart" type="button"> <i class="entypo-basket"></i> Cart <span class="cartCount badge">0</span> <span class="total ba">0.00</span> <span class="caret"></span> </button>
+          <div role="menu" class="dropdown-menu cartMenu keep_open">
+            <table class="table-striped cartContainer">
+              <thead>
+                <tr>
+                  <th colspan="5">Cart list</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="5"><span class="pull-right">Subtotal: <span class="subtotal">0.00</span></span></td>
+                </tr>
+                <tr>
+                  <td colspan="5"><span class="pull-right">VAT: <span class="vat">0.00</span></span></td>
+                </tr>
+                <tr>
+                  <td colspan="5"><span class="pull-right">TOTAL: <span class="total">0.00</span></span></td>
+                </tr>
+                <tr>
+                  <td colspan="5"><button type="button" class="btn btn-danger btn-sm emptyCart pull-right">Empty cart</button>
+                    <a class="btn btn-info btn-sm" href="products-checkout.html">Checkout</a></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!--/Navbar Cart--> 
+  
+  <!--Breadcrumb-->
+  <div class="container">
+    <div class="row">
+      <div class="breadcrumb clearfix">
+        <ul>
+          <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+          <li><a href="index.html">Dashboard</a></li>
+          <li class="active">Data</li>
+        </ul>
+        
+        <!--Search-->
+        <div class="site-search pull-right">
+          <form action="#" id="inline-search">
+            <i class="fa fa-search"></i>
+            <input type="search" placeholder="Search">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/Breadcrumb-->
+  
+  <div class="container frontend">
+    <div class="row"> 
+      
+      <!--ItemsGrid-->
+      <div class="goods-grid">
+        <div class="page-header">
+          <h1>Featured items</h1>
+        </div>
+        <div class="col-md-12">
+          <ul class="pagination pull-left margin-0px margin-bottom-20px">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="hidden-xs"><a href="#">3</a></li>
+            <li class="hidden-xs"><a href="#">4</a></li>
+            <li class="hidden-xs"><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+          <small class="pull-right text-cold-grey margin-top"><strong>Showing:</strong> 12 from 591</small>
+          <div class="clearfix"></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <img class="img-responsive" src="images/cart/01.jpg" alt="...">
+            <div class="caption">
+              <h4><a href="product.html">Leather Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$120</li>
+                <li class="price">$100</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="1" data-name="Leather Bag" data-price="100" data-img="01.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/02.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Brown Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$231.27</li>
+                <li class="price">$211.29</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="2" data-name="Brown Bag" data-price="211.29" data-img="02.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/03.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Black Post Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$899.99</li>
+                <li class="price">$799.99</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="5" data-name="Black Postman Bag" data-price="799.99" data-img="03.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/04.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Cross Body Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$345</li>
+                <li class="price">$300</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="8" data-name="Cross Body Bag" data-price="300" data-img="04.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/05.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Boysy Shape Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$315</li>
+                <li class="price">$300</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="3" data-name="Boysy Shape Bag" data-price="300" data-img="05.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/06.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Black Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$424</li>
+                <li class="price">$400</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="4" data-name="Black Bag" data-price="400" data-img="06.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/07.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Blue Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$257</li>
+                <li class="price">$200</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="6" data-name="Blue Bag" data-price="200" data-img="07.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/08.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Leather Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$142</li>
+                <li class="price">$100</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="7" data-name="Leather Bag" data-price="100" data-img="08.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/09.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Casual Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$489</li>
+                <li class="price">$400</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="9" data-name="Casual Bag" data-price="400" data-img="09.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/10.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Nike Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$371</li>
+                <li class="price">$300</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="10" data-name="Nike Bag" data-price="300" data-img="10.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/11.jpg" alt="..." /></a>
+            <div class="caption">
+              <h4><a href="product.html">CK Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$599</li>
+                <li class="price">$500</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="11" data-name="CK Bag" data-price="500" data-img="11.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail"> <a href="product.html"><img src="images/cart/12.jpg" alt="..."></a>
+            <div class="caption">
+              <h4><a href="product.html">Stylish Bag</a></h4>
+              <p class="good-desk">Proin pulvinar in turpis sit amet hendrerit. Fusce mattis tortor tincidunt est hendrerit vulputate.</p>
+              <ul class="list-inline">
+                <li class="old-price">$673</li>
+                <li class="price">$600</li>
+              </ul>
+              <div class="clearfix"></div>
+              
+              <!-- mandatory code -->
+              <p> <a href="#" class="btn btn-info btn-sm wish tooltiped" role="button" title="Save to wish list"><i class="entypo-heart"></i> Save</a> <a href="#" class="btn btn-info btn-sm cart tooltiped" role="button" title="Add to cart"><i class="entypo-basket"></i> Add to Cart</a> </p>
+              <input type="hidden" name="product-id" value="12" data-name="Stylish Bag" data-price="600" data-img="12.jpg">
+              <!-- end mandatory code --> 
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12">
+          <ul class="pagination pull-left margin-0px margin-bottom-20px">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="hidden-xs"><a href="#">3</a></li>
+            <li class="hidden-xs"><a href="#">4</a></li>
+            <li class="hidden-xs"><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+          <small class="pull-right text-cold-grey margin-top"><strong>Showing:</strong> 12 from 591</small>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--/ItemsGrid-->
+      
+      <div class="clearfix"></div>
+      
+      <!--Help Links-->
+      <div class="goods-bottom-links">
+        <h5>Useful Links</h5>
+        <div class="col-md-3 col-sm-3">
+          <ul>
+            <li><a href="#">How it Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">People's Runway</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <ul>
+            <li><a href="#">Pricing</a></li>
+            <li> <a href="#">Apply for a Boutique</a></li>
+            <li> <a href="#">List an Item</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Support Community </a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy & Cookies</a></li>
+            <li><a href="#">Copyright Policy</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--/Help Links--> 
+      
+    </div>
+  </div>
+  <!-- Page Ends --> 
+  
+  <!-- Messages -->
+  <div class="container">
+    <div class="row"> 
+      <!-- Add to cart -->
+      <div class="cart-message">
+        <p>Product has been added to cart!</p>
+      </div>
+      <!-- /Add to cart --> 
+      
+      <!-- Save to wish list -->
+      <div class="wish-message">
+        <p>Product has been added to wish list!</p>
+      </div>
+      <!-- /Save to wish list --> 
+    </div>
+  </div>
+  <!-- Messages -->
+  
+  <!--Footer-->
+  <div class="footer">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>Contacts</h3>
+        <address>
+        <strong>DazeinCreative</strong><br>
+        795 Folsom Ave, Suite 600<br>
+        San Francisco, CA 94107<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+        <address>
+        <strong>Full Name</strong><br>
+        <a href="mailto:#">first.last@example.com</a>
+        </address>
+      </div>
+      <div class="col-md-3">
+        <h3>About Us</h3>
+        <p> ORB — fully responsive admin template powered by BootStrap 3 Framework. ORB is packed with tons of accurately styled and predefined components, plugins and features that can be used in creation of admin dashboards, CRM and CMS panels. You can purchase ORB <a href="http://themeforest.net/item/orb-powerful-admin-dashboard/7758614">exclusevely on Themeforest</a></p>
+      </div>
+      <div class="col-md-3">
+        <h3>Last News</h3>
+        <div class="footer-news"> <span class="label bg-cold-grey">13.06</span><span class="news-text"><a href="#">Our investor is Now Godzilla incorporated</a></span> <span class="label bg-cold-grey">14.06</span><span class="news-text"><a href="#">Surfers get up-close encounter with massive whale</a></span> <span class="label bg-cold-grey">15.06</span><span class="news-text"><a href="#">Someone stole your sausage again!</a></span> </div>
+      </div>
+      <div class="col-md-3">
+        <h3>subscribe</h3>
+        
+        <!--Subscription-->
+        <div class="subscribe-block">
+          <p class="hide-if-ok">Just enter your email address to get all our news, events and special offers.</p>
+          <form action="demo-subscription-save.php" method="post" id="subscription-form" class="orb-form">
+            <fieldset>
+              <section>
+                <label class="input">
+                  <input type="email" name="email" id="email" placeholder="Your e-mail">
+                </label>
+                <button type="submit" class="btn btn-default">Subscribe</button>
+              </section>
+            </fieldset>
+            <div class="message"> <i class="fa fa-check"></i>
+              <p>Thanks for join our mail list!</p>
+            </div>
+          </form>
+        </div>
+        <!--/Subscription--> 
+        
+      </div>
+    </div>
+    <div class="col-md-12 margin-top">
+      <p class="text-center"><strong>ORB FrontEnd</strong> by Dazein Creative &reg; &#8482; 2014. Need more templates &#8212; <a href="http://themeforest.net/user/DazeinCreative/portfolio" title="Get Templates!" target="_blank">Get em here</a>! <br/>
+        Device MockUps by <a href="http://graphicburger.com/">GraphicBurger</a> | Hipster Logotypes by <a href="http://www.vectreezy.com/">Vecteezy</a> <br/>
+        Free Images by <a href="http://unsplash.com/" title="Unsplash">Unsplash</a></p>
+    </div>
+    
+    <!-- Social Media Buttons - CSS3 - Free to Remove Unneeded -->
+    <div class="social-buttons">
+      <ul class="social">
+        <li><a href="http://facebook.com/"><i class="entypo-facebook-circled"></i></a></li>
+        <li><a href="http://linkedin.com/"><i class="entypo-linkedin-circled"></i></a></li>
+        <li><a href="http://google.com/"><i class="entypo-gplus-circled"></i></a></li>
+        <li><a href="http://twitter.com/"><i class="entypo-twitter-circled"></i></a></li>
+        <li><a href="http://pinterest.com/"><i class="entypo-pinterest-circled"></i></a></li>
+        <li><a href="http://tumblr.com/"><i class="entypo-tumblr-circled"></i></a></li>
+        <li><a href="http://stumbleupon.com/"><i class="entypo-stumbleupon-circled"></i></a></li>
+        <li><a href="http://dribble.com/"><i class="entypo-dribbble-circled"></i></a></li>
+        <li><a href="http://vimeo.com/"><i class="entypo-vimeo-circled"></i></a></li>
+        <li><a href="http://mixi.com/"><i class="entypo-mixi"></i></a></li>
+        <li><a href="http://lastfm.com/"><i class="entypo-lastfm-circled"></i></a></li>
+        <li><a href="http://instagram.com/"><i class="entypo-instagram"></i></a></li>
+        <li><a href="http://vk.com/"><i class="entypo-vkontakte"></i></a></li>
+        <li><a href="http://flickr.com/"><i class="entypo-flickr-circled"></i></a></li>
+      </ul>
+    </div>
+    <!--/Social Buttons--> 
+  </div>
+  <!--Footer--> 
+</div>
+
+<!-- scroll top -->
+<div class="scroll-top-wrapper hidden-xs"> <i class="fa fa-angle-up"></i> </div>
+<!-- /scroll top --> 
+
+<!--Scripts--> 
+
+<script type="text/javascript" src="js/vendors/jquery/jquery.min.js"></script> 
+
+<!--BS-->
+<script type="text/javascript" src="js/vendors/bootstrap/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script> 
+
+<!--Gritter Notification-->
+<script type="text/javascript" src="js/vendors/gritter/jquery.gritter.min.js"></script> 
+
+<!--JCart-->
+<script type="text/javascript" src="js/vendors/jcart/localstorage-jcart.js"></script> 
+<script>
+    /* === SHOW MESSAGES === */
+    $('.cart-message, .wish-message').css('display','none');
+    function showMessage(value) {
+        $.gritter.add({
+            title: ' Information',				            // (string | mandatory) the heading of the notification
+            text: $('.' + value + '-message p').text(),	    // (string | mandatory) the text inside the notification
+            time: 2000							            // (int | optional) the time you want it to be alive for before fading out (milliseconds)
+        });
+    }
+    /* === END SHOW MESSAGES === */
+</script> 
+
+<!--Forms--> 
+<script type="text/javascript" src="js/vendors/forms/jquery.form.min.js"></script> 
+<script type="text/javascript" src="js/vendors/forms/jquery.validate.min.js"></script> 
+<script type="text/javascript" src="js/vendors/forms/jquery.maskedinput.min.js"></script> 
+
+
+<!--Main Script--> 
+<script type="text/javascript" src="js/frontend.js"></script>
+
+</body>
+</html>
