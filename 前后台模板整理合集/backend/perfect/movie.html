@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Perfect Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Font Awesome -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- Pace -->
+	<link href="css/pace.css" rel="stylesheet">
+	
+	<!-- jcarousel -->
+	<link href="css/jcarousel.responsive.css" rel="stylesheet">
+
+	<!-- Perfect -->
+	<link href="css/app.min.css" rel="stylesheet">
+	<link href="css/app-skin.css" rel="stylesheet">
+	
+  </head>
+
+  <body class="overflow-hidden">
+	<!-- Overlay Div -->
+	<div id="overlay" class="transparent"></div>
+
+	<a href="" id="theme-setting-icon"><i class="fa fa-cog fa-lg"></i></a>
+	<div id="theme-setting">
+		<div class="title">
+			<strong class="no-margin">Skin Color</strong>
+		</div>
+		<div class="theme-box">
+			<a class="theme-color" style="background:#323447" id="default"></a>
+			<a class="theme-color" style="background:#efefef" id="skin-1"></a>
+			<a class="theme-color" style="background:#a93922" id="skin-2"></a>
+			<a class="theme-color" style="background:#3e6b96" id="skin-3"></a>
+			<a class="theme-color" style="background:#635247" id="skin-4"></a>
+			<a class="theme-color" style="background:#3a3a3a" id="skin-5"></a>
+			<a class="theme-color" style="background:#495B6C" id="skin-6"></a>
+		</div>
+		<div class="title">
+			<strong class="no-margin">Sidebar Menu</strong>
+		</div>
+		<div class="theme-box">
+			<label class="label-checkbox">
+				<input type="checkbox" checked id="fixedSidebar">
+				<span class="custom-checkbox"></span>
+				Fixed Sidebar
+			</label>
+		</div>
+	</div><!-- /theme-setting -->
+	
+	<div id="wrapper" class="preload sidebar-mini">
+		<div id="top-nav" class="skin-6 fixed">
+			<div class="brand">
+				<span>Perfect</span>
+				<span class="text-toggle"> Admin</span>
+			</div><!-- /brand -->
+			<button type="button" class="navbar-toggle pull-left" id="sidebarToggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<button type="button" class="navbar-toggle pull-left hide-menu" id="menuToggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<ul class="nav-notification clearfix">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-envelope fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay4">7</span>
+					</a>
+					<ul class="dropdown-menu message dropdown-1">
+						<li><a>You have 4 new unread messages</a></li>					  
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>John Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-check text-success"></i> 27m ago</small>
+								</div>
+							</a>	
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user2.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Jane Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-check text-success"></i> 5hr ago</small>
+								</div>
+							</a>	
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Bill Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-reply"></i> Yesterday</small>
+								</div>
+							</a>	
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user2.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Baby Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-reply"></i> 9 Feb 2013</small>
+								</div>
+							</a>	
+						</li>
+						<li><a href="#">View all messages</a></li>					  
+					</ul>
+				</li>
+				<li class="dropdown hidden-xs">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-tasks fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay5">4</span>
+					</a>
+					<ul class="dropdown-menu task dropdown-2">
+						<li><a href="#">You have 4 tasks to complete</a></li>					  
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Bug Fixes</span>
+									<small class="pull-right text-muted">78%</small>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" style="width:78%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Software Updating</span>
+									<small class="pull-right text-muted">54%</small>
+								</div>
+								<div class="progress progress-striped">
+									<div class="progress-bar progress-bar-success" style="width:54%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Database Migration</span>
+									<small class="pull-right text-muted">23%</small>
+								</div>
+								<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width:23%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Unit Testing</span>
+									<small class="pull-right text-muted">92%</small>
+								</div>
+								<div class="progress progress-striped active">
+									<div class="progress-bar progress-bar-danger " style="width:92%"></div>
+								</div>
+							</a>
+						</li>
+						<li><a href="#">View all tasks</a></li>					  
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-bell fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay6">5</span>
+					</a>
+					<ul class="dropdown-menu notification dropdown-3">
+						<li><a href="#">You have 5 new notifications</a></li>					  
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-warning">
+									<i class="fa fa-warning"></i>
+								</span>
+								<span class="m-left-xs">Server #2 not responding.</span>
+								<span class="time text-muted">Just now</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+								<span class="m-left-xs">New user registration.</span>
+								<span class="time text-muted">2m ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-danger">
+									<i class="fa fa-bolt"></i>
+								</span>
+								<span class="m-left-xs">Application error.</span>
+								<span class="time text-muted">5m ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-usd"></i>
+								</span>
+								<span class="m-left-xs">2 items sold.</span>
+								<span class="time text-muted">1hr ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+								<span class="m-left-xs">New user registration.</span>
+								<span class="time text-muted">1hr ago</span>
+							</a>
+						</li>
+						<li><a href="#">View all notifications</a></li>					  
+					</ul>
+				</li>
+				<li class="profile dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<strong>John Doe</strong>
+						<span><i class="fa fa-chevron-down"></i></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>John Doe</strong>
+									<p class="grey">John_Doe@email.com</p> 
+								</div>
+							</a>
+						</li>
+						<li><a tabindex="-1" href="profile.html" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit profile</a></li>
+						<li><a tabindex="-1" href="gallery.html" class="main-link"><i class="fa fa-picture-o fa-lg"></i> Photo Gallery</a></li>
+						<li><a tabindex="-1" href="#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1" class="main-link logoutConfirm_open" href="#logoutConfirm"><i class="fa fa-lock fa-lg"></i> Log out</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /top-nav-->
+		
+		<aside class="fixed skin-6">	
+			<div class="sidebar-inner scrollable-sidebar">
+				<div class="size-toggle">
+					<a class="btn btn-sm" id="sizeToggle">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="btn btn-sm pull-right logoutConfirm_open"  href="#logoutConfirm">
+						<i class="fa fa-power-off"></i>
+					</a>
+				</div><!-- /size-toggle -->	
+				<div class="user-block clearfix">
+					<img src="img/user.jpg" alt="User Avatar">
+					<div class="detail">
+						<strong>John Doe</strong><span class="badge badge-danger bounceIn animation-delay4 m-left-xs">4</span>
+						<ul class="list-inline">
+							<li><a href="profile.html">Profile</a></li>
+							<li><a href="inbox.html" class="no-margin">Inbox</a></li>
+						</ul>
+					</div>
+				</div><!-- /user-block -->
+				<div class="search-block">
+					<div class="input-group">
+						<input type="text" class="form-control input-sm" placeholder="search here...">
+						<span class="input-group-btn">
+							<button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
+						</span>
+					</div><!-- /input-group -->
+				</div><!-- /search-block -->
+				<div class="main-menu">
+					<ul>
+						<li>
+							<a href="index.html">
+								<span class="menu-icon">
+									<i class="fa fa-desktop fa-lg"></i> 
+								</span>
+								<span class="text">
+									Dashboard
+								</span>
+								<span class="menu-hover"></span>
+							</a>
+						</li>
+						<li class="active openable open">
+							<a href="#">
+								<span class="menu-icon">
+									<i class="fa fa-file-text fa-lg"></i> 
+								</span>
+								<span class="text">
+									Page
+								</span>
+								<span class="menu-hover"></span>
+							</a>
+							<ul class="submenu">
+								<li><a href="login.html"><span class="submenu-label">Sign in</span></a></li>
+								<li><a href="register.html"><span class="submenu-label">Sign up</span></a></li>
+								<li><a href="lock_screen.html"><span class="submenu-label">Lock Screen</span></a></li>
+								<li><a href="profile.html"><span class="submenu-label">Profile</span></a></li>
+								<li><a href="blog.html"><span class="submenu-label">Blog</span></a></li>
+								<li><a href="single_post.html"><span class="submenu-label">Single Post</span></a></li>
+								<li><a href="landing.html"><span class="submenu-label">Landing</span></a></li>
+								<li><a href="search_result.html"><span class="submenu-label">Search Result</span></a></li>
+								<li><a href="chat.html"><span class="submenu-label">Chat Room</span></a></li>
+								<li class="active"><a href="movie.html"><span class="submenu-label">Movie Gallery</span></a></li>
+								<li><a href="pricing.html"><span class="submenu-label">Pricing</span></a></li>
+								<li><a href="invoice.html"><span class="submenu-label">Invoice</span></a></li>
+								<li><a href="faq.html"><span class="submenu-label">FAQ</span></a></li>
+								<li><a href="contact.html"><span class="submenu-label">Contact</span></a></li>
+								<li><a href="error404.html"><span class="submenu-label">Error404</span></a></li>
+								<li><a href="error500.html"><span class="submenu-label">Error500</span></a></li>
+								<li><a href="blank.html"><span class="submenu-label">Blank</span></a></li>
+							</ul>
+						</li>
+						<li class="openable">
+							<a href="#">
+								<span class="menu-icon">
+									<i class="fa fa-tag fa-lg"></i> 
+								</span>
+								<span class="text">
+									Component
+								</span>
+								<span class="badge badge-success bounceIn animation-delay5">9</span>
+								<span class="menu-hover"></span>
+							</a>
+							<ul class="submenu">
+								<li><a href="ui_element.html"><span class="submenu-label">UI Features</span></a></li>
+								<li><a href="button.html"><span class="submenu-label">Button & Icons</span></a></li>
+								<li><a href="tab.html"><span class="submenu-label">Tab</span></a></li>
+								<li><a href="nestable_list.html"><span class="submenu-label">Nestable List</span></a></li>
+								<li><a href="calendar.html"><span class="submenu-label">Calendar</span></a></li>
+								<li><a href="table.html"><span class="submenu-label">Table</span></a></li>
+								<li><a href="widget.html"><span class="submenu-label">Widget</span></a></li>
+								<li><a href="form_element.html"><span class="submenu-label">Form Element</span></a></li>
+								<li><a href="form_wizard.html"><span class="submenu-label">Form Wizard</span></a></li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="timeline.html">
+								<span class="menu-icon">
+									<i class="fa fa-clock-o fa-lg"></i> 
+								</span>
+								<span class="text">
+									Timeline
+								</span>
+								<span class="menu-hover"></span>
+							</a>
+						</li>
+						<li>
+							<a href="gallery.html">
+								<span class="menu-icon">
+									<i class="fa fa-picture-o fa-lg"></i> 
+								</span>
+								<span class="text">
+									Gallery
+								</span>
+								<span class="menu-hover"></span>
+							</a>
+						</li>
+						<li>
+							<a href="inbox.html">
+								<span class="menu-icon">
+									<i class="fa fa-envelope fa-lg"></i> 
+								</span>
+								<span class="text">
+									Inbox
+								</span>
+								<span class="badge badge-danger bounceIn animation-delay6">4</span>
+								<span class="menu-hover"></span>
+							</a>
+						</li>
+						<li>
+							<a href="email_selection.html">
+								<span class="menu-icon">
+									<i class="fa fa-tasks fa-lg"></i> 
+								</span>
+								<span class="text">
+									Email Template
+								</span>
+								<small class="badge badge-warning bounceIn animation-delay7">New</small>
+								<span class="menu-hover"></span>
+							</a>
+						</li>
+						<li class="openable">
+							<a href="#">
+								<span class="menu-icon">
+									<i class="fa fa-magic fa-lg"></i> 
+								</span>
+								<span class="text">
+									Multi-Level menu
+								</span>
+								<span class="menu-hover"></span>
+							</a>
+							<ul class="submenu">
+								<li class="openable">
+									<a href="#">
+										<span class="submenu-label">menu 2.1</span>
+										<span class="badge badge-danger bounceIn animation-delay1 pull-right">3</span>
+									</a>
+									<ul class="submenu third-level">
+										<li><a href="#"><span class="submenu-label">menu 3.1</span></a></li>
+										<li><a href="#"><span class="submenu-label">menu 3.2</span></a></li>
+										<li class="openable">
+											<a href="#">
+												<span class="submenu-label">menu 3.3</span>
+												<span class="badge badge-danger bounceIn animation-delay1 pull-right">2</span>
+											</a>
+											<ul class="submenu fourth-level">
+												<li><a href="#"><span class="submenu-label">menu 4.1</span></a></li>
+												<li><a href="#"><span class="submenu-label">menu 4.2</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="openable">
+									<a href="#">
+										<span class="submenu-label">menu 2.2</span>
+										<span class="badge badge-success bounceIn animation-delay2 pull-right">3</span>
+									</a>
+									<ul class="submenu third-level">
+										<li class="openable">
+											<a href="#">
+												<span class="submenu-label">menu 3.1</span>
+												<span class="badge badge-success bounceIn animation-delay1 pull-right">2</span>
+											</a>
+											<ul class="submenu fourth-level">
+												<li><a href="#"><span class="submenu-label">menu 4.1</span></a></li>
+												<li><a href="#"><span class="submenu-label">menu 4.2</span></a></li>
+											</ul>
+										</li>
+										<li><a href="#"><span class="submenu-label">menu 3.2</span></a></li>
+										<li><a href="#"><span class="submenu-label">menu 3.3</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<div class="alert alert-info">
+						Welcome to Perfect Admin. Do not forget to check all my pages. 
+					</div>
+				</div><!-- /main-menu -->
+			</div><!-- /sidebar-inner scrollable-sidebar -->
+		</aside>
+
+		<div id="main-container" class="bg-dark">
+			<div class="padding-sm">
+				<nav class="navbar navbar-inverse">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#galleryNavigation">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <a class="navbar-brand" href="#">Gallery</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="galleryNavigation">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Movie Trailer</a></li>
+							<li><a href="#">Animation</a></li>
+							<li><a href="#">New Movies</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Categories <b class="caret"></b></a>
+								<ul class="dropdown-menu flipInV" role="menu">
+									<li role="presentation" class="dropdown-header">Movie Categories</li>
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Comedies</a></li>
+									<li><a href="#">Horror</a></li>
+									<li role="presentation" class="dropdown-header">Game Categories</li>
+									<li><a href="#">Role-playing game</a></li>
+									<li><a href="#">Card game</a></li>
+									<li><a href="#">Mobile game</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</nav>
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="panel panel-default panel-dark" id="featuredMovie">
+							<div class="panel-heading">
+								Featured Movie
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-sm-12 col-xs-6">
+										<img src="img/movie/preview4.jpg" alt="Movie Preview">
+									</div><!-- /.col -->
+									<div class="col-sm-12 col-xs-6">
+										<h5 class="featured-name">Freddy Krueker</h5>
+										<p class="ellipsis">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
+										</p>
+										<a class="btn btn-sm btn-danger">Read more</a>
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+							</div>
+						</div><!-- /panel -->
+					</div><!-- /.col -->
+					<div class="col-sm-9">
+						<div id="movieSlider" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="img/movie/preview1.jpg" alt="First slide">
+									<div class="row">
+										<div class="col-md-5 text-right">
+											<h4 class="m-top-lg m-right-md m-bottom-xs text-warning fadeInRightLarge animation-delay4">Perfect Admin</h4>
+											<h3 class="m-top-xs m-right-md text-white fadeInUpLarge animation-delay10">Modern web application</h3>
+										</div><!-- /.col -->
+									</div><!-- /.row -->
+								</div>
+								<div class="item">
+									<img src="img/movie/preview2.jpg" alt="Second slide">
+									<div class="text-center">
+											<h4 class="m-top-lg m-right-md m-bottom-xs text-white fadeInDownLarge animation-delay4">100% Responsive</h4>
+											<h3 class="m-top-xs m-right-md text-white fadeInLeftLarge animation-delay6">Easy to customize</h3>
+									</div>
+								</div>
+								<div class="item">
+									<img src="img/movie/preview3.jpg" alt="Third slide">
+									<div class="m-top-lg text-center">
+										<h3>
+											<span class="block bounceIn text-white animation-delay4">Perfect Admin</span>
+											<a href="#" class="btn btn-danger m-top-md bounceInDown animation-delay10">Purchase Now</a>
+										</h3>
+									</div>
+								</div>
+							</div><!-- /carousel-inner -->
+							<a class="left carousel-control" href="#movieSlider" data-slide="prev">
+								<span class="fa fa-chevron-left"></span>
+							</a>
+							<a class="right carousel-control" href="#movieSlider" data-slide="next">
+								<span class="fa fa-chevron-right"></span>
+							</a>
+						</div><!-- /carousel -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+				<div class="row">
+					<div class="col-md-3">
+						<div class="panel panel-default panel-dark">
+							<div class="panel-heading">
+								New Movies
+							</div>
+							<div class="panel-body no-padding">
+								<ul class="movie-list">
+									<li class="clearfix">
+										<img src="img/movie/preview8.jpg" alt="Gallery 1">
+										<a href="#" class="h5 block primary-font m-bottom-xs">Titanic</a>
+										<small class="block ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+									</li>
+									<li class="clearfix">
+										<img src="img/movie/preview9.jpg" alt="Gallery 2">
+										<a href="#" class="h5 block primary-font m-bottom-xs">Troy</a>
+										<small class="block ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+									</li>
+									<li class="clearfix">
+										<img src="img/movie/preview10.jpg" alt="Gallery 3">
+										<a href="#" class="h5 block primary-font m-bottom-xs">Transformer</a>
+										<small class="block ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+									</li>
+									<li class="clearfix">
+										<img src="img/movie/preview11.jpg" alt="Gallery 4">
+										<a href="#" class="h5 block primary-font m-bottom-xs">Star War</a>
+										<small class="block ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="m-bottom-md hidden-sm hidden-xs">
+							<h5 class="text-muted">Advertisement</h5>
+							<img data-src="holder.js/300x150" alt="Advertisement" src=".">
+						</div>
+						<div class="m-bottom-md hidden-sm hidden-xs">
+							<img data-src="holder.js/300x150" alt="Advertisement" src=".">
+						</div>
+						<div class="m-bottom-md hidden-sm hidden-xs">
+							<img data-src="holder.js/300x150" alt="Advertisement" src=".">
+						</div>
+					</div><!-- /.col -->
+					<div class="col-md-9">
+						<h4 class="headline dark text-white">
+							Popular Movies
+							<span class="line"></span>
+						</h4>
+						<div class="jcarousel-wrapper">
+							<div class="jcarousel movie-jcarousel" id="popularMovie">
+								<ul>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview4.jpg" alt="Image 1">
+											<div class="quick-detail text-white">
+												<h5>Freddy Krueker</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview5.jpg" alt="Image 2">
+											<div class="quick-detail text-white">
+												<h5>Toy Story</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>	
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview6.jpg" alt="Image 3">
+											<div class="quick-detail text-white">
+												<h5>Walking Dead</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview7.jpg" alt="Image 4">
+											<div class="quick-detail text-white">
+												<h5>Splice</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview8.jpg" alt="Image 5">
+											<div class="quick-detail text-white">
+												<h5>The Hunger game</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview9.jpg" alt="Image 6">
+											<div class="quick-detail text-white">
+												<h5>The Other Guys</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+							<a href="#" class="jcarousel-control-next">&rsaquo;</a>
+						</div><!-- /jcarousel-wrapper -->
+						
+						<div class="padding-sm text-right">
+							<a href="#" class="primary-font">See All</a>
+						</div>
+						
+						<h4 class="headline dark text-white">
+							New Games
+							<span class="line"></span>
+						</h4>
+						
+						<div class="jcarousel-wrapper">
+							<div class="jcarousel movie-jcarousel" id="newGame">
+								<ul>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview10.jpg" alt="Image 1">
+											<div class="quick-detail text-white">
+												<h5>Game 1</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview11.jpg" alt="Image 2">
+											<div class="quick-detail text-white">
+												<h5>Game 2</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>	
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview12.jpg" alt="Image 3">
+											<div class="quick-detail text-white">
+												<h5>Game 3</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>	
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview13.jpg" alt="Image 4">
+											<div class="quick-detail text-white">
+												<h5>Game 4</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>	
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview14.jpg" alt="Image 5">
+											<div class="quick-detail text-white">
+												<h5>Game 5</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>	
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/movie/preview15.jpg" alt="Image 6">
+											<div class="quick-detail text-white">
+												<h5>Game 6</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p>
+											</div>	
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+							<a href="#" class="jcarousel-control-next">&rsaquo;</a>
+						</div><!-- /jcarousel-wrapper -->
+						
+						<div class="padding-sm text-right">
+							<a href="#" class="primary-font">See All</a>
+						</div>
+						
+						<h4 class="headline dark text-white">
+							Movie News
+							<span class="line"></span>
+						</h4>
+						
+						<ul class="movie-news">
+							<li class="clearfix">
+								<img src="img/movie/preview4.jpg" alt="news image">
+								<div class="news-wrapper">
+									<div class="news-header">Lorem ipsum dolor sit amet</div>
+									<div class="news-body">
+										<small class="block text-muted m-bottom-sm">By <a href="#"><strong> John Doe</strong></a> |  Post on Jan 3, 2014  | 12 comments</small>
+										<p class="text-white">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit. Nunc vel tempor nisi. Aenean id pellentesque mi, non placerat mi. Integer luctus accumsan tellus. Vivamus quis elit sit amet nibh lacinia suscipit eu quis purus. Vivamus tristique est non ipsum dapibus lacinia sed nec metus.
+											<a href="#" class="primary-font m-left-xs">Read more</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="clearfix">
+								<img src="img/movie/preview5.jpg" alt="news image">
+								<div class="news-wrapper">
+									<div class="news-header">Lorem ipsum dolor sit amet</div>
+									<div class="news-body">
+										<small class="block text-muted m-bottom-sm">By <a href="#"><strong> Admin</strong></a> |  Post on Jan 2, 2014  | 33 comments</small>
+										<p class="text-white">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit. Nunc vel tempor nisi. Aenean id pellentesque mi, non placerat mi. Integer luctus accumsan tellus. Vivamus quis elit sit amet nibh lacinia suscipit eu quis purus. Vivamus tristique est non ipsum dapibus lacinia sed nec metus.
+											<a href="#" class="primary-font m-left-xs">Read more</a>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="clearfix">
+								<img src="img/movie/preview6.jpg" alt="news image">
+								<div class="news-wrapper">
+									<div class="news-header">Lorem ipsum dolor sit amet</div>
+									<div class="news-body">
+										<small class="block text-muted m-bottom-sm">By <a href="#"><strong> Admin</strong></a> |  Post on Jan 1, 2014  | 7 comments</small>
+										<p class="text-white">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit. Nunc vel tempor nisi. Aenean id pellentesque mi, non placerat mi. Integer luctus accumsan tellus. Vivamus quis elit sit amet nibh lacinia suscipit eu quis purus. Vivamus tristique est non ipsum dapibus lacinia sed nec metus.
+											<a href="#" class="primary-font m-left-xs">Read more</a>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div><!-- /.col -->
+				</div><!-- ./row -->
+			</div><!-- /.padding-sm -->
+		</div><!-- /main-container -->
+		<footer class="dark">
+			<div class="row">
+				<div class="col-sm-3 padding-md">
+					<p class="block">About Our Company</p>
+					<p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor suscipit lobortis.</small></p>
+				</div><!-- /.col -->
+				<div class="col-sm-3 padding-md">
+					<p class="block">Useful Links</p>
+					<ul class="list-unstyled useful-link">
+						<li>
+							<a href="#">
+								<small><i class="fa fa-chevron-right"></i> Our Profile</small>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small><i class="fa fa-chevron-right"></i> New Products</small>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<small><i class="fa fa-chevron-right"></i> Support Portal</small>
+							</a>
+						</li>
+					</ul>
+				</div><!-- /.col -->
+				<div class="col-sm-3 padding-md">
+					<p class="block">Stay Connect</p>
+					<a href="#" class="social-connect tooltip-test facebook-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="social-connect tooltip-test twitter-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="social-connect tooltip-test google-plus-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Google Plus"><i class="fa fa-google-plus"></i></a>
+					<a href="#" class="social-connect tooltip-test rss-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Rss feed"><i class="fa fa-rss"></i></a>
+					<a href="#" class="social-connect tooltip-test tumblr-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Tumblr"><i class="fa fa-tumblr"></i></a>
+					<a href="#" class="social-connect tooltip-test dribbble-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Dribbble"><i class="fa fa-dribbble"></i></a>
+					<a href="#" class="social-connect tooltip-test linkedin-hover pull-left m-right-xs" data-toggle="tooltip" data-original-title="Linkedin"><i class="fa fa-linkedin"></i></a>
+					<a href="#" class="social-connect tooltip-test pinterest-hover pull-left" data-toggle="tooltip" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a>
+				</div><!-- /.col -->
+				<div class="col-sm-3 padding-md">
+					<p class="block">Contact Us</p>
+					Email : endless.themes@gmail.com
+					<div class="seperator"></div>
+					<a class="btn btn-sm btn-info"><i class="fa fa-envelope"></i> Contact support</a>
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</footer>
+	</div><!-- /wrapper -->
+
+	<a href="" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
+	
+	<!-- Logout confirmation -->
+	<div class="custom-popup width-100" id="logoutConfirm">
+		<div class="padding-md">
+			<h4 class="m-top-none"> Do you want to logout?</h4>
+		</div>
+
+		<div class="text-center">
+			<a class="btn btn-success m-right-sm" href="login.html">Logout</a>
+			<a class="btn btn-danger logoutConfirm_close">Cancel</a>
+		</div>
+	</div>
+	
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	
+	<!-- Jquery -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	
+	<!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+   
+    <!-- jcarousel -->
+	<script src='js/jquery.jcarousel.min.js'></script>
+	
+	<!-- Modernizr -->
+	<script src='js/modernizr.min.js'></script>
+	
+	<!-- Pace -->
+	<script src='js/pace.min.js'></script>
+	
+	<!-- Popup Overlay -->
+	<script src='js/jquery.popupoverlay.min.js'></script>
+	
+	<!-- Slimscroll -->
+	<script src='js/jquery.slimscroll.min.js'></script>
+
+	<!-- Resize -->
+	<script src='js/jquery.resize.min.js'></script>
+   
+    <!-- holder -->
+	<script src='js/uncompressed/holder.js'></script>
+   
+	<!-- Cookie -->
+	<script src='js/jquery.cookie.min.js'></script>
+
+	<!-- Perfect -->
+	<script src="js/app/app.js"></script>
+	
+	<script>
+		$(function()	{
+		
+			$('#popularMovie').on('jcarousel:create', function () {
+                var width = $('#popularMovie').innerWidth();
+
+                $('#popularMovie').jcarousel('items').css('width', width + 'px');
+            })
+            .jcarousel({
+                wrap: 'circular'
+            });
+			
+			$('#newGame').on('jcarousel:create', function () {
+                var width = $('#newGame').innerWidth();
+
+                $('#newGame').jcarousel('items').css('width', width + 'px');
+            })
+            .jcarousel({
+                wrap: 'circular'
+            });
+			
+			$('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+			$('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+		
+			$('.movie-jcarousel').resize(function()	{	
+				var width = $('.movie-jcarousel').innerWidth();
+				
+				if (Modernizr.mq('(min-width: 980px)')) {
+					width = width / 4;
+				} 
+				else if (Modernizr.mq('(min-width: 768px)') && Modernizr.mq('(max-width: 979px)')) {
+					width = width / 3;
+				}
+				else if (Modernizr.mq('(min-width: 351px)') && Modernizr.mq('(max-width: 767px)')) {
+					width = width / 2;
+				}
+				
+				$('#popularMovie').jcarousel('items').css('width', width + 'px');
+				$('#newGame').jcarousel('items').css('width', width + 'px');
+			});
+		});
+	
+	</script>
+	
+  </body>
+</html>
