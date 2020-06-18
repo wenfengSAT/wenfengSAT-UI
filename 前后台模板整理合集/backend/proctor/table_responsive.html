@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Proctor - by Creligent </title>
+<link href="favicon1.ico" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="css/lib/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="css/lib/ionicons/ionicons.min.css">
+<link rel="stylesheet" href="css/lib/daterangepicker/daterangepicker-bs3.css" />
+<link rel="stylesheet" href="css/lib/tabdrop/tabdrop.css" />
+<link rel="stylesheet" href="css/styles.css" id="theme-css" />
+</head>
+<body>
+<header>
+<nav class="navbar navbar-default navbar-transparent">
+<div class="container" id="nav-container">
+<div class="navbar-header">
+<button class="navbar-toggle navbar-toggle-settings" data-target="#top-navbar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i class="ion ion-ios7-gear-outline"></i>
+</button>
+<a class="navbar-brand logo" href="#">
+<img src="images/logo.png" alt="App logo" width="175">
+</a>
+<div class="navbar-side-menu-toggle">
+<button class="toggle-btn" type="button">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<div class="collapse navbar-collapse" id="top-navbar">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="page_home.html">Home</a></li>
+<li><a href="app_support.html" target="_blank"><i class="fa fa-support"></i> <span class="notification-title">Support</span></a></li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bell"></i> <span class="notification-title">Notifications</span><span class="badge badge-danger notification-badge">6</span></a>
+<div class="dropdown-menu notification-menu">
+<div class="panel panel-plain m-bot0">
+<div class="list-group">
+<a href="page_notifications.html" class="list-group-item">
+<i class="fa fa-ban text-danger"></i> Nikita Williams rejected an Action Step from you
+</a>
+<a href="page_notifications.html" class="list-group-item">
+<i class="fa fa-check-circle text-success"></i> You accepted an Action Step from Scott Marshall
+</a>
+</div>
+<div class="panel-footer p-0">
+<a href="page_notifications.html" class="btn btn-link btn-block m-bot0">View all</a>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="images/21.jpg" alt="Pic" class="user-settings-pic"> Regina Hanson <i class="fa fa-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="app_tour.html">App Tour</a></li>
+<li><a href="app_profile.html">My Profile</a></li>
+<li><a href="app_settings.html">Account Settings</a></li>
+<li class="divider"></li>
+<li><a href="app_login.html">Logout</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<div class="container" id="content-container">
+<div class="content-wrapper">
+<div class="row">
+<div class="side-nav-content">
+<div class="left-side-wrapper">
+<div class="left-side sticky-left-side">
+<div class="left-side-inner">
+<ul class="nav nav-pills nav-stacked custom-nav">
+<li class="menu-list "><a href="#"><i class="ion ion-speedometer"></i> <span>Dashboards</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="index_1.html">Company analytics</a>
+</li>
+<li >
+<a href="index_2.html">Sales board</a>
+</li>
+</ul>
+</li>
+<li class="nav-header">General</li>
+<li class="menu-list "><a href=""><i class="ion ion-wrench"></i> <span>UI Elements</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="ui_typography.html">Typography</a>
+</li>
+<li >
+<a href="ui_buttons.html">Buttons</a>
+</li>
+<li >
+<a href="ui_tabs.html">Tabs & Accordians</a>
+</li>
+<li >
+<a href="ui_panels.html">Panels</a>
+</li>
+<li >
+<a href="ui_alerts.html">Alerts & Modals</a>
+</li>
+<li >
+<a href="ui_icons.html">Icons</a>
+</li>
+<li >
+<a href="ui_components.html">Components</a>
+</li>
+<li >
+<a href="ui_calendar.html">Calendar</a>
+</li>
+<li >
+<a href="ui_list.html">List & Tree</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href=""><i class="ion ion-document"></i> <span>Forms</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="form_basic.html">Basic</a>
+</li>
+<li >
+<a href="form_advanced.html">Advanced</a>
+</li>
+<li >
+<a href="form_validation.html">Validation</a>
+</li>
+<li >
+<a href="form_editors.html">Editors</a>
+</li>
+</ul>
+</li>
+<li class="menu-list nav-active current"><a href=""><i class="ion ion-grid"></i> <span>Tables</span> <i class="ion ion-ios7-arrow-up pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="table_basic.html">Basic</a>
+</li>
+<li class="active">
+<a href="table_responsive.html">Responsive</a>
+</li>
+<li >
+<a href="table_datatables.html">Datatables</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href="#"><i class="ion ion-laptop"></i> <span>Layouts</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="layout_grid.html">Grid system</a>
+</li>
+<li >
+<a href="layout_full.html">Full-width</a>
+</li>
+<li >
+<a href="layout_blank.html">Blank page</a>
+</li>
+</ul>
+</li>
+<li class="nav-header">Charts & Maps</li>
+<li class="menu-list "><a href=""><i class="ion ion-arrow-graph-up-right"></i> <span>Charts</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="chart_flot.html">Flot</a>
+</li>
+<li >
+<a href="chart_morris.html">Morris.js</a>
+</li>
+<li >
+<a href="chart_c3.html">C3 charts</a>
+</li>
+<li >
+<a href="chart_others.html">Others</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href="#"><i class="ion ion-location"></i> <span>Maps</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="map_google.html">Google Maps</a>
+</li>
+<li >
+<a href="map_vector.html">Vector maps</a>
+</li>
+</ul>
+</li>
+<li class="nav-header">Application Pages</li>
+<li class="menu-list "><a href=""><i class="ion ion-settings"></i> <span>App Pages</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="app_login.html">Login</a>
+</li>
+<li >
+<a href="app_signup.html">Signup</a>
+</li>
+<li >
+<a href="app_forgot_password.html">Recover password</a>
+</li>
+<li >
+<a href="app_social_login.html">Social login</a>
+</li>
+<li >
+<a href="app_profile.html">User profile</a>
+</li>
+<li >
+<a href="app_invoice.html">Invoice</a>
+</li>
+<li >
+<a href="app_settings.html">Settings</a>
+</li>
+<li >
+<a href="app_tour.html">App tour</a>
+</li>
+<li >
+<a href="app_timeline.html">Timeline</a>
+</li>
+<li >
+<a href="app_support.html" target="_blank">Support</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href=""><i class="ion ion-document"></i> <span>Extra Pages</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="page_notifications.html">Notifications</a>
+</li>
+<li >
+<a href="page_faq.html">FAQs</a>
+</li>
+<li>
+<a href="404.html">404 Error</a>
+</li>
+<li>
+<a href="500.html">500 Error</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="main-content-wrapper">
+<div class="container-fluid container-padded dash-controls">
+<div class="row">
+<div class="col-md-12">
+<ol class="breadcrumb">
+<li><a href="#">Home</a></li>
+<li><a href="#">Library</a></li>
+<li class="active">Data</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="main-content">
+<section>
+<div class="container-fluid container-padded">
+<div class="row">
+<div class="col-md-12 page-title">
+<h2>Tables - Responsive</h2>
+<hr>
+</div>
+</div>
+</div>
+<div class="container-fluid container-padded">
+<div class="row">
+<div class="col-md-12">
+<div class="callout callout-info">
+Resize your browser to see the responsiveness of tables.
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Scrollable table</h3>
+</div>
+<div class="panel-body">
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>#</th>
+<th>Table heading</th>
+<th>Table heading</th>
+<th>Table heading</th>
+<th>Table heading</th>
+<th>Table heading</th>
+<th>Table heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+<td>Table cell</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Hide columns table</h3>
+</div>
+<div class="panel-body">
+<div id="hide-cols">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>Code</th>
+<th>Company</th>
+<th class="text-right">Price</th>
+<th class="text-right">Change</th>
+<th class="text-right">Change %</th>
+<th class="text-right">Open</th>
+<th class="text-right">High</th>
+<th class="text-right">Low</th>
+<th class="text-right">Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AAC</td>
+<td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+<td class="text-right">$1.38</td>
+<td class="text-right">-0.01</td>
+<td class="text-right">-0.36%</td>
+<td class="text-right">$1.39</td>
+<td class="text-right">$1.39</td>
+<td class="text-right">$1.38</td>
+<td class="text-right">9,395</td>
+</tr>
+<tr>
+<td>AAD</td>
+<td>ARDENT LEISURE GROUP</td>
+<td class="text-right">$1.15</td>
+<td class="text-right"> +0.02</td>
+<td class="text-right">1.32%</td>
+<td class="text-right">$1.14</td>
+<td class="text-right">$1.15</td>
+<td class="text-right">$1.13</td>
+<td class="text-right">56,431</td>
+</tr>
+<tr>
+<td>AAX</td>
+<td>AUSENCO LIMITED</td>
+<td class="text-right">$4.00</td>
+<td class="text-right">-0.04</td>
+<td class="text-right">-0.99%</td>
+<td class="text-right">$4.01</td>
+<td class="text-right">$4.05</td>
+<td class="text-right">$4.00</td>
+<td class="text-right">90,641</td>
+</tr>
+<tr>
+<td>ABC</td>
+<td>ADELAIDE BRIGHTON LIMITED</td>
+<td class="text-right">$3.00</td>
+<td class="text-right"> +0.06</td>
+<td class="text-right">2.04%</td>
+<td class="text-right">$2.98</td>
+<td class="text-right">$3.00</td>
+<td class="text-right">$2.96</td>
+<td class="text-right">862,518</td>
+</tr>
+<tr>
+<td>ABP</td>
+<td>ABACUS PROPERTY GROUP</td>
+<td class="text-right">$1.91</td>
+<td class="text-right">0.00</td>
+<td class="text-right">0.00%</td>
+<td class="text-right">$1.92</td>
+<td class="text-right">$1.93</td>
+<td class="text-right">$1.90</td>
+<td class="text-right">595,701</td>
+</tr>
+<tr>
+<td>ABY</td>
+<td>ADITYA BIRLA MINERALS LIMITED</td>
+<td class="text-right">$0.77</td>
+<td class="text-right"> +0.02</td>
+<td class="text-right">2.00%</td>
+<td class="text-right">$0.76</td>
+<td class="text-right">$0.77</td>
+<td class="text-right">$0.76</td>
+<td class="text-right">54,567</td>
+</tr>
+<tr>
+<td>ACR</td>
+<td>ACRUX LIMITED</td>
+<td class="text-right">$3.71</td>
+<td class="text-right"> +0.01</td>
+<td class="text-right">0.14%</td>
+<td class="text-right">$3.70</td>
+<td class="text-right">$3.72</td>
+<td class="text-right">$3.68</td>
+<td class="text-right">191,373</td>
+</tr>
+<tr>
+<td>ADU</td>
+<td>ADAMUS RESOURCES LIMITED</td>
+<td class="text-right">$0.72</td>
+<td class="text-right">0.00</td>
+<td class="text-right">0.00%</td>
+<td class="text-right">$0.73</td>
+<td class="text-right">$0.74</td>
+<td class="text-right">$0.72</td>
+<td class="text-right">8,602,291</td>
+</tr>
+<tr>
+<td>AGG</td>
+<td>ANGLOGOLD ASHANTI LIMITED</td>
+<td class="text-right">$7.81</td>
+<td class="text-right">-0.22</td>
+<td class="text-right">-2.74%</td>
+<td class="text-right">$7.82</td>
+<td class="text-right">$7.82</td>
+<td class="text-right">$7.81</td>
+<td class="text-right">148</td>
+</tr>
+<tr>
+<td>AGK</td>
+<td>AGL ENERGY LIMITED</td>
+<td class="text-right">$13.82</td>
+<td class="text-right"> +0.02</td>
+<td class="text-right">0.14%</td>
+<td class="text-right">$13.83</td>
+<td class="text-right">$13.83</td>
+<td class="text-right">$13.67</td>
+<td class="text-right">846,403</td>
+</tr>
+<tr>
+<td>AGO</td>
+<td>ATLAS IRON LIMITED</td>
+<td class="text-right">$3.17</td>
+<td class="text-right">-0.02</td>
+<td class="text-right">-0.47%</td>
+<td class="text-right">$3.11</td>
+<td class="text-right">$3.22</td>
+<td class="text-right">$3.10</td>
+<td class="text-right">5,416,303</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Add scrollbar table</h3>
+</div>
+<div class="panel-body">
+<div class="flip-scroll">
+<table class="table table-bordered table-striped table-scroll">
+<thead class="table-scroll">
+<tr>
+<th>Code</th>
+<th>Company</th>
+<th class="text-right">Price</th>
+<th class="text-right">Change</th>
+<th class="text-right">Change %</th>
+<th class="text-right">Open</th>
+<th class="text-right">High</th>
+<th class="text-right">Low</th>
+<th class="text-right">Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AAC</td>
+<td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+<td class="text-right">$1.38</td>
+<td class="text-right">-0.01</td>
+<td class="text-right">-0.36%</td>
+<td class="text-right">$1.39</td>
+<td class="text-right">$1.39</td>
+<td class="text-right">$1.38</td>
+<td class="text-right">9,395</td>
+</tr>
+<tr>
+<td>AAD</td>
+<td>ARDENT LEISURE GROUP</td>
+<td class="text-right">$1.15</td>
+<td class="text-right"> +0.02</td>
+<td class="text-right">1.32%</td>
+<td class="text-right">$1.14</td>
+<td class="text-right">$1.15</td>
+<td class="text-right">$1.13</td>
+<td class="text-right">56,431</td>
+</tr>
+<tr>
+<td>AAX</td>
+<td>AUSENCO LIMITED</td>
+<td class="text-right">$4.00</td>
+<td class="text-right">-0.04</td>
+<td class="text-right">-0.99%</td>
+<td class="text-right">$4.01</td>
+<td class="text-right">$4.05</td>
+<td class="text-right">$4.00</td>
+<td class="text-right">90,641</td>
+</tr>
+<tr>
+<td>ABC</td>
+<td>ADELAIDE BRIGHTON LIMITED</td>
+<td class="text-right">$3.00</td>
+<td class="text-right"> +0.06</td>
+<td class="text-right">2.04%</td>
+<td class="text-right">$2.98</td>
+<td class="text-right">$3.00</td>
+<td class="text-right">$2.96</td>
+<td class="text-right">862,518</td>
+</tr>
+<tr>
+<td>ABP</td>
+<td>ABACUS PROPERTY GROUP</td>
+<td class="text-right">$1.91</td>
+<td class="text-right">0.00</td>
+<td class="text-right">0.00%</td>
+<td class="text-right">$1.92</td>
+<td class="text-right">$1.93</td>
+<td class="text-right">$1.90</td>
+<td class="text-right">595,701</td>
+</tr>
+<tr>
+<td>ABY</td>
+<td>ADITYA BIRLA MINERALS LIMITED</td>
+<td class="text-right">$0.77</td>
+<td class="text-right"> +0.02</td>
+<td class="text-right">2.00%</td>
+<td class="text-right">$0.76</td>
+<td class="text-right">$0.77</td>
+<td class="text-right">$0.76</td>
+<td class="text-right">54,567</td>
+</tr>
+<tr>
+<td>ACR</td>
+<td>ACRUX LIMITED</td>
+<td class="text-right">$3.71</td>
+<td class="text-right"> +0.01</td>
+<td class="text-right">0.14%</td>
+<td class="text-right">$3.70</td>
+<td class="text-right">$3.72</td>
+<td class="text-right">$3.68</td>
+<td class="text-right">191,373</td>
+</tr>
+<tr>
+<td>ADU</td>
+<td>ADAMUS RESOURCES LIMITED</td>
+<td class="text-right">$0.72</td>
+<td class="text-right">0.00</td>
+<td class="text-right">0.00%</td>
+<td class="text-right">$0.73</td>
+<td class="text-right">$0.74</td>
+<td class="text-right">$0.72</td>
+<td class="text-right">8,602,291</td>
+</tr>
+<tr>
+<td>AGG</td>
+<td>ANGLOGOLD ASHANTI LIMITED</td>
+<td class="text-right">$7.81</td>
+<td class="text-right">-0.22</td>
+<td class="text-right">-2.74%</td>
+<td class="text-right">$7.82</td>
+<td class="text-right">$7.82</td>
+<td class="text-right">$7.81</td>
+<td class="text-right">148</td>
+</tr>
+<tr>
+<td>AGK</td>
+<td>AGL ENERGY LIMITED</td>
+<td class="text-right">$13.82</td>
+<td class="text-right"> +0.02</td>
+<td class="text-right">0.14%</td>
+<td class="text-right">$13.83</td>
+<td class="text-right">$13.83</td>
+<td class="text-right">$13.67</td>
+<td class="text-right">846,403</td>
+</tr>
+<tr>
+<td>AGO</td>
+<td>ATLAS IRON LIMITED</td>
+<td class="text-right">$3.17</td>
+<td class="text-right">-0.02</td>
+<td class="text-right">-0.47%</td>
+<td class="text-right">$3.11</td>
+<td class="text-right">$3.22</td>
+<td class="text-right">$3.10</td>
+<td class="text-right">5,416,303</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">No more table</h3>
+</div>
+<div class="panel-body">
+<div id="no-more-table">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>Code</th>
+<th>Company</th>
+<th class="text-right">Price</th>
+<th class="text-right">Change</th>
+<th class="text-right">Change %</th>
+<th class="text-right">Open</th>
+<th class="text-right">High</th>
+<th class="text-right">Low</th>
+<th class="text-right">Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-title="Code">AAC</td>
+<td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+<td class="text-right" data-title="Price">$1.38</td>
+<td class="text-right" data-title="Change">-0.01</td>
+<td class="text-right" data-title="Change %">-0.36%</td>
+<td class="text-right" data-title="Open">$1.39</td>
+<td class="text-right" data-title="High">$1.39</td>
+<td class="text-right" data-title="Low">$1.38</td>
+<td class="text-right" data-title="Volume">9,395</td>
+</tr>
+<tr>
+<td data-title="Code">AAD</td>
+<td data-title="Company">ARDENT LEISURE GROUP</td>
+<td class="text-right" data-title="Price">$1.15</td>
+<td class="text-right" data-title="Change"> +0.02</td>
+<td class="text-right" data-title="Change %">1.32%</td>
+<td class="text-right" data-title="Open">$1.14</td>
+<td class="text-right" data-title="High">$1.15</td>
+<td class="text-right" data-title="Low">$1.13</td>
+<td class="text-right" data-title="Volume">56,431</td>
+</tr>
+<tr>
+<td data-title="Code">AAX</td>
+<td data-title="Company">AUSENCO LIMITED</td>
+<td class="text-right" data-title="Price">$4.00</td>
+<td class="text-right" data-title="Change">-0.04</td>
+<td class="text-right" data-title="Change %">-0.99%</td>
+<td class="text-right" data-title="Open">$4.01</td>
+<td class="text-right" data-title="High">$4.05</td>
+<td class="text-right" data-title="Low">$4.00</td>
+<td class="text-right" data-title="Volume">90,641</td>
+</tr>
+<tr>
+<td data-title="Code">ABC</td>
+<td data-title="Company">ADELAIDE BRIGHTON LIMITED</td>
+<td class="text-right" data-title="Price">$3.00</td>
+<td class="text-right" data-title="Change"> +0.06</td>
+<td class="text-right" data-title="Change %">2.04%</td>
+<td class="text-right" data-title="Open">$2.98</td>
+<td class="text-right" data-title="High">$3.00</td>
+<td class="text-right" data-title="Low">$2.96</td>
+<td class="text-right" data-title="Volume">862,518</td>
+</tr>
+<tr>
+<td data-title="Code">ABP</td>
+<td data-title="Company">ABACUS PROPERTY GROUP</td>
+<td class="text-right" data-title="Price">$1.91</td>
+<td class="text-right" data-title="Change">0.00</td>
+<td class="text-right" data-title="Change %">0.00%</td>
+<td class="text-right" data-title="Open">$1.92</td>
+<td class="text-right" data-title="High">$1.93</td>
+<td class="text-right" data-title="Low">$1.90</td>
+<td class="text-right" data-title="Volume">595,701</td>
+</tr>
+<tr>
+<td data-title="Code">ABY</td>
+<td data-title="Company">ADITYA BIRLA MINERALS LIMITED</td>
+<td class="text-right" data-title="Price">$0.77</td>
+<td class="text-right" data-title="Change"> +0.02</td>
+<td class="text-right" data-title="Change %">2.00%</td>
+<td class="text-right" data-title="Open">$0.76</td>
+<td class="text-right" data-title="High">$0.77</td>
+<td class="text-right" data-title="Low">$0.76</td>
+<td class="text-right" data-title="Volume">54,567</td>
+</tr>
+<tr>
+<td data-title="Code">ACR</td>
+<td data-title="Company">ACRUX LIMITED</td>
+<td class="text-right" data-title="Price">$3.71</td>
+<td class="text-right" data-title="Change"> +0.01</td>
+<td class="text-right" data-title="Change %">0.14%</td>
+<td class="text-right" data-title="Open">$3.70</td>
+<td class="text-right" data-title="High">$3.72</td>
+<td class="text-right" data-title="Low">$3.68</td>
+<td class="text-right" data-title="Volume">191,373</td>
+</tr>
+<tr>
+<td data-title="Code">ADU</td>
+<td data-title="Company">ADAMUS RESOURCES LIMITED</td>
+<td class="text-right" data-title="Price">$0.72</td>
+<td class="text-right" data-title="Change">0.00</td>
+<td class="text-right" data-title="Change %">0.00%</td>
+<td class="text-right" data-title="Open">$0.73</td>
+<td class="text-right" data-title="High">$0.74</td>
+<td class="text-right" data-title="Low">$0.72</td>
+<td class="text-right" data-title="Volume">8,602,291</td>
+</tr>
+<tr>
+<td data-title="Code">AGG</td>
+<td data-title="Company">ANGLOGOLD ASHANTI LIMITED</td>
+<td class="text-right" data-title="Price">$7.81</td>
+<td class="text-right" data-title="Change">-0.22</td>
+<td class="text-right" data-title="Change %">-2.74%</td>
+<td class="text-right" data-title="Open">$7.82</td>
+<td class="text-right" data-title="High">$7.82</td>
+<td class="text-right" data-title="Low">$7.81</td>
+<td class="text-right" data-title="Volume">148</td>
+</tr>
+<tr>
+<td data-title="Code">AGK</td>
+<td data-title="Company">AGL ENERGY LIMITED</td>
+<td class="text-right" data-title="Price">$13.82</td>
+<td class="text-right" data-title="Change"> +0.02</td>
+<td class="text-right" data-title="Change %">0.14%</td>
+<td class="text-right" data-title="Open">$13.83</td>
+<td class="text-right" data-title="High">$13.83</td>
+<td class="text-right" data-title="Low">$13.67</td>
+<td class="text-right" data-title="Volume">846,403</td>
+</tr>
+<tr>
+<td data-title="Code">AGO</td>
+<td data-title="Company">ATLAS IRON LIMITED</td>
+<td class="text-right" data-title="Price">$3.17</td>
+<td class="text-right" data-title="Change">-0.02</td>
+<td class="text-right" data-title="Change %">-0.47%</td>
+<td class="text-right" data-title="Open">$3.11</td>
+<td class="text-right" data-title="High">$3.22</td>
+<td class="text-right" data-title="Low">$3.10</td>
+<td class="text-right" data-title="Volume">5,416,303</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline">
+<li><a href="#">About Us</a></li>
+<li><a href="#">FAQs</a></li>
+<li><a href="#">Support</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+<ul class="list-inline">
+<li><small>&copy; Proctor by Creligent</small></li>
+<li><small><a href="#">Privacy</a></small></li>
+<li><small><a href="#">Security</a></small></li>
+<li><small><a href="#">Terms of use</a></small></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/lib/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/lib/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/lib/slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="js/lib/momentjs/moment.min.js" type="text/javascript"></script>
+<script src="js/lib/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<script src="js/lib/tabdrop/bootstrap-tabdrop.js" type="text/javascript"></script>
+<script src="js/scripts.min.js" type="text/javascript"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45950338-1', 'creligent.com');
+  ga('send', 'pageview');
+
+</script></body>
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Proctor - by Creligent </title>
+<link href="favicon1.ico" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="css/lib/bootstrap/bootstrap.css" />
+<link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="css/lib/ionicons/ionicons.min.css">
+<link rel="stylesheet" href="css/lib/daterangepicker/daterangepicker-bs3.css" />
+<link rel="stylesheet" href="css/lib/datatables/datatables.css">
+<link rel="stylesheet" href="css/lib/tabdrop/tabdrop.css" />
+<link rel="stylesheet" href="css/styles.css" id="theme-css" />
+</head>
+<body>
+<header>
+<nav class="navbar navbar-default navbar-transparent">
+<div class="container" id="nav-container">
+<div class="navbar-header">
+<button class="navbar-toggle navbar-toggle-settings" data-target="#top-navbar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i class="ion ion-ios7-gear-outline"></i>
+</button>
+<a class="navbar-brand logo" href="#">
+<img src="images/logo.png" alt="App logo" width="175">
+</a>
+<div class="navbar-side-menu-toggle">
+<button class="toggle-btn" type="button">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<div class="collapse navbar-collapse" id="top-navbar">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="page_home.html">Home</a></li>
+<li><a href="app_support.html" target="_blank"><i class="fa fa-support"></i> <span class="notification-title">Support</span></a></li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bell"></i> <span class="notification-title">Notifications</span><span class="badge badge-danger notification-badge">6</span></a>
+<div class="dropdown-menu notification-menu">
+<div class="panel panel-plain m-bot0">
+<div class="list-group">
+<a href="page_notifications.html" class="list-group-item">
+<i class="fa fa-ban text-danger"></i> Nikita Williams rejected an Action Step from you
+</a>
+<a href="page_notifications.html" class="list-group-item">
+<i class="fa fa-check-circle text-success"></i> You accepted an Action Step from Scott Marshall
+</a>
+</div>
+<div class="panel-footer p-0">
+<a href="page_notifications.html" class="btn btn-link btn-block m-bot0">View all</a>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="images/21.jpg" alt="Pic" class="user-settings-pic"> Regina Hanson <i class="fa fa-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="app_tour.html">App Tour</a></li>
+<li><a href="app_profile.html">My Profile</a></li>
+<li><a href="app_settings.html">Account Settings</a></li>
+<li class="divider"></li>
+<li><a href="app_login.html">Logout</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<div class="container" id="content-container">
+<div class="content-wrapper">
+<div class="row">
+<div class="side-nav-content">
+<div class="left-side-wrapper">
+<div class="left-side sticky-left-side">
+<div class="left-side-inner">
+<ul class="nav nav-pills nav-stacked custom-nav">
+<li class="menu-list "><a href="#"><i class="ion ion-speedometer"></i> <span>Dashboards</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="index_1.html">Company analytics</a>
+</li>
+<li >
+<a href="index_2.html">Sales board</a>
+</li>
+</ul>
+</li>
+<li class="nav-header">General</li>
+<li class="menu-list "><a href=""><i class="ion ion-wrench"></i> <span>UI Elements</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="ui_typography.html">Typography</a>
+</li>
+<li >
+<a href="ui_buttons.html">Buttons</a>
+</li>
+<li >
+<a href="ui_tabs.html">Tabs & Accordians</a>
+</li>
+<li >
+<a href="ui_panels.html">Panels</a>
+</li>
+<li >
+<a href="ui_alerts.html">Alerts & Modals</a>
+</li>
+<li >
+<a href="ui_icons.html">Icons</a>
+</li>
+<li >
+<a href="ui_components.html">Components</a>
+</li>
+<li >
+<a href="ui_calendar.html">Calendar</a>
+</li>
+<li >
+<a href="ui_list.html">List & Tree</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href=""><i class="ion ion-document"></i> <span>Forms</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="form_basic.html">Basic</a>
+</li>
+<li >
+<a href="form_advanced.html">Advanced</a>
+</li>
+<li >
+<a href="form_validation.html">Validation</a>
+</li>
+<li >
+<a href="form_editors.html">Editors</a>
+</li>
+</ul>
+</li>
+<li class="menu-list nav-active current"><a href=""><i class="ion ion-grid"></i> <span>Tables</span> <i class="ion ion-ios7-arrow-up pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="table_basic.html">Basic</a>
+</li>
+<li >
+<a href="table_responsive.html">Responsive</a>
+</li>
+<li class="active">
+<a href="table_datatables.html">Datatables</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href="#"><i class="ion ion-laptop"></i> <span>Layouts</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="layout_grid.html">Grid system</a>
+</li>
+<li >
+<a href="layout_full.html">Full-width</a>
+</li>
+<li >
+<a href="layout_blank.html">Blank page</a>
+</li>
+</ul>
+</li>
+<li class="nav-header">Charts & Maps</li>
+<li class="menu-list "><a href=""><i class="ion ion-arrow-graph-up-right"></i> <span>Charts</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="chart_flot.html">Flot</a>
+</li>
+<li >
+<a href="chart_morris.html">Morris.js</a>
+</li>
+<li >
+<a href="chart_c3.html">C3 charts</a>
+</li>
+<li >
+<a href="chart_others.html">Others</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href="#"><i class="ion ion-location"></i> <span>Maps</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="map_google.html">Google Maps</a>
+</li>
+<li >
+<a href="map_vector.html">Vector maps</a>
+</li>
+</ul>
+</li>
+<li class="nav-header">Application Pages</li>
+<li class="menu-list "><a href=""><i class="ion ion-settings"></i> <span>App Pages</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="app_login.html">Login</a>
+</li>
+<li >
+<a href="app_signup.html">Signup</a>
+</li>
+<li >
+<a href="app_forgot_password.html">Recover password</a>
+</li>
+<li >
+<a href="app_social_login.html">Social login</a>
+</li>
+<li >
+<a href="app_profile.html">User profile</a>
+</li>
+<li >
+<a href="app_invoice.html">Invoice</a>
+</li>
+<li >
+<a href="app_settings.html">Settings</a>
+</li>
+<li >
+<a href="app_tour.html">App tour</a>
+</li>
+<li >
+<a href="app_timeline.html">Timeline</a>
+</li>
+<li >
+<a href="app_support.html" target="_blank">Support</a>
+</li>
+</ul>
+</li>
+<li class="menu-list "><a href=""><i class="ion ion-document"></i> <span>Extra Pages</span> <i class="ion ion-ios7-arrow-down pull-right"></i></a>
+<ul class="sub-menu-list">
+<li >
+<a href="page_notifications.html">Notifications</a>
+</li>
+<li >
+<a href="page_faq.html">FAQs</a>
+</li>
+<li>
+<a href="404.html">404 Error</a>
+</li>
+<li>
+<a href="500.html">500 Error</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="main-content-wrapper">
+<div class="container-fluid container-padded dash-controls">
+<div class="row">
+<div class="col-md-12">
+<ol class="breadcrumb">
+<li><a href="#">Home</a></li>
+<li><a href="#">Library</a></li>
+<li class="active">Data</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="main-content">
+<section>
+<div class="container-fluid container-padded">
+<div class="row">
+<div class="col-md-12 page-title">
+<h2>Datatables</h2>
+<hr>
+</div>
+</div>
+</div>
+<div class="container-fluid container-padded">
+<div class="row">
+<div class="col-md-12">
+<div class="panel panel-plain">
+<div class="panel-body">
+<div class="table-responsive">
+<table cellpadding="0" cellspacing="0" border="0" class="datatable table table-striped table-bordered">
+<thead>
+<tr>
+<th>Rendering engine</th>
+<th>Browser</th>
+<th>Platform(s)</th>
+<th>Engine version</th>
+<th>CSS grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="gradeX">
+<td>Trident</td>
+<td>
+Internet
+Explorer
+4.0
+</td>
+<td>Win 95+</td>
+<td class="center">4</td>
+<td class="center">X</td>
+</tr>
+<tr class="gradeC">
+<td>Trident</td>
+<td>Internet
+Explorer 5.0</td>
+<td>Win 95+</td>
+<td class="center">5</td>
+<td class="center">C</td>
+</tr>
+<tr class="gradeA">
+<td>Trident</td>
+<td>Internet
+Explorer 5.5</td>
+<td>Win 95+</td>
+<td class="center">5.5</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Trident</td>
+<td>Internet
+Explorer 6</td>
+<td>Win 98+</td>
+<td class="center">6</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Trident</td>
+<td>Internet Explorer 7</td>
+<td>Win XP SP2+</td>
+<td class="center">7</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Trident</td>
+<td>AOL browser (AOL desktop)</td>
+<td>Win XP</td>
+<td class="center">6</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Firefox 1.0</td>
+<td>Win 98+ / OSX.2+</td>
+<td class="center">1.7</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Firefox 1.5</td>
+<td>Win 98+ / OSX.2+</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Firefox 2.0</td>
+<td>Win 98+ / OSX.2+</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Firefox 3.0</td>
+<td>Win 2k+ / OSX.3+</td>
+<td class="center">1.9</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Camino 1.0</td>
+<td>OSX.2+</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Camino 1.5</td>
+<td>OSX.3+</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Netscape 7.2</td>
+<td>Win 95+ / Mac OS 8.6-9.2</td>
+<td class="center">1.7</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Netscape Browser 8</td>
+<td>Win 98SE+</td>
+<td class="center">1.7</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Netscape Navigator 9</td>
+<td>Win 98+ / OSX.2+</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.0</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">1</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.1</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">1.1</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.2</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">1.2</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.3</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">1.3</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.4</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">1.4</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.5</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">1.5</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.6</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">1.6</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.7</td>
+<td>Win 98+ / OSX.1+</td>
+<td class="center">1.7</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Mozilla 1.8</td>
+<td>Win 98+ / OSX.1+</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Seamonkey 1.1</td>
+<td>Win 98+ / OSX.2+</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Gecko</td>
+<td>Epiphany 2.20</td>
+<td>Gnome</td>
+<td class="center">1.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Webkit</td>
+<td>Safari 1.2</td>
+<td>OSX.3</td>
+<td class="center">125.5</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Webkit</td>
+<td>Safari 1.3</td>
+<td>OSX.3</td>
+<td class="center">312.8</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Webkit</td>
+<td>Safari 2.0</td>
+<td>OSX.4+</td>
+<td class="center">419.3</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Webkit</td>
+<td>Safari 3.0</td>
+<td>OSX.4+</td>
+<td class="center">522.1</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Webkit</td>
+<td>OmniWeb 5.5</td>
+<td>OSX.4+</td>
+<td class="center">420</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Webkit</td>
+<td>iPod Touch / iPhone</td>
+<td>iPod</td>
+<td class="center">420.1</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Webkit</td>
+<td>S60</td>
+<td>S60</td>
+<td class="center">413</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera 7.0</td>
+<td>Win 95+ / OSX.1+</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera 7.5</td>
+<td>Win 95+ / OSX.2+</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera 8.0</td>
+<td>Win 95+ / OSX.2+</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera 8.5</td>
+<td>Win 95+ / OSX.2+</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera 9.0</td>
+<td>Win 95+ / OSX.3+</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera 9.2</td>
+<td>Win 88+ / OSX.3+</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera 9.5</td>
+<td>Win 88+ / OSX.3+</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Opera for Wii</td>
+<td>Wii</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Nokia N800</td>
+<td>N800</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>Presto</td>
+<td>Nintendo DS browser</td>
+<td>Nintendo DS</td>
+<td class="center">8.5</td>
+<td class="center">C/A<sup>1</sup></td>
+</tr>
+<tr class="gradeC">
+<td>KHTML</td>
+<td>Konqureror 3.1</td>
+<td>KDE 3.1</td>
+<td class="center">3.1</td>
+<td class="center">C</td>
+</tr>
+<tr class="gradeA">
+<td>KHTML</td>
+<td>Konqureror 3.3</td>
+<td>KDE 3.3</td>
+<td class="center">3.3</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeA">
+<td>KHTML</td>
+<td>Konqureror 3.5</td>
+<td>KDE 3.5</td>
+<td class="center">3.5</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeX">
+<td>Tasman</td>
+<td>Internet Explorer 4.5</td>
+<td>Mac OS 8-9</td>
+<td class="center">-</td>
+<td class="center">X</td>
+</tr>
+<tr class="gradeC">
+<td>Tasman</td>
+<td>Internet Explorer 5.1</td>
+<td>Mac OS 7.6-9</td>
+<td class="center">1</td>
+<td class="center">C</td>
+</tr>
+<tr class="gradeC">
+<td>Tasman</td>
+<td>Internet Explorer 5.2</td>
+<td>Mac OS 8-X</td>
+<td class="center">1</td>
+<td class="center">C</td>
+</tr>
+<tr class="gradeA">
+<td>Misc</td>
+<td>NetFront 3.1</td>
+<td>Embedded devices</td>
+<td class="center">-</td>
+<td class="center">C</td>
+</tr>
+<tr class="gradeA">
+<td>Misc</td>
+<td>NetFront 3.4</td>
+<td>Embedded devices</td>
+<td class="center">-</td>
+<td class="center">A</td>
+</tr>
+<tr class="gradeX">
+<td>Misc</td>
+<td>Dillo 0.8</td>
+<td>Embedded devices</td>
+<td class="center">-</td>
+<td class="center">X</td>
+</tr>
+<tr class="gradeX">
+<td>Misc</td>
+<td>Links</td>
+<td>Text only</td>
+<td class="center">-</td>
+<td class="center">X</td>
+</tr>
+<tr class="gradeX">
+<td>Misc</td>
+<td>Lynx</td>
+<td>Text only</td>
+<td class="center">-</td>
+<td class="center">X</td>
+</tr>
+<tr class="gradeC">
+<td>Misc</td>
+<td>IE Mobile</td>
+<td>Windows Mobile 6</td>
+<td class="center">-</td>
+<td class="center">C</td>
+</tr>
+<tr class="gradeC">
+<td>Misc</td>
+<td>PSP browser</td>
+<td>PSP</td>
+<td class="center">-</td>
+<td class="center">C</td>
+</tr>
+<tr class="gradeU">
+<td>Other browsers</td>
+<td>All others</td>
+<td>-</td>
+<td class="center">-</td>
+<td class="center">U</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>Rendering engine</th>
+<th>Browser</th>
+<th>Platform(s)</th>
+<th>Engine version</th>
+<th>CSS grade</th>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline">
+<li><a href="#">About Us</a></li>
+<li><a href="#">FAQs</a></li>
+<li><a href="#">Support</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+<ul class="list-inline">
+<li><small>&copy; Proctor by Creligent</small></li>
+<li><small><a href="#">Privacy</a></small></li>
+<li><small><a href="#">Security</a></small></li>
+<li><small><a href="#">Terms of use</a></small></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/lib/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/lib/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/lib/slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="js/lib/momentjs/moment.min.js" type="text/javascript"></script>
+<script src="js/lib/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<script src="js/lib/tabdrop/bootstrap-tabdrop.js" type="text/javascript"></script>
+<script src="js/lib/datatables/jquery.dataTables.min.js"></script>
+<script src="js/lib/datatables/datatables.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('.datatable').dataTable({
+"sPaginationType": "bs_four_button"
+});
+$('.datatable').each(function(){
+var datatable = $(this);
+// SEARCH - Add the placeholder for Search and Turn this into in-line form control
+var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');
+search_input.attr('placeholder', 'Search');
+search_input.addClass('form-control input-sm');
+// LENGTH - Inline-Form control
+var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
+length_sel.addClass('form-control input-sm');
+});
+});
+</script>
+<script src="js/scripts.min.js" type="text/javascript"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45950338-1', 'creligent.com');
+  ga('send', 'pageview');
+
+</script></body>
+</html>
