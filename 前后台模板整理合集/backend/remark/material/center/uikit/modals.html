@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap material admin template">
+  <meta name="author" content="">
+
+  <title>Modals | Remark Material Admin Template</title>
+
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../global/css/bootstrap.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/css/bootstrap-extend.min.css?v2.1.0">
+  <link rel="stylesheet" href="../assets/css/site.min.css?v2.1.0">
+
+  <!-- Skin tools (demo site only) -->
+  <link rel="stylesheet" href="../../global/css/skintools.min.css?v2.1.0">
+  <script src="../assets/js/sections/skintools.min.js"></script>
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../../global/vendor/animsition/animsition.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/vendor/asscrollable/asScrollable.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/vendor/switchery/switchery.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/vendor/intro-js/introjs.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/vendor/slidepanel/slidePanel.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/vendor/flag-icon-css/flag-icon.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/vendor/waves/waves.min.css?v2.1.0">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="../assets/examples/css/uikit/modals.min.css?v2.1.0">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../../global/fonts/material-design/material-design.min.css?v2.1.0">
+  <link rel="stylesheet" href="../../global/fonts/brand-icons/brand-icons.min.css?v2.1.0">
+
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700'>
+
+
+  <!--[if lt IE 9]>
+    <script src="../../global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 10]>
+    <script src="../../global/vendor/media-match/media.match.min.js"></script>
+    <script src="../../global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- Scripts -->
+  <script src="../../global/vendor/modernizr/modernizr.min.js"></script>
+  <script src="../../global/vendor/breakpoints/breakpoints.min.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <nav class="site-navbar navbar navbar-inverse navbar-fixed-top navbar-mega" role="navigation">
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li id="toggleMenubar">
+            <a data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+            </a>
+          </li>
+          <li>
+            <a class="icon md-search" data-toggle="collapse" href="#site-navbar-search" role="button">
+              <span class="sr-only">Toggle Search</span>
+            </a>
+          </li>
+        </ul>
+        <!-- End Navbar Toolbar -->
+
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon md-notifications" aria-hidden="true"></i>
+              <span class="badge badge-danger up">5</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>NOTIFICATIONS</h5>
+                <span class="label label-round label-danger">New 5</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-receipt bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">A new order has been placed</h6>
+                          <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">5 hours ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-account bg-green-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Completed the task</h6>
+                          <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Settings updated</h6>
+                          <time class="media-meta" datetime="2015-06-11T14:05:00+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Event started</h6>
+                          <time class="media-meta" datetime="2015-06-10T13:50:18+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-comment bg-orange-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Message received</h6>
+                          <time class="media-meta" datetime="2015-06-10T12:34:48+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon md-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon md-email" aria-hidden="true"></i>
+              <span class="badge badge-info up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>MESSAGES</h5>
+                <span class="label label-round label-info">New 3</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../global/portraits/2.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Mary Adams</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
+                          </div>
+                          <div class="media-detail">Anyways, i would like just do it</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-off">
+                            <img src="../../global/portraits/3.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Caleb Richards</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T12:30:30+08:00">12 hours ago</time>
+                          </div>
+                          <div class="media-detail">I checheck the document. But there seems</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-busy">
+                            <img src="../../global/portraits/4.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">June Lane</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
+                          </div>
+                          <div class="media-detail">Lorem ipsum Id consectetur et minim</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-away">
+                            <img src="../../global/portraits/5.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Edward Fletcher</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-15T20:34:48+08:00">3 days ago</time>
+                          </div>
+                          <div class="media-detail">Dolor et irure cupidatat commodo nostrud nostrud.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon md-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    See all messages
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li id="toggleChat">
+            <a data-toggle="site-sidebar" href="javascript:void(0)" title="Chat" data-url="../site-sidebar.tpl">
+              <i class="icon md-comment" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+
+        <div class="navbar-brand navbar-brand-center">
+          <a href="../index.html">
+            <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
+          </a>
+        </div>
+      </div>
+      <!-- End Navbar Collapse -->
+
+      <!-- Site Navbar Seach -->
+      <div class="collapse navbar-search-overlap" id="site-navbar-search">
+        <form role="search">
+          <div class="form-group">
+            <div class="input-search">
+              <i class="input-search-icon md-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="site-search" placeholder="Search...">
+              <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
+              data-toggle="collapse" aria-label="Close"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- End Site Navbar Seach -->
+    </div>
+  </nav>
+  <div class="site-menubar">
+    <div class="site-menubar-header">
+      <div class="cover overlay">
+        <img class="cover-image" src="../assets/examples/images/dashboard-header.jpg" alt="...">
+        <div class="overlay-panel vertical-align overlay-background">
+          <div class="vertical-align-middle">
+            <a class="avatar avatar-lg" href="javascript:void(0)">
+              <img src="../../global/portraits/1.jpg" alt="">
+            </a>
+            <div class="site-menubar-info">
+              <h5 class="site-menubar-user">Machi</h5>
+              <p class="site-menubar-email">machidesign@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-menubar-body">
+      <div>
+        <div>
+          <ul class="site-menu">
+            <li class="site-menu-item">
+              <a class="animsition-link" href="../index.html">
+                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                <span class="site-menu-title">Layouts</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/menubar-fold.html">
+                    <span class="site-menu-title">Menubar Fold</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/menubar-disable-hover.html">
+                    <span class="site-menu-title">Menubar Disable Hover</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/menubar-open.html">
+                    <span class="site-menu-title">Menubar Open</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/menubar-push.html">
+                    <span class="site-menu-title">Menubar Push</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/grids.html">
+                    <span class="site-menu-title">Grid Scaffolding</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/layout-grid.html">
+                    <span class="site-menu-title">Layout Grid</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/headers.html">
+                    <span class="site-menu-title">Different Headers</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/panel-transition.html">
+                    <span class="site-menu-title">Panel Transition</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/boxed.html">
+                    <span class="site-menu-title">Boxed Layout</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../layouts/two-columns.html">
+                    <span class="site-menu-title">Two Columns</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
+                <span class="site-menu-title">Pages</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item has-sub">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Errors</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/error-400.html">
+                        <span class="site-menu-title">400</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/error-403.html">
+                        <span class="site-menu-title">403</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/error-404.html">
+                        <span class="site-menu-title">404</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/error-500.html">
+                        <span class="site-menu-title">500</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/error-503.html">
+                        <span class="site-menu-title">503</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/faq.html">
+                    <span class="site-menu-title">FAQ</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/gallery.html">
+                    <span class="site-menu-title">Gallery</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/gallery-grid.html">
+                    <span class="site-menu-title">Gallery Grid</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/search-result.html">
+                    <span class="site-menu-title">Search Result</span>
+                  </a>
+                </li>
+                <li class="site-menu-item has-sub">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Maps</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/map-google.html">
+                        <span class="site-menu-title">Google Maps</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/map-vector.html">
+                        <span class="site-menu-title">Vector Maps</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/maintenance.html">
+                    <span class="site-menu-title">Maintenance</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/forgot-password.html">
+                    <span class="site-menu-title">Forgot Password</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/lockscreen.html">
+                    <span class="site-menu-title">Lockscreen</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/login.html">
+                    <span class="site-menu-title">Login</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/register.html">
+                    <span class="site-menu-title">Register</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/login-v2.html">
+                    <span class="site-menu-title">Login V2</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/register-v2.html">
+                    <span class="site-menu-title">Register V2</span>
+                    <div class="site-menu-label">
+                      <span class="label label-info label-round">new</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/login-v3.html">
+                    <span class="site-menu-title">Login V3</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/register-v3.html">
+                    <span class="site-menu-title">Register V3</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/user.html">
+                    <span class="site-menu-title">User List</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/invoice.html">
+                    <span class="site-menu-title">Invoice</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/blank.html">
+                    <span class="site-menu-title">Blank Page</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/email.html">
+                    <span class="site-menu-title">Email</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/code-editor.html">
+                    <span class="site-menu-title">Code Editor</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/profile.html">
+                    <span class="site-menu-title">Profile</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/site-map.html">
+                    <span class="site-menu-title">Sitemap</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub active">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-palette" aria-hidden="true"></i>
+                <span class="site-menu-title">Basic UI</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item has-sub">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Panel</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="panel-structure.html">
+                        <span class="site-menu-title">Panel Structure</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="panel-actions.html">
+                        <span class="site-menu-title">Panel Actions</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="panel-portlets.html">
+                        <span class="site-menu-title">Panel Portlets</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="buttons.html">
+                    <span class="site-menu-title">Buttons</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="dropdowns.html">
+                    <span class="site-menu-title">Dropdowns</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="icons.html">
+                    <span class="site-menu-title">Icons</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="list.html">
+                    <span class="site-menu-title">List</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="tooltip-popover.html">
+                    <span class="site-menu-title">Tooltip &amp; Popover</span>
+                  </a>
+                </li>
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="modals.html">
+                    <span class="site-menu-title">Modals</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="tabs-accordions.html">
+                    <span class="site-menu-title">Tabs &amp; Accordions</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="images.html">
+                    <span class="site-menu-title">Images</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="badges-labels.html">
+                    <span class="site-menu-title">Badges &amp; Labels</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="progress-bars.html">
+                    <span class="site-menu-title">Progress Bars</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="carousel.html">
+                    <span class="site-menu-title">Carousel</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="typography.html">
+                    <span class="site-menu-title">Typography</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="colors.html">
+                    <span class="site-menu-title">Colors</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="utilities.html">
+                    <span class="site-menu-title">Utilties</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-format-color-fill" aria-hidden="true"></i>
+                <span class="site-menu-title">Advanced UI</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item hidden-xs site-tour-trigger">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Tour</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/animation.html">
+                    <span class="site-menu-title">Animation</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/highlight.html">
+                    <span class="site-menu-title">Highlight</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/lightbox.html">
+                    <span class="site-menu-title">Lightbox</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/scrollable.html">
+                    <span class="site-menu-title">Scrollable</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/rating.html">
+                    <span class="site-menu-title">Rating</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/context-menu.html">
+                    <span class="site-menu-title">Context Menu</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/alertify.html">
+                    <span class="site-menu-title">Alertify</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/masonry.html">
+                    <span class="site-menu-title">Masonry</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/treeview.html">
+                    <span class="site-menu-title">Treeview</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/toastr.html">
+                    <span class="site-menu-title">Toastr</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/maps-vector.html">
+                    <span class="site-menu-title">Vector Maps</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/maps-google.html">
+                    <span class="site-menu-title">Google Maps</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/sortable-nestable.html">
+                    <span class="site-menu-title">Sortable &amp; Nestable</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../advanced/bootbox-sweetalert.html">
+                    <span class="site-menu-title">Bootbox &amp; Sweetalert</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-puzzle-piece" aria-hidden="true"></i>
+                <span class="site-menu-title">Structure</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/alerts.html">
+                    <span class="site-menu-title">Alerts</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/ribbon.html">
+                    <span class="site-menu-title">Ribbon</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/pricing-tables.html">
+                    <span class="site-menu-title">Pricing Tables</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/overlay.html">
+                    <span class="site-menu-title">Overlay</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/cover.html">
+                    <span class="site-menu-title">Cover</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/timeline-simple.html">
+                    <span class="site-menu-title">Simple Timeline</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/timeline.html">
+                    <span class="site-menu-title">Timeline</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/step.html">
+                    <span class="site-menu-title">Step</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/comments.html">
+                    <span class="site-menu-title">Comments</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/media.html">
+                    <span class="site-menu-title">Media</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/chat.html">
+                    <span class="site-menu-title">Chat</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/testimonials.html">
+                    <span class="site-menu-title">Testimonials</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/nav.html">
+                    <span class="site-menu-title">Nav</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/navbars.html">
+                    <span class="site-menu-title">Navbars</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/blockquotes.html">
+                    <span class="site-menu-title">Blockquotes</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/pagination.html">
+                    <span class="site-menu-title">Pagination</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../structure/breadcrumbs.html">
+                    <span class="site-menu-title">Breadcrumbs</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-widgets" aria-hidden="true"></i>
+                <span class="site-menu-title">Widgets</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../widgets/statistics.html">
+                    <span class="site-menu-title">Statistics Widgets</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../widgets/data.html">
+                    <span class="site-menu-title">Data Widgets</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../widgets/blog.html">
+                    <span class="site-menu-title">Blog Widgets</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../widgets/chart.html">
+                    <span class="site-menu-title">Chart Widgets</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../widgets/social.html">
+                    <span class="site-menu-title">Social Widgets</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../widgets/weather.html">
+                    <span class="site-menu-title">Weather Widgets</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-comment-alt-text" aria-hidden="true"></i>
+                <span class="site-menu-title">Forms</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/general.html">
+                    <span class="site-menu-title">General Elements</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/material.html">
+                    <span class="site-menu-title">Material Elements</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/advanced.html">
+                    <span class="site-menu-title">Advanced Elements</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/layouts.html">
+                    <span class="site-menu-title">Form Layouts</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/wizard.html">
+                    <span class="site-menu-title">Form Wizard</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/validation.html">
+                    <span class="site-menu-title">Form Validation</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/masks.html">
+                    <span class="site-menu-title">Form Masks</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/editable.html">
+                    <span class="site-menu-title">Form Editable</span>
+                  </a>
+                </li>
+                <li class="site-menu-item has-sub">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Editors</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../forms/editor-summernote.html">
+                        <span class="site-menu-title">Summernote</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../forms/editor-markdown.html">
+                        <span class="site-menu-title">Markdown</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../forms/editor-ace.html">
+                        <span class="site-menu-title">Ace Editor</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/image-cropping.html">
+                    <span class="site-menu-title">Image Cropping</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../forms/file-uploads.html">
+                    <span class="site-menu-title">File Uploads</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-border-all" aria-hidden="true"></i>
+                <span class="site-menu-title">Tables</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/basic.html">
+                    <span class="site-menu-title">Basic Tables</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/bootstrap.html">
+                    <span class="site-menu-title">Bootstrap Tables</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/floatthead.html">
+                    <span class="site-menu-title">floatThead</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/responsive.html">
+                    <span class="site-menu-title">Responsive Tables</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/editable.html">
+                    <span class="site-menu-title">Editable Tables</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/jsgrid.html">
+                    <span class="site-menu-title">jsGrid</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/footable.html">
+                    <span class="site-menu-title">FooTable</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../tables/datatable.html">
+                    <span class="site-menu-title">DataTables</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-chart" aria-hidden="true"></i>
+                <span class="site-menu-title">Chart</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/chartjs.html">
+                    <span class="site-menu-title">Chart.js</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/gauges.html">
+                    <span class="site-menu-title">Gauges</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/flot.html">
+                    <span class="site-menu-title">Flot</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/peity.html">
+                    <span class="site-menu-title">Peity</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/sparkline.html">
+                    <span class="site-menu-title">Sparkline</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/morris.html">
+                    <span class="site-menu-title">Morris</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/chartist.html">
+                    <span class="site-menu-title">Chartist.js</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/rickshaw.html">
+                    <span class="site-menu-title">Rickshaw</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/pie-progress.html">
+                    <span class="site-menu-title">Pie Progress</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../charts/c3.html">
+                    <span class="site-menu-title">C3</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-apps" aria-hidden="true"></i>
+                <span class="site-menu-title">Apps</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/contacts/contacts.html">
+                    <span class="site-menu-title">Contacts</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/calendar/calendar.html">
+                    <span class="site-menu-title">Calendar</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/notebook/notebook.html">
+                    <span class="site-menu-title">Notebook</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/taskboard/taskboard.html">
+                    <span class="site-menu-title">Taskboard</span>
+                  </a>
+                </li>
+                <li class="site-menu-item has-sub">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Documents</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../apps/documents/articles.html">
+                        <span class="site-menu-title">Articles</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../apps/documents/categories.html">
+                        <span class="site-menu-title">Categories</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../apps/documents/article.html">
+                        <span class="site-menu-title">Article</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/forum/forum.html">
+                    <span class="site-menu-title">Forum</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/message/message.html">
+                    <span class="site-menu-title">Message</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/projects/projects.html">
+                    <span class="site-menu-title">Projects</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/mailbox/mailbox.html">
+                    <span class="site-menu-title">Mailbox</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/media/overview.html">
+                    <span class="site-menu-title">Media</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/work/work.html">
+                    <span class="site-menu-title">Work</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../apps/location/location.html">
+                    <span class="site-menu-title">Location</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item">
+              <a class="animsition-link" href="../angular/index.html">
+                <i class="site-menu-icon bd-angular" aria-hidden="true"></i>
+                <span class="site-menu-title">Angular UI</span>
+                <div class="site-menu-label">
+                  <span class="label label-danger label-round">new</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Page -->
+  <div class="page animsition">
+    <div class="page-header">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active">Basic UI</li>
+      </ol>
+      <h1 class="page-title">Modals</h1>
+      <div class="page-header-actions">
+        <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+        data-original-title="Edit">
+          <i class="icon md-edit" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+        data-original-title="Refresh">
+          <i class="icon md-refresh-alt" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+        data-original-title="Setting">
+          <i class="icon md-settings" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <!-- Panel Modals Styles -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">Modals Styles</h3>
+        </div>
+
+        <div class="panel-body container-fluid">
+          <div class="row row-lg">
+            <div class="col-lg-6 col-md-12">
+              <div class="example-wrap">
+                <div class="example example-modal">
+                  <!-- Modal -->
+                  <div class="modal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+
+                        <div class="modal-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Integer nec odio. Praesent libero. Sed cursus ante
+                            dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
+                            imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce
+                            nec tellus sed augue semper porta. Mauris massa. Vestibulum
+                            lacinia arcu eget nulla.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-top-5" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary margin-top-5">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+              <!-- Example Basic Modals (Nifty Modals) -->
+              <div class="example-wrap">
+                <h4 class="example-title">Basic Modals (Nifty Modals)</h4>
+                <p>Modal disables the original page beneath the overlay. The user
+                  needs to take an action or cancel the overlay until he can continue
+                  interacting with the original page. Modal are easy to implement,
+                  but they should be used sparingly. They interrupt the user flow,
+                  make it impossible to interact with the page and the overlay
+                  at the same time, and hide the content behind the overlay. This
+                  can be very annoying to users.</p>
+                <div class="example example-buttons">
+                  <button class="btn btn-info" data-target="#exampleNiftyFadeScale" data-toggle="modal"
+                  type="button">Fade in &amp; Scale</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-fade-in-scale-up" id="exampleNiftyFadeScale" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftySlideFromRight" data-toggle="modal"
+                  type="button">Slide from right</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-slide-in-right" id="exampleNiftySlideFromRight" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftySlideFromBottom" data-toggle="modal"
+                  type="button">Slide from bottom</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-slide-from-bottom" id="exampleNiftySlideFromBottom"
+                  aria-hidden="true" aria-labelledby="exampleModalTitle" role="dialog"
+                  tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftyNewspaper" data-toggle="modal"
+                  type="button">Newspaper</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-newspaper" id="exampleNiftyNewspaper" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftyFall" data-toggle="modal"
+                  type="button">Fall</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-fall" id="exampleNiftyFall" aria-hidden="true" aria-labelledby="exampleModalTitle"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftySideFall" data-toggle="modal"
+                  type="button">Slide Fall</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-side-fall" id="exampleNiftySideFall" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftyFlipHorizontal" data-toggle="modal"
+                  type="button">3D Flip horizontal</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-3d-flip-horizontal" id="exampleNiftyFlipHorizontal"
+                  aria-hidden="true" aria-labelledby="exampleModalTitle" role="dialog"
+                  tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftyFlipVertical" data-toggle="modal"
+                  type="button">3D Flip vertical</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-3d-flip-vertical" id="exampleNiftyFlipVertical" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNifty3dSign" data-toggle="modal"
+                  type="button">3D Sign</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-3d-sign" id="exampleNifty3dSign" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftySuperScaled" data-toggle="modal"
+                  type="button">Super Scalled</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-super-scaled" id="exampleNiftySuperScaled" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNiftyJustMe" data-toggle="modal"
+                  type="button">Just Me</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-just-me" id="exampleNiftyJustMe" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNifty3dSlit" data-toggle="modal"
+                  type="button">3D Slit</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-3d-slit" id="exampleNifty3dSlit" aria-hidden="true"
+                  aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNifty3dRotateBottom" data-toggle="modal"
+                  type="button">3D Rotate Bottom</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-rotate-from-bottom" id="exampleNifty3dRotateBottom"
+                  aria-hidden="true" aria-labelledby="exampleModalTitle" role="dialog"
+                  tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <button class="btn btn-info" data-target="#exampleNifty3dRotateInLeft" data-toggle="modal"
+                  type="button">3D Rotate In Left</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-rotate-from-left" id="exampleNifty3dRotateInLeft"
+                  aria-hidden="true" aria-labelledby="exampleModalTitle" role="dialog"
+                  tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-lg">
+            <div class="col-lg-12">
+              <div class="example-wrap">
+                <h4 class="example-title">Position</h4>
+                <p>There are four direction for the modal slider in from the page
+                  screen. when you click the button of each preivew image below,
+                  you will see the relevant modal demo.</p>
+                <div class="row row-lg">
+                  <div class="col-lg-3 col-sm-6">
+                    <!-- Example Top -->
+                    <div class="example-wrap">
+                      <h4 class="example-title">Top</h4>
+                      <div class="example">
+                        <div class="example-well height-250 example-modal-top">
+                          <img class="center" src="../assets/examples/images/modal/modal-position.png" alt="...">
+                        </div>
+
+                        <button class="btn btn-primary" data-target="#examplePositionTop" data-toggle="modal"
+                        type="button">Generate</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="examplePositionTop" aria-hidden="true" aria-labelledby="examplePositionTop"
+                        role="dialog" tabindex="-1">
+                          <div class="modal-dialog modal-top">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 class="modal-title" id="exampleModalTitle">Modal Title</h4>
+                              </div>
+                              <div class="modal-body">
+                                <p>One fine body…</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-pure" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <!-- End Example Top -->
+                  </div>
+
+                  <div class="col-lg-3 col-sm-6">
+                    <!-- Example Center -->
+                    <div class="example-wrap">
+                      <h4 class="example-title">Center</h4>
+                      <div class="example">
+                        <div class="example-well height-250">
+                          <img class="center" src="../assets/examples/images/modal/modal-position.png" alt="...">
+                        </div>
+
+                        <button class="btn btn-primary" data-target="#examplePositionCenter" data-toggle="modal"
+                        type="button">Generate</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="examplePositionCenter" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                        role="dialog" tabindex="-1">
+                          <div class="modal-dialog modal-center">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 class="modal-title">Modal Title</h4>
+                              </div>
+                              <div class="modal-body">
+                                <p>One fine body…</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-pure" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <!-- End Example Center -->
+                  </div>
+
+                  <div class="col-lg-3 col-sm-6">
+                    <!-- Example Bottom -->
+                    <div class="example-wrap">
+                      <h4 class="example-title">Bottom</h4>
+                      <div class="example">
+                        <div class="example-well height-250 example-modal-bottom">
+                          <img class="center" src="../assets/examples/images/modal/modal-position.png" alt="...">
+                        </div>
+
+                        <button class="btn btn-primary" data-target="#examplePositionBottom" data-toggle="modal"
+                        type="button">Generate</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="examplePositionBottom" aria-hidden="true" aria-labelledby="examplePositionBottom"
+                        role="dialog" tabindex="-1">
+                          <div class="modal-dialog modal-bottom">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 class="modal-title">Modal Title</h4>
+                              </div>
+                              <div class="modal-body">
+                                <p>One fine body…</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-pure" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <!-- End Example Bottom -->
+                  </div>
+
+                  <div class="col-lg-3 col-sm-6">
+                    <!-- Example Sidebar -->
+                    <div class="example-wrap">
+                      <h4 class="example-title">Sidebar</h4>
+                      <div class="example">
+                        <div class="example-well height-250 example-modal-sidebar">
+                          <img class="center" src="../assets/examples/images/modal/modal-position-sidebar.png"
+                          alt="...">
+                        </div>
+
+                        <button class="btn btn-primary" data-target="#examplePositionSidebar" data-toggle="modal"
+                        type="button">Generate</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="examplePositionSidebar" aria-hidden="true" aria-labelledby="examplePositionSidebar"
+                        role="dialog" tabindex="-1">
+                          <div class="modal-dialog modal-sidebar modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 class="modal-title">Modal Title</h4>
+                              </div>
+                              <div class="modal-body">
+                                <p>One fine body…</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn-block">Save changes</button>
+                                <button type="button" class="btn btn-default btn-block btn-pure" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <!-- End Example Sidebar -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-lg">
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Form Modal -->
+              <div class="example-wrap">
+                <h4 class="example-title">Form Modal</h4>
+                <div class="example">
+                  <div class="example-well height-350">
+                    <img class="center" src="../assets/examples/images/modal/form-modal.png" alt="...">
+                  </div>
+                  <p>This modals including title, input for each field. </p>
+                  <button class="btn btn-primary" data-target="#exampleFormModal" data-toggle="modal"
+                  type="button">Generate</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleFormModal" aria-hidden="false" aria-labelledby="exampleFormModalLabel"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <form class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title" id="exampleFormModalLabel">Set The Messages</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-lg-4 form-group">
+                              <input type="text" class="form-control" name="firstName" placeholder="First Name">
+                            </div>
+                            <div class="col-lg-4 form-group">
+                              <input type="email" class="form-control" name="lastName" placeholder="Last Name">
+                            </div>
+                            <div class="col-lg-4 form-group">
+                              <input type="email" class="form-control" name="email" placeholder="Your Email">
+                            </div>
+                            <div class="col-lg-12 form-group">
+                              <textarea class="form-control" rows="5" placeholder="Type your message"></textarea>
+                            </div>
+                            <div class="col-sm-12 pull-right">
+                              <button class="btn btn-primary" data-dismiss="modal" type="button">Add Comment</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Form Modal -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Multiple Modals -->
+              <div class="example-wrap">
+                <h4 class="example-title">Multiple Modals</h4>
+                <div class="example">
+                  <div class="example-well height-350">
+                    <img class="center" src="../assets/examples/images/modal/multiple-modal.png" alt="...">
+                  </div>
+                  <p>There is a new modal displayed overlay the first one by clicking
+                    the function button. </p>
+                  <button class="btn btn-primary" data-target="#exampleMultipleOne" data-toggle="modal"
+                  type="button">Generate</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleMultipleOne" aria-hidden="true" aria-labelledby="exampleMultipleOne"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal #1</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>Follow us along to modal 2</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-target="#exampleMultipleTwo"
+                          data-toggle="modal" data-dismiss="modal">Proceed</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleMultipleTwo" aria-hidden="false" role="dialog"
+                  tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal #2</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>To be continue...</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a class="btn btn-sm btn-white btn-pure" data-dismiss="modal" href="javascript:void(0)"
+                          role="button">Close</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Multiple Modals -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Optional Sizes -->
+              <div class="example-wrap">
+                <h4 class="example-title">Optional Sizes</h4>
+                <div class="example">
+                  <div class="example-well height-350">
+                    <img class="center" src="../assets/examples/images/modal/size-modal.png" alt="...">
+                  </div>
+                  <p>This modal has multiple size dialog for you to choice. </p>
+                  <div class="example-buttons">
+                    <button type="button" class="btn btn-primary" data-target=".example-modal-lg" data-toggle="modal">Large Generate</button>
+                    <button type="button" class="btn btn-primary" data-target=".example-modal-sm" data-toggle="modal">Small Generate</button>
+                  </div>
+
+                  <!-- Modal -->
+                  <div class="modal fade example-modal-lg" aria-hidden="true" aria-labelledby="exampleOptionalLarge"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title" id="exampleOptionalLarge">Large Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade example-modal-sm" aria-hidden="true" aria-labelledby="exampleOptionalSmall"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title" id="exampleOptionalSmall">Small Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Optional Sizes -->
+            </div>
+
+            <div class="clearfix visible-lg-block"></div>
+
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Tab In Modal -->
+              <div class="example-wrap">
+                <h4 class="example-title">Tab In Modal</h4>
+                <div class="example">
+                  <div class="example-well height-350">
+                    <img class="center" src="../assets/examples/images/modal/tab-modal.png" alt="...">
+                  </div>
+                  <p>This modal including title, tabs for you display additional content
+                    inline in the same modal. </p>
+                  <button class="btn btn-primary" data-target="#exampleTabs" data-toggle="modal"
+                  type="button">Generate</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleTabs" aria-hidden="true" aria-labelledby="exampleModalTabs"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title" id="exampleModalTabs">Tabs In Modal</h4>
+                        </div>
+
+                        <ul class="nav nav-tabs nav-tabs-line" data-plugin="nav-tabs" role="tablist">
+                          <li class="active" role="presentation"><a data-toggle="tab" href="#exampleLine1" aria-controls="exampleLine1"
+                            role="tab">Home</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#exampleLine2" aria-controls="exampleLine2"
+                            role="tab">Components</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#exampleLine3" aria-controls="exampleLine3"
+                            role="tab">CSS</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#exampleLine4" aria-controls="exampleLine4"
+                            role="tab">JavaScript</a></li>
+                        </ul>
+
+                        <div class="modal-body">
+                          <div class="tab-content padding-top-10">
+                            <div class="tab-pane active" id="exampleLine1" role="tabpanel">
+                              Insolens patientiamque recte caecilii gaudere alienae varias repetitis inscientia
+                              ipsos. Partiendo interpretum vult ludicra iam abest
+                              disputatum geometriaque inflammat probes, tandem
+                              ullum iuste texit mundus delicatissimi iactare, impeditur
+                              panaetium intellegentium afferat talem satisfacit
+                              numquid accedunt secumque perspiciatis, invenire
+                              inquam voluptaria virtute concederetur genus suavitate,
+                              inviti argumentum parentes, repudiandae aliud perspiciatis,
+                              latinas consul pluribus regula ceramico turbent,
+                              cogitavisse possunt suo tranquillitate.
+                            </div>
+
+                            <div class="tab-pane" id="exampleLine2" role="tabpanel">
+                              Tenuit omni magistra quale honoris, maluisti invidi, successerit feramus fere omnium
+                              impetum locus suscipiantur ullum, gessisse afranius
+                              stabilique repellendus longinquitate sentiamus torquatos
+                              rem. Bene continens, depulsa soluta domesticarum
+                              inscientia excruciant artes epicuri, huic similique
+                              constringendos probo animadversionis claris sententia
+                              atqui vocent constituit, epicuri hosti iniuste naturales
+                              multos, optimus animadvertat stoicis nullae, fieri
+                              futura tempore philosophia expleantur putarent doloris
+                              delectus viris.
+                            </div>
+
+                            <div class="tab-pane" id="exampleLine3" role="tabpanel">
+                              Cernimus nutu. Maioribus solet. Iustitiam conciliant reliquisti instituendarum
+                              solido quicquid, superstitione placet illis privatione
+                              clariora audeam repellat morbos accusantibus, quaeso
+                              copulationes. Percurri salutatus derigatur praeter
+                              involuta canes afflueret iam amotio quin. Dicent
+                              dialectica evertunt astris venire senserit. Vulgo
+                              supplicii amputata ipsarum ennius insolens meminerunt
+                              quisquam, volumus occulte l videor contenta numen,
+                              patrioque. Dixerit cernimus consequentium definitiones
+                              interrogari, maximo, avocent opes.
+                            </div>
+
+                            <div class="tab-pane" id="exampleLine4" role="tabpanel">
+                              Nec iste vellem, accusamus inesse exhorrescere tertium dominationis licebit perpetiuntur,
+                              adduci concederetur memoriter omnesque aliquem etsi
+                              salutatus administrari aliquid graviter, mandamus
+                              celeritas patet fortibus. Dolorum tantis nostram
+                              fortitudo probarentur utrumvis insipientiam, putent,
+                              esset p fortitudo repetitis concursionibus interiret
+                              clariora. Fabulae aperiri. Omnes aspernari placuit
+                              detraxit familias aeternum eum mediocritatem, videantur
+                              partis nondum indoctis, emancipaverat probatum intus
+                              iactant petulantes, levitatibus copiosae.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Tab In Modal -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Accordions In Modal -->
+              <div class="example-wrap">
+                <h4 class="example-title">Accordions In Modal</h4>
+                <div class="example">
+                  <div class="example-well height-350">
+                    <img class="center" src="../assets/examples/images/modal/accordion-modal.png" alt="...">
+                  </div>
+                  <p>This modal with accordions to have additional content hidden
+                    until the user needs them. </p>
+
+                  <button class="btn btn-primary" data-target="#exampleAccrodionModal" data-toggle="modal"
+                  type="button">Generate</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleAccrodionModal" aria-hidden="true" aria-labelledby="exampleAccrodionModal"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="panel-group panel-group-continuous margin-0" id="exampleAccrodion1"
+                        aria-multiselectable="true" role="tablist">
+                          <div class="panel">
+                            <div class="panel-heading" id="exampleHeadingFirst" role="tab">
+                              <a class="panel-title" data-parent="#exampleAccrodion1" data-toggle="collapse"
+                              href="#exampleCollapseFirst" aria-controls="exampleCollapseFirst"
+                              aria-expanded="false">
+                                <i class="md-palette"></i> First
+                              </a>
+                            </div>
+                            <div class="panel-collapse collapse in" id="exampleCollapseFirst" aria-labelledby="exampleHeadingFirst"
+                            role="tabpanel">
+                              <div class="panel-body">
+                                Remissius verear, sabinum concessum linguam umbram saepe vendibiliora quoddam terroribus,
+                                intellegere rectas videmus octavio sapientiam,
+                                mox magistra provincias chaere videre coerceri
+                                efficiat, corpus mediocriterne sinat beatam denique
+                                maiora menandro, iniucundus fastidium, aliquem
+                                probatus benivolentiam omnium summum facultas fuga,
+                                debitis mirari menandri domus molita. Maximisque
+                                interpretaris multoque exercitus tractatas, commemorandis
+                                pecunias.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel">
+                            <div class="panel-heading" id="exampleHeadingSecond" role="tab">
+                              <a class="panel-title collapsed" data-parent="#exampleAccrodion1" data-toggle="collapse"
+                              href="#exampleCollapseSecond" aria-controls="exampleCollapseSecond"
+                              aria-expanded="false">
+                                <i class="md-place"></i> Second
+                              </a>
+                            </div>
+                            <div class="panel-collapse collapse" id="exampleCollapseSecond" aria-labelledby="exampleHeadingSecond"
+                            role="tabpanel">
+                              <div class="panel-body">
+                                Diuturnitatem chremes gratia macedonum referatur intellegitur t ea industriae plus,
+                                ex videmus praetereat ratio mediocrem pro orestem,
+                                ipsam lictores perpetiuntur aperiri benivolentiam,
+                                nusquam ignaviamque athenis m plato videamus, liberatione
+                                scientia nihilo aristotelem quoquo consumere latinam,
+                                successerit certa morte menandro delectatum noster
+                                impetu videri senserit, infinitum iudicatum misisti
+                                conectitur, voce proficiscuntur.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel">
+                            <div class="panel-heading" id="exampleHeadingThird" role="tab">
+                              <a class="panel-title collapsed" data-parent="#exampleAccrodion1" data-toggle="collapse"
+                              href="#exampleCollapseThird" aria-controls="exampleCollapseThird"
+                              aria-expanded="false">
+                                <i class="md-loupe"></i> Third
+                              </a>
+                            </div>
+                            <div class="panel-collapse collapse" id="exampleCollapseThird" aria-labelledby="exampleHeadingThird"
+                            role="tabpanel">
+                              <div class="panel-body">
+                                Audire scribimus spe platonis longinquitate evertunt scribi, notionem doleamus
+                                assentiar mortis lucilius, exedunt. Finitum genus
+                                coniunctione vidisse, ipsam grate studuisse respondendum
+                                ignorant probabo atomum. Corrumpit mortem instructus
+                                totam familiarem tertium voluntates consilia aperiam
+                                disputata, plena animumque ius supplicii incurrunt
+                                laboribus, rationis dedocendi incurreret illam
+                                triari utrisque eos commodius. Assentiar magnitudinem.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Accordions In Modal -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Grid In Modal -->
+              <div class="example-wrap">
+                <h4 class="example-title">Grid In Modal</h4>
+                <div class="example">
+                  <div class="example-well height-350">
+                    <img class="center" src="../assets/examples/images/modal/grid-modal.png" alt="...">
+                  </div>
+                  <p>This modal including title and grids to layout through a series
+                    of two columns that house your content. </p>
+                  <button class="btn btn-primary" data-target="#exampleGrid" data-toggle="modal"
+                  type="button">Generate</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleGrid" aria-hidden="true" aria-labelledby="exampleGrid"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Grid In Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="example-grid">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="example-col">.col-md-6</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Grid In Modal -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Styles -->
+              <div class="example-wrap margin-md-0">
+                <h4 class="example-title">Styles</h4>
+                <div class="example">
+                  <div class="example-well height-350">
+                    <img class="center" src="../assets/examples/images/modal/style-modal.png" alt="...">
+                  </div>
+                  <p>We provide six color options for modal title background color.
+                    </p>
+                  <div class="color-selector-wrap clearfix">
+                    <p class="pull-left padding-top-5 margin-right-20">Choose color generate:</p>
+                    <ul class="color-selector">
+                      <li class="bg-blue-600">
+                        <input type="radio" id="inputStylePrimary" name="colorChosen" data-target="#exampleModalPrimary"
+                        data-toggle="modal" />
+                        <label for="inputStylePrimary"></label>
+                      </li>
+                      <li class="bg-green-600">
+                        <input type="radio" id="inputStyleSuccess" name="colorChosen" data-target="#exampleModalSuccess"
+                        data-toggle="modal" />
+                        <label for="inputStyleSuccess"></label>
+                      </li>
+                      <li class="bg-red-600">
+                        <input type="radio" id="inputStyleDanger" name="colorChosen" data-target="#exampleModalDanger"
+                        data-toggle="modal" />
+                        <label for="inputStyleDanger"></label>
+                      </li>
+                      <li class="bg-orange-600">
+                        <input type="radio" id="inputStyleWarning" name="colorChosen" data-target="#exampleModalWarning"
+                        data-toggle="modal" />
+                        <label for="inputStyleWarning"></label>
+                      </li>
+                      <li class="bg-Cyan-600">
+                        <input type="radio" id="inputStyleInfo" name="colorChosen" data-target="#exampleModalInfo"
+                        data-toggle="modal" />
+                        <label for="inputStyleInfo"></label>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-primary" id="exampleModalPrimary" aria-hidden="true"
+                  aria-labelledby="exampleModalPrimary" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-success" id="exampleModalSuccess" aria-hidden="true"
+                  aria-labelledby="exampleModalSuccess" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-danger" id="exampleModalDanger" aria-hidden="true"
+                  aria-labelledby="exampleModalDanger" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-warning" id="exampleModalWarning" aria-hidden="true"
+                  aria-labelledby="exampleModalWarning" role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-info" id="exampleModalInfo" aria-hidden="true" aria-labelledby="exampleModalInfo"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-pure" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Styles -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <!-- Example Fill In -->
+              <div class="example-wrap">
+                <h4 class="example-title">Fill In</h4>
+                <div class="example">
+                  <div class="example-well height-350" style="background-color: #fff">
+                    <img class="center width-full height-full" src="../assets/examples/images/modal/fillin-modal.png"
+                    alt="...">
+                  </div>
+                  <p>This modal zooms from the middle and fills in fill-in to the
+                    modal.</p>
+                  <button class="btn btn-primary" data-target="#exampleFillIn" data-toggle="modal"
+                  type="button">Generate</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade modal-fill-in" id="exampleFillIn" aria-hidden="false" aria-labelledby="exampleFillIn"
+                  role="dialog" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title" id="exampleFillInModalTitle">Set The Messages</h4>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="row">
+                              <div class="col-lg-4 form-group">
+                                <input type="text" class="form-control" name="firstName" placeholder="First Name">
+                              </div>
+                              <div class="col-lg-4 form-group">
+                                <input type="email" class="form-control" name="lastName" placeholder="Last Name">
+                              </div>
+                              <div class="col-lg-4 form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email">
+                              </div>
+                              <div class="col-lg-12">
+                                <textarea class="form-control" rows="5" placeholder="Type your message"></textarea>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+              </div>
+              <!-- End Example Fill In -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Panel Modals Styles -->
+
+
+    </div>
+  </div>
+  <!-- End Page -->
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-legal">© 2015 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
+    <div class="site-footer-right">
+      Crafted with <i class="red-600 icon md-favorite"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
+    </div>
+  </footer>
+  <!-- Core  -->
+  <script src="../../global/vendor/jquery/jquery.min.js"></script>
+  <script src="../../global/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="../../global/vendor/animsition/animsition.min.js"></script>
+  <script src="../../global/vendor/asscroll/jquery-asScroll.min.js"></script>
+  <script src="../../global/vendor/mousewheel/jquery.mousewheel.min.js"></script>
+  <script src="../../global/vendor/asscrollable/jquery.asScrollable.all.min.js"></script>
+  <script src="../../global/vendor/ashoverscroll/jquery-asHoverScroll.min.js"></script>
+  <script src="../../global/vendor/waves/waves.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="../../global/vendor/switchery/switchery.min.js"></script>
+  <script src="../../global/vendor/intro-js/intro.min.js"></script>
+  <script src="../../global/vendor/screenfull/screenfull.min.js"></script>
+  <script src="../../global/vendor/slidepanel/jquery-slidePanel.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="../../global/js/core.min.js"></script>
+  <script src="../assets/js/site.min.js"></script>
+
+  <script src="../assets/js/sections/menu.min.js"></script>
+  <script src="../assets/js/sections/menubar.min.js"></script>
+  <script src="../assets/js/sections/sidebar.min.js"></script>
+
+  <script src="../../global/js/configs/config-colors.min.js"></script>
+  <script src="../assets/js/configs/config-tour.min.js"></script>
+
+  <script src="../../global/js/components/asscrollable.min.js"></script>
+  <script src="../../global/js/components/animsition.min.js"></script>
+  <script src="../../global/js/components/slidepanel.min.js"></script>
+  <script src="../../global/js/components/switchery.min.js"></script>
+  <script src="../../global/js/components/tabs.min.js"></script>
+
+
+  <script>
+    (function(document, window, $) {
+      'use strict';
+
+      var Site = window.Site;
+      $(document).ready(function() {
+        Site.run();
+      });
+    })(document, window, jQuery);
+  </script>
+
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js',
+      'ga');
+
+    ga('create', 'UA-65522665-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
