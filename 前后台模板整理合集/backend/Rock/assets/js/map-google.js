@@ -1,0 +1,172 @@
+$(function () {
+    var simple = new Maplace({
+        show_markers: false,
+        locations: [{
+            lat: 45.9,
+            lon: 10.9,
+            zoom: 8
+        }]
+    }).Load();
+
+    //Simple Example, dropdown on map
+    var dropdown = new Maplace({
+        map_div: '#gmap-2',
+        controls_title: 'Choose a location:',
+        locations: LocsA
+    });
+
+    //Simple Example, menu on map
+    var ullist = new Maplace({
+        map_div: '#gmap-3',
+        controls_type: 'list',
+        controls_title: 'Choose a location:',
+        locations: LocsBv2
+    });
+
+    //Polygon Example
+    var polygon = new Maplace({
+        map_div: '#gmap-7',
+        controls_div: '#controls-7',
+        controls_type: 'list',
+        show_markers: false,
+        locations: LocsAv2,
+        type: 'polygon',
+        editable: true
+    });
+
+    //Circles Example
+    var circles = new Maplace({
+        locations: Circles,
+        controls_type: 'list',
+        map_div: '#gmap-circles',
+        start: 4,
+        view_all_text: 'Points of interest',
+        type: 'circle',
+        shared: {
+            zoom: 16,
+            html: '%index'
+        },
+        circleRadiusChanged: function(index, point, marker) {
+            $('#radiusInfo').text(
+                    ' - point #' + (index + 1) + ' size: ' + parseInt(marker.getRadius()) + 'mt.'
+            );
+        }
+    });
+
+    //Simple Example, external menu
+    var menu = new Maplace({
+        map_div: '#gmap-4',
+        controls_type: 'list',
+        controls_cssclass: 'nav nav-pills',
+        controls_on_map: false,
+        locations: LocsAB
+    });
+
+    //Tabs Example
+    var tabs = new Maplace({
+        map_div: '#gmap-5',
+        controls_div: '#controls-5',
+        start: 1,
+        controls_type: 'list',
+        controls_cssclass: 'nav nav-tabs tabs',
+        controls_on_map: false,
+        show_infowindows: false,
+        view_all: false,
+        locations: LocsB,
+        afterShow: function(index, location, marker) {
+            $('#info').html(location.html);
+        }
+    });
+
+    //Polyline Example
+    var polyline = new Maplace({
+        map_div: '#gmap-6',
+        controls_div: '#controls-6',
+        controls_cssclass: 'nav nav-pills nav-stacked',
+        controls_type: 'list',
+        controls_on_map: false,
+        show_infowindows: true,
+        view_all_text: 'Start',
+        locations: LocsAv2,
+        type: 'polyline',
+        editable: true
+    });
+
+    //Directions route Example
+    var directions = new Maplace({
+        map_div: '#gmap-8',
+        generate_controls: false,
+        locations: LocsD,
+        type: 'directions',
+        draggable: true,
+        editable: true,
+        directions_panel: '#route',
+        afterRoute: function(distance) {
+            $('#km').text((distance/1000)+'km');
+        }
+    });
+
+    //Styled Example
+    var styled = new Maplace({
+        map_div: '#gmap-12',
+        locations: LocsAB,
+        start: 1,
+        styles: styles,
+        map_options: {
+            zoom: 5
+        }
+    });
+
+    //Fusion
+    var fusion = new Maplace({
+        map_div: '#gmap-11',
+        type: 'fusion',
+        map_options: {
+            zoom: 2,
+            set_center: [31.1, -39.4]
+        },
+        fusion_options: {
+            query: {
+                from: '423292',
+                select: 'location'
+            },
+            heatmap: {
+                enabled: true
+            },
+            suppressInfoWindows: true
+        }
+    });
+
+    //Big Data Example
+    var bigdata = new Maplace({
+        map_div: '#gmap-10',
+        locations: big4k,
+        type: 'circle',
+        shared: {
+            zoom: 5,
+            html: '%index',
+            radius: 10000
+        }
+    });
+
+    $('#load_bigdata').click(function(e) {
+        e.preventDefault();
+        $('#panel-big-data').fadeOut(10, function() {
+            $('#gmap-10').fadeIn(10);
+            bigdata.Load();
+        });
+    });
+
+    simple.Load();
+    dropdown.Load();
+    ullist.Load();
+    polygon.Load();
+    circles.Load();
+    menu.Load();
+    tabs.Load();
+    polyline.Load();
+    directions.Load();
+    styled.Load();
+    fusion.Load();
+});
+
