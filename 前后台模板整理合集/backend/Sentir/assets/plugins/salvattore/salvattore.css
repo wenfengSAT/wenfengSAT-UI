@@ -1,0 +1,69 @@
+/*
+   Spezific styling for salvattore
+   Feel free to edit it as you like
+   More info at http://salvattore.com
+ */
+
+/* Base styles */
+.column {
+    float: left;
+}
+.size-1of4 {
+    width: 25%;
+}
+.size-1of3 {
+    width: 33.333%;
+}
+.size-1of2 {
+    width: 50%;
+}
+
+.mason .item{
+	padding: 10px;
+}
+.mason .item .example-text{
+	margin: 15px 0 0 0;
+}
+.mason .item img{
+	width: auto;
+	max-width: 100%;
+}
+
+/* Configurate salvattore with media queries */
+@media screen and (max-width: 450px) {
+    .mason[data-columns]::before {
+        content: '1 .column';
+		visibility: hidden;
+		position: absolute;
+		font-size: 1px;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 700px) {
+    .mason[data-columns]::before {
+        content: '2 .column.size-1of2';
+		visibility: hidden;
+		position: absolute;
+		font-size: 1px;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 850px) {
+    .mason[data-columns]::before {
+        content: '3 .column.size-1of3';
+		visibility: hidden;
+		position: absolute;
+		font-size: 1px;
+
+    }
+}
+
+@media screen and (min-width: 851px) {
+    .mason[data-columns]::before {
+        content: '4 .column.size-1of4';
+		visibility: hidden;
+		position: absolute;
+		font-size: 1px;
+
+    }
+}

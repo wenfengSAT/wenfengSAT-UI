@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Sentir, Responsive admin and dashboard UI kits template">
+		<meta name="keywords" content="admin,bootstrap,template,responsive admin,dashboard template,web apps template">
+		<meta name="author" content="Ari Rusmanto, Isoh Design Studio, Warung Themes">
+		<title>SENTIR COMING SOON</title>
+ 
+		<!-- BOOTSTRAP CSS (REQUIRED ALL PAGE)-->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<link href="assets/css/style-responsive.css" rel="stylesheet">
+ 
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+ 
+	<body class="tooltips">
+		
+		<!--
+		===========================================================
+		BEGIN PAGE
+		===========================================================
+		-->
+		<div class="container">
+			
+			<!-- BEGIN LOGO -->
+			<div class="logo"><img src="assets/img/logo.png" alt="logo"></div>
+			<!-- END LOGO -->
+			
+			<h1 class="heading text-center">Our Wesbite is Coming Soon</h1>
+			
+			
+			<!-- BEGIN COUNTER -->
+			<div class="counter-wrap">
+				<div id="countdown-timer"></div>
+			</div><!-- /.counter-wrap -->
+			<!-- END COUNTER -->
+			
+			<p class="text-center about-text">
+				Et! Ridiculus, in elementum tincidunt lundium! Dictumst ac, in etiam a nascetur, nunc vel et magnis. Sagittis velit<br />
+				tincidunt lorem sit natoque elementum purus lacus mus proin habitasse in dis porttitor odio <br />
+				eu scelerisque vel mus cras purus elit adipiscing in. Augue rhoncus nec elementum tincidunt et porttitor <br />
+				egestas porttitor, lundium adipiscing mid urna mid porta
+			</p>
+			
+			
+			<!-- BEGIN SUBSCRIBE FORM -->
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<form role="form" class="subscribe">
+						<input type="email" class="form-control" placeholder="Enter your email address">
+						<button class="btn btn-success subscribe-btn">SUBSCRIBE ME</button>
+					</form>
+				</div>
+				<div class="col-sm-3"></div>
+			</div><!-- /.row -->
+			<!-- END SUBSCRIBE FORM -->
+			
+			
+			
+			<!-- BEGIN SOCIAL ICON -->
+			<p class="text-center social-icon">
+				<a href="#fakelink"><i data-toggle="tooltip" title="Facebook" class="fa fa-facebook icon-sm icon-rounded icon-social-footer icon-facebook"></i></a>
+				<a href="#fakelink"><i data-toggle="tooltip" title="Twitter" class="fa fa-twitter icon-sm icon-rounded icon-social-footer icon-twitter"></i></a>
+				<a href="#fakelink"><i data-toggle="tooltip" title="Google plus" class="fa fa-google-plus icon-sm icon-rounded icon-social-footer icon-google-plus"></i></a>
+				<a href="#fakelink"><i data-toggle="tooltip" title="Dribbble" class="fa fa-dribbble icon-sm icon-rounded icon-social-footer icon-dribbble"></i></a>
+				<a href="#fakelink"><i data-toggle="tooltip" title="Pinterest" class="fa fa-pinterest icon-sm icon-rounded icon-social-footer icon-pinterest"></i></a>
+				<a href="#fakelink"><i data-toggle="tooltip" title="Github" class="fa fa-github icon-sm icon-rounded icon-social-footer icon-github"></i></a>
+			</p>
+			<!-- END SOCIAL ICON -->
+			
+			
+			<!-- BEGIN FOOTER -->
+			<footer>
+				Copyright &copy; 2014 Your Company
+			</footer>
+			<!-- END FOOTER -->
+			
+		</div><!-- /.container -->
+		<!--
+		===========================================================
+		END PAGE
+		===========================================================
+		-->
+		
+		
+		<!--
+		===========================================================
+		Placed at the end of the document so the pages load faster
+		===========================================================
+		-->
+		<!-- MAIN JAVASRCIPT (REQUIRED ALL PAGE)-->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/plugins/retina/retina.min.js"></script>
+		<script src="assets/plugins/backstretch/jquery.backstretch.min.js"></script>
+		<script src="assets/plugins/countdown/jquery.countdown.js"></script>
+		<script>
+		
+		/** Tooltip **/
+		$('.tooltips').tooltip({
+		  selector: "[data-toggle=tooltip]",
+		  container: "body"
+		})
+		
+		/** Full background **/
+		$.backstretch([ "assets/img/bg.JPG"], {duration: 3000, fade: 750});
+		
+		
+		/** Counter **/
+		$(function() {
+		var endDate = "January 7, 2016 15:03:25";
+			$('#countdown-timer').countdown({
+			  date: endDate,
+			  render: function(data) {
+				$(this.el).html("<div class='counter-item bg-danger'><h1>" + this.leadingZeros(data.days, 3) + "</h1><p>days</p></div><div class='counter-item bg-warning'><h1>" + this.leadingZeros(data.hours, 2) + "</h1><p>hours</p></div><div class='counter-item bg-success'><h1>" + this.leadingZeros(data.min, 2) + "</h1><p>min</p></div><div class='counter-item bg-info'><h1>" + this.leadingZeros(data.sec, 2) + "</h1><p>sec</p></div>");
+			  }
+			});
+		});
+		
+		</script>
+	</body>
+</html>
