@@ -1,0 +1,913 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+ 
+<meta charset="utf-8">
+<meta name="description" content="Flat, Clean, Responsive, application admin template built with bootstrap 3">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+ 
+<title>Sublime - Web Application Admin Dashboard</title>
+ 
+ 
+ 
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"1d2df93451ee996cf6eb54afb112e6f6",petok:"130fb9b6e3b70389b3e1f3ac14ac03efa689edd5-1433395967-1800",zone:"nyasha.me",rocket:"0",apps:{"ga_key":{"ua":"UA-50530436-1","ga_bs":"2"}}}];CloudFlare.push({"apps":{"ape":"97d4768779330df0646a17692731c06c"}});!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=7e13c32551/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/animate.min.css">
+ 
+ 
+<link rel="stylesheet" href="css/skins/palette.css">
+<link rel="stylesheet" href="css/fonts/font.css">
+<link rel="stylesheet" href="css/main.css">
+ 
+ 
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+<script src="plugins/modernizr.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-50530436-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+ 
+<body>
+<div class="app">
+ 
+<header class="header header-fixed navbar">
+<div class="brand">
+ 
+<a href="javascript:;" class="ti-menu off-left visible-xs" data-toggle="offscreen" data-move="ltr"></a>
+ 
+ 
+<a href="index.html" class="navbar-brand">
+<img src="img/logo.png" alt="">
+<span class="heading-font">
+Sublime
+</span>
+</a>
+ 
+</div>
+<ul class="nav navbar-nav">
+<li class="hidden-xs">
+ 
+<a href="javascript:;" class="toggle-sidebar">
+<i class="ti-menu"></i>
+</a>
+ 
+</li>
+<li class="header-search">
+ 
+<a href="javascript:;" class="toggle-search">
+<i class="ti-search"></i>
+</a>
+ 
+<div class="search-container">
+<form role="search">
+<input type="text" class="form-control search" placeholder="type and press enter">
+</form>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown hidden-xs">
+<a href="javascript:;" data-toggle="dropdown">
+<i class="ti-more-alt"></i>
+</a>
+<ul class="dropdown-menu animated zoomIn">
+<li class="dropdown-header">Quick Links</li>
+<li>
+<a href="javascript:;">Start New Campaign</a>
+</li>
+<li>
+<a href="javascript:;">Review Campaigns</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="javascript:;">Settings</a>
+</li>
+<li>
+<a href="javascript:;">Wish List</a>
+</li>
+<li>
+<a href="javascript:;">Purchases History</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="javascript:;">Activity Log</a>
+</li>
+<li>
+<a href="javascript:;">Settings</a>
+</li>
+<li>
+<a href="javascript:;">System Reports</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="javascript:;">Help</a>
+</li>
+<li>
+<a href="javascript:;">Report a Problem</a>
+</li>
+</ul>
+</li>
+<li class="notifications dropdown">
+<a href="javascript:;" data-toggle="dropdown">
+<i class="ti-bell"></i>
+<div class="badge badge-top bg-danger animated flash">
+<span>3</span>
+</div>
+</a>
+<div class="dropdown-menu animated fadeInLeft">
+<div class="panel panel-default no-m">
+<div class="panel-heading small"><b>Notifications</b>
+</div>
+<ul class="list-group">
+<li class="list-group-item">
+<a href="javascript:;">
+<span class="pull-left mt5 mr15">
+<img src="img/face4.jpg" class="avatar avatar-sm img-circle" alt="">
+</span>
+<div class="m-body">
+<div class="">
+<small><b>CRYSTAL BROWN</b></small>
+<span class="label label-danger pull-right">ASSIGN AGENT</span>
+</div>
+<span>Opened a support query</span>
+<span class="time small">2 mins ago</span>
+</div>
+</a>
+</li>
+<li class="list-group-item">
+<a href="javascript:;">
+<div class="pull-left mt5 mr15">
+<div class="circle-icon bg-danger">
+<i class="ti-download"></i>
+</div>
+</div>
+<div class="m-body">
+<span>Upload Progress</span>
+<div class="progress progress-xs mt5 mb5">
+<div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+</div>
+</div>
+<span class="time small">Submited 23 mins ago</span>
+</div>
+</a>
+</li>
+<li class="list-group-item">
+<a href="javascript:;">
+<span class="pull-left mt5 mr15">
+<img src="img/face3.jpg" class="avatar avatar-sm img-circle" alt="">
+</span>
+<div class="m-body">
+<em>Status Update:</em>
+<span>All servers now online</span>
+<span class="time small">5 days ago</span>
+</div>
+</a>
+</li>
+</ul>
+<div class="panel-footer">
+<a href="javascript:;">See all notifications</a>
+</div>
+</div>
+</div>
+</li>
+<li class="off-right">
+<a href="javascript:;" data-toggle="dropdown">
+<img src="img/avatar.jpg" class="header-avatar img-circle" alt="user" title="user">
+<span class="hidden-xs ml10">Gerald Morris</span>
+<i class="ti-angle-down ti-caret hidden-xs"></i>
+</a>
+<ul class="dropdown-menu animated fadeInRight">
+<li>
+<a href="javascript:;">Settings</a>
+</li>
+<li>
+<a href="javascript:;">Upgrade</a>
+</li>
+<li>
+<a href="javascript:;">
+<div class="badge bg-danger pull-right">3</div>
+<span>Notifications</span>
+</a>
+</li>
+<li>
+<a href="javascript:;">Help</a>
+</li>
+<li>
+<a href="signin.html">Logout</a>
+</li>
+</ul>
+</li>
+</ul>
+</header>
+ 
+<section class="layout">
+ 
+<aside class="sidebar offscreen-left">
+ 
+<nav class="main-navigation" data-height="auto" data-size="6px" data-distance="0" data-rail-visible="true" data-wheel-step="10">
+<p class="nav-title">MENU</p>
+<ul class="nav">
+ 
+<li>
+<a href="index.html">
+<i class="ti-home"></i>
+<span>Dashboard</span>
+</a>
+</li>
+ 
+ 
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-layout-media-overlay-alt-2"></i>
+<span>UI Elements</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="buttons.html">
+<span>Buttons</span>
+</a>
+</li>
+<li>
+<a href="general.html">
+<span>General Elements</span>
+</a>
+</li>
+<li>
+<a href="typography.html">
+<span>Typography</span>
+</a>
+</li>
+<li>
+<a href="tabs_accordion.html">
+<span>Tabs &amp; Accordions</span>
+</a>
+</li>
+<li>
+<a href="icons.html">
+<span>Fontawesome</span>
+</a>
+</li>
+<li>
+<a href="themify_icons.html">
+<span>Themify Icons</span>
+</a>
+</li>
+<li>
+<a href="grid.html">
+<span>Grid Layout</span>
+</a>
+</li>
+<li>
+<a href="widgets.html">
+<span>Widgets</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+ 
+<li class="open">
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-support"></i>
+<span>Components</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="calendar.html">
+<span>Calendar</span>
+</a>
+</li>
+<li>
+<a href="gallery.html">
+<span>Gallery</span>
+</a>
+</li>
+<li>
+<a href="sortable.html">
+<span>Sortable &amp; Nestable Lists</span>
+</a>
+</li>
+<li class="active">
+<a href="chart.html">
+<span>Charts</span>
+</a>
+</li>
+<li>
+<a href="progress_slider.html">
+<span>Progress bars &amp; Sliders</span>
+</a>
+</li>
+<li>
+<a href="tree.html">
+<span>Tree View</span>
+</a>
+</li>
+<li>
+<a href="notifications.html">
+<span>Notifications</span>
+</a>
+</li>
+<li>
+<a href="animated.html">
+<span>Animated Elements</span>
+</a>
+</li>
+<li>
+<a href="tour.html">
+<span>Tour</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+ 
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-folder"></i>
+<span>Forms</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="forms.html">
+<span>Forms Elements</span>
+</a>
+</li>
+<li>
+<a href="form_custom.html">
+<span>Customized Elements</span>
+</a>
+</li>
+<li>
+<a href="form_validation.html">
+<span>Form Validation</span>
+</a>
+</li>
+<li>
+<a href="form_wizard.html">
+<span>Form Wizards</span>
+</a>
+</li>
+<li>
+<a href="form_wysiwyg.html">
+<span>WYSIWYG/Markdown Editors</span>
+</a>
+</li>
+<li>
+<a href="form_inline.html">
+<span>Content Editable</span>
+</a>
+</li>
+<li>
+<a href="form_dropzone.html">
+<span>Dropzone</span>
+</a>
+</li>
+<li>
+<a href="xeditable.html">
+<span>X-Editable</span>
+</a>
+</li>
+<li>
+<a href="form_masks.html">
+<span>Input Masks</span>
+</a>
+</li>
+<li>
+<a href="form_pickers.html">
+<span>Form Pickers</span>
+</a>
+</li>
+<li>
+<a href="form_crop.html">
+<span>Image Crop</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+ 
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-window"></i>
+<span>Tables</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="table_basic.html">
+<span>Basic Tables</span>
+</a>
+</li>
+<li>
+<a href="table_responsive.html">
+<span>Resonsive Table</span>
+</a>
+</li>
+<li>
+<a href="datatable.html">
+<span>Data Tables</span>
+</a>
+</li>
+<li>
+<a href="table_editable.html">
+<span>Editable Table</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+ 
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-map"></i>
+<span>Maps</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="google_maps.html">
+<span>Google Maps</span>
+</a>
+</li>
+<li>
+<a href="vector.html">
+<span>Vector Maps</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+</ul>
+<p class="nav-title">MORE</p>
+<ul class="nav">
+ 
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-layers"></i>
+<span>Ready Pages</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="mail.html">
+<span>Mailbox</span>
+</a>
+</li>
+<li>
+<a href="mail_view.html">
+<span>Mail View</span>
+</a>
+</li>
+<li>
+<a href="compose.html">
+<span>Compose</span>
+</a>
+</li>
+<li>
+<a href="profile.html">
+<span>Profile</span>
+</a>
+</li>
+<li>
+<a href="invoice.html">
+<span>Invoice</span>
+</a>
+</li>
+<li>
+<a href="signin.html">
+<span>Signin</span>
+</a>
+</li>
+<li>
+<a href="signup.html">
+<span>Signup</span>
+</a>
+</li>
+<li>
+<a href="forgot.html">
+<span>Forgot Password</span>
+</a>
+</li>
+<li>
+<a href="lock.html">
+<span>Lock Screen</span>
+</a>
+</li>
+<li>
+<a href="404.html">
+<span>404 Page</span>
+</a>
+</li>
+<li>
+<a href="500.html">
+<span>500 Page</span>
+</a>
+</li>
+<li>
+<a href="changelog.html">
+<span class="pull-right small label label-danger">Updated</span>
+<span>Change Log</span>
+</a>
+</li>
+<li>
+<a href="timeline.html">
+<span>Timeline</span>
+</a>
+</li>
+<li>
+<a href="catalog.html">
+<span>Catalog</span>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<span>Chat</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+ 
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-layout"></i>
+<span>Layouts</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="small_menu.html">
+<span>Small Menu</span>
+</a>
+</li>
+<li>
+<a href="right_menu.html">
+<span>Right Side Menu</span>
+</a>
+</li>
+<li>
+<a href="push_sidebar.html">
+<span>Chat Sidebar</span>
+</a>
+</li>
+<li>
+<a href="language_bar.html">
+<span>Language Switcher</span>
+</a>
+</li>
+<li>
+<a href="footer_layout.html">
+<span>Layout With Footer</span>
+</a>
+</li>
+<li>
+<a href="horizontal_menu.html">
+<span>Horizontal Menu</span>
+</a>
+</li>
+<li>
+<a href="boxed.html">
+<span>Boxed Layout</span>
+</a>
+</li>
+<li>
+<a href="horizontal_menu_boxed.html">
+<span>Horizontal Boxed</span>
+</a>
+</li>
+<li>
+<a href="fixed_scroll.html">
+<span>Fixed Header &amp; Scrollable Layout</span>
+</a>
+</li>
+<li>
+<a href="blank.html">
+<span>Blank Page</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+ 
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<i class="ti-menu-alt"></i>
+<span>Multi Level Menu</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<span>Menu Link 1</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="javascript:;">
+<span>Menu Link 1.1</span>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<span>Menu Link 1.2</span>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<span>Menu Link 1.3</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="javascript:;">
+<i class="toggle-accordion"></i>
+<span>Menu Link 2</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="javascript:;">
+<span>Menu Link 2.1</span>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<span>Menu Link 2.2</span>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<span>Menu Link 2.3</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="javascript:;">
+<span>Menu Link 3</span>
+</a>
+</li>
+</ul>
+</li>
+ 
+</ul>
+<p class="nav-title">LABELS</p>
+<ul class="nav">
+<li>
+<a href="javascript:;">
+<i class="ti-control-record text-warning"></i>
+<span>Projects</span>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<i class="ti-control-record text-success"></i>
+<span>Apps</span>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<i class="ti-control-record text-danger"></i>
+<span>Support</span>
+</a>
+</li>
+</ul>
+</nav>
+</aside>
+ 
+ 
+<section class="main-content">
+ 
+<div class="content-wrap">
+ 
+<div class="wrapper">
+<section class="panel">
+<div class="panel-body">
+<div class="row">
+<div class="col-sm-12 mb25">
+<h5>Flot <b>Charts</b> - Line</h5>
+<div id="line-chart" class="chart"></div>
+</div>
+<div class="col-sm-6">
+<h5>Flot <b>Charts</b> - Bars</h5>
+<div id="bar-chart" class="chart mt25"></div>
+</div>
+<div class="col-sm-6">
+<h5>Flot <b>Charts</b> - Pie</h5>
+<div class="flot-pie chart mt25"></div>
+</div>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="col-sm-6">
+<section class="panel">
+<header class="panel-heading no-b">
+<h5>Real<b>Time</b></h5>
+</header>
+<div class="panel-body">
+<div class="realtime chart"></div>
+</div>
+</section>
+</div>
+<div class="col-sm-6">
+<section class="panel">
+<header class="panel-heading no-b">
+<h5>Categorized <b>Charts</b></h5>
+</header>
+<div class="panel-body">
+<div class="category chart"></div>
+</div>
+</section>
+</div>
+</div>
+<section class="panel text-center">
+<div class="panel-body text-center">
+<div class="row">
+<div class="col-md-4">
+<section class="panel">
+<h5>Easypie Chart - Bounce <b>Rate</b></h5>
+<div class="piechart">
+<span class="bounce" data-percent="86">
+<span>
+<div class="percent"></div>
+<small>Bounce Rate</small>
+</span>
+</span>
+</div>
+</section>
+</div>
+<div class="col-md-4">
+<section class="panel">
+<h5>Easypie Chart - Signup <b>Rate</b></h5>
+<div class="piechart">
+<span class="total" data-percent="52">
+<span>
+<div class="percent"></div>
+<small>Sign up Rate</small>
+</span>
+</span>
+</div>
+</section>
+</div>
+<div class="col-md-4">
+<section class="panel">
+<h5>Easypie Chart - New <b>Visits</b></h5>
+<div class="piechart">
+<span class="visits" data-percent="67">
+<span>
+<div class="percent"></div>
+<small>Daily Visits</small>
+</span>
+</span>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="col-sm-6">
+<section class="panel">
+<header class="panel-heading no-b">
+<h5>Jaguar 'E' Type vehicles in the UK</h5>
+</header>
+<div class="panel-body">
+<div id="hero-graph" class="chart"></div>
+</div>
+</section>
+<section class="panel">
+<header class="panel-heading no-b">
+<h5>Quarterly Apple iOS device unit sales</h5>
+</header>
+<div class="panel-body">
+<div id="hero-area" class="chart"></div>
+</div>
+</section>
+</div>
+<div class="col-sm-6">
+<section class="panel">
+<header class="panel-heading no-b">
+<h5>iPhone CPU Benchmarks</h5>
+</header>
+<div class="panel-body">
+<div id="hero-bar" class="chart mb25 mt20"></div>
+<h5>Donut flavours</h5>
+<div id="hero-donut" class="chart mb25 mt25">
+</div>
+</div>
+</section>
+</div>
+</div>
+<section class="panel text-center">
+<div class="panel-body">
+<div class="row">
+<div class="col-sm-6 col-md-3">
+<h5>Sparkline <b>Lines</b></h5>
+<div class="sparkline-line-bm mt5 mb5"></div>
+</div>
+<div class="col-sm-6 col-md-3">
+<h5>Sparkline <b>Pie</b></h5>
+<div class="sparkpie"></div>
+</div>
+<div class="col-sm-6 col-md-3">
+<h5>Sparkline <b>Bars</b></h5>
+<div class="sparkline-bar-bm mt25"></div>
+</div>
+<div class="col-sm-6 col-md-3">
+<h5>Composite <b>Sparkline</b></h5>
+<div class="sparkline-ext"></div>
+</div>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="col-lg-6">
+<section class="panel">
+<header class="panel-heading no-b">
+<h5>Chartjs Plot <b>Area</b></h5>
+</header>
+<div class="panel-body">
+<canvas id="plot-area" height="300" class="center-block"></canvas>
+</div>
+</section>
+</div>
+<div class="col-lg-6">
+<section class="panel">
+<header class="panel-heading no-b">
+<h5>Chart <b>Radar</b></h5>
+</header>
+<div class="panel-body">
+<canvas id="radar" height="300" class="center-block"></canvas>
+</div>
+</section>
+</div>
+</div>
+</div>
+ 
+</div>
+ 
+<a class="exit-offscreen"></a>
+</section>
+ 
+</section>
+</div>
+ 
+<script src="plugins/jquery-1.11.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="plugins/jquery.slimscroll.min.js"></script>
+<script src="plugins/jquery.easing.min.js"></script>
+<script src="plugins/appear/jquery.appear.js"></script>
+<script src="plugins/jquery.placeholder.js"></script>
+<script src="plugins/fastclick.js"></script>
+ 
+ 
+<script src="plugins/flot/jquery.flot.js"></script>
+<script src="plugins/flot/jquery.flot.resize.js"></script>
+<script src="plugins/flot/jquery.flot.categories.js"></script>
+<script src="plugins/flot/jquery.flot.stack.js"></script>
+<script src="plugins/flot/jquery.flot.time.js"></script>
+<script src="plugins/flot/jquery.flot.orderBars.js"></script>
+<script src="plugins/flot/jquery.flot.pie.js"></script>
+<script src="plugins/jquery.sparkline.js"></script>
+<script src="plugins/jquery.easing.min.js"></script>
+<script src="plugins/easy-pie-chart/jquery.easypiechart.js"></script>
+<script src="plugins/raphael.min.js"></script>
+<script src="plugins/morris/morris.js"></script>
+<script src="plugins/chartjs/Chart.min.js"></script>
+ 
+ 
+<script src="js/offscreen.js"></script>
+<script src="js/main.js"></script>
+ 
+ 
+<script src="js/chart.js"></script>
+ 
+</body>
+ 
+</html>
