@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){[].slice.call(document.querySelectorAll("button.progress-button")).forEach(function(t){new ProgressButton(t,{callback:function(t){var n=0,e=setInterval(function(){n=Math.min(n+.1*Math.random(),1),t._setProgress(n),1===n&&(t._stop(1),clearInterval(e))},200)}})})});
