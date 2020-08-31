@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sugoi Admin</title>
+		<meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/admin.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/lib/modernizr.js"></script>
+
+
+  </head>
+  <body id="inbox-page" class="bg-gray-light">
+
+  	<nav class="navbar navbar-fixed-top not-collapse bg-g-ln-gray" role="navigation">
+  		<div class="navbar-header">
+		    <a class="navbar-brand" href="#" class="hover-white-shade-bg">
+		    	Sugoi Admin
+		    	<small class="font-w-100 text-gray-alt hidden-xs hidden-sm">Awesome admin template</small>
+		    </a>
+		  </div>
+	  	<div id="top-nav">
+	  		<a href="https://wrapbootstrap.com/theme/sugoi-admin-WB0H6TMC9" type="button" class="btn btn-default navbar-btn navbar-right btn-primary m-r-30 mm-r-10">Purchase</a>
+	  		<div class="navbar-dropdown navbar-right navbar-avatar">
+	  			<a href="#" data-target="#topavatar-toggle" class="hover-no-underline dropdown-toggle m-lr-30 mm-lr-10" data-toggle="dropdown">
+						<img src="placeholders/avatars/avatar.jpg" class="img-circle" width=25>
+						<span class="text-gray-light hidden-sm hidden-xs">John Doe</span>
+						<span class="caret text-white hidden-sm hidden-xs"></span>
+					</a>
+					<ul id="topavatar-toggle" class="dropdown-menu avatar-dropdown">
+	          <li><a href="settings.html">Settings</a></li>
+	          <li><a href="login.html">Signup</a></li>
+	        </ul>
+	  		</div>
+	  		<ul class="nav navbar-nav navbar-right">
+		      <li>
+		      	<a href="messages.html">
+		      		<span class="glyphicon glyphicon-envelope"></span>
+		      		<span 
+								class="text-white circle-12px bg-orange text-small text-center icon-counter">4</span>
+		      		<span class="hidden-sm hidden-xs">Messages</span>
+		      	</a>
+		      </li>
+		      <li class="dropdown">
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		      		<span class="glyphicon glyphicon-plus-sign"></span>
+		      		<span class="hidden-sm hidden-xs">Pages</span>
+		        </a>
+		        <ul class="dropdown-menu">
+		          <li><a href="/">Dashboard</a></li>
+		          <li><a href="messages.html">Inbox</a></li>
+		          <li><a href="message-single.html">Message</a></li>
+		          <li><a href="gallery.html">Gallery</a></li>
+		          <li><a href="ui.html">UI</a></li>
+		          <li><a href="widgets.html">Widgets</a></li>
+		          <li><a href="settings.html">Settings</a></li>
+		          <li class="divider"></li>
+		          <li><a href="login.html">Login</a></li>
+		          <li><a href="signup.html">Signup</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+	  	</div>
+		</nav>
+
+		<div class="sidebar bg-gray-dark text-white text-center pushy pushy-left">
+			<header class="bg-g-ln-gray p-tb-30 pm-tb-10 p-lr-10 b-bot-2px-gray-dark hidden-xs">
+				<a href="#" data-target="#avatar-toggle" class="hover-no-underline dropdown-toggle" data-toggle="dropdown">
+					<img src="placeholders/avatars/avatar.jpg" class="img-circle" width=35>
+					<span class="text-gray-alt">Welcome</span>
+					<span class="text-gray-light">John Doe</span>
+					<span class="caret white"></span>
+				</a>
+			</header>
+			<ul id="avatar-toggle" class="dropdown-sidebar-avatar" role="menu" aria-labelledby="dLabel">
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="login.html">Sign out</a></li>
+		  </ul>
+
+			<hr class="no-margin">
+
+			<ul class="unstyled nav">
+				<li><a href="index.html" class="text-left">Dashboard</a></li>
+				<li class="active">
+					<a href="#" class="text-left">
+						Inbox
+						<span class="badge bg-blue-light pull-right text-gray-dark brad-small">4</span>
+					</a>
+				</li>
+				<li><a href="gallery.html" class="text-left">Gallery</a></li>
+				<li>
+					<a href="#" class="text-left dropdown-toggle" data-toggle="dropdown">
+						UI Elements
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="ui.html">UI</a></li>
+						<li><a href="widgets.html">Widgets</a></li>
+					</ul>
+				</li>
+				<li><a href="pricing.html" class="text-left">Pricing</a></li>
+				<li><a href="settings.html" class="text-left">Settings</a></li>
+			</ul>
+
+			<div class="bg-gray-dark-shade text-left search">
+				<i class="glyphicon glyphicon-search text-gray-alt"></i>
+				<input type="text" placeholder="Search" class="input-invisible">
+			</div>
+
+			<div class="sidebar-chart chart m-t-30" data-percent="73" data-scale-color="rgba(255,255,255,.2)">
+				<div class="percentage text-gray-alt font-w-100">73%</div>
+				<div class="label text-gray-alt font-w-100 text-uppercase">Bandwidth</div>
+			</div>
+
+		</div>
+
+		<div class="preloader">
+			<div class="timer"></div>
+		</div>
+
+  	<div id="container" class="main-content tp-t-60">
+
+			<button class="menu-btn btn btn-bordered text-gray-alt text-bold top-left-corner tm-l-30 pull-left">&#9776; MENU</button>
+
+			<a href="#chat" class="btn btn-bordered text-gray-alt text-bold hidden-md hidden-lg hidden-sm top-right-corner">Chat</a>
+
+			<div class="row">
+
+				<div class="col-sm-9">
+					<div class="bg-white p-tb-30">
+						
+						<div class="btn-group">
+							<div class="iconmelon m-r-10 m-l-30">
+				        <svg viewBox="0 0 32 32">
+				          <g filter="">
+				            <use xlink:href="#speech-talk-user"></use>
+				          </g>
+				        </svg>
+				      </div>
+								
+							<span class="text-gray-dark text-large align-with-button m-r-30">
+								Inbox
+							</span>
+
+						</div>
+
+
+						<input type="text" 
+							class="input-light input-large brad valign-top m-r-10 m-l-10 search-box" placeholder="Search...">
+						
+						<div class="pull-right m-r-30 mail-nav">
+
+							<span class="text-gray">
+								1-20 of 1248
+							</span>
+
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-no-bg text-gray">
+								  <span class="glyphicon glyphicon-chevron-left"></span>
+							  </label>
+							  <label class="btn btn-no-bg text-gray">
+								  <span class="glyphicon glyphicon-chevron-right"></span>
+							  </label>
+							</div>
+						</div>
+
+						<hr>
+
+						<a href="" class="btn btn-circle btn-bordered m-r-10 m-l-30 mm-l-10">
+							<span class="glyphicon glyphicon-remove"></span>
+						</a>
+
+						<a href="" class="btn btn-circle btn-bordered m-r-10">
+							<span class="glyphicon glyphicon-refresh"></span>
+						</a>
+
+						<a href="" class="btn btn-circle btn-bordered m-r-10">
+							<span class="glyphicon glyphicon-share-alt"></span>
+						</a>
+
+						<a href="" class="btn btn-circle btn-bordered m-r-10">
+							<span class="glyphicon glyphicon-star"></span>
+						</a>
+
+						<div class="btn-group pull-right m-r-30 mm-r-0 sort-buttons" data-toggle="buttons">
+							<a href="#" class="text-gray p-lr-10">Alphabetically</a>
+							<a href="#" class="text-gray p-lr-10 m-r-10 active">Recent</a>
+						</div>
+
+						<hr class="m-b-0">
+
+						<ul class="unstyled messages messages-selectable">
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/1.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs text-bold">Garry Cross</span>
+									<span class="subject text-bold">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										<span class="label label-success">Work</span>
+										Perhaps a re-engineering of your current world view will re-energize your online nomenclature to enable a new holistic interactive enterprise internet communication solution.
+									</span>
+									<span class="date"><span class="text-gray-dark">23</span> minutes ago</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/2.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs text-bold">Ronnie Warner</span>
+									<span class="subject text-bold">
+										<i class="glyphicon glyphicon-star m-r-10 text-orange"></i>
+										Lorem ipsum dolor sir amet non omnis moriar. Lorem ipsum dolor sir amet non omnis moriar.
+									</span>
+									<span class="date">Today <span class="text-gray-dark">1:05pm</span></span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/3.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs ">Bill Mathis</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										<span class="label label-warning">Marketing</span>
+										Fundamentally transforming well designed actionable information whose semantic content is virtually null. 
+									</span>
+									<span class="date">Today <span class="text-gray-dark">2:15pm</span></span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/4.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs text-bold">Eddie Mcgee</span>
+									<span class="subject text-bold">
+										<i class="glyphicon glyphicon-star m-r-10 text-orange"></i>
+										This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. 
+									</span>
+									<span class="date"><span class="text-gray-dark">2</span> days ago</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/5.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs text-bold">Erik Dean</span>
+									<span class="subject text-bold">
+										<i class="glyphicon glyphicon-star m-r-10 text-orange"></i>
+										Do not disturb!!!!!11111oneone
+									</span>
+									<span class="date">Last <span class="text-gray-dark">Monday</span></span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/6.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Timmy Osborne</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Own yo' eget tortizzle. Sizzle erizzle.
+									</span>
+									<span class="date">21 January</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/7.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Doug Ross</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Children of the sun, see your time has just begun, searching for your ways, through adventures every day. 
+									</span>
+									<span class="date">6 January</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/8.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Victor Benson</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										And I was getting a tattoo during the death from above.
+									</span>
+									<span class="date">24 Dec 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/9.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Henry Mccormick</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Lorem ipsum dolor sir amet non omnis moriar. Lorem ipsum dolor sir amet non omnis moriar.
+									</span>
+									<span class="date">20 Dec 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/10.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Ricky Greene</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Meh. We'll go deliver this crate like professionals, and then we'll go home. So I really am important? 
+									</span>
+									<span class="date">20 Dec 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/11.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Clint Mills</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										<span class="label label-info">Code</span>
+										Pushed new feature to master branch. Please, check it out!
+									</span>
+									<span class="date">27 Nov 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/12.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Theodore Jordan</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-orange"></i>
+										Would you censor the Venus de Venus just because you can see her spewers? 
+									</span>
+									<span class="date">26 Nov 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/13.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Virgin Barnett</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
+									</span>
+									<span class="date">24 Nov 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/14.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Edgar Ryan</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Brain freeze. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. 
+									</span>
+									<span class="date">23 Nov 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/15.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Marcus Hill</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										I took a viagra, got stuck in me throat, i've had a stiff neck for hours. i want to shoot the pigeons... off my roof. 
+									</span>
+									<span class="date">6 Nov 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/16.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Forrest Barber</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Lorem ipsum dolor sir amet non omnis moriar. Lorem ipsum dolor sir amet non omnis moriar.
+									</span>
+									<span class="date">28 Oct 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/17.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Maria Curie</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Pul my finger! when i get back, remind to tell you about the time i took 100 nuns to nairobi! 
+									</span>
+									<span class="date"><span class="text-gray-dark">22</span> Oct 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/18.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Levi Owen</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										I did the same thing to gandhi, he didn't eat for three weeks. let me tell you something my friend. 
+									</span>
+									<span class="date">19 Oct 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/19.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Bill Harmon</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Multiply your anger by about a hundred, kate, that's how much he thinks he loves you. 
+									</span>
+									<span class="date">18 Oct 2013</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10">
+									<span class="avatar">
+										<img src="placeholders/avatars/20.jpg" alt="" class="img-circle retina">
+									</span>
+									<span class="author hidden-xs">Ervin Freedman</span>
+									<span class="subject">
+										<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+										Ever notice how sometimes you come across somebody you shouldn't have f**ked with? 
+									</span>
+									<span class="date"><span class="text-gray-dark">3 years</span> ago</span>
+								</a>
+							</li>
+
+						</ul>
+
+
+					</div>
+				</div> <!-- /.col-lg-9 -->
+
+
+				<div class="col-sm-3">
+
+					<div class="bg-white p-t-30 m-b-10 b-bot-2px-gray-light">
+
+						<div class="iconmelon m-r-10 m-l-30">
+			        <svg viewBox="0 0 32 32">
+			          <g filter="">
+			            <use xlink:href="#speech-talk-user"></use>
+			          </g>
+			        </svg>
+			      </div>
+							
+						<span class="text-gray-dark text-large align-with-button">
+							Inbox
+						</span>
+
+						<hr class="m-b-0">
+
+						<div class="p-lr-30">
+							<button class="btn btn-primary btn-lg btn-block compose-btn">Compose</button>
+						</div>
+
+						<hr class="m-t-0 m-b-0">
+
+						<ul class="nav nav-pills nav-stacked">
+							<li class="active"><a href="#">Inbox</a></li>
+							<li><a href="#">Sent</a></li>
+							<li><a href="#">Drafts</a></li>
+							<li><a href="#">Archive</a></li>
+							<li><a href="#">Trash</a></li>
+							<li><a href="#">Spam</a></li>
+						</ul>
+					</div>
+					
+					<div id="chat" class="bg-white p-t-30 p-b-10 chat-wrapper b-bot-2px-gray-light">
+
+						<div class="btn-group chat-toggle">
+							<a href="#" class="p-lr-30 hover-no-underline" data-toggle="dropdown">
+								<img src="http://lorempixel.com/30/30/people/2" class="img-circle chat-avatar available m-r-10">
+										
+								<span class="hover-no-underline hover-gray-dark text-gray">
+									<span class="text-gray-dark text-large align-with-button">
+										John Doe
+									</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+						    <li><a href="#"><span class="circle-green m-r-10"></span>Available</a></li>
+						    <li><a href="#"><span class="circle-yellow m-r-10"></span>Busy</a></li>
+						    <li><a href="#"><span class="circle-gray m-r-10"></span>Invisible</a></li>
+						    <li class="divider"></li>
+						    <li><a href="#"><span class="circle-red m-r-10"></span>Sign out</a></li>
+						  </ul>
+						</div>
+
+						<hr class="m-b-0">
+
+						<div class="p-lr-30">
+							<input type="text" 
+								class="input-light input-large brad chat-search" placeholder="Find people...">
+						</div>
+
+						<hr class="m-t-0">
+
+						<ul class="unstyled people">
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10 d-block">
+									<img src="placeholders/avatars/5.jpg" alt="" class="img-circle chat-avatar available m-r-10">
+									<span class="author">Erik Dean</span>
+									<span class="label label-success m-l-10">3</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 pm-lr-10 d-block">
+									<img src="placeholders/avatars/7.jpg" alt="" class="img-circle chat-avatar available m-r-10">
+									<span class="author">Doug Ross</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 d-block">
+									<img src="placeholders/avatars/8.jpg" alt="" class="img-circle chat-avatar busy m-r-10">
+									<span class="author">Victor Benson</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#" class="p-lr-30 p-tb-10 d-block">
+									<img src="placeholders/avatars/9.jpg" alt="" class="img-circle chat-avatar signedoff m-r-10">
+									<span class="author">Henry Mccormick</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div> <!-- /.row -->
+  	
+
+  	</div>
+
+  	<div class="messenger bg-white">
+  		<div class="chat-header text-white bg-gray-dark">
+  			Henry Mccormick
+  			<a href="#" id="chat-toggle" class="pull-right chat-toggle">
+  				<span class="glyphicon glyphicon-chevron-down"></span>
+  			</a>
+  		</div>
+  		<div class="messenger-body open">
+  			<ul class="chat-messages">
+  				
+  			</ul>
+  			<div class="chat-footer">
+  				<div class="p-lr-10">
+						<input type="text" id="message-input" 
+							class="input-light input-large brad chat-search" placeholder="Your message...">
+					</div>
+  			</div>
+  		</div>
+  	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/lib/bootstrap.js"></script>
+
+    <script src="js/lib/pushy.js"></script>
+
+		<script src="js/lib/easypiechart.js"></script>
+
+    <script src="js/lib/retina.js"></script>
+
+    <script src="js/lib/notify.js"></script>
+
+    <script src="js/lib/icheck.js"></script>
+
+    <script src="js/admin.js"></script>
+
+
+    <script>
+    	var url ='icons/icons.svg';
+      var c=new XMLHttpRequest(); c.open('GET', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+      document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
+    </script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49617882-1', 'sugoi-admin-v104.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>

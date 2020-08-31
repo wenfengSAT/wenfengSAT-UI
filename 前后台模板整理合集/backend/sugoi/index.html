@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sugoi Admin</title>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="css/admin.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/lib/modernizr.js"></script>
+
+  </head>
+  <body id="dashboard-page" class="bg-gray-light">
+
+  	<nav class="navbar navbar-fixed-top not-collapse bg-g-ln-gray" role="navigation">
+  		<div class="navbar-header">
+		    <a class="navbar-brand" href="#" class="hover-white-shade-bg">
+		    	Sugoi Admin
+		    	<small class="font-w-100 text-gray-alt hidden-xs hidden-sm">Awesome admin template</small>
+		    </a>
+		  </div>
+	  	<div id="top-nav">
+	  		<a href="https://wrapbootstrap.com/theme/sugoi-admin-WB0H6TMC9" type="button" class="btn btn-default navbar-btn navbar-right btn-primary m-r-30 mm-r-10">Purchase</a>
+	  		<div class="navbar-dropdown navbar-right navbar-avatar">
+	  			<a href="#" data-target="#topavatar-toggle" class="hover-no-underline dropdown-toggle m-lr-30 mm-lr-10" data-toggle="dropdown">
+						<img src="placeholders/avatars/avatar.jpg" class="img-circle" width=25>
+						<span class="text-gray-light hidden-sm hidden-xs">John Doe</span>
+						<span class="caret text-white hidden-sm hidden-xs"></span>
+					</a>
+					<ul id="topavatar-toggle" class="dropdown-menu avatar-dropdown">
+	          <li><a href="settings.html">Settings</a></li>
+	          <li><a href="login.html">Signup</a></li>
+	        </ul>
+	  		</div>
+	  		<ul class="nav navbar-nav navbar-right">
+		      <li>
+		      	<a href="messages.html">
+		      		<span class="glyphicon glyphicon-envelope"></span>
+		      		<span 
+								class="text-white circle-12px bg-orange text-small text-center icon-counter">4</span>
+		      		<span class="hidden-sm hidden-xs">Messages</span>
+		      	</a>
+		      </li>
+		      <li class="dropdown">
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		      		<span class="glyphicon glyphicon-plus-sign"></span>
+		      		<span class="hidden-sm hidden-xs">Pages</span>
+		        </a>
+		        <ul class="dropdown-menu">
+		          <li><a href="/">Dashboard</a></li>
+		          <li><a href="messages.html">Inbox</a></li>
+		          <li><a href="message-single.html">Message</a></li>
+		          <li><a href="gallery.html">Gallery</a></li>
+		          <li><a href="ui.html">UI</a></li>
+		          <li><a href="widgets.html">Widgets</a></li>
+		          <li><a href="settings.html">Settings</a></li>
+		          <li class="divider"></li>
+		          <li><a href="login.html">Login</a></li>
+		          <li><a href="signup.html">Signup</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+	  	</div>
+		</nav>
+
+		<div class="sidebar bg-gray-dark text-white text-center pushy pushy-left">
+			<header class="bg-g-ln-gray p-tb-30 pm-tb-10 p-lr-10 b-bot-2px-gray-dark hidden-xs">
+				<a href="#" data-target="#avatar-toggle" class="hover-no-underline dropdown-toggle" data-toggle="dropdown">
+					<img src="placeholders/avatars/avatar.jpg" class="img-circle" width=35>
+					<span class="text-gray-alt">Welcome</span>
+					<span class="text-gray-light">John Doe</span>
+					<span class="caret white"></span>
+				</a>
+			</header>
+			<ul id="avatar-toggle" class="dropdown-sidebar-avatar" role="menu" aria-labelledby="dLabel">
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="login.html">Sign out</a></li>
+		  </ul>
+
+			<hr class="no-margin">
+
+			<ul class="unstyled nav">
+				<li class="active"><a href="index.html" class="text-left">Dashboard</a></li>
+				<li>
+					<a href="messages.html" class="text-left">
+						Inbox
+						<span class="badge bg-blue-light pull-right text-gray-dark brad-small">4</span>
+					</a>
+				</li>
+				<li><a href="gallery.html" class="text-left">Gallery</a></li>
+				<li>
+					<a href="#" class="text-left dropdown-toggle" data-toggle="dropdown">
+						UI Elements
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="ui.html">UI</a></li>
+						<li><a href="widgets.html">Widgets</a></li>
+					</ul>
+				</li>
+				<li><a href="pricing.html" class="text-left">Pricing</a></li>
+				<li><a href="settings.html" class="text-left">Settings</a></li>
+			</ul>
+
+			<div class="bg-gray-dark-shade text-left search">
+				<i class="glyphicon glyphicon-search text-gray-alt"></i>
+				<input type="text" placeholder="Search" class="input-invisible">
+			</div>
+
+			<div class="sidebar-chart chart m-t-30" data-percent="73" data-scale-color="rgba(255,255,255,.2)">
+				<div class="percentage text-gray-alt font-w-100">73%</div>
+				<div class="label text-gray-alt font-w-100 text-uppercase">Bandwidth</div>
+			</div>
+
+		</div>
+
+		<div class="preloader">
+			<div class="timer"></div>
+		</div>
+
+  	<div id="container" class="main-content p-30 tp-t-60 tp-lr-10">
+
+			<button class="menu-btn btn btn-bordered text-gray-alt text-bold top-left-corner">&#9776; MENU</button>
+
+			<ul class="nav nav-tabs">
+			  <li class="active">
+			  	<a href="#dashboard" data-toggle="tab">
+			  		<div class="text-small">Manage your</div>
+			  		<span class="text-uppercase">Dashboard</span>
+			  		<span class="text-gray-dark">/</span>
+			  		<span class="small text-gray-dark">4 new messages</span>
+			  	</a>
+			  </li>
+			  <li>
+			  	<a href="#statistics" data-toggle="tab">
+			  		<div class="text-small">Watch your</div>
+			  		<span class="text-uppercase">Statistics</span>
+			  		<span class="text-gray-dark">/</span>
+			  		<span class="small text-gray-dark">12 new followers</span>
+			  	</a>
+			  </li>
+			</ul>
+			
+			<!-- DASHBOARD TAB -->
+  		<div class="bg-white b-1px-gray-light b-top-none brad-bottom brad-tr b-bot-2px-gray-light">
+
+  			<div class="tab-content">
+
+  				<div class="tab-pane active fade in p-30" id="dashboard">
+
+  					<h1 class="text-center font-w-100">Welcome back <span class="text-blue">John Doe</span></h1>
+  					<div class="row">
+  						<p class="m-b-30 p-b-30 text-gray-alt text-uppercase text-center col-lg-8 col-lg-offset-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, quis, ipsam saepe voluptas rem possimus quas tenetur iusto dolorem architecto tempore fugiat amet iure distinctio quia vel consequuntur aut quod!</p>
+  					</div>
+
+  					<div class="row">
+  						
+	  					<div class="col-sm-6 m-b-30">
+
+  							<div class="pos-rel">
+  								<div class="iconmelon m-r-10">
+	                  <svg viewBox="0 0 32 32">
+	                    <g filter="">
+	                      <use xlink:href="#receipt-shopping"></use>
+	                    </g>
+	                  </svg>
+	                </div>
+	
+									<span class="text-gray-dark text-large align-with-button pos-abs hidden-xs">
+										Your Tasks
+									</span>
+									<span class="hidden-sm hidden-md hidden-lg text-gray-dark text-large align-with-button pos-abs ">
+										Taks
+									</span>
+  								
+  								
+  								<div class="top-left-abs clearfix over-text">
+										<input type="text"
+											id="task-content" 
+											class="text-over-header pull-left opacity-0 icheck"
+											placeholder="Add new task...">
+  									<a href="#" 
+  										id="task-toggle" 
+  										class="btn btn-primary btn-text-square text-large pull-right">
+  										+</a>
+  								</div>
+  							</div>
+
+  							<hr class="m-b-0">
+	  							
+
+	  						<div id="tasks-list" class="tasks-wrapper">
+	  							<ul class="list-editable unstyled">
+	  								<li style="display: none;" id="item-template">
+	  									<input type="checkbox" class="icheck"> 
+	  									<span class="body"></span>
+	  									<a href="#" class="remove-box">
+	  										<div class="iconmelon m-r-10">
+				                  <svg viewBox="0 0 32 32">
+				                    <g filter="">
+				                      <use xlink:href="#delete-garbage"></use>
+				                    </g>
+				                  </svg>
+				                </div>
+	  									</a>
+	  								</li>
+	  								<li>
+	  									<input type="checkbox" class="icheck"> 
+	  									<span class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, incidunt.</span>
+	  									<a href="#" class="remove-box">
+	  										<div class="iconmelon m-r-10">
+				                  <svg viewBox="0 0 32 32">
+				                    <g filter="">
+				                      <use xlink:href="#delete-garbage"></use>
+				                    </g>
+				                  </svg>
+				                </div>
+	  									</a>
+	  								</li>
+	  								<li>
+	  									<input type="checkbox" checked class="icheck">
+	  									<span class="body">lMaecenas faucibus mollis interdum.</span>
+	  									<a href="#" class="remove-box">
+	  										<div class="iconmelon m-r-10">
+				                  <svg viewBox="0 0 32 32">
+				                    <g filter="">
+				                      <use xlink:href="#delete-garbage"></use>
+				                    </g>
+				                  </svg>
+				                </div>
+	  									</a>
+	  								</li>
+	  								<li>
+	  									<input type="checkbox" class="icheck">
+	  									<span class="body">Nullam id dolor id nibh ultricies vehicula ut id elit.</span>
+	  									<div class="remove-box">
+	  										<a href="#" class="iconmelon m-r-10">
+				                  <svg viewBox="0 0 32 32">
+				                    <g filter="">
+				                      <use xlink:href="#delete-garbage"></use>
+				                    </g>
+				                  </svg>
+				                </a>
+	  									</div>
+	  								</li>
+	  								<li>
+	  									<input type="checkbox" class="icheck">
+	  									<span class="body">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</span>
+	  									<div class="remove-box">
+	  										<a href="#" class="iconmelon m-r-10">
+				                  <svg viewBox="0 0 32 32">
+				                    <g filter="">
+				                      <use xlink:href="#delete-garbage"></use>
+				                    </g>
+				                  </svg>
+				                </a>
+	  									</div>
+	  								</li>
+	  							</ul>
+								</div>
+
+	  					</div>
+
+	  					<div class="col-sm-6">
+								<!-- SOCIAL STREAM -->
+	  						<div class="iconmelon m-r-10">
+                  <svg viewBox="0 0 32 32">
+                    <g filter="">
+                      <use xlink:href="#bubble-love-talk"></use>
+                    </g>
+                  </svg>
+                </div>
+
+								<span class="text-gray-dark text-large align-with-button pos-abs hidden-xs">
+									Your social stream
+								</span>
+								<span class="hidden-sm hidden-md hidden-lg text-gray-dark text-large align-with-button ">
+									Social
+								</span>
+
+								<div class="btn-group pull-right">
+									<button class="btn btn-primary">
+										<i class="glyphicon glyphicon-cog text-white"></i>
+									</button>
+								</div>
+
+								<hr class="m-b-0">
+	  						
+		  					<div id="social-feed" class="social-feed"></div>
+
+	  					</div>
+
+  					</div>
+
+  					<div class="row">
+
+  						<div class="col-sm-5">
+								<!-- EVENTS CALENDAR -->
+  							<div class="iconmelon m-r-10">
+                  <svg viewBox="0 0 32 32">
+                    <g filter="">
+                      <use xlink:href="#clock-time"></use>
+                    </g>
+                  </svg>
+                </div>
+
+								<span class="text-gray-dark text-large align-with-button hidden-xs">
+									Your events
+								</span>
+								<span class="hidden-lg hidden-md hidden-sm text-gray-dark text-large align-with-button">
+									Events
+								</span>
+
+								<div class="btn-group pull-right">
+									<div class="btn btn-alt">
+										<i class="glyphicon glyphicon-plus text-white"></i>
+									</div>
+									<div class="btn btn-primary">
+										Add
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="cal1" id="events-calendar"></div>
+  						</div>
+
+  						<div class="col-sm-7">
+								<!-- MESSAGES -->
+  							<div class="iconmelon m-r-10">
+                  <svg viewBox="0 0 32 32">
+                    <g filter="">
+                      <use xlink:href="#email-mail"></use>
+                    </g>
+                  </svg>
+                </div>
+
+								<span class="text-gray-dark text-large align-with-button hidden-xs">
+									4 new messages
+								</span>
+
+  							<a href="messages.html" class="btn-group pull-right">
+									<div class="btn btn-alt">
+										<i class="glyphicon glyphicon-list text-white"></i>
+									</div>
+									<div class="btn btn-primary">
+										Read all
+									</div>
+								</a>
+
+								<hr class="m-b-0">
+
+								<ul class="unstyled messages">
+									<li>
+										<a href="message-single.html" class="p-tb-10 p-l-10 pm-lr-10">
+											<span class="avatar">
+												<img src="placeholders/avatars/4.jpg" alt="" class="img-circle retina">
+											</span>
+											<span class="author hidden-xs m-r-1">Eddie Mcgee</span>
+											<span class="subject">
+												<i class="glyphicon glyphicon-star m-r-10 text-orange"></i>
+												This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. 
+											</span>
+											<span class="date"><span class="text-gray-dark">23</span> minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="p-tb-10 pm-lr-10 p-l-10">
+											<span class="avatar">
+												<img src="placeholders/avatars/6.jpg" alt="" class="img-circle retina">
+											</span>
+											<span class="author hidden-xs">Timmy Osborne</span>
+											<span class="subject">
+												<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+												Own yo' eget tortizzle. Sizzle erizzle.
+											</span>
+											<span class="date">Today <span class="text-gray-dark">1:05pm</span></span>
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="p-tb-10 pm-lr-10 p-l-10">
+											<span class="avatar">
+												<img src="placeholders/avatars/7.jpg" alt="" class="img-circle retina">
+											</span>
+											<span class="author hidden-xs">Doug Ross</span>
+											<span class="subject">
+												<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+												Children of the sun, see your time has just begun, searching for your ways, through adventures every day. 
+											</span>
+											<span class="date">Yesterday <span class="text-gray-dark">2:23pm</span></span>
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="p-tb-10 pm-lr-10 p-l-10">
+											<span class="avatar">
+												<img src="placeholders/avatars/8.jpg" alt="" class="img-circle retina">
+											</span>
+											<span class="author hidden-xs">Victor Benson</span>
+											<span class="subject">
+												<i class="glyphicon glyphicon-star m-r-10 text-gray-light"></i>
+												And I was getting a tattoo during the death from above.
+											</span>
+											<span class="date"><span class="text-gray-dark">2</span> days ago</span>
+										</a>
+									</li>
+
+								</ul>
+
+  						</div>
+  						
+  					</div>
+  				</div>
+					
+					<!-- STATISTICS TAB -->
+  				<div class="tab-pane fade p-30" id="statistics">
+
+  					<div class="row m-b-30">
+  						<div class="col-sm-4">
+  							<h1 class="font-w-100"><span class="text-blue">12</span> new followers</h1>
+  						</div>
+							<div class="col-sm-8 m-t-30">
+
+								<div class="row">
+									<div class="col-sm-4 text-center">
+										<span class="twitter-sparkline">Loading..</span>
+										<div class="text-uppercase text-small text-gray-alt m-t-10">TWITTER</div>
+									</div>
+
+									<div class="col-sm-4 text-center">
+										<span class="facebook-sparkline">Loading..</span>
+										<div class="text-uppercase text-small text-gray-alt m-t-10">FACEBOOK</div>
+									</div>
+
+									<div class="col-sm-4 text-center">
+										<span class="google-sparkline">Loading..</span>
+										<div class="text-uppercase text-small text-gray-alt m-t-10">GOOGLE+</div>
+									</div>
+								</div>
+
+							</div>
+  					</div>
+
+  					<hr class="m-b-30">
+
+  					<!-- visiotrs chart -->
+						<div class="iconmelon m-r-10">
+	            <svg viewBox="0 0 32 32">
+	              <g filter="">
+	                <use xlink:href="#man-people-user"></use>
+	              </g>
+	            </svg>
+	          </div>
+
+						<span class="text-gray-dark text-large align-with-button pos-abs">
+							Visitors
+						</span>
+					
+						<div class="btn-group pull-right" data-toggle="buttons">
+						  <label class="btn btn-primary active">
+						    <input type="radio" name="visitors" id="option1"> Week
+						  </label>
+						  <label class="btn btn-primary">
+						    <input type="radio" name="visitors" id="option2"> Month
+						  </label>
+						  <label class="btn btn-primary">
+						    <input type="radio" name="visitors" id="option3"> Year
+						  </label>
+						</div>
+
+						<div id="visitors-chart" style="height: 315px;" class="m-b-30"></div>
+
+						<hr>
+					
+						<div class="row">
+							<div class="col-sm-7">
+								<div class="iconmelon m-r-10">
+			            <svg viewBox="0 0 32 32">
+			              <g filter="">
+			                <use xlink:href="#earth-globe"></use>
+			              </g>
+			            </svg>
+			          </div>
+		
+								<span class="text-gray-dark text-large align-with-button pos-abs">
+									Source
+								</span>
+
+								<div id="source-chart" class="m-b-30" style="height: 320px;"></div>
+							</div>
+
+							<div class="col-sm-5">
+
+								<div class="iconmelon m-r-10">
+			            <svg viewBox="0 0 32 32">
+			              <g filter="">
+			                <use xlink:href="#macintosh"></use>
+			              </g>
+			            </svg>
+			          </div>
+		
+								<span class="text-gray-dark text-large align-with-button pos-abs">
+									Devices
+								</span>
+
+								<div id="device-chart" class="m-tb-30" style="height: 300px;"></div>
+							</div>
+  					</div>
+			
+  				</div>
+
+  			</div>
+
+  		</div>
+
+  	</div> <!-- /main content -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/lib/bootstrap.js"></script>
+
+    <script src="js/lib/pushy.js"></script>
+
+    <script src="js/lib/moment.js"></script>
+
+    <script src="js/lib/jquery.timeago.js"></script>
+    <script src="js/lib/jquery.eventCalendar.js"></script>
+
+    <script src="js/lib/icheck.js"></script>
+
+    <script src="js/lib/lifestream.js"></script>
+
+   	<script src="js/lib/raphael.js"></script>
+		<script src="js/lib/morris.js"></script>
+
+		<script src="js/lib/easypiechart.js"></script>
+
+		<script src="js/lib/sparkline.js"></script>
+
+    <script src="js/lib/notify.js"></script>
+
+    <script src="js/admin.js"></script>
+
+
+    <script>
+    	var url ='icons/icons.svg';
+      var c=new XMLHttpRequest(); c.open('GET', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+      document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
+    </script>
+
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49617882-1', 'sugoi-admin-v104.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>

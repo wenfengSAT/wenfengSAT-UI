@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sugoi Admin</title>
+  	<meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/admin.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/lib/modernizr.js"></script>
+
+  </head>
+  <body class="bg-gray-light ui">
+
+  	<nav class="navbar navbar-fixed-top not-collapse bg-g-ln-gray" role="navigation">
+  		<div class="navbar-header">
+		    <a class="navbar-brand" href="#" class="hover-white-shade-bg">
+		    	Sugoi Admin
+		    	<small class="font-w-100 text-gray-alt hidden-xs hidden-sm">Awesome admin template</small>
+		    </a>
+		  </div>
+	  	<div id="top-nav">
+	  		<a href="https://wrapbootstrap.com/theme/sugoi-admin-WB0H6TMC9" type="button" class="btn btn-default navbar-btn navbar-right btn-primary m-r-30 mm-r-10">Purchase</a>
+	  		<div class="navbar-dropdown navbar-right navbar-avatar">
+	  			<a href="#" data-target="#topavatar-toggle" class="hover-no-underline dropdown-toggle m-lr-30 mm-lr-10" data-toggle="dropdown">
+						<img src="placeholders/avatars/avatar.jpg" class="img-circle" width=25>
+						<span class="text-gray-light hidden-sm hidden-xs">John Doe</span>
+						<span class="caret text-white hidden-sm hidden-xs"></span>
+					</a>
+					<ul id="topavatar-toggle" class="dropdown-menu avatar-dropdown">
+	          <li><a href="settings.html">Settings</a></li>
+	          <li><a href="login.html">Signup</a></li>
+	        </ul>
+	  		</div>
+	  		<ul class="nav navbar-nav navbar-right">
+		      <li>
+		      	<a href="messages.html">
+		      		<span class="glyphicon glyphicon-envelope"></span>
+		      		<span 
+								class="text-white circle-12px bg-orange text-small text-center icon-counter">4</span>
+		      		<span class="hidden-sm hidden-xs">Messages</span>
+		      	</a>
+		      </li>
+		      <li class="dropdown">
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		      		<span class="glyphicon glyphicon-plus-sign"></span>
+		      		<span class="hidden-sm hidden-xs">Pages</span>
+		        </a>
+		        <ul class="dropdown-menu">
+		          <li><a href="/">Dashboard</a></li>
+		          <li><a href="messages.html">Inbox</a></li>
+		          <li><a href="message-single.html">Message</a></li>
+		          <li><a href="gallery.html">Gallery</a></li>
+		          <li><a href="ui.html">UI</a></li>
+		          <li><a href="widgets.html">Widgets</a></li>
+		          <li><a href="settings.html">Settings</a></li>
+		          <li class="divider"></li>
+		          <li><a href="login.html">Login</a></li>
+		          <li><a href="signup.html">Signup</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+	  	</div>
+		</nav>
+
+		<div class="sidebar bg-gray-dark text-white text-center pushy pushy-left">
+			<header class="bg-g-ln-gray p-tb-30 pm-tb-10 p-lr-10 b-bot-2px-gray-dark hidden-xs">
+				<a href="#" data-target="#avatar-toggle" class="hover-no-underline dropdown-toggle" data-toggle="dropdown">
+					<img src="placeholders/avatars/avatar.jpg" class="img-circle" width=35>
+					<span class="text-gray-alt">Welcome</span>
+					<span class="text-gray-light">John Doe</span>
+					<span class="caret white"></span>
+				</a>
+			</header>
+			<ul id="avatar-toggle" class="dropdown-sidebar-avatar" role="menu" aria-labelledby="dLabel">
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="login.html">Sign out</a></li>
+		  </ul>
+
+			<hr class="no-margin">
+
+			<ul class="unstyled nav">
+				<li><a href="index.html" class="text-left">Dashboard</a></li>
+				<li>
+					<a href="messages.html" class="text-left">
+						Inbox
+						<span class="badge bg-blue-light pull-right text-gray-dark brad-small">4</span>
+					</a>
+				</li>
+				<li><a href="gallery.html" class="text-left">Gallery</a></li>
+				<li class="active">
+					<a href="#" class="text-left dropdown-toggle" data-toggle="dropdown">
+						UI Elements
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li class="active"><a href="ui.html">UI</a></li>
+						<li><a href="widgets.html">Widgets</a></li>
+					</ul>
+				</li>
+				<li><a href="pricing.html" class="text-left">Pricing</a></li>
+				<li><a href="settings.html" class="text-left">Settings</a></li>
+			</ul>
+
+			<div class="bg-gray-dark-shade text-left search">
+				<i class="glyphicon glyphicon-search text-gray-alt"></i>
+				<input type="text" placeholder="Search" class="input-invisible">
+			</div>
+
+			<div class="sidebar-chart chart m-t-30" data-percent="73" data-scale-color="rgba(255,255,255,.2)">
+				<div class="percentage text-gray-alt font-w-100">73%</div>
+				<div class="label text-gray-alt font-w-100 text-uppercase">Bandwidth</div>
+			</div>
+
+		</div>
+
+		<div class="preloader">
+			<div class="timer"></div>
+		</div>
+
+  	<div id="container" class="main-content p-lr-30 tp-t-60 p-b-30 tp-lr-10">
+
+			<button class="menu-btn btn btn-bordered text-gray-alt text-bold top-left-corner">&#9776; MENU</button>
+			
+			<div class="p-b-10">
+				<h1>UI Elements</h1>
+			</div>
+
+			<!-- ALERTS -->
+			<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				This page may load a little longer than usual since all elements are displayed here at once. You wouldn't do that in production of course.
+			</div>
+			
+			<div class="alert alert-info">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, vitae.
+			</div>
+
+			<div class="alert alert-warning alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, velit magnam dolore.
+			</div>
+
+			<div class="alert alert-danger alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			</div>
+
+			
+			<!-- TABS -->
+			<ul class="nav nav-tabs">
+			  <li class="active">
+			  	<a href="#first" data-toggle="tab">
+			  		<div class="text-small">progress</div>
+			  		<span class="text-uppercase">bars</span>
+			  		<span class="text-gray-dark">/</span>
+			  		<span class="small text-gray-dark">some info</span>
+			  	</a>
+			  </li>
+			  <li>
+			  	<a href="#second" data-toggle="tab">
+			  		<div class="text-small">awesome</div>
+			  		<span class="text-uppercase">buttons</span>
+			  		<span class="text-gray-dark">/</span>
+			  		<span class="small text-gray-dark">click!</span>
+			  	</a>
+			  </li>
+			</ul>
+
+			<div class="bg-white b-1px-gray-light b-top-none brad-bottom brad-tr b-bot-2px-gray-light">
+  			<div class="tab-content">
+  				<div class="tab-pane active fade in p-30" id="first">
+						
+  					<div class="row">
+  						<!-- PROGRESS BARS -->
+  						<div class="col-sm-6">
+  							<div class="progress">
+								  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+								    <span class="sr-only">40% Complete (success)</span>
+								  </div>
+								</div>
+								<div class="progress">
+								  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+								    <span class="sr-only">20% Complete</span>
+								  </div>
+								</div>
+								<div class="progress">
+								  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+								    <span class="sr-only">60% Complete (warning)</span>
+								  </div>
+								</div>
+								<div class="progress">
+								  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+								    <span class="sr-only">80% Complete</span>
+								  </div>
+								</div>
+  						</div>
+  						<div class="col-sm-6">
+  							<div class="progress progress-striped">
+								  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+								    <span class="sr-only">40% Complete (success)</span>
+								  </div>
+								</div>
+								<div class="progress progress-striped">
+								  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+								    <span class="sr-only">20% Complete</span>
+								  </div>
+								</div>
+								<div class="progress progress-striped">
+								  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+								    <span class="sr-only">60% Complete (warning)</span>
+								  </div>
+								</div>
+								<div class="progress progress-striped">
+								  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+								    <span class="sr-only">80% Complete (danger)</span>
+								  </div>
+								</div>
+  						</div>
+  					</div>
+
+  				</div>
+  				<div class="tab-pane fade p-30" id="second">
+						<div class="m-b-30">
+							<button class="btn btn-gray btn-tiny">
+								Gray button
+							</button>
+							<button class="btn btn-gray btn-sm">
+								Gray button
+							</button>
+							<button class="btn btn-gray">
+								Gray button
+							</button>
+							<button class="btn btn-gray btn-lg">
+								Gray button
+							</button>
+						</div>
+						<div class="m-b-30">
+							<a href="#" class="btn btn-bordered text-gray-dark btn-tiny">Bordered</a>
+							<a href="#" class="btn btn-bordered text-gray-dark btn-sm">Bordered</a>
+							<a href="#" class="btn btn-bordered text-gray-dark">Bordered</a>
+							<a href="#" class="btn btn-bordered text-gray-dark btn-lg">Bordered</a>
+						</div>
+						<div class="m-b-30">
+		    			<button class="btn btn-bordered btn-tiny text-uppercase text-bold">Bolded</button>
+		    			<button class="btn btn-bordered btn-sm text-uppercase text-bold">Bolded</button>
+		    			<button class="btn btn-bordered text-uppercase text-bold">Bolded</button>
+		    			<button class="btn btn-bordered btn-lg text-uppercase text-bold">Bolded Large</button>
+						</div>
+						<div class="m-b-30">
+							<a href="#" class="btn-group">
+								<div class="btn btn-alt btn-tiny">
+									<i class="glyphicon glyphicon-list text-white"></i>
+								</div>
+								<div class="btn btn-primary btn-tiny">
+									Read all
+								</div>
+							</a>
+							<a href="#" class="btn-group">
+								<div class="btn btn-alt btn-sm">
+									<i class="glyphicon glyphicon-list text-white"></i>
+								</div>
+								<div class="btn btn-primary btn-sm">
+									Read all
+								</div>
+							</a>
+							<a href="#" class="btn-group">
+								<div class="btn btn-alt">
+									<i class="glyphicon glyphicon-list text-white"></i>
+								</div>
+								<div class="btn btn-primary">
+									Read all
+								</div>
+							</a>
+							<a href="#" class="btn-group">
+								<div class="btn btn-alt btn-lg">
+									<i class="glyphicon glyphicon-list text-white"></i>
+								</div>
+								<div class="btn btn-primary btn-lg">
+									Read all
+								</div>
+							</a>
+						</div>
+						<div class="m-b-30">
+							<button class="btn btn-primary btn-tiny">
+								<i class="glyphicon glyphicon-cog text-white"></i>
+							</button>
+							<button class="btn btn-primary btn-sm">
+								<i class="glyphicon glyphicon-cog text-white"></i>
+							</button>
+							<button class="btn btn-primary">
+								<i class="glyphicon glyphicon-cog text-white"></i>
+							</button>
+							<button class="btn btn-circle">
+								<i class="glyphicon glyphicon-off"></i>
+							</button>
+							<button class="btn btn-circle">
+								<i class="glyphicon glyphicon-cog"></i>
+							</button>
+							<button class="btn btn-circle">
+								<i class="glyphicon glyphicon-flash"></i>
+							</button>
+							<button class="btn btn-circle">
+								<i class="glyphicon glyphicon-map-marker"></i>
+							</button>
+						</div>
+  				</div>
+				</div>
+			</div>
+			
+			<!-- ICONS -->
+			<div class="bg-white p-30 m-t-30 b-bot-2px-gray-light b-right-1px-gray-light">
+				<span class="text-gray-dark text-large align-with-button">
+					Almost <span class="text-blue">600</span> Icons
+				</span>
+				
+				<hr>
+
+				<div class="fi-icons">
+					<i class="fi-address-book m-10 text-large"></i>
+					<i class="fi-alert m-10 text-large"></i>
+					<i class="fi-align-center m-10 text-large"></i>
+					<i class="fi-align-justify m-10 text-large"></i>
+					<i class="fi-align-left m-10 text-large"></i>
+					<i class="fi-align-right m-10 text-large"></i>
+					<i class="fi-anchor m-10 text-large"></i>
+					<i class="fi-annotate m-10 text-large"></i>
+					<i class="fi-archive m-10 text-large"></i>
+					<i class="fi-arrow-down m-10 text-large"></i>
+					<i class="fi-arrow-left m-10 text-large"></i>
+					<i class="fi-arrow-right m-10 text-large"></i>
+					<i class="fi-arrow-up m-10 text-large"></i>
+					<i class="fi-arrows-compress m-10 text-large"></i>
+					<i class="fi-arrows-expand m-10 text-large"></i>
+					<i class="fi-arrows-in m-10 text-large"></i>
+					<i class="fi-arrows-out m-10 text-large"></i>
+					<i class="fi-asl m-10 text-large"></i>
+					<i class="fi-asterisk m-10 text-large"></i>
+					<i class="fi-at-sign m-10 text-large"></i>
+					<i class="fi-background-color m-10 text-large"></i>
+					<i class="fi-battery-empty m-10 text-large"></i>
+					<i class="fi-battery-full m-10 text-large"></i>
+					<i class="fi-battery-half m-10 text-large"></i>
+					<i class="fi-bitcoin-circle m-10 text-large"></i>
+					<i class="fi-bitcoin m-10 text-large"></i>
+					<i class="fi-blind m-10 text-large"></i>
+					<i class="fi-bluetooth m-10 text-large"></i>
+					<i class="fi-bold m-10 text-large"></i>
+					<i class="fi-book-bookmark m-10 text-large"></i>
+					<i class="fi-book m-10 text-large"></i>
+					<i class="fi-bookmark m-10 text-large"></i>
+					<i class="fi-braille m-10 text-large"></i>
+					<i class="fi-burst-new m-10 text-large"></i>
+					<i class="fi-burst-sale m-10 text-large"></i>
+					<i class="fi-burst m-10 text-large"></i>
+					<i class="fi-calendar m-10 text-large"></i>
+					<i class="fi-camera m-10 text-large"></i>
+					<i class="fi-check m-10 text-large"></i>
+					<i class="fi-checkbox m-10 text-large"></i>
+					<i class="fi-clipboard-notes m-10 text-large"></i>
+					<i class="fi-clipboard-pencil m-10 text-large"></i>
+					<i class="fi-clipboard m-10 text-large"></i>
+					<i class="fi-clock m-10 text-large"></i>
+					<i class="fi-closed-caption m-10 text-large"></i>
+					<i class="fi-cloud m-10 text-large"></i>
+					<i class="fi-comment-minus m-10 text-large"></i>
+					<i class="fi-comment-quotes m-10 text-large"></i>
+					<i class="fi-comment-video m-10 text-large"></i>
+					<i class="fi-comment m-10 text-large"></i>
+					<i class="fi-comments m-10 text-large"></i>
+					<i class="fi-compass m-10 text-large"></i>
+					<i class="fi-contrast m-10 text-large"></i>
+					<i class="fi-credit-card m-10 text-large"></i>
+					<i class="fi-crop m-10 text-large"></i>
+					<i class="fi-crown m-10 text-large"></i>
+					<i class="fi-css3 m-10 text-large"></i>
+					<i class="fi-database m-10 text-large"></i>
+					<i class="fi-die-five m-10 text-large"></i>
+					<i class="fi-die-four m-10 text-large"></i>
+					<i class="fi-die-one m-10 text-large"></i>
+					<i class="fi-die-six m-10 text-large"></i>
+					<i class="fi-die-three m-10 text-large"></i>
+					<i class="fi-die-two m-10 text-large"></i>
+					<i class="fi-dislike m-10 text-large"></i>
+					<i class="fi-dollar-bill m-10 text-large"></i>
+					<i class="fi-dollar m-10 text-large"></i>
+					<i class="fi-download m-10 text-large"></i>
+					<i class="fi-eject m-10 text-large"></i>
+					<i class="fi-elevator m-10 text-large"></i>
+					<i class="fi-euro m-10 text-large"></i>
+					<i class="fi-eye m-10 text-large"></i>
+					<i class="fi-fast-forward m-10 text-large"></i>
+					<i class="fi-female-symbol m-10 text-large"></i>
+					<i class="fi-female m-10 text-large"></i>
+					<i class="fi-filter m-10 text-large"></i>
+					<i class="fi-first-aid m-10 text-large"></i>
+					<i class="fi-flag m-10 text-large"></i>
+					<i class="fi-folder-add m-10 text-large"></i>
+					<i class="fi-folder-lock m-10 text-large"></i>
+					<i class="fi-folder m-10 text-large"></i>
+					<i class="fi-foot m-10 text-large"></i>
+					<i class="fi-foundation m-10 text-large"></i>
+					<i class="fi-graph-bar m-10 text-large"></i>
+					<i class="fi-graph-horizontal m-10 text-large"></i>
+					<i class="fi-graph-pie m-10 text-large"></i>
+					<i class="fi-graph-trend m-10 text-large"></i>
+					<i class="fi-guide-dog m-10 text-large"></i>
+					<i class="fi-hearing-aid m-10 text-large"></i>
+					<i class="fi-heart m-10 text-large"></i>
+					<i class="fi-home m-10 text-large"></i>
+					<i class="fi-html5 m-10 text-large"></i>
+					<i class="fi-indent-less m-10 text-large"></i>
+					<i class="fi-indent-more m-10 text-large"></i>
+					<i class="fi-info m-10 text-large"></i>
+					<i class="fi-italic m-10 text-large"></i>
+					<i class="fi-key m-10 text-large"></i>
+					<i class="fi-laptop m-10 text-large"></i>
+					<i class="fi-layout m-10 text-large"></i>
+					<i class="fi-lightbulb m-10 text-large"></i>
+					<i class="fi-like m-10 text-large"></i>
+					<i class="fi-link m-10 text-large"></i>
+					<i class="fi-list-bullet m-10 text-large"></i>
+					<i class="fi-list-number m-10 text-large"></i>
+					<i class="fi-list-thumbnails m-10 text-large"></i>
+					<i class="fi-list m-10 text-large"></i>
+					<i class="fi-lock m-10 text-large"></i>
+					<i class="fi-loop m-10 text-large"></i>
+					<i class="fi-magnifying-glass m-10 text-large"></i>
+					<i class="fi-mail m-10 text-large"></i>
+					<i class="fi-male-female m-10 text-large"></i>
+					<i class="fi-male-symbol m-10 text-large"></i>
+					<i class="fi-male m-10 text-large"></i>
+					<i class="fi-map m-10 text-large"></i>
+					<i class="fi-marker m-10 text-large"></i>
+					<i class="fi-megaphone m-10 text-large"></i>
+					<i class="fi-microphone m-10 text-large"></i>
+					<i class="fi-minus-circle m-10 text-large"></i>
+					<i class="fi-minus m-10 text-large"></i>
+					<i class="fi-mobile-signal m-10 text-large"></i>
+					<i class="fi-mobile m-10 text-large"></i>
+					<i class="fi-monitor m-10 text-large"></i>
+					<i class="fi-mountains m-10 text-large"></i>
+					<i class="fi-music m-10 text-large"></i>
+					<i class="fi-next m-10 text-large"></i>
+					<i class="fi-no-dogs m-10 text-large"></i>
+					<i class="fi-no-smoking m-10 text-large"></i>
+					<i class="fi-page-add m-10 text-large"></i>
+					<i class="fi-page-copy m-10 text-large"></i>
+					<i class="fi-page-csv m-10 text-large"></i>
+					<i class="fi-page-delete m-10 text-large"></i>
+					<i class="fi-page-doc m-10 text-large"></i>
+					<i class="fi-page-edit m-10 text-large"></i>
+					<i class="fi-page-export-csv m-10 text-large"></i>
+					<i class="fi-page-export-doc m-10 text-large"></i>
+					<i class="fi-page-export-pdf m-10 text-large"></i>
+					<i class="fi-page-export m-10 text-large"></i>
+					<i class="fi-page-filled m-10 text-large"></i>
+					<i class="fi-page-multiple m-10 text-large"></i>
+					<i class="fi-page-pdf m-10 text-large"></i>
+					<i class="fi-page-remove m-10 text-large"></i>
+					<i class="fi-page-search m-10 text-large"></i>
+					<i class="fi-page m-10 text-large"></i>
+					<i class="fi-paint-bucket m-10 text-large"></i>
+					<i class="fi-paperclip m-10 text-large"></i>
+					<i class="fi-pause m-10 text-large"></i>
+					<i class="fi-paw m-10 text-large"></i>
+					<i class="fi-paypal m-10 text-large"></i>
+					<i class="fi-pencil m-10 text-large"></i>
+					<i class="fi-photo m-10 text-large"></i>
+					<i class="fi-play-circle m-10 text-large"></i>
+					<i class="fi-play-video m-10 text-large"></i>
+					<i class="fi-play m-10 text-large"></i>
+					<i class="fi-plus m-10 text-large"></i>
+					<i class="fi-pound m-10 text-large"></i>
+					<i class="fi-power m-10 text-large"></i>
+					<i class="fi-previous m-10 text-large"></i>
+					<i class="fi-price-tag m-10 text-large"></i>
+					<i class="fi-pricetag-multiple m-10 text-large"></i>
+					<i class="fi-print m-10 text-large"></i>
+					<i class="fi-prohibited m-10 text-large"></i>
+					<i class="fi-projection-screen m-10 text-large"></i>
+					<i class="fi-puzzle m-10 text-large"></i>
+					<i class="fi-quote m-10 text-large"></i>
+					<i class="fi-record m-10 text-large"></i>
+					<i class="fi-refresh m-10 text-large"></i>
+					<i class="fi-results-demographics m-10 text-large"></i>
+					<i class="fi-results m-10 text-large"></i>
+					<i class="fi-rewind-ten m-10 text-large"></i>
+					<i class="fi-rewind m-10 text-large"></i>
+					<i class="fi-rss m-10 text-large"></i>
+					<i class="fi-safety-cone m-10 text-large"></i>
+					<i class="fi-save m-10 text-large"></i>
+					<i class="fi-share m-10 text-large"></i>
+					<i class="fi-sheriff-badge m-10 text-large"></i>
+					<i class="fi-shield m-10 text-large"></i>
+					<i class="fi-shopping-bag m-10 text-large"></i>
+					<i class="fi-shopping-cart m-10 text-large"></i>
+					<i class="fi-shuffle m-10 text-large"></i>
+					<i class="fi-skull m-10 text-large"></i>
+					<i class="fi-social-500px m-10 text-large"></i>
+					<i class="fi-social-adobe m-10 text-large"></i>
+					<i class="fi-social-amazon m-10 text-large"></i>
+					<i class="fi-social-android m-10 text-large"></i>
+					<i class="fi-social-apple m-10 text-large"></i>
+					<i class="fi-social-behance m-10 text-large"></i>
+					<i class="fi-social-bing m-10 text-large"></i>
+					<i class="fi-social-blogger m-10 text-large"></i>
+					<i class="fi-social-delicious m-10 text-large"></i>
+					<i class="fi-social-designer-news m-10 text-large"></i>
+					<i class="fi-social-deviant-art m-10 text-large"></i>
+					<i class="fi-social-digg m-10 text-large"></i>
+					<i class="fi-social-dribbble m-10 text-large"></i>
+					<i class="fi-social-drive m-10 text-large"></i>
+					<i class="fi-social-dropbox m-10 text-large"></i>
+					<i class="fi-social-evernote m-10 text-large"></i>
+					<i class="fi-social-facebook m-10 text-large"></i>
+					<i class="fi-social-flickr m-10 text-large"></i>
+					<i class="fi-social-forrst m-10 text-large"></i>
+					<i class="fi-social-foursquare m-10 text-large"></i>
+					<i class="fi-social-game-center m-10 text-large"></i>
+					<i class="fi-social-github m-10 text-large"></i>
+					<i class="fi-social-google-plus m-10 text-large"></i>
+					<i class="fi-social-hacker-news m-10 text-large"></i>
+					<i class="fi-social-hi5 m-10 text-large"></i>
+					<i class="fi-social-instagram m-10 text-large"></i>
+					<i class="fi-social-joomla m-10 text-large"></i>
+					<i class="fi-social-lastfm m-10 text-large"></i>
+					<i class="fi-social-linkedin m-10 text-large"></i>
+					<i class="fi-social-medium m-10 text-large"></i>
+					<i class="fi-social-myspace m-10 text-large"></i>
+					<i class="fi-social-orkut m-10 text-large"></i>
+					<i class="fi-social-path m-10 text-large"></i>
+					<i class="fi-social-picasa m-10 text-large"></i>
+					<i class="fi-social-pinterest m-10 text-large"></i>
+					<i class="fi-social-rdio m-10 text-large"></i>
+					<i class="fi-social-reddit m-10 text-large"></i>
+					<i class="fi-social-skillshare m-10 text-large"></i>
+					<i class="fi-social-skype m-10 text-large"></i>
+					<i class="fi-social-smashing-mag m-10 text-large"></i>
+					<i class="fi-social-snapchat m-10 text-large"></i>
+					<i class="fi-social-spotify m-10 text-large"></i>
+					<i class="fi-social-squidoo m-10 text-large"></i>
+					<i class="fi-social-stack-overflow m-10 text-large"></i>
+					<i class="fi-social-steam m-10 text-large"></i>
+					<i class="fi-social-stumbleupon m-10 text-large"></i>
+					<i class="fi-social-treehouse m-10 text-large"></i>
+					<i class="fi-social-tumblr m-10 text-large"></i>
+					<i class="fi-social-twitter m-10 text-large"></i>
+					<i class="fi-social-vimeo m-10 text-large"></i>
+					<i class="fi-social-windows m-10 text-large"></i>
+					<i class="fi-social-xbox m-10 text-large"></i>
+					<i class="fi-social-yahoo m-10 text-large"></i>
+					<i class="fi-social-yelp m-10 text-large"></i>
+					<i class="fi-social-youtube m-10 text-large"></i>
+					<i class="fi-social-zerply m-10 text-large"></i>
+					<i class="fi-social-zurb m-10 text-large"></i>
+					<i class="fi-sound m-10 text-large"></i>
+					<i class="fi-star m-10 text-large"></i>
+					<i class="fi-stop m-10 text-large"></i>
+					<i class="fi-strikethrough m-10 text-large"></i>
+					<i class="fi-subscript m-10 text-large"></i>
+					<i class="fi-superscript m-10 text-large"></i>
+					<i class="fi-tablet-landscape m-10 text-large"></i>
+					<i class="fi-tablet-portrait m-10 text-large"></i>
+					<i class="fi-target-two m-10 text-large"></i>
+					<i class="fi-target m-10 text-large"></i>
+					<i class="fi-telephone-accessible m-10 text-large"></i>
+					<i class="fi-telephone m-10 text-large"></i>
+					<i class="fi-text-color m-10 text-large"></i>
+					<i class="fi-thumbnails m-10 text-large"></i>
+					<i class="fi-ticket m-10 text-large"></i>
+					<i class="fi-torso-business m-10 text-large"></i>
+					<i class="fi-torso-female m-10 text-large"></i>
+					<i class="fi-torso m-10 text-large"></i>
+					<i class="fi-torsos-all-female m-10 text-large"></i>
+					<i class="fi-torsos-all m-10 text-large"></i>
+					<i class="fi-torsos-female-male m-10 text-large"></i>
+					<i class="fi-torsos-male-female m-10 text-large"></i>
+					<i class="fi-torsos m-10 text-large"></i>
+					<i class="fi-trash m-10 text-large"></i>
+					<i class="fi-trees m-10 text-large"></i>
+					<i class="fi-trophy m-10 text-large"></i>
+					<i class="fi-underline m-10 text-large"></i>
+					<i class="fi-universal-access m-10 text-large"></i>
+					<i class="fi-unlink m-10 text-large"></i>
+					<i class="fi-unlock m-10 text-large"></i>
+					<i class="fi-upload-cloud m-10 text-large"></i>
+					<i class="fi-upload m-10 text-large"></i>
+					<i class="fi-usb m-10 text-large"></i>
+					<i class="fi-video m-10 text-large"></i>
+					<i class="fi-volume-none m-10 text-large"></i>
+					<i class="fi-volume-strike m-10 text-large"></i>
+					<i class="fi-volume m-10 text-large"></i>
+					<i class="fi-web m-10 text-large"></i>
+					<i class="fi-wheelchair m-10 text-large"></i>
+					<i class="fi-widget m-10 text-large"></i>
+					<i class="fi-wrench m-10 text-large"></i>
+					<i class="fi-x-circle m-10 text-large"></i>
+					<i class="fi-x m-10 text-large"></i>
+					<i class="fi-yen m-10 text-large"></i>
+					<i class="fi-zoom-in m-10 text-large"></i>
+					<i class="fi-zoom-out m-10 text-large"></i>
+				</div>
+				<hr>
+				<div class="iconmelons">
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#arrow-target"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#barbeque-eat-food"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#barista-coffee-espresso"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#bag-shopping"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#armchair-chair"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#book-download"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#bomb-bug"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#brush-paint"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#backpack-trekking"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#browser-window"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#book-read"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#caddle-shop-shopping"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#caddle-shopping"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#bubble-love-talk"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#bubble-comment"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#camera-photo-polaroid"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#camera-photo"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#camera-video"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#chef-food-restaurant"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#chaplin-hat-movie"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#coffee"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#cocktail-mojito"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#clock-time"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#computer-macintosh-vintage"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#computer-imac"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#computer"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#computer-imac1"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#cook-pan-pot"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#crop"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#crown-king"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#computer-network"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#dashboard-speed"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#danger-death-delete-destroy-sull"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#design-graphic-tablet"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#design-pencil-rule"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#database"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#delete-garbage"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#drug-medecine-syringue"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#diving-leisure-sea-sport"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#earth-globe"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#eat-food-hotdog"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#eat-food-fork-knife"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#edit-modify"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#factory-lift-warehouse"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#envelope-mail"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#eye-dropper"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#email-mail"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#first-aid-medecine-shield"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#food-ice-cream"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#frame-picture"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#handle-vector"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#grid-lines"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#happy-smiley"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#ink-pen"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#headset-sound"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#home-house"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#ibook-laptop"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#ipad"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#iphone"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#ipod-mini-music"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#ipod"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#japan-tea"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#ipod-music"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#laptop-macbook"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#like-love"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#link"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#macintosh"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#lock-locker"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#locker-unlock"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#map-user"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#micro-record"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#magic-magic-wand"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#man-people-user"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#map-pin"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#monocle-mustache"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#music-speaker"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#paint-bucket"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#music-note"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#notebook"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#painting-pallet"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#pen-feather"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#painting-roll"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#pen"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#pen-big-feather"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#receipt-shopping"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#magnet"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#remote-control"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#picture-stock"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#picture"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#settings-toolkit"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#shoes-snickers-keds"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#settings-adjustments"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#speech-talk-user"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#suitcase-travel"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#synk-refresh-rotate"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#umbrella-weather"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#stamp"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#stock"></use>
+						   </g>
+						</svg>
+					</div>
+					<div class="iconmelon m-10">
+						<svg viewBox="0 0 32 32">
+						  <g filter="">
+						    <use xlink:href="#settings-gear"></use>
+						   </g>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+			<div class="bg-white p-30 m-t-30 b-bot-2px-gray-light b-right-1px-gray-light">
+				<span class="text-gray-dark text-large align-with-button pos-abs">
+					Inputs
+				</span>
+
+				<hr>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="m-b-10">
+				  		<input type="checkbox" name="notification" value="" class="icheck">
+				  		<span class="m-l-10">Use desktop notifications</span>
+				  	</div>
+				  	<div class="m-b-10">
+				  		<input type="checkbox" name="notification" value="" class="icheck" checked>
+				  		<span class="m-l-10">Justo Inceptos Fringilla</span>
+				  	</div>
+				  	<div class="m-b-10">
+				  		<input type="checkbox" name="notification" value="" class="icheck">
+				  		<span class="m-l-10">Curabitur blandit tempus porttitor.</span>
+				  	</div>
+		  			<hr>
+					</div>
+					<div class="col-sm-6">
+						<div class="m-b-10">
+				  		<input type="radio" name="optionsRadios" value="" class="icheck">
+				  		<span class="m-l-10">Sollicitudin Amet Mattis</span>
+				  	</div>
+				  	<div class="m-b-10">
+				  		<input type="radio" name="optionsRadios" value="" class="icheck" checked>
+				  		<span class="m-l-10">Fusce dapibus, tellus ac cursus.</span>
+				  	</div>
+				  	<div class="m-b-10">
+				  		<input type="radio" name="optionsRadios" value="" class="icheck" checked>
+				  		<span class="m-l-10">Aenean eu leo quam. Pellentesque sem.</span>
+				  	</div>
+				  	<hr>
+					</div>
+				</div>
+
+	  		<div class="row">
+	  			<div class="col-md-4 col-sm-6">
+	  				<div class="m-b-10">
+	  					<select class="form-control selectpicker" data-live-search="true">
+							  <option value="">Afghanistan</option>
+								<option value="">Albania</option>
+								<option value="">Algeria</option>
+								<option value="">Andorra</option>
+								<option value="">Angola</option>
+								<option value="">Antigua & Deps</option>
+								<option value="">Argentina</option>
+								<option value="">Armenia</option>
+								<option value="">Australia</option>
+								<option value="">Austria</option>
+								<option value="">Azerbaijan</option>
+								<option value="">Bahamas</option>
+								<option value="">Bahrain</option>
+								<option value="">Bangladesh</option>
+								<option value="">Barbados</option>
+								<option value="">Belarus</option>
+								<option value="">Belgium</option>
+								<option value="">Belize</option>
+								<option value="">Benin</option>
+								<option value="">Bhutan</option>
+								<option value="">Bolivia</option>
+							</select>
+	  				</div>
+	  			</div>
+	  			<div class="col-sm-6 col-md-offset-2">
+	  				<div class="m-b-10">
+							<div>Street</div>
+							<input type="text" class="input-large input-light brad">
+				  	</div>
+				  	<div class="m-b-10">
+							<div>City</div>
+							<input type="text" class="input-large input-light brad">
+				  	</div>
+	  			</div>
+	  		</div>
+			</div>
+
+			<div class="bg-white p-30 m-t-30 b-bot-2px-gray-light b-right-1px-gray-light">
+				<h1>h1. Sugoi heading <small>Secondary text</small></h1>
+				<h2>h2. Sugoi heading <small>Secondary text</small></h2>
+				<h3>h3. Sugoi heading <small>Secondary text</small></h3>
+				<h4>h4. Sugoi heading <small>Secondary text</small></h4>
+				<h5>h5. Sugoi heading <small>Secondary text</small></h5>
+				<h6>h6. Sugoi heading <small>Secondary text</small></h6>
+				<hr>
+				<h1 class="text-center font-w-100">Welcome back <span class="text-blue">John Doe</span></h1>
+				<div class="row">
+					<p class="text-gray-alt text-uppercase text-center col-lg-8 col-lg-offset-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, quis, ipsam saepe voluptas rem possimus quas tenetur iusto dolorem architecto tempore fugiat amet iure distinctio quia vel consequuntur aut quod!</p>
+
+				</div>
+				<hr>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Morbi <span class="text-bold">leo risus</span>, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. <a href="#">Nullam quis</a> risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet.</p>
+					</div>
+					<div class="col-sm-6">
+						<p class="lead">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<p class="text-muted m-t-30">Donec sed odio dui.</p>
+						<p class="text-primary">Maecenas faucibus mollis interdum.</p>
+						<p class="text-success">Vivamus sagittis lacus vel augue laoreet.</p>
+						<p class="text-info">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+						<p class="text-warning">Vestibulum id ligula porta felis euismod semper.</p>
+						<p class="text-danger">Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+					</div>
+
+					<div class="col-sm-3">
+						<ul class="m-t-30">
+						  <li>Lorem Sem</li>
+						  <li>Bibendum</li>
+						  <li>Fringilla Sem</li>
+						  <li>Fermentum Tristique</li>
+						  <li>Amet</li>
+						  <li>Etiam</li>
+						  <li>Euismod</li>
+						  <li>Dolor</li>
+						  <li>Sem</li>
+						</ul>
+					</div>
+
+					<div class="col-sm-3">
+						<ul class="m-t-10 checkmarked">
+						  <li>Lorem Sem</li>
+						  <li>Bibendum</li>
+						  <li>Fringilla Sem</li>
+						  <li>Fermentum Tristique</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="table-responsive">
+							<table class="table table-condensed">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Justo Sit</th>
+										<th>Vulputate</th>
+										<th>Malesuada</th>
+										<th>Condimentum</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="active">
+										<td>1</td>
+										<td>Ornare</td>
+										<td>Porta</td>
+										<td>Egestas</td>
+										<td>Tortor</td>
+									</tr>
+									<tr class="success">
+										<td>2</td>
+										<td>Ipsum</td>
+										<td>Cursus</td>
+										<td>Ligula</td>
+										<td>Tristique</td>
+									</tr>
+									<tr class="warning">
+										<td>3</td>
+										<td>Sem</td>
+										<td>Parturient</td>
+										<td>Pellentesque</td>
+										<td>Mollis</td>
+									</tr>
+									<tr class="danger">
+										<td>4</td>
+										<td>Vulputate</td>
+										<td>Ipsum</td>
+										<td>Justo</td>
+										<td>Sollicitudin</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="table-responsive">
+							<table class="table table-condensed">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Justo Sit</th>
+										<th>Vulputate</th>
+										<th>Malesuada</th>
+										<th>Condimentum</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td class="success">Ornare</td>
+										<td class="warning">Porta</td>
+										<td class="danger">Egestas</td>
+										<td class="active">Tortor</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td class="success">Ipsum</td>
+										<td class="warning">Cursus</td>
+										<td class="danger">Ligula</td>
+										<td class="active">Tristique</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td class="success">Sem</td>
+										<td class="warning">Parturient</td>
+										<td class="danger">Pellentesque</td>
+										<td class="active">Mollis</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td class="success">Vulputate</td>
+										<td class="warning">Ipsum</td>
+										<td class="danger">Justo</td>
+										<td class="active">Sollicitudin</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+  	</div> <!-- /main content -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/lib/bootstrap.js"></script>
+
+    <script src="js/lib/pushy.js"></script>
+
+    <script src="js/lib/icheck.js"></script>
+
+		<script src="js/lib/easypiechart.js"></script>
+
+		<script src="js/lib/bootstrap-select.js"></script>
+
+    <script src="js/admin.js"></script>
+
+
+    <script>
+    	var url ='icons/icons.svg';
+      var c=new XMLHttpRequest(); c.open('GET', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+      document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
+    </script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49617882-1', 'sugoi-admin-v104.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
