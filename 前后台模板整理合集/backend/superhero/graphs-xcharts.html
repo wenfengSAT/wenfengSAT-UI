@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>SuperheroAdmin - Bootstrap Admin Template</title>
+	
+	<!-- bootstrap -->
+	<link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+
+	<!-- libraries -->
+	<link href="css/libs/font-awesome.css" type="text/css" rel="stylesheet" />
+
+	<!-- global styles -->
+	<link rel="stylesheet" type="text/css" href="css/compiled/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/compiled/elements.css">
+
+	<!-- this page specific styles -->
+	<link rel="stylesheet" href="css/libs/xcharts.css" type="text/css" />
+
+	<!-- google font libraries -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+
+	<style>
+	.xchart .errorLine path {
+		stroke: #C6080D;
+		stroke-width: 3px;
+	}
+	</style>
+						  
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+		<link href="css/libs/font-awesome-ie7.css" type="text/css" rel="stylesheet" />
+	<![endif]-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-49262924-1', 'phoonio.com');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<header class="navbar" id="header-navbar">
+		<div class="container">
+			<a href="index.html" id="logo" class="navbar-brand col-md-3 col-sm-3 col-xs-12">
+				<img src="img/logo.png" alt=""/> <span>SuperheroAdmin</span>
+			</a>
+			
+			<button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="fa fa-bars"></span>
+			</button>
+			
+			<div class="nav-no-collapse pull-right" id="header-nav">
+				<ul class="nav navbar-nav pull-right">
+					<li class="mobile-search">
+						<a class="btn">
+							<i class="fa fa-search"></i>
+						</a>
+						
+						<div class="drowdown-search">
+							<form role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search...">
+									<i class="fa fa-search nav-search-icon"></i>
+								</div>
+							</form>
+						</div>
+						
+					</li>
+					<li class="dropdown hidden-xs">
+						<a class="btn dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-warning"></i>
+							<span class="count">8</span>
+						</a>
+						<ul class="dropdown-menu notifications-list">
+							<li class="pointer">
+								<div class="pointer-inner">
+									<div class="arrow"></div>
+									<div class="arrow-border"></div>
+								</div>
+							</li>
+							<li class="item-header">You have 6 new notifications</li>
+							<li class="item">
+								<a href="#">
+									<i class="fa fa-comment"></i>
+									<span class="content">New comment on ‘Awesome P...</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<i class="fa fa-plus"></i>
+									<span class="content">New user registration</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<i class="fa fa-envelope"></i>
+									<span class="content">New Message from George</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<i class="fa fa-shopping-cart"></i>
+									<span class="content">New purchase</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<i class="fa fa-eye"></i>
+									<span class="content">New order</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item-footer">
+								<a href="#">
+									View all notifications
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown hidden-xs">
+						<a class="btn dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-envelope-o"></i>
+							<span class="count">16</span>
+						</a>
+						<ul class="dropdown-menu notifications-list messages-list">
+							<li class="pointer">
+								<div class="pointer-inner">
+									<div class="arrow"></div>
+									<div class="arrow-border"></div>
+								</div>
+							</li>
+							<li class="item first-item">
+								<a href="#">
+									<img src="img/samples/messages-photo-1.png" alt=""/>
+									<span class="content">
+										<span class="content-headline">
+											George Clooney
+										</span>
+										<span class="content-text">
+											Look, just because I don't be givin' no man a foot massage don't make it 
+											right for Marsellus to throw...
+										</span>
+									</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<img src="img/samples/messages-photo-2.png" alt=""/>
+									<span class="content">
+										<span class="content-headline">
+											Emma Watson
+										</span>
+										<span class="content-text">
+											Look, just because I don't be givin' no man a foot massage don't make it 
+											right for Marsellus to throw...
+										</span>
+									</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<img src="img/samples/messages-photo-3.png" alt=""/>
+									<span class="content">
+										<span class="content-headline">
+											Robert Downey Jr.
+										</span>
+										<span class="content-text">
+											Look, just because I don't be givin' no man a foot massage don't make it 
+											right for Marsellus to throw...
+										</span>
+									</span>
+									<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+								</a>
+							</li>
+							<li class="item-footer">
+								<a href="#">
+									View all messages
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="hidden-xs">
+						<a class="btn">
+							<i class="fa fa-cog"></i>
+						</a>
+					</li>
+					<li class="dropdown profile-dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="img/samples/profile-photo.png" alt=""/>
+							<span class="hidden-xs">Scarlett Johansson</span> <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>
+							<li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+							<li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>
+							<li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+						</ul>
+					</li>
+					<li class="hidden-xxs">
+						<a class="btn">
+							<i class="fa fa-power-off"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2" id="nav-col">
+				<section id="col-left">
+					<div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">	
+						<ul class="nav nav-pills nav-stacked">
+							<li>
+								<a href="index.html">
+									<i class="fa fa-dashboard"></i>
+									<span>Dashboard</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="fa fa-users"></i>
+									<span>Users</span>
+									<i class="fa fa-chevron-circle-down drop-icon"></i>
+								</a>
+								<ul class="submenu">
+									<li>
+										<a href="users.html">
+											User list
+										</a>
+									</li>
+									<li>
+										<a href="user-profile.html">
+											User profile
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="tables.html">
+									<i class="fa fa-table"></i>
+									<span>Tables</span>
+								</a>
+							</li>
+							<li class="active">
+								<a href="#" class="dropdown-toggle">
+									<i class="fa fa-bar-chart-o"></i>
+									<span>Graphs</span>
+									<i class="fa fa-chevron-circle-down drop-icon"></i>
+								</a>
+								<ul class="submenu">
+									<li>
+										<a href="graphs-morris.html">
+											Morris &amp; Mixed
+										</a>
+									</li>
+									<li>
+										<a href="graphs-flot.html">
+											Flot
+										</a>
+									</li>
+									<li>
+										<a href="graphs-xcharts.html" class="active">
+											xCharts
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="fa fa-edit"></i>
+									<span>Forms</span>
+									<i class="fa fa-chevron-circle-down drop-icon"></i>
+								</a>
+								<ul class="submenu">
+									<li>
+										<a href="form-elements.html">
+											Form elements
+										</a>
+									</li>
+									<li>
+										<a href="form-wizard.html">
+											Form wizard
+										</a>
+									</li>
+									<li>
+										<a href="form-wizard-popup.html">
+											Form wizard popup
+										</a>
+									</li>
+									<li>
+										<a href="form-wysiwyg.html">
+											WYSIWYG
+										</a>
+									</li>
+									<li>
+										<a href="form-ckeditor.html">
+											WYSIWYG CKEditor
+										</a>
+									</li>
+									<li>
+										<a href="form-dropzone.html">
+											Drop File Upload
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="pricing.html">
+									<i class="fa fa-money"></i>
+									<span>Pricing</span>
+								</a>
+							</li>
+							<li>
+								<a href="calendar.html">
+									<i class="fa fa-calendar"></i>
+									<span>Calendar</span>
+								</a>
+							</li>
+							<li>
+								<a href="typography.html">
+									<i class="fa fa-font"></i>
+									<span>Typography</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="fa fa-desktop"></i>
+									<span>UI Elements</span>
+									<i class="fa fa-chevron-circle-down drop-icon"></i>
+								</a>
+								<ul class="submenu">
+									<li>
+										<a href="ui-elements.html">
+											Elements
+										</a>
+									</li>
+									<li>
+										<a href="ui-nestable.html">
+											Nestable
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="gallery.html">
+									<i class="fa fa-picture-o"></i>
+									<span>Gallery</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="fa fa-folder-open"></i>
+									<span>3 Level Menu</span>
+									<i class="fa fa-chevron-circle-down drop-icon"></i>
+								</a>
+								<ul class="submenu">
+									<li>
+										<a href="#" class="dropdown-toggle">
+											2nd Level
+											<i class="fa fa-chevron-circle-down drop-icon"></i>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="#">
+													3rd Level
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													3rd Level
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													3rd Level
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle">
+											2nd Level
+											<i class="fa fa-chevron-circle-down drop-icon"></i>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="#">
+													3rd Level
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													3rd Level
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													3rd Level
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">
+											2nd Level
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="fa fa-file-text-o"></i>
+									<span>Extra pages</span>
+									<i class="fa fa-chevron-circle-down drop-icon"></i>
+								</a>
+								<ul class="submenu">
+									<li>
+										<a href="faq.html">
+											FAQ
+										</a>
+									</li>
+									<li>
+										<a href="login.html">
+											Login
+										</a>
+									</li>
+									<li>
+										<a href="login-full.html">
+											Login full
+										</a>
+									</li>
+									<li>
+										<a href="invoice.html">
+											Invoice
+										</a>
+									</li>
+									<li>
+										<a href="emails.html">
+											Emails
+										</a>
+									</li>
+									<li>
+										<a href="error-404.html">
+											Error 404
+										</a>
+									</li>
+									<li>
+										<a href="error-404-v2.html">
+											Error 404 Nested
+										</a>
+									</li>
+									<li>
+										<a href="error-500.html">
+											Error 500
+										</a>
+									</li>
+									<li>
+										<a href="icons-awesome.html">
+											Awesome Icons
+										</a>
+									</li>
+									<li>
+										<a href="icons-halflings.html">
+											Halflings Icons
+										</a>
+									</li>
+									<li>
+										<a href="extra-grid.html">
+											Grid
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+			<div class="col-md-10" id="content-wrapper">
+				<div class="row">
+					<div class="col-lg-12">
+						<h1>xCharts Graphs</h1>
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="main-box">
+									<figure class="demo" id="graph-xchart-demo" style="height: 400px"></figure>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="main-box">
+									<h2>Time-Series Line</h2>
+									<figure class="demo" id="graph-xchart-line" style="height: 400px"></figure>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="main-box">
+									<h2>Your Basic Bar Chart</h2>
+									<figure class="demo" id="graph-xchart-bar" style="height: 300px"></figure>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="main-box">
+									<h2>Error Bars</h2>
+									<figure class="demo" id="graph-xchart-error-bar" style="height: 300px"></figure>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer-bar">
+		<p id="footer-copyright">
+			&copy; 2014 <a href="http://www.adbee.sk/" target="_blank">Adbee digital</a>. Powered by SuperheroAdmin.
+		</p>
+	</footer>
+	
+	<!-- global scripts -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+	<!-- this page specific scripts -->
+	<script src="js/d3.min.js"></script>
+	<script src="js/xcharts.js"></script>
+	<script src="js/rainbow.min.js"></script>
+	
+	<!-- theme scripts -->
+	<script src="js/scripts.js"></script>
+	
+	<!-- this page specific inline scripts -->
+	<script>
+	$(function () {
+		
+		/* Time-Series Line */
+		var tt = document.createElement('div'),
+			leftOffset = -(~~$('html').css('padding-left').replace('px', '') + ~~$('body').css('margin-left').replace('px', '')),
+			topOffset = -32;
+		tt.className = 'ex-tooltip';
+		document.body.appendChild(tt);
+	
+		var data = {
+			"xScale": "time",
+			"yScale": "linear",
+			"main": [
+			{
+				"className": ".pizza",
+				"data": [
+				{
+					"x": "2012-11-05",
+					"y": 6
+				},
+				{
+					"x": "2012-11-06",
+					"y": 6
+				},
+				{
+					"x": "2012-11-07",
+					"y": 8
+				},
+				{
+					"x": "2012-11-08",
+					"y": -3
+				},
+				{
+					"x": "2012-11-09",
+					"y": 4
+				},
+				{
+					"x": "2012-11-10",
+					"y": 9
+				},
+				{
+					"x": "2012-11-11",
+					"y": 6
+				}
+				]
+			}
+			]
+		};
+		var opts = {
+			"dataFormatX": function (x) { return d3.time.format('%Y-%m-%d').parse(x); },
+			"tickFormatX": function (x) { return d3.time.format('%A')(x); },
+			"mouseover": function (d, i) {
+			var pos = $(this).offset();
+			$(tt).text(d3.time.format('%A')(d.x) + ': ' + d.y)
+				.css({top: topOffset + pos.top, left: pos.left + leftOffset})
+				.show();
+			},
+			"mouseout": function (x) {
+			$(tt).hide();
+			}
+		};
+		var myChart = new xChart('line-dotted', data, '#graph-xchart-line', opts);
+	
+		/* Your Basic Bar Chart */
+	
+		var data = {
+			"xScale": "ordinal",
+			"yScale": "linear",
+			"main": [
+			{
+				"className": ".pizza",
+				"data": [
+				{
+					"x": "Pepperoni",
+					"y": 4
+				},
+				{
+					"x": "Cheese",
+					"y": 8
+				}
+				]
+			}
+			]
+		};
+		var myChart = new xChart('bar', data, '#graph-xchart-bar');
+		
+		/* Error bars */
+		
+		var errorBar = {
+			enter: function (self, storage, className, data, callbacks) {
+				var insertionPoint = xChart.visutils.getInsertionPoint(9),
+				container,
+				eData = data.map(function (d) {
+					d.data = d.data.map(function (d) {
+					return [{x: d.x, y: d.y - d.e}, {x: d.x, y: d.y}, {x: d.x, y: d.y + d.e}];
+					});
+					return d;
+				}),
+				paths;
+
+				container = self._g.selectAll('.errorLine' + className)
+				.data(eData, function (d) {
+					return d.className;
+				});
+
+				container.enter().insert('g', insertionPoint)
+				.attr('class', function (d, i) {
+					return 'errorLine' + className.replace(/\./g, ' ') + ' color' + i;
+				});
+
+				paths = container.selectAll('path')
+				.data(function (d) {
+					return d.data;
+				}, function (d) {
+					return d[0].x;
+				});
+
+				paths.enter().insert('path')
+				.style('opacity', 0)
+				.attr('d', d3.svg.line()
+					.x(function (d) {
+					return self.xScale(d.x) + self.xScale.rangeBand() / 2;
+					})
+					.y(function (d) { return self.yScale(d.y); })
+				);
+
+				storage.containers = container;
+				storage.paths = paths;
+			},
+			update: function (self, storage, timing) {
+				storage.paths.transition().duration(timing)
+				.style('opacity', 1)
+				.attr('d', d3.svg.line()
+					.x(function (d) {
+					return self.xScale(d.x) + self.xScale.rangeBand() / 2;
+					})
+					.y(function (d) { return self.yScale(d.y); })
+				);
+			},
+			exit: function (self, storage, timing) {
+				storage.paths.exit()
+				.transition().duration(timing)
+				.style('opacity', 0);
+			},
+			destroy: function (self, storage, timing) {
+				storage.paths.transition().duration(timing)
+				.style('opacity', 0)
+				.remove();
+			}
+		};
+
+		xChart.setVis('error', errorBar);
+
+		var data2 = [{
+			"xScale": "ordinal",
+			"yScale": "linear",
+			"main": [
+			{
+				"className": ".errorExample",
+				"data": [
+				{
+					"x": "Ponies",
+					"y": 12
+				},
+				{
+					"x": "Unicorns",
+					"y": 23
+				},
+				{
+					"x": "Trolls",
+					"y": 1
+				}
+				]
+			}
+			],
+			"comp": [
+			{
+				"type": "error",
+				"className": ".comp.errorBar",
+				"data": [
+				{
+					"x": "Ponies",
+					"y": 12,
+					"e": 5
+				},
+				{
+					"x": "Unicorns",
+					"y": 23,
+					"e": 2
+				},
+				{
+					"x": "Trolls",
+					"y": 1,
+					"e": 1
+				}
+				]
+			}
+			]
+		},
+		{
+			"xScale": "ordinal",
+			"yScale": "linear",
+			"main": [
+			{
+				"className": ".errorExample",
+				"data": [
+				{
+					"x": "Ponies",
+					"y": 76
+				},
+				{
+					"x": "Unicorns",
+					"y": 45
+				},
+				{
+					"x": "Trolls",
+					"y": 82
+				}
+				]
+			}
+			],
+			"comp": [
+			{
+				"type": "error",
+				"className": ".comp.errorBar",
+				"data": [
+				{
+					"x": "Ponies",
+					"y": 76,
+					"e": 12
+				},
+				{
+					"x": "Unicorns",
+					"y": 45,
+					"e": 3
+				},
+				{
+					"x": "Trolls",
+					"y": 82,
+					"e": 12
+				}
+				]
+			}
+			]
+		}
+		];
+
+		var myChart = new xChart('bar', data2[0], '#graph-xchart-error-bar'),
+		i = 0;
+			
+		/* First demo chart */	
+				
+		var data = [{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":15,"x":"2012-11-19T00:00:00"},{"y":11,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":10,"x":"2012-11-22T00:00:00"},{"y":1,"x":"2012-11-23T00:00:00"},{"y":6,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"line-dotted","yScale":"linear"},{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":12,"x":"2012-11-19T00:00:00"},{"y":18,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":7,"x":"2012-11-22T00:00:00"},{"y":6,"x":"2012-11-23T00:00:00"},{"y":12,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"cumulative","yScale":"linear"},{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":12,"x":"2012-11-19T00:00:00"},{"y":18,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":7,"x":"2012-11-22T00:00:00"},{"y":6,"x":"2012-11-23T00:00:00"},{"y":12,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"bar","yScale":"linear"}];
+		var order = [2, 0, 1, 0],
+		i = 0,
+		xFormat = d3.time.format('%A'),
+		chartDemo = new xChart('line-dotted', data[order[i]], '#graph-xchart-demo', {
+			axisPaddingTop: 5,
+			dataFormatX: function (x) {
+			return new Date(x);
+			},
+			tickFormatX: function (x) {
+			return xFormat(x);
+			},
+			timing: 1250
+		}),
+		rotateTimer,
+		toggles = d3.selectAll('.multi button'),
+		t = 3500;
+
+		function updateChart(i) {
+			var d = data[i];
+			chartDemo.setData(d);
+			toggles.classed('toggled', function () {
+				return (d3.select(this).attr('data-type') === d.type);
+			});
+			return d;
+		}
+
+		toggles.on('click', function (d, i) {
+			clearTimeout(rotateTimer);
+			updateChart(i);
+		});
+
+		function rotateChart() {
+			i += 1;
+			i = (i >= order.length) ? 0 : i;
+			var d = updateChart(order[i]);
+			rotateTimer = setTimeout(rotateChart, t);
+		}
+		rotateTimer = setTimeout(rotateChart, t);
+	});
+	</script>
+</body>
+</html>
