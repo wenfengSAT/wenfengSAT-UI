@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>Tisa Admin Template v1.1 (ecommerce_product_edit)</title>
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		
+		<link rel="shortcut icon" href="favicon.ico" />
+		
+		<!-- bootstrap framework -->
+		<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		
+		<!-- custom icons -->
+			<!-- font awesome icons -->
+			<link href="assets/icons/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+			<!-- ionicons -->	
+			<link href="assets/icons/ionicons/css/ionicons.min.css" rel="stylesheet" media="screen">
+			<!-- flags -->
+			<link rel="stylesheet" href="assets/icons/flags/flags.css">
+				
+	
+	<!-- page specific stylesheets -->
+
+		<!-- select2 -->
+		<link rel="stylesheet" href="assets/lib/select2/select2.css">
+		<!-- bootstrap-datepicker -->
+		<link rel="stylesheet" href="assets/lib/bootstrap-datepicker/css/datepicker3.css">
+		<!-- bootstrap switches -->
+		<link href="assets/lib/bootstrap-switch/build/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
+		<!-- 2col multiselect -->
+		<link href="assets/lib/multi-select/css/multi-select.css" rel="stylesheet">
+		<!-- date range picker -->
+		<link rel="stylesheet" href="assets/lib/bootstrap-daterangepicker/daterangepicker-bs3.css">
+		<!-- magnific popup -->
+		<link rel="stylesheet" href="assets/lib/magnific-popup/magnific-popup.css">
+				
+		<!-- main stylesheet -->
+		<link href="assets/css/style.css" rel="stylesheet" media="screen">
+		
+		<!-- google webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+		
+		<!-- moment.js (date library) -->
+		<script src="assets/lib/moment-js/moment.min.js"></script>
+		
+    </head>
+    <body>
+		<!-- top bar -->
+		<header class="navbar navbar-fixed-top" role="banner">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="dashboard.html" class="navbar-brand"><img src="assets/img/blank.gif" alt="Logo"></a>
+				</div>
+				<ul class="top_links">
+					<li>
+						<a href="tasks_summary.html"><span>23</span>Tasks</a>
+					</li>
+					<li>
+						<a href="mail_inbox.html"><span>8</span>Mails</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="lang_menu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span class="flag-US"></span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="user_profile.html"><span class="flag-FR"></span> France</a></li>
+							<li><a href="mail_inbox.html"><span class="flag-IN"></span> India</a></li>
+							<li><a href="tasks_summary.html"><span class="flag-BR"></span> Brasil</a></li>
+							<li><a href="tasks_summary.html"><span class="flag-GB"></span> UK</a></li>
+						</ul>
+					</li>
+					<li class="user_menu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span class="navbar_el_icon ion-person"></span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="user_profile.html">Profile</a></li>
+							<li><a href="mail_inbox.html">My messages</a></li>
+							<li><a href="tasks_summary.html">My tasks</a></li>
+							<li class="divider"></li>
+							<li><a href="login_page.html">Log Out</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)" class="slidebar-toggle"><span class="navbar_el_icon ion-navicon-round"></span></a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<!-- main content -->
+		<div id="main_wrapper">
+			<form>
+				<div class="page_bar clearfix">
+					<div class="row">
+						<div class="col-md-8">
+							<h1 class="page_title">Product A</h1>
+							<p class="text-muted">Lorem ipsum dolor sit amet&hellip;</p>
+						</div>
+						<div class="col-md-4 text-right">
+							<button type="button" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+							<button type="button" class="btn btn-default">Cancel</button>
+							<button type="button" class="btn btn-link">Delete</button>
+						</div>
+					</div>
+				</div>
+				<nav class="breadcrumbs">
+					<ul>
+						<li><a href="#">Ecommerce</a></li>
+						<li class="sep">\</li>
+						<li>Product Edit</li>
+					</ul>
+				</nav>
+				<div class="page_content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="tabbable tabs-left">
+											<ul class="nav nav-tabs">
+												<li class="active"><a data-toggle="tab" href="#prod_tab_general" class="tab-default">General</a></li>
+												<li><a data-toggle="tab" href="#prod_tab_data" class="tab-default">Data</a></li>
+												<li><a data-toggle="tab" href="#prod_tab_links" class="tab-default">Links</a></li>
+												<li><a data-toggle="tab" href="#prod_tab_images" class="tab-default">Images</a></li>
+												<li><a data-toggle="tab" href="#prod_tab_discount" class="tab-default">Discount</a></li>
+											</ul>
+											<div class="tab-content">
+												<div id="prod_tab_general" class="tab-pane active">
+													<div class="form-group">
+														<div class="row">
+															<div class="col-lg-6">
+																<label for="p_name" class="req">Product name</label>
+																<input type="text" id="p_name" class="form-control" value="Product A">
+															</div>
+															<div class="col-lg-6">
+																<label for="p_model">Model</label>
+																<input type="text" id="p_model" class="form-control">
+															</div>
+														</div>
+													</div>
+													<div class="form-group form-sep">
+														<div class="row">
+															<div class="col-lg-12">
+																<label for="p_description" class="req">Product description</label>
+																<textarea name="p_description" id="p_description" cols="30" rows="4" class="form-control">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore tempore dolore dolor fugiat vitae praesentium nesciunt minima vel eaque maiores laborum velit iusto unde consequuntur eos quae excepturi quod. Delectus.
+																</textarea>
+															</div>
+														</div>
+													</div>
+													<div class="form-group form-sep">
+														<div class="row">
+															<div class="col-lg-12">
+																<label for="p_keywords">Keywords</label>
+																<input type="text" id="p_keywords" class="form-control" value="blue,yellow">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div id="prod_tab_data" class="tab-pane">
+													<div class="form-group">
+														<div class="form-group">
+															<div class="row">
+																<div class="col-lg-3">
+																	<label for="p_sku">SKU</label>
+																	<input type="text" id="p_sku" class="form-control">
+																	<span class="help-block">Stock Keeping Unit</span>
+																</div>
+																<div class="col-lg-3">
+																	<label for="p_ean">EAN</label>
+																	<input type="text" id="p_ean" class="form-control">
+																	<span class="help-block">European Article Number</span>
+																</div>
+																<div class="col-lg-3">
+																	<label for="p_isbn">ISBN</label>
+																	<input type="text" id="p_isbn" class="form-control">
+																</div>
+																<div class="col-lg-3">
+																	<label for="p_mpn">MPN</label>
+																	<input type="text" id="p_mpn" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="form-group form-sep">
+															<div class="row">
+																<div class="col-lg-3">
+																	<label for="p_date_available">Date Available</label>
+																	<input type="text" id="p_date_available" class="form-control">
+																</div>
+																<div class="col-lg-3">
+																	<label>Requires Shipping</label>
+																	<input class="bs_switch" type="checkbox" name="p_req_shipping" id="p_req_shipping" data-on-color="success" data-on-text="Yes" data-off-text="No">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div id="prod_tab_links" class="tab-pane">
+													<div class="row">
+														<div class="col-lg-6">
+															<label for="p_category">Category</label>
+															<div class="sepH_a">
+																<a href="#" class="btn btn-link btn-xs" id="p_cat_select_all">Select All</a>
+																<a href="#" class="btn btn-link btn-xs" id="p_cat_deselect_all">Deselect All</a>
+															</div>
+															<select name="p_category" id="p_category" multiple>
+																<optgroup label="Category A">
+																	<option value="subcat_a1">Et sunt laudantium.</option>
+																	<option value="subcat_a2">Eligendi necessitatibus repellat nobis.</option>
+																	<option value="subcat_a3">Ut et culpa.</option>
+																	<option value="subcat_a4">Odio necessitatibus voluptatum.</option>
+																	<option value="subcat_a5">Odit ut quia.</option>
+																</optgroup>
+																<optgroup label="Category B">
+																	<option value="subcat_b1">Explicabo aspernatur id.</option>
+																	<option value="subcat_b2">Et quasi quibusdam.</option>
+																	<option value="subcat_b3">A voluptatem vel dolorem.</option>
+																</optgroup>
+															</select>
+														</div>
+														<div class="col-lg-6">
+															<label for="p_related_products">Related Products</label>
+															<div class="sepH_a">
+																<a href="#" class="btn btn-link btn-xs" id="p_related_select_5">Select 5 products</a>
+																<a href="#" class="btn btn-link btn-xs" id="p_related_deselect_5">Deselect 5 products</a>
+															</div>
+															<select name="p_related_products" id="p_related_products" multiple>
+																	<option value="prod_1">Aliquam natus ad delectus.</option>
+																	<option value="prod_2">Est minima.</option>
+																	<option value="prod_3">Debitis voluptatem aut voluptatibus.</option>
+																	<option value="prod_4">Inventore deleniti dolorem praesentium fugit.</option>
+																	<option value="prod_5">Laborum aut magni.</option>
+																	<option value="prod_6">Aliquid ut est ut.</option>
+																	<option value="prod_7">Dolore cum at velit.</option>
+																	<option value="prod_8">Eligendi quae est sunt.</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div id="prod_tab_images" class="tab-pane">
+													<div class="fileinput-button btn btn-success sepH_b">
+														<i class="fa fa-plus"></i>
+														<span>Add files...</span>
+														<input id="image_upload" type="file" name="files[]" multiple>
+													</div>
+													<ul class="img-grid clearfix" id="img_grid_upload">
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+														<li><a href="assets/img/examples/big_image_800x600.gif"><img src="assets/img/examples/image_220x220.gif" class="thumbnail img-responsive" alt=""/></a></li>
+													</ul>
+												</div>
+												<div id="prod_tab_discount" class="tab-pane">
+													<div class="table-responsive">
+														<table class="table table-striped">
+															<thead>
+																<tr>
+																	<th>Customer Group</th>
+																	<th>Quantity</th>
+																	<th>Priority</th>
+																	<th>Price</th>
+																	<th>Date start/end</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr id="discount_row_1">
+																	<td>
+																		<select name="discount_group_h9dpg5knk" id="discount_group_h9dpg5knk" class="form-control">
+																			<option value="">---</option>
+																			<option value="1" selected>General</option>
+																			<option value="2">Retailer</option>
+																			<option value="3">Wholesale</option>
+																		</select>
+																	</td>
+																	<td><input type="text" class="form-control" value="12"></td>
+																	<td><input type="text" class="form-control" value="1"></td>
+																	<td>
+																		<div class="input-group">
+																			<span class="input-group-addon input-group-primary"><i class="fa fa-dollar"></i></span>
+																			<input type="text" class="form-control" value="12.33">
+																		</div>
+																	</td>
+																	<td><input type="text" class="form-control discound_date_range"></td>
+																	<td><a href="#" class="btn btn-sm btn-default tr_remove">Remove</a></td>
+																</tr>
+																<tr id="discount_row_2">
+																	<td>
+																		<select name="discount_group_sj3cwamxt" id="discount_group_sj3cwamxt" class="form-control">
+																			<option value="">---</option>
+																			<option value="1">General</option>
+																			<option value="2" selected>Retailer</option>
+																			<option value="3">Wholesale</option>
+																		</select>
+																	</td>
+																	<td><input type="text" class="form-control" value="4"></td>
+																	<td><input type="text" class="form-control" value="2"></td>
+																	<td>
+																		<div class="input-group">
+																			<span class="input-group-addon input-group-primary"><i class="fa fa-dollar"></i></span>
+																			<input type="text" class="form-control" value="14.83">
+																		</div>
+																	</td>
+																	<td><input type="text" class="form-control discound_date_range"></td>
+																	<td><a href="#" class="btn btn-sm btn-default tr_remove">Remove</a></td>
+																</tr>
+																<tr id="discount_row_3">
+																	<td>
+																		<select name="discount_group_i1l1i6hzm" id="discount_group_i1l1i6hzm" class="form-control">
+																			<option value="">---</option>
+																			<option value="1">General</option>
+																			<option value="2">Retailer</option>
+																			<option value="3" selected>Wholesale</option>
+																		</select>
+																	</td>
+																	<td><input type="text" class="form-control" value="7"></td>
+																	<td><input type="text" class="form-control" value="2"></td>
+																	<td>
+																		<div class="input-group">
+																			<span class="input-group-addon input-group-primary"><i class="fa fa-dollar"></i></span>
+																			<input type="text" class="form-control" value="22.96">
+																		</div>
+																	</td>
+																	<td><input type="text" class="form-control discound_date_range"></td>
+																	<td><a href="#" class="btn btn-sm btn-default tr_remove">Remove</a></td>
+																</tr>
+																<tr id="tr_add">
+																	<td colspan="5"></td>
+																	<td><a href="#" class="btn btn-sm btn-primary" id="tr_add_btn">Add discount</a></td>
+																</tr>
+																<tr id="tr_clone" style="display:none">
+																	<td>
+																		<select name="clone_id" id="clone_id" class="form-control">
+																			<option value="" selected>---</option>
+																			<option value="1">General</option>
+																			<option value="2">Retailer</option>
+																			<option value="3">Wholesale</option>
+																		</select>
+																	</td>
+																	<td><input type="text" class="form-control" value=""></td>
+																	<td><input type="text" class="form-control" value=""></td>
+																	<td>
+																		<div class="input-group">
+																			<span class="input-group-addon input-group-primary"><i class="fa fa-dollar"></i></span>
+																			<input type="text" class="form-control" value="">
+																		</div>
+																	</td>
+																	<td><input type="text" class="form-control discound_date_range"></td>
+																	<td><a href="#" class="btn btn-sm btn-default tr_remove">Remove</a></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		
+		</div>
+
+		<!-- side navigation -->
+		<nav id="side_nav">
+			<ul>
+				<li>
+					<a href="dashboard.html"><span class="ion-speedometer"></span> <span class="nav_title">Dashboard</span></a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="label label-danger">32</span>
+						<span class="ion-clipboard"></span>
+						<span class="nav_title">Todo</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading panel_heading_first">Folders</h4>
+							<ul>
+								<li><a href="tasks_summary.html"><span class="side_icon ion-ios7-folder-outline"></span><span class="badge badge-primary">7</span> Summary</a></li>
+								<li><a href="tasks_starred.html"><span class="side_icon ion-ios7-star-outline"></span> Starred</a></li>
+								<li><a href="tasks_today.html"><span class="side_icon ion-ios7-calendar-outline"></span> Today</a></li>
+							</ul>
+							<h4 class="panel_heading">Labels</h4>
+							<ul>
+								<li class="add_label">
+									<a href="tasks_label.html">Work</a>
+									<div class="ts_label">
+										<span class="color_a"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="tasks_label.html">Family</a>
+									<div class="ts_label">
+										<span class="color_b"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="tasks_label.html">Business</a>
+									<div class="ts_label">
+										<span class="color_c"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="tasks_label.html">Envato</a>
+									<div class="ts_label">
+										<span class="color_d"></span>
+									</div>
+								</li>
+							</ul>
+							<div class="panel_section">
+								<button class="btn btn-primary">Add task</button>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-paper-airplane"></span>
+						<span class="nav_title">Newsletter</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading">Pages</h4>
+							<ul>
+								<li><a href="newsletter_campaigns.html">Campaigns</a></li>
+								<li><a href="newsletter_report.html">Reports</a></li>
+								<li><a href="newsletter_templates.html">Templates</a></li>
+							</ul>
+							<h4 class="panel_heading">Latest Campaigns</h4>
+							<ul>
+								<li><a href="newsletter_report.html">Stanton LLC</a></li>
+								<li><a href="newsletter_report.html">Veum Group</a></li>
+								<li><a href="newsletter_report.html">Langosh Inc</a></li>
+							</ul>
+							<div class="panel_section">
+								<button class="btn btn-success btn-sm">New Campaign</button>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-bag"></span>
+						<span class="nav_title">Ecommerce</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading">Pages</h4>
+							<ul>
+								<li><a href="ecommerce_sales_report.html">Sales Report</a></li>
+								<li><a href="ecommerce_products_list.html">Products List</a></li>
+								<li><a href="ecommerce_product_edit.html">Product Edit</a></li>
+							</ul>
+							<h4 class="panel_heading">Top Products</h4>
+							<ul>
+								<li><a href="ecommerce_product_edit.html"><span class="badge badge-success">$2 344.00</span> Product A</a></li>
+								<li><a href="ecommerce_product_edit.html"><span class="badge badge-default">$1 217.53</span> Product B</a></li>
+								<li><a href="ecommerce_product_edit.html"><span class="badge badge-default">$684.62</span> Product C</a></li>
+							</ul>
+							<h4 class="panel_heading">Top Categories</h4>
+							<ul>
+								<li><a href="#"><span class="badge badge-success">18</span> Category 1</a></li>
+								<li><a href="#"><span class="badge badge-default">9</span> Category 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="label label-success">14</span>
+						<span class="ion-ios7-email-outline"></span>
+						<span class="nav_title">Mailbox</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<form class="panel_section form-search">
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control input-sm" placeholder="Search...">
+									<span class="input-group-btn">
+										<button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+									</span>
+								</div>
+							</form>
+							<div class="panel_section">
+								<a href="mail_compose.html" class="btn btn-sm btn-danger">New message</a>
+							</div>
+							<h4 class="panel_heading">Folders</h4>
+							<ul>
+								<li><a href="mail_inbox.html"><span class="side_icon ion-ios7-filing-outline"></span> Inbox <small class="text-muted pull-right">(142)</small></a></li>
+								<li><a href="mail_outbox.html"><span class="side_icon ion-ios7-paperplane-outline"></span> Sent Mail</a></li>
+								<li><a href="mail_spam.html"><span class="side_icon ion-ios7-close-outline"></span> Spam <small class="text-danger pull-right">(23)</small></a></li>
+								<li><a href="#"><span class="side_icon ion-ios7-compose-outline"></span> Drafts</a></li>
+								<li><a href="#"><span class="side_icon ion-ios7-trash-outline"></span> Deleted</a></li>
+							</ul>
+							<h4 class="panel_heading">Labels</h4>
+							<ul>
+								<li class="add_label">
+									<a href="#">Work</a>
+									<div class="ts_label">
+										<span class="color_a"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="#">Family</a>
+									<div class="ts_label">
+										<span class="color_b"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="#">Business</a>
+									<div class="ts_label">
+										<span class="color_c"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="#">Envato</a>
+									<div class="ts_label">
+										<span class="color_d"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-beaker"></span>
+						<span class="nav_title">Components</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading panel_heading_first">Form Elements</h4>
+							<ul>
+								<li><a href="form_elements.html">Regular Elements</a></li>
+								<li><a href="form_extended_elements.html">Extended Elements</a></li>
+								<li><a href="form_validation.html">Form Validation</a></li>
+								<li><a href="multiupload.html">Multiupload</a></li>
+								<li><a href="form_wizard.html">Wizard</a></li>
+								<li><a href="form_wysiwg.html">WYSIWG Editor</a></li>
+							</ul>
+							<h4 class="panel_heading">Tables</h4>
+							<ul>
+								<li><a href="tables_regular.html">Regular</a></li>
+								<li><a href="tables_datatables.html">Datatables</a></li>
+							</ul>
+							<h4 class="panel_heading">Other Components</h4>
+							<ul>
+								<li><a href="calendar.html">Calendar</a></li>
+								<li><a href="charts.html">Charts</a></li>
+								<li><a href="easy_tree.html">Easy Tree</a></li>
+								<li><a href="editable_elements.html">Editable Elements</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="image_zoom.html">Image Zoom</a></li>
+								<li><a href="notifications.html">Notifications</a></li>
+								<li><a href="modals_lightbox.html">Modals, Lightbox</a></li>
+								<li><a href="tabs_accordions.html">Tabs, Accordions</a></li>
+								<li><a href="tooltips_popovers.html">Tooltips, Popovers</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-ios7-albums-outline"></span>
+						<span class="nav_title">Others</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading panel_heading_first">UI Elements</h4>
+							<ul>
+								<li><a href="alerts_buttons.html">Alerts, Buttons</a></li>
+								<li><a href="grid.html">Grid</a></li>
+								<li><a href="icons.html">Icons</a></li>
+								<li><a href="sidebar_accordion.html">Sidebar Accordion</a></li>
+								<li><a href="typography.html">Typography</a></li>
+							</ul>
+							<h4 class="panel_heading">Pages</h4>
+							<ul>
+								<li><a href="blank.html">Blank</a></li>
+								<li><a href="chat.html">Chat</a></li>
+								<li><a href="error_404.html">Error 404</a></li>
+								<li><a href="invoice.html">Invoice</a></li>
+								<li><a href="login_page.html">Login Page</a></li>
+								<li><a href="user_list.html">User List</a></li>
+								<li><a href="user_profile.html">User Profile</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- right slidebar -->
+		<div id="slidebar">
+			<div id="slidebar_content">
+				<div class="input-group">
+					<input type="text" class="form-control input-sm" placeholder="Search...">
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
+					</span>
+					</div>
+				<hr>
+					
+				<div class="sepH_a">
+					<div class="progress">
+						<div style="width: 60%;" role="progressbar" class="progress-bar">
+							60%
+						</div>
+					</div>
+					<span class="help-block">CPU Usage</span>
+				</div>
+				<div class="sepH_a">
+					<div class="progress">
+						<div style="width: 28%;" class="progress-bar progress-bar-success">
+							28%
+						</div>
+					</div>
+					<span class="help-block">Disk Usage</span>
+				</div>
+				<div class="progress">
+					<div style="width: 82%;" class="progress-bar progress-bar-danger">
+						0.2GB/20GB
+					</div>
+				</div>
+				<span class="help-block">Monthly Transfer</span>
+				<hr>
+					
+				<div class="heading_a">New Users</div>
+				<div class="user_img_grid clearfix">
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_3.jpg" alt="" class="img-thumbnail"></a>
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_5.jpg" alt="" class="img-thumbnail"></a>
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_8.jpg" alt="" class="img-thumbnail"></a>
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_6.jpg" alt="" class="img-thumbnail"></a>
+				</div>
+				<hr>
+					
+				<form>
+					<div class="form-group">
+						<input type="text" class="input-sm form-control" placeholder="Tilte...">
+					</div>
+					<div class="form-group">
+						<textarea cols="30" rows="3" class="form-control input-sm" placeholder="Message..."></textarea>
+					</div>
+					<button type="button" class="btn btn-default btn-sm">Send message</button>
+				</form>
+				<hr>
+				<div class="sepH_a">
+					<span class="label label-info">Reminder</span>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fuga omnis ipsa odit sint aut molestiae enim. Quia cupiditate distinctio ad dicta qui ducimus aspernatur debitis incidunt minima laboriosam atque.</p>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- easing -->
+		<script src="assets/js/jquery.easing.1.3.min.js"></script>
+		<!-- bootstrap js plugins -->
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<!-- top dropdown navigation -->
+		<script src="assets/js/tinynav.js"></script>
+		<!-- perfect scrollbar -->
+		<script src="assets/lib/perfect-scrollbar/min/perfect-scrollbar-0.4.8.with-mousewheel.min.js"></script>
+		
+		<!-- common functions -->
+		<script src="assets/js/tisa_common.js"></script>
+		
+		<!-- style switcher -->
+		<script src="assets/js/tisa_style_switcher.js"></script>
+		
+	<!-- page specific plugins -->
+
+		<!-- wysiwg editor -->
+		<script src="assets/lib/ckeditor/ckeditor.js"></script>
+		<script src="assets/lib/ckeditor/adapters/jquery.js"></script>
+		<!-- select2 -->
+		<script src="assets/lib/select2/select2.min.js"></script>
+		<!--  bootstrap-datepicker -->
+		<script src="assets/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<!--  bootstrap switches -->
+		<script src="assets/lib/bootstrap-switch/build/js/bootstrap-switch.min.js"></script>
+		<!--  2col multiselect -->
+		<script src="assets/lib/multi-select/js/jquery.multi-select.js"></script>
+		<!-- multiupload -->
+		<script src="assets/lib/jQuery-UI/jquery.ui.widget.min.js"></script>
+		<script src="assets/lib/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+		<script src="assets/lib/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
+		<script src="assets/lib/jQuery-File-Upload/js/extras/load-image.min.js"></script>
+		<script src="assets/lib/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
+		<script src="assets/lib/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
+		<!-- date range picker -->
+		<script src="assets/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+		<!-- magnific popup -->
+		<script src="assets/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+		
+		<!-- ecommerce functions -->
+		<script src="assets/js/apps/tisa_ecommerce.js"></script>
+		
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49181536-1']);
+		_gaq.push(['_trackPageview']);
+	  
+		(function() {
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+    </body>
+</html>

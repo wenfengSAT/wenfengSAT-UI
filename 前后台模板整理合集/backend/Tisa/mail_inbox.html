@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>Tisa Admin Template v1.1 (mail_inbox)</title>
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		
+		<link rel="shortcut icon" href="favicon.ico" />
+		
+		<!-- bootstrap framework -->
+		<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		
+		<!-- custom icons -->
+			<!-- font awesome icons -->
+			<link href="assets/icons/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+			<!-- ionicons -->	
+			<link href="assets/icons/ionicons/css/ionicons.min.css" rel="stylesheet" media="screen">
+			<!-- flags -->
+			<link rel="stylesheet" href="assets/icons/flags/flags.css">
+				
+	
+	<!-- page specific stylesheets -->
+
+		<!-- responsive table -->
+		<link rel="stylesheet" href="assets/lib/footable/css/footable.core.min.css">
+		<!-- iCheck -->
+		<link rel="stylesheet" href="assets/lib/iCheck/skins/minimal/green.css">
+				
+		<!-- main stylesheet -->
+		<link href="assets/css/style.css" rel="stylesheet" media="screen">
+		
+		<!-- google webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400&amp;subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+		
+		<!-- moment.js (date library) -->
+		<script src="assets/lib/moment-js/moment.min.js"></script>
+		
+    </head>
+    <body>
+		<!-- top bar -->
+		<header class="navbar navbar-fixed-top" role="banner">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="dashboard.html" class="navbar-brand"><img src="assets/img/blank.gif" alt="Logo"></a>
+				</div>
+				<ul class="top_links">
+					<li>
+						<a href="tasks_summary.html"><span>23</span>Tasks</a>
+					</li>
+					<li>
+						<a href="mail_inbox.html"><span>8</span>Mails</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="lang_menu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span class="flag-US"></span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="user_profile.html"><span class="flag-FR"></span> France</a></li>
+							<li><a href="mail_inbox.html"><span class="flag-IN"></span> India</a></li>
+							<li><a href="tasks_summary.html"><span class="flag-BR"></span> Brasil</a></li>
+							<li><a href="tasks_summary.html"><span class="flag-GB"></span> UK</a></li>
+						</ul>
+					</li>
+					<li class="user_menu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span class="navbar_el_icon ion-person"></span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="user_profile.html">Profile</a></li>
+							<li><a href="mail_inbox.html">My messages</a></li>
+							<li><a href="tasks_summary.html">My tasks</a></li>
+							<li class="divider"></li>
+							<li><a href="login_page.html">Log Out</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)" class="slidebar-toggle"><span class="navbar_el_icon ion-navicon-round"></span></a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<!-- main content -->
+		<div id="main_wrapper">
+		
+			<div class="page_bar clearfix">
+				<div class="row">
+					<div class="col-sm-8">
+						<h1 class="page_title">Inbox</h1>
+						<p class="text-muted">24 new emails</p>
+					</div>
+					<div class="col-sm-4 text-right">
+						<button class="btn btn-info"><i class="fa fa-refresh"></i></button>
+						<div class="btn-group text-left">
+							<button data-toggle="dropdown" class="btn btn-info dropdown-toggle" type="button"><i class="fa fa-lg fa-cog"></i> <span class="caret"></span></button>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li class="dropdown-header">Display Density</li>
+								<li><a href="#">Comfortable</a></li>
+								<li><a href="#">Cozy</a></li>
+								<li><a href="#">Compact</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="breadcrumbs">
+				<ul>
+					<li><a href="#">Mail</a></li>
+					<li class="sep">\</li>
+					<li>Inbox</li>
+				</ul>
+			</nav>
+			<div class="page_content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-9">
+							<div class="panel panel-default">
+								<div class="well well-sm">
+									<div class="row">
+										<div class="col-lg-4 text-right col-lg-push-8">
+											<input type="text" id="mailbox_search" class="form-control input-sm" placeholder="Find message">
+										</div>
+										<div class="col-lg-8 col-lg-pull-4">
+											<div class="btn-group">
+												<button class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Reply All"><span class="fa fa-reply-all"></span></button>
+												<button class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Forward"><span class="fa fa-mail-forward"></span></button>
+												<button class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><span class="fa fa-trash-o"></span></button>
+												<button class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Move to Spam"><span class="fa fa-ban"></span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="mail_inbox" class="mail_table table table-hover toggle-arrow-tiny" data-filter="#mailbox_search" data-page-size="20">
+									<thead>
+										<tr>
+											<th><input type="checkbox" class="check_all" name="check_all"></th>
+											<th></th>
+											<th data-hide="phone,tablet">From</th>
+											<th>Subject</th>
+											<th data-hide="phone">Date</th>
+											<th data-hide="phone,tablet">Label</th>
+											<th data-hide="phone,tablet"><i class="fa fa-lg fa-paperclip"></i></th>
+										</tr>
+									</thead>
+									<tbody data-link="row" class="rowlink">
+										<tr class="unreaded">
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[0]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Damien Krajcik</td>
+											<td><a href="#">Mollitia consequatur minus autem.</a></td>
+											<td>today</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr class="unreaded">
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[1]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Moshe Hackett</td>
+											<td><a href="#">Qui est libero.</a></td>
+											<td>today</td>
+											<td></td>
+											<td class="col_sm"><span class="fa fa-lg fa-paperclip"></span></td>
+										</tr>
+										<tr class="unreaded">
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[2]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ms. Jensen King PhD</td>
+											<td><a href="#">Nemo doloribus libero saepe.</a></td>
+											<td>yesterday</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr class="unreaded">
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[3]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Moriah Bode</td>
+											<td><a href="#">Sed quia quibusdam esse.</a></td>
+											<td>yesterday</td>
+											<td><span class="label color_c">envato</span></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr class="unreaded">
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[4]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip mail_stared"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Thad Lang MD</td>
+											<td><a href="#">Qui neque sed quia molestiae doloremque.</a></td>
+											<td>yesterday</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr class="unreaded">
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[5]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ralph Steuber</td>
+											<td><a href="#">Officiis incidunt cum culpa nulla.</a></td>
+											<td>yesterday</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[6]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ora Dooley</td>
+											<td><a href="#">Laboriosam dolorem voluptatibus eligendi.</a></td>
+											<td>Feb 26</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[7]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mylene Stark</td>
+											<td><a href="#">Voluptates labore voluptate nemo id excepturi.</a></td>
+											<td>Feb 4</td>
+											<td><span class="label color_d">family</span></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[8]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Dr. Reva Nikolaus</td>
+											<td><a href="#">Qui cum esse.</a></td>
+											<td>Feb 18</td>
+											<td></td>
+											<td class="col_sm"><span class="fa fa-lg fa-paperclip"></span></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[9]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ms. Layla Schumm</td>
+											<td><a href="#">Qui alias delectus dolorem.</a></td>
+											<td>Feb 2</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[10]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Veda Kessler III</td>
+											<td><a href="#">Enim autem voluptate quaerat qui.</a></td>
+											<td>Feb 13</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[11]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Nils Murazik</td>
+											<td><a href="#">Quibusdam quos porro odit consequuntur cum.</a></td>
+											<td>Feb 17</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[12]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Miss Berneice Conroy V</td>
+											<td><a href="#">Tempora veniam quis.</a></td>
+											<td>Feb 25</td>
+											<td><span class="label color_g">business</span></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[13]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mrs. Soledad Beatty I</td>
+											<td><a href="#">Rerum molestiae omnis ea.</a></td>
+											<td>Feb 5</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[14]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Albert Carroll</td>
+											<td><a href="#">Esse velit magni consequatur.</a></td>
+											<td>Feb 18</td>
+											<td><span class="label color_a">work</span></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[15]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip mail_stared"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Gina Schneider DVM</td>
+											<td><a href="#">Reprehenderit ut sint.</a></td>
+											<td>Feb 13</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[16]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ms. Glenna Koss III</td>
+											<td><a href="#">Minus autem facilis saepe possimus.</a></td>
+											<td>Feb 25</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[17]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mr. Savanah Gerlach MD</td>
+											<td><a href="#">Commodi voluptas soluta quos.</a></td>
+											<td>Feb 4</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[18]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mr. Ubaldo Runte IV</td>
+											<td><a href="#">Qui ea repellendus aut.</a></td>
+											<td>Feb 15</td>
+											<td><span class="label color_c">envato</span></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[19]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mckenzie Ledner Jr.</td>
+											<td><a href="#">Aspernatur sint dolores quas.</a></td>
+											<td>Feb 5</td>
+											<td></td>
+											<td class="col_sm"><span class="fa fa-lg fa-paperclip"></span></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[20]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Dr. Cassandre Kozey</td>
+											<td><a href="#">Cupiditate ut unde voluptatem nobis omnis.</a></td>
+											<td>Feb 10</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[21]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Marlee Price</td>
+											<td><a href="#">Perferendis quidem asperiores temporibus.</a></td>
+											<td>Feb 5</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[22]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Raphaelle Koelpin</td>
+											<td><a href="#">Quia ullam qui.</a></td>
+											<td>Feb 6</td>
+											<td></td>
+											<td class="col_sm"><span class="fa fa-lg fa-paperclip"></span></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[23]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip mail_stared"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Stanley Murazik</td>
+											<td><a href="#">Dicta a qui.</a></td>
+											<td>Feb 20</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[24]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mr. Darion Legros Jr.</td>
+											<td><a href="#">Pariatur sit occaecati.</a></td>
+											<td>Feb 19</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[25]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Laney Leannon</td>
+											<td><a href="#">Alias velit in dolorem quidem.</a></td>
+											<td>Feb 20</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[26]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip mail_stared"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Sedrick Crona</td>
+											<td><a href="#">Dolorem distinctio ducimus et vero blanditiis.</a></td>
+											<td>Feb 7</td>
+											<td></td>
+											<td class="col_sm"><span class="fa fa-lg fa-paperclip"></span></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[27]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Lavonne Strosin</td>
+											<td><a href="#">Quo vel suscipit cum qui.</a></td>
+											<td>Feb 24</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[28]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ana Mitchell</td>
+											<td><a href="#">Et qui in.</a></td>
+											<td>Feb 12</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[29]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ms. Arvel D'Amore IV</td>
+											<td><a href="#">Sequi dolore commodi dicta eveniet.</a></td>
+											<td>Feb 3</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[30]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Dr. Tobin Hagenes</td>
+											<td><a href="#">Ratione fuga suscipit iste necessitatibus.</a></td>
+											<td>Feb 26</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[31]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Adolph Thiel</td>
+											<td><a href="#">Officiis ex voluptatem ut qui.</a></td>
+											<td>Feb 17</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[32]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Victoria Hammes</td>
+											<td><a href="#">Illum expedita error aspernatur.</a></td>
+											<td>Feb 5</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[33]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Kristina Greenfelder</td>
+											<td><a href="#">Quia ut id est.</a></td>
+											<td>Feb 8</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[34]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ahmad Dibbert</td>
+											<td><a href="#">Beatae exercitationem optio impedit asperiores.</a></td>
+											<td>Feb 12</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[35]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Manuel Bruen</td>
+											<td><a href="#">Non eos libero dolorem.</a></td>
+											<td>Feb 22</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[36]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Nikolas Macejkovic</td>
+											<td><a href="#">Quasi sunt corrupti veniam ut.</a></td>
+											<td>Feb 2</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[37]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip mail_stared"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Eleazar Medhurst</td>
+											<td><a href="#">Eius quis ut magnam a ipsum.</a></td>
+											<td>Feb 3</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[38]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Sedrick Boehm</td>
+											<td><a href="#">Et accusamus saepe ipsa qui quia.</a></td>
+											<td>Feb 19</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[39]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Naomi Boyer</td>
+											<td><a href="#">Harum aspernatur sed tempore quia earum.</a></td>
+											<td>Feb 8</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[40]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Eliza Turcotte Jr.</td>
+											<td><a href="#">Molestiae ab accusantium.</a></td>
+											<td>Feb 23</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[41]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Dr. Cletus Pouros</td>
+											<td><a href="#">Adipisci sapiente rerum.</a></td>
+											<td>Feb 25</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[42]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Libby Labadie</td>
+											<td><a href="#">Veniam asperiores aliquam sed.</a></td>
+											<td>Feb 9</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[43]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Bernard Grady</td>
+											<td><a href="#">Omnis ipsam quo magnam a mollitia.</a></td>
+											<td>Feb 17</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[44]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Declan Cormier</td>
+											<td><a href="#">Quisquam nisi aut.</a></td>
+											<td>Feb 18</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[45]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Emmanuel Haag</td>
+											<td><a href="#">Veniam rem repellat dolores sit.</a></td>
+											<td>Feb 10</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[46]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Amir Schumm</td>
+											<td><a href="#">Delectus beatae delectus quis delectus.</a></td>
+											<td>Feb 14</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[47]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mason Bernhard</td>
+											<td><a href="#">Voluptatem molestiae voluptatem ut aut.</a></td>
+											<td>Feb 5</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[48]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mrs. Jimmie Rutherford</td>
+											<td><a href="#">Explicabo magni et.</a></td>
+											<td>Feb 5</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[49]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Tommie Rosenbaum</td>
+											<td><a href="#">A reprehenderit odio alias aut.</a></td>
+											<td>Feb 1</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[50]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mrs. Elinor Becker</td>
+											<td><a href="#">Fugit beatae voluptatum ea assumenda vitae.</a></td>
+											<td>Feb 25</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[51]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Lucile Waelchi</td>
+											<td><a href="#">Officia velit inventore quos.</a></td>
+											<td>Feb 1</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[52]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Kamron Jenkins</td>
+											<td><a href="#">Excepturi hic atque at dolores.</a></td>
+											<td>Feb 11</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[53]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Savanah Hahn</td>
+											<td><a href="#">Quae molestiae id.</a></td>
+											<td>Feb 21</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[54]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Salma Romaguera</td>
+											<td><a href="#">Animi minus sequi cumque quasi.</a></td>
+											<td>Feb 13</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[55]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Brady Robel</td>
+											<td><a href="#">Quam vel officia quis.</a></td>
+											<td>Feb 22</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[56]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Columbus Wyman</td>
+											<td><a href="#">Nesciunt eos perferendis tempora consequatur.</a></td>
+											<td>Feb 8</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[57]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ahmad Baumbach</td>
+											<td><a href="#">Corrupti in ipsa aliquid.</a></td>
+											<td>Feb 10</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[58]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Watson Durgan</td>
+											<td><a href="#">Magnam accusamus possimus repellat sapiente.</a></td>
+											<td>Feb 7</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[59]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mrs. Krista Zemlak MD</td>
+											<td><a href="#">Mollitia commodi cumque aperiam unde ut.</a></td>
+											<td>Feb 12</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[60]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Elise Glover</td>
+											<td><a href="#">Rerum aut libero cumque.</a></td>
+											<td>Feb 22</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[61]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Greg Hartmann</td>
+											<td><a href="#">Qui quis vel quos.</a></td>
+											<td>Feb 18</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[62]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Pascale Eichmann</td>
+											<td><a href="#">Consequatur enim laborum temporibus dolore illo.</a></td>
+											<td>Feb 11</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[63]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Chaya Smith II</td>
+											<td><a href="#">Quos enim omnis quis expedita.</a></td>
+											<td>Feb 7</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[64]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Kailee Zieme</td>
+											<td><a href="#">Est consectetur fugit aliquid sunt ipsam.</a></td>
+											<td>Feb 7</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[65]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Tyrique Hauck PhD</td>
+											<td><a href="#">Minus natus similique sint.</a></td>
+											<td>Feb 21</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[66]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Amina Connelly</td>
+											<td><a href="#">Voluptas aspernatur officiis voluptas nemo.</a></td>
+											<td>Feb 9</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[67]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Ivah Wisozk</td>
+											<td><a href="#">Qui nulla ipsum explicabo impedit.</a></td>
+											<td>Feb 1</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[68]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Alvah Reilly</td>
+											<td><a href="#">Incidunt veritatis ab.</a></td>
+											<td>Feb 17</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[69]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Miss Courtney Schaden Jr.</td>
+											<td><a href="#">Id nobis totam.</a></td>
+											<td>Feb 11</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[70]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mr. Freda Walker II</td>
+											<td><a href="#">Accusamus dolorum atque at.</a></td>
+											<td>Feb 11</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[71]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Sigmund Casper</td>
+											<td><a href="#">Voluptate quia dolorem magni.</a></td>
+											<td>Feb 18</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[72]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Carmelo Schowalter</td>
+											<td><a href="#">Omnis est sint tempora.</a></td>
+											<td>Feb 16</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[73]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Llewellyn Barrows</td>
+											<td><a href="#">Ipsum corporis magni qui facere iusto.</a></td>
+											<td>Feb 7</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[74]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Nathan Fadel</td>
+											<td><a href="#">Tenetur adipisci impedit iusto.</a></td>
+											<td>Feb 15</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[75]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Muriel Hane</td>
+											<td><a href="#">Dolor aliquid est vero odio.</a></td>
+											<td>Feb 21</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[76]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mrs. Kamren Rath</td>
+											<td><a href="#">Cum quaerat quidem autem.</a></td>
+											<td>Feb 15</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[77]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Caroline Collier IV</td>
+											<td><a href="#">Qui asperiores non.</a></td>
+											<td>Feb 9</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[78]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Nettie Stokes</td>
+											<td><a href="#">Eligendi excepturi fuga et.</a></td>
+											<td>Feb 15</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[79]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Eladio Ortiz</td>
+											<td><a href="#">Aut ex sed fugit aspernatur.</a></td>
+											<td>Feb 6</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[80]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Dolly Brekke</td>
+											<td><a href="#">Beatae numquam temporibus vel in.</a></td>
+											<td>Feb 1</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[81]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Jaren Balistreri</td>
+											<td><a href="#">Perferendis velit qui autem corporis omnis.</a></td>
+											<td>Feb 21</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[82]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Mrs. Alvera Davis</td>
+											<td><a href="#">Quae impedit velit.</a></td>
+											<td>Feb 22</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[83]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Pierre Upton</td>
+											<td><a href="#">Ad omnis non et doloremque.</a></td>
+											<td>Feb 3</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+										<tr>
+											<td class="col_sm rowlink-skip"><input type="checkbox" name="check_row[84]" class="check_row" /></td>
+											<td class="col_sm rowlink-skip"><span class="mail_star fa fa-star-o"></span></td>
+											<td>Michale Prohaska</td>
+											<td><a href="#">Et veniam ipsa.</a></td>
+											<td>Feb 23</td>
+											<td></td>
+											<td class="col_sm"></td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="7">
+												<div class="row">
+													<div class="col-md-4">
+														<span class="mailbox_count_msg"><b class="page_start_row">1</b>-<b class="page_end_row">20</b> of <b class="all_rows">85</b></span>
+													</div>
+													<div class="col-md-8 text-right hide-if-no-paging">
+														<ul class="pagination pagination-sm"></ul>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div id="mini-clndr">
+								<script>
+									// todo calendar events 
+									var currentMonth = moment().format('YYYY-MM'),
+										nextMonth    = moment().add('month', 1).format('YYYY-MM');
+									
+									todo_events = [
+										{ date: currentMonth + '-' + '07', title: 'Aut excepturi dolorem similique.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '08', title: 'Et incidunt non numquam.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '08', title: 'Maxime est ut.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '12', title: 'Rerum ratione quia voluptatem.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '19', title: 'Quo sit ex nesciunt.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '19', title: 'Voluptates minima ut.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '22', title: 'Porro alias repellendus.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '25', title: 'Est tempora et sunt.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '25', title: 'Esse necessitatibus qui.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '25', title: 'Veniam architecto ullam.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '28', title: 'Esse perferendis perferendis.', url: 'javascript:void(0)' },
+										{ date: currentMonth + '-' + '28', title: 'Nobis nemo nulla dolorum.', url: 'javascript:void(0)' },
+										{ date: nextMonth + '-' + '04',    title: 'Magnam provident neque repellat.', url: 'javascript:void(0)' },
+										{ date: nextMonth + '-' + '18',    title: 'Consequatur commodi eum et.', url: 'javascript:void(0)' }
+									]
+								</script>
+								<script id="mini-clndr-template" type="text/template">
+									<div class="controls">
+										<div class="clndr-previous-button"><span class="glyphicon glyphicon-chevron-left"></span></div><div class="month"><%= month+' '+year %></div><div class="clndr-next-button"><span class="glyphicon glyphicon-chevron-right"></span></div>
+									</div>
+						
+									<div class="days-container">
+										<div class="days">
+											<div class="headers">
+												<% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+											</div>
+											<% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+										</div>
+										<div class="events">
+											<div class="headers">
+												<div class="x-button"><span class="glyphicon glyphicon-remove"></span></div>
+												<div class="event-header">EVENTS</div>
+											</div>
+											<div class="events-list-wrapper">
+												<div class="events-list">
+													<% _.each(eventsThisMonth, function(event) { %>
+														<div class="event">
+															<a href="<%= event.url %>"><%= moment(event.date).format('MMM Do') %>: <%= event.title %></a>
+														</div>
+													  <% }); %>
+												</div>
+											</div>
+										</div>
+									</div>
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+
+		<!-- side navigation -->
+		<nav id="side_nav">
+			<ul>
+				<li>
+					<a href="dashboard.html"><span class="ion-speedometer"></span> <span class="nav_title">Dashboard</span></a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="label label-danger">32</span>
+						<span class="ion-clipboard"></span>
+						<span class="nav_title">Todo</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading panel_heading_first">Folders</h4>
+							<ul>
+								<li><a href="tasks_summary.html"><span class="side_icon ion-ios7-folder-outline"></span><span class="badge badge-primary">7</span> Summary</a></li>
+								<li><a href="tasks_starred.html"><span class="side_icon ion-ios7-star-outline"></span> Starred</a></li>
+								<li><a href="tasks_today.html"><span class="side_icon ion-ios7-calendar-outline"></span> Today</a></li>
+							</ul>
+							<h4 class="panel_heading">Labels</h4>
+							<ul>
+								<li class="add_label">
+									<a href="tasks_label.html">Work</a>
+									<div class="ts_label">
+										<span class="color_a"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="tasks_label.html">Family</a>
+									<div class="ts_label">
+										<span class="color_b"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="tasks_label.html">Business</a>
+									<div class="ts_label">
+										<span class="color_c"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="tasks_label.html">Envato</a>
+									<div class="ts_label">
+										<span class="color_d"></span>
+									</div>
+								</li>
+							</ul>
+							<div class="panel_section">
+								<button class="btn btn-primary">Add task</button>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-paper-airplane"></span>
+						<span class="nav_title">Newsletter</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading">Pages</h4>
+							<ul>
+								<li><a href="newsletter_campaigns.html">Campaigns</a></li>
+								<li><a href="newsletter_report.html">Reports</a></li>
+								<li><a href="newsletter_templates.html">Templates</a></li>
+							</ul>
+							<h4 class="panel_heading">Latest Campaigns</h4>
+							<ul>
+								<li><a href="newsletter_report.html">Stanton LLC</a></li>
+								<li><a href="newsletter_report.html">Veum Group</a></li>
+								<li><a href="newsletter_report.html">Langosh Inc</a></li>
+							</ul>
+							<div class="panel_section">
+								<button class="btn btn-success btn-sm">New Campaign</button>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-bag"></span>
+						<span class="nav_title">Ecommerce</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading">Pages</h4>
+							<ul>
+								<li><a href="ecommerce_sales_report.html">Sales Report</a></li>
+								<li><a href="ecommerce_products_list.html">Products List</a></li>
+								<li><a href="ecommerce_product_edit.html">Product Edit</a></li>
+							</ul>
+							<h4 class="panel_heading">Top Products</h4>
+							<ul>
+								<li><a href="ecommerce_product_edit.html"><span class="badge badge-success">$2 344.00</span> Product A</a></li>
+								<li><a href="ecommerce_product_edit.html"><span class="badge badge-default">$1 217.53</span> Product B</a></li>
+								<li><a href="ecommerce_product_edit.html"><span class="badge badge-default">$684.62</span> Product C</a></li>
+							</ul>
+							<h4 class="panel_heading">Top Categories</h4>
+							<ul>
+								<li><a href="#"><span class="badge badge-success">18</span> Category 1</a></li>
+								<li><a href="#"><span class="badge badge-default">9</span> Category 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="label label-success">14</span>
+						<span class="ion-ios7-email-outline"></span>
+						<span class="nav_title">Mailbox</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<form class="panel_section form-search">
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control input-sm" placeholder="Search...">
+									<span class="input-group-btn">
+										<button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+									</span>
+								</div>
+							</form>
+							<div class="panel_section">
+								<a href="mail_compose.html" class="btn btn-sm btn-danger">New message</a>
+							</div>
+							<h4 class="panel_heading">Folders</h4>
+							<ul>
+								<li><a href="mail_inbox.html"><span class="side_icon ion-ios7-filing-outline"></span> Inbox <small class="text-muted pull-right">(142)</small></a></li>
+								<li><a href="mail_outbox.html"><span class="side_icon ion-ios7-paperplane-outline"></span> Sent Mail</a></li>
+								<li><a href="mail_spam.html"><span class="side_icon ion-ios7-close-outline"></span> Spam <small class="text-danger pull-right">(23)</small></a></li>
+								<li><a href="#"><span class="side_icon ion-ios7-compose-outline"></span> Drafts</a></li>
+								<li><a href="#"><span class="side_icon ion-ios7-trash-outline"></span> Deleted</a></li>
+							</ul>
+							<h4 class="panel_heading">Labels</h4>
+							<ul>
+								<li class="add_label">
+									<a href="#">Work</a>
+									<div class="ts_label">
+										<span class="color_a"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="#">Family</a>
+									<div class="ts_label">
+										<span class="color_b"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="#">Business</a>
+									<div class="ts_label">
+										<span class="color_c"></span>
+									</div>
+								</li>
+								<li class="add_label">
+									<a href="#">Envato</a>
+									<div class="ts_label">
+										<span class="color_d"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-beaker"></span>
+						<span class="nav_title">Components</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading panel_heading_first">Form Elements</h4>
+							<ul>
+								<li><a href="form_elements.html">Regular Elements</a></li>
+								<li><a href="form_extended_elements.html">Extended Elements</a></li>
+								<li><a href="form_validation.html">Form Validation</a></li>
+								<li><a href="multiupload.html">Multiupload</a></li>
+								<li><a href="form_wizard.html">Wizard</a></li>
+								<li><a href="form_wysiwg.html">WYSIWG Editor</a></li>
+							</ul>
+							<h4 class="panel_heading">Tables</h4>
+							<ul>
+								<li><a href="tables_regular.html">Regular</a></li>
+								<li><a href="tables_datatables.html">Datatables</a></li>
+							</ul>
+							<h4 class="panel_heading">Other Components</h4>
+							<ul>
+								<li><a href="calendar.html">Calendar</a></li>
+								<li><a href="charts.html">Charts</a></li>
+								<li><a href="easy_tree.html">Easy Tree</a></li>
+								<li><a href="editable_elements.html">Editable Elements</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="image_zoom.html">Image Zoom</a></li>
+								<li><a href="notifications.html">Notifications</a></li>
+								<li><a href="modals_lightbox.html">Modals, Lightbox</a></li>
+								<li><a href="tabs_accordions.html">Tabs, Accordions</a></li>
+								<li><a href="tooltips_popovers.html">Tooltips, Popovers</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="ion-ios7-albums-outline"></span>
+						<span class="nav_title">Others</span>
+					</a>
+					<div class="sub_panel">
+						<div class="side_inner">
+							<h4 class="panel_heading panel_heading_first">UI Elements</h4>
+							<ul>
+								<li><a href="alerts_buttons.html">Alerts, Buttons</a></li>
+								<li><a href="grid.html">Grid</a></li>
+								<li><a href="icons.html">Icons</a></li>
+								<li><a href="sidebar_accordion.html">Sidebar Accordion</a></li>
+								<li><a href="typography.html">Typography</a></li>
+							</ul>
+							<h4 class="panel_heading">Pages</h4>
+							<ul>
+								<li><a href="blank.html">Blank</a></li>
+								<li><a href="chat.html">Chat</a></li>
+								<li><a href="error_404.html">Error 404</a></li>
+								<li><a href="invoice.html">Invoice</a></li>
+								<li><a href="login_page.html">Login Page</a></li>
+								<li><a href="user_list.html">User List</a></li>
+								<li><a href="user_profile.html">User Profile</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- right slidebar -->
+		<div id="slidebar">
+			<div id="slidebar_content">
+				<div class="input-group">
+					<input type="text" class="form-control input-sm" placeholder="Search...">
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
+					</span>
+					</div>
+				<hr>
+					
+				<div class="sepH_a">
+					<div class="progress">
+						<div style="width: 60%;" role="progressbar" class="progress-bar">
+							60%
+						</div>
+					</div>
+					<span class="help-block">CPU Usage</span>
+				</div>
+				<div class="sepH_a">
+					<div class="progress">
+						<div style="width: 28%;" class="progress-bar progress-bar-success">
+							28%
+						</div>
+					</div>
+					<span class="help-block">Disk Usage</span>
+				</div>
+				<div class="progress">
+					<div style="width: 82%;" class="progress-bar progress-bar-danger">
+						0.2GB/20GB
+					</div>
+				</div>
+				<span class="help-block">Monthly Transfer</span>
+				<hr>
+					
+				<div class="heading_a">New Users</div>
+				<div class="user_img_grid clearfix">
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_3.jpg" alt="" class="img-thumbnail"></a>
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_5.jpg" alt="" class="img-thumbnail"></a>
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_8.jpg" alt="" class="img-thumbnail"></a>
+					<a class="user_img_item" href="#"><img src="assets/img/avatars/avatar_6.jpg" alt="" class="img-thumbnail"></a>
+				</div>
+				<hr>
+					
+				<form>
+					<div class="form-group">
+						<input type="text" class="input-sm form-control" placeholder="Tilte...">
+					</div>
+					<div class="form-group">
+						<textarea cols="30" rows="3" class="form-control input-sm" placeholder="Message..."></textarea>
+					</div>
+					<button type="button" class="btn btn-default btn-sm">Send message</button>
+				</form>
+				<hr>
+				<div class="sepH_a">
+					<span class="label label-info">Reminder</span>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fuga omnis ipsa odit sint aut molestiae enim. Quia cupiditate distinctio ad dicta qui ducimus aspernatur debitis incidunt minima laboriosam atque.</p>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- easing -->
+		<script src="assets/js/jquery.easing.1.3.min.js"></script>
+		<!-- bootstrap js plugins -->
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<!-- top dropdown navigation -->
+		<script src="assets/js/tinynav.js"></script>
+		<!-- perfect scrollbar -->
+		<script src="assets/lib/perfect-scrollbar/min/perfect-scrollbar-0.4.8.with-mousewheel.min.js"></script>
+		
+		<!-- common functions -->
+		<script src="assets/js/tisa_common.js"></script>
+		
+		<!-- style switcher -->
+		<script src="assets/js/tisa_style_switcher.js"></script>
+		
+	<!-- page specific plugins -->
+
+		<!-- rowlink -->
+		<script src="assets/lib/jasny/rowlink.js"></script>
+		<!-- responsive table -->
+		<script src="assets/lib/footable/js/footable.js"></script>
+		<script src="assets/lib/footable/js/footable.filter.js"></script>
+		<script src="assets/lib/footable/js/footable.paginate.js"></script>
+		<!-- iCheck -->
+		<script src="assets/lib/iCheck/jquery.icheck.min.js"></script>
+		<!-- clndr -->
+		<script src="assets/lib/underscore-js/underscore-min.js"></script>
+		<script src="assets/lib/CLNDR/src/clndr.js"></script>
+		
+		<!-- mail functions -->
+		<script src="assets/js/apps/tisa_mail.js"></script>
+		
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49181536-1']);
+		_gaq.push(['_trackPageview']);
+	  
+		(function() {
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+    </body>
+</html>
