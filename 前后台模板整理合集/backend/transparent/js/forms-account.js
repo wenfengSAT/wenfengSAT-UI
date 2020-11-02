@@ -1,0 +1,1 @@
+/*! light-blue - v3.1.0 - 2014-12-06 */$(function(){function a(){$(".date-picker").datetimepicker({pickTime:!1}),$(".selectpicker").selectpicker(),$(".select2").each(function(){$(this).select2($(this).data())}),$("#user-form").parsley({errorsContainer:function(a){return a.$element.parents(".form-group").children("label")}}),$(".widget").widgster()}a(),PjaxApp.onPageLoad(a)});

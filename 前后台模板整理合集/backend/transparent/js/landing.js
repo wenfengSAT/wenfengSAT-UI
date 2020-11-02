@@ -1,0 +1,1 @@
+/*! light-blue - v3.1.0 - 2014-12-06 */$(function(){$(".back-to-top").on("click",function(){return $("html, body").animate({scrollTop:0},"fast"),!1})});

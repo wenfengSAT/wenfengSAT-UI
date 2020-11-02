@@ -1,0 +1,1 @@
+/*! light-blue - v3.1.0 - 2014-12-06 */$(function(){function a(){$("#validation-form").parsley(),$(".widget").widgster()}a(),PjaxApp.onPageLoad(a)});
