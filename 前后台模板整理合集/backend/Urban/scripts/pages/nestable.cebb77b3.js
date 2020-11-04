@@ -1,0 +1,1 @@
+(function($){'use strict';$('#nestable').nestable({group:1});$('#nestable2').nestable({group:1});$('#nestable3').nestable();})(jQuery);
