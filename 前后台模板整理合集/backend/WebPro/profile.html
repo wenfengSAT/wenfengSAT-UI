@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>WebPro - Responsive Admin Dashboard</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style-responsive.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="light-theme">
+<div class="header navbar navbar-inverse box-shadow navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="header-seperation">
+      <ul class="nav navbar-nav">
+        <li class="sidebar-toggle-box"> <a href="#"><i class="fa fa-bars"></i></a> </li>
+        <li> <a href="index.html"><strong>WebPro</strong></a> </li>
+        <li class="hidden-xs"> <a href="#"><i class="fa fa-angle-double-left"></i> Go to the front page</a> </li>
+        <li class="hidden-xs">
+          <div class="hov">
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-bell"></span><span class="label label-danger">33</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-alerts">
+                <li class="title"><span class="icon icon-bell"></span>&nbsp;&nbsp;There are 5 new alerts in the system...</li>
+                <li class="alert">
+                  <div class="alert-icon alt-default"><span class="fa fa-check-square"></span></div>
+                  <div class="alert-content">Quality check was successful</div>
+                  <div class="alert-time">32 sec ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-primary"><span class="fa fa-plus-square"></span></div>
+                  <div class="alert-content">New user added (John Doe)</div>
+                  <div class="alert-time">11 min ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-warning"><span class="fa fa-pencil-square"></span></div>
+                  <div class="alert-content">User profile updated (John Doe)</div>
+                  <div class="alert-time">3 hours ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-danger"><span class="fa fa-warning"></span></div>
+                  <div class="alert-content">System failure reported</div>
+                  <div class="alert-time">2 days ago</div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-envelope"></span><span class="label label-success">7</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-messages">
+                <li class="title"><span class="fa fa-envelope"></span>&nbsp;&nbsp;You have 13 new messages to read...</li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Lorem ipsum dolor sit amet...</div>
+                  <div class="message-time">32 sec ago</div>
+                </li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Quisque commodo sed ipsum...</div>
+                  <div class="message-time">11 min ago</div>
+                </li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Consectetur adipiscing elit...</div>
+                  <div class="message-time">3 hours ago</div>
+                </li>
+                <li class="message" style="position:relative;">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a><br>
+                    Quisque commodo sed ipsum...</div>
+                  <div class="message-time">2 days ago</div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-user"></span><span class="label label-primary">+5</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-profile">
+                <li class="title"><span class="icon icon-user"></span>&nbsp;&nbsp;Welcome, John!</li>
+                <li><a href="#"><span class="fa fa-gears"></span>Settings</a></li>
+                <li><a href="#"><span class="fa fa-user"></span>Profile</a></li>
+                <li><a href="#"><span class="fa fa-envelope"></span>Messages</a></li>
+                <li><a href="#"><span class="fa fa-power-off"></span>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="hidden-xs"> <form method="post" action="index.html" class="searchform"><input type="text" placeholder="Search here..." name="keyword" class="form-control"></form> </li>
+        <li id="last-one"> <a href="login.html">Log Out <i class="fa fa-angle-double-right"></i></a> </li>
+        <li><a id="show-right-info-bar" href="javascript:;" class=""><i class="fa fa-bars"></i></a></li>
+      </ul><!--/nav navbar-nav--> 
+    </div><!--/header-seperation--> 
+  </div><!--/navbar-inner--> 
+</div><!--/header--> 
+
+<div class="right-info-bar">
+  <div class="block">
+    <div class="heading">Notifications</div>
+    <!-- Notifications -->
+    <ul class="infos">
+      <li> <span class="label label-primary pull-left"> <i class="fa fa-twitter"></i> </span>
+        <div class="info">
+          <h6>John Tweeted</h6>
+          <p class="designation">Few seconds ago</p>
+        </div>
+      </li>
+      <li> <span class="label label-danger pull-left"> <i class="fa fa-warning"></i> </span>
+        <div class="info">
+          <h6>Server #999 Crashed</h6>
+          <p class="designation">3 minutes ago</p>
+        </div>
+      </li>
+      <li> <span class="label label-info pull-left"> <i class="fa fa-plus"></i> </span>
+        <div class="info">
+          <h6>scott account was created</h6>
+          <p class="designation">7 days ago</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Progress Stats</div>
+    <!-- Progress Stats -->
+    <ul class="progress-statistics">
+      <li>
+        <p class="details"> <span> Windows </span> <span class="pull-right"> 82% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 82%" class="progress-bar progress-bar-success"> </div>
+        </div>
+      </li>
+      <li>
+        <p class="details"> <span> Linux </span> <span class="pull-right"> 47% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 47%" class="progress-bar progress-bar-danger"> </div>
+        </div>
+      </li>
+      <li>
+        <p class="details"> <span> IPhone/IPad </span> <span class="pull-right"> 67% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 67%" class="progress-bar progress-bar-info"> </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Online Users</div>
+    <!-- Online Users -->
+    <ul class="online-users">
+      <li> <a data-original-title="" data-status="online" data-lastname="John Doe" href=""> <span>John Doe</span>
+        <div class="user-status online"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Jacques" href=""> <span>Jacques</span>
+        <div class="user-status online"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Parnell" href=""> <span>Parnell</span>
+        <div class="user-status busy"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Fleming" href=""> <span>Fleming</span>
+        <div class="user-status away"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Shahbaz" href=""> <span>Shahbaz</span>
+        <div class="user-status"></div>
+        </a> </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Storage Space</div>
+    <!-- Progress Stats -->
+    <ul class="progress-statistics">
+      <li>
+        <p class="details"> <span> 77 GB of 100 GB used </span> <span class="pull-right"> 77% </span> </p>
+        <div class="progress progress-mini">
+          <div style="width: 18%" class="progress-bar progress-bar-info"></div>
+          <div style="width: 25%" class="progress-bar progress-bar-success"></div>
+          <div style="width: 34%" class="progress-bar progress-bar-warning"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!--/right-info-bar--> 
+
+<div class="page-container">
+  <div class="nav-collapse top-margin fixed box-shadow2 hidden-xs" id="sidebar">
+    <div class="leftside-navigation">
+      <div class="sidebar-section sidebar-user clearfix">
+        <div class="sidebar-user-avatar"> <a href="#"> <img alt="avatar" src="images/avatar1.jpg"> </div>
+        <div class="sidebar-user-name">John Doe</div>
+        <div class="sidebar-user-links"> <a title="" data-placement="bottom" data-toggle="" href="profile.html" data-original-title="User"><i class="fa fa-user"></i></a> <a title="" data-placement="bottom" data-toggle="" href="inbox.html" data-original-title="Messages"><i class="fa fa-envelope-o"></i></a> <a title="" data-placement="bottom" data-toggle="" href="lockscreen.html" data-original-title="Logout"><i class="fa fa-sign-out"></i></a> </div>
+      </div>
+      <ul id="nav-accordion" class="sidebar-menu">
+      <li>
+        <h3>Settings</h3>
+      </li>
+      <li> <a href="index.html"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> </a> </li>
+      
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-book"></i> <span>UI Elements</span><b class="badge bg-danger pull-right">10</b></a>
+        <ul class="sub">
+          <li><a href="general.html"><i class="fa fa-angle-right"></i> General</a></li>
+          <li><a href="buttons.html"><i class="fa fa-angle-right"></i> Buttons</a></li>
+          <li><a href="slider.html"><i class="fa fa-angle-right"></i> Slider</a></li>
+          <li><a href="nestable.html"><i class="fa fa-angle-right"></i> Nestable</a></li>
+          <li><a href="grid.html"><i class="fa fa-angle-right"></i> Grids</a></li>
+          <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
+          <li><a href="tab-accordions.html"><i class="fa fa-angle-right"></i> Tab & Accordions</a></li>
+          <li><a href="calendar.html"><i class="fa fa-angle-right"></i> Calender</a></li>
+          <li><a href="porlets.html"><i class="fa fa-angle-right"></i> Portlets</a></li>
+          <li><a href="invoice.html"><i class="fa fa-angle-right"></i> Invoice</a></li>
+          <li><a href="treeview.html"><i class="fa fa-angle-right"></i> Treeview</a></li>
+		  <li><a href="address-book.html"><i class="fa fa-angle-right"></i> Address Book</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-th"></i> <span>Tables</span><b class="badge bg-danger pull-right">2</b></a>
+        <ul class="sub">
+          <li><a href="basic-tables.html"><i class="fa fa-angle-right"></i> Basic Table</a></li>
+          <li><a href="data-tables.html"><i class="fa fa-angle-right"></i> Data Table</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-tasks"></i> <span>Form Components</span><b class="badge bg-danger pull-right">7</b></a>
+        <ul class="sub">
+          <li><a href="form-elements.html"><i class="fa fa-angle-right"></i>Form Elements</a></li>
+          <li><a href="form-validation.html"><i class="fa fa-angle-right"></i>Form Validation</a></li>
+          <li><a href="file-upload.html"><i class="fa fa-angle-right"></i>Multiple File Upload</a></li>
+		  <li><a href="x-editable.html"><i class="fa fa-angle-right"></i>X-Editable</a></li>
+        </ul>
+      </li>
+      <li>
+        <h3>Management</h3>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-envelope"></i> <span>Mail </span><b class="badge bg-danger pull-right">3</b></a>
+        <ul class="sub">
+          <li><a href="inbox.html"><i class="fa fa-angle-right"></i> Inbox</a></li>
+          <li><a href="compose-mail.html"><i class="fa fa-angle-right"></i> Compose Mail</a></li>
+          <li><a href="read.html"><i class="fa fa-angle-right"></i> View Mail</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class=" fa fa-bar-chart-o"></i> <span>Charts</span></span></a>
+        <ul class="sub">
+          <li><a href="morris-charts.html"><i class="fa fa-angle-right"></i> Morris</a></li>
+          <li><a href="graph.html"><i class="fa fa-angle-right"></i> Graph</a></li>
+		  <li><a href="float-chart.html"><i class="fa fa-angle-right"></i> Float Charts</a></li>
+        </ul>
+      </li>
+      
+      <li> <a href="gallery.html"> <i class="fa fa-film"></i> <span>Gallery</span> </a> </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent active"> <i class="fa fa-glass"></i> <span>Extra</span><b class="badge bg-danger pull-right">5</b></a>
+        <ul class="sub">
+          <li><a class="active" href="profile.html"><i class="fa fa-angle-right"></i> Profile</a></li>
+          <li><a href="timeline.html"><i class="fa fa-angle-right"></i> Timeline</a></li>
+          <li><a href="blank-page.html"><i class="fa fa-angle-right"></i> Blank Page</a></li>
+          <li><a href="lockscreen.html"><i class="fa fa-angle-right"></i>Lock Screen</a></li>
+          <li><a href="error-404.html"><i class="fa fa-angle-right"></i> Error-404</a></li>
+          <li><a href="login.html"><i class="fa fa-angle-right"></i> Login</a></li>
+        </ul>
+      </li>
+    </ul><!--/nav-accordion sidebar-menu--> 
+    </div><!--/leftside-navigation--> 
+  </div><!--/sidebar-->
+  
+  <div id="main-content">
+    <div class="page-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Profile</h2>
+        </div><!--/col-md-12--> 
+      </div><!--/row-->
+      
+      <div class="row">
+        <div class="col-md-4">
+          <div class="block-web">
+            <div class="user-profile-sidebar">
+              <div class="row">
+                <div class="col-md-4"> <img alt="Avatar" class="img-circle" src="images/avatar1.jpg"> </div>
+                <div class="col-md-8">
+                  <div class="user-identity">
+                    <h4><strong>John Doe</strong></h4>
+                    <p><i class="fa fa-map-marker"></i> Riaxe Systems Pvt</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="account-status-data">
+              <div class="row">
+                <div class="col-md-4">
+                  <h5><strong>2,173</strong> Posts</h5>
+                </div>
+                <div class="col-md-4">
+                  <h5><strong>14</strong> Following</h5>
+                </div>
+                <div class="col-md-4">
+                  <h5><strong>100</strong> Followers</h5>
+                </div>
+              </div>
+            </div>
+            <div class="user-button">
+              <div class="row">
+                <div class="col-md-6">
+                  <button class="btn btn-primary btn-sm btn-block" type="button"><i class="fa fa-envelope"></i> Send Message</button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-default btn-sm btn-block" type="button"><i class="fa fa-user"></i> Add as friend</button>
+                </div>
+              </div>
+            </div>
+            <h5>CONNECTION</h5>
+            <div id="social"> <a title="Facebook" data-toggle="" href="#"> <span class="fa-stack fa-lg"> <i class="fa fa-circle facebook fa-stack-2x"></i> <i class="fa fa-facebook fa-stack-1x fa-inverse"></i> </span> </a> <a title="Twitter" data-toggle="tooltip" href="#"> <span class="fa-stack fa-lg"> <i class="fa fa-circle twitter fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x fa-inverse"></i> </span> </a> <a title="Google Plus" data-toggle="tooltip" href="#"> <span class="fa-stack fa-lg"> <i class="fa fa-circle gplus fa-stack-2x"></i> <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i> </span> </a> <a title="Tumblr" data-toggle="" href="#"> <span class="fa-stack fa-lg"> <i class="fa fa-circle tumblr fa-stack-2x"></i> <i class="fa fa-tumblr fa-stack-1x fa-inverse"></i> </span> </a> <a title="" data-toggle="" href="#" data-original-title="Linkedin"> <span class="fa-stack fa-lg"> <i class="fa fa-circle linkedin fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i> </span> </a> </div>
+          </div><!--/block-web--> 
+        </div><!--/col-md-4-->
+        
+        <div class="col-md-8">
+          <div class="block-web full">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-user"></i> About</a></li>
+              <li><a data-toggle="tab" href="#edit-profile"><i class="fa fa-pencil"></i> Edit</a></li>
+              <li><a data-toggle="tab" href="#user-activities"><i class="fa fa-laptop"></i> Activities</a></li>
+              <li><a data-toggle="tab" href="#mymessage"><i class="fa fa-envelope"></i> Message</a></li>
+            </ul>
+            
+            <div class="tab-content"> 
+              <div id="about" class="tab-pane active animated fadeInRight">
+                <div class="user-profile-content">
+                  <h5><strong>ABOUT</strong> ME</h5>
+                  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h5><strong>CONTACT</strong> ME</h5>
+                      <address>
+                      <strong>Phone</strong><br>
+                      <abbr title="Phone">+91 354 123 4567</abbr>
+                      </address>
+                      <address>
+                      <strong>Email</strong><br>
+                      <a href="mailto:#">first.last@example.com</a>
+                      </address>
+                      <address>
+                      <strong>Website</strong><br>
+                      <a href="http://riaxe.com">http://riaxe.com</a>
+                      </address>
+                    </div>
+                    <div class="col-sm-6">
+                      <h5><strong>MY</strong> SKILLS</h5>
+                      <p>UI Design</p>
+                      <p>Clean and Modern Web Design</p>
+                      <p>PHP and MySQL Programming</p>
+                      <p>Vector Design</p>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+
+              <div id="edit-profile" class="tab-pane animated fadeInRight">
+                <div class="user-profile-content">
+                  <form role="form">
+                    <div class="form-group">
+                      <label for="FullName">Full Name</label>
+                      <input type="text" value="John Doe" id="FullName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="Email">Email</label>
+                      <input type="email" value="first.last@example.com" id="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="Username">Username</label>
+                      <input type="text" value="john" id="Username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="Password">Password</label>
+                      <input type="password" placeholder="6 - 15 Characters" id="Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="RePassword">Re-Password</label>
+                      <input type="password" placeholder="6 - 15 Characters" id="RePassword" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="AboutMe">About Me</label>
+                      <textarea style="height: 125px;" id="AboutMe" class="form-control">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                  </form>
+                </div>
+              </div>
+
+              <div id="user-activities" class="tab-pane">
+                <ul class="media-list">
+                  <li class="media"> <a href="#">
+                    <p><strong>John Doe</strong> Uploaded a photo <strong>"DSC000254.jpg"</strong> <br>
+                      <i>2 minutes ago</i></p>
+                    </a> </li>
+                  <li class="media"> <a href="#">
+                    <p><strong>Imran Tahir</strong> Created an photo album <strong>"Indonesia Tourism"</strong> <br>
+                      <i>8 minutes ago</i></p>
+                    </a> </li>
+                  <li class="media"> <a href="#">
+                    <p><strong>Colin Munro</strong> Posted an article <strong>"London never ending Asia"</strong> <br>
+                      <i>an hour ago</i></p>
+                    </a> </li>
+                  <li class="media"> <a href="#">
+                    <p><strong>Corey Anderson</strong> Added 3 products <br>
+                      <i>3 hours ago</i></p>
+                    </a> </li>
+                  <li class="media"> <a href="#">
+                    <p><strong>Morne Morkel</strong> Send you a message <strong>"Lorem ipsum dolor..."</strong> <br>
+                      <i>12 hours ago</i></p>
+                    </a> </li>
+                  <li class="media"> <a href="#">
+                    <p><strong>Imran Tahir</strong> Updated his avatar <br>
+                      <i>Yesterday</i></p>
+                    </a> </li>
+                </ul>
+              </div>
+              <div id="mymessage" class="tab-pane">
+                <ul class="media-list">
+                  <li class="media"> <a href="#" class="pull-left"> <img alt="Avatar" src="images/avatar.jpg" class="media-object"> </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="#fakelink">John Doe</a> <small>Just now</small></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                  </li>
+                  <li class="media"> <a href="#" class="pull-left"> <img alt="Avatar" src="images/avatar.jpg" class="media-object"> </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="#fakelink">Tim Southee</a> <small>Yesterday at 04:00 AM</small></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus</p>
+                    </div>
+                  </li>
+                  <li class="media"> <a href="#" class="pull-left"> <img alt="Avatar" src="images/avatar.jpg" class="media-object"> </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="#fakelink">Kane Williamson</a> <small>January 17, 2014 05:35 PM</small></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                  </li>
+                  <li class="media"> <a href="#" class="pull-left"> <img alt="Avatar" src="images/avatar.jpg" class="media-object"> </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="#fakelink">Lonwabo Tsotsobe</a> <small>January 17, 2014 05:35 PM</small></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                  </li>
+                  <li class="media"> <a href="#" class="pull-left"> <img alt="Avatar" src="images/avatar.jpg" class="media-object"> </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="#fakelink">Dale Steyn</a> <small>January 17, 2014 05:35 PM</small></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                  </li>
+                  <li class="media"> <a href="#" class="pull-left"> <img alt="Avatar" src="images/avatar.jpg" class="media-object"> </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="#fakelink">John Doe</a> <small>Just now</small></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div><!--/tab-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-8--> 
+      </div><!--/row--> 
+      
+    </div><!--/page-content end--> 
+  </div><!--/main-content end--> 
+</div><!--/page-container end--> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-2.0.2.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="js/accordion.js"></script> 
+<script src="js/common-script.js"></script> 
+<script src="js/jquery.nicescroll.js"></script>
+</body>
+</html>

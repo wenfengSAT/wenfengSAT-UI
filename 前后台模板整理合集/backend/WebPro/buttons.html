@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>WebPro - Responsive Admin Dashboard</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style-responsive.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="light-theme">
+<div class="header navbar navbar-inverse box-shadow navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="header-seperation">
+      <ul class="nav navbar-nav">
+        <li class="sidebar-toggle-box"> <a href="#"><i class="fa fa-bars"></i></a> </li>
+        <li> <a href="index.html"><strong>WebPro</strong></a> </li>
+        <li class="hidden-xs"> <a href="#"><i class="fa fa-angle-double-left"></i> Go to the front page</a> </li>
+        <li class="hidden-xs">
+          <div class="hov">
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-bell"></span><span class="label label-danger">33</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-alerts">
+                <li class="title"><span class="icon icon-bell"></span>&nbsp;&nbsp;There are 5 new alerts in the system...</li>
+                <li class="alert">
+                  <div class="alert-icon alt-default"><span class="fa fa-check-square"></span></div>
+                  <div class="alert-content">Quality check was successful</div>
+                  <div class="alert-time">32 sec ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-primary"><span class="fa fa-plus-square"></span></div>
+                  <div class="alert-content">New user added (John Doe)</div>
+                  <div class="alert-time">11 min ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-warning"><span class="fa fa-pencil-square"></span></div>
+                  <div class="alert-content">User profile updated (John Doe)</div>
+                  <div class="alert-time">3 hours ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-danger"><span class="fa fa-warning"></span></div>
+                  <div class="alert-content">System failure reported</div>
+                  <div class="alert-time">2 days ago</div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-envelope"></span><span class="label label-success">7</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-messages">
+                <li class="title"><span class="fa fa-envelope"></span>&nbsp;&nbsp;You have 13 new messages to read...</li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Lorem ipsum dolor sit amet...</div>
+                  <div class="message-time">32 sec ago</div>
+                </li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Quisque commodo sed ipsum...</div>
+                  <div class="message-time">11 min ago</div>
+                </li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Consectetur adipiscing elit...</div>
+                  <div class="message-time">3 hours ago</div>
+                </li>
+                <li class="message" style="position:relative;">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a><br>
+                    Quisque commodo sed ipsum...</div>
+                  <div class="message-time">2 days ago</div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-user"></span><span class="label label-primary">+5</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-profile">
+                <li class="title"><span class="icon icon-user"></span>&nbsp;&nbsp;Welcome, John!</li>
+                <li><a href="#"><span class="fa fa-gears"></span>Settings</a></li>
+                <li><a href="#"><span class="fa fa-user"></span>Profile</a></li>
+                <li><a href="#"><span class="fa fa-envelope"></span>Messages</a></li>
+                <li><a href="#"><span class="fa fa-power-off"></span>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="hidden-xs"> <form method="post" action="index.html" class="searchform"><input type="text" placeholder="Search here..." name="keyword" class="form-control"></form> </li>
+        <li id="last-one"> <a href="login.html">Log Out <i class="fa fa-angle-double-right"></i></a> </li>
+        <li><a id="show-right-info-bar" href="javascript:;" class=""><i class="fa fa-bars"></i></a></li>
+      </ul><!--/nav navbar-nav--> 
+    </div><!--/header-seperation--> 
+  </div><!--/navbar-inner--> 
+</div><!--/header--> 
+
+<div class="right-info-bar">
+  <div class="block">
+    <div class="heading">Notifications</div>
+    <!-- Notifications -->
+    <ul class="infos">
+      <li> <span class="label label-primary pull-left"> <i class="fa fa-twitter"></i> </span>
+        <div class="info">
+          <h6>John Tweeted</h6>
+          <p class="designation">Few seconds ago</p>
+        </div>
+      </li>
+      <li> <span class="label label-danger pull-left"> <i class="fa fa-warning"></i> </span>
+        <div class="info">
+          <h6>Server #999 Crashed</h6>
+          <p class="designation">3 minutes ago</p>
+        </div>
+      </li>
+      <li> <span class="label label-info pull-left"> <i class="fa fa-plus"></i> </span>
+        <div class="info">
+          <h6>scott account was created</h6>
+          <p class="designation">7 days ago</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Progress Stats</div>
+    <!-- Progress Stats -->
+    <ul class="progress-statistics">
+      <li>
+        <p class="details"> <span> Windows </span> <span class="pull-right"> 82% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 82%" class="progress-bar progress-bar-success"> </div>
+        </div>
+      </li>
+      <li>
+        <p class="details"> <span> Linux </span> <span class="pull-right"> 47% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 47%" class="progress-bar progress-bar-danger"> </div>
+        </div>
+      </li>
+      <li>
+        <p class="details"> <span> IPhone/IPad </span> <span class="pull-right"> 67% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 67%" class="progress-bar progress-bar-info"> </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Online Users</div>
+    <!-- Online Users -->
+    <ul class="online-users">
+      <li> <a data-original-title="" data-status="online" data-lastname="John Doe" href=""> <span>John Doe</span>
+        <div class="user-status online"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Jacques" href=""> <span>Jacques</span>
+        <div class="user-status online"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Parnell" href=""> <span>Parnell</span>
+        <div class="user-status busy"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Fleming" href=""> <span>Fleming</span>
+        <div class="user-status away"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Shahbaz" href=""> <span>Shahbaz</span>
+        <div class="user-status"></div>
+        </a> </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Storage Space</div>
+    <!-- Progress Stats -->
+    <ul class="progress-statistics">
+      <li>
+        <p class="details"> <span> 77 GB of 100 GB used </span> <span class="pull-right"> 77% </span> </p>
+        <div class="progress progress-mini">
+          <div style="width: 18%" class="progress-bar progress-bar-info"></div>
+          <div style="width: 25%" class="progress-bar progress-bar-success"></div>
+          <div style="width: 34%" class="progress-bar progress-bar-warning"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!--/right-info-bar--> 
+
+<div class="page-container">
+  <div class="nav-collapse top-margin fixed box-shadow2 hidden-xs" id="sidebar">
+    <div class="leftside-navigation">
+      <div class="sidebar-section sidebar-user clearfix">
+        <div class="sidebar-user-avatar"> <a href="#"> <img alt="avatar" src="images/avatar1.jpg"> </div>
+        <div class="sidebar-user-name">John Doe</div>
+        <div class="sidebar-user-links"> <a title="" data-placement="bottom" data-toggle="" href="profile.html" data-original-title="User"><i class="fa fa-user"></i></a> <a title="" data-placement="bottom" data-toggle="" href="inbox.html" data-original-title="Messages"><i class="fa fa-envelope-o"></i></a> <a title="" data-placement="bottom" data-toggle="" href="lockscreen.html" data-original-title="Logout"><i class="fa fa-sign-out"></i></a> </div>
+      </div>
+      <ul id="nav-accordion" class="sidebar-menu">
+      <li>
+        <h3>Settings</h3>
+      </li>
+      <li> <a href="index.html"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> </a> </li>
+      
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent active"> <i class="fa fa-book"></i> <span>UI Elements</span><b class="badge bg-danger pull-right">10</b></a>
+        <ul class="sub">
+          <li><a href="general.html"><i class="fa fa-angle-right"></i> General</a></li>
+          <li><a class="active" href="buttons.html"><i class="fa fa-angle-right"></i> Buttons</a></li>
+          <li><a href="slider.html"><i class="fa fa-angle-right"></i> Slider</a></li>
+          <li><a href="nestable.html"><i class="fa fa-angle-right"></i> Nestable</a></li>
+          <li><a href="grid.html"><i class="fa fa-angle-right"></i> Grids</a></li>
+          <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
+          <li><a href="tab-accordions.html"><i class="fa fa-angle-right"></i> Tab & Accordions</a></li>
+          <li><a href="calendar.html"><i class="fa fa-angle-right"></i> Calender</a></li>
+          <li><a href="porlets.html"><i class="fa fa-angle-right"></i> Portlets</a></li>
+          <li><a href="invoice.html"><i class="fa fa-angle-right"></i> Invoice</a></li>
+          <li><a href="treeview.html"><i class="fa fa-angle-right"></i> Treeview</a></li>
+		  <li><a href="address-book.html"><i class="fa fa-angle-right"></i> Address Book</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-th"></i> <span>Tables</span><b class="badge bg-danger pull-right">2</b></a>
+        <ul class="sub">
+          <li><a href="basic-tables.html"><i class="fa fa-angle-right"></i> Basic Table</a></li>
+          <li><a href="data-tables.html"><i class="fa fa-angle-right"></i> Data Table</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-tasks"></i> <span>Form Components</span><b class="badge bg-danger pull-right">7</b></a>
+        <ul class="sub">
+          <li><a href="form-elements.html"><i class="fa fa-angle-right"></i>Form Elements</a></li>
+          <li><a href="form-validation.html"><i class="fa fa-angle-right"></i>Form Validation</a></li>
+          <li><a href="file-upload.html"><i class="fa fa-angle-right"></i>Multiple File Upload</a></li>
+		  <li><a href="x-editable.html"><i class="fa fa-angle-right"></i>X-Editable</a></li>
+        </ul>
+      </li>
+      <li>
+        <h3>Management</h3>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-envelope"></i> <span>Mail </span><b class="badge bg-danger pull-right">3</b></a>
+        <ul class="sub">
+          <li><a href="inbox.html"><i class="fa fa-angle-right"></i> Inbox</a></li>
+          <li><a href="compose-mail.html"><i class="fa fa-angle-right"></i> Compose Mail</a></li>
+          <li><a href="read.html"><i class="fa fa-angle-right"></i> View Mail</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class=" fa fa-bar-chart-o"></i> <span>Charts</span></span></a>
+        <ul class="sub">
+          <li><a href="morris-charts.html"><i class="fa fa-angle-right"></i> Morris</a></li>
+          <li><a href="graph.html"><i class="fa fa-angle-right"></i> Graph</a></li>
+		  <li><a href="float-chart.html"><i class="fa fa-angle-right"></i> Float Charts</a></li>
+        </ul>
+      </li>
+      
+      <li> <a href="gallery.html"> <i class="fa fa-film"></i> <span>Gallery</span> </a> </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-glass"></i> <span>Extra</span><b class="badge bg-danger pull-right">5</b></a>
+        <ul class="sub">
+          <li><a href="profile.html"><i class="fa fa-angle-right"></i> Profile</a></li>
+          <li><a href="timeline.html"><i class="fa fa-angle-right"></i> Timeline</a></li>
+          <li><a href="blank-page.html"><i class="fa fa-angle-right"></i> Blank Page</a></li>
+          <li><a href="lockscreen.html"><i class="fa fa-angle-right"></i>Lock Screen</a></li>
+          <li><a href="error-404.html"><i class="fa fa-angle-right"></i> Error-404</a></li>
+          <li><a href="login.html"><i class="fa fa-angle-right"></i> Login</a></li>
+        </ul>
+      </li>
+    </ul><!--/nav-accordion sidebar-menu--> 
+    </div><!--/leftside-navigation--> 
+  </div><!--/sidebar-->
+  
+  <div id="main-content">
+    <div class="page-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Buttons</h2>
+        </div><!--/col-md-12--> 
+      </div><!--/row-->
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a class="minimize" href="#"><i class="fa fa-chevron-down"></i></a> <a class="refresh" href="#"><i class="fa fa-repeat"></i></a> <a class="close-down" href="#"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Buttons</h3>
+            </div>
+            <div class="porlets-content">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Button</th>
+                      <th>btn-lg Button</th>
+                      <th>Small Button</th>
+                      <th>Small Mini</th>
+                      <th>Disabled Button</th>
+                      <th>Button with Icon</th>
+                      <th>Split Button</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#" class="btn btn-default">Default</a></td>
+                      <td><a href="#" class="btn btn-default btn-lg">Default</a></td>
+                      <td><a href="#" class="btn btn-default btn-sm">Default</a></td>
+                      <td><a href="#" class="btn btn-default btn-xs">Default</a></td>
+                      <td><a href="#" class="btn btn-default disabled">Default</a></td>
+                      <td><a href="#" class="btn btn-default"><i class="fa fa-cog"></i> Default</a></td>
+                      <td><div class="btn-group"> <a href="#" class="btn btn-default">Default</a> <a href="#" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li> <a href="#">Action</a> </li>
+                            <li> <a href="#">Another action</a> </li>
+                            <li> <a href="#">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">Separated link</a> </li>
+                          </ul>
+                        </div>
+                        
+                        <!-- /btn-group --></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="btn btn-primary">Primary</a></td>
+                      <td><a href="#" class="btn btn-primary btn-lg">Primary</a></td>
+                      <td><a href="#" class="btn btn-primary btn-sm">Primary</a></td>
+                      <td><a href="#" class="btn btn-primary btn-xs">Primary</a></td>
+                      <td><a href="#" class="btn btn-primary disabled">Primary</a></td>
+                      <td><a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Primary</a></td>
+                      <td><div class="btn-group"> <a href="#" class="btn btn-primary">Primary</a> <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li> <a href="#">Action</a> </li>
+                            <li> <a href="#">Another action</a> </li>
+                            <li> <a href="#">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">Separated link</a> </li>
+                          </ul>
+                        </div>
+                        
+                        <!-- /btn-group --></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="btn btn-info">Info</a></td>
+                      <td><a href="#" class="btn btn-info btn-lg">Info</a></td>
+                      <td><a href="#" class="btn btn-info btn-sm">Info</a></td>
+                      <td><a href="#" class="btn btn-info btn-xs">Info</a></td>
+                      <td><a href="#" class="btn btn-info disabled">Info</a></td>
+                      <td><a href="#" class="btn btn-info"><i class="fa fa-sign-in"></i> Info</a></td>
+                      <td><div class="btn-group"> <a href="#" class="btn btn-info">Info</a> <a href="#" data-toggle="dropdown" class="btn btn-info dropdown-toggle"><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li> <a href="#">Action</a> </li>
+                            <li> <a href="#">Another action</a> </li>
+                            <li> <a href="#">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">Separated link</a> </li>
+                          </ul>
+                        </div>
+                        
+                        <!-- /btn-group --></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="btn btn-success">Success</a></td>
+                      <td><a href="#" class="btn btn-success btn-lg">Success</a></td>
+                      <td><a href="#" class="btn btn-success btn-sm">Success</a></td>
+                      <td><a href="#" class="btn btn-success btn-xs">Success</a></td>
+                      <td><a href="#" class="btn btn-success disabled">Success</a></td>
+                      <td><a href="#" class="btn btn-success"><i class="fa fa-check"></i> Success</a></td>
+                      <td><div class="btn-group"> <a href="#" class="btn btn-success">Success</a> <a href="#" data-toggle="dropdown" class="btn btn-success dropdown-toggle"><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li> <a href="#">Action</a> </li>
+                            <li> <a href="#">Another action</a> </li>
+                            <li> <a href="#">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">Separated link</a> </li>
+                          </ul>
+                        </div>
+                        
+                        <!-- /btn-group --></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="btn btn-warning">Warning</a></td>
+                      <td><a href="#" class="btn btn-warning btn-lg">Warning</a></td>
+                      <td><a href="#" class="btn btn-warning btn-sm">Warning</a></td>
+                      <td><a href="#" class="btn btn-warning btn-xs">Warning</a></td>
+                      <td><a href="#" class="btn btn-warning disabled">Warning</a></td>
+                      <td><a href="#" class="btn btn-warning"><i class="fa fa-sign-out"></i> Warning</a></td>
+                      <td><div class="btn-group"> <a href="#" class="btn btn-warning">Warning</a> <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle"><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li> <a href="#">Action</a> </li>
+                            <li> <a href="#">Another action</a> </li>
+                            <li> <a href="#">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">Separated link</a> </li>
+                          </ul>
+                        </div>
+                        
+                        <!-- /btn-group --></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="btn btn-danger">Danger</a></td>
+                      <td><a href="#" class="btn btn-danger btn-lg">Danger</a></td>
+                      <td><a href="#" class="btn btn-danger btn-sm">Danger</a></td>
+                      <td><a href="#" class="btn btn-danger btn-xs">Danger</a></td>
+                      <td><a href="#" class="btn btn-danger disabled">Danger</a></td>
+                      <td><a href="#" class="btn btn-danger"><i class="fa fa-trash-o"></i> Danger</a></td>
+                      <td><div class="btn-group"> <a href="#" class="btn btn-danger">Danger</a> <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle"><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li> <a href="#">Action</a> </li>
+                            <li> <a href="#">Another action</a> </li>
+                            <li> <a href="#">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">Separated link</a> </li>
+                          </ul>
+                        </div>
+                        
+                        <!-- /btn-group --></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div><!--/block-web--> 
+        </div><!--/col-md-12--> 
+      </div><!--/row-->
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a class="minimize" href="#"><i class="fa fa-chevron-down"></i></a> <a class="refresh" href="#"><i class="fa fa-repeat"></i></a> <a class="close-down" href="#"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Basic Buttons</h3>
+            </div>
+            <div class="porlets-content">
+              <p class="alert alert-info"> Use any of the available button classes to quickly create a styled button. </p>
+              <a class="btn btn-default" href="#">Default</a> <a class="btn btn-primary" href="#">Primary</a> <a class="btn btn-success" href="#">Success</a> <a class="btn btn-info" href="#">Info</a> <a class="btn btn-warning" href="#">Warning</a> <a class="btn btn-danger" href="#">Danger</a> <a class="btn btn-default disabled" href="#">Disabled</a> <a class="btn btn-link" href="#">Link</a> 
+              </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+        
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a class="minimize" href="#"><i class="fa fa-chevron-down"></i></a> <a class="refresh" href="#"><i class="fa fa-repeat"></i></a> <a class="close-down" href="#"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Label Buttons</h3>
+            </div>
+            <div class="porlets-content">
+              <ul class="demo-btns">
+                <li> <a class="btn btn-labeled btn-success" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success </a> </li>
+                <li> <a class="btn btn-labeled btn-danger" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel </a> </li>
+                <li> <a class="btn btn-labeled btn-warning" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-bookmark"></i></span>Bookmark </a> </li>
+                <li> <a class="btn btn-labeled btn-primary" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-camera"></i></span>Camera </a> </li>
+                <li> <a class="btn btn-labeled btn-default" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-left"></i></span>Left </a> </li>
+                <li> <a class="btn btn-labeled btn-default" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> Right </a> </li>
+                <li> <a class="btn btn-labeled btn-success" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-up"></i></span>Thumbs
+                  Up </a> </li>
+                <li> <a class="btn btn-labeled btn-danger" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-down"></i></span>Thumbs
+                  Down </a> </li>
+                <li> <a class="btn btn-labeled btn-info" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-refresh"></i></span>Refresh </a> </li>
+                <li> <a class="btn btn-labeled btn-danger" href="#"> <span class="btn-label"><i class="glyphicon glyphicon-trash"></i></span>Trash </a> </li>
+                <li> <a href="#" class="btn btn-success btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-info-sign"></i></span>Info Web </a> </li>
+              </ul>
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6--> 
+      </div><!--/row-->
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a class="minimize" href="#"><i class="fa fa-chevron-down"></i></a> <a class="refresh" href="#"><i class="fa fa-repeat"></i></a> <a class="close-down" href="#"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Button Sizes</h3>
+            </div>
+            <div class="porlets-content">
+              <p> Large buttons to attract call to action <code> .btn .btn-lg </code> </p>
+              <a class="btn btn-primary btn-lg" href="#">Large button</a>&nbsp;<a class="btn btn-default btn-lg" href="#">Large button</a>
+              <hr>
+              <p> The Default button <code> .btn .btn-default </code> </p>
+              <a class="btn btn-primary" href="#">Default button</a>&nbsp;<a class="btn btn-default" href="#">Default button</a>
+              <hr>
+              <p> Small button for elegance <code> .btn .btn-sm </code> </p>
+              <a class="btn btn-primary btn-sm" href="#">Small button</a>&nbsp;<a class="btn btn-default btn-sm" href="#">Small button</a>
+              <hr>
+              <p> Extra small button for added info <code> .btn .btn-xs </code> </p>
+              <a class="btn btn-primary btn-xs" href="#">Mini button</a>&nbsp;<a class="btn btn-default btn-xs" href="#">Mini button</a> 
+              </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+        
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a class="minimize" href="#"><i class="fa fa-chevron-down"></i></a> <a class="refresh" href="#"><i class="fa fa-repeat"></i></a> <a class="close-down" href="#"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Drop Down buttons </h3>
+            </div>
+            <div class="porlets-content">
+              <p> Button group with dropup/dropdown toggle <code> .btn-group </code> </p>
+              <div class="btn-group">
+                <button class="btn btn-primary"> Drop Down </button>
+                <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+              <div class="btn-group dropup">
+                <button class="btn btn-default"> Drop Up </button>
+                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"> <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+              <hr class="simple">
+              <p> Default button dropdowns <code> .dropdown-toggle </code> </p>
+              <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> Action <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"> Action <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+              <hr class="simple">
+              <p> Smaller button dropdowns <code> .btn-sm .dropdown-toggle </code> </p>
+              <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle"> Action <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle"> Action <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+              <hr class="simple">
+              <p> Extra small button dropdowns <code> .btn-xs .dropdown-toggle </code> </p>
+              <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle"> Action <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle"> Action <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li> <a href="#">Action</a> </li>
+                  <li> <a href="#">Another action</a> </li>
+                  <li> <a href="#">Something else here</a> </li>
+                  <li class="divider"></li>
+                  <li> <a href="#">Separated link</a> </li>
+                </ul>
+              </div>
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6--> 
+      </div><!--/row--> 
+      
+      
+      <div class="row">
+      <div class="col-md-7">
+        <div class="block-web">
+          <div class="header">
+            <div class="actions"> <a class="minimize" href="#"><i class="fa fa-chevron-down"></i></a> <a class="refresh" href="#"><i class="fa fa-repeat"></i></a> <a class="close-down" href="#"><i class="fa fa-times"></i></a> </div>
+            <h3 class="content-header">Button Groups</h3>
+          </div>
+          <div class="porlets-content">
+			<p> Group a series of buttons together on a single line with the button group. Wrap a series of buttons with <code> .btn </code> in <code> .btn-group </code> . </p>
+            <div class="row">
+              <div class="col-md-12">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width:30%">Horizontal Group</th>
+                      <th style="width:25%">With Icons</th>
+                      <th style="width:45%">Multiple Button Groups</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="btn-group">
+                          <button class="btn btn-default" type="button"> Left </button>
+                          <button class="btn btn-default" type="button"> Middle </button>
+                          <button class="btn btn-default" type="button"> Right </button>
+                        </div></td>
+                      <td><div class="btn-group">
+                          <button class="btn btn-default" type="button"> <i class="fa fa-align-left"></i> </button>
+                          <button class="btn btn-default" type="button"> <i class="fa fa-align-center"></i> </button>
+                          <button class="btn btn-default" type="button"> <i class="fa fa-align-right"></i> </button>
+                          <button class="btn btn-default" type="button"> <i class="fa fa-align-justify"></i> </button>
+                        </div></td>
+                      <td><div class="btn-toolbar">
+                          <div class="btn-group">
+                            <button class="btn btn-default" type="button"> 1 </button>
+                            <button class="btn btn-default" type="button"> 2 </button>
+                            <button class="btn btn-default" type="button"> 3 </button>
+                            <button class="btn btn-default" type="button"> 4 </button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-default" type="button"> 5 </button>
+                            <button class="btn btn-default" type="button"> 6 </button>
+                            <button class="btn btn-default" type="button"> 7 </button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-default" type="button"> 8 </button>
+                          </div>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <hr class="simple">
+            <p> Make a set of buttons appear vertically stacked rather than horizontally by putting it in <code> .btn-group-vertical </code> . </p>
+            <div class="row">
+              <div class="col-md-12">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width:25%">Vertical Group</th>
+                      <th style="width:25%">With Dropdown</th>
+                      <th style="width:25%">With Icons</th>
+                      <th style="width:25%">Multiple Button Groups</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="btn-group-vertical">
+                          <button class="btn btn-default" type="button"> Top </button>
+                          <button class="btn btn-default" type="button"> Middle </button>
+                          <button class="btn btn-default" type="button"> Bottom </button>
+                        </div></td>
+                      <td><div class="btn-group-vertical">
+                          <button class="btn btn-primary" type="button"> Button 1 </button>
+                          <button class="btn btn-primary" type="button"> Button 2 </button>
+                          <button class="btn btn-primary" type="button"> Button 3 </button>
+                          <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button"> Dropdown <i class="fa fa-caret-down"></i> </button>
+                          <ul class="dropdown-menu">
+                            <li> <a href="#">Dropdown link</a> </li>
+                            <li> <a href="#">Dropdown link</a> </li>
+                          </ul>
+                        </div></td>
+                      <td><div class="btn btn-group-vertical"> <a href="#" class="btn btn-default"><i class="fa fa-align-left"></i></a> <a href="#" class="btn btn-default"><i class="fa fa-align-center"></i></a> <a href="#" class="btn btn-default"><i class="fa fa-align-right"></i></a> <a href="#" class="btn btn-default"><i class="fa fa-align-justify"></i></a> </div></td>
+                      <td><div class="btn-toolbar">
+                          <div class="btn-group-vertical">
+                            <button class="btn btn-primary" type="button"> Page 1 </button>
+                            <button class="btn btn-primary" type="button"> Page 2 </button>
+                            <button class="btn btn-primary" type="button"> Page 3 </button>
+                            <button class="btn btn-primary" type="button"> Page 4 </button>
+                          </div>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div><!--/porlets-content--> 
+        </div><!--/block-web--> 
+      </div><!--/col-md-7-->
+      
+      <div class="col-md-5">
+        <div class="block-web">
+          <div class="header">
+            <div class="actions"> <a class="minimize" href="#"><i class="fa fa-chevron-down"></i></a> <a class="refresh" href="#"><i class="fa fa-repeat"></i></a> <a class="close-down" href="#"><i class="fa fa-times"></i></a> </div>
+            <h3 class="content-header">Block Buttons </h3>
+          </div>
+          <div class="porlets-content">
+            <p> Block buttons <code> .btn .btn-block </code> </p>
+            <div class="well">
+              <button class="btn btn-primary btn-lg btn-block" type="button"> Block level button </button>
+              <button class="btn btn-default btn-sm btn-block" type="button"> Block level small button </button>
+              <button class="btn btn-default btn-xs btn-block" type="button"> Block level extra small button </button>
+            </div>
+            <hr class="simple">
+            <p> Block group buttons <code> .btn-group .btn-group-justified </code> </p>
+            <div class="well">
+              <div class="btn-group btn-group-justified"> <a class="btn btn-default" href="#">Left</a> <a class="btn btn-default" href="#">Middle</a> <a class="btn btn-default" href="#">Right</a> </div>
+
+            </div>
+          </div><!--/porlets-content--> 
+        </div><!--/block-web--> 
+      </div><!--/col-md-5--> 
+    </div><!--/row--> 
+
+  </div><!--/page-content end--> 
+</div><!--/main-content end-->
+</div><!--/page-container end--> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-2.0.2.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="js/accordion.js"></script> 
+<script src="js/common-script.js"></script> 
+<script src="js/jquery.nicescroll.js"></script>
+
+</body>
+</html>

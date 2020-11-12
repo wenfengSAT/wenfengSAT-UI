@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>WebPro - Responsive Admin Dashboard</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style-responsive.css" rel="stylesheet">
+<link href="plugins/bootstrap-fileupload/bootstrap-fileupload.min.css" rel="stylesheet">
+<link href="plugins/dropzone/dropzone.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="plugins/bootstrap-datepicker/css/datepicker.css" />
+<link rel="stylesheet" type="text/css" href="plugins/bootstrap-timepicker/compiled/timepicker.css" />
+<link rel="stylesheet" type="text/css" href="plugins/bootstrap-colorpicker/css/colorpicker.css" />
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="light-theme">
+<div class="header navbar navbar-inverse box-shadow navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="header-seperation">
+      <ul class="nav navbar-nav">
+        <li class="sidebar-toggle-box"> <a href="#"><i class="fa fa-bars"></i></a> </li>
+        <li> <a href="index.html"><strong>WebPro</strong></a> </li>
+        <li class="hidden-xs"> <a href="#"><i class="fa fa-angle-double-left"></i> Go to the front page</a> </li>
+        <li class="hidden-xs">
+          <div class="hov">
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-bell"></span><span class="label label-danger">33</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-alerts">
+                <li class="title"><span class="icon icon-bell"></span>&nbsp;&nbsp;There are 5 new alerts in the system...</li>
+                <li class="alert">
+                  <div class="alert-icon alt-default"><span class="fa fa-check-square"></span></div>
+                  <div class="alert-content">Quality check was successful</div>
+                  <div class="alert-time">32 sec ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-primary"><span class="fa fa-plus-square"></span></div>
+                  <div class="alert-content">New user added (John Doe)</div>
+                  <div class="alert-time">11 min ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-warning"><span class="fa fa-pencil-square"></span></div>
+                  <div class="alert-content">User profile updated (John Doe)</div>
+                  <div class="alert-time">3 hours ago</div>
+                </li>
+                <li class="alert">
+                  <div class="alert-icon alt-danger"><span class="fa fa-warning"></span></div>
+                  <div class="alert-content">System failure reported</div>
+                  <div class="alert-time">2 days ago</div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-envelope"></span><span class="label label-success">7</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-messages">
+                <li class="title"><span class="fa fa-envelope"></span>&nbsp;&nbsp;You have 13 new messages to read...</li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Lorem ipsum dolor sit amet...</div>
+                  <div class="message-time">32 sec ago</div>
+                </li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Quisque commodo sed ipsum...</div>
+                  <div class="message-time">11 min ago</div>
+                </li>
+                <li class="message">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a> <br>
+                    Consectetur adipiscing elit...</div>
+                  <div class="message-time">3 hours ago</div>
+                </li>
+                <li class="message" style="position:relative;">
+                  <div class="message-icon"><img src="images/avatar2.jpg"></div>
+                  <div class="message-content"><a href="#">John Doe</a><br>
+                    Quisque commodo sed ipsum...</div>
+                  <div class="message-time">2 days ago</div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-user"></span><span class="label label-primary">+5</span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-profile">
+                <li class="title"><span class="icon icon-user"></span>&nbsp;&nbsp;Welcome, John!</li>
+                <li><a href="#"><span class="fa fa-gears"></span>Settings</a></li>
+                <li><a href="#"><span class="fa fa-user"></span>Profile</a></li>
+                <li><a href="#"><span class="fa fa-envelope"></span>Messages</a></li>
+                <li><a href="#"><span class="fa fa-power-off"></span>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="hidden-xs"> <form method="post" action="index.html" class="searchform"><input type="text" placeholder="Search here..." name="keyword" class="form-control"></form> </li>
+        <li id="last-one"> <a href="login.html">Log Out <i class="fa fa-angle-double-right"></i></a> </li>
+        <li><a id="show-right-info-bar" href="javascript:;" class=""><i class="fa fa-bars"></i></a></li>
+      </ul><!--/nav navbar-nav--> 
+    </div><!--/header-seperation--> 
+  </div><!--/navbar-inner--> 
+</div><!--/header--> 
+
+<div class="right-info-bar">
+  <div class="block">
+    <div class="heading">Notifications</div>
+    <!-- Notifications -->
+    <ul class="infos">
+      <li> <span class="label label-primary pull-left"> <i class="fa fa-twitter"></i> </span>
+        <div class="info">
+          <h6>John Tweeted</h6>
+          <p class="designation">Few seconds ago</p>
+        </div>
+      </li>
+      <li> <span class="label label-danger pull-left"> <i class="fa fa-warning"></i> </span>
+        <div class="info">
+          <h6>Server #999 Crashed</h6>
+          <p class="designation">3 minutes ago</p>
+        </div>
+      </li>
+      <li> <span class="label label-info pull-left"> <i class="fa fa-plus"></i> </span>
+        <div class="info">
+          <h6>scott account was created</h6>
+          <p class="designation">7 days ago</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Progress Stats</div>
+    <!-- Progress Stats -->
+    <ul class="progress-statistics">
+      <li>
+        <p class="details"> <span> Windows </span> <span class="pull-right"> 82% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 82%" class="progress-bar progress-bar-success"> </div>
+        </div>
+      </li>
+      <li>
+        <p class="details"> <span> Linux </span> <span class="pull-right"> 47% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 47%" class="progress-bar progress-bar-danger"> </div>
+        </div>
+      </li>
+      <li>
+        <p class="details"> <span> IPhone/IPad </span> <span class="pull-right"> 67% </span> </p>
+        <div class="progress progress-mini progress-striped active">
+          <div style="width: 67%" class="progress-bar progress-bar-info"> </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Online Users</div>
+    <!-- Online Users -->
+    <ul class="online-users">
+      <li> <a data-original-title="" data-status="online" data-lastname="John Doe" href=""> <span>John Doe</span>
+        <div class="user-status online"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Jacques" href=""> <span>Jacques</span>
+        <div class="user-status online"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Parnell" href=""> <span>Parnell</span>
+        <div class="user-status busy"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Fleming" href=""> <span>Fleming</span>
+        <div class="user-status away"></div>
+        </a> </li>
+      <li> <a data-original-title="" data-status="online" data-lastname="Shahbaz" href=""> <span>Shahbaz</span>
+        <div class="user-status"></div>
+        </a> </li>
+    </ul>
+  </div>
+  <div class="block">
+    <div class="heading">Storage Space</div>
+    <!-- Progress Stats -->
+    <ul class="progress-statistics">
+      <li>
+        <p class="details"> <span> 77 GB of 100 GB used </span> <span class="pull-right"> 77% </span> </p>
+        <div class="progress progress-mini">
+          <div style="width: 18%" class="progress-bar progress-bar-info"></div>
+          <div style="width: 25%" class="progress-bar progress-bar-success"></div>
+          <div style="width: 34%" class="progress-bar progress-bar-warning"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!--/right-info-bar--> 
+
+<div class="page-container">
+  <div class="nav-collapse top-margin fixed box-shadow2 hidden-xs" id="sidebar">
+    <div class="leftside-navigation">
+      <div class="sidebar-section sidebar-user clearfix">
+        <div class="sidebar-user-avatar"> <a href="#"> <img alt="avatar" src="images/avatar1.jpg"> </div>
+        <div class="sidebar-user-name">John Doe</div>
+        <div class="sidebar-user-links"> <a title="" data-placement="bottom" data-toggle="" href="profile.html" data-original-title="User"><i class="fa fa-user"></i></a> <a title="" data-placement="bottom" data-toggle="" href="inbox.html" data-original-title="Messages"><i class="fa fa-envelope-o"></i></a> <a title="" data-placement="bottom" data-toggle="" href="lockscreen.html" data-original-title="Logout"><i class="fa fa-sign-out"></i></a> </div>
+      </div>
+      <ul id="nav-accordion" class="sidebar-menu">
+      <li>
+        <h3>Settings</h3>
+      </li>
+      <li> <a href="index.html"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> </a> </li>
+      
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-book"></i> <span>UI Elements</span><b class="badge bg-danger pull-right">10</b></a>
+        <ul class="sub">
+          <li><a href="general.html"><i class="fa fa-angle-right"></i> General</a></li>
+          <li><a href="buttons.html"><i class="fa fa-angle-right"></i> Buttons</a></li>
+          <li><a href="slider.html"><i class="fa fa-angle-right"></i> Slider</a></li>
+          <li><a href="nestable.html"><i class="fa fa-angle-right"></i> Nestable</a></li>
+          <li><a href="grid.html"><i class="fa fa-angle-right"></i> Grids</a></li>
+          <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
+          <li><a href="tab-accordions.html"><i class="fa fa-angle-right"></i> Tab & Accordions</a></li>
+          <li><a href="calendar.html"><i class="fa fa-angle-right"></i> Calender</a></li>
+          <li><a href="porlets.html"><i class="fa fa-angle-right"></i> Portlets</a></li>
+          <li><a href="invoice.html"><i class="fa fa-angle-right"></i> Invoice</a></li>
+          <li><a href="treeview.html"><i class="fa fa-angle-right"></i> Treeview</a></li>
+		  <li><a href="address-book.html"><i class="fa fa-angle-right"></i> Address Book</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-th"></i> <span>Tables</span><b class="badge bg-danger pull-right">2</b></a>
+        <ul class="sub">
+          <li><a href="basic-tables.html"><i class="fa fa-angle-right"></i> Basic Table</a></li>
+          <li><a href="data-tables.html"><i class="fa fa-angle-right"></i> Data Table</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent active"> <i class="fa fa-tasks"></i> <span>Form Components</span><b class="badge bg-danger pull-right">7</b></a>
+        <ul class="sub">
+          <li><a class="active" href="form-elements.html"><i class="fa fa-angle-right"></i>Form Elements</a></li>
+          <li><a href="form-validation.html"><i class="fa fa-angle-right"></i>Form Validation</a></li>
+          <li><a href="file-upload.html"><i class="fa fa-angle-right"></i>Multiple File Upload</a></li>
+		  <li><a href="x-editable.html"><i class="fa fa-angle-right"></i>X-Editable</a></li>
+        </ul>
+      </li>
+      <li>
+        <h3>Management</h3>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-envelope"></i> <span>Mail </span><b class="badge bg-danger pull-right">3</b></a>
+        <ul class="sub">
+          <li><a href="inbox.html"><i class="fa fa-angle-right"></i> Inbox</a></li>
+          <li><a href="compose-mail.html"><i class="fa fa-angle-right"></i> Compose Mail</a></li>
+          <li><a href="read.html"><i class="fa fa-angle-right"></i> View Mail</a></li>
+        </ul>
+      </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class=" fa fa-bar-chart-o"></i> <span>Charts</span></span></a>
+        <ul class="sub">
+          <li><a href="morris-charts.html"><i class="fa fa-angle-right"></i> Morris</a></li>
+          <li><a href="graph.html"><i class="fa fa-angle-right"></i> Graph</a></li>
+		  <li><a href="float-chart.html"><i class="fa fa-angle-right"></i> Float Charts</a></li>
+        </ul>
+      </li>
+      
+      <li> <a href="gallery.html"> <i class="fa fa-film"></i> <span>Gallery</span> </a> </li>
+      <li class="sub-menu dcjq-parent-li"> <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-glass"></i> <span>Extra</span><b class="badge bg-danger pull-right">5</b></a>
+        <ul class="sub">
+          <li><a href="profile.html"><i class="fa fa-angle-right"></i> Profile</a></li>
+          <li><a href="timeline.html"><i class="fa fa-angle-right"></i> Timeline</a></li>
+          <li><a href="blank-page.html"><i class="fa fa-angle-right"></i> Blank Page</a></li>
+          <li><a href="lockscreen.html"><i class="fa fa-angle-right"></i>Lock Screen</a></li>
+          <li><a href="error-404.html"><i class="fa fa-angle-right"></i> Error-404</a></li>
+          <li><a href="login.html"><i class="fa fa-angle-right"></i> Login</a></li>
+        </ul>
+      </li>
+    </ul><!--/nav-accordion sidebar-menu--> 
+    </div><!--/leftside-navigation--> 
+  </div><!--/sidebar-->
+  
+  <div id="main-content">
+    <div class="page-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Form Elements</h2>
+        </div><!--/col-md-12--> 
+      </div><!--/row-->
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Default Form Elements</h3>
+            </div>
+            <div class="porlets-content">
+              <form class="form-horizontal row-border" action="">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Simplest Input</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control">
+                  </div>
+                </div><!--/form-group--> 
+
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Password Field</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Input with Placeholder</label>
+                  <div class="col-sm-9">
+                    <input type="text" placeholder="Placeholder" class="form-control">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Disabled Input</label>
+                  <div class="col-sm-9">
+                    <input type="text" disabled="" placeholder="Disabled Input" class="form-control">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Read only field</label>
+                  <div class="col-sm-9">
+                    <input type="text" value="Read only text goes here" readonly class="form-control">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">With pre-defined value</label>
+                  <div class="col-sm-9">
+                    <input type="text" value="http://" class="form-control">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">With max length</label>
+                  <div class="col-sm-9">
+                    <input type="text" placeholder="max 20 characters here" maxlength="20" class="form-control">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Popover Input</label>
+                  <div class="col-sm-9">
+                    <input type="text" data-original-title="A Title" data-content="And here's some amazing content. It's very engaging. right?" data-toggle="popover" data-trigger="hover" placeholder="Popover Input" class="form-control popovers">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Tooltip Input</label>
+                  <div class="col-sm-9">
+                    <input type="text" data-original-title="Tooltip text goes here. Tooltip text goes here." data-trigger="hover" class="form-control tooltips">
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Select Box</label>
+                  <div class="col-sm-9">
+                    <select id="source" class="form-control">
+                      <optgroup label="Alaskan/Hawaiian Time Zone">
+                      <option value="AK"> Argentina </option>
+                      <option value="HI"> Aruba </option>
+                      </optgroup>
+                      <optgroup label="Pacific Time Zone">
+                      <option value="CA"> Belarus </option>
+                      <option value="NV"> Chile </option>
+                      <option value="OR"> Ecuador </option>
+                      <option value="WA"> Cyprus </option>
+                      </optgroup>
+                      <optgroup label="Mountain Time Zone">
+                      <option value="AZ"> Finland </option>
+                      <option value="CO"> Georgia </option>
+                      <option value="ID"> Germany </option>
+                      <option value="MT"> Honduras </option>
+                      <option value="NE"> Georgia </option>
+                      <option value="NM"> Ireland </option>
+                      <option value="ND"> Japan </option>
+                      <option value="UT"> Utah </option>
+                      <option value="WY"> Wyoming </option>
+                      </optgroup>
+                      <optgroup label="Central Time Zone">
+                      <option value="AL"> Kazakhstan </option>
+                      <option value="AR"> Kuwait </option>
+                      <option value="IL"> Illinois </option>
+                      <option value="IA"> Libya </option>
+                      <option value="KS"> Kansas </option>
+                      <option value="KY"> Kentucky </option>
+                      <option value="LA"> Macau </option>
+                      <option value="MN"> Minnesota </option>
+                      <option value="MS"> Mississippi </option>
+                      <option value="MO"> Liberia </option>
+                      <option value="OK"> Oklahoma </option>
+                      <option value="SD"> South Dakota </option>
+                      <option value="TX"> Texas </option>
+                      <option value="TN"> Tennessee </option>
+                      <option value="WI"> Wisconsin </option>
+                      </optgroup>
+                      <optgroup label="Eastern Time Zone">
+                      <option value="CT"> Moldova </option>
+                      <option value="DE"> Nauru </option>
+                      <option value="FL"> New Zealand </option>
+                      <option value="GA"> Georgia </option>
+                      <option value="IN"> Indiana </option>
+                      <option value="ME"> Nigeria </option>
+                      <option value="MD"> Maryland </option>
+                      <option value="MA"> Massachusetts </option>
+                      <option value="MI"> Michigan </option>
+                      <option value="NH"> New Hampshire </option>
+                      <option value="NJ"> New Jersey </option>
+                      <option value="NY"> New York </option>
+                      <option value="NC"> North Carolina </option>
+                      <option value="OH"> Ohio </option>
+                      <option value="PA"> Pennsylvania </option>
+                      <option value="RI"> Rhode Island </option>
+                      <option value="SC"> South Carolina </option>
+                      <option value="VT"> Vermont </option>
+                      <option value="VA"> Virginia </option>
+                      <option value="WV"> West Virginia </option>
+                      </optgroup>
+                    </select>
+                  </div><!--/col-sm-9--> 
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Disabled Dropdown</label>
+                  <div class="col-sm-9">
+                    <select placeholder="Disabled Dropdown" disabled="" class="form-control">
+                      <option> Lorem </option>
+                      <option> Lorem ipsum dolor. </option>
+                      <option> Amet, impedit aperiam? </option>
+                      <option> Nemo, alias, quasi? </option>
+                      <option> impedit, expedita. </option>
+                    </select>
+                  </div><!--/col-sm-9--> 
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Textarea</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <button class="btn btn-default" type="button">Cancel</button>
+                </div><!--/form-group-->
+              </form>
+            </div><!--/porlets-content-->
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+        
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Basic Form Elements</h3>
+            </div>
+            <div class="porlets-content">
+              <form class="form-horizontal row-border" action="">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Before Text Field</label>
+                  <div class="col-sm-9">
+                    <div class="input-group"> <span class="input-group-addon">@</span>
+                      <input type="text" placeholder="Username" class="form-control">
+                    </div>
+                  </div>
+                </div><!--/form-group-->
+                 
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">After Text Field</label>
+                  <div class="col-sm-9">
+                    <div class="input-group">
+                      <input type="text" class="form-control">
+                      <span class="input-group-addon">.00</span> </div>
+                  </div>
+                </div><!--/form-group--> 
+            
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Both</label>
+                  <div class="col-sm-9">
+                    <div class="input-group"> <span class="input-group-addon">$</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-addon">.00</span> </div>
+                  </div>
+                </div><!--form-group end--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Checkbox</label>
+                  <div class="col-sm-9">
+                    <div class="input-group"> <span class="input-group-addon">
+                      <input type="checkbox">
+                      <span class="custom-checkbox"></span> </span>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Radio</label>
+                  <div class="col-sm-9">
+                    <div class="input-group"> <span class="input-group-addon">
+                      <input type="radio">
+                      <span class="custom-radio"></span> </span>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Buttons instead of text</label>
+                  <div class="col-sm-9">
+                    <div class="input-group">
+                      <input type="text" class="form-control">
+                      <div class="input-group-btn">
+                        <button class="btn btn-danger" type="button">Go!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/form-group--> 
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Buttons with Dropdowns</label>
+                  <div class="col-sm-9">
+                    <div class="input-group">
+                      <input type="text" class="form-control">
+                      <div class="input-group-btn">
+                        <button data-toggle="dropdown" class="btn btn-success dropdown-toggle" type="button">Action <i class="icon-caret-down"></i></button>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!--form-group--> 
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Segmentded Dropdown</label>
+                  <div class="col-sm-9">
+                    <div class="input-group">
+                      <input type="text" class="form-control">
+                      <div class="input-group-btn">
+                        <button data-toggle="dropdown" class="btn btn-warning dropdown-toggle" type="button">Action <i class="icon-caret-down"></i></button>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/form-group--> 
+                
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Inline Radio</label>
+                  <div class="col-sm-9">
+                    <label class="radio-inline">
+                      <input type="radio" value="option1" id="inlineradio1">
+                      <span class="custom-radio"></span> Option 1 </label>
+                    <label class="radio-inline">
+                      <input type="radio" value="option2" id="inlineradio2">
+                      <span class="custom-radio"></span> Option 2 </label>
+                    <label class="radio-inline">
+                      <input type="radio" value="option3" id="inlineradio3">
+                      <span class="custom-radio"></span> Option 3 </label>
+                  </div>
+                </div><!--/form-group--> 
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Radio</label>
+                  <div class="col-sm-9">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+                        <span class="custom-radio"></span> Option one is this and that </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">
+                        <span class="custom-radio"></span> Option two can be something else </label>
+                    </div>
+                  </div>
+                </div><!--/form-group--> 
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Inline Checkbox</label>
+                  <div class="col-sm-9">
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value="option1" id="inlinecheckbox1">
+                      <span class="custom-checkbox"></span> Option 1 </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value="option2" id="inlinecheckbox2">
+                      <span class="custom-checkbox"></span> Option 2 </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value="option3" id="inlinecheckbox3">
+                      <span class="custom-checkbox"></span> Option 3 </label>
+                  </div>
+                </div><!--/form-group--> 
+             
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Checkbox</label>
+                  <div class="col-sm-9">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        <span class="custom-checkbox"></span> Option one is this and that </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        <span class="custom-checkbox"></span> Option two can be something else </label>
+                    </div>
+                  </div>
+                </div><!--/form-group-->
+                <div class="bottom">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <button class="btn btn-default" type="button">Cancel</button>
+                </div>
+              </form>
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6--> 
+      </div><!--/row-->
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Toggle Switches</h3>
+            </div>
+            <div class="porlets-content">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Default Switch</label>
+                  <div class="col-sm-7 control-label">
+                    <div class="toggle toggle-default"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Primary Switch</label>
+                  <div class="col-sm-7 control-label">
+                    <div class="toggle toggle-primary"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Success Switch</label>
+                  <div class="col-sm-7 control-label">
+                    <div class="toggle toggle-success"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Warning Switch</label>
+                  <div class="col-sm-7 control-label">
+                    <div class="toggle toggle-warning"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Danger Switch</label>
+                  <div class="col-sm-7 control-label">
+                    <div class="toggle toggle-danger"></div>
+                  </div>
+                </div>
+              </form>
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+        
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Checkboxes and Radios</h3>
+            </div>
+            <div class="porlets-content">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="ckbox ckbox-default">
+                    <input type="checkbox" value="1" id="checkboxDefault" checked="checked" />
+                    <label for="checkboxDefault">Checkbox Default</label>
+                  </div>
+                  <div class="ckbox ckbox-primary">
+                    <input type="checkbox" value="1" id="checkboxPrimary" checked="checked" />
+                    <label for="checkboxPrimary">Checkbox Primary</label>
+                  </div>
+                  <div class="ckbox ckbox-warning">
+                    <input type="checkbox" id="checkboxWarning" checked="checked" />
+                    <label for="checkboxWarning">Checkbox Warning</label>
+                  </div>
+                  <div class="ckbox ckbox-success">
+                    <input type="checkbox" id="checkboxSuccess" checked="checked" />
+                    <label for="checkboxSuccess">Checkbox Success</label>
+                  </div>
+                  <div class="ckbox ckbox-danger">
+                    <input type="checkbox" id="checkboxDanger" checked="checked" />
+                    <label for="checkboxDanger">Checkbox Danger</label>
+                  </div>
+                  <div class="ckbox ckbox-default">
+                    <input type="checkbox" id="checkboxDisabled" disabled="disabled" />
+                    <label for="checkboxDisabled">Checkbox Disabled</label>
+                  </div>
+                </div><!-- /col-md-6 -->
+                
+                <div class="col-md-6">
+                  <div class="rdio rdio-default">
+                    <input type="radio" name="radio" id="radioDefault" value="1" checked="checked" />
+                    <label for="radioDefault">Radio Default</label>
+                  </div>
+                  <div class="rdio rdio-primary">
+                    <input type="radio" name="radio" value="2" id="radioPrimary" />
+                    <label for="radioPrimary">Radio Primary</label>
+                  </div>
+                  <div class="rdio rdio-warning">
+                    <input type="radio" name="radio" value="3" id="radioWarning" />
+                    <label for="radioWarning">Radio Warning</label>
+                  </div>
+                  <div class="rdio rdio-success">
+                    <input type="radio" name="radio" value="4" id="radioSuccess" />
+                    <label for="radioSuccess">Radio Success</label>
+                  </div>
+                  <div class="rdio rdio-danger">
+                    <input type="radio" name="radio" value="5" id="radioDanger" />
+                    <label for="radioDanger">Radio Danger</label>
+                  </div>
+                  <div class="rdio rdio-default">
+                    <input type="radio" name="radio" value="6" disabled="disabled" id="radioDisabled" />
+                    <label for="radioDisabled">Radio Disabled</label>
+                  </div>
+                </div><!-- /col-md-6 -->
+              </div><!--/row-->
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6--> 
+      </div><!--/row-->
+      
+      
+       <div class="row">
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Input Mask</h3>
+            </div>
+            <div class="porlets-content">
+              <form class="form-horizontal row-border" action="">
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Date</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'alias': 'date'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">alias:date</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Phone</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'(999) 999-9999'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">(999) 999-9999</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Phone + Ext</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'(999) 999-9999 x999
+                            99'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">(999) 999-9999 x99999</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Int' Phone</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'+33 999 999 999'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">+33 999 999 999</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">TaxID</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'99-9999999'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">99-9999999</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">SSN</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'999-99-9999'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">999-99-9999</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Product Key</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'a*-999-a999'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">a*-999-a999</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Purchase Order</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'PO: aaa-999-***'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">PO: aaa-999-***</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Percent</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'99%'" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">99%</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Currency</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'999,999,999.99 $', 'numericInput' : true" class="form-control mask" style="text-align: right;">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">right alignment</p>
+                  </div>
+                </div>
+                <div class="form-group lable-padd">
+                  <label class="col-sm-3">Currency 2</label>
+                  <div class="col-sm-6">
+                    <input type="text" data-inputmask="'mask':'$ 999,999,999.99', 'greedy' : false, 'rightAlignNumerics' : false" class="form-control mask">
+                  </div>
+                  <div class="col-sm-3 left-align">
+                    <p class="help-block">left alignment</p>
+                  </div>
+                </div>
+              </form>
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+        
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Date Pickers</h3>
+            </div>
+            <div class="porlets-content">
+              <form action="#" class="form-horizontal">
+                <div class="form-group">
+                  <label class="control-label col-md-4">Default Datepicker</label>
+                  <div class="col-md-6 col-xs-11">
+                    <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                    <span class="help-block">Select date</span> </div>
+                </div><!--/form-group--> 
+
+                <div class="form-group">
+                  <label class="control-label col-md-3">Start with years viewMode</label>
+                  <div class="col-md-6 col-xs-11">
+                    <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012"  class="input-append date dpYears">
+                      <input type="text" readonly value="12-02-2012" size="30" class="form-control">
+                      <span class="input-group-btn add-on">
+                      <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
+                      </span> </div>
+                    <span class="help-block">Select date</span> </div>
+                </div><!--/form-group--> 
+
+                <div class="form-group">
+                  <label class="control-label col-md-3">Months Only</label>
+                  <div class="col-md-6 col-xs-11">
+                    <div data-date-minviewmode="months" data-date-viewmode="years" data-date-format="mm/yyyy" data-date="102/2012"  class="input-append date dpMonths">
+                      <input type="text" readonly value="02/2012" size="30" class="form-control">
+                      <span class="input-group-btn add-on">
+                      <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
+                      </span> </div>
+                    <span class="help-block">Select month only</span> </div>
+                </div><!--/form-group--> 
+
+                <div class="form-group">
+                  <label class="control-label col-md-4">Date Range</label>
+                  <div class="col-md-6">
+                    <div class="input-group input-large" data-date="13/07/2013" data-date-format="mm/dd/yyyy">
+                      <input type="text" class="form-control dpd1" name="from">
+                      <span class="input-group-addon">To</span>
+                      <input type="text" class="form-control dpd2" name="to">
+                    </div>
+                    <span class="help-block">Select date range</span> </div>
+                </div><!--/form-group-->
+              </form>
+
+              <h4><strong>Color Pickers</strong> </h4>
+              <hr>
+              <form class="form-horizontal  tasi-form" action="#">
+                <!--/form-group-->
+                <div class="form-group">
+                  <label class="control-label col-md-4">Default</label>
+                  <div class="col-md-6">
+                    <input type="text" class="colorpicker-default form-control" value="#8fff00" />
+                  </div>
+                </div><!--/form-group --> 
+
+                <div class="form-group">
+                  <label class="control-label col-md-4">RGBA</label>
+                  <div class="col-md-6">
+                    <input type="text" class="colorpicker-rgba form-control" value="rgb(0,194,255,0.78)" data-color-format="rgba" />
+                  </div>
+                </div><!--/form-group--> 
+
+                <div class="form-group">
+                  <label class="control-label col-md-4">As Component</label>
+                  <div class="col-md-6 col-xs-11">
+                    <div data-color-format="rgb" data-color="rgb(255, 146, 180)" class="input-append colorpicker-default color">
+                      <input type="text" readonly value="" class="form-control">
+                      <span class=" input-group-btn add-on">
+                      <button class="btn btn-white" type="button" style="padding:10px"> <i style="background-color: rgb(234, 44, 70);"></i> </button>
+                      </span> </div>
+                  </div>
+                </div><!--/form-group-->
+              </form><!--/form-horizontal-->
+              
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+       </div><!--/row--> 
+      
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Dropzone Multi-File Upload</h3>
+            </div>
+            <div class="porlets-content">
+              <p>This is just a demo. Uploaded files are <strong>not</strong> stored. This does not handle your file uploads on the server. You have to implement the code to receive and store the file yourself.</p>
+              <br />
+              <form action="http://riaxe.com/file/post" class="dropzone">
+                <div class="fallback">
+                  <input name="file" type="file" multiple />
+                </div>
+              </form>
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+        
+        <div class="col-md-6">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">Form Wizard</h3>
+            </div>
+            <div class="porlets-content">
+              <div id="progressWizard" class="basic-wizard">
+                <ul class="nav nav-pills nav-justified">
+                  <li><a href="#ptab1" data-toggle="tab"><span>Step 1:</span> Basic Info</a></li>
+                  <li><a href="#ptab2" data-toggle="tab"><span>Step 2:</span> Product Info</a></li>
+                  <li><a href="#ptab3" data-toggle="tab"><span>Step 3:</span> Payment</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="progress progress-striped active">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="tab-pane" id="ptab1">
+                    <form class="form">
+                      <div class="form-group">
+                        <label class="col-sm-4">Firstname</label>
+                        <div class="col-sm-8">
+                          <input type="text" name="firstname" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-4">Lastname</label>
+                        <div class="col-sm-8">
+                          <input type="text" name="lastname" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-4">Gender</label>
+                        <div class="col-sm-8">
+                          <div class="rdio rdio-primary">
+                            <input type="radio" checked="checked" id="male2" value="m" name="radio">
+                            <label for="male2">Male</label>
+                          </div>
+                          <div class="rdio rdio-primary">
+                            <input type="radio" value="f" id="female2" name="radio">
+                            <label for="female2">Female</label>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="ptab2">
+                    <form class="form">
+                      <div class="form-group">
+                        <label class="col-sm-4">Product ID</label>
+                        <div class="col-sm-5">
+                          <input type="text" name="product_id" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-4">Product Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" name="product_name" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-4">Category</label>
+                        <div class="col-sm-4">
+                          <select class="form-control">
+                            <option value="">Choose One</option>
+                            <option value="">3D Animation</option>
+                            <option value="">Web Design</option>
+                            <option value="">Software Engineering</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="ptab3">
+                    <form class="form">
+                      <div class="form-group">
+                        <label class="col-sm-4">Card No</label>
+                        <div class="col-sm-8">
+                          <input type="text" name="cardno" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-4">Expiration</label>
+                        <div class="col-sm-4">
+                          <select class="form-control">
+                            <option value="">Month</option>
+                            <option value="">January</option>
+                            <option value="">February</option>
+                            <option value="">March</option>
+                            <option value="">...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-4">
+                          <select class="form-control">
+                            <option value="">Year</option>
+                            <option value="">2013</option>
+                            <option value="">2014</option>
+                            <option value="">2015</option>
+                            <option value="">...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-4">CSV</label>
+                        <div class="col-sm-4">
+                          <input type="text" name="csv" class="form-control" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div><!-- /tab-content -->
+                
+                <ul class="pager wizard">
+                  <li class="previous"><a href="javascript:void(0)">Previous</a></li>
+                  <li class="next"><a href="javascript:void(0)">Next</a></li>
+                </ul>
+              </div><!--/progressWizard-->
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-6--> 
+      </div><!--/row--> 
+      
+ 
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block-web">
+            <div class="header">
+              <div class="actions"> <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a> <a href="#" class="refresh"><i class="fa fa-repeat"></i></a> <a href="#" class="close-down"><i class="fa fa-times"></i></a> </div>
+              <h3 class="content-header">CKEditor</h3>
+            </div>
+            <div class="porlets-content">
+              <div class="form">
+                <form action="#" class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2 col-sm-2">CKEditor</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control ckeditor" name="editor1" rows="6"></textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div><!--/porlets-content--> 
+          </div><!--/block-web--> 
+        </div><!--/col-md-12-->
+       </div><!--/row--> 
+       
+       
+
+    </div><!--/page-content end--> 
+  </div><!--/main-content end--> 
+</div><!--/page-container end--> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-2.0.2.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="js/accordion.js"></script> 
+<script src="js/common-script.js"></script> 
+<script src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script type="text/javascript" src="plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script> 
+<script type="text/javascript" src="plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> 
+<script type="text/javascript" src="plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script type="text/javascript" src="js/form-components.js"></script> 
+<script type="text/javascript"  src="plugins/input-mask/jquery.inputmask.min.js"></script> 
+<script type="text/javascript"  src="plugins/input-mask/demo-mask.js"></script> 
+<script type="text/javascript"  src="plugins/toggle-switch/toggles.min.js"></script> 
+<script type="text/javascript"  src="plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script> 
+<script type="text/javascript"  src="plugins/dropzone/dropzone.min.js"></script> 
+<script type="text/javascript"  src="plugins/bootstrap-wizard/bootstrap-wizard.min.js"></script> 
+<script type="text/javascript" src="plugins/ckeditor/ckeditor.js"></script> 
+<script type="text/javascript"  src="js/form-wizard.js"></script> 
+
+
+
+</body>
+</html>
