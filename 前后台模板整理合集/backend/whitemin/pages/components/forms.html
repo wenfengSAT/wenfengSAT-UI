@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>Whitemin Theme</title>
+
+  <link href="../../stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+  <script src="../../javascripts/application.js" type="text/javascript"></script>
+
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!-- there's an IE separated stylesheet with the following resets for IE -->
+  <!--[if lte IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="../../javascripts/html5shiv.js" type="text/javascript"></script>
+        <script src="../../javascripts/excanvas.js" type="text/javascript"></script>
+        <script src="../../javascripts/ie_fix.js" type="text/javascript"></script>
+        <link href="../../stylesheets/ie_fix.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head>
+
+<body>
+<nav id="primary" class="main-nav collapsible-nav">
+  <!-- Brand -->
+  <a id="sidebar-brand" href="../pages/dashboard.html">
+    Whitemin
+  </a>
+  <button type="button" class="btn btn-navbar btn-inverse" data-toggle="collapse" data-target=".nav-collapse">
+    <i class="icon-reorder"></i>
+  </button>
+
+  <ul class="nav-collapse collapse">
+
+  <!-- Profile -->
+    <li class="profile">
+      <a href="#profile-opts" class="accordion-toggle" data-toggle="collapse">
+         <img class="avatar user3">
+          <span class="text" id="profile-text">
+            Jane Doe <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="profile-opts" class="collapse secondary">
+        <li class="">
+          <a href="#">
+            Settings
+          </a>
+        </li>
+        <li class="">
+          <a href="#">
+            Change password
+          </a>
+        </li>
+        <li class="">
+          <a href="#">
+            Logout
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Dashboard -->
+    <li class="">
+      <a href="../dashboard.html">
+          <span class="icon">
+            <i class="icon-dashboard"></i>
+          </span>
+          <span class="text">
+            Dashboard
+          </span>
+      </a>
+    </li>
+
+    <!-- Components -->
+    <li class="active">
+      <a href="#components-list" class="accordion-toggle" data-toggle="collapse">
+          <span class="icon">
+            <i class="icon-microformats"></i>
+          </span>
+          <span class="text">
+            Components <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="components-list" class="collapse secondary">
+        <li class="">
+          <a href="buttons.html">
+              Buttons
+          </a>
+        </li>
+        <li class="active">
+          <a href="forms.html">
+              Forms
+          </a>
+        </li>
+        <li class="">
+          <a href="elements.html">
+              Elements
+          </a>
+        </li>
+        <li class="">
+          <a href="widgets.html">
+              Widgets
+          </a>
+        </li>
+        <li class="">
+          <a href="charts.html">
+              Charts
+          </a>
+        </li>
+        <li class="">
+          <a href="tables.html">
+              Tables
+          </a>
+        </li>
+        <li class="">
+          <a href="grid.html">
+              Grid
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Sample pages -->
+    <li class="">
+      <a href="#sample-pages" class="accordion-toggle" data-toggle="collapse">
+          <span class="icon">
+            <i class="icon-pushpin"></i>
+          </span>
+          <span class="text">
+            Pages <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="sample-pages" class="collapse secondary">
+        <li class="">
+          <a href="../samples/gallery.html">
+              Gallery
+          </a>
+        </li>
+        <li class="">
+          <a href="../samples/faq.html">
+              FAQ
+          </a>
+        </li>
+        <li class="">
+          <a href="../samples/pricing_plans.html">
+              Pricing Plans
+          </a>
+        </li>
+        <li class="">
+          <a href="../samples/login.html">
+              Login
+          </a>
+        </li>
+        <li class="">
+          <a href="../samples/register.html">
+              Register
+          </a>
+        </li>
+        <li class="">
+          <a href="../samples/reports.html">
+              Reports
+          </a>
+        </li>
+        <li class="">
+          <a href="../samples/error.html">
+              Error 404
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Extras dropdown -->
+    <li class="">
+      <a href="#extras" class="accordion-toggle" data-toggle="collapse">
+          <span class="icon">
+            <i class="icon-gift"></i>
+          </span>
+          <span class="text">
+            Extras <b class="caret"></b>
+          </span>
+      </a>
+
+      <ul id="extras" class="collapse secondary">
+        <li class="">
+          <a href="../extras/fullcalendar.html">
+              Fullcalendar
+          </a>
+        </li>
+        <li class="">
+          <a href="../extras/icons.html">
+              Icons
+          </a>
+        </li>
+        <li class="">
+          <a href="../extras/world-map.html">
+              World map
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav><div class="top-bar">
+  <a id="topbar-brand" class="brand" href="../dashboard.html">
+    Whitemin
+  </a>
+
+  <ul class="top-notifications">
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Messages  <span class="badge dark-blue">3</span>
+      </a>
+      <ul id="messages" class="dropdown-menu top-bar-list">
+        <li><a>New message</a></li>
+        <li><a>Inbox <span class="count">(8)</span></a></li>
+        <li><a>Sent</a></li>
+        <li><a>Drafts</a></li>
+      </ul>
+
+    </li>
+
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Orders  <span class="badge dark-plum">45</span>
+      </a>
+      <ul id="orders" class="dropdown-menu top-bar-list">
+        <li><a>New orders <span class="count">(6)</span></a></li>
+        <li><a>Refunds</a></li>
+        <li><a>History</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<section id="main">
+  <div class="row-fluid">
+  <div class="span12">
+
+    <hr class="main">
+    <ul class="breadcrumbs">
+      <li>
+        <a class="crumb" href="#">Some</a>
+        <span class="divider">/</span>
+      </li>
+      <li>
+        <a class="crumb" href="#">Pretty</a>
+        <span class="divider">/</span>
+      </li>
+      <li>
+        <a class="crumb" href="#">Cool</a>
+        <span class="divider">/</span>
+      </li>
+      <li>
+        <a class="crumb active" href="#">Crumbs</a>
+      </li>
+    </ul>
+    <hr class="main">
+  </div>
+</div>
+
+  <div class="container-fluid">
+
+  <div class="row-fluid">
+    <div class="span12">
+
+      <div class="box bordered">
+        <div class="box-header">
+          <i class="icon-th-list"></i> Form elements
+          <div class="pull-right">
+            <div class="btn-group">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-cog"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-left">
+                <li><a>Action</a></li>
+                <li><a>Another action</a></li>
+                <li><a>Something else here</a></li>
+                <li class="divider"></li>
+                <li><a>Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                Inputs
+              </div>
+              <div class="vpadded">
+  <div class="input full-width">
+    <input type="text" placeholder="Username">
+  </div>
+  <div class="input full-width">
+    <input type="text" placeholder="Email address">
+  </div>
+  <div class="input full-width">
+    <input type="text" placeholder="First name">
+  </div>
+  <div class="input full-width">
+    <input type="text" placeholder="Last name">
+  </div>
+
+  <div class="note">
+    <i class="icon-exclamation-sign"></i>You can write max 2500 characters.
+  </div>
+  <div class="input full-width">
+    <textarea rows="5" placeholder="Your story..."></textarea>
+  </div>
+</div>
+
+
+              <div class="section-title">
+                Validations
+              </div>
+              <div class="vpadded">
+  <div class="warning full-width">
+    <div class="input">
+      <input type="text" id="inputWarning" class="warning">
+    <span class="input-warning" data-original-title="">
+      Warning <i class="icon-warning-sign"></i>
+    </span>
+    </div>
+  </div>
+
+  <div class="error full-width">
+    <div class="input">
+      <input type="text" id="inputError" class="error">
+    <span class="input-error" data-original-title="">
+     Error <i class="icon-exclamation-sign"></i>
+    </span>
+    </div>
+  </div>
+
+  <div class="success full-width">
+    <div class="input">
+      <input type="text" id="inputSuccess" class="success">
+    <span class="input-success" data-original-title="">
+      Success <i class="icon-ok-sign"></i>
+    </span>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                File uploaders
+              </div>
+              <div class="vpadded">
+
+  <input type="file">
+
+  <div class="note">
+    <i class="icon-exclamation-sign"></i>Please select a file to upload.
+  </div>
+  <input type="file">
+
+</div>
+
+
+
+
+              <div class="section-title">
+                Selects
+              </div>
+              <div class="vpadded">
+  <div class="full-width">
+    <select class="chzn-select" data-placeholder="Choose a city...">
+      <option value></option>
+      <option>Amsterdam</option>
+      <option>Bucharest</option>
+      <option>Cairo</option>
+      <option>London</option>
+      <option>Paris</option>
+    </select>
+
+    <select data-placeholder="Choose a country..." multiple class="chzn-select">
+      <option>Australia</option>
+      <option>Alaska</option>
+      <option>Belize</option>
+      <option>Greece</option>
+      <option>Madagascar</option>
+    </select>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                Search inputs
+              </div>
+              <div class="vpadded">
+  <div class="input-append">
+    <input id="appendedInputButton" size="16" type="text">
+    <button class="btn light-blue inverse" type="button">Go!</button>
+  </div>
+  <div class="input-append">
+    <input id="appendedInputButtons" size="16" type="text">
+    <button class="btn light-blue inverse" type="button">Search</button>
+  </div>
+
+  <form class="form-search">
+    <div class="input-append">
+      <input type="text" class="search-query">
+      <button type="submit" class="btn medium-blue">Search</button>
+    </div>
+    <div class="input-prepend">
+      <button type="submit" class="btn medium-blue">Search</button>
+      <input type="text" class="search-query">
+    </div>
+  </form>
+</div>
+            </div>
+          </div>
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                Appended and prepended inputs
+              </div>
+              <div class="vpadded">
+  <div class="input-prepend">
+    <span class="add-on">@</span>
+    <input id="prependedInput" type="text" placeholder="Username">
+  </div>
+
+  <div class="input-append">
+    <input id="appendedInput" type="text">
+    <span class="add-on">.00</span>
+  </div>
+
+  <div class="input-prepend input-append">
+    <span class="add-on">$</span>
+    <input id="appendedPrependedInput" type="text">
+    <span class="add-on">.00</span>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                Checkboxes
+              </div>
+              <div class="vpadded">
+  <label class="checkbox">
+    <input type="checkbox" value="" checked>
+    Option one
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" value="">
+    Option two
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" value="">
+    Option three
+  </label>
+</div>
+
+<div class="vpadded">
+  <label class="checkbox inline">
+    <input type="checkbox" value="option1"> Some
+  </label>
+  <label class="checkbox inline">
+    <input type="checkbox" value="option2"> Inline
+  </label>
+  <label class="checkbox inline">
+    <input type="checkbox" value="option3"> Checkboxes
+  </label>
+</div>
+
+<div class="vpadded">
+  <div>
+    <div class="btn-group" data-toggle="buttons-checkbox">
+      <button type="button" class="btn btn-small light-blue inverse">Check</button>
+      <button type="button" class="btn btn-small light-blue inverse">This</button>
+      <button type="button" class="btn btn-small light-blue inverse">Out</button>
+    </div>
+  </div>
+
+  <div>
+    <div class="btn-group" data-toggle="buttons-checkbox">
+      <button type="button" class="btn btn-small medium-blue">Option 1</button>
+      <button type="button" class="btn btn-small medium-blue">Option 2</button>
+      <button type="button" class="btn btn-small medium-blue">Option 3</button>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+
+          <div class="span6">
+            <div class="padded">
+              <div class="section-title">
+                Radios
+              </div>
+              <div class="vpadded">
+  <label class="radio">
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one
+  </label>
+  <label class="radio">
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two
+  </label>
+  <label class="radio">
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option2">
+    Option three
+  </label>
+</div>
+
+<div class="vpadded">
+  <label class="radio inline">
+    <input type="radio" name="optionsRadios" id="opt1" value="option1" checked>
+    Some
+  </label>
+  <label class="radio inline">
+    <input type="radio" name="optionsRadios" id="opt2" value="option2">
+    Inline
+  </label>
+  <label class="radio inline">
+    <input type="radio" name="optionsRadios" id="opt3" value="option2">
+    Radios
+  </label>
+</div>
+
+<div class="vpadded">
+  <div>
+    <div class="btn-group" data-toggle="buttons-radio">
+      <button type="button" class="btn btn-small dark-blue">Check</button>
+      <button type="button" class="btn btn-small dark-blue">This</button>
+      <button type="button" class="btn btn-small dark-blue">Out</button>
+    </div>
+  </div>
+
+  <div>
+    <div class="btn-group" data-toggle="buttons-radio">
+      <button type="button" class="btn btn-small medium-blue">Option 1</button>
+      <button type="button" class="btn btn-small medium-blue">Option 2</button>
+      <button type="button" class="btn btn-small medium-blue">Option 3</button>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+
+      <div class="box footer">
+        <div class="copyright text-transparent center">
+          <div>2013 &copy; Whitemin Template</div>
+          <div>Created by Adritha84</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- Modal dialog used for the image gallery -->
+<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3 class="modal-title"></h3>
+  </div>
+  <div class="modal-body"><div class="modal-image"></div></div>
+  <div class="modal-footer">
+    <a class="btn modal-download light-blue inverse" target="_blank"><i class="icon-download"></i> Download</a>
+    <a class="btn modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+    <a class="btn modal-prev medium-blue"><i class="icon-arrow-left icon-white"></i> Previous</a>
+    <a class="btn modal-next medium-blue">Next <i class="icon-arrow-right icon-white"></i></a>
+  </div>
+</div>
+
+</body>
+</html>
