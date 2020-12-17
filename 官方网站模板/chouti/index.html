@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+
+    <!-- 以最高的ie 浏览器 渲染  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 视口的设备 移动设备优先 支持移动端 在多个设备上适应 pc iphone 安卓 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>抽屉新热榜</title>
+
+    <!-- Bootstrap 必须引入bootstrap -->
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="./bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="./images/chouti.ico">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--兼容IE9以下的版本-->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+    <!--导航栏-->
+    <nav class="navbar navbar-default navbar-fixed-top my-navbar">
+        <div class="container">
+            <!--页面导航-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!--导航-->
+                <ul class="nav navbar-nav my-navbar-nav">
+                    <li class="active"><a href="#">全部<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">42区</a></li>
+                    <li><a href="#">段子</a></li>
+                    <li><a href="#">图片</a></li>
+                    <li><a href="#">挨踢1024</a></li>
+                    <li><a href="#">你问我答</a></li>
+                    <li><a href="#">视频</a></li>
+                </ul>
+
+                <!--搜索框-->
+                <form class="navbar-form navbar-right my-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <a class="my-img" href="#"></a>
+                </form>
+
+                <!--注册登录-->
+                <ul class="nav navbar-nav navbar-right my-navbar-nav">
+                    <li><a style="color: white;" href="javascript:login();">注册</a></li>
+                    <li><a style="color: white;" href="javascript:login();">登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--模态窗-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1 myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content clearfix">
+
+                <!--登录页面-->
+                <div class="pull-left">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                        <h4 class="modal-title" id="myModalLabel1">登录</h4>
+                    </div>
+
+                    <div class="modal-body my-modal-body">
+                        <ul class="nav nav-pills">
+                            <li role="presentation" class="active"><a href="#">手机号登录</a></li>
+                            <li role="presentation"><a href="#">用户名登录</a></li>
+                        </ul>
+
+                        <!--手机号登录-->
+                        <div class="my-phone-login">
+                            <form>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>中国台湾（+886）</option>
+                                        <option>中国（+86）</option>
+                                        <option>中国香港（+852）</option>
+                                        <option>中国澳门（+853）</option>
+                                        <option>美国（+1）</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputText1" placeholder="手机号">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked> <small>一个月内自动登录</small>
+                                    </label>
+                                    <small>&nbsp;&nbsp;&nbsp;&nbsp;忘记密码？</small>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--用户名登录-->
+                        <div class="my-user-login">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputText2" placeholder="用户名">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="密码">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked> <small>一个月内自动登录</small>
+                                    </label>
+                                    <small>&nbsp;&nbsp;&nbsp;&nbsp;忘记密码？</small>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">登录</button>
+                    </div>
+                </div>
+
+                <!--注册页面-->
+                <div class="pull-right">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel2">注册</h4>
+                    </div>
+
+                    <div class="modal-body my-modal-body">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active"><a href="#">1.填写手机号</a></li>
+                            <li role="presentation"><a href="#">2.填写基本资料</a></li>
+                        </ul>
+
+                        <!--填写手机号-->
+                        <div class="my-phone-register">
+                            <form>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>中国台湾（+886）</option>
+                                        <option>中国（+86）</option>
+                                        <option>中国香港（+852）</option>
+                                        <option>中国澳门（+853）</option>
+                                        <option>美国（+1）</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-inline">
+                                    <input type="text" class="form-control" id="exampleInputText3" placeholder="手机号">
+                                    <button type="submit" class="btn btn-primary">获取验证码</button>
+                                </div>
+                                <div class="form-group text-right" style="margin-top: -10px;">
+                                    <small>收不到短信？</small>
+                                    <small style="color: #337ab7;">获取语音验证码</small>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputText4" placeholder="验证码">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="密码">
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--填写基本信息-->
+                        <div class="my-info-register">
+                            <form>
+                                <div class="form-group">
+                                     <input type="text" class="form-control" id="exampleInputText5" placeholder="xxx" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 女
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 男
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control my-country">
+                                        <option value="0">中国</option>
+                                        <option value="1">海外</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-inline">
+                                    <select class="form-control">
+                                        <option>北京</option>
+                                        <option>上海</option>
+                                        <option>广州</option>
+                                        <option>深圳</option>
+                                    </select>
+                                    <select class="form-control">
+                                        <option>西城</option>
+                                        <option>东城</option>
+                                        <option>朝阳</option>
+                                        <option>海淀</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" placeholder="签名档（100个汉字以内）"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary my-btn-next" onclick="btnNext();">下一步</button>
+                        <button type="button" class="btn btn-primary my-btn-submit" data-dismiss="modal">提交资料</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--发布的模态窗-->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1 myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content clearfix">
+
+                <!--发布页面-->
+                <div class="my-publish">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel3">分享新发现</h4>
+                    </div>
+
+                    <div class="modal-body my-modal-body">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active"><a href="#">链接</a></li>
+                            <li role="presentation"><a href="#">文字</a></li>
+                            <li role="presentation"><a href="#">图片</a></li>
+                        </ul>
+
+                        <!--链接-->
+                        <div class="my-link">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputUrl">添加链接</label>
+                                    <input type="text" class="form-control" id="exampleInputUrl" placeholder="http://">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputTitle">标题</label>
+                                    <input type="text" class="form-control" id="exampleInputTitle">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputTextarea">添加摘要（选填）</label>
+                                    <textarea class="form-control" rows="3" id="exampleInputTextarea"></textarea>
+                                </div>
+                                <div class="form-group my-form-a">
+                                    <small>发布到：</small>
+                                    <a href="#" class="btn btn-default btn-sm active" role="button">42区</a>
+                                    <a href="#" class="btn btn-default btn-sm" role="button">段子</a>
+                                    <a href="#" class="btn btn-default btn-sm" role="button">图片</a>
+                                    <a href="#" class="btn btn-default btn-sm" role="button">挨踢1024</a>
+                                    <a href="#" class="btn btn-default btn-sm" role="button">你问我答</a>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--文字-->
+                        <div class="my-text">
+                            <form>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" id="exampleInputTextarea1" placeholder="发布段子"></textarea>
+                                </div>
+                                <div class="form-group my-form-a">
+                                    <small>发布到：</small>
+                                    <a href="#" class="btn btn-default btn-sm active" role="button">段子</a>
+                                    <a href="#" class="btn btn-default btn-sm" role="button">你问我答</a>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--图片-->
+                        <div class="my-photo">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">添加图片</label>
+                                    <input type="file" id="exampleInputFile">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" id="exampleInputTextarea2" placeholder="发布段子"></textarea>
+                                </div>
+                                <div class="form-group my-form-a">
+                                    <small>发布到：</small>
+                                    <a href="#" class="btn btn-default btn-sm active" role="button">图片</a>
+                                    <a href="#" class="btn btn-default btn-sm" role="button">你问我答</a>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">清空</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">发布</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--中心内容-->
+    <div class="container my-container">
+        <div class="row">
+            <!--左侧列表内容-->
+            <div class="col-md-8">
+                <!--标签页-->
+                <div class="clearfix my-nav">
+                    <ul class="nav nav-pills pull-left my-navbar-nav">
+                        <li class="active"><a href="#">最热</a></li>
+                        <li><a href="#">发现</a></li>
+                        <li><a href="#">人类发布</a></li>
+                    </ul>
+                    <ul class="nav nav-pills pull-right my-navbar-nav my-active">
+                        <li class="active"><a href="#">限时排序</a></li>
+                        <li><a href="#">24小时</a></li>
+                        <li><a href="#">3天</a></li>
+                    </ul>
+                    <button class="btn btn-default btn-success" onclick="publish()"><span class="glyphicon glyphicon-plus-sign"></span><span>发布</span></button>
+                </div>
+
+                <!--内容1-->
+                <div class="list-group my-list-content">
+                    <a href="#" class="list-group-item clearfix">
+                        <div class="pull-left clearfix">
+                            <h5>如何直观解释“魂系列”游戏的难度魅力和探索感？&nbsp;&nbsp;<small>-www.yystv.cn<span>&nbsp;42区</span></small></h5>
+                            <small>《魂》系列的探索流程就是一个不断缩小危险区的过程。</small>
+                            <p class="clearfix my-p-left pull-left">
+                                <span class="span1 span_click1" title="推荐"><span class="span_count1">1</span></span>
+                                <span class="span2 span_click2" title="评论"><span class="span_count2" >2</span></span>
+                                <span class="span3 span_click3" title="加入私藏"><span>私藏</span></span>
+                                <span class="span4"></span>
+                                <span class="span6">alice</span>
+                                <span class="span5">8分钟前</span>
+                                <small class="span7">发布</small>
+                            </p>
+                            <p class="clearfix my-p-right pull-right">
+                                <span class="span1_1">分享到</span>
+                                <span class="span2_1"></span>
+                                <span class="span3_1"></span>
+                                <span class="span4_1"></span>
+                                <span class="span5_1"></span>
+
+                            </p>
+                        </div>
+
+                        <!--文章图片-->
+                        <div class="pull-right my-pull-right">
+                            <img src="./images/1.jpg" alt="小图">
+                        </div>
+                    </a>
+
+                    <!--评论区域-->
+                    <div class="panel panel-default my-comment">
+                        <div class="panel-heading">最热评论(<span class="com-count">2</span>)<span class="close">X</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">青葱岁月</span>
+                                        <span class="com-span3">这个观点挺好！</span>
+                                        <span class="com-span4">47分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">假如我是一只小鸟</span>
+                                        <span class="com-span3">我不赞成这个观点。</span>
+                                        <span class="com-span4">1小时2分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+
+                            </ul>
+                            <div class="form-inline">
+                                <textarea class="form-control" rows="2"></textarea>
+                                <button type="button" class="btn btn-info">评论</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--内容2-->
+                <div class="list-group my-list-content">
+                    <a href="#" class="list-group-item clearfix">
+                        <div class="pull-left clearfix">
+                            <h5>我去参加了中国的火人节&nbsp;&nbsp;<small>-www.jiemian.com<span>&nbsp;段子</span></small></h5>
+                            <small>我们的驻店台球师小吴，去参加了“龙焰节”。这个活动的源头是美国的火人节，一个提倡包容、创造、
+                                反消费主义的狂欢节。小吴写下了在“龙焰节”的所见所闻。</small>
+                            <p class="clearfix my-p-left pull-left">
+                                <span class="span1 span_click1" title="推荐"><span class="span_count1">2</span></span>
+                                <span class="span2 span_click2" title="评论"><span class="span_count2" >3</span></span>
+                                <span class="span3 span_click3" title="加入私藏"><span>私藏</span></span>
+                                <span class="span4"></span>
+                                <span class="span6">lily</span>
+                                <span class="span5">10分钟前</span>
+                                <small class="span7">发布</small>
+                            </p>
+                            <p class="clearfix my-p-right pull-right">
+                                <span class="span1_1">分享到</span>
+                                <span class="span2_1"></span>
+                                <span class="span3_1"></span>
+                                <span class="span4_1"></span>
+                                <span class="span5_1"></span>
+
+                            </p>
+                        </div>
+
+                        <!--文章图片-->
+                        <div class="pull-right my-pull-right">
+                            <img src="./images/2.jpg" alt="小图">
+                        </div>
+                    </a>
+
+                    <!--评论区域-->
+                    <div class="panel panel-default my-comment">
+                        <div class="panel-heading">最热评论(<span class="com-count">3</span>)<span class="close">X</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">青葱岁月</span>
+                                        <span class="com-span3">这个观点挺好！</span>
+                                        <span class="com-span4">47分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">假如我是一只小鸟</span>
+                                        <span class="com-span3">我不赞成这个观点。</span>
+                                        <span class="com-span4">1小时2分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">蓝色的天空</span>
+                                        <span class="com-span3">你们说的都不对！</span>
+                                        <span class="com-span4">2小时12分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+
+                            </ul>
+                            <div class="form-inline">
+                                <textarea class="form-control" rows="2"></textarea>
+                                <button type="button" class="btn btn-info">评论</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--内容3-->
+                <div class="list-group my-list-content">
+                    <a href="#" class="list-group-item clearfix">
+                        <div class="pull-left clearfix">
+                            <h5>【顺便问下，还在用 RSS 的举个手~】RSSHub：据说这是 RSS 复兴运动&nbsp;&nbsp;<small>-www.yystv.cn<span>&nbsp;42区</span></small></h5>
+                            <small>RSSHub 是一款轻量、易于扩展的 RSS 生成器，基于 node.js 10，可以给「任何」内容生成 RSS 订阅源，目前支持 B 站、微博、即刻、网易云音乐、......</small>
+                            <p class="clearfix my-p-left pull-left">
+                                <span class="span1 span_click1" title="推荐"><span class="span_count1">1</span></span>
+                                <span class="span2 span_click2" title="评论"><span class="span_count2" >2</span></span>
+                                <span class="span3 span_click3" title="加入私藏"><span>私藏</span></span>
+                                <span class="span4"></span>
+                                <span class="span6">alex</span>
+                                <span class="span5">15分钟前</span>
+                                <small class="span7">发布</small>
+                            </p>
+                            <p class="clearfix my-p-right pull-right">
+                                <span class="span1_1">分享到</span>
+                                <span class="span2_1"></span>
+                                <span class="span3_1"></span>
+                                <span class="span4_1"></span>
+                                <span class="span5_1"></span>
+
+                            </p>
+                        </div>
+
+                        <!--文章图片-->
+                        <div class="pull-right my-pull-right">
+                            <img src="./images/3.jpg" alt="小图">
+                        </div>
+                    </a>
+
+                    <!--评论区域-->
+                    <div class="panel panel-default my-comment">
+                        <div class="panel-heading">最热评论(<span class="com-count">2</span>)<span class="close">X</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">青葱岁月</span>
+                                        <span class="com-span3">这个观点挺好！</span>
+                                        <span class="com-span4">47分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">假如我是一只小鸟</span>
+                                        <span class="com-span3">我不赞成这个观点。</span>
+                                        <span class="com-span4">1小时2分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+
+                            </ul>
+                            <div class="form-inline">
+                                <textarea class="form-control" rows="2"></textarea>
+                                <button type="button" class="btn btn-info">评论</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--内容4-->
+                <div class="list-group my-list-content">
+                    <a href="#" class="list-group-item clearfix">
+                        <div class="pull-left clearfix">
+                            <h5>成都楼市直击：七万人抢千套房，买房队伍绵延几公里&nbsp;&nbsp;<small>-estate.caijing.com.cn<span>&nbsp;挨踢1024</span></small></h5>
+                            <small>目前，成都人的日常，若不是正在售楼部交资料，就是在通往售楼部的路上；
+                                巨大的新旧房价剪刀差，使得挤破头“抢”新房成为部分成都人的第二职业，甚至于已成为主业。</small>
+                            <p class="clearfix my-p-left pull-left">
+                                <span class="span1 span_click1" title="推荐"><span class="span_count1">1</span></span>
+                                <span class="span2 span_click2" title="评论"><span class="span_count2" >2</span></span>
+                                <span class="span3 span_click3" title="加入私藏"><span>私藏</span></span>
+                                <span class="span4"></span>
+                                <span class="span6">alice</span>
+                                <span class="span5">8分钟前</span>
+                                <small class="span7">发布</small>
+                            </p>
+                            <p class="clearfix my-p-right pull-right">
+                                <span class="span1_1">分享到</span>
+                                <span class="span2_1"></span>
+                                <span class="span3_1"></span>
+                                <span class="span4_1"></span>
+                                <span class="span5_1"></span>
+
+                            </p>
+                        </div>
+
+                        <!--文章图片-->
+                        <div class="pull-right my-pull-right">
+                            <img src="./images/4.jpg" alt="小图">
+                        </div>
+                    </a>
+
+                    <!--评论区域-->
+                    <div class="panel panel-default my-comment">
+                        <div class="panel-heading">最热评论(<span class="com-count">2</span>)<span class="close">X</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">青葱岁月</span>
+                                        <span class="com-span3">这个观点挺好！</span>
+                                        <span class="com-span4">47分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">假如我是一只小鸟</span>
+                                        <span class="com-span3">我不赞成这个观点。</span>
+                                        <span class="com-span4">1小时2分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+
+                            </ul>
+                            <div class="form-inline">
+                                <textarea class="form-control" rows="2"></textarea>
+                                <button type="button" class="btn btn-info">评论</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--内容5-->
+                <div class="list-group my-list-content">
+                    <a href="#" class="list-group-item clearfix">
+                        <div class="pull-left clearfix">
+                            <h5>如何直观解释“魂系列”游戏的难度魅力和探索感？&nbsp;&nbsp;<small>-www.yystv.cn<span>&nbsp;42区</span></small></h5>
+                            <small>《魂》系列的探索流程就是一个不断缩小危险区的过程。</small>
+                            <p class="clearfix my-p-left pull-left">
+                                <span class="span1 span_click1" title="推荐"><span class="span_count1">1</span></span>
+                                <span class="span2 span_click2" title="评论"><span class="span_count2" >2</span></span>
+                                <span class="span3 span_click3" title="加入私藏"><span>私藏</span></span>
+                                <span class="span4"></span>
+                                <span class="span6">alex</span>
+                                <span class="span5">8分钟前</span>
+                                <small class="span7">发布</small>
+                            </p>
+                            <p class="clearfix my-p-right pull-right">
+                                <span class="span1_1">分享到</span>
+                                <span class="span2_1"></span>
+                                <span class="span3_1"></span>
+                                <span class="span4_1"></span>
+                                <span class="span5_1"></span>
+
+                            </p>
+                        </div>
+
+                        <!--文章图片-->
+                        <div class="pull-right my-pull-right">
+                            <img src="./images/5.jpg" alt="小图">
+                        </div>
+                    </a>
+
+                    <!--评论区域-->
+                    <div class="panel panel-default my-comment">
+                        <div class="panel-heading">最热评论(<span class="com-count">2</span>)<span class="close">X</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">青葱岁月</span>
+                                        <span class="com-span3">这个观点挺好！</span>
+                                        <span class="com-span4">47分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">假如我是一只小鸟</span>
+                                        <span class="com-span3">我不赞成这个观点。</span>
+                                        <span class="com-span4">1小时2分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+
+                            </ul>
+                            <div class="form-inline">
+                                <textarea class="form-control" rows="2"></textarea>
+                                <button type="button" class="btn btn-info">评论</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--内容6-->
+                <div class="list-group my-list-content">
+                    <a href="#" class="list-group-item clearfix">
+                        <div class="pull-left clearfix">
+                            <h5>我去参加了中国的火人节&nbsp;&nbsp;<small>-www.jiemian.com<span>&nbsp;段子</span></small></h5>
+                            <small>我们的驻店台球师小吴，去参加了“龙焰节”。这个活动的源头是美国的火人节，一个提倡包容、创造、
+                                反消费主义的狂欢节。小吴写下了在“龙焰节”的所见所闻。</small>
+                            <p class="clearfix my-p-left pull-left">
+                                <span class="span1 span_click1" title="推荐"><span class="span_count1">1</span></span>
+                                <span class="span2 span_click2" title="评论"><span class="span_count2" >2</span></span>
+                                <span class="span3 span_click3" title="加入私藏"><span>私藏</span></span>
+                                <span class="span4"></span>
+                                <span class="span6">lily</span>
+                                <span class="span5">10分钟前</span>
+                                <small class="span7">发布</small>
+                            </p>
+                            <p class="clearfix my-p-right pull-right">
+                                <span class="span1_1">分享到</span>
+                                <span class="span2_1"></span>
+                                <span class="span3_1"></span>
+                                <span class="span4_1"></span>
+                                <span class="span5_1"></span>
+
+                            </p>
+                        </div>
+
+                        <!--文章图片-->
+                        <div class="pull-right my-pull-right">
+                            <img src="./images/2.jpg" alt="小图">
+                        </div>
+                    </a>
+
+                    <!--评论区域-->
+                    <div class="panel panel-default my-comment">
+                        <div class="panel-heading">最热评论(<span class="com-count">2</span>)<span class="close">X</span></div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">青葱岁月</span>
+                                        <span class="com-span3">这个观点挺好！</span>
+                                        <span class="com-span4">47分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+                                <li class="list-group-item">
+                                    <small>
+                                        <span class="com-span1"></span>
+                                        <span class="com-span2">假如我是一只小鸟</span>
+                                        <span class="com-span3">我不赞成这个观点。</span>
+                                        <span class="com-span4">1小时2分钟前&nbsp;发布</span>
+                                    </small>
+                                </li>
+
+                            </ul>
+                            <div class="form-inline">
+                                <textarea class="form-control" rows="2"></textarea>
+                                <button type="button" class="btn btn-info">评论</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--分页-->
+                <nav aria-label="Page navigation" style="text-align: center;">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!--右侧列表内容-->
+            <div class="col-md-4">
+                <div class="my-a-img">
+                    <a href="#"><img src="./images/report.png" alt=""></a>
+                    <a href="#"><img src="./images/report_children.png" alt=""></a>
+                </div>
+
+                <a href="#">如何避免自己被封号</a>
+
+                <a href="#"><img src="./images/homepage_download.png" alt=""></a>
+
+                <div><span class="my-span-top">24小时全部<span> TOP 10</span></span></div>
+
+                <!--面板链接 ul li 内容-->
+                <div class="panel panel-default my-panel">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">最热榜</div>
+
+                    <!-- List group -->
+                    <ul class="list-group my-list-group">
+                        <li class="list-group-item">
+                            <span class="badge">123</span>
+                            <a href="#">现在这个社会把我们这些小姐妹都逼成啥样了</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">109</span>
+                            <a href="#">小姐姐眼睛迷死人</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">88</span>
+                            <a href="#">非常形象了</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">135</span>
+                            <a href="#">@成都交警：5月13日18时20分许，一辆牌照为川A7****在人民东路路口发生一起交通事故案件，
+                                此事故造成3车受损，3人轻伤。目前，3名伤者已送往医院，肇事嫌疑人已被警方控制,案件正在进一步调查中。</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">96</span>
+                            <a href="#">“她的样子那么妩媚，即使一个不懂美的奥秘的人见了，一定也会惊叹不止。”</a>​
+                        </li>
+                    </ul>
+                </div>
+
+                <!--广告图片-->
+                <a href="#"><img src="./images/img-footer.jpg" alt=""></a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--回到顶部图标-->
+    <div class="move-top" title="回到顶部"></div>
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <!--<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>-->
+    <script src="./jquery/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <!--<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="./bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+    <script src="./js/index.js"></script>
+
+</html>
