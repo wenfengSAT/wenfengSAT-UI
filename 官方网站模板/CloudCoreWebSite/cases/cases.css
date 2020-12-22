@@ -1,0 +1,281 @@
+.news-footer{
+    margin-top:90px;
+}
+.caDet-section{
+    padding-top:109px;
+    position: relative;
+    padding-bottom:50px;
+}
+.caDet-section h1,.caDet-section h2,.caDet-section h3,.caDet-section h4,.caDet-section h5,.caDet-section h6{
+    color: rgba(0,0,0,0.85);
+}
+.caDet-header{
+    text-align: center;
+}
+.caDet-header h2{
+    margin:50px 0 0 0;
+    line-height: 60px;
+}
+.caDet-header p{
+    line-height: 28px;
+    margin:10px 0;
+    color: rgba(0,0,0,0.65);
+}
+.caDet-divide{
+    width:100%;
+    height:1px;
+    background-color: #D9D9D9;
+    margin-bottom:50px;
+}
+.caDet-content .con-left{
+    padding-right:20px;
+    width:268px;
+    position: absolute;
+}
+.caDet-content .con-left p{
+    width:248px;
+    margin-bottom:20px;
+}
+/*最新案例悬浮效果*/
+.caDet-content .con-left .con-leftBox{
+    width:248px;
+    overflow: hidden;
+    height:139px;
+    position: relative;
+    margin-bottom:20px;
+}
+.caDet-content .con-left .con-leftBox img{
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    -ms-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+}
+.caDet-content .con-left .con-leftCover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+    display: table;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.caDet-content .con-left .con-leftCover>div{
+    display: table-cell;
+    padding: 20px 0;
+    vertical-align: middle;
+}
+.caDet-content .con-left .con-leftCover h4{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    display: none;
+    color:#fff;
+}
+.caDet-content .con-left .con-leftBox:hover img{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.caDet-content .con-left .con-leftBox:hover  .con-leftCover{
+    opacity: 0.9;
+}
+.caDet-content .con-left .con-leftBox:hover h4{
+    display: block;
+}
+
+
+.caDet-content .con-left p{
+    background: #202020;
+    border: 1px solid #E9E9E9;
+    border-radius: 8px;
+    padding:20px;
+    font-size: 18px;
+    position: relative;
+}
+.caDet-content .con-left p span{
+    padding-left:10px;
+    position: relative;
+}
+.caDet-content .con-left p a{
+    position: relative;
+    font-size: 18px;
+}
+/*.caDet-content .con-left p a:before{*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*bottom: -5px;*/
+    /*left: 36px;*/
+    /*width: 73px;*/
+    /*height: 12px;*/
+    /*background: #7095FE;*/
+/*}*/
+.caDet-content .con-right{
+    margin-left:268px;
+    border-left:1px solid #D9D9D9;
+    padding-left: 50px;
+    /*width:100%;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+}
+.caDet-content .con-right .case-video{
+    max-width: 800px;
+}
+.caDet-content .con-right img{
+    /*width:800px;*/
+}
+.caDet-content .con-right .con-widthBox{
+    max-width: 800px;
+}
+.caDet-section .caDet-more{
+    max-width: 800px;
+    padding:0;
+}
+.caDet-content .con-right img.case-pointer{
+    cursor: pointer;
+}
+
+
+/*左右切换箭头*/
+.fixed_a {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 999;
+    color:#fff;
+    background: rgba(0,0,0,0.10);
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: none;
+}
+.fixed_a.active{
+    display: block;
+}
+.fixed_a:hover{
+    color:#fff;
+    background: rgba(0,0,0,0.25);
+}
+.fixed_next.fixed_a{
+    left: 20px;
+}
+.fixed_prev.fixed_a{
+    right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .caDet-content.container{
+        padding:0;
+    }
+    .caDet-content .con-left{
+        display: none;
+    }
+    .caDet-content .con-right{
+        margin-left:0;
+        border:0;
+        padding-left: 0;
+    }
+    .fixed_a.active{
+        display: none;
+    }
+}
+@media only screen and (min-width: 767px) {
+    .caDet-content .con-left{
+        display: block;
+    }
+}
+
+/*底部左右案例悬浮效果*/
+.caDet-content .con-right .con-bottom{
+    position: relative;
+    margin:0;
+    margin-top:100px;
+    /* height:218px; */
+}
+.caDet-content .con-right .con-bottom>div.con-imgBox{
+    /* float: left; */
+    /* width:49%; */
+    /* height:218px; */
+    overflow: hidden;
+    padding:0;
+    /* position: absolute; */
+    /* left: 0%; */
+    /* top: 0px; */
+}
+.caDet-content .con-right .con-bottom>div.con-imgBox:not(:first-child){
+    /* left:50%; */
+}
+.caDet-content .con-right .con-bottom img{
+    width:100%;
+    /* height:100%; */
+    display: inline-block;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    -ms-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+}
+.caDet-content .con-right .con-bottom>div.con-imgBox:hover img{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.caDet-content .con-right .con-bottom>div.con-imgBox:hover div.con-cover{
+    opacity: 0.6;
+}
+.caDet-content .con-right .con-bottom>div.con-imgBox:hover h3{
+    display: block;
+}
+.caDet-content .con-right .con-bottom div.con-cover{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+    display: table;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.caDet-content .con-right .con-bottom>div>div>div{
+    display: table-cell;
+    /* padding: 50px 0; */
+    vertical-align: middle;
+}
+.caDet-content .con-right .con-bottom div.con-cover h3{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    display: none;
+    color:#fff;
+}
+.caDet-content .con-right .con-bottom>div:first-child{
+   /* margin-right:10px; */
+}
+@media only screen and (max-width: 767px) {
+    .caDet-content .con-right .con-bottom div.con-cover h3{
+        font-size: 16px;
+    }
+}
