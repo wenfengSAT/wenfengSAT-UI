@@ -1,0 +1,83 @@
+/*子页-求职招聘-手风琴下拉样式*/
+.bellows {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background:#fff;
+}
+
+.bellows__header {
+position: relative;
+padding: 15px 20px;
+border: 1px solid #fff;
+border-width: 0 0 1px;
+background: #F9F9F9;
+color: white;
+-webkit-tap-highlight-color: transparent; 
+}
+
+.bellows__header:hover{
+	cursor: pointer;
+	background-color: #F0F0F0;
+}
+
+.bellows__header::before, .bellows__header::after {
+content: '';
+position: absolute;
+top: 50%;
+right: 20px;
+z-index: 2;
+display: block;
+width: 16px;
+height: 4px;
+margin-top: -2px;
+background: #ff9900;
+pointer-events: none;
+-webkit-transition: -webkit-transform 0.25s ease-in-out;
+transition: transform 0.25s ease-in-out; 
+}
+
+.bellows__header::before {
+content: '';
+-webkit-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+transform: rotate(0deg); 
+}
+
+.bellows__header::after {
+-webkit-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg); 
+}
+
+.bellows__item.bellows--is-open > .bellows__header::before, .bellows__item.bellows--is-opening > .bellows__header::before {
+-webkit-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg); 
+}
+
+.bellows__item.bellows--is-open > .bellows__header::after, .bellows__item.bellows--is-opening > .bellows__header::after {
+-webkit-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+transform: rotate(360deg); 
+}
+
+.bellows__item:last-child > .bellows__header {
+border-bottom: 0; 
+}
+
+.bellows__header h1,
+.bellows__header h2,
+.bellows__header h3,
+.bellows__header h4 {
+margin: 0; 
+}
+
+.bellows__content {
+padding: 20px;
+border: 1px solid #ecf0f1; 
+}
+
+.bellows__content .bellows {
+margin-top: 20px; 
+}
