@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片点阵图</title>
+</head>
+<body>
+  <div>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas2"></canvas>
+  </div>
+  <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var canvas2 = document.getElementById("canvas2");
+    var ctx2 = canvas2.getContext("2d");
+
+    var image = new Image();
+    image.src = "./long.jpg";
+    image.setAttribute('crossOrigin', '');
+    image.onload = function () {
+      canvas.width = image.width;
+      canvas.height = image.height;
+
+      ctx.drawImage(image, 0, 0);
+
+      var imageData = ctx.getImageData(0, 0, image.width, image.height).data;
+      canvas2.width = image.width;
+      canvas2.height = image.height;
+      ctx2.fillStyle = "#ffffff";
+      ctx2.fillRect(0, 0, image.width, image.height);
+      // var gap = 5;
+      // for (var h = 0; h < image.height; h += gap) {
+      //   for (var w = 0; w < image.width; w += gap) {
+      //     var position = (image.width * h + w) * 4;
+      //     var r = imageData[position] 
+      //     var g = imageData[position + 1]
+      //     var b = imageData[position + 2];
+      //     if (r + g + b == 0) {
+      //       ctx2.fillStyle = "#000";
+      //       ctx2.fillRect(w, h, 4, 4);
+      //     }
+      //   }
+      // }
+      var gutter = 2;
+      var bw = 4;
+      var bh = 4;
+      for (let h = 0; h < image.height; h += (bh+ gutter)) {
+        for (let w = 0; w < image.width; w += (bw+ gutter)) {
+          var position = (image.width * (h + gutter + bh / 2) + (w + gutter + bw / 2)) * 4
+          // var position = (image.width * h + w) * 4
+          var r = imageData[position] 
+          var g = imageData[position + 1]
+          var b = imageData[position + 2];
+          var a = imageData[position + 3];
+          if (r + g + b === 0) {
+            // ctx2.fillStyle = "#000";
+            ctx2.fillStyle = `rgba(${r},${g},${b},${a/255})`;
+            ctx2.fillRect(w, h, bw, bh);
+          }
+        }
+        
+      }
+    }
+    
+  </script>
+</body>
+</html>
