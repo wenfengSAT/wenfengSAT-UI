@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>样式演示</title>
+  <link href="./collect.css" rel="stylesheet" type="text/css" />
+   <script>
+    var isUp = true
+      function changeClass(el) {
+        if (isUp) {
+          el.className = 'flip-wrapper is-flipped';
+        } else {
+          el.className = 'flip-wrapper';
+        }
+        isUp = !isUp
+      }
+  </script>
+</head>
+<body>
+  <!-- 蒙版动态显示 -->
+  <h5>吧鼠标放上去试试</h5>
+  <div class="overlay-container" style="width: 150px; height: 150px;">
+    <img class="coverd" style="width: 150px; height: 150px;" 
+      src="./chutian.jpg" alt="图片加载失败">
+    <div class="overlap">这是雏田</div>
+  </div>
+  <!-- 3D翻转效果 -->
+  <h5>点击下面区域试试</h5>
+  <div class="flip-wrapper" style="width: 200px;height: 200px;" onclick="changeClass(this)">
+    <div class="flip-a">
+      <img class="coverd" style="width: 200px; height: 200px;" src="./chutian.jpg" alt="图片加载失败">
+    </div>
+    <div class="flip-b">
+      <h1>这是雏田</h1>
+    </div>
+  </div>
+</body>
+</html>

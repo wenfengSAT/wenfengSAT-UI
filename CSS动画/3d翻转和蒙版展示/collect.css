@@ -1,0 +1,61 @@
+/* 3d翻转 */
+.flip-wrapper {
+  position: relative;
+  transition: all .25s ease-in-out;
+  transform-style: preserve-3d;
+}
+.flip-wrapper.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  transform: rotateY(-180deg);
+  text-align: center;
+  color: #FFFFFF;
+  
+  background: #a8ff78;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  backface-visibility: hidden;
+}
+.flip-a {
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* 图片放大、蒙版文字 */
+.overlay-container {
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  overflow: hidden;
+}
+.overlay-container > .coverd {
+  transition:all .3s;
+}
+.overlay-container > .overlap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 0;
+  font-size: 12px;
+  text-align: center;
+  color: transparent;
+  transition:all .3s;
+}
+.overlay-container:hover > .coverd {
+  transform: scale(1.3, 1.3);
+}
+.overlay-container:hover > .overlap {
+  color: #efefef;
+  padding-top: 40px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.6)
+}
