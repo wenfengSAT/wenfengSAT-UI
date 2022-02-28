@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    html,body,p,h1,label {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      height: 200px;
+      overflow: hidden;
+    }
+    .viewport {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform .5s ease-in-out;
+    }
+    .cell {
+      position: absolute;
+      width: 100%;
+      background: #8C8;
+      counter-increment: cell;
+    }
+    .cell::before {
+      content: counter(cell);
+      display: block;
+      text-align: center;
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="viewport" style="transform: translateX(0);">
+      <div class="cell" style="left: 0;" id="first"></div>
+      <div class="cell" style="left: 100%;"></div>
+      <div class="cell" style="left: 200%;"></div>
+      <div class="cell" style="left: -100%;" id="last"></div>
+    </div>
+  </div>
+  <div>
+    <button onclick="pre()">上一个</button>
+    <button onclick="next()">下一个</button>
+  </div>
+  <script>
+    var viewport = document.getElementsByClassName('viewport')[0]
+    const first = document.getElementById('first')
+    const last = document.getElementById('last')
+    let tran = 0
+    function pre() {
+      tran += 100
+      viewport.style = `transform: translateX(${tran}%);`
+      setStyle()
+      // gradualChange(tran+100)
+    }
+    function next() {
+      tran -= 100
+      viewport.style = `transform: translateX(${tran}%);`
+      setStyle()
+      // gradualChange(tran - 100)
+    }
+    function setStyle() {
+      setTimeout(() => {
+        if (tran === 0 || tran === -400) {
+          currentFirst()
+        } else if (tran === -300 || tran === 100) {
+          currentLast()
+        } else {
+          currentMiddle()
+        }
+      }, 500);
+    }
+    function currentMiddle() {
+      first.style = 'left: 0'
+      last.style = 'left: 300%'
+    }
+    function currentFirst() {
+      console.log('在开始', tran);
+      last.style = 'left: -100%'
+      first.style = 'left: 0'
+      tran = 0
+      viewport.style = `transform: translateX(${tran}%);transition: none;`
+    }
+    function currentLast() {
+      console.log('在结束', tran);
+      last.style = 'left: 300%'
+      first.style = 'left: 400%'
+      tran = -300
+      viewport.style = `transform: translateX(${tran}%);transition: none;`
+    }
+    // function gradualChange(target) {
+    //   var isAdd = tran < target;
+    //   var isEnd = false
+    //   function step() {
+    //     if (isAdd) {
+    //       tran += 3
+    //     } else {
+    //       tran -= 3
+    //     }
+        
+    //     isEnd = isAdd ? tran >= target : target >= tran;
+    //     console.log('position', tran, isEnd);
+    //     if (!isEnd) {
+    //       requestAnimationFrame(step)
+    //     }
+    //     viewport.style = `transform: translateX(${tran}%);`
+    //   }
+    //   step()
+    // }
+  </script>
+</body>
+</html>

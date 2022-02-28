@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>溢出滚动兼容ie10</title>
+  <style>
+    .wrap {
+      position: relative;
+      width: 300px;
+      margin: 200px;
+      overflow: hidden;
+      background: coral;
+      padding: 20px;
+    }
+
+    .region {
+      display: flex;
+      counter-reset: count;
+      transition: transform .2s ease-in-out;
+    }
+    
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background: #ECF0F1;
+      border-radius: 10px;
+    }
+
+    .item+.item {
+      margin-left: 10px;
+    }
+
+    .item::before {
+      counter-increment: count;
+      content: counter(count);
+      font-size: 24px;
+      vertical-align: middle;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      font-size: 20px;
+      transition: transform .2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .btn-left {
+      left: 0;
+      transform: translate(-100%, -50%);
+    }
+
+    .btn-left::before {
+      content: "\25C4";
+    }
+
+    .btn-right {
+      right: 0;
+      transform: translate(100%, -50%);
+    }
+
+    .btn-right::before {
+      content: "\25BA";
+    }
+
+    .wrap:hover .btn-left,
+    .wrap:hover .btn-right {
+      transform: translate(0, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap" id="wrap">
+    <div class="region" id="region">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <button id="left" class="btn btn-left" onclick="elScroll(100)"></button>
+    <button id="right" class="btn btn-right" onclick="elScroll(-100)"></button>
+  </div>
+  <script>
+    // 此方法时通过元素scroll左右滚动，优点不必进行过多的计算，缺点就是不支持ie
+    var region = document.getElementById('region')
+    var leftBtn = document.getElementById('left')
+    var rightBtn = document.getElementById('right')
+
+    var rcw = region.clientWidth
+    var rsw = region.scrollWidth
+    var maxOffset = rsw - rcw
+    var offset = 0
+    rightBtn.style.display = 'none'
+    if (rsw < rcw) {
+      leftBtn.style.display = 'none'
+    }
+
+    function elScroll(range) {
+      offset += range
+      if (offset <= 0) {
+        offset = 0
+        rightBtn.style.display = 'none'
+      } else {
+        rightBtn.style.display = 'initial'
+      }
+
+      if (offset > maxOffset) {
+        offset = maxOffset
+        leftBtn.style.display = 'none'
+      } else {
+        leftBtn.style.display = 'initial'
+      }
+      region.style= `transform: translateX(${-offset}px)`
+    }
+  </script>
+</body>
+
+</html>

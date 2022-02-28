@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>溢出滚动</title>
+  <style>
+    .wrap {
+      display: flex;
+      position: relative;
+      width: 300px;
+      margin: 200px;
+      overflow: hidden;
+      counter-reset: count;
+      background: coral;
+      padding: 20px;
+    }
+    .region {
+      display: flex;
+      overflow-x: auto;
+    }
+    .region::-webkit-scrollbar {
+      display: none;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background: #ECF0F1;
+      border-radius: 10px;
+    }
+    .item + .item {
+      margin-left: 10px;
+    }
+    .item::before {
+      counter-increment: count;
+      content: counter(count);
+      font-size: 24px;
+      vertical-align: middle;
+    }
+    .btn {
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      font-size: 20px;
+      transition: transform .2s ease-in-out;
+      cursor: pointer;
+    }
+    .btn-left {
+      left: 0;
+      transform: translate(-100%, -50%);
+    }
+    .btn-left::before {
+      content: "\25C4";
+    }
+    .btn-right {
+      right: 0;
+      transform: translate(100%, -50%);
+    }
+    .btn-right::before {
+      content: "\25BA";
+    }
+    .wrap:hover .btn-left,
+    .wrap:hover .btn-right {
+      transform: translate(0, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="wrap">
+    <div class="region" id="region">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <button id="left" class="btn btn-left" onclick="elScroll(100)"></button>
+    <button id="right" class="btn btn-right" onclick="elScroll(-100)"></button>
+  </div>
+  <script>
+    // 此方法时通过元素scroll左右滚动，优点不必进行过多的计算，缺点就是不支持ie
+    const region = document.getElementById('region')
+    const leftBtn = document.getElementById('left')
+    const rightBtn = document.getElementById('right')
+
+    const rcw = region.clientWidth
+    const rsw = region.scrollWidth
+
+    rightBtn.style.display = 'none'
+    if (rsw < rcw) {
+      leftBtn.style.display = 'none'
+    }
+    // 一次性滚动距离测试使用100,当然这个可以根据实际需要得出一次滚动距离
+    function elScroll(range) {
+      const ol = region.scrollLeft
+      
+      const left = ol + range
+      if (left > 0) {
+        rightBtn.style.display = 'initial'  
+      } else {
+        rightBtn.style.display = 'none'
+      }
+      if (rcw + left >= rsw) {
+        leftBtn.style.display = 'none'
+      } else {
+        leftBtn.style.display = 'initial'
+      }
+      region.scroll({
+        left,
+        behavior: 'smooth'
+      })
+    }
+  </script>
+</body>
+</html>
