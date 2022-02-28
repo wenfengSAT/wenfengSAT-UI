@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>color picker</title>
+  <style>
+    .color-wrap {
+      width: 158px;
+      height: 186px;
+      padding: 15px 5px 5px 5px;
+      background: #1f2a3f;
+      border: 1px solid #3a5376;
+    }
+
+    .color-board {
+      position: relative;
+      width: 148px;
+      height: 88px;
+      overflow: hidden;
+    }
+    .jk-saturation {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .jk-saturation--white {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg,#fff,hsla(0,0%,100%,0));
+    }
+    .jk-saturation--black {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(0deg,#000,transparent);
+    }
+    .jk-saturation-pointer {
+      cursor: pointer;
+      position: absolute;
+    }
+    .jk-saturation-circle {
+      width: 4px;
+      height: 4px;
+      box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgb(0 0 0 / 30%), 0 0 1px 2px rgb(0 0 0 / 40%);
+      border-radius: 50%;
+      transform: translate(-2px,-2px);
+    }
+
+
+    .color-bar {
+      width: 103px;
+      height: 10px;
+      opacity: 1;
+      background: linear-gradient(90deg,#ff2600, #fafb01 19%, #02f90d 35%, #02fdf8 50%, #2433ff 65%, #db3cfe 82%, #f50705);
+      border: 1px solid #496092;
+    }
+  </style>
+</head>
+<body>
+  <input type="color">
+  <div class="color-wrap">
+    <!-- 去色面板 -->
+    <div class="color-board">
+      <div class="jk-saturation" style="background: rgb(0, 101, 255);">
+        <div class="jk-saturation--white"></div>
+        <div class="jk-saturation--black"></div>
+        <div class="jk-saturation-pointer" style="top: 51.4167%; left: 71.4488%;">
+          <div class="jk-saturation-circle"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 选色条 -->
+    <div class="color-bar">
+
+    </div>
+  </div>
+</body>
+</html>
