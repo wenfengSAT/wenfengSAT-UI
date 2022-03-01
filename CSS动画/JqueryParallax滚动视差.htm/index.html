@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Parallar视差</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.6.1.min.js"></script>
+    <!-- 简单实现的滚动视差 -->
+    <!-- <script src="js/par.js"></script> -->
+    <!-- 实现parallax.js完成更丰富的功能 -->
+    <script src="js/parallax.js"></script>
+    <script src="chrome-extension://ocggccaacacpienfcgmgcihoombokbbj/pages/client/livestartpage-message-add.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <h1>Jquery视差滚动示例-世界航空航天史</h1>
+        </header>
+         <!-- 导航部分 -->
+         <nav id="primary">
+            <ul>
+                <li>
+                    <a href="#" class="jump_to n1" rel="1">章节</a>
+                    <h2>第一次载人飞行</h2>
+                </li>
+                <li>
+                    <a href="#" class="jump_to n2" rel="2">章节</a>
+                    <h2>无骨降落伞</h2>
+                </li>
+                <li>
+                    <a href="#" class="jump_to n3" rel="3">章节</a>
+                    <h2>穿越英吉利海峡</h2>
+                </li>
+                <li>
+                    <a href="#" class="jump_to n4" rel="4">章节</a>
+                    <h2>关于</h2>
+                </li>
+            </ul>
+        </nav>
+        <!-- 内容 -->
+        <div id="content">
+            <article id="article1">
+                <section class="section">
+                    <h2>第一次载人飞行</h2>
+                    <p>1783年11月21日，孟戈菲兄弟(约瑟夫—米歇尔·孟戈菲 Joseph-Michel Montgolfier 和 
+                        雅克—艾蒂安·孟戈菲  Jacques-Étienne Montgolfier)用热气球进行了第一次载人飞行
+                        实验。气球从巴黎西部的布洛涅林园起飞，在空中持续了25分钟，最后降落在今巴黎十三区
+                        的意大利广场附近。</p>
+                </section>
+                <footer class="next_prev">
+                    <i class="spacing_line"></i>
+                    <a class="jump_to next" href="#" rel="2">Next</a>
+                </footer>
+            </article>
+
+            <article id="article2">
+                <section class="section">
+                    <h2>无骨降落伞</h2>
+                    <p>1797年安德烈-雅克·加纳林(André-Jacques Garnerin)在巴黎蒙梭公园公开表演，
+                        他从1000米空中跃下，并靠丝质降落伞成功着陆。之后他开始在北欧进行巡演，
+                        并于1802年在伦敦从惊人的2400米的高度跃下。</p>
+                </section>
+                <footer class="next_prev">
+                    <a class="jump_to prev" rel="1">Top</a>
+                    <i class="spacing_line"></i>
+                    <a class="jump_to next" href="#" rel="3">Next</a>
+                </footer>
+            </article>
+
+            <article id="article3">
+                <section class="section">
+                    <h2>穿越英吉利海峡</h2>
+                    <p>1785年1月7日，法国气球飞行家让-皮埃尔·布兰查德(Jean-Pierre Blanchard)和
+                        美国医生约翰·杰弗里斯(John Jeffries)从多佛堡乘氢气球出发。在路途中，
+                        他们不得不把所有东西都扔出气球外才能维持漂浮状态。不过最终在两个半小时后，
+                        他们两个还是毫发无损地到达了法国。</p>
+                </section>
+                <footer class="next_prev">
+                    <a class="jump_to prev" rel="2">Top</a>
+                    <i class="spacing_line"></i>
+                    <a class="jump_to next" href="#" rel="4">Next</a>
+                </footer>
+            </article>
+
+            <article id="article4">
+                <section class="section">
+                    <h2>关于</h2>
+                    <p>这是一个基于jQuery的视差滚动示例。<br>详细内容，<a href="#">请查看原文</a></p>
+                    <p>By: www.bluesdream.com</p>
+                </section>
+                <footer class="next_prev">
+                    <a class="jump_to prev" rel="3">Top</a>     
+                    <i class="spacing_line"></i>
+                </footer>
+            </article>
+        </div>
+
+            <!-- 气球、风景图片层 -->
+        <div id="parallax_area1">
+            <img class="parallax_img p1_1" src="img/balloon.png" width="529" height="757" alt="Montgolfier hot air balloon">
+            <img class="parallax_img p1_2" src="img/balloon2.png" width="603" height="583" alt="Frameless parachute">
+            <img class="parallax_img p1_3" src="img/balloon3.png" width="446" height="713" alt="Blanchard's air balloon">
+            <img class="parallax_img p1_4" src="img/ground.png" width="1104" height="684" alt="Landscape with trees and cows">
+        </div>
+        <!-- 云层1 -->
+        <div id="parallax_area2">
+            <img class="parallax_img p2_1" src="img/cloud1.png" width="488" height="138" alt="cloud">
+            <img class="parallax_img p2_2" src="img/cloud1.png" width="488" height="138" alt="cloud">
+            <img class="parallax_img p2_3" src="img/cloud1.png" width="488" height="138" alt="cloud">
+            <img class="parallax_img p2_4" src="img/cloud1.png" width="488" height="138" alt="cloud">
+            <img class="parallax_img p2_5" src="img/cloud1.png" width="488" height="138" alt="cloud">
+        </div>
+        <!-- 云层2 -->
+        <div id="parallax_area3">
+            <img class="parallax_img p3_1" src="img/cloud2.png" width="311" height="105" alt="Montgolfier hot air balloon">
+            <img class="parallax_img p3_2" src="img/cloud2.png" width="311" height="105" alt="Frameless parachute">
+            <img class="parallax_img p3_3" src="img/cloud2.png" width="311" height="105" alt="Blanchard's air balloon">
+            <img class="parallax_img p3_4" src="img/cloud2.png" width="311" height="105" alt="Landscape with trees and cows">
+        </div>
+       
+    </div>
+</body>
+</html>
