@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="file" onchange="onChange(event)">
+  <script>
+    // const reader = new FileReader()
+    // reader.onload = (event) => {
+    //   console.log(event);
+    // }
+    // reader.readAsText('')
+    function onChange(event) {
+      var file = event.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function (event) {
+        // 文件里的文本会在这里被打印出来
+        console.log(event.target.result)
+        console.log(event.target.result.split(/\r?\n/));
+        // this.lines = input ? input.split(/\r?\n/) : [];
+      };
+
+      reader.readAsText(file);
+    }
+  </script>
+</body>
+</html>
+
+checkRow(row, index) {
+const { name } = this.$route.query;
+if (name.includes('矿山监管')) {
+this.$router.push({ name: 'dig' });
+return;
+}
+localStorage.setItem('spot-model', JSON.stringify(this.$refs.search.model));
+const { pageNo, pageSize } = this.$refs.search.model;
+const num = (pageNo - 1) * pageSize + index;
+localStorage.setItem('spot-model-index', num);
+this.$router.push({ name: 'spot-detail', query: { type: 'model' } });
+},
+
+// 演示使用的静态页面
+const demosRouter = [
+{
+path: '/pub/dig',
+name: 'dig',
+meta: {
+title: '矿山监管',
+noToken: true,
+noAuth: true,
+},
+component: ()=> import('@/views/demos/diggings/index.vue'),
+},
+{
+path: '/pub/dig/map',
+name: 'dig-map',
+meta: {
+title: '矿山监管地图',
+parent: '/all',
+noHead: true,
+noSide: true,
+},
+component: ()=> import('@/views/demos/diggings/BizMap.vue'),
+},
+];
