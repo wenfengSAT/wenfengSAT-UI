@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #disc-box {
+            position: relative;
+        }
+        .disc-spinning {
+            display: inline-block;
+            font-size: 0;
+        }
+        .point {
+            position: absolute;
+            left: 164px;
+            top: 75px;
+        }
+        .rate {
+            animation: animated_div 5s ease 1 forwards;
+        }
+        @keyframes animated_div {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+    <script>
+        var deg = 0
+        var incraese = 0
+        function rotate(element) {
+            // var reg = new RegExp("(\\s|^)rate(\\s|$)")
+            // element.className = element.className.replace(reg, " ")
+            // setTimeout(() => {
+            //     element.classList.add("rate")
+            // }, 0);
+            if (deg - incraese > 800) incraese += 13
+            else if (deg - incraese > 700)  incraese += 12
+            else if (deg - incraese > 600)  incraese += 11
+            else if (deg - incraese > 500)  incraese += 10
+            else if (deg - incraese > 400)  incraese += 9
+            else if (deg - incraese > 300)  incraese += 8
+            else if (deg - incraese > 200)  incraese += 7
+            else if (deg - incraese > 100)  incraese += 6
+            else if (deg - incraese > 50)  incraese += 5
+            else if (deg - incraese > 20)  incraese += 4
+            else if (deg - incraese > 10)  incraese += 3
+            else if (deg - incraese > 5)  incraese += 2
+            else if (deg - incraese > 3)  incraese += 1
+            else if (deg - incraese > 2)  incraese += 0.5
+            else if (deg - incraese >= 1)  incraese += 1
+            console.log(incraese + "----------" + deg)
+            if (incraese < deg) {
+                setTimeout(() => {
+                    rotate(element)
+                }, 16.7)
+                element.style.transform = "rotate(" + incraese + "deg)"
+            } else {
+                incraese = 0
+            }
+        }
+        function radom (e) {
+            if (incraese !== 0) return
+            deg = 1000 + (Math.random() * 500>>>0)
+            rotate(e)
+        }
+    </script>
+    <script src="chrome-extension://ocggccaacacpienfcgmgcihoombokbbj/pages/client/livestartpage-message-add.js"></script>
+</head>
+<body>
+    <body>
+        <div id="base" class="">
+    
+          <!-- Unnamed (Group) -->
+          <div id="disc-box">
+    
+            <!-- Unnamed (Image) -->
+            <div id="u1" class="disc-spinning" style="cursor: pointer;" onclick="radom(this)">
+              <img id="u1_img" class="img " src="img/u1.png" tabindex="0">
+            </div>
+    
+            <!-- Unnamed (Triangle) -->
+            <div id="u2" class="point">
+              <img id="u2_img" class="img " src="img/u2.png">
+            </div>
+    
+          </div>
+        </div>
+      
+    
+    </body>
+</body>
+</html>
