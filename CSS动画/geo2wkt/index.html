@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    html,body {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      padding: 16px;
+    }
+    .geo {
+      flex: 1;
+      margin-right: 16px;
+    }
+    .wkt {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .polygon {
+      flex: 1;
+    }
+    .multipolygon {
+      flex: 1;
+      margin-top: 16px;
+    }
+    textarea {
+      padding: 16px;
+      font-size: 16px;
+    }
+    textarea.error {
+      border: 1px solid red;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <textarea class="geo" name="" id="" cols="30" rows="10" oninput=""></textarea>
+    <div class="wkt">
+      <textarea class="polygon" name="" id="" cols="30" rows="10"></textarea>
+      <textarea class="multipolygon" name="" id="" cols="30" rows="10"></textarea>
+    </div>
+  </div>
+  <script>
+    var geo = document.getElementsByClassName('geo')[0]
+    var polygon = document.getElementsByClassName('polygon')[0]
+    var mult = document.getElementsByClassName('multipolygon')[0]
+    var geoData = {}
+    geo.addEventListener('input', function (e) {
+      try {
+        geoData = JSON.parse(e.target.value)
+        mult.value = geo2mult(geoData)
+        polygon.value = geo2polygon(geoData)
+        geo.className = 'geo'
+      } catch (error) {
+        geo.className = 'geo error'
+      }
+    })
+    // 将数组转化为((lng lat, lng1 lat2))
+    function arr2polygon(arr) {
+      var str = '(('
+      arr.forEach(item => {
+        str += `${item[0]} ${item[1]}, `
+      })
+      return `${str.slice(0, -2)}))`
+    }
+    // 将geoJson转化为POLYGON ((lng lat, lng1 lat1))
+    function geo2polygon(data) {
+      var str = ''
+      data.features.forEach((item) => {
+        str += `POLYGON ${arr2polygon(item.geometry.rings[0])}\n\n`
+      });
+      return str
+    }
+    // 将geoJson转化为MULTIPOLYGON (((lng lat, lng1 lat1)),((lng2 lat2, lng3 lat3)))
+    function geo2mult(data) {
+      let mult = 'MULTIPOLYGON ('
+      data.features.forEach((item) => {
+        mult += `${arr2polygon(item.geometry.rings[0])},`;
+      });
+      mult = `${mult.slice(0, -1)})`;
+      return mult
+    }
+  </script>
+</body>
+</html>
