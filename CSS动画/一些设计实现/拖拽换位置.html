@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      left: 200px;
+      right: 200px;
+      width: 200px;
+      height: 200px;
+    }
+    .item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      width: 50%;
+      font-size: 30px;
+    }
+    #one {
+      background: coral;
+    }
+    #two {
+      background: cyan;
+    }
+    #three {
+      background: darkkhaki;
+    }
+    #four {
+      background: darkseagreen;
+    }
+  </style>
+</head>
+<body>
+  <p>对于动画如何添加，当前尚未有任何思路</p>
+  <div class="wrap">
+    <div id="one" style="order: 1;" class="item" draggable="true"
+      ondragstart="drag(event)"
+      ondrop="drop(event)" ondragover="allowDrop(event)"> 1 </div>
+    <div id="two" style="order: 2;" class="item" draggable="true"
+      ondragstart="drag(event)"
+      ondrop="drop(event)" ondragover="allowDrop(event)"> 2 </div>
+    <div id="three" style="order: 3;" class="item" draggable="true"
+      ondragstart="drag(event)"
+      ondrop="drop(event)" ondragover="allowDrop(event)"> 3 </div>
+    <div id="four" style="order: 4;" class="item" draggable="true"
+      ondragstart="drag(event)"
+      ondrop="drop(event)" ondragover="allowDrop(event)"> 4 </div>
+  </div>
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("Text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("Text");
+      var el = document.getElementById(data);
+      var elOrder = el.style.order
+      var targetOrder = ev.target.style.order
+      el.style.order = targetOrder
+      ev.target.style.order = elOrder
+    }
+  </script>
+</body>
+</html>

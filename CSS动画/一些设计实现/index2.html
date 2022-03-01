@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .four-bugle {
+      width: 600px;
+      height: 400px;
+      background: #ED9135;
+      clip-path: polygon(
+        50px 0,
+        calc(100% - 50px) 0,
+        100% 50px,
+        100% calc(100% - 50px),
+        calc(100% - 50px) 100%,
+        50px 100%,
+        0 calc(100% - 50px),
+        0 50px
+      );
+      /* outline: 13px solid red;
+      box-sizing: border-box;
+      border: 1px solid red; */
+    }
+    .wrap {
+      /* filter: drop-shadow(0 0 10px red)
+              drop-shadow(10px 10px 0 red)
+              drop-shadow(-10px -10px 0 red)
+              drop-shadow(0 0 0 red)
+              drop-shadow(0 0 0 red)
+              drop-shadow(0 0 0 red)
+              drop-shadow(0px 2px 12px rgba(0,23,59,1)); */
+      /* filter: drop-shadow(0 0 1px red)
+              drop-shadow(0 0 0 red)
+              drop-shadow(0 0 0 red)
+              drop-shadow(0 0 0 red)
+              drop-shadow(0 0 0 red)
+              drop-shadow(0px 2px 12px rgba(0,23,59,1)); */
+      /* filter: drop-shadow(10px 10px 0 red)
+              drop-shadow(-10px -10px 0 red); */
+
+      /* filter: drop-shadow(0 10px 0 red)
+              drop-shadow(0 -10px 0 red)
+              drop-shadow(10px 0 0 red)
+              drop-shadow(-10px 0 0 red)
+              drop-shadow(0px 2px 12px rgba(0,23,59,1)); */
+      transition: filter .5s;
+    }
+    .wrap:hover {
+      filter: drop-shadow(0 10px 0 red)
+              drop-shadow(0 -10px 0 red)
+              drop-shadow(10px 0 0 red)
+              drop-shadow(-10px 0 0 red)
+              drop-shadow(0px 2px 12px rgba(0,23,59,1));
+    }
+  </style>
+</head>
+<body>
+  <div style="padding: 200px;">
+    <div class="wrap">
+      <div class="four-bugle"></div>
+    </div>
+  </div>
+</body>
+</html>
