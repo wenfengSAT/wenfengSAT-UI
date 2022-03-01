@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body,div {
+      margin: 0;
+      padding: 0;
+    }
+    .Site {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .Site-content {
+      flex: 1;
+    }
+  </style>
+</head>
+<body class="Site">
+  <header style="background: darkcyan;">header</header>
+  <main class="Site-content" id="main">
+    
+  </main>
+  <footer style="background: cyan;">footer</footer>
+  <script>
+    const main = document.getElementById('main');
+    for (let i = 0; i < 100; i++) {
+      const h1 = document.createElement('h1')
+      h1.innerHTML = `${i} h1`
+      main.appendChild(h1)
+    }
+  </script>
+</body>
+</html>
