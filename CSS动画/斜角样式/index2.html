@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      /* background: green; */
+    }
+    .top-box {
+        position: relative;
+        display: block;
+        width: 90%;
+        min-height: 230px;
+        margin: 0 auto 40px;
+        padding: 0 10px 80px;
+        background: #fff;
+        background: linear-gradient(-135deg, transparent 20px, rgba(0, 0, 0, 0.342) 0);
+        box-sizing: border-box;
+    }
+    
+    /* 左下角小三角 */
+    .top-box:before, .top-box:after {
+        position: absolute;
+        left: -2px;
+        bottom: -30px;
+        display: inline-block;
+        content: '';
+        height: 0;
+        border-left: 15px solid #0B113C;
+        border-top: 15px solid #0B113C;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+    }
+    
+    .top-box:after {
+        left: 0;
+        bottom: -26px;
+        border-left: 15px solid #fff;
+        border-top: 15px solid #fff;
+    }
+    
+    /* 切角矩形描边 */
+    .top-box-border {
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        content: '';
+        background: #000;
+        background: linear-gradient(-135deg, transparent 20px, #0B113C 0px);
+        z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-box">
+  <div class="top-box-border"></div>                  
+</div>
+</body>
+</html>

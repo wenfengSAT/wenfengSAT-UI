@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      height: 500px;
+      width: 500px;
+      padding-top: 100px;
+    }
+    .rectangle2 {
+      margin-top: 50px;
+      height: 100px;
+      width: 300px;
+      background: linear-gradient(-75deg, transparent 30px, #58a 0) right,
+                  linear-gradient(75deg, transparent 30px, #58a 0) left;
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+    }
+    .rectangle {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      /* background: #58a; */
+      background: linear-gradient(-45deg, transparent 7.5px, #58a 0) right,
+                  linear-gradient(45deg, transparent 7.5px, #58a 0) left;
+      /* clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 12.5px),
+        calc(100% - 12.5px) 100%,
+        12.5px 100%,
+        0 calc(100% - 12.5px)
+      ); */
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+      border: 1px solid blue;
+      /* border-right: 1px solid red; */
+    }
+    .rectangle::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      bottom: -8px;
+      left: -8px;
+      transform: rotate(46deg);
+      background: transparent;
+      border-top: 1px solid blue;
+    }
+    .rectangle::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      bottom: -8px;
+      right: -8px;
+      transform: rotate(46deg);
+      background: transparent;
+      border-left: 1px solid blue;
+    }
+
+    .rectangle3 {
+      position: relative;
+      margin-top: 50px;
+      margin-left: 50px;
+      height: 100px;
+      width: 300px;
+      background: #58a;
+    }
+    .rectangle3::before {
+      position: absolute;
+      content: "";
+      right: -20px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid transparent;
+      border-left: 20px solid #000000;
+    }
+    .rectangle3::after {
+      position: absolute;
+      content: "";
+      left: -30px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid transparent;
+      border-right: 30px solid rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="rectangle"></div>
+    <div class="rectangle2"></div>
+    <div class="rectangle3"></div>
+  </div>
+</body>
+</html>
