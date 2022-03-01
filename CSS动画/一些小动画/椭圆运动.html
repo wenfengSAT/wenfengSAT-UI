@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes wrap-round {
+      0%{
+        transform: scale(1, .5) rotate(0turn);
+      }
+      25% {
+        transform: scale(1, .5) rotate(0.25turn);
+      }
+      50% {
+        transform: scale(1, .5) rotate(0.5turn);
+      }
+      75% {
+        transform: scale(1, .5) rotate(0.75turn);
+      }
+      100% {
+        transform: scale(1, .5) rotate(1turn);
+      }
+    }
+    @keyframes round {
+      0%{
+        transform: translateX(100px) rotate(0turn) scale(1, 2) ;
+      }
+      25% {
+        transform: translateX(100px) rotate(-0.25turn) scale(1, 2);
+      }
+      50% {
+        transform: translateX(100px) rotate(-0.5turn) scale(1, 2);
+      }
+      75% {
+        transform: translateX(100px) rotate(-0.75turn) scale(1, 2);
+      }
+      100% {
+        transform: translateX(100px) rotate(-1turn) scale(1, 2);
+      }
+    }
+    .wrap {
+      display: inline-block;
+      position: relative;
+      margin: 200px;
+      animation: wrap-round 5s linear infinite;
+    }
+    .trail {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+      border-radius: 50%;
+    }
+    .round {
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      width: 20%;
+      height: 20%;
+      background: #d2f0f4;
+      border-radius: 50%;
+      animation: round 5s linear infinite;
+    }
+    .wrap:hover {
+      animation-play-state: paused;
+    }
+    .wrap:hover .round {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="trail"></div>
+    <div class="round"></div>
+  </div>
+</body>
+</html>

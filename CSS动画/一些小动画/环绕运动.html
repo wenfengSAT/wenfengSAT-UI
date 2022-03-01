@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes round {
+      from {
+        transform: rotate(0) translate(150px);
+      }
+      to {
+        transform: rotate(360deg) translate(150px);
+      }
+    }
+    .wrap {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 200px;
+    }
+    .earth {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #4B5CC4;
+      transform: scaleY(1.3);
+    }
+    .moon {
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      width: 20%;
+      height: 20%;
+      background: #D2F0F4;
+      border-radius: 50%;
+      animation: round 5s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="earth"></div>
+    <div class="moon"></div>
+  </div>
+</body>
+</html>

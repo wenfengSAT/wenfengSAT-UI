@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes magnify {
+      20% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+      }
+      40% {
+        transform: scale(1.3);
+        animation-timing-function: cubic-bezier(.7,.2,1,0);
+      }
+      56%, 100% {
+        transform: scale(1);
+        animation-timing-function: linear;
+      }
+    }
+    @keyframes hit {
+      0%, 72%, 100% {
+        transform: translateX(0) rotate(45deg);
+        animation-timing-function: linear;
+      }
+      55% {
+        transform: translateX(0) rotate(45deg);
+        animation-timing-function: cubic-bezier(.5,.5,.5,.5);
+      }
+      61% {
+        transform: translateX(-20px) rotate(45deg);
+      }
+      66% {
+        transform: translateX(16px) rotate(45deg);
+      }
+    }
+    @keyframes hited {
+      0%, 100% {
+        transform: translateX(0);
+        animation-timing-function: linear;
+      }
+      65% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(.5,0,.5,1);
+      }
+      79% {
+        transform: translateX(30px);
+      }
+    }
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      width: 200px;
+      margin: 100px;
+    }
+    .wrap > .title {
+      flex-shrink: 0;
+      height: 40px;
+      width: 100%;
+      border-radius: 20px;
+      background: bisque;
+      margin-bottom: 16px;
+      animation-name: magnify;
+      animation-duration: 3.6s;
+      animation-iteration-count: infinite;
+    }
+    .wrap > .side {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #3D82F1;
+      margin-right: 16px;
+      animation-name: hit;
+      animation-duration: 3.6s;
+      animation-iteration-count: infinite;
+    }
+    .wrap > .section {
+      flex: auto;
+      border-radius: 10px;
+      background: cornsilk;
+      animation-name: hited;
+      animation-duration: 3.6s;
+      animation-iteration-count: infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="title"></div>
+    <div class="side"></div>
+    <div class="section"></div>
+  </div>
+</body>
+</html>
