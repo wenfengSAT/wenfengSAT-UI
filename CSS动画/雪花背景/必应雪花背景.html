@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>必应遇到的雪花背景</title>
+  <style>
+    html, body, a, div, span, table, tr, td, strong, ul, ol, li, h1, h2, h3, p, input {
+      font-weight: inherit;
+      font-size: inherit;
+      list-style: none;
+      border-spacing: 0;
+      border: 0;
+      border-collapse: collapse;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
+    html, body {
+      font-family: "Segoe UI",Segoe,Tahoma,Arial,Verdana,sans-serif;
+      background-color: #3D69A4;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .snow .snow_slice {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 600px;
+      pointer-events: none;
+      transform-origin: 0% 0%;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .snow .snow_1 {
+      animation-name: snow_falling_fore;
+      animation-delay: 0s;
+      animation-duration: 50s;
+      height: 100%;
+      top: -100%;
+      pointer-events: none;
+    }
+    .snow .snow_2 {
+      animation-name: snow_falling_fore;
+      animation-delay: 25s;
+      animation-duration: 50s;
+      height: 100%;
+      top: -100%;
+      pointer-events: none;
+    }
+    .snow .snow_3 {
+      animation-name: snow_falling_mid;
+      animation-delay: 0s;
+      animation-duration: 70s;
+      opacity: .5;
+      top: -100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .snow .snow_4 {
+      animation-name: snow_falling_mid;
+      animation-delay: 35s;
+      animation-duration: 70s;
+      opacity: .5;
+      top: -100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .snow .snow_drifter {
+      width: 100%;
+      height: 100%;
+      background-repeat: repeat;
+      background-image: url(./image/snow-static.png);
+      pointer-events: none;
+    }
+    @keyframes snow_falling_fore {
+      0% {
+        top:-100%;
+        opacity:0
+      }
+      1% {
+        top:-100%;
+        opacity:1
+      }
+      99.8% {
+        top:100%;
+        opacity:1
+      }
+      99.9% {
+        opacity:0
+      }
+      100% {
+        top:-100%;
+        opacity:0
+      }
+    }
+    @keyframes snow_falling_mid {
+      0% {
+        top:-100%;
+        opacity:0
+      }
+      1% {
+        top:-100%;
+        opacity:1
+      }
+      99.8% {
+        top:100%;
+        opacity:1
+      }
+      99.9% {
+        opacity:0
+      }
+      100% {
+        top:-100%;
+        opacity:0
+      }
+    }
+    /* 四边 */
+    .frost {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .frost .frame_sprite {
+      position: absolute;
+      height: 100px;
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-position: center bottom;
+      background-image: url(./image/border-ice.png);
+    }
+    .frost .frame_left {
+      top: -133px;
+      left: 0;
+      transform: rotate(90deg);
+      transform-origin: 0 100px;
+      pointer-events: none;
+      width: 500%;
+    }
+    .frost .frame_right {
+      top: 100%;
+      left: calc(100% - 100px);
+      transform: rotate(-90deg);
+      transform-origin: 0 0;
+      width: 500%;
+      pointer-events: none;
+    }
+    .frost .frame_top {
+      top: 0;
+      width: 500%;
+      transform: rotate(180deg);
+      pointer-events: none;
+    }
+    .frost .frame_bottom {
+      bottom: 0;
+      left: 0;
+      width: 500%;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="snow">
+    <div class="snow_slice snow_1">
+      <div class="snow_drifter drift_1"></div>
+    </div>
+    <div class="snow_slice snow_2">
+      <div class="snow_drifter drift_2"></div>
+    </div>
+    <div class="snow_slice snow_3">
+      <div class="snow_drifter drift_3"></div>
+    </div>
+    <div class="snow_slice snow_4">
+      <div class="snow_drifter drift_4"></div>
+    </div>
+  </div>
+  <div class="frost">
+    <div class="frame_sprite frame_left"></div>
+    <div class="frame_sprite frame_right"></div>
+    <div class="frame_sprite frame_top"></div>
+    <div class="frame_sprite frame_bottom"></div>
+  </div>
+</body>
+</html>
