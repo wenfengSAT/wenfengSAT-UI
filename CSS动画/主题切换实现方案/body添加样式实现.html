@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>body添加样式实现主题切换</title>
+  <style>
+    body {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      background: #fff;
+    }
+    body.night {
+      background: #031f30;
+    }
+
+    .card {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 300px;
+      padding: 24px;
+      /*  */
+      background: #fff;
+      box-shadow: 0 3px 6px rgb(11 33 74 / 9%), 0 -2px 2px rgb(11 33 74 / 3%);
+    }
+    body.night .card {
+      background: #0e161b;
+    }
+
+    .title {
+      color: #33444d;
+    }
+    body.night .title {
+      color: #fff;
+    }
+
+    .content {
+      color: #999;
+    }
+    body.night .content {
+      color: #9cd4f7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2 class="title">卡片标题</h2>
+    <p class="content">卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容</p>
+  </div>
+  <button onclick="changeTheme()">亮暗切换</button>
+  <script>
+    function changeTheme() {
+      if (document.body.classList.contains("night")) {
+        document.body.classList.remove("night");
+      } else {
+        document.body.classList.add("night");
+      }
+    }
+  </script>
+</body>
+
+</html>

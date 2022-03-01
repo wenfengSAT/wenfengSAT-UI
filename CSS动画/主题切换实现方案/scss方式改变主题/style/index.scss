@@ -1,0 +1,31 @@
+@import './theme.scss';
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  @include themeify {
+    background: themed(main-bg);
+  }
+}
+.card {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 300px;
+  padding: 24px;
+  @include themeify {
+    background: themed(content-bg);
+  }
+  box-shadow: 0 3px 6px rgb(11 33 74 / 9%), 0 -2px 2px rgb(11 33 74 / 3%);
+}
+.title {
+  @include themeify {
+    color: themed(primary-color);
+  }
+}
+.content {
+  @include themeify {
+    color: themed(secondary-color);
+  }
+}

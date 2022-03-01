@@ -1,0 +1,31 @@
+$themes: (
+  defalut: (
+    main-bg: #fff,
+    content-bg: #fff,
+    primary-color: #33444d,
+    secondary-color: #999,
+  ),
+  night: (
+    main-bg: #031f30,
+    content-bg: #0e161b,
+    primary-color: #fff,
+    secondary-color: #9cd4f7,
+  )
+);
+
+//遍历主题map
+@mixin themeify {
+  @each $theme-name, $theme-map in $themes {
+    //!global 把局部变量强升为全局变量
+    $theme-map: $theme-map !global;
+    //判断html的data-theme的属性值  #{}是sass的插值表达式
+    //& sass嵌套里的父容器标识   @content是混合器插槽，像vue的slot
+    [theme="#{$theme-name}"] & {
+        @content;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

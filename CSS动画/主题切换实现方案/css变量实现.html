@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css变量实现主题切换</title>
+  <style>
+    :root {
+      --main-bg: #fff;
+      --content-bg: #fff;
+      --primary-color: #33444d;
+      --secondary-color: #999;
+    }
+    .night-theme {
+      --main-bg: #031f30;
+      --content-bg: #0e161b;
+      --primary-color: #fff;
+      --secondary-color: #9cd4f7;
+    }
+    body {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      background: var(--main-bg);
+    }
+    .card {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 300px;
+      padding: 24px;
+      /*  */
+      background: var(--content-bg);
+      box-shadow: 0 3px 6px rgb(11 33 74 / 9%), 0 -2px 2px rgb(11 33 74 / 3%);
+    }
+    .title {
+      color: var(--primary-color);
+    }
+    .content {
+      color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2 class="title">卡片标题</h2>
+    <p class="content">卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容卡片内容</p>
+  </div>
+  <button onclick="changeTheme()">亮暗切换</button>
+  <script>
+    // function changeTheme() {
+    //   if (document.body.classList.contains("night-theme")) {
+    //     document.body.classList.remove("night-theme");
+    //   } else {
+    //     document.body.classList.add("night-theme");
+    //   }
+    // }
+    // 变更变量
+    // var root = document.querySelector(':root');
+    // var root = '--main-bg: #fff;--content-bg: #fff;--primary-color: #33444d;--secondary-color: #999;'
+    // var night = '--main-bg: #031f30;--content-bg: #0e161b;--primary-color: #fff;--secondary-color: #9cd4f7;'
+    // var isNight = false;
+    // function changeTheme() {
+    //   root.setAttribute('style', isNight ? root : night );
+    //   isNight = !isNight;
+    // }
+    // 第二种
+    // var root = document.documentElement
+    // var isNight = false;
+    // function changeTheme() {
+    //   if (isNight) {
+    //     root.style.setProperty('--main-bg', '#031f30');
+    //     root.style.setProperty('--content-bg', '#0e161b');
+    //     root.style.setProperty('--primary-color', '#fff');
+    //     root.style.setProperty('--secondary-color', '#9cd4f7');
+    //   } else {
+    //     root.style.setProperty('--main-bg', '#fff');
+    //     root.style.setProperty('--content-bg', '#fff');
+    //     root.style.setProperty('--primary-color', '#33444d');
+    //     root.style.setProperty('--secondary-color', '#999');
+    //   }
+    //   isNight = !isNight;
+    // }
+  </script>
+</body>
+</html>
