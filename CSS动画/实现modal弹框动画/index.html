@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .open-btn {
+      position: fixed;
+      left: 50px;
+      top: 50px;
+    }
+    .open-btn1 {
+      position: fixed;
+      left: 50px;
+      bottom: 50px;
+    }
+    .open-btn2 {
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+    }
+    .open-btn3 {
+      position: fixed;
+      right: 50px;
+      top: 50px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .modal.open {
+      display: block;
+    }
+    .modal-mask {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0);
+      transition: background-color .5s;
+    }
+    .modal-mask.show {
+      background-color: rgba(0,0,0,.45);
+    }
+    .modal-content {
+      position: relative;
+      top: 100px;
+      margin: 0 auto;
+      width: 500px;
+      height: 200px;
+      background: #fff;
+      transform: scale(0);
+      opacity: 0;
+      transition: all 5s;
+      transform-origin: -80px -80px;
+    }
+    .modal-content.show {
+      top: 100px;
+      margin: auto;
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+  <button class="open-btn" onClick="openModal()">
+    打开modal
+  </button>
+  <button class="open-btn1" onClick="openModal()">
+    打开modal1
+  </button>
+  <button class="open-btn2" onClick="openModal()">
+    打开modal2
+  </button>
+  <button class="open-btn3" onClick="openModal()">
+    打开modal3
+  </button>
+  <div class="modal" id="modal">
+    <div class="modal-mask" id="mask"></div>
+    <div class="modal-content" id="content">
+      <button onClick="closeModal()">
+        关闭modal
+      </button>
+    </div>
+  </div>
+  
+  <script>
+    const modal = document.getElementById('modal');
+    const mask = document.getElementById('mask');
+    const content = document.getElementById('content');
+    const { width: viewW } = document.documentElement.getBoundingClientRect()
+    const contentL = (viewW - 500) / 2
+    function openModal() {
+      
+      const actEl = document.activeElement.getBoundingClientRect()
+      const { top: actT, left: actL } = actEl
+      modal.classList.add('open')
+      content.style.transformOrigin = `${actL - contentL }px ${actT - 100}px`
+      setTimeout(() => {
+        mask.classList.add('show')
+        content.classList.add('show')
+      }, 0);
+    }
+    function closeModal() {
+      modal.classList.remove('open')
+      mask.classList.remove('show')
+      content.classList.remove('show')
+    }
+  </script>
+</body>
+</html>
