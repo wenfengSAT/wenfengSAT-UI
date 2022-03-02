@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>只是简单播放flv的demo</title>
+</head>
+
+<body>
+  <video name="videoElement" id="videoElement" class="centeredVideo" controls autoplay>
+    Your browser is too old which doesn't support HTML5 video.
+  </video>
+  <button onclick="load()">load</button>
+  <button onclick="load_flv()">load_flv</button>
+  <button onclick="handPlay()">play</button>
+  <script src="./flv.js"></script>
+  <script>
+    if (flvjs.isSupported()) {
+      var videoElement = document.getElementById('videoElement');
+      var flvPlayer = flvjs.createPlayer({
+        type: 'flv',
+        isLive: true,
+        // url: './demo.flv'
+        // url: 'http://live.i-tudou.com/gbf/dj1235.flv?auth_key=1631580699-0-0-09f6e044e60f4e42a6faf96bd3d0e835'
+        url: 'rtmp://live.i-tudou.com/gbf/dj666?auth_key=1631605803-0-0-60b77c0ca0be217f31ff192eeb8b5383'
+      });
+      flvPlayer.attachMediaElement(videoElement);
+      flvPlayer.load();
+
+    }
+    function handPlay() {
+      console.log('播放');
+      let start = +new Date()
+      flvPlayer.play().then((res) => {
+        console.log(res);
+        console.log('延迟', (+new Date() - start) / 1000);
+      }).catch((err) => {
+        console.log('延迟', (+new Date() - start) / 1000, err);
+      });
+    }
+    // function load() {
+    //   var xhr = new XMLHttpRequest();
+    //     xhr.open('GET', 'http://live.i-tudou.com/gbf/dj12342.flv?auth_key=1631529243-0-0-118683e5d92904316100a9e362749a61', true);
+    //     xhr.onload = function (e) {
+    //       var mediaDataSource = JSON.parse(xhr.response);
+    //       flv_load_mds(mediaDataSource);
+    //     }
+    //     xhr.send();
+    // }
+    // function load_flv(params) {
+    //   var mediaDataSource = {
+    //     type: 'flv',
+    //     hasAudio: true,
+    //     hasVideo: true,
+    //     withCredentials: false,
+    //     isLive: false,
+    //     url: 'http://live.i-tudou.com/gbf/dj12342.flv?auth_key=1631529243-0-0-118683e5d92904316100a9e362749a61'
+    //   };
+    //   flv_load_mds(mediaDataSource);
+    // }
+    // function flv_load_mds(mediaDataSource) {
+    //   var element = document.getElementsByName('videoElement')[0];
+    //   if (typeof player !== "undefined") {
+    //     if (player != null) {
+    //       player.unload();
+    //       player.detachMediaElement();
+    //       player.destroy();
+    //       player = null;
+    //     }
+    //   }
+    //   player = flvjs.createPlayer(mediaDataSource, {
+    //     enableWorker: false,
+    //     lazyLoadMaxDuration: 3 * 60,
+    //     seekType: 'range',
+    //   });
+    //   player.attachMediaElement(element);
+    //   player.load();
+    // }
+    // load_flv()
+  </script>
+</body>
+
+</html>
