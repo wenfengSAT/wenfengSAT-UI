@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      position: relative;
+      width: 1000px;
+      height: 600px;
+    }
+
+    .one {
+      position: absolute;
+      height: 100%;
+      width: 300px;
+      resize: horizontal;
+      overflow: hidden;
+      max-width: 1000px;
+      z-index: 1;
+      cursor: col-resize
+    }
+
+    .one-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 1000px;
+      background: burlywood;
+    }
+
+    .two {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: coral;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="range">
+  <div class="container">
+    <div class="one">
+      <div class="one-content">left content</div>
+    </div>
+    <div class="two">
+      right
+    </div>
+  </div>
+</body>
+
+</html>

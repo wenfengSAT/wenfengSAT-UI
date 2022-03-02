@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .resize-bar {
+      height: 100%;
+      width: 8px;
+      background: darkgray;
+      user-select: none;
+    }
+    .resize-bar:hover,
+    .resize-bar:active {
+      cursor: col-resize;
+      background: darkseagreen;
+    }
+    .container {
+      display: flex;
+      width: 600px;
+      height: 600px;
+    }
+    .one {
+      width: 50%;
+      background: burlywood;
+      padding: 16px;
+    }
+    .two {
+      flex: 1;
+      background: coral;
+      padding: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="one" id="one">
+      left
+    </div>
+    <div class="resize-bar" onmousedown="omd(event)"></div>
+    <div class="two">
+      right
+    </div>
+  </div>
+  <script>
+    var canMove = false
+    var startX = 0
+    var endW = 0
+    var one = document.getElementById('one')
+    var container = document.getElementById('container')
+    var startW = one.clientWidth
+    console.log('startW', startW);
+    // console.log(cw.style);
+    function omd(e) {
+      e.preventDefault()
+      console.log('鼠标按下', e);
+      canMove = true
+      startX = e.pageX
+      document.addEventListener('mouseup', oms)
+      document.addEventListener('mousemove', omm)
+    }
+    function omm(e) {
+      if (canMove) {
+        var endX = e.pageX
+        endW = endX - startX + startW
+        if (endW > 600) {
+          endW = 600
+        }
+        one.style.width = `${endW}px`
+      }
+    }
+    function oms() {
+      console.log('鼠标抬起');
+      canMove = false
+      document.removeEventListener('mouseup', oms, false)
+      startW = endW
+    }
+  </script>
+</body>
+
+</html>
