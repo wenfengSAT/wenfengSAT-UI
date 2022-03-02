@@ -1,0 +1,26 @@
+@function randomNum($max, $min: 0, $u: 1) {
+	@return ($min + random($max)) * $u;
+}
+
+@function randomColor() {
+  @return rgb(randomNum(255), randomNum(255), randomNum(255));
+}
+
+@function shadowSet($maxWidth, $maxHeight, $count) {
+  $shadow : 0 0 0 0 randomColor();
+    
+  @for $i from 0 through $count {         
+    $x: #{random(10000) / 10000 * $maxWidth};
+    $y: #{random(10000) / 10000 * $maxHeight};
+    $shadow: $shadow, #{$x} #{$y} 0 #{random(5)}px randomColor();
+  }
+    
+  @return $shadow;
+}
+
+div {
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  box-shadow: shadowSet(100vw, 100vh, 500);
+}
