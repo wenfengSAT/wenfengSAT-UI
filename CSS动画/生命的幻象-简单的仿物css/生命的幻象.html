@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #663399;
+      margin: 2em;
+    }
+    .logo {
+      color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 2em;
+      margin: 1em 0;
+    }
+    .box-outer {
+      display: inline-block;
+      animation: shift 4.5s 1s steps(3, start) backwards;
+    }
+    .box-inner {
+      display: inline-block;
+      width: .74em;
+      height: .74em;
+      background-color: #fff;
+      animation-name: roll;
+      animation-duration: 1.5s;
+      animation-delay: 1s;
+      animation-iteration-count: 30;
+      animation-timing-function: linear;
+      transform-origin: bottom right;
+    }
+
+    @keyframes roll {
+      from {
+        transform: translateX(-100%);
+        animation-timing-function: ease-in-out;
+      }
+      20% {
+        transform: translateX(-100%) skewX(15deg);
+      }
+      28% {
+        transform: translateX(-100%) skewX(0deg);
+        animation-timing-function: ease-out;
+      }
+      45% {
+        transform: translateX(-100%) skewX(-5deg) rotate(20deg) scale(1.1);
+        animation-timing-function: ease-in-out;
+      }
+      50% {
+        transform: translateX(-100%) skewX(-5deg) rotate(45deg) scale(1.1);
+        animation-timing-function: ease-in;
+      }
+      60% {
+        transform: translateX(-100%) rotate(90deg);
+      }
+      65% {
+        transform: translateX(-100%) rotate(90deg) skewX(10deg);
+      }
+      70% {
+        transform: translateX(-100%) rotate(90deg) skewX(0deg);
+      }
+      to {
+        transform: translateX(-100%) rotate(90deg);
+      }
+    }
+    @keyframes shift {
+      from {
+        transform: translateX(-300%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="logo">
+    <span class="box-outer"><span class="box-inner"></span></span>
+    <span class="logo-box">Box</span><span class="logo-model">model</span>
+  </h1>
+</body>
+</html>
