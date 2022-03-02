@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   .navigation-btns {
+      position: relative;
+      height: 150px;
+      width: 150px;
+    }
+
+    .box {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background: #cccccc;
+      position: relative;
+      border-radius: 50%;
+      border: 3px solid #999;
+      background: rgba(153, 153, 153, 0.2);
+    }
+    .box::before {
+      content: "N";
+      position: absolute;
+      left: 68px;
+      top: -12px;
+      background: #FFF;
+      border: 2px solid #666;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    .box:active {
+      border: 3px solid #0659DD;
+      background: rgba(6, 89, 221, 0.2);
+    }
+
+    .circle-btns {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      border-radius: 50%;
+      overflow: hidden;
+      user-select: none;
+    }
+    .circle-btns button {
+      transform: rotate(45deg);
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      border: none;
+      outline: none;
+    }
+    .circle-btns button:active {
+      color: #fff;
+      background: #019BF5;
+    }
+    .circle-btns button div {
+      position: relative;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .circle-btns .btn-top {
+      display: block;
+      left: 15px;
+      top: -34px;
+    }
+    .circle-btns .btn-top div {
+      top: 15px;
+      left: 10px;
+      transform: rotate(-135deg);
+    }
+    .circle-btns .btn-left {
+      top: 15px;
+      left: -34px;
+    }
+    .circle-btns .btn-left div {
+      left: 15px;
+      bottom: 10px;
+      transform: rotate(135deg);
+    }
+    .circle-btns .btn-right {
+      top: 15px;
+      left: 64px;
+    }
+    .circle-btns .btn-right div {
+      right: 15px;
+      top: 10px;
+      transform: rotate(-45deg);
+    }
+    .circle-btns .btn-bottom {
+      display: block;
+      margin: auto;
+      top: 64px;
+      left: 15px;
+    }
+    .circle-btns .btn-bottom div {
+      bottom: 15px;
+      right: 10px;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="navigation-btns">
+    <div id="box" class="box"></div>
+    <!-- 内层按钮 -->
+    <div class="circle-btns">
+      <button class="btn-top">
+        <div>></div>
+      </button>
+      <button class="btn-left">
+        <div>></div>
+      </button>
+      <button class="btn-right">
+        <div>></div>
+      </button>
+      <button class="btn-bottom">
+        <div>></div>
+      </button>
+    </div>
+    <!-- 内层按钮结束 -->
+  </div>
+  <script>
+    var centerX = 0;
+    var centerY = 0;
+    var isMove = false;
+    var relaAngle = 0;
+    var currentAngle = 0;
+    var element = document.getElementById('box')
+    var rect = element.getBoundingClientRect();
+    
+    function getDragAngle(event) {
+      event.stopPropagation
+      var x = (event.clientX || event.targetTouches[0].clientX) - centerX
+      var y = centerY - (event.clientY || event.targetTouches[0].clientY)
+      var dreg = Math.atan2(y, x) * 180 / Math.PI;
+      return -dreg
+    };
+    function mousedown(event) {
+     currentAngle = getDragAngle(event)
+      isMove = true;
+    }
+    function mousemove(event) {
+      if (isMove) {
+        var moveAngle = getDragAngle(event)
+        var rot = moveAngle - currentAngle
+        currentAngle = moveAngle
+        relaAngle = getRotAngle(relaAngle + rot)
+        element.style.transform = 'rotate(' + relaAngle + 'deg)'
+      }
+    }
+    function mouseup(event) {
+      if (isMove) {
+        isMove = false;
+      }
+    }
+    function  getRotAngle(angle) {
+      if (angle >= 180) {
+        return angle - 360
+      } else if (angle <= -180) {
+        return angle + 360
+      } else {
+        return angle
+      }
+    }
+
+    window.onload = function load() {
+      centerX = parseFloat(rect.left + rect.width / 2);
+      centerY = parseFloat(rect.top + rect.height / 2);
+      // 
+      element.addEventListener("touchstart", mousedown, false);
+      element.addEventListener("mousedown", mousedown, false);
+      // 
+      window.addEventListener('mousemove', mousemove)
+      window.addEventListener('mouseup', mouseup)
+      window.addEventListener('touchmove', mousemove)
+      window.addEventListener('touchend', mouseup)
+    }
+  </script>
+</body>
+</html>
