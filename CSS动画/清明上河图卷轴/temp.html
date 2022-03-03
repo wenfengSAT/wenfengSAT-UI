@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>清明上河图</title>
+  <style>
+    .contaner {
+      margin: 200px;
+    }
+    .wrap {
+      position: relative;
+      width: 700px;
+      height: 230px;
+      background: burlywood;
+    }
+    .handle {
+      position: absolute;
+      top: -20px;
+      z-index: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .handle-left {
+      left: 0;
+    }
+    .handle-right {
+      right: 0;
+    }
+    .river-view {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      box-shadow: 0px 3px 25px rgb(36 30 34 / 62%);
+    }
+    .river-images {
+      display: flex;
+      width: 7500px;
+    }
+    .grab {
+      cursor: -webkit-grab;
+      cursor: -moz-grab;
+      cursor: grab;
+    }
+    .grab:active {
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      cursor: grabbing;
+    }
+  </style>
+</head>
+<body>
+  <div class="contaner">
+    <div class="wrap">
+      <img class="handle handle-left" src="./images/river_handle_left.png" alt="" srcset="">
+      <img class="handle handle-right" src="./images/river_handle_right.png" alt="" srcset="">
+      <div class="river-view" id="river">
+        <div class="river-images grab">
+          <img src="./images/01.jpg" alt="01">
+          <img src="./images/02.jpg" alt="02">
+          <img src="./images/03.jpg" alt="03">
+          <img src="./images/04.jpg" alt="04">
+          <img src="./images/05.jpg" alt="05">
+          <img src="./images/06.jpg" alt="06">
+          <img src="./images/07.jpg" alt="07">
+          <img src="./images/08.jpg" alt="08">
+          <img src="./images/09.jpg" alt="09">
+          <img src="./images/10.jpg" alt="10">
+          <img src="./images/11.jpg" alt="11">
+          <img src="./images/12.jpg" alt="12">
+          <img src="./images/13.jpg" alt="13">
+          <img src="./images/14.jpg" alt="14">
+          <img src="./images/15.jpg" alt="15">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const river =  document.getElementById('river')
+    const store = {
+      move: false
+    }
+    river.addEventListener('mousedown', (e) => {
+      e.preventDefault()
+      store.move = true
+      store.startX = e.pageX + river.scrollLeft
+    })
+    document.addEventListener('mousemove', (e) => {
+      e.preventDefault()
+      if (store.move) {
+        river.scrollLeft = store.startX - e.pageX
+      }
+    })
+
+    document.addEventListener('mouseup', (e) => {
+      e.preventDefault()
+      store.move = false
+    })
+  </script>
+</body>
+</html>
