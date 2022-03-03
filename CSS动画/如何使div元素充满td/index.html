@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元素撑满td</title>
+  <style>
+    .warp {
+      margin: 100px;
+    }
+    .table {
+      width: 500px;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .table,
+    .table th,
+    .table td {
+      position: relative;
+      padding: 6px 16px;
+      border: 1px solid #aaa;
+      text-align: center;
+    }
+    .one {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #4A8AF4;
+    }
+    .two {
+      background: #FFCD42;
+    }
+    .three {
+      background: #19A15F;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p style="margin-bottom: 20px;">
+      如果cell本身内容不变，可以使用绝对定位充满，如果本身内容变动，则不能使用这种方式
+    </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th id="head1" style="width: 200px;">表头一</th>
+          <th id="head2">表头2</th>
+          <th id="head3">表头3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="one">自由内容</td>
+          <td>行一列二</td>
+          <td>
+            <div class="one">1</div>
+          </td>
+        </tr>
+        <tr>
+          <td id="two">自由内容</td>
+          <td>行二列二</td>
+          <td>
+            <div class="two">2</div>
+          </td>
+        </tr>
+        <tr>
+          <td id="three">自由内容</td>
+          <td>行三列二</td>
+          <td>
+            <div class="three">3</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button onclick="addOne()">第一行增加内容</button>
+  <button onclick="addTwo()">第二行增加内容</button>
+  <button onclick="addThree()">第三行增加内容</button>
+  <script>
+    const one = document.getElementById('one')
+    const two = document.getElementById('two')
+    const three = document.getElementById('three')
+
+    function addOne() {
+      one.innerText += '-自由内容'
+    }
+    function addTwo() {
+      two.innerText += '-自由内容'
+    }
+    function addThree() {
+      three.innerText += '-自由内容'
+    }
+  </script>
+</body>
+</html>

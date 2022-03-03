@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元素撑满td</title>
+  <style>
+    .warp {
+      margin: 100px;
+    }
+    .table {
+      width: 500px;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .table,
+    .table th,
+    .table td {
+      height: 1px;
+      position: relative;
+      border: 1px solid #aaa;
+      text-align: center;
+      overflow: hidden;
+    }
+    .table td > div {
+      height: 100%;
+    }
+    .one {
+      background: #4A8AF4;
+      /* 这里的2px是为了消除td与div之间的间隙 */
+      height: calc(100% + 2px)!important;
+      width: calc(100% + 2px);
+      position: relative;
+      left: -1px;
+    }
+    .two {
+      padding: 6px 16px;
+      background: #FFCD42;
+    }
+    .three {
+      padding: 6px 16px;
+      background: #19A15F;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p style="margin-bottom: 20px;">
+      如果cell本身内容变动，不能通过绝对定位得问题，可以使用为
+      <code>td</code>
+      设置最小高度，例如1px,td得高度会随内容高度自动撑大，
+      然后给div设置<code>height: 100%</code>
+      这里注意直接子元素设置padding的问题</code>
+    </p>
+    <p>第一种解决方案： 需要让td触发BFC，最简单得方式就是为td是设置<code>overflow: hidden;</code></p>
+    <p>第二种解决方案： 为直接子添加一层div，再加padding等</p>
+    <p><strong>注意：</strong>这两种效果上会出现一些小差异，注意td上下边框的变动</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th id="head1" style="width: 200px;">表头一</th>
+          <th id="head2">表头2</th>
+          <th id="head3">表头3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div id="one" class="one">
+              <div style="padding: 16px;">
+                自由内容-自由内容-自由内容-自由内容-自由内容
+              </div>
+            </div>
+          </td>
+          <td>
+            <div>行一列二</div>
+          </td>
+          <td>
+            <div class="one">1</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="two" class="two">
+              自由内容
+            </div>
+          </td>
+          <td>
+            <div>行二列二</div>
+          </td>
+          <td>
+            <div class="two">2</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="three" class="three">
+              自由内容
+            </div>
+          </td>
+          <td>
+            <div>行三列二</div>
+          </td>
+          <td>
+            <div class="three">3</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button onclick="addOne()">第一行增加内容</button>
+  <button onclick="addTwo()">第二行增加内容</button>
+  <button onclick="addThree()">第三行增加内容</button>
+  <script>
+    const one = document.getElementById('one')
+    const two = document.getElementById('two')
+    const three = document.getElementById('three')
+
+    function addOne() {
+      one.innerText += '-自由内容'
+    }
+    function addTwo() {
+      two.innerText += '-自由内容'
+    }
+    function addThree() {
+      three.innerText += '-自由内容'
+    }
+  </script>
+</body>
+</html>
